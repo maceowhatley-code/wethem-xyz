@@ -1,0 +1,583 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Sam">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/onchain/base-36559c5f-30">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://wethem.xyz/onchain/base-36559c5f-30">
+    <meta property="og:image" content="https://wethem.xyz/og-site.png?v=2f44c9ed24">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Street journalism from around the world. Real conversations with real people.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og-site.png?v=2f44c9ed24">
+    <meta name="twitter:image:alt" content="Street journalism from around the world. Real conversations with real people.">
+    <meta property="og:title" content="Sam · We Them Media">
+    <meta property="og:description" content="Sam">
+    <title>Sam · We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Sam",
+  "url": "https://wethem.xyz/onchain/base-36559c5f-30",
+  "image": "https://wethem.xyz/mints/base-36559c5f-30.jpg",
+  "isPartOf": {
+    "@type": "CollectionPage",
+    "name": "ETH CC",
+    "url": "https://wethem.xyz/onchain/c-eth-cc"
+  }
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap oc-piece">
+    <p class="oc-crumb"><a href="../library.html">The library</a> &middot;
+       <span><a href="c-eth-cc.html">Brussels</a></span></p>
+    <h1 class="oc-h1">Sam</h1>
+    <p class="oc-meta">Brussels &middot; minted on Base, a public blockchain,
+       as token #30 of <a href="https://basescan.org/address/0x36559c5ff2fffc5b0fb0e8eb2090f2c1b58db09c" target="_blank" rel="noopener">ETH CC</a></p>
+
+    <div class="oc-media">
+        <video class="oc-video" controls preload="none" poster="../mints/base-36559c5f-30.jpg">
+            <source src="https://gateway.pinata.cloud/ipfs/bafybeicxopej4oqlzhwyj2js2lzordzwowediedpw4wwu5i24mv4qxahsu" type="video/mp4">
+            <source src="https://ipfs.io/ipfs/bafybeicxopej4oqlzhwyj2js2lzordzwowediedpw4wwu5i24mv4qxahsu" type="video/mp4">
+        </video>
+        <p class="oc-fallback">The file is stored on IPFS, a public file network:
+        <a href="https://gateway.pinata.cloud/ipfs/bafybeicxopej4oqlzhwyj2js2lzordzwowediedpw4wwu5i24mv4qxahsu" target="_blank" rel="noopener">open the original</a>,
+        or <a href="https://ipfs.io/ipfs/bafybeicxopej4oqlzhwyj2js2lzordzwowediedpw4wwu5i24mv4qxahsu" target="_blank" rel="noopener">the same file from another server</a>.</p>
+    </div>
+
+    <p class="oc-do">
+        <a class="oc-a oc-zora" href="https://zora.co/collect/base:0x36559c5ff2fffc5b0fb0e8eb2090f2c1b58db09c/30" target="_blank" rel="noopener">Collect on Zora <span aria-hidden="true">&rarr;</span></a>
+        <a class="oc-a" href="https://basescan.org/address/0x36559c5ff2fffc5b0fb0e8eb2090f2c1b58db09c" target="_blank" rel="noopener">Look it up onchain <span aria-hidden="true">&rarr;</span></a>
+    </p>
+
+    <section class="oc-tx">
+        <h2 class="oc-h2">Transcript</h2>
+        <p class="oc-p"><span class="oc-at">0:03</span> Moving the mic higher, low, low, low. I promise I have no exclusive details. Put an extra bag very much on that. What&#x27;s the heck? You have 50 bucks? No, I&#x27;m good. They&#x27;re going to force me to put the bag on. I&#x27;m sure there&#x27;s more of the time on. Alright, I&#x27;m ready. Yeah? Let&#x27;s go. I kind of wanted, like, I&#x27;ll just tell this to you ready. Yeah, you can do it. Alright, cool. What&#x27;s up everybody, and we&#x27;ll, I&#x27;d say if you have a more like, like down kick and thingy, that way it&#x27;s like under the wing, it&#x27;s supposed to be perfect What&#x27;s up everybody, welcome to another episode of League of Niggas, we&#x27;re out here at ECC this week here in Brussels, Belgium</p>
+        <p class="oc-p"><span class="oc-at">1:32</span> How do you define in Brussels this week, are you a fan of the city? Um, I like Brussels, it&#x27;s not my favorite European city, but it&#x27;s really cool This is your first time here? It&#x27;s my first time in Brussels, yeah And how do you define the conference overall? Um, overall, really good, um, I feel like ECC DC is one of those conferences where you don&#x27;t have to go to main event at all, and there&#x27;s so much value here, there&#x27;s so many really amazing people, you can see my friends, yeah. That&#x27;s beautiful. And can you introduce yourself to my audience? I&#x27;m here today with Sam, everybody.</p>
+        <p class="oc-p"><span class="oc-at">2:02</span> Sam&#x27;s a founder, he&#x27;s a software engineer developer in this space. I actually met Sam last year at East Denver, one of the first top people I met at that conference, and we weren&#x27;t able to keep in touch, but we reconnected today here at the the region village here at the commons of Brussels yeah I&#x27;m Sam, Sam Baffa I&#x27;m the founder of TinyCloud which is a way for it&#x27;s a protocol for people to be able to control their data like they control their crypto which we&#x27;ll dive into but yeah I&#x27;m an engineer been an electrical engineer for a long time software engineer for a long time done some stuff in AI, crypto</p>
+        <p class="oc-p"><span class="oc-at">2:45</span> This is a really great place to build new stuff that can ideally change the world. Ideally. So how did you actually get into the crypto space? To be a believer that this technology can change the world or enable that? I actually first heard about Bitcoin in 2012 in the computer lab when I was in college. Someone was talking about it and I was just overhearing. I was like, really, listening, I was like, this sounds interesting, and I kind of Googled it, and it was too hard to, like, I didn&#x27;t know how to get anything, I just dropped it, and then there was, like, a massive run-up in the price in, like, 2013, and I remember</p>
+        <p class="oc-p"><span class="oc-at">3:27</span> just thinking, I was like, oh, I&#x27;m an idiot, I can&#x27;t believe I didn&#x27;t, like, buy this, and I, like, I think I bought the very top of that, maybe it was, like, $1,000 or something, and it crashed, but after that, I, like, mined Dogecoin, my roommate at the time, We had some GPUs in our house and we had free electricity. So, yeah, I kind of got involved in crypto. It was really exploratory, but then I kind of just forgot about it. I didn&#x27;t look at crypto, I didn&#x27;t get back into it until maybe 2018, after ICO Bloom, after Ethereum released. And I think it was for me just kind of I really saw the vision of like these kind of like decentralized like assets like Bitcoin is like this kind of store value and just like learning more about Ethereum looking at like doing things with smart contracts like like like loans and stuff like this like Aave or at the time like I think it was like EathLend.</p>
+        <p class="oc-p"><span class="oc-at">4:26</span> So it&#x27;s kind of just like, it was like really interesting technology to me. And so I just was a dabbler in crypto for a long time. Until I in 2020, 2021, I did like a research like residency at OpenAI. And that&#x27;s cool. Yeah, it was really, it was really awesome. I never heard of OpenAI in that year. Yeah, no, I was like, I had, I was really interested in AI and like, what it could be and do. Just really thinking deeply on it. And OpenAI was a leader. I used GPT-2 at the time. I was working on another startup and I was like, holy crap, I want to use this</p>
+        <p class="oc-p"><span class="oc-at">5:08</span> and understand how it works. And so while I was there, I read this book called Super Intelligence, which is about the risks of AI, basically. And it really made me actually concerned. I was like, oh shit, hold on, hold on, what are we doing here? How do we stop I was thinking about this. There&#x27;s no actual stopping it. What I kind of came to a conclusion about and thinking about the best solutions, really they were cryptographic solutions, right? How do you know what&#x27;s real on the internet? How do you know, yeah, that being like one of the biggest problems that was like apparent to me at the time. So I was kind of interested</p>
+        <p class="oc-p"><span class="oc-at">5:47</span> in crypto from like a, how can we use cryptography? I didn&#x27;t know that much about it. And so after opening, I was still working as a research engineer, but I was at East Denver in 2022 and I ran into Wayne Chang, the founder of Spruce, one of the co-founders of Spruce. And what&#x27;s Spruce? Spruce ID is a company that focuses on digital identity.</p>
+        <p class="oc-p"><span class="oc-at">6:15</span> That&#x27;s why I&#x27;m on this side of the table. Yeah, they&#x27;re focused on digital identity and at the time there&#x27;s been a really cool technology I feel like I have heard of Spruce what are the co-founders? is the co-founder too? yeah, so there&#x27;s Wayne and Rocco they&#x27;re the two co-founders I have heard of them for some reason but continue yeah, they&#x27;re both great people I really enjoy working with both of them actually And, yeah, wallet spruce I was working on an NFT project at the time It was like a NFT scavenger hunt Basically I had these tungsten cubes And I basically wanted to hide them around the country</p>
+        <p class="oc-p"><span class="oc-at">7:04</span> And then if you meant to NFT You would get the location to one of the cubes And then if you found one of the cubes It would have a QR code on it You could type in the QR code and then you would basically be able to turn your NFT into a governor of all the minting fees. So if you have 10,000 NFT mints, it&#x27;s like 1,000 ETH. And if you find one of the cubes, you&#x27;re now one of 100 people that&#x27;s in charge of 1,000 ETH. So it&#x27;s kind of like NounsDAO, but it&#x27;s a different way of instantiating that pool of money. And so I was really trying to figure out how you control this data in a decentralized way.</p>
+        <p class="oc-p"><span class="oc-at">7:43</span> How do I put the data for where the cube location is so that an NFC holder could access it? And I was trying to figure that out, went to this Filecoin booth, and I ran to Wayne. And we were just chatting about this, and he was telling me about the system that they&#x27;re working on. They&#x27;re thinking about a spruce, and I was like, holy crap, how do I use this right now? And he&#x27;s like, oh, well, it&#x27;s not quite ready yet. But we just had a really great conversation and there was kind of like a need for some of my skills and I got an offer to work at Spruce the next day and yeah, I just joined, I was</p>
+        <p class="oc-p"><span class="oc-at">8:21</span> really excited about how they&#x27;re using cryptography, it was non-financial, I was just like, I never was interested in like DeFi, casino, aspects of crypto, so this was like, yeah, it really it was, I don&#x27;t know, it was really exciting, and so, yeah, while at Spruce, I worked on a lot of our experimental Web3 stuff, including a system called Kepler, which is kind of what led to me working on TinyCloud. Kepler is a system for being able to, like, permission who has access to your data using And so, yeah, did a lot of standard stuff, wrote like EIP, extended signing with Ethereum, and also worked a little bit on our California DMV projects.</p>
+        <p class="oc-p"><span class="oc-at">9:15</span> What&#x27;s that? At Spruce we had a pilot with the state of California to issue a digital driver&#x27;s license to individuals on their phones. So the state of California would have, like, basically private keys, they&#x27;d sign a credential with their private keys, and saying, hey, you can drive. That&#x27;s pretty progressive. Yeah. Oh, yeah. They&#x27;re actually, I think the information technology and stuff that&#x27;s California, like the DMV, they&#x27;re actually really trying to push things forward and also trying to do it in a way that&#x27;s beneficial for people, like privacy-preserving ways so you can prove you&#x27;re over the age of 21 that the state says so. Yeah, without having to know your birthday.</p>
+        <p class="oc-p"><span class="oc-at">9:54</span> Exactly. And without knowing your address, right? If you go and buy a drink or something, let&#x27;s say even online, you&#x27;re not being tracked forever because you also showed your address, right? So basically Spruce kind of had the pilot go really well in California and started talking to other states and other governments and that was a really, really good market. Yeah, that sounds really cool to be honest. I think I haven&#x27;t really seen a lot of states pick up this technology for application in that one. Yeah, yeah, no. So it&#x27;s a very pioneering project. Yeah, yeah, absolutely. And I think it was really awesome to be part of that team and to really help to build that technology. But for me, I was really interested in the user-owners aspect of data.</p>
+        <p class="oc-p"><span class="oc-at">10:46</span> like it&#x27;s kind of one of the reasons I joined Spruce and I think there&#x27;s kind of a real focus from a startup perspective of like this thing is working we found a good market let&#x27;s double down on this and for me working on the working on the yeah just it wasn&#x27;t it wasn&#x27;t like the most exciting thing for me I think for me, my motivation. If I&#x27;m inspired by my work and what it unlocks, I could really do it. Also, if I feel like if someone else can do it, it&#x27;s not as exciting. I feel like if I&#x27;m uniquely able to do this because of some insight I have. If I feel some sense</p>
+        <p class="oc-p"><span class="oc-at">11:45</span> of uniqueness to my work, then it&#x27;s so much more motivating. I felt like the projects the Digital Drivers License Project, I felt like other people can do this, this is great. And so, yeah, there were just challenges I had there. And I really wanted to focus on owning your data. And so, in January I left Spruce and started working on TinyCloud. And so, uh, TinyCloud is, yeah, thanks. Oh, I&#x27;m, I, uh, I&#x27;m, like, so excited, um, so excited to work on it. How&#x27;s the founder lifestyle treating you? Um, it&#x27;s, it&#x27;s mixed. There&#x27;s, I mean, you&#x27;re taking on a lot of, it&#x27;s just taking on a lot, um, it would be nice just to work on the problem that you see, but I think you have to really build a container, uh, you have to build relationships, um, um, yeah,</p>
+        <p class="oc-p"><span class="oc-at">12:43</span> Yeah, you have to multitask in a myriad of ways, and there are things that maybe seem irrelevant that actually are pressing, that you have to take care of. So, I think if I didn&#x27;t feel like, if I saw someone else doing exactly what I wanted to do, I would join them. But because I don&#x27;t, to me it&#x27;s like, okay, let me just, to me this is critical to seeing the world. I think the paradigm of your data is held by someone else is just a crippling paradigm. It maybe sounds crazy, but I think we&#x27;re technologically crippled in ways that we can&#x27;t even feel. As an engineer that builds this stuff and thinks about how it looks, I</p>
+        <p class="oc-p"><span class="oc-at">13:34</span> can see the decisions that product managers are making that are crippling. If I use I use Instagram, I use Instagram for messaging, if I use Instagram, I want the first thing to show up to be messages, right, instead I get the feed, and in the corner, like, kind of tucked away is messages, right, and the first thing is going to be, like, some guy riding a mountain bike downhill super fast, and it&#x27;s, like, for me, that gets my attention, right, it&#x27;s, like, it&#x27;s to improve the metrics for someone, for, like, for the company, right, to increase profitability, it&#x27;s not for me, right, I want to, I&#x27;ve connected with my</p>
+        <p class="oc-p"><span class="oc-at">14:10</span> friends on Instagram, like it&#x27;s my network of people, yet I don&#x27;t own anything about it, right? And I don&#x27;t even get to say, have to say on how the technology I use looks. And to me, it&#x27;s really important that the technology we use is like, it&#x27;s like the clothes we wear, right? Like my clothes fit differently, my style is different than your style, right? And like technology should be like this, right? If I have a to-do app, maybe it&#x27;s really important that if something&#x27;s urgent, it&#x27;s bigger in the interface, that&#x27;s just how I operate, I know that&#x27;s how I operate I&#x27;ll be better if things are like that, right, but everything&#x27;s standard, and so I don&#x27;t get</p>
+        <p class="oc-p"><span class="oc-at">14:50</span> to have this interface work for me, and so you could wait for some companies to kind of catch up and build stuff for you, but we have really powerful AIs that can rewrite the interface for you, right, and it&#x27;s like, what does the future of technology look like? What do interfaces look like in 10 years? I hope it&#x27;s not what it is today. Maybe people don&#x27;t feel this pain. I feel this pain. I&#x27;m just like, this is so bad. This could be so much better. To me, when I look at how does it become possible to have a different experience, it comes down to like actually having power over your data and what the interface on top of that data looks like so that&#x27;s why yeah that&#x27;s that&#x27;s one of the reasons that I think this is one of the most important problems I can work on because I think it&#x27;s like looking at the future and the future that we live in and like is it just a future where we&#x27;re controlled or not one second that&#x27;s okay is it just a future where we&#x27;re told we&#x27;re no we&#x27;re like just kind of steered</p>
+        <p class="oc-p"><span class="oc-at">16:03</span> by, like, technological nudges that maybe are having huge effects in society, but we&#x27;re just like, oh yeah, no, I saw this ad, saw this ad, right, but maybe it&#x27;s, like, steering people to vote in one way versus another, or, you know, like, so I don&#x27;t know, I just think a lot about, like, how do we use technology in a way that&#x27;s, like, personal, and, like, when I was a kid, I had a Game Boy, when I played the Game Boy, the Game Boy didn&#x27;t play I like that, the game, but every time you use it&#x27;s like, every time you use it, like, my maps, automatically, it&#x27;s like, oh, that&#x27;s what you like, okay, oh, done, all right, well, I&#x27;m gonna, everything&#x27;s like, shifting underneath you, how many cookies can we have, please, yeah, yeah, exactly, yeah, and it&#x27;s like, that&#x27;s, I think that&#x27;s like, it&#x27;s,</p>
+        <p class="oc-p"><span class="oc-at">17:02</span> I just want a different relationship with technology, this is like you&#x27;re in a relationship with someone and you didn&#x27;t even realize it, it&#x27;s not a tool you&#x27;re using, like oh yeah, I&#x27;m using this camera, it&#x27;s like no, it&#x27;s a relationship, and I think, yeah, I just think it&#x27;s important to own that, and to build differently, right, it&#x27;s like Elon Musk building electric cars. You can have an impact on the climate by trying to change policy and stuff, right? We can pass laws for companies to operate differently, but actually, I think you just have to build something that&#x27;s different and that&#x27;s better, and that&#x27;s how you win,</p>
+        <p class="oc-p"><span class="oc-at">17:46</span> I think. You can&#x27;t just let... I mean, you could try to change past laws, but I don&#x27;t know. I don&#x27;t have faith in that. Not that I don&#x27;t have faith in that, but it&#x27;s just a different effort. It&#x27;s not my game. Yeah, you bet. You want the code committed and not a written law. Yeah, yeah. I hear it, and I think that&#x27;s like, I mean, the law doesn&#x27;t make it real, you know, you&#x27;re making it real by doing the work I think it&#x27;s cool that you&#x27;re thinking about these questions, and like you said, you&#x27;ve looked and you don&#x27;t see anybody else to play in the field to solve these problems and address them</p>
+        <p class="oc-p"><span class="oc-at">18:12</span> in like a way that you feel like it&#x27;s compelling or like has any momentum, so I&#x27;m excited there&#x27;s a black man behind this, behind this issue and really thinking about it, you know, because I think it&#x27;s so cool to be here in Brussels and meeting so many black people I don&#x27;t really see at a conference in the U.S. I don&#x27;t know how that&#x27;s been for you, but it&#x27;s nice to meet people from different, different parts of Africa, countries I haven&#x27;t really seen I&#x27;ve seen as much represented in the immigrant communities I&#x27;ve seen in the states and it&#x27;s just really cool to hear what people are working on I feel like it&#x27;s a whole different environment obviously being in Europe right now being here in Belgium but normally it&#x27;s in Paris as well and so like I met people that are here from Brussels that wouldn&#x27;t have been there and it&#x27;s interesting to see what communities are present here I&#x27;ve seen Pakistani communities I&#x27;ve seen like I think some Algerian communities here I&#x27;ve seen a pretty strong Moroccan community here in Brussels and so it&#x27;s cool and interesting to see like what the lasting</p>
+        <p class="oc-p"><span class="oc-at">19:02</span> Footprint will be, you know, having a conference here and, yeah, and people work with things like you, you know, showing up here and getting to meet local people, you know, I think even it&#x27;s like coming to this space, you know, like this is a local part of this community, this building now, so, yeah, I hope that people in Region Village continue to come back here and check it out in the comments. Yeah, even, I met, um, uh, these two guys, uh, Maxwell and Manu, um, they&#x27;re, they&#x27;re both Ghanaian, which I think I met my name. Oh, yeah. He&#x27;s at Oxford, yeah, at the NBA? Uh, I believe so, yeah.</p>
+        <p class="oc-p"><span class="oc-at">19:30</span> Yeah, yeah, yeah, Maxwell as well. Yeah. I&#x27;ve been talking to people, I say, you&#x27;re a black person, I haven&#x27;t met yet Yeah, yeah, you&#x27;re staying on top, you&#x27;re staying on top I love it, I love it But even just like, yeah, even just like, like, yeah, they both got me in And it was funny because we met, we chatted, we hung out, and we were both going to the same place So I was like, oh, can I get a ride? And then it just came up in the car, we were just like, what? And it was just, it was just, it was really funny But it&#x27;s really cool to see like, yeah, people like, that look like us</p>
+        <p class="oc-p"><span class="oc-at">20:00</span> that are from the same place, just also pushing technology forward, thinking deeply about what the future looks like. I don&#x27;t know. Sometimes I&#x27;m like, oh, I&#x27;m just a weird guy. I&#x27;m just doing some random stuff that no one knows what I&#x27;m doing. But then it&#x27;s like, oh, no, you get it. You get it. And so particularly even in the black community, it&#x27;s nice to feel that sense of camaraderie. It&#x27;s like, okay, cool. He&#x27;s affirming. This is a legitimate undertaking. Yeah, he&#x27;s like, yeah, I&#x27;m not just crazy, doing some random stuff I&#x27;m a metallic cult Yeah, yeah, exactly, exactly If I am, it&#x27;s okay Yeah, it&#x27;s like, oh, you&#x27;re here too? Alright, alright</p>
+        <p class="oc-p"><span class="oc-at">20:39</span> So we are building the future, right? Okay But yeah Yeah, I think Yeah, time here in Brussels has been really nice I was recently at Jesmerelda Oh, that&#x27;s awesome Yeah, it was a pop-up village, pop-up community And I think that&#x27;s really They&#x27;ve been, that was like a month-long experience, met a lot of amazing people, worked on some great technology. Yeah, would you explain what Edge and Emerald is for my audience? Yeah, sure. Edge and Emerald is a pop-up village, which is kind of like, almost like a campus that lands in a place where people come from all over, building different things, like AI, crypto, longevity, like biotech, some hard tech stuff.</p>
+        <p class="oc-p"><span class="oc-at">21:27</span> and they get together and live in the same place and have workshops, anyone could listen to a workshop and the caliber of people generally really high, people posting workshops are like wow, this person, like I&#x27;ve seen this person on Twitter, like I&#x27;ve seen this person&#x27;s work, I&#x27;ve used their work and now I get to like sit in an intimate setting and have a dialogue, so it&#x27;s really, and then, or just like have breakfast with them and like or you just run to each other like in the middle of the town. Yeah, yeah. So it&#x27;s a really special, magical experience to kind of live in community with such cool</p>
+        <p class="oc-p"><span class="oc-at">22:05</span> people and build like really nice bonds because even coming here in Brussels and running with the same people, you&#x27;re like, oh, what&#x27;s up? You know, because you basically spend months together and so that&#x27;s been really nice and It&#x27;s also like, was a really great place to work on the project I&#x27;m working on now which at Edge and Meralda I held a couple of workshops building these like AI pendants So these, there&#x27;s a company called Base Hardware that make these pendants and they had a workshop which I found really interesting and I held a few more so people could have access to these devices But the idea of these pendants is they&#x27;re listening to everything you&#x27;re saying and they&#x27;re creating a transcript and then you&#x27;re able to search that transcript. So if it&#x27;s like the last time let&#x27;s say I was talking to my friend or I talked to my friend last week and he recommended a book like hey what what book did David recommend to me right I was trying to remember it&#x27;s kind of externalizing your memory in a way so that you can access you can access it right last time we spoke like what was the last time we</p>
+        <p class="oc-p"><span class="oc-at">23:12</span> Last time I spoke to Maceo, what did we talk about? I want a summary. Because I don&#x27;t remember. It was like a year ago. And so that ability to have this external memory is really useful, but maybe I don&#x27;t want the Facebook version of this pendant. I want to remember this stuff, but I don&#x27;t want someone else to actively be able to see everything I&#x27;m saying or remembering or think, or like, you know. We&#x27;re going to use you, we&#x27;re going to not use you Yeah, exactly, like, oh, well, Sam said this this one time after he had a drink and so maybe, like, I&#x27;m going to influence him politically XYZ or something, right?</p>
+        <p class="oc-p"><span class="oc-at">23:51</span> Like, you have, like, there&#x27;s an aspect of public privacy to this as well that&#x27;s worth thinking about and, like, the erosion of public privacy but that&#x27;s, like, kind of also a bigger thing, a bigger topic But I think the part of the private privacy, right, where the things that I have, I keep private, I think that should still be preserved. And so that&#x27;s kind of the nature, that&#x27;s one of the core things I&#x27;m working on in Titan Cloud, is like, how do I have such a device, store this data in a privacy-preserving way where I can use it with, like, a whole suite of applications?</p>
+        <p class="oc-p"><span class="oc-at">24:30</span> Like, let&#x27;s say I&#x27;m learning Spanish, and I&#x27;m speaking Spanish, I make some mistakes, Like maybe I have an AI that&#x27;s able to say, hey Sam, these are mistakes you made By the way, here&#x27;s also some vocab that you should know because you try to use words like this It&#x27;s able to live on top of my data, I can give permission to that AI to do that Maybe I have an AI that summarizes everything that happened since my last therapy session For my therapist, and I give it to my therapist Or, I don&#x27;t know, AI that I want to improve my manners So it just tells me when I say, hey Sam, you could have said thank you there</p>
+        <p class="oc-p"><span class="oc-at">25:03</span> or something like this, right? Yeah, that&#x27;s really cool. These are all like apps, like an app store, and you could build this like Apple, where you&#x27;re like, these are how you interact with this data, all this stuff, but it&#x27;s probably better to build it like email, to build it like a protocol, where anybody can just build on top of it without having to ask for permission from a company, but they ask permission from the user. They say, hey, we built this thing Can we have access to your data to give you the service? And I think that&#x27;s a way better approach to how we interact with data</p>
+        <p class="oc-p"><span class="oc-at">25:40</span> How we interact with AI Having composability of this stuff So that&#x27;s like, to me, this is kind of like one of the core goals of TinyCloud Is to show this is possible in this new domain And then kind of work backwards, right? I&#x27;m not going to try to launch your own data social media Because why compete with Instagram, right? But this is such a new space that we can actually do something new Yeah, and I was thinking about it, talking about the Apple App Store I feel like Apple doesn&#x27;t have products that kind of do what you&#x27;re talking about right now I feel like the closest they could get would be my phone listening to me all day</p>
+        <p class="oc-p"><span class="oc-at">26:11</span> And once again, that comes right back to your premise Like, do I want the Monopoly having access to my data all the time to help me do everything? In reality, I feel like Apple could probably already do that But they don&#x27;t want to tell us that Yeah, no, they could And there&#x27;s some ideas that we can&#x27;t even have because of how technology is built. If I want to share my location with all my Instagram friends, I can&#x27;t do that. It&#x27;s not that that&#x27;s a hard thing to do. Instagram is Facebook&#x27;s little Disneyland.</p>
+        <p class="oc-p"><span class="oc-at">26:42</span> It&#x27;s Disneyland. You can&#x27;t do whatever you want. They own it. You want it to be a city where I can set up a business here.</p>
+        <p class="oc-p"><span class="oc-at">26:53</span> Things can change. There&#x27;s neighborhoods. You know what I mean? I think you want this kind of freedom of composability because it lets a lot of new things be. Things that maybe a product manager at some of the tech companies is not going to think about. That shouldn&#x27;t be the bottleneck for innovation, I think. I&#x27;m going to wrap up in a moment. Okay, cool. Sorry to interrupt. I might better use my other camera too. Cool, we can wrap up You can say whatever you want But I appreciate you talking But yeah, I was gonna stand up anyway So I wanted to press the start and stop button on the record</p>
+        <p class="oc-p"><span class="oc-at">27:41</span> Yeah, okay, cool, then I&#x27;m hoping Yeah, I mean, yeah</p>
+    </section>
+
+    <p class="oc-note">This piece was never on YouTube. It was published straight to a public blockchain in the days it was shot, so it does not depend on any platform. The words above are the transcript of the tape, made the same way as the rest of the archive and not corrected by anyone.</p>
+</article>
+
+<div class="wrap wtm-share"></div>
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+
+<aside aria-label="Newsletter"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" class="wtm-newsletter-pill" aria-label="The We Them Weekly, once a week by email: what went up and what we are asking next">The We Them Weekly, once a week by email <span class="wtm-newsletter-pill-arrow">&rarr;</span></a></aside>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+
+<script src="../collect.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js', '../newsletter-pill.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

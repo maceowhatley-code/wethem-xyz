@@ -1,0 +1,945 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="What does a poet in Denver say when asked about AI, libel and copyright?">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/ai-is-artificial-we-are-the-official">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="AI Is Artificial, We Are the Official: A Poet | Denver">
+    <meta property="og:description" content="What does a poet in Denver say when asked about AI, libel and copyright?">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/ai-is-artificial-we-are-the-official.jpg?v=f8bef48ac4">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="A poet named Phoenix">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/ai-is-artificial-we-are-the-official.jpg?v=f8bef48ac4">
+    <meta property="og:url" content="https://wethem.xyz/watch/ai-is-artificial-we-are-the-official">
+    <title>AI Is Artificial, We Are the Official: A Poet | Denver &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/ai-is-artificial-we-are-the-official#video",
+  "name": "AI Is Artificial, We Are the Official: A Poet | Denver",
+  "description": "What does a poet in Denver say when asked about AI, libel and copyright? He goes by Phoenix, and he answers with Lego bricks, a baby learning to walk and a line he built for it: \"AI is artificial. We are the official.\" On words: \"Will that building stay there? No. But that's what words do when they mess with what was already good as it is written.\" On money, because he heard a track made with voices he recognised: \"We need to start making paperwork to ensure our copyright that we battled in the seventies. That was for us. That's the seed. We are the fruit.\" On what a machine cannot do, he points to a baby standing up: \"Did it show any fear? Free will in a room full of giants, we are.\" Then he reads his own poems from his phone. \"I don't believe in stealing my words. As long as I'm alive, they're our words.\" Twenty minutes, filmed in Denver in 2026.",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/2KWrTQgRKS0/maxresdefault.jpg"
+  ],
+  "uploadDate": "2026-03-15T06:00:00Z",
+  "embedUrl": "https://www.youtube.com/embed/2KWrTQgRKS0",
+  "url": "https://wethem.xyz/watch/ai-is-artificial-we-are-the-official",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT21M18S",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "Libel, and digging up a ten-year-old mistake",
+      "startOffset": 10,
+      "url": "https://wethem.xyz/watch/ai-is-artificial-we-are-the-official?t=10",
+      "endOffset": 83
+    },
+    {
+      "@type": "Clip",
+      "name": "Words as bricks: pull three out and it falls",
+      "startOffset": 83,
+      "url": "https://wethem.xyz/watch/ai-is-artificial-we-are-the-official?t=83",
+      "endOffset": 127
+    },
+    {
+      "@type": "Clip",
+      "name": "Why changing a few words changes the meaning",
+      "startOffset": 127,
+      "url": "https://wethem.xyz/watch/ai-is-artificial-we-are-the-official?t=127",
+      "endOffset": 190
+    },
+    {
+      "@type": "Clip",
+      "name": "How AI songs cut into artists' income",
+      "startOffset": 190,
+      "url": "https://wethem.xyz/watch/ai-is-artificial-we-are-the-official?t=190",
+      "endOffset": 248
+    },
+    {
+      "@type": "Clip",
+      "name": "“That’s the seed. We are the fruit.”",
+      "startOffset": 248,
+      "url": "https://wethem.xyz/watch/ai-is-artificial-we-are-the-official?t=248",
+      "endOffset": 276
+    },
+    {
+      "@type": "Clip",
+      "name": "“AI is artificial. We are the official.”",
+      "startOffset": 276,
+      "url": "https://wethem.xyz/watch/ai-is-artificial-we-are-the-official?t=276",
+      "endOffset": 299
+    },
+    {
+      "@type": "Clip",
+      "name": "What a baby can do that AI never will",
+      "startOffset": 299,
+      "url": "https://wethem.xyz/watch/ai-is-artificial-we-are-the-official?t=299",
+      "endOffset": 337
+    },
+    {
+      "@type": "Clip",
+      "name": "Why AI can never have original intent",
+      "startOffset": 337,
+      "url": "https://wethem.xyz/watch/ai-is-artificial-we-are-the-official?t=337",
+      "endOffset": 409
+    },
+    {
+      "@type": "Clip",
+      "name": "Reading from Poetizer",
+      "startOffset": 409,
+      "url": "https://wethem.xyz/watch/ai-is-artificial-we-are-the-official?t=409",
+      "endOffset": 686
+    },
+    {
+      "@type": "Clip",
+      "name": "Written August 2023",
+      "startOffset": 686,
+      "url": "https://wethem.xyz/watch/ai-is-artificial-we-are-the-official?t=686",
+      "endOffset": 739
+    },
+    {
+      "@type": "Clip",
+      "name": "Introduction of self",
+      "startOffset": 739,
+      "url": "https://wethem.xyz/watch/ai-is-artificial-we-are-the-official?t=739",
+      "endOffset": 988
+    },
+    {
+      "@type": "Clip",
+      "name": "“As long as I’m alive, they’re our words”",
+      "startOffset": 988,
+      "url": "https://wethem.xyz/watch/ai-is-artificial-we-are-the-official?t=988",
+      "endOffset": 1218
+    },
+    {
+      "@type": "Clip",
+      "name": "Anything to say to someone under ten?",
+      "startOffset": 1218,
+      "url": "https://wethem.xyz/watch/ai-is-artificial-we-are-the-official?t=1218",
+      "endOffset": 1258
+    },
+    {
+      "@type": "Clip",
+      "name": "His name",
+      "startOffset": 1258,
+      "url": "https://wethem.xyz/watch/ai-is-artificial-we-are-the-official?t=1258",
+      "endOffset": 1278
+    }
+  ],
+  "creator": {
+    "@type": "Person",
+    "name": "Maceo",
+    "url": "https://wethem.xyz/people/maceo"
+  },
+  "transcript": "Right here, let's go where the Robin Williams pictures, because that was my favorite actor.\nOkay, cool.\nI was going that way.\nPerfect. See, look at that. I think it work. And now you're just a voice.\nYeah, so AI is the exact prime door for new frontiers and what shouldn't be the word of mouth in destruction, in tangent, which is libel. The court terminology, which is where defamation in legal terms is when it be for somebody that the word of mouth is destructive and inappropriate when you use what is 10 years ago intentionally just to 10 years later smack them down when they were doing nothing harm and they could have improved their life like a famous person and they haven't done nothing for 10 years\nbut they made a mistake\nand then you go and throw it at them knowing that it's now hot that mistake is is in the air and nobody likes it. But that person is trying to make better, and make do as a family. So that's liable in court. It's where copyright infringements fought a lot to keep things as they once are, as they shall be. If it comes from an intellect that can defend it upon the propensity of facts, and what is before and following, it holds, right? so words can come in like bricks and Legos you shouldn't see so you put together and\nall different things that you built like a model\nthe model should just start seeing this brick and this brick and this brick and this port like that different parts so you pick each three and go like that, and just make them all evaporate. Does that building stay there? No, but that's what words do when they keep fucking with shit that was already good as it is written. They just put something else there.\nYeah, yeah, yeah.\nBecause it changes and alters the interpretation.\nThe whole picture changed. When\nit doesn't necessarily look like it would change the definition.\nYeah, yeah, but it does.\nBecause even a fool can do that, thinking it will keep the definition the same, but it looks nice. It doesn't.\nYeah, yeah.\nIt Interprets the whole thing\nIt really shapes the whole thing It's based on the\ngeneral consistency of the mind And that's why a brand ambassador would keep that as a department for magazines They have a brand ambassador that every million, 10 million print Let's say a tribe month So three months, 10 million That's 120 million You're gonna have to make sure 120 million readers potential in 12 months Don't fucking, boom Now it's your magazine, see Because they had a following and there's a purpose And the words and how they're put And how they're interpreted Have to be skimmed and proofread Proofreaders have to make sure the general consistence Fit the general consistence of the mind So they're accurate\nSo interpreting is not only The intention of the person writing It's details for the first time It's interpreted on paper\nProofreading is now interpreting So, Interpretation is not necessarily anything, that's why it's IN in it, for word part, because it's not tangible, but it's acceptable. Okay. Terminology expects us not to be ally be AI, which is how you are in defamation in freedom of speech being so fragile as it is today. A.I. and making, like, Ariana, Eminem, I was just gathering. They made a dope-ass song, but it was A.I. You could tell it wasn't with royalties, but it comes in, impacts that. Why impact people that we know as role models? I'm 35, Rihanna's not that far apart. Eminem's 42, okay, how the fuck is it going to continue their budget, their kids, and all that shit?\nBoom, A.I. shit just comes through and sliced through their own entire income.\nThat's crazy, right?\nBecause nobody stopped the foundations of them. We need to start making paperwork to ensure our copyright that we battled in the 70s. That was for us. That's the seed. We are the fruit. Now when the fruit gets eaten from our generations after us, it stays juicy. It stays good and ripe, you know? So it makes them want more fruit. And that's how everything will stay making their fruit free.\nBecause then the system works, and the plywood is going, people always want to keep doing it. We shall\ngather to make sense, because AI is artificial, and\nwe are the official... And then we become irrelevant, we still have to survive. We are officiating.\nWe are what makes it seem official, because we give too much stock to what our mind is to make something that is a robot.\nYeah, yeah, yeah.\nIsaac Asimov, okay. But AI is artificial, it is only as intelligent as prompted to be intelligent.\nYou just quote Isaac Asimov?\nSo, Artificial Intelligence is only intelligent up to its official capacity to be prompted by intelligent, we are, so if we give it prompts, but it will never be able to do like a baby does, we're this tall, it's like this big, pressing the off button when it told no, but you know it never did get to walk yet, but that moment it stood up and it was about to press the TV button, it started walking, did it show any fucking fear, but free will and a room full of giants we are. That's what free will is It can never be prompted It was prompted by a volition because it saw It was aware that it could do what we can do\nAnd then it had original intent\nExactly, so AI can never have that\nYeah, yeah, yeah\nThat's the whole principle\nIt's always secondary intent\nEven augmented can't It can only be put together by us and our reality First, capture what Getty's images is You know, the freedom of having flip art So if something is impossible to do Laws of Physics, Augmented Reality can augment but cannot adapt or alter, like alter the dimension compared to our dimension, it stays apart, so we have to defend shit because artificial could be the gap that is wrong, not that it is wrong as a tool though, keep it, never, but if someone's toy, it could have been used in, what if I never existed to tell you this, then nothing would have been clean from this moment, now watch this, it's a toy, But now I'm giving you it because I need people they are the capacity to turn it keep it a tool They smack that toy maker because it can't but it's how you would invade our countries We are intelligent Einstein chose that so we got to keep ourselves intact at least mentally because invisible warfare, which has become mind\nSo can I hear a piece of your spoken word? That would be pretty sick conclusion\nIf I can just cite something?\nYeah, you can read it,\nI don't care.\nHey, 234?\nWhat's that, what's that?\nIt's 11th with 2344.\nIs that your phone number? 2344. Oh, the time.\nOn the 11th day.\nPeople keep putting their phone numbers in the videos. 11th day\ntimes four numbers, times 11th day is 44, 2344.\nThat's the time.\nYou know, Jordan's number, the reason why he chose that was mathematics.\nNo, I didn't know that. Are you in like the, what is it, there's like, there's like, there's like, are you like a Nation of Islam guy? You know, like the, there's like the divine mathematics, as you know what I'm talking about?\nI am a uniform upon open-minded attachment, so if I come across it and I have an open-minded as I am, to learn it, I am multi, able to, with my capacity of knowledge, put it together and understand it. as interpretation and perception, which are both key points of validity that can never be debunked or argued or dissuaded because it all resides in what I have in the mental capacity.\nI cannot give it to you. The moment I have fabricated it, I can't just fabric your bones, smack yours of your own fabrication of what's going on in your own mental out of it and put two there at the same time. Like Freaky Friday, no switch. That doesn't make sense. yeah so\noh yeah go for it go for it well\nI just have to get this one out because it's just\nI just had to reset this because I got locked out forgetting my code\nit's that new 72 hour shit if your fingerprint and I only did it to get a fingerprint so it made me do the four code to prevent 72 hours I didn't have my phone so let's do it\nit locks it\nlet's see here\nthis\nhow you doing\nso this is poetizer\nif you didn't know what the app looked like\nyeah I don't know\nSo, Poetizer,\nI have woven tethered lesson too because it's like I've been just trying to keep the emails, which keeps the phone, you know.\nSo there's my first one, Pan Don, like\nPanda,\nand Peter Pan, see, Pan Don,\nyeah, it's my second one, Chaotic Distances, help cap all 20s, my third one, Chaotic Distanances,\nyeah, so let's see I like this one because it's really my lit so like if there was a gang and it was my lit and the gang was brand ambassadors upon brand ambassadors of the future so keeps them taught and trained basics fundamentals brand would be the fundamentals values in virtues of a masculine order that's physical And Feminine Substance That Is Substantially Invisible, Your Imagination\nOkay, So It Says My Self-Love, I'm Wavering Anywards Ethics from Seen from Birth to Myself upon Lowity from Motherly Resolve Place My Own Smile in Teachings Worthy Liberty By Loving the Pain I Was Gained by Holding Mortality Traverse Towards Harnessing My Own To Set Eyes upon DeForest Focusing Means to Sympathy Toughing My Drive Aim to Instill Minimum That Being Patience Finding Solace and own fortitude of characteristics conducive to institute a solidarity of loyal loving strength intriguing forth popular ties of capacity unified upon rippling waves that transcend heights overcome mistaken time for only enough and stepping at advocacy outpacing adversity against this world's gardening of cultivated youth own chances of prosperity opportunity itself will fight each after claims of grown mature affluent tradability of such truly shown a team effort of shield-like stance that never letting the soul be fly keepings be less than if Scenes Are Negatively Driven For No Personal Rights Shall Stend To Let A Worthy Fellow Of Humane Law Of Self-Respect And Dignity Based Honor Bestow Low Reflection Of Integrated Affinity To, For, Or Upon As Every Struggle Each Hustle And All Strive For Much More To Leave Legacy Worthy Upon The Decade Inbound\nSee Positive. and C-positive, I like that. And then C with a plus sign.\nBut I like that though.\nI wrote that August 27th, 2023.\nAnd I guess I'll give you one more because I want to give it to my original.\nAnd it's like, this is if I had to write in a format, but I'm not instrumentation. I'm instrumentation-less, like in musical theory.\nAnd my first one had 49 filers, 25 filing with my prison outfit, you know? So it says, the bio says, I'm a poetic lyricist and a grandmaster flow of God potentials who I guess the equation of the math for what words I spoke gain to contain the fact I am flow as that be real as I am as I will it I am pressure, create a diamond to complete my God soul master and nature to bear fruitful thongs of this vernacular is the very essence of great gifting is sifted through expected of what a genius shall look like or you just do and then I'm going to take this off because of my breathing\nyeah yeah you got to go a little bit slower than when you read it\nand that's what I need to know\nyep\nso introduction of my introduction of self as Yahweh so interpretation introduction of self as I am introduction of self made made as I am I can't change it I'm a man see so those are how I saw when I saw the trend self-made I'm self-made mm-hmm I played with the Yahweh is still a verb\nyeah Yeah, yeah, yeah, that's some of them.\nIf you are a self-declaration, right? Mm-hmm.\nIntroduction of self is Yahweh. Been fucking my life for my wife, the other call the world hasn't come yet. Your next eye say to her, looking left after moving on from this here step. Car rightfully traversing past most tread, quick to show me introverted fear, I guess they show dread. Must feel me near, no solely slippery, I think opposition must be queer, try to oppose me. Guess they stay folding, as I'm going back to her desire. Nope, you took too long. Watch, stand back, this'll be more than an ordinary fire. I Creep On Silent These Superphotonic Tires, Excelling Lightspeed I Definitely Know What I Want, I Want Even To Get Tired Watch How I Receive And Exactly That Which I Need So Bow To Your Inherited The Truthful King\nGo On To Straight,\nGo On To Shaking Knees And Engulf These Tools And Glean To Feel Toes Curl With Ease Ooh I'm Cool Yes, Call Me The Fool As I Glow Full Of Accomplishments Of A Fellow The End Results Of My Finale Is Multiple Warped Tunnels Laying My Foundations Of Funnels Into The Finistic Canals Orgasms Felt Galactically Loud Emanating A Radiance Of Worldly Potential I'm so proud we birth created the first prince label before the first principle beings have called me beings of chaos call me dad that one fable call me the father of the primordial their boss and just dad don't comprehend your loss you're just sad that you know i ain't mad every sentient says it's okay to be stupid yeah later stupids i spoke omni to existence that's the way i will lay pipe harder and rougher with my super stoner sorry so much\nit's okay\nyou see like i said slow down\nthis is good for me because i ain't done this and i need this you know\nyou're doing great it's cool man\nI said, I said, the end result in my finale is multiple warped tunnels, laying my foundation of funnels into the thermistic canals, orgasms felt galactically loud, emanating a radiance of worldly potential, I'm so proud, rebirth created the first prince label, before the first principle, beings of chaos call me dad, that one fable, call me the father of primordial, the boss, I'm just bad, don't comprehend this, you're lost, you're just sad, that you're not, now I ain't mad, every sentient says it's okay to be stupid, yeah later stupids, I spoke on me into a I Will Lay Pipe Harder, Rougher, My Super Stoke Is Better Because I Promise To Be Even Wetter Bruce Lee's Last Breath, Anonymous My Mental Call Me What In The Fist Of God's Letter\nThis Is Essential, Curious\nTears Wept Up And I Watched All Clear I'm Always Above That, I've Been Ironically Seared I'm Ablazed And Clean, Call It Godly Might Yes Right, Here's To Call Me Power, Able Lost His Fight First To Have It, I'm Darkness High In The Heights Of The Heartless Night So Empiric As I Bite Yet Always Omni Bright Need More Souls Of Things Devouring All Feeling To Acts My Militia Are Brightly Lit Golden Beings So I feel that call my ammunition igniting Go to conquer the gold, pulsing and pulling up on the only human objective that I have left to fold To aspire to burning this rubber down to the diamond ring's perspective on bold Fission infused into my lesson, heart snapped to attention Call it enough pressure to crush, tearing the hardened carbon, call me a true original atom The world's full of what activities produce sin, yet I'm nothing like the Luciferian Collecting my soul will not be achieved by him Hope to never leave my legend, be that of my children starving Only shall I leave with Yahweh over in the trash bin Yeah, this is my first vernacular introduction See this highly praised trend See this highly praised chin, call me properly raised in My life, my wife, my untapped or not forgotten shadow friend\nCall her twin Howdy\nfrom sight Oh, you didn't see her? That's my bitch Lights, camera, action She's definitely my best inspiration to create heaven No, this is our singularity was 11 Call us the first binary to be complimentary Fully situated Call me God, Yahweh's finale The last lead of what was before and after living Watch the final four never bleed So I miss the families called your Armageddon Get out the way, watch me, follow me\nNow I've never been able to lose myself, keep it raw and authentic and it's always been the pace, but it's there for the reader to set his arm. Because anybody cares. I don't believe in stealing my words as long as I'm alive. They're our words.\nI hear that.\nI like that. They're honorable to the words at hand.\nYeah, yeah, yeah\nCause it's just like putting them and they lay it like that in the soup\nYeah, in the soup\nMan, yo, bro, this is our soup, bro, you get it?\nYeah, yeah, yeah\nOr a family, you know, to the girl But to sit there and say, that's my shit Why I'm Alive is the most cockiest shit Because the words were before we ever existed In a heartbeat\nYeah, but you put them in the soup Yeah That's your recipe\nIn a heartbeat too If there was a bay, there was an octave There was just nothing outside to see the big bay Bang. Still had an octave. Right? I mean, if we had to wait until we go outside of the earth to see the earth, bang, and we're still in it. It's more slow.\nYeah, that's true.\nThen what is C squared, but it had to be sound. I always try to tell people, C squared is more than 186,000. If it's 186,000 times 186,000, a new value, then it would be the fastest. But if black holes can escape to talk to you as we hear them, but the light doesn't, so it doesn't beat the sound. that escapes it.\nThat's right.\nThe moment the thing captures it and we have it in a satellite, what hears it? It's the same decibel area that dogs hear the whistle that's lower than ours brought to ours. And when we hear that, it seems demonic, whatever. That's just the quality we are attached to that decibel. Yeah. And then exiting ours towards like jet planes in the distance. It sounds heavy. Yeah. Two different, you know? so those two different parameters we're in the middle this is when the dog still has that whistle we don't even forget on the one created on us but black holes are always been able to do that hmm\nc squared\nI never thought about that square\nnever mind he said I will say that\nno you did say that\nno Einstein said never mind a special activity before he died he never disclosed what made him and Retract, E equals C squared, a special activity. He says, never mind to that. And they kept running. Like they have an inch and gone a mile, they always do. They just were given the gift of physics. As children, they ran an inch and never stopped. And now they're at a mile. And C squared was always sound. If a black hole could talk and stay black, the light can't escape. Because it's why it stays holding all the color black. Black, insides turn. Because you have more color to hold, I have more color to give, I have more colored than your colored ass.\nI like that.\nUpon interpretation.\nYeah, yeah. On\nreverse, I got all the black in my eyes because you're just white and I just put it as I interpret my brain holds your color, you know? It doesn't matter, the hue. But that is got all the color because if it doesn't have no color to give, it shall be pure black. it retains them so heat outside the universe is why all color were all the wormholes of all the black holes I put all the photons that are light source for the white spectrum it's outside the universe for the capital D-A-Y in the Bible to ever be visited by something like Gabriel's oldest before H.D.\nWells time travel if he's from a later time and talk to Mary with a message from what was a later time than ours. If 2020 says we can travel, in Australia's math said that. Physicists published it. How do we do it? Our awareness is in the body, your awareness is in your vessel right there. We call it temple right here. That's what travels, the awareness. If your awareness can do it in a dream and come right back to you when you wake up, that's the proof you only need.\nDo you have anything you want to say to people under the age of 10 years old?\nBe inspired without mimicking what I said tonight. Unless you have your mom, especially. But always know, if you're not as you think your dad is strong, be as strong as you think him to be.\nI got that.\nWithout judging me on validation, when I say that, it can inspire the father, it can inspire them as them.\nOh yeah, peace. What was your name? Phoenix. Phoenix.\nMy name is Kristoff Lovato.\nYou're Russian?\nNo, it's Norse for Wolf Cup in English, Lovato, and Kristoff is because of how my Social Security paperwork is, without the use of my birthday.\nWell, it's nice to meet you, man. I'm Maceo.",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Denver",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "url": "https://wethem.xyz/places#denver"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Denver Unfiltered",
+    "url": "https://wethem.xyz/portfolio#p-denver"
+  },
+  "keywords": [
+    "What would you say to someone under ten?"
+  ],
+  "dateCreated": "2026-03-11"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Denver Unfiltered",
+      "item": "https://wethem.xyz/portfolio#p-denver"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "A poet named Phoenix",
+      "item": "https://wethem.xyz/watch/ai-is-artificial-we-are-the-official"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place], who[data-pf-who]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2026-03-15" data-pf-vid="2KWrTQgRKS0" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;21:18&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="Denver" data-pf-country="United States" data-pf-project="Denver Unfiltered" data-pf-who="Maceo">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-denver">Denver Unfiltered</a></li>
+            <li aria-current="page">A poet named Phoenix</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">A poet named Phoenix.</h1>
+
+    <p class="wt-byline"><strong>Phoenix</strong> &middot; Reported by <strong><a href="../people/maceo.html">Maceo</a></strong> &middot; Denver &middot; 21 min &middot; filmed <time datetime="2026-03-11">11 March 2026</time></p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="2KWrTQgRKS0" live postersrcset="../stills/2KWrTQgRKS0-320.jpg 320w, ../stills/2KWrTQgRKS0-480.jpg 480w, ../stills/2KWrTQgRKS0-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/2KWrTQgRKS0?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="A poet named Phoenix, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+    <p class="wt-answers">Answers <a href="../question/what-would-you-say-to-someone-under-ten.html">What would you say to someone under ten?</a> &middot; see how other cities answered &rarr;</p>
+    <div class="wt-prose">
+            <p>What does a poet in Denver say when asked about AI, libel and copyright? He goes by Phoenix, and he answers with Lego bricks, a baby learning to walk and a line he built for it: &ldquo;AI is artificial. We are the official.&rdquo;</p>
+            <p>On words: &ldquo;Will that building stay there? No. But that&rsquo;s what words do when they mess with what was already good as it is written.&rdquo;</p>
+            <p>On money, because he heard a track made with voices he recognised: &ldquo;We need to start making paperwork to ensure our copyright that we battled in the seventies. That was for us. That&rsquo;s the seed. We are the fruit.&rdquo;</p>
+            <p>On what a machine cannot do, he points to a baby standing up: &ldquo;Did it show any fear? Free will in a room full of giants, we are.&rdquo; Then he reads his own poems from his phone. &ldquo;I don&rsquo;t believe in stealing my words. As long as I&rsquo;m alive, they&rsquo;re our words.&rdquo;</p>
+            <p>Twenty minutes, filmed in Denver in 2026.</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../question/what-would-you-say-to-someone-under-ten.html">Every answer to “What would you say to someone under ten?”</a></p>
+        <p class="wt-rail-link"><a href="../places.html#denver">Everything filmed in Denver</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="vfx-artist-on-grief-art-and-starting-over.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/6JcW_wQyVWc-640.jpg" srcset="../stills/6JcW_wQyVWc-320.jpg 320w, ../stills/6JcW_wQyVWc-480.jpg 480w, ../stills/6JcW_wQyVWc-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>29:00</span></span><span>Kale, a VFX artist, on grief, her mom Sarah, and working on Marvel films.</span></a>
+        <a class="wt-rail-card" href="freestyle-spoken-word-and-dance-at-the-channel-5-talent-show.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/mHSMrIwjbck-640.jpg" srcset="../stills/mHSMrIwjbck-320.jpg 320w, ../stills/mHSMrIwjbck-480.jpg 480w, ../stills/mHSMrIwjbck-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:44</span></span><span>Freestyle, spoken word and dance.</span></a>
+        <a class="wt-rail-card" href="after-the-denver-protest-project-2025-in-his-own-words.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/Xtqu9LbClYU-640.jpg" srcset="../stills/Xtqu9LbClYU-320.jpg 320w, ../stills/Xtqu9LbClYU-480.jpg 480w, ../stills/Xtqu9LbClYU-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>21:00</span></span><span>On the ground at a Denver protest, talking Project 2025.</span></a>
+        <a class="wt-rail-card" href="never-been-ashamed-to-cry-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/yepfMr68Rao-640.jpg" srcset="../stills/yepfMr68Rao-320.jpg 320w, ../stills/yepfMr68Rao-480.jpg 480w, ../stills/yepfMr68Rao-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>24:10</span></span><span>Eric, on grief, family, and the human race.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c10"><a class="wt-t" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=10s" target="_blank" rel="noopener" data-pagefind-ignore>0:10</a><span class="wt-s">Libel, and digging up a ten-year-old mistake</span></li>
+                <li class="wt-line" id="c83"><a class="wt-t" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=83s" target="_blank" rel="noopener" data-pagefind-ignore>1:23</a><span class="wt-s">Words as bricks: pull three out and it falls</span></li>
+                <li class="wt-line" id="c127"><a class="wt-t" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=127s" target="_blank" rel="noopener" data-pagefind-ignore>2:07</a><span class="wt-s">Why changing a few words changes the meaning</span></li>
+                <li class="wt-line" id="c190"><a class="wt-t" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=190s" target="_blank" rel="noopener" data-pagefind-ignore>3:10</a><span class="wt-s">How AI songs cut into artists&#x27; income</span></li>
+                <li class="wt-line" id="c248"><a class="wt-t" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=248s" target="_blank" rel="noopener" data-pagefind-ignore>4:08</a><span class="wt-s">“That’s the seed. We are the fruit.”</span></li>
+                <li class="wt-line" id="c276"><a class="wt-t" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=276s" target="_blank" rel="noopener" data-pagefind-ignore>4:36</a><span class="wt-s">“AI is artificial. We are the official.”</span></li>
+                <li class="wt-line" id="c299"><a class="wt-t" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=299s" target="_blank" rel="noopener" data-pagefind-ignore>4:59</a><span class="wt-s">What a baby can do that AI never will</span></li>
+                <li class="wt-line" id="c337"><a class="wt-t" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=337s" target="_blank" rel="noopener" data-pagefind-ignore>5:37</a><span class="wt-s">Why AI can never have original intent</span></li>
+                <li class="wt-line" id="c409"><a class="wt-t" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=409s" target="_blank" rel="noopener" data-pagefind-ignore>6:49</a><span class="wt-s">Reading from Poetizer</span></li>
+                <li class="wt-line" id="c686"><a class="wt-t" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=686s" target="_blank" rel="noopener" data-pagefind-ignore>11:26</a><span class="wt-s">Written August 2023</span></li>
+                <li class="wt-line" id="c739"><a class="wt-t" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=739s" target="_blank" rel="noopener" data-pagefind-ignore>12:19</a><span class="wt-s">Introduction of self</span></li>
+                <li class="wt-line" id="c988"><a class="wt-t" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=988s" target="_blank" rel="noopener" data-pagefind-ignore>16:28</a><span class="wt-s">“As long as I’m alive, they’re our words”</span></li>
+                <li class="wt-line" id="c1218"><a class="wt-t" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1218s" target="_blank" rel="noopener" data-pagefind-ignore>20:18</a><span class="wt-s">Anything to say to someone under ten?</span></li>
+                <li class="wt-line" id="c1258"><a class="wt-t" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1258s" target="_blank" rel="noopener" data-pagefind-ignore>20:58</a><span class="wt-s">His name</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Who speaks, by their own introduction on the tape: <a href="../guests.html#g-kristoff-lovato" data-pagefind-filter="person">Kristoff Lovato</a> at <a class="wt-at" data-seek="1259" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1259s" target="_blank" rel="noopener" data-pagefind-ignore>20:59</a>. Transcribed from the original audio and corrected for names. Speaker letters mark turns, not names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>Right here, let&rsquo;s go where the Robin Williams pictures, because that was my favorite actor.</p>
+            <p id="s4"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=4s" target="_blank" rel="noopener" data-pagefind-ignore>0:04</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Okay, cool.</p>
+            <p id="s5"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=5s" target="_blank" rel="noopener" data-pagefind-ignore>0:05</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>I was going that way.</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s7"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=7s" target="_blank" rel="noopener" data-pagefind-ignore>0:07</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Perfect. See, look at that. I think it work. And now you&rsquo;re just a voice.</p>
+            <p id="s11"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=11s" target="_blank" rel="noopener" data-pagefind-ignore>0:11</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>Yeah, so AI is the exact prime door for new frontiers and what shouldn&rsquo;t be the word of mouth in destruction, in tangent, which is libel. The court terminology, which is where defamation in legal terms is when it be for somebody that the word of mouth is destructive and inappropriate when you use what is 10 years ago intentionally just to 10 years later smack them down when they were doing nothing harm and they could have improved their life like a famous person and they haven&rsquo;t done nothing for 10 years</p>
+            <p id="s50"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=50s" target="_blank" rel="noopener" data-pagefind-ignore>0:50</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>but they made a mistake</p>
+            <p id="s51"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=51s" target="_blank" rel="noopener" data-pagefind-ignore>0:51</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>and then you go and throw it at them knowing that it&rsquo;s now hot that mistake is is in the air and nobody likes it. But that person is trying to make better, and make do as a family. So that&rsquo;s liable in court. It&rsquo;s where copyright infringements fought a lot to keep things as they once are, as they shall be. If it comes from an intellect that can defend it upon the propensity of facts, and what is before and following, it holds, right? so words can come in like bricks and Legos you shouldn&rsquo;t see so you put together and</p>
+            <p id="s94"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=94s" target="_blank" rel="noopener" data-pagefind-ignore>1:34</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>all different things that you built like a model</p>
+            <p id="s97"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=97s" target="_blank" rel="noopener" data-pagefind-ignore>1:37</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>the model should just start seeing this brick and this brick and this brick and this port like that different parts so you pick each three and go like that, and just make them all evaporate. Does that building stay there? No, but that&rsquo;s what words do when they keep fucking with shit that was already good as it is written. They just put something else there.</p>
+            <p id="s121"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=121s" target="_blank" rel="noopener" data-pagefind-ignore>2:01</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, yeah, yeah.</p>
+            <p id="s121-2"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=121s" target="_blank" rel="noopener" data-pagefind-ignore>2:01</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>Because it changes and alters the interpretation.</p>
+            <p id="s123"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=123s" target="_blank" rel="noopener" data-pagefind-ignore>2:03</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>The whole picture changed. When</p>
+            <p id="s124"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=124s" target="_blank" rel="noopener" data-pagefind-ignore>2:04</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>it doesn&rsquo;t necessarily look like it would change the definition.</p>
+            <p id="s127"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=127s" target="_blank" rel="noopener" data-pagefind-ignore>2:07</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, yeah, but it does.</p>
+            <p id="s128"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=128s" target="_blank" rel="noopener" data-pagefind-ignore>2:08</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>Because even a fool can do that, thinking it will keep the definition the same, but it looks nice. It doesn&rsquo;t.</p>
+            <p id="s134"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=134s" target="_blank" rel="noopener" data-pagefind-ignore>2:14</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, yeah.</p>
+            <p id="s135"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=135s" target="_blank" rel="noopener" data-pagefind-ignore>2:15</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>It Interprets the whole thing</p>
+            <p id="s136"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=136s" target="_blank" rel="noopener" data-pagefind-ignore>2:16</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It really shapes the whole thing It&rsquo;s based on the</p>
+            <p id="s137"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=137s" target="_blank" rel="noopener" data-pagefind-ignore>2:17</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>general consistency of the mind And that&rsquo;s why a brand ambassador would keep that as a department for magazines They have a brand ambassador that every million, 10 million print Let&rsquo;s say a tribe month So three months, 10 million That&rsquo;s 120 million You&rsquo;re gonna have to make sure 120 million readers potential in 12 months Don&rsquo;t fucking, boom Now it&rsquo;s your magazine, see Because they had a following and there&rsquo;s a purpose And the words and how they&rsquo;re put And how they&rsquo;re interpreted Have to be skimmed and proofread Proofreaders have to make sure the general consistence Fit the general consistence of the mind So they&rsquo;re accurate</p>
+            <p id="s179"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=179s" target="_blank" rel="noopener" data-pagefind-ignore>2:59</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>So interpreting is not only The intention of the person writing It&rsquo;s details for the first time It&rsquo;s interpreted on paper</p>
+            <p id="s189"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=189s" target="_blank" rel="noopener" data-pagefind-ignore>3:09</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>Proofreading is now interpreting So, Interpretation is not necessarily anything, that&rsquo;s why it&rsquo;s IN in it, for word part, because it&rsquo;s not tangible, but it&rsquo;s acceptable. Okay. Terminology expects us not to be ally be AI, which is how you are in defamation in freedom of speech being so fragile as it is today. A.I. and making, like, Ariana, Eminem, I was just gathering. They made a dope-ass song, but it was A.I. You could tell it wasn&rsquo;t with royalties, but it comes in, impacts that. Why impact people that we know as role models? I&rsquo;m 35, Rihanna&rsquo;s not that far apart. Eminem&rsquo;s 42, okay, how the fuck is it going to continue their budget, their kids, and all that shit?</p>
+            <p id="s234"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=234s" target="_blank" rel="noopener" data-pagefind-ignore>3:54</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>Boom, A.I. shit just comes through and sliced through their own entire income.</p>
+            <p id="s248"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=248s" target="_blank" rel="noopener" data-pagefind-ignore>4:08</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>That&rsquo;s crazy, right?</p>
+            <p id="s249"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=249s" target="_blank" rel="noopener" data-pagefind-ignore>4:09</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>Because nobody stopped the foundations of them. We need to start making paperwork to ensure our copyright that we battled in the 70s. That was for us. That&rsquo;s the seed. We are the fruit. Now when the fruit gets eaten from our generations after us, it stays juicy. It stays good and ripe, you know? So it makes them want more fruit. And that&rsquo;s how everything will stay making their fruit free.</p>
+            <p id="s276"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=276s" target="_blank" rel="noopener" data-pagefind-ignore>4:36</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Because then the system works, and the plywood is going, people always want to keep doing it. We shall</p>
+            <p id="s278"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=278s" target="_blank" rel="noopener" data-pagefind-ignore>4:38</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>gather to make sense, because AI is artificial, and</p>
+            <p id="s282"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=282s" target="_blank" rel="noopener" data-pagefind-ignore>4:42</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>we are the official... And then we become irrelevant, we still have to survive. We are officiating.</p>
+            <p id="s285"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=285s" target="_blank" rel="noopener" data-pagefind-ignore>4:45</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>We are what makes it seem official, because we give too much stock to what our mind is to make something that is a robot.</p>
+            <p id="s291"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=291s" target="_blank" rel="noopener" data-pagefind-ignore>4:51</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Yeah, yeah, yeah.</p>
+            <p id="s291-2"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=291s" target="_blank" rel="noopener" data-pagefind-ignore>4:51</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>Isaac Asimov, okay. But AI is artificial, it is only as intelligent as prompted to be intelligent.</p>
+            <p id="s296"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=296s" target="_blank" rel="noopener" data-pagefind-ignore>4:56</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>You just quote Isaac Asimov?</p>
+            <p id="s298"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=298s" target="_blank" rel="noopener" data-pagefind-ignore>4:58</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>So, Artificial Intelligence is only intelligent up to its official capacity to be prompted by intelligent, we are, so if we give it prompts, but it will never be able to do like a baby does, we&rsquo;re this tall, it&rsquo;s like this big, pressing the off button when it told no, but you know it never did get to walk yet, but that moment it stood up and it was about to press the TV button, it started walking, did it show any fucking fear, but free will and a room full of giants we are. That&rsquo;s what free will is It can never be prompted It was prompted by a volition because it saw It was aware that it could do what we can do</p>
+            <p id="s337"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=337s" target="_blank" rel="noopener" data-pagefind-ignore>5:37</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And then it had original intent</p>
+            <p id="s338"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=338s" target="_blank" rel="noopener" data-pagefind-ignore>5:38</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>Exactly, so AI can never have that</p>
+            <p id="s341"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=341s" target="_blank" rel="noopener" data-pagefind-ignore>5:41</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, yeah, yeah</p>
+            <p id="s342"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=342s" target="_blank" rel="noopener" data-pagefind-ignore>5:42</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>That&rsquo;s the whole principle</p>
+            <p id="s343"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=343s" target="_blank" rel="noopener" data-pagefind-ignore>5:43</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It&rsquo;s always secondary intent</p>
+            <p id="s344"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=344s" target="_blank" rel="noopener" data-pagefind-ignore>5:44</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>Even augmented can&rsquo;t It can only be put together by us and our reality First, capture what Getty&rsquo;s images is You know, the freedom of having flip art So if something is impossible to do Laws of Physics, Augmented Reality can augment but cannot adapt or alter, like alter the dimension compared to our dimension, it stays apart, so we have to defend shit because artificial could be the gap that is wrong, not that it is wrong as a tool though, keep it, never, but if someone&rsquo;s toy, it could have been used in, what if I never existed to tell you this, then nothing would have been clean from this moment, now watch this, it&rsquo;s a toy, But now I&rsquo;m giving you it because I need people they are the capacity to turn it keep it a tool They smack that toy maker because it can&rsquo;t but it&rsquo;s how you would invade our countries We are intelligent Einstein chose that so we got to keep ourselves intact at least mentally because invisible warfare, which has become mind</p>
+            <p id="s409"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=409s" target="_blank" rel="noopener" data-pagefind-ignore>6:49</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So can I hear a piece of your spoken word? That would be pretty sick conclusion</p>
+            <p id="s413"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=413s" target="_blank" rel="noopener" data-pagefind-ignore>6:53</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>If I can just cite something?</p>
+            <p id="s416"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=416s" target="_blank" rel="noopener" data-pagefind-ignore>6:56</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, you can read it,</p>
+            <p id="s418"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=418s" target="_blank" rel="noopener" data-pagefind-ignore>6:58</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>I don&rsquo;t care.</p>
+            <p id="s424"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=424s" target="_blank" rel="noopener" data-pagefind-ignore>7:04</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Hey, 234?</p>
+            <p id="s426"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=426s" target="_blank" rel="noopener" data-pagefind-ignore>7:06</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>What&rsquo;s that, what&rsquo;s that?</p>
+            <p id="s427"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=427s" target="_blank" rel="noopener" data-pagefind-ignore>7:07</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>It&rsquo;s 11th with 2344.</p>
+            <p id="s429"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=429s" target="_blank" rel="noopener" data-pagefind-ignore>7:09</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Is that your phone number? 2344. Oh, the time.</p>
+            <p id="s431"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=431s" target="_blank" rel="noopener" data-pagefind-ignore>7:11</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>On the 11th day.</p>
+            <p id="s433"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=433s" target="_blank" rel="noopener" data-pagefind-ignore>7:13</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>People keep putting their phone numbers in the videos. 11th day</p>
+            <p id="s434"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=434s" target="_blank" rel="noopener" data-pagefind-ignore>7:14</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>times four numbers, times 11th day is 44, 2344.</p>
+            <p id="s441"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=441s" target="_blank" rel="noopener" data-pagefind-ignore>7:21</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>That&rsquo;s the time.</p>
+            <p id="s442"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=442s" target="_blank" rel="noopener" data-pagefind-ignore>7:22</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>You know, Jordan&rsquo;s number, the reason why he chose that was mathematics.</p>
+            <p id="s445"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=445s" target="_blank" rel="noopener" data-pagefind-ignore>7:25</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>No, I didn&rsquo;t know that. Are you in like the, what is it, there&rsquo;s like, there&rsquo;s like, there&rsquo;s like, are you like a Nation of Islam guy? You know, like the, there&rsquo;s like the divine mathematics, as you know what I&rsquo;m talking about?</p>
+            <p id="s466"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=466s" target="_blank" rel="noopener" data-pagefind-ignore>7:46</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>I am a uniform upon open-minded attachment, so if I come across it and I have an open-minded as I am, to learn it, I am multi, able to, with my capacity of knowledge, put it together and understand it. as interpretation and perception, which are both key points of validity that can never be debunked or argued or dissuaded because it all resides in what I have in the mental capacity.</p>
+            <p id="s496"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=496s" target="_blank" rel="noopener" data-pagefind-ignore>8:16</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>I cannot give it to you. The moment I have fabricated it, I can&rsquo;t just fabric your bones, smack yours of your own fabrication of what&rsquo;s going on in your own mental out of it and put two there at the same time. Like Freaky Friday, no switch. That doesn&rsquo;t make sense. yeah so</p>
+            <p id="s511"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=511s" target="_blank" rel="noopener" data-pagefind-ignore>8:31</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>oh yeah go for it go for it well</p>
+            <p id="s512"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=512s" target="_blank" rel="noopener" data-pagefind-ignore>8:32</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>I just have to get this one out because it&rsquo;s just</p>
+            <p id="s518"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=518s" target="_blank" rel="noopener" data-pagefind-ignore>8:38</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>I just had to reset this because I got locked out forgetting my code</p>
+            <p id="s522"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=522s" target="_blank" rel="noopener" data-pagefind-ignore>8:42</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>it&rsquo;s that new 72 hour shit if your fingerprint and I only did it to get a fingerprint so it made me do the four code to prevent 72 hours I didn&rsquo;t have my phone so let&rsquo;s do it</p>
+            <p id="s534"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=534s" target="_blank" rel="noopener" data-pagefind-ignore>8:54</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>it locks it</p>
+            <p id="s535"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=535s" target="_blank" rel="noopener" data-pagefind-ignore>8:55</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>let&rsquo;s see here</p>
+            <p id="s537"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=537s" target="_blank" rel="noopener" data-pagefind-ignore>8:57</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>this</p>
+            <p id="s538"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=538s" target="_blank" rel="noopener" data-pagefind-ignore>8:58</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>how you doing</p>
+            <p id="s542"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=542s" target="_blank" rel="noopener" data-pagefind-ignore>9:02</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>so this is poetizer</p>
+            <p id="s544"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=544s" target="_blank" rel="noopener" data-pagefind-ignore>9:04</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>if you didn&rsquo;t know what the app looked like</p>
+            <p id="s546"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=546s" target="_blank" rel="noopener" data-pagefind-ignore>9:06</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>yeah I don&rsquo;t know</p>
+            <p id="s553"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=553s" target="_blank" rel="noopener" data-pagefind-ignore>9:13</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>So, Poetizer,</p>
+            <p id="s557"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=557s" target="_blank" rel="noopener" data-pagefind-ignore>9:17</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>I have woven tethered lesson too because it&rsquo;s like I&rsquo;ve been just trying to keep the emails, which keeps the phone, you know.</p>
+            <p id="s566"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=566s" target="_blank" rel="noopener" data-pagefind-ignore>9:26</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>So there&rsquo;s my first one, Pan Don, like</p>
+            <p id="s570"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=570s" target="_blank" rel="noopener" data-pagefind-ignore>9:30</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Panda,</p>
+            <p id="s571"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=571s" target="_blank" rel="noopener" data-pagefind-ignore>9:31</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>and Peter Pan, see, Pan Don,</p>
+            <p id="s574"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=574s" target="_blank" rel="noopener" data-pagefind-ignore>9:34</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>yeah, it&rsquo;s my second one, Chaotic Distances, help cap all 20s, my third one, Chaotic Distanances,</p>
+            <p id="s581"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=581s" target="_blank" rel="noopener" data-pagefind-ignore>9:41</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>yeah, so let&rsquo;s see I like this one because it&rsquo;s really my lit so like if there was a gang and it was my lit and the gang was brand ambassadors upon brand ambassadors of the future so keeps them taught and trained basics fundamentals brand would be the fundamentals values in virtues of a masculine order that&rsquo;s physical And Feminine Substance That Is Substantially Invisible, Your Imagination</p>
+            <p id="s613"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=613s" target="_blank" rel="noopener" data-pagefind-ignore>10:13</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Okay, So It Says My Self-Love, I&rsquo;m Wavering Anywards Ethics from Seen from Birth to Myself upon Lowity from Motherly Resolve Place My Own Smile in Teachings Worthy Liberty By Loving the Pain I Was Gained by Holding Mortality Traverse Towards Harnessing My Own To Set Eyes upon DeForest Focusing Means to Sympathy Toughing My Drive Aim to Instill Minimum That Being Patience Finding Solace and own fortitude of characteristics conducive to institute a solidarity of loyal loving strength intriguing forth popular ties of capacity unified upon rippling waves that transcend heights overcome mistaken time for only enough and stepping at advocacy outpacing adversity against this world&rsquo;s gardening of cultivated youth own chances of prosperity opportunity itself will fight each after claims of grown mature affluent tradability of such truly shown a team effort of shield-like stance that never letting the soul be fly keepings be less than if Scenes Are Negatively Driven For No Personal Rights Shall Stend To Let A Worthy Fellow Of Humane Law Of Self-Respect And Dignity Based Honor Bestow Low Reflection Of Integrated Affinity To, For, Or Upon As Every Struggle Each Hustle And All Strive For Much More To Leave Legacy Worthy Upon The Decade Inbound</p>
+            <p id="s682"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=682s" target="_blank" rel="noopener" data-pagefind-ignore>11:22</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>See Positive. and C-positive, I like that. And then C with a plus sign.</p>
+            <p id="s687"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=687s" target="_blank" rel="noopener" data-pagefind-ignore>11:27</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>But I like that though.</p>
+            <p id="s689"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=689s" target="_blank" rel="noopener" data-pagefind-ignore>11:29</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>I wrote that August 27th, 2023.</p>
+            <p id="s694"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=694s" target="_blank" rel="noopener" data-pagefind-ignore>11:34</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>And I guess I&rsquo;ll give you one more because I want to give it to my original.</p>
+            <p id="s698"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=698s" target="_blank" rel="noopener" data-pagefind-ignore>11:38</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>And it&rsquo;s like, this is if I had to write in a format, but I&rsquo;m not instrumentation. I&rsquo;m instrumentation-less, like in musical theory.</p>
+            <p id="s706"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=706s" target="_blank" rel="noopener" data-pagefind-ignore>11:46</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>And my first one had 49 filers, 25 filing with my prison outfit, you know? So it says, the bio says, I&rsquo;m a poetic lyricist and a grandmaster flow of God potentials who I guess the equation of the math for what words I spoke gain to contain the fact I am flow as that be real as I am as I will it I am pressure, create a diamond to complete my God soul master and nature to bear fruitful thongs of this vernacular is the very essence of great gifting is sifted through expected of what a genius shall look like or you just do and then I&rsquo;m going to take this off because of my breathing</p>
+            <p id="s738"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=738s" target="_blank" rel="noopener" data-pagefind-ignore>12:18</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>yeah yeah you got to go a little bit slower than when you read it</p>
+            <p id="s743"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=743s" target="_blank" rel="noopener" data-pagefind-ignore>12:23</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>and that&rsquo;s what I need to know</p>
+            <p id="s745"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=745s" target="_blank" rel="noopener" data-pagefind-ignore>12:25</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>yep</p>
+            <p id="s745-2"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=745s" target="_blank" rel="noopener" data-pagefind-ignore>12:25</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>so introduction of my introduction of self as Yahweh so interpretation introduction of self as I am introduction of self made made as I am I can&rsquo;t change it I&rsquo;m a man see so those are how I saw when I saw the trend self-made I&rsquo;m self-made mm-hmm I played with the Yahweh is still a verb</p>
+            <p id="s765"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=765s" target="_blank" rel="noopener" data-pagefind-ignore>12:45</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>yeah Yeah, yeah, yeah, that&rsquo;s some of them.</p>
+            <p id="s767"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=767s" target="_blank" rel="noopener" data-pagefind-ignore>12:47</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>If you are a self-declaration, right? Mm-hmm.</p>
+            <p id="s769"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=769s" target="_blank" rel="noopener" data-pagefind-ignore>12:49</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Introduction of self is Yahweh. Been fucking my life for my wife, the other call the world hasn&rsquo;t come yet. Your next eye say to her, looking left after moving on from this here step. Car rightfully traversing past most tread, quick to show me introverted fear, I guess they show dread. Must feel me near, no solely slippery, I think opposition must be queer, try to oppose me. Guess they stay folding, as I&rsquo;m going back to her desire. Nope, you took too long. Watch, stand back, this&rsquo;ll be more than an ordinary fire. I Creep On Silent These Superphotonic Tires, Excelling Lightspeed I Definitely Know What I Want, I Want Even To Get Tired Watch How I Receive And Exactly That Which I Need So Bow To Your Inherited The Truthful King</p>
+            <p id="s804"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=804s" target="_blank" rel="noopener" data-pagefind-ignore>13:24</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>Go On To Straight,</p>
+            <p id="s805"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=805s" target="_blank" rel="noopener" data-pagefind-ignore>13:25</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Go On To Shaking Knees And Engulf These Tools And Glean To Feel Toes Curl With Ease Ooh I&rsquo;m Cool Yes, Call Me The Fool As I Glow Full Of Accomplishments Of A Fellow The End Results Of My Finale Is Multiple Warped Tunnels Laying My Foundations Of Funnels Into The Finistic Canals Orgasms Felt Galactically Loud Emanating A Radiance Of Worldly Potential I&rsquo;m so proud we birth created the first prince label before the first principle beings have called me beings of chaos call me dad that one fable call me the father of the primordial their boss and just dad don&rsquo;t comprehend your loss you&rsquo;re just sad that you know i ain&rsquo;t mad every sentient says it&rsquo;s okay to be stupid yeah later stupids i spoke omni to existence that&rsquo;s the way i will lay pipe harder and rougher with my super stoner sorry so much</p>
+            <p id="s845"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=845s" target="_blank" rel="noopener" data-pagefind-ignore>14:05</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>it&rsquo;s okay</p>
+            <p id="s846"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=846s" target="_blank" rel="noopener" data-pagefind-ignore>14:06</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>you see like i said slow down</p>
+            <p id="s847"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=847s" target="_blank" rel="noopener" data-pagefind-ignore>14:07</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>this is good for me because i ain&rsquo;t done this and i need this you know</p>
+            <p id="s850"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=850s" target="_blank" rel="noopener" data-pagefind-ignore>14:10</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>you&rsquo;re doing great it&rsquo;s cool man</p>
+            <p id="s852"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=852s" target="_blank" rel="noopener" data-pagefind-ignore>14:12</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>I said, I said, the end result in my finale is multiple warped tunnels, laying my foundation of funnels into the thermistic canals, orgasms felt galactically loud, emanating a radiance of worldly potential, I&rsquo;m so proud, rebirth created the first prince label, before the first principle, beings of chaos call me dad, that one fable, call me the father of primordial, the boss, I&rsquo;m just bad, don&rsquo;t comprehend this, you&rsquo;re lost, you&rsquo;re just sad, that you&rsquo;re not, now I ain&rsquo;t mad, every sentient says it&rsquo;s okay to be stupid, yeah later stupids, I spoke on me into a I Will Lay Pipe Harder, Rougher, My Super Stoke Is Better Because I Promise To Be Even Wetter Bruce Lee&rsquo;s Last Breath, Anonymous My Mental Call Me What In The Fist Of God&rsquo;s Letter</p>
+            <p id="s895"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=895s" target="_blank" rel="noopener" data-pagefind-ignore>14:55</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>This Is Essential, Curious</p>
+            <p id="s896"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=896s" target="_blank" rel="noopener" data-pagefind-ignore>14:56</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Tears Wept Up And I Watched All Clear I&rsquo;m Always Above That, I&rsquo;ve Been Ironically Seared I&rsquo;m Ablazed And Clean, Call It Godly Might Yes Right, Here&rsquo;s To Call Me Power, Able Lost His Fight First To Have It, I&rsquo;m Darkness High In The Heights Of The Heartless Night So Empiric As I Bite Yet Always Omni Bright Need More Souls Of Things Devouring All Feeling To Acts My Militia Are Brightly Lit Golden Beings So I feel that call my ammunition igniting Go to conquer the gold, pulsing and pulling up on the only human objective that I have left to fold To aspire to burning this rubber down to the diamond ring&rsquo;s perspective on bold Fission infused into my lesson, heart snapped to attention Call it enough pressure to crush, tearing the hardened carbon, call me a true original atom The world&rsquo;s full of what activities produce sin, yet I&rsquo;m nothing like the Luciferian Collecting my soul will not be achieved by him Hope to never leave my legend, be that of my children starving Only shall I leave with Yahweh over in the trash bin Yeah, this is my first vernacular introduction See this highly praised trend See this highly praised chin, call me properly raised in My life, my wife, my untapped or not forgotten shadow friend</p>
+            <p id="s952"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=952s" target="_blank" rel="noopener" data-pagefind-ignore>15:52</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>Call her twin Howdy</p>
+            <p id="s953"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=953s" target="_blank" rel="noopener" data-pagefind-ignore>15:53</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>from sight Oh, you didn&rsquo;t see her? That&rsquo;s my bitch Lights, camera, action She&rsquo;s definitely my best inspiration to create heaven No, this is our singularity was 11 Call us the first binary to be complimentary Fully situated Call me God, Yahweh&rsquo;s finale The last lead of what was before and after living Watch the final four never bleed So I miss the families called your Armageddon Get out the way, watch me, follow me</p>
+            <p id="s977"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=977s" target="_blank" rel="noopener" data-pagefind-ignore>16:17</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>Now I&rsquo;ve never been able to lose myself, keep it raw and authentic and it&rsquo;s always been the pace, but it&rsquo;s there for the reader to set his arm. Because anybody cares. I don&rsquo;t believe in stealing my words as long as I&rsquo;m alive. They&rsquo;re our words.</p>
+            <p id="s997"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=997s" target="_blank" rel="noopener" data-pagefind-ignore>16:37</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I hear that.</p>
+            <p id="s997-2"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=997s" target="_blank" rel="noopener" data-pagefind-ignore>16:37</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>I like that. They&rsquo;re honorable to the words at hand.</p>
+            <p id="s1000"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1000s" target="_blank" rel="noopener" data-pagefind-ignore>16:40</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, yeah, yeah</p>
+            <p id="s1000-2"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1000s" target="_blank" rel="noopener" data-pagefind-ignore>16:40</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Cause it&rsquo;s just like putting them and they lay it like that in the soup</p>
+            <p id="s1004"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1004s" target="_blank" rel="noopener" data-pagefind-ignore>16:44</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, in the soup</p>
+            <p id="s1006"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1006s" target="_blank" rel="noopener" data-pagefind-ignore>16:46</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>Man, yo, bro, this is our soup, bro, you get it?</p>
+            <p id="s1008"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1008s" target="_blank" rel="noopener" data-pagefind-ignore>16:48</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, yeah, yeah</p>
+            <p id="s1009"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1009s" target="_blank" rel="noopener" data-pagefind-ignore>16:49</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>Or a family, you know, to the girl But to sit there and say, that&rsquo;s my shit Why I&rsquo;m Alive is the most cockiest shit Because the words were before we ever existed In a heartbeat</p>
+            <p id="s1021"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1021s" target="_blank" rel="noopener" data-pagefind-ignore>17:01</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, but you put them in the soup Yeah That&rsquo;s your recipe</p>
+            <p id="s1023"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1023s" target="_blank" rel="noopener" data-pagefind-ignore>17:03</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>In a heartbeat too If there was a bay, there was an octave There was just nothing outside to see the big bay Bang. Still had an octave. Right? I mean, if we had to wait until we go outside of the earth to see the earth, bang, and we&rsquo;re still in it. It&rsquo;s more slow.</p>
+            <p id="s1037"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1037s" target="_blank" rel="noopener" data-pagefind-ignore>17:17</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, that&rsquo;s true.</p>
+            <p id="s1039"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1039s" target="_blank" rel="noopener" data-pagefind-ignore>17:19</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>Then what is C squared, but it had to be sound. I always try to tell people, C squared is more than 186,000. If it&rsquo;s 186,000 times 186,000, a new value, then it would be the fastest. But if black holes can escape to talk to you as we hear them, but the light doesn&rsquo;t, so it doesn&rsquo;t beat the sound. that escapes it.</p>
+            <p id="s1059"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1059s" target="_blank" rel="noopener" data-pagefind-ignore>17:39</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>That&rsquo;s right.</p>
+            <p id="s1060"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1060s" target="_blank" rel="noopener" data-pagefind-ignore>17:40</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>The moment the thing captures it and we have it in a satellite, what hears it? It&rsquo;s the same decibel area that dogs hear the whistle that&rsquo;s lower than ours brought to ours. And when we hear that, it seems demonic, whatever. That&rsquo;s just the quality we are attached to that decibel. Yeah. And then exiting ours towards like jet planes in the distance. It sounds heavy. Yeah. Two different, you know? so those two different parameters we&rsquo;re in the middle this is when the dog still has that whistle we don&rsquo;t even forget on the one created on us but black holes are always been able to do that hmm</p>
+            <p id="s1101"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1101s" target="_blank" rel="noopener" data-pagefind-ignore>18:21</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>c squared</p>
+            <p id="s1101-2"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1101s" target="_blank" rel="noopener" data-pagefind-ignore>18:21</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I never thought about that square</p>
+            <p id="s1103"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1103s" target="_blank" rel="noopener" data-pagefind-ignore>18:23</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>never mind he said I will say that</p>
+            <p id="s1106"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1106s" target="_blank" rel="noopener" data-pagefind-ignore>18:26</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>no you did say that</p>
+            <p id="s1107"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1107s" target="_blank" rel="noopener" data-pagefind-ignore>18:27</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>no Einstein said never mind a special activity before he died he never disclosed what made him and Retract, E equals C squared, a special activity. He says, never mind to that. And they kept running. Like they have an inch and gone a mile, they always do. They just were given the gift of physics. As children, they ran an inch and never stopped. And now they&rsquo;re at a mile. And C squared was always sound. If a black hole could talk and stay black, the light can&rsquo;t escape. Because it&rsquo;s why it stays holding all the color black. Black, insides turn. Because you have more color to hold, I have more color to give, I have more colored than your colored ass.</p>
+            <p id="s1146"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1146s" target="_blank" rel="noopener" data-pagefind-ignore>19:06</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>I like that.</p>
+            <p id="s1147"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1147s" target="_blank" rel="noopener" data-pagefind-ignore>19:07</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>Upon interpretation.</p>
+            <p id="s1149"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1149s" target="_blank" rel="noopener" data-pagefind-ignore>19:09</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, yeah. On</p>
+            <p id="s1151"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1151s" target="_blank" rel="noopener" data-pagefind-ignore>19:11</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>reverse, I got all the black in my eyes because you&rsquo;re just white and I just put it as I interpret my brain holds your color, you know? It doesn&rsquo;t matter, the hue. But that is got all the color because if it doesn&rsquo;t have no color to give, it shall be pure black. it retains them so heat outside the universe is why all color were all the wormholes of all the black holes I put all the photons that are light source for the white spectrum it&rsquo;s outside the universe for the capital D-A-Y in the Bible to ever be visited by something like Gabriel&rsquo;s oldest before H.D.</p>
+            <p id="s1151-2"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1151s" target="_blank" rel="noopener" data-pagefind-ignore>19:11</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>Wells time travel if he&rsquo;s from a later time and talk to Mary with a message from what was a later time than ours. If 2020 says we can travel, in Australia&rsquo;s math said that. Physicists published it. How do we do it? Our awareness is in the body, your awareness is in your vessel right there. We call it temple right here. That&rsquo;s what travels, the awareness. If your awareness can do it in a dream and come right back to you when you wake up, that&rsquo;s the proof you only need.</p>
+            <p id="s1220"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1220s" target="_blank" rel="noopener" data-pagefind-ignore>20:20</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Do you have anything you want to say to people under the age of 10 years old?</p>
+            <p id="s1223"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1223s" target="_blank" rel="noopener" data-pagefind-ignore>20:23</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>Be inspired without mimicking what I said tonight. Unless you have your mom, especially. But always know, if you&rsquo;re not as you think your dad is strong, be as strong as you think him to be.</p>
+            <p id="s1245"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1245s" target="_blank" rel="noopener" data-pagefind-ignore>20:45</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I got that.</p>
+            <p id="s1247"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1247s" target="_blank" rel="noopener" data-pagefind-ignore>20:47</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>Without judging me on validation, when I say that, it can inspire the father, it can inspire them as them.</p>
+            <p id="s1256"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1256s" target="_blank" rel="noopener" data-pagefind-ignore>20:56</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Oh yeah, peace. What was your name? Phoenix. Phoenix.</p>
+            <p id="s1259"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1259s" target="_blank" rel="noopener" data-pagefind-ignore>20:59</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>My name is Kristoff Lovato.</p>
+            <p id="s1262"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1262s" target="_blank" rel="noopener" data-pagefind-ignore>21:02</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>You&rsquo;re Russian?</p>
+            <p id="s1263"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1263s" target="_blank" rel="noopener" data-pagefind-ignore>21:03</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Kristoff Lovato at 20:59" data-pagefind-ignore>Kristoff Lovato</span>No, it&rsquo;s Norse for Wolf Cup in English, Lovato, and Kristoff is because of how my Social Security paperwork is, without the use of my birthday.</p>
+            <p id="s1272"><a class="wt-at" href="https://www.youtube.com/watch?v=2KWrTQgRKS0&amp;t=1272s" target="_blank" rel="noopener" data-pagefind-ignore>21:12</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Well, it&rsquo;s nice to meet you, man. I&rsquo;m Maceo.</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+
+    <section id="after-transcript" tabindex="-1" class="wrap wt-more" aria-label="Filmed the same day">
+        <div class="country-head">
+            <h2 class="country-name">Filmed the same day.</h2>
+            <span class="country-meta">11 March 2026</span>
+        </div>
+        <ul class="rel-list">
+            <li class="rel-item">
+                <a class="rel-link" href="legalize-it-all-but-tax-it-bo-from-boulder-denver.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/bXW2h2aYtMk/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">Legalize It All, But Tax It: Bo From Boulder | Denver</span>
+                        <span class="rel-why">10.29pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+<div><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from Denver Unfiltered.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-denver">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="a-first-interview-and-advice-back-to-newark-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/UkX8veGIl58-640.jpg" srcset="../stills/UkX8veGIl58-320.jpg 320w, ../stills/UkX8veGIl58-480.jpg 480w, ../stills/UkX8veGIl58-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:15</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · ETH Denver 2024</span>
+                    <h3 class="report-title">A first interview, and advice back to Newark.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="building-a-dao-and-making-governance-a-game-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/qcTocIWf34U-640.jpg" srcset="../stills/qcTocIWf34U-320.jpg 320w, ../stills/qcTocIWf34U-480.jpg 480w, ../stills/qcTocIWf34U-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:45</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">A content coin, and making governance a game.</h3>
+                    
+                </div>
+            </a>
+            <a href="from-america-to-denver-what-brought-you-here-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/DdXcCfCc26E-640.jpg" srcset="../stills/DdXcCfCc26E-320.jpg 320w, ../stills/DdXcCfCc26E-480.jpg 480w, ../stills/DdXcCfCc26E-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:21</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · Street</span>
+                    <h3 class="report-title">A borrowed camera, and Denver block by block.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../question/what-would-you-say-to-someone-under-ten.html">Every answer to “What would you say to someone under ten?”</a> &middot; <a href="../places.html#denver">Everything filmed in Denver</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

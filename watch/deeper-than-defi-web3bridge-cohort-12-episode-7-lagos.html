@@ -1,0 +1,791 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Seven minutes in Ikorodu, Lagos at the end of Web3Bridge Cohort 12, the seventh episode in a run of short interviews We Them Media filmed with the…">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/deeper-than-defi-web3bridge-cohort-12-episode-7-lagos">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="Going Deeper Than DeFi | Web3Bridge Cohort 12, Ep 7 | Lagos">
+    <meta property="og:description" content="Seven minutes in Ikorodu, Lagos at the end of Web3Bridge Cohort 12, the seventh episode in a run of short interviews We Them Media filmed with the…">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/deeper-than-defi-web3bridge-cohort-12-episode-7-lagos.jpg?v=ac6a64e7f4">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="A developer on what smart contracts are for">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/deeper-than-defi-web3bridge-cohort-12-episode-7-lagos.jpg?v=ac6a64e7f4">
+    <meta property="og:url" content="https://wethem.xyz/watch/deeper-than-defi-web3bridge-cohort-12-episode-7-lagos">
+    <title>Going Deeper Than DeFi | Web3Bridge Cohort 12, Ep 7 | Lagos &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/deeper-than-defi-web3bridge-cohort-12-episode-7-lagos#video",
+  "name": "Going Deeper Than DeFi | Web3Bridge Cohort 12, Ep 7 | Lagos",
+  "description": "Seven minutes in Ikorodu, Lagos at the end of Web3Bridge Cohort 12, the seventh episode in a run of short interviews We Them Media filmed with the developers finishing the course. Web3Bridge founder Ayodeji Awosika opens from the same building, counting the cohort in and out and listing where applications for the next one came from. The subject introduces himself briefly: \"my name is Joseph and I'm from Anambra State and I'm Igbo by tribe\". He was already a developer, JavaScript and Python, and heard about Web3 through \"an ex-classmate, Oluchi by name\" who had been through an earlier cohort. Asked for a favourite memory he will not pick one. Asked to describe the course to somebody else, he does not sell it. It is \"mental draining\", he says, and \"it will get you to think outside the box\". His warning is short: \"you have to like be mentally prepared\". On community he starts small and moves out. \"the community is vast\", but \"you start from somewhere\", and the somewhere is the classroom: \"It starts actually from here, from the classmates and all that, meeting a lot of people.\" After that, \"Web3 Bridge gave us the opportunity to go for events\", and the network grows from there. His reflection on the cohort is that it is a beginning rather than an end. \"first of all, there's a lot more to learn, so this is not just where it stops.\" His team is building RaceTree, \"an app, a dApp that connects investors to founders easily\". The problem he names is on the funding side: investors \"fund the startups and yeah, there's nothing to show for it. There's no gauge.\" The fix is mechanical. \"So funds are being released based on milestones.\" What excites him about smart contracts is how far past the obvious they go. \"We feel it's just based on money, the DeFi aspect and all that. But then you get to go deeper and deeper and you begin to see things like NFTs, DeSci, and the rest and the likes.\" His own pull is elsewhere: \"The side of crypto that interests me the most is the gaming aspect\", though the cohort's work has been on DeFi and on contracts that hold up. The last question is how much Nigeria actually knows about crypto. He thinks it is slow work. \"it's going to take a lot of time. It's not something that will like happen ones\", because the vocabulary \"sounds new to the layman\". What he wants is education that leaves the top layer and goes \"to the markets, like penetrate and actually like teach people to understand this thing\", so the whole field is not mistaken for tap-to-earn.",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/oQAxFeYXloc/maxresdefault.jpg"
+  ],
+  "uploadDate": "2025-08-05T13:30:43Z",
+  "embedUrl": "https://www.youtube.com/embed/oQAxFeYXloc",
+  "url": "https://wethem.xyz/watch/deeper-than-defi-web3bridge-cohort-12-episode-7-lagos",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT7M44S",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "Deeper than the DeFi aspect",
+      "startOffset": 0,
+      "url": "https://wethem.xyz/watch/deeper-than-defi-web3bridge-cohort-12-episode-7-lagos?t=0",
+      "endOffset": 33
+    },
+    {
+      "@type": "Clip",
+      "name": "The founder on Cohort 12 and Cohort 13",
+      "startOffset": 33,
+      "url": "https://wethem.xyz/watch/deeper-than-defi-web3bridge-cohort-12-episode-7-lagos?t=33",
+      "endOffset": 77
+    },
+    {
+      "@type": "Clip",
+      "name": "Name, state, tribe, and the classmate who told him",
+      "startOffset": 77,
+      "url": "https://wethem.xyz/watch/deeper-than-defi-web3bridge-cohort-12-episode-7-lagos?t=77",
+      "endOffset": 110
+    },
+    {
+      "@type": "Clip",
+      "name": "Is Web3Bridge hard? Be mentally prepared",
+      "startOffset": 110,
+      "url": "https://wethem.xyz/watch/deeper-than-defi-web3bridge-cohort-12-episode-7-lagos?t=110",
+      "endOffset": 147
+    },
+    {
+      "@type": "Clip",
+      "name": "The community is vast",
+      "startOffset": 147,
+      "url": "https://wethem.xyz/watch/deeper-than-defi-web3bridge-cohort-12-episode-7-lagos?t=147",
+      "endOffset": 183
+    },
+    {
+      "@type": "Clip",
+      "name": "How RaceTree releases investor funds by milestone",
+      "startOffset": 183,
+      "url": "https://wethem.xyz/watch/deeper-than-defi-web3bridge-cohort-12-episode-7-lagos?t=183",
+      "endOffset": 292
+    },
+    {
+      "@type": "Clip",
+      "name": "Which side of crypto interests him most?",
+      "startOffset": 292,
+      "url": "https://wethem.xyz/watch/deeper-than-defi-web3bridge-cohort-12-episode-7-lagos?t=292",
+      "endOffset": 355
+    },
+    {
+      "@type": "Clip",
+      "name": "Why adoption in Nigeria will take time",
+      "startOffset": 355,
+      "url": "https://wethem.xyz/watch/deeper-than-defi-web3bridge-cohort-12-episode-7-lagos?t=355",
+      "endOffset": 464
+    }
+  ],
+  "creator": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "transcript": "when you see people using smart contracts, you understand? I've come to discover that they use it in ways that you most times we feel it's just um based on what we were taught and all that. We feel it's just based on money, the defi aspect and all that, but then you get to go deeper and deeper and you need to see things like NFTts, decide and the rest and the likes. Yeah. So, Hello everyone, my name is Iodor Jawusheka. I'm the founder at Bridge. Over the last 5 and a half years, has been training amazing developers in Nigeria and in Africa. Trust me, Port 12\nwas amazing. We had 74 guys into the core, 39 guys from the court. They are intense. But then for is going to be bigger than this 12 court because everyone guys apply from Cameroon, from Togo, from Kenya, from Zimbabwe, from Uganda and yes, Nigeria is not left out. Trust me, don't want to miss the experience. Today I'm chilling with Masio and his team at W the Media. They're speaking with the guys that just finished from the court. Make sure you watch that. As we see here at W the Media in 3 2 1.\nAll right. So, how you doing? I do fine. What's now? Can you introduce yourself to the audience? Okay. My name is Joseph and I'm from Anra states and am I by tribe?\nOkay. Yeah. And how did you learn about web three? Were you already a developer? Yes. I was already a developer stack, JavaScript, Python. Yeah. So, I got to know about web three from a friend um an exclassmate. So, she introduced me. She's from the past. And what is your favorite memory out of being a part of this this 12 corporate work through bridge has\nOh. Oh, I I have a lot of memories like a lot of memories. It's been both good, bad, the good, bad, the the ugly, you know. So, yeah.\nI can't really like pinpoint one at the moment. That's okay. Yeah. Uh how would you describe your experience as someone though? Oh, uh I would say it is um mental draining. It's it will get you to think outside the box, think beyond what you or how like your pattern kind of thinking, you understand? You have to like widen out. So if you're coming, you have to like be mentally prepared.\nAnd how would you describe the the role of of the community and your experience here? The the whole community. Uh it's the community is vast. Yeah. But um you know, you start from somewhere where you you network. It starts actually from here from the classmates and all that meeting a lot of people. Then um web free bridge gave us the opportunity to go for events. Yeah. And from there we network and meet several people and yeah it's goes on from there.\nAnd as this cohort just wrapped up I'm curious you know what are your reflections on this experience and how you've seen yourself grow. Oh okay. I I have a lot like first of all there's a lot more to learn. So this is not just where it stops. Yeah. more learning and learning and learning and um yeah right now we actually like building something I am my team race tree and all that race tree is an app a d app that um connects investors to founders easily so investors and founder um investors are always like there's this um short change whereby they give grants or they give things to people\nlike funds they fund the startups and yeah there's nothing to show for it there's no gauge so the app is trying to like bring in that limitation, you understand? Through the the milestone um concept, you understand? So funds are being released based on milestones.\nMhm. Yeah. So that's that's actually what we're working on. That's beautiful for Yeah. And I guess another question I have is, you know, I'm really curious when you look at the problems you see smart contract developers solving, you know, what what what gets you excited? Uh, a lot gets me excited. I I I see smart contract as like a a whole it's it's something that is like very very very um I don't know how to describe it but when you see people using smart contracts you understand I've come to discover that they use it in ways that you most times we feel it's just um based on what we\nwere taught and all that we feel it's just based on money the defi aspect and all that but then you get to go deeper and deeper and you need to see things like NFTTS and the rest and the likes. Yeah.\nAnd you mentioned like NFTs and DI is there like um I guess a side of crypto that interests you the most? Uh the side of crypto that interests me the most is um the gaming aspect although I've not like been able to like um go fully into it because mainly what we're like based on here is actually the DeFi aspect. how to make sure that um your phones are secure. You write smart contracts that are um that's that are like security proof, you understand? And yeah, there will be no stories of oh, you know, based on the whole hackings and all that going on, you understand?\nBut I hope to I've actually like explored Abigoti because we I was given a contract um to review Abigoti's um alchemical facets. So I've actually like reviewed um some things about it and I'm hoping to like do more explor exploration on that. Yeah.\nAnd I know you all have attended some events throughout the cohort. I'm curious what's your perspective on web 3 adoption and general uh degree to which people know about crypto here in Nigeria.\nOkay. I think it's going to take a lot of time. It's not something that will like happen once because um one thing I understand about the web three space and all that it is because it's that um the terms being used it sounds new to the lay man sounds very very very very entirely different you understand so it will take a lot of time I feel we need like more uh it's not like we should stop building but I feel there should be like more education you understand more um what's the word you um to sensitize the community, sensitize people, not just stay at the top layer,\ngo deep, go to the markets like penetrate and actually like teach people to understand this thing so that they will not just think that oh the web three and crypto space ends in tap tap tap tap tap I mean the tap swap. No offense.\nYeah, I got that best though. I uh I think it's definitely important for people to you know go beyond the tap tap tap. I agree. Yeah. And you know, I'm really excited to bring this kind of content to people because I feel like most African-Americans in the US don't really have a deep knowledge of crypto, let alone even if they can tap show to make money. Yeah. And so I like hope hopefully people hear stories like yours like your own and feel compelled to learn more to get more involved, you know, and be builders, be investors, be people who are supporting people like yourself, you know, thinking about what\nthe future of the landscape looks like. Uh my final question, you know, we like to say booya or our content. I'm curious, how do you think we spell here at We Them Media?\nOkay. B O Y A H. Then I'll just add the exclamation. You know, that's for the fact that you always like Yeah. Say it out loud. Yeah.\nI like that. I like that. Nice touch. Okay. Exclamation point. That might be the the the part you got right now. But you want to count us down so we can say it.\nAll right. All right. In three, two, one. Booyah.",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Lagos",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "Nigeria"
+    },
+    "url": "https://wethem.xyz/places#lagos"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Nigeria",
+    "url": "https://wethem.xyz/portfolio#p-nigeria"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Blockchain Builders",
+      "url": "https://wethem.xyz/topics/blockchain-builders"
+    },
+    {
+      "@type": "Thing",
+      "name": "Pan-African Web3",
+      "url": "https://wethem.xyz/topics/pan-african-web3"
+    }
+  ],
+  "keywords": [
+    "Blockchain Builders",
+    "Pan-African Web3"
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Nigeria",
+      "item": "https://wethem.xyz/portfolio#p-nigeria"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "A developer on what smart contracts are for",
+      "item": "https://wethem.xyz/watch/deeper-than-defi-web3bridge-cohort-12-episode-7-lagos"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2025-08-05" data-pf-vid="oQAxFeYXloc" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;7:44&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="Lagos" data-pf-country="Nigeria" data-pf-project="Nigeria">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-nigeria">Nigeria</a></li>
+            <li aria-current="page">A developer on what smart contracts are for</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">A developer on what smart contracts are for.</h1>
+
+    <p class="wt-byline"><strong>Joseph</strong> &middot; Lagos &middot; 8 min</p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="oQAxFeYXloc" live postersrcset="../stills/oQAxFeYXloc-320.jpg 320w, ../stills/oQAxFeYXloc-480.jpg 480w, ../stills/oQAxFeYXloc-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/oQAxFeYXloc?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="A developer on what smart contracts are for, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+    <p class="wt-note wt-credit">Executive producer: C.Y. Lee</p>
+
+    <div class="wt-prose">
+            <p>Seven minutes in Ikorodu, Lagos at the end of Web3Bridge Cohort 12, the seventh episode in a run of short interviews We Them Media filmed with the developers finishing the course.</p>
+            <p>Web3Bridge founder Ayodeji Awosika opens from the same building, counting the cohort in and out and listing where applications for the next one came from.</p>
+            <p>The subject introduces himself briefly: &ldquo;my name is Joseph and I&rsquo;m from Anambra State and I&rsquo;m Igbo by tribe&rdquo;. He was already a developer, JavaScript and Python, and heard about Web3 through &ldquo;an ex-classmate, Oluchi by name&rdquo; who had been through an earlier cohort.</p>
+            <p>Asked for a favourite memory he will not pick one. Asked to describe the course to somebody else, he does not sell it. It is &ldquo;mental draining&rdquo;, he says, and &ldquo;it will get you to think outside the box&rdquo;. His warning is short: &ldquo;you have to like be mentally prepared&rdquo;.</p>
+            <p>On community he starts small and moves out. &ldquo;the community is vast&rdquo;, but &ldquo;you start from somewhere&rdquo;, and the somewhere is the classroom: &ldquo;It starts actually from here, from the classmates and all that, meeting a lot of people.&rdquo; After that, &ldquo;Web3 Bridge gave us the opportunity to go for events&rdquo;, and the network grows from there.</p>
+            <p>His reflection on the cohort is that it is a beginning rather than an end. &ldquo;first of all, there&rsquo;s a lot more to learn, so this is not just where it stops.&rdquo; His team is building RaceTree, &ldquo;an app, a dApp that connects investors to founders easily&rdquo;. The problem he names is on the funding side: investors &ldquo;fund the startups and yeah, there&rsquo;s nothing to show for it. There&rsquo;s no gauge.&rdquo; The fix is mechanical. &ldquo;So funds are being released based on milestones.&rdquo;</p>
+            <p>What excites him about smart contracts is how far past the obvious they go. &ldquo;We feel it&rsquo;s just based on money, the DeFi aspect and all that. But then you get to go deeper and deeper and you begin to see things like NFTs, DeSci, and the rest and the likes.&rdquo; His own pull is elsewhere: &ldquo;The side of crypto that interests me the most is the gaming aspect&rdquo;, though the cohort&rsquo;s work has been on DeFi and on contracts that hold up.</p>
+            <p>The last question is how much Nigeria actually knows about crypto. He thinks it is slow work. &ldquo;it&rsquo;s going to take a lot of time. It&rsquo;s not something that will like happen ones&rdquo;, because the vocabulary &ldquo;sounds new to the layman&rdquo;. What he wants is education that leaves the top layer and goes &ldquo;to the markets, like penetrate and actually like teach people to understand this thing&rdquo;, so the whole field is not mistaken for tap-to-earn.</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../places.html#lagos">Everything filmed in Lagos</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="broke-me-down-to-pieces-web3bridge-cohort-12-episode-5-lagos.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/1Wei84VaOGg-640.jpg" srcset="../stills/1Wei84VaOGg-320.jpg 320w, ../stills/1Wei84VaOGg-480.jpg 480w, ../stills/1Wei84VaOGg-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>4:36</span></span><span>Four months that took a Web2 developer apart.</span></a>
+        <a class="wt-rail-card" href="showing-them-the-lights-web3bridge-cohort-12-episode-3-lagos.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/oEfR3iIYbBg-640.jpg" srcset="../stills/oEfR3iIYbBg-320.jpg 320w, ../stills/oEfR3iIYbBg-480.jpg 480w, ../stills/oEfR3iIYbBg-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>8:24</span></span><span>A front-end developer who wanted to build, not consume.</span></a>
+        <a class="wt-rail-card" href="jump-on-the-train-web3bridge-cohort-12-episode-6-lagos.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/0dYQAsSS93c-640.jpg" srcset="../stills/0dYQAsSS93c-320.jpg 320w, ../stills/0dYQAsSS93c-480.jpg 480w, ../stills/0dYQAsSS93c-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>5:44</span></span><span>A Web3Bridge cohort member who forgot he had applied.</span></a>
+        <a class="wt-rail-card" href="the-unity-and-the-togetherness-web3bridge-cohort-12-episode-4-lagos.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/Mb0-ikWmZkg-640.jpg" srcset="../stills/Mb0-ikWmZkg-320.jpg 320w, ../stills/Mb0-ikWmZkg-480.jpg 480w, ../stills/Mb0-ikWmZkg-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>6:02</span></span><span>A cohort member on brotherhood and building on chain.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap clip-sec" aria-labelledby="clips-here-h" data-pagefind-ignore="all">
+        <h2 class="clip-sec-h" id="clips-here-h">Shorts from this piece</h2>
+        <ul class="clip-row">
+            <li><a class="clip-card" href="../clips.html#dhsl6TduvD4"><span class="clip-card-pic"><img class="clip-img" src="../stills/clips/dhsl6TduvD4-360.jpg" srcset="../stills/clips/dhsl6TduvD4-360.jpg 360w, ../stills/clips/dhsl6TduvD4-720.jpg 720w" sizes="(min-width: 721px) 168px, 144px" width="360" height="640" alt="" loading="lazy" decoding="async"></span><span class="clip-card-t">Web3 Adoption Needs Teaching, Not Tap-to-Earn | Nigeria</span><span class="clip-card-p">Lagos</span></a><a class="clip-card-yt" href="https://www.youtube.com/shorts/dhsl6TduvD4">On YouTube &rarr;</a></li>
+            <li><a class="clip-card" href="../clips.html#LVFV-eTiaqA"><span class="clip-card-pic"><img class="clip-img" src="../stills/clips/LVFV-eTiaqA-360.jpg" srcset="../stills/clips/LVFV-eTiaqA-360.jpg 360w, ../stills/clips/LVFV-eTiaqA-720.jpg 720w" sizes="(min-width: 721px) 168px, 144px" width="360" height="640" alt="" loading="lazy" decoding="async"></span><span class="clip-card-t">Nineteen, Building an App to Track Where Grants Go</span><span class="clip-card-p">Lagos</span></a><a class="clip-card-yt" href="https://www.youtube.com/shorts/LVFV-eTiaqA">On YouTube &rarr;</a></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c0"><a class="wt-t" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-s">Deeper than the DeFi aspect</span></li>
+                <li class="wt-line" id="c33"><a class="wt-t" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=33s" target="_blank" rel="noopener" data-pagefind-ignore>0:33</a><span class="wt-s">The founder on Cohort 12 and Cohort 13</span></li>
+                <li class="wt-line" id="c77"><a class="wt-t" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=77s" target="_blank" rel="noopener" data-pagefind-ignore>1:17</a><span class="wt-s">Name, state, tribe, and the classmate who told him</span></li>
+                <li class="wt-line" id="c110"><a class="wt-t" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=110s" target="_blank" rel="noopener" data-pagefind-ignore>1:50</a><span class="wt-s">Is Web3Bridge hard? Be mentally prepared</span></li>
+                <li class="wt-line" id="c147"><a class="wt-t" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=147s" target="_blank" rel="noopener" data-pagefind-ignore>2:27</a><span class="wt-s">The community is vast</span></li>
+                <li class="wt-line" id="c183"><a class="wt-t" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=183s" target="_blank" rel="noopener" data-pagefind-ignore>3:03</a><span class="wt-s">How RaceTree releases investor funds by milestone</span></li>
+                <li class="wt-line" id="c292"><a class="wt-t" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=292s" target="_blank" rel="noopener" data-pagefind-ignore>4:52</a><span class="wt-s">Which side of crypto interests him most?</span></li>
+                <li class="wt-line" id="c355"><a class="wt-t" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=355s" target="_blank" rel="noopener" data-pagefind-ignore>5:55</a><span class="wt-s">Why adoption in Nigeria will take time</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Who speaks, by their own introduction on the tape: <a href="../guests.html#g-ayodeji-awosika">Ayodeji Awosika</a> at <a class="wt-at" data-seek="23" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=23s" target="_blank" rel="noopener" data-pagefind-ignore>0:23</a>, <a href="../guests.html#g-joseph">Joseph</a> at <a class="wt-at" data-seek="80" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=80s" target="_blank" rel="noopener" data-pagefind-ignore>1:20</a>. Transcribed from the original audio and corrected for names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a>when you see people using smart contracts, you understand? I&rsquo;ve come to discover that they use it in ways that you most times we feel it&rsquo;s just um based on what we were taught and all that. We feel it&rsquo;s just based on money, the defi aspect and all that, but then you get to go deeper and deeper and you need to see things like NFTts, decide and the rest and the likes. Yeah. So, Hello everyone, my name is Iodor Jawusheka. I&rsquo;m the founder at Bridge. Over the last 5 and a half years, has been training amazing developers in Nigeria and in Africa. Trust me, Port 12</p>
+            <p id="s44"><a class="wt-at" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=44s" target="_blank" rel="noopener" data-pagefind-ignore>0:44</a>was amazing. We had 74 guys into the core, 39 guys from the court. They are intense. But then for is going to be bigger than this 12 court because everyone guys apply from Cameroon, from Togo, from Kenya, from Zimbabwe, from Uganda and yes, Nigeria is not left out. Trust me, don&rsquo;t want to miss the experience. Today I&rsquo;m chilling with Masio and his team at W the Media. They&rsquo;re speaking with the guys that just finished from the court. Make sure you watch that. As we see here at W the Media in 3 2 1.</p>
+            <p id="s74"><a class="wt-at" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=74s" target="_blank" rel="noopener" data-pagefind-ignore>1:14</a>All right. So, how you doing? I do fine. What&rsquo;s now? Can you introduce yourself to the audience? Okay. My name is Joseph and I&rsquo;m from Anra states and am I by tribe?</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s85"><a class="wt-at" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=85s" target="_blank" rel="noopener" data-pagefind-ignore>1:25</a>Okay. Yeah. And how did you learn about web three? Were you already a developer? Yes. I was already a developer stack, JavaScript, Python. Yeah. So, I got to know about web three from a friend um an exclassmate. So, she introduced me. She&rsquo;s from the past. And what is your favorite memory out of being a part of this this 12 corporate work through bridge has</p>
+            <p id="s110"><a class="wt-at" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=110s" target="_blank" rel="noopener" data-pagefind-ignore>1:50</a>Oh. Oh, I I have a lot of memories like a lot of memories. It&rsquo;s been both good, bad, the good, bad, the the ugly, you know. So, yeah.</p>
+            <p id="s122"><a class="wt-at" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=122s" target="_blank" rel="noopener" data-pagefind-ignore>2:02</a>I can&rsquo;t really like pinpoint one at the moment. That&rsquo;s okay. Yeah. Uh how would you describe your experience as someone though? Oh, uh I would say it is um mental draining. It&rsquo;s it will get you to think outside the box, think beyond what you or how like your pattern kind of thinking, you understand? You have to like widen out. So if you&rsquo;re coming, you have to like be mentally prepared.</p>
+            <p id="s149"><a class="wt-at" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=149s" target="_blank" rel="noopener" data-pagefind-ignore>2:29</a>And how would you describe the the role of of the community and your experience here? The the whole community. Uh it&rsquo;s the community is vast. Yeah. But um you know, you start from somewhere where you you network. It starts actually from here from the classmates and all that meeting a lot of people. Then um web free bridge gave us the opportunity to go for events. Yeah. And from there we network and meet several people and yeah it&rsquo;s goes on from there.</p>
+            <p id="s179"><a class="wt-at" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=179s" target="_blank" rel="noopener" data-pagefind-ignore>2:59</a>And as this cohort just wrapped up I&rsquo;m curious you know what are your reflections on this experience and how you&rsquo;ve seen yourself grow. Oh okay. I I have a lot like first of all there&rsquo;s a lot more to learn. So this is not just where it stops. Yeah. more learning and learning and learning and um yeah right now we actually like building something I am my team race tree and all that race tree is an app a d app that um connects investors to founders easily so investors and founder um investors are always like there&rsquo;s this um short change whereby they give grants or they give things to people</p>
+            <p id="s216"><a class="wt-at" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=216s" target="_blank" rel="noopener" data-pagefind-ignore>3:36</a>like funds they fund the startups and yeah there&rsquo;s nothing to show for it there&rsquo;s no gauge so the app is trying to like bring in that limitation, you understand? Through the the milestone um concept, you understand? So funds are being released based on milestones.</p>
+            <p id="s233"><a class="wt-at" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=233s" target="_blank" rel="noopener" data-pagefind-ignore>3:53</a>Mhm. Yeah. So that&rsquo;s that&rsquo;s actually what we&rsquo;re working on. That&rsquo;s beautiful for Yeah. And I guess another question I have is, you know, I&rsquo;m really curious when you look at the problems you see smart contract developers solving, you know, what what what gets you excited? Uh, a lot gets me excited. I I I see smart contract as like a a whole it&rsquo;s it&rsquo;s something that is like very very very um I don&rsquo;t know how to describe it but when you see people using smart contracts you understand I&rsquo;ve come to discover that they use it in ways that you most times we feel it&rsquo;s just um based on what we</p>
+            <p id="s279"><a class="wt-at" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=279s" target="_blank" rel="noopener" data-pagefind-ignore>4:39</a>were taught and all that we feel it&rsquo;s just based on money the defi aspect and all that but then you get to go deeper and deeper and you need to see things like NFTTS and the rest and the likes. Yeah.</p>
+            <p id="s292"><a class="wt-at" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=292s" target="_blank" rel="noopener" data-pagefind-ignore>4:52</a>And you mentioned like NFTs and DI is there like um I guess a side of crypto that interests you the most? Uh the side of crypto that interests me the most is um the gaming aspect although I&rsquo;ve not like been able to like um go fully into it because mainly what we&rsquo;re like based on here is actually the DeFi aspect. how to make sure that um your phones are secure. You write smart contracts that are um that&rsquo;s that are like security proof, you understand? And yeah, there will be no stories of oh, you know, based on the whole hackings and all that going on, you understand?</p>
+            <p id="s329"><a class="wt-at" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=329s" target="_blank" rel="noopener" data-pagefind-ignore>5:29</a>But I hope to I&rsquo;ve actually like explored Abigoti because we I was given a contract um to review Abigoti&rsquo;s um alchemical facets. So I&rsquo;ve actually like reviewed um some things about it and I&rsquo;m hoping to like do more explor exploration on that. Yeah.</p>
+            <p id="s346"><a class="wt-at" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=346s" target="_blank" rel="noopener" data-pagefind-ignore>5:46</a>And I know you all have attended some events throughout the cohort. I&rsquo;m curious what&rsquo;s your perspective on web 3 adoption and general uh degree to which people know about crypto here in Nigeria.</p>
+            <p id="s355"><a class="wt-at" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=355s" target="_blank" rel="noopener" data-pagefind-ignore>5:55</a>Okay. I think it&rsquo;s going to take a lot of time. It&rsquo;s not something that will like happen once because um one thing I understand about the web three space and all that it is because it&rsquo;s that um the terms being used it sounds new to the lay man sounds very very very very entirely different you understand so it will take a lot of time I feel we need like more uh it&rsquo;s not like we should stop building but I feel there should be like more education you understand more um what&rsquo;s the word you um to sensitize the community, sensitize people, not just stay at the top layer,</p>
+            <p id="s393"><a class="wt-at" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=393s" target="_blank" rel="noopener" data-pagefind-ignore>6:33</a>go deep, go to the markets like penetrate and actually like teach people to understand this thing so that they will not just think that oh the web three and crypto space ends in tap tap tap tap tap I mean the tap swap. No offense.</p>
+            <p id="s409"><a class="wt-at" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=409s" target="_blank" rel="noopener" data-pagefind-ignore>6:49</a>Yeah, I got that best though. I uh I think it&rsquo;s definitely important for people to you know go beyond the tap tap tap. I agree. Yeah. And you know, I&rsquo;m really excited to bring this kind of content to people because I feel like most African-Americans in the US don&rsquo;t really have a deep knowledge of crypto, let alone even if they can tap show to make money. Yeah. And so I like hope hopefully people hear stories like yours like your own and feel compelled to learn more to get more involved, you know, and be builders, be investors, be people who are supporting people like yourself, you know, thinking about what</p>
+            <p id="s433"><a class="wt-at" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=433s" target="_blank" rel="noopener" data-pagefind-ignore>7:13</a>the future of the landscape looks like. Uh my final question, you know, we like to say booya or our content. I&rsquo;m curious, how do you think we spell here at We Them Media?</p>
+            <p id="s441"><a class="wt-at" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=441s" target="_blank" rel="noopener" data-pagefind-ignore>7:21</a>Okay. B O Y A H. Then I&rsquo;ll just add the exclamation. You know, that&rsquo;s for the fact that you always like Yeah. Say it out loud. Yeah.</p>
+            <p id="s452"><a class="wt-at" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=452s" target="_blank" rel="noopener" data-pagefind-ignore>7:32</a>I like that. I like that. Nice touch. Okay. Exclamation point. That might be the the the part you got right now. But you want to count us down so we can say it.</p>
+            <p id="s459"><a class="wt-at" href="https://www.youtube.com/watch?v=oQAxFeYXloc&amp;t=459s" target="_blank" rel="noopener" data-pagefind-ignore>7:39</a>All right. All right. In three, two, one. Booyah.</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+<div id="after-transcript" tabindex="-1"><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from Nigeria.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-nigeria">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="showing-them-the-lights-web3bridge-cohort-12-episode-3-lagos.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/oEfR3iIYbBg-640.jpg" srcset="../stills/oEfR3iIYbBg-320.jpg 320w, ../stills/oEfR3iIYbBg-480.jpg 480w, ../stills/oEfR3iIYbBg-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>8:24</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Ikorodu, Lagos · Web3Bridge Cohort 12</span>
+                    <h3 class="report-title">A front-end developer who wanted to build, not consume.</h3>
+                    
+                </div>
+            </a>
+            <a href="a-life-through-his-generation-abuja.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="https://i.ytimg.com/vi/Avxp4F3o5TQ/hqdefault.jpg" srcset="https://i.ytimg.com/vi/Avxp4F3o5TQ/mqdefault.jpg 320w, https://i.ytimg.com/vi/Avxp4F3o5TQ/hqdefault.jpg 480w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="480" height="270"><span class="wt-dur"><span class="visually-hidden">Length </span>8:55</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Abuja · Street</span>
+                    <h3 class="report-title">A life told from poverty to laying block.</h3>
+                    
+                </div>
+            </a>
+            <a href="the-unity-and-the-togetherness-web3bridge-cohort-12-episode-4-lagos.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/Mb0-ikWmZkg-640.jpg" srcset="../stills/Mb0-ikWmZkg-320.jpg 320w, ../stills/Mb0-ikWmZkg-480.jpg 480w, ../stills/Mb0-ikWmZkg-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>6:02</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Ikorodu, Lagos · Web3Bridge Cohort 12</span>
+                    <h3 class="report-title">A cohort member on brotherhood and building on chain.</h3>
+                    
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../places.html#lagos">Everything filmed in Lagos</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

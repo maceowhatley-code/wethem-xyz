@@ -1,0 +1,978 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="A Denver stop-motion and visual effects artist on making art after losing her mother, walking away from a Hollywood VFX job, and what release means when…">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/vfx-artist-on-grief-art-and-starting-over">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="Grief, Art and Leaving Hollywood VFX: Kale | Denver">
+    <meta property="og:description" content="A Denver stop-motion and visual effects artist on making art after losing her mother, walking away from a Hollywood VFX job, and what release means when…">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/vfx-artist-on-grief-art-and-starting-over.jpg?v=f17ec44c47">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Kale, a VFX artist, on grief, her mom Sarah, and working on Marvel films">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/vfx-artist-on-grief-art-and-starting-over.jpg?v=f17ec44c47">
+    <meta property="og:url" content="https://wethem.xyz/watch/vfx-artist-on-grief-art-and-starting-over">
+    <title>Grief, Art and Leaving Hollywood VFX: Kale | Denver &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/vfx-artist-on-grief-art-and-starting-over#video",
+  "name": "Grief, Art and Leaving Hollywood VFX: Kale | Denver",
+  "description": "A Denver stop-motion and visual effects artist on making art after losing her mother, walking away from a Hollywood VFX job, and what release means when creating is the only thing that helps. Kale spent three years at a visual effects studio with credits on Mission: Impossible and Marvel films, and stopped making anything of her own. \"I would put all my creative energy and juices in doing what the client, the director, whomever told me what to do, and I'd get home and I'd have no energy, no motivation to create anything for myself.\" Her mother Sarah died two years ago, after a long struggle with mental illness and addiction. \"She was such a bright light in such a dark room,\" Kale says. \"She loved those connections with people, genuinely getting to know people. Not listening to your binary answers, but listening to your story.\" On the diagnoses her mother kept looking for: \"Nothing is wrong with you. You just have a different brain than everybody else. We all have different brains.\" On finding her way back to making things, at a festival in Buena Vista, Colorado, on her own for the first time: \"I hadn't created anything at this point for so long. Then the second day I woke up and it was such a bright day, not a cloud in the sky, and I felt so alive.\" She filled a sketchbook in one sitting. When somebody walked past and told her she should sell it: \"I hear you, but this is for me right now. This is not for monetary value.\" And on conversation itself, which is most of what this interview turns out to be about: \"It's the what and how questions that are really the thought-provoking questions. Why are you feeling this way? That will create stories and a genuine connection.\" This conversation includes discussion of suicide, mental illness and addiction.",
+  "thumbnailUrl": [
+    "https://wethem.xyz/stills/6JcW_wQyVWc.jpg",
+    "https://i.ytimg.com/vi/6JcW_wQyVWc/maxresdefault.jpg"
+  ],
+  "uploadDate": "2026-03-30T06:00:35Z",
+  "embedUrl": "https://www.youtube.com/embed/6JcW_wQyVWc",
+  "url": "https://wethem.xyz/watch/vfx-artist-on-grief-art-and-starting-over",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT29M",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "How do you break a silence",
+      "startOffset": 9,
+      "url": "https://wethem.xyz/watch/vfx-artist-on-grief-art-and-starting-over?t=9",
+      "endOffset": 111
+    },
+    {
+      "@type": "Clip",
+      "name": "Which questions create a real connection?",
+      "startOffset": 111,
+      "url": "https://wethem.xyz/watch/vfx-artist-on-grief-art-and-starting-over?t=111",
+      "endOffset": 174
+    },
+    {
+      "@type": "Clip",
+      "name": "Growing up around mental illness and addiction",
+      "startOffset": 174,
+      "url": "https://wethem.xyz/watch/vfx-artist-on-grief-art-and-starting-over?t=174",
+      "endOffset": 273
+    },
+    {
+      "@type": "Clip",
+      "name": "Losing her mother, Sarah",
+      "startOffset": 273,
+      "url": "https://wethem.xyz/watch/vfx-artist-on-grief-art-and-starting-over?t=273",
+      "endOffset": 476
+    },
+    {
+      "@type": "Clip",
+      "name": "Pills, pain, and who a person is underneath them",
+      "startOffset": 476,
+      "url": "https://wethem.xyz/watch/vfx-artist-on-grief-art-and-starting-over?t=476",
+      "endOffset": 552
+    },
+    {
+      "@type": "Clip",
+      "name": "What happens when somebody asks how your day was",
+      "startOffset": 552,
+      "url": "https://wethem.xyz/watch/vfx-artist-on-grief-art-and-starting-over?t=552",
+      "endOffset": 744
+    },
+    {
+      "@type": "Clip",
+      "name": "Acceptance as the hardest first step",
+      "startOffset": 744,
+      "url": "https://wethem.xyz/watch/vfx-artist-on-grief-art-and-starting-over?t=744",
+      "endOffset": 1020
+    },
+    {
+      "@type": "Clip",
+      "name": "Kale on stop motion and why everyone is creative",
+      "startOffset": 1020,
+      "url": "https://wethem.xyz/watch/vfx-artist-on-grief-art-and-starting-over?t=1020",
+      "endOffset": 1118
+    },
+    {
+      "@type": "Clip",
+      "name": "Working VFX on Mission: Impossible and Marvel",
+      "startOffset": 1118,
+      "url": "https://wethem.xyz/watch/vfx-artist-on-grief-art-and-starting-over?t=1118",
+      "endOffset": 1319
+    },
+    {
+      "@type": "Clip",
+      "name": "Going solo to a festival in Buena Vista",
+      "startOffset": 1319,
+      "url": "https://wethem.xyz/watch/vfx-artist-on-grief-art-and-starting-over?t=1319",
+      "endOffset": 1356
+    },
+    {
+      "@type": "Clip",
+      "name": "Why she would not sell her festival sketchbook",
+      "startOffset": 1356,
+      "url": "https://wethem.xyz/watch/vfx-artist-on-grief-art-and-starting-over?t=1356",
+      "endOffset": 1740
+    }
+  ],
+  "creator": {
+    "@type": "Person",
+    "name": "Maceo",
+    "url": "https://wethem.xyz/people/maceo"
+  },
+  "transcript": "I want to get this.\nI turned it on again.\nAlright, no,\nit's not there. It's not there.\nIt's a living thing.\nYeah, it's literally, it's all this is all in the past right now.\nBut no, I completely get like that quietness. Something I wanted to ask you, how do you break the silence?\nThat's the thing.\nI don't feel like me too, honestly. I truly don't feel there's any meaning. If I, if something in me, if my mind and body both align, and it's like, oh, I'm genuinely, genuinely curious about learning more about so-and-so and everything is connecting, then yeah, I'm going to say something. But if my mind is just telling me like, oh my gosh, so-and-so said this, you've got to fulfill their ego or you've got to, you've got to like delve deeper, but like, truthfully, I don't fucking care.\nthere's power yeah,\nbut like if my body is like kind of like if I'm like if I'm like reaching in and if I'm like getting you know like all right I'm genuinely interested because there's two things you know I'm like very like oh cool really no\nyou don't say\noh how about that you know it's very artificial like oh okay just going with emotions\nit's not real it's\nno literally and that's my go-to oh okay\nI can hear it too. You can hear it. You can so hear it.\nIt's like go away. Go the fuck away.\nYeah, it's just like I'm literally doing this for you. I truly don't give a fuck though. But if I'm genuinely interested in something and I'll make my eye contact, I'm like, oh, really? Tell me more. So how did you feel? What brought you to this? What was going on? It's the what and how questions that are really thought provoking questions. If you start a question with like, what is it, I think how is the biggest indicator, just like a binary answer, like, or not how, you know, some word out there that is slipping my tongue right now.\nBinary answer.\nYeah, just a yes and a no. That means I don't give a fuck. If you're giving me a binary answer, I don't give a fuck.\nI think a why is a genuine thing\nYeah, a why, yeah, exactly, the why is the biggest, I owe you, and sometimes why, that's the biggest one, why, why are you feeling this way, that will create stories and a genuine connection, and then that's when my body is reacting, my mind is reacting, every part of kale is reacting,\nevery part of kale\nis reacting, all my parts, that's the other thing, I feel like that's an acronym, kale is\nan acronym Somewhere\nYeah, I don't know, we're just conventional, and a fruit But I\nAnd a human being\nAnd a human being And an alien, and a life-form, and a creature An artist And a star, and a creator And I mean so many things Like I really, not knowing, I hate labels I hate just saying I'm I'm this or that Growing up I My Family Struggled With Mental Illness And Alcohol And Drug Addiction And My Mom She's Been In Rehab More Than I Have Fingers And She Was Always Looking For That Next Diagnosis Like Oh I Have Bipolar Or I Have Depression Or I Have anxiety Yeah Something Is Wrong With Me And It's Like No Nothing Is Wrong We all have different brains, and that's what's so beautiful about life.\nWe all have a different way. We all have different experiences. We've all been through different shit. If we've all been through the same exact things, it would be so fucking boring. And I'm not trying to bring me too down here.\nYou're all good.\nBut, yeah, unfortunately, my mom, she did\nThis is authentic,\nno ma'am, no soul\nYeah, no, no ma'am\nWith a camera,\nwho are you? Are you Kale?\nThere's no camera here, I'm just Kale, talking to myself Because I'm my own best friend and I love talking to myself It's my most favorite conversation, just talking to myself in the wall No, talking to Kale But no, unfortunately, my mother, she didn't do this for battle with mental illness and she took her life about two years ago now, actually, yeah, about to be two years in less than a month now, and that's, thank you, I, yeah, I mean, it's,\nthanks for sharing that with us,\nyeah, it's, thanks for listening, um, it's, it's definitely been the hardest thing I've ever found through in my life, and it's put me through this big depression I've ever been through, all I did was drink and smoke and mask my pain and not heal with my trauma but yeah I'm just like now I'm like you know what I it made me who I am here and I just like so appreciate life now and Sarah with an H and I mean she was she was such a vibe and she truly was such a bright light in such a dark room and she she loved the connections with people and just getting to know people and like genuinely getting to know people, not listening to your binary answers, but listening to your story.\nWhat are you here for? What is your, why are you here on earth? And even if you didn't know at that time, whatever, she didn't know what her whole, yeah, I don't think she truly knew what her reason for being here on this planet was. and many different people told her you're here to be a mom of four, the oldest of four siblings you're here to be a mom, you're here to be a deadhead, you're here to cook for the rest of your life so many different people told her things that I don't think it's like Jack Nicholson in anger management\nWho are you? Well, I'm a dad, and now who are you?\nYeah, who are you? Like, no, who are you to others who are you? What makes you you? And I don't think my mom is ever comfortable answering that question. She just couldn't. It was just like, it was just, it fried her brain, honestly. Whenever anybody, because she, yeah, she genuinely did not know who she was.\nShe was someone, though.\nShe was someone. She was, she was a lot, she was a lot of people. and I don't think she even realized that in herself and I think I mean yeah my mom she went through a lot in life a lot of abuse and neglect yeah just a lot but she didn't like I mean I want to say she didn't let it define her but I think it did where you know she was like I'm a strong woman I can do anything I can be a mom I can do this\nand that's true\nand yeah it's totally true but I don't know Well, she fully felt it, because her past really came into play, a lot. She could only just enter her mind and not her body, and her body was in pain a lot. She had to diagnose fibromyalgia and a lot of other things, but she let that define her. She was like, oh, I have fibromyalgia, therefore I'm in pain 24-7, and I can't be anyone else but this person in pain.\nThat's all I am, is\nsomeone in pain. She took her pills or whatever to make her move down to that base level where maybe she could be Sarah, her authentic Sarah. But she never, the pills just mask that true Sarah. It wasn't ever truly Sarah. It's like pills, I have such a hard time with pills A lot of people told me I should take them,\nI tried them I realized, holy shit, I'm not getting anywhere with this It's getting worse\nNo way And you become so robotic So, yeah, back to the automatic thing Yeah, I've been on so many different pills in my life I couldn't even begin to\nAnd it comes down to A lot What's the one thing that fixes it without pills? Like you were saying Who Are You and doing the thing with you, like doing the thing that you do, it kind of fixes, it doesn't fix everything, but fixes the part where you need to build\nJust being okay with yourself in the now,\nit's just\nso much, we've been, every single human has been through so much, all of our experiences, like how does one person even take all of that in, you know There's so much going on.\nSo much to integrate. Like,\nhe's asking me, other people ask me, how was your day, what's going on? I'm like, if I tell you, if I bring this up in my own head, it's going to completely fuck up every year on the earth. As much as I want to tell you, yeah, where do I begin? Like, can we just do what we were meant to do today, please?\nAnd that's the thing, like, we're, yeah, we, I just, I want to get back to the automation. I don't have to work 10 times harder because it's very uncomfortable. We're very comfortable with just like living in our comfort zone and like breaking out of that comfort zone is very uncomfortable. Like dealing with your trauma, dealing with your past. Yeah, and that's okay, and there's, and that's okay, if your brain and body wasn't ready for it, then it wasn't,\nit would have had me bumped up\nYeah,\nand you cannot force it, and\nYou can't, that's true\nYou know what you know right now when you need to know it Yeah I have a very hard time with my memory and I don't remember a lot of my past, whether it be from the drugs or alcohol or trauma, who's to say. But also, here's another food for thought. We see 24 frames per second, right? I'm sure you guys know that.\nI didn't I didn't I didn't know that\nPictures Second Remember all that all the friends all those photos one day you can Is\nat one point I thought I saw Like a glimpse into 60 like what everything is without without the motion blur\nIt's like, that's so weird. That is\nso weird. It's like, now I understand why the brain was set up that way for a reason, because it's more alive. It's more like alive. But if you're a 60 person, you'd feel like a freaking camera. You'd feel like a weird, slow motion camera. Not slow motion, actually more fast.\nInstead of having a blur, you'd just see it,\nnot the blur. That's freaking it.\nIt's, yeah, that's kind of why I love psychedelics, because you very much get in that mindset where you see every single thing you bring. I don't know, what was I saying? I had a really big point that I...\nYou keep sidetracking. You\nsaid a lot, and it's like, thank you, you know, I don't know.\nYeah, no, I just, you know, I don't know. I think people just care too much about what others think of them, and I think we just stop that. You\nwere just speaking about how much we experience in the course of our lifetimes, right? And to be able to integrate, to be able to really make peace with all of those things and still experience some freedom and ease, right? And not feel anxious or overwhelmed or, like, afraid. It's acceptance.\nIt's just acceptance. And that is really the first step, and it is the hardest step. By far, the hardest step. If\nyou go back and forth, it's hard to actually accept. you'll accept it in a moment, then you won't accept it later, then you'll accept it again, then you won't accept it.\nYeah, but even if you don't accept it now, again going back to like don't force anything. Not like your body will tell you, listen to your body. Your body will literally put tension in places.\nYou're getting out of your gut.\nYeah, your gut is your second brain, almost stronger than your brain at times.\nBut sometimes it's also just informed by trauma, right, it's not always, sometimes it's reacting to what it perceives as a threat, when such a threat might not ever be there, too, so I think sometimes it's about respecting your body, trusting it's also just about respecting, like, I know my body right now is having this overwhelming reaction, or it's in a freeze mode, you know, and there's nothing wrong with your freeze mode body, and sometimes it's hard to not feel that way.\nSometimes I'll be like, I shouldn't be doing this, and then it turns out to be this thing I shouldn't be doing But, there's also, you have to, there's times when you're like, I know this is not chill, and like, whether you're not going to be bad for me, like, physically or, but it's like, I am wasting the whole time of who I am Yeah Why am I doing this? You're like, here, we'll be doing it for other people, and you're like, I shouldn't be doing this for other people\nYeah yeah and yeah I mean to be honest I don't I don't know if I believe I don't know if I believe in the word waste I think I\nunless you abuse nothing\nno what do you want to say though what do you want to say\nI just I I truly think the universe has everything like I whatever that may What they mean to you, if that's a higher power, if that's your god, if that's many gods, whatever, there's definitely a higher power, somewhat, yeah, but I truly, like, I, you are in control of what you're in control of, you know, but like,\nsorry, but I believe somewhat of this, you\njust let her finish her statement though, let her finish,\nlet her finish,\nit's okay,\nI, yes, you can spend your whole day doing scrolling, And Playing Video Games And Doing This Brain Rot Shit Whatever And It's Not You Know You May Think That You're Not Getting Anything From It But There's Probably Something In There Somewhere That You Are Going To Remember Some Little Thing Like I'm Not Gonna Lie I Doomscroll A lot All The Time I Mean I Don't Even Want To Think About How Many Hours I Spent On My Phone It's Sad Really I Mean Yeah it makes me sad to think about, but I get something out of it. It might be the smallest little thing, but it might be one TikTok video or silly little meme that I see that in the moment I'm not thinking of, just something that I see in that moment that I will take with me in the future.\nAgain, I'm not thinking of it at that moment. There are so many times I'm like, oh my God, I just spent so many hours. looking at my phone, then the next day my co-worker, friend, family member, whomever, some random person maybe even, will bring something up where I'm like, oh my god, I literally saw this yesterday on my phone, like I saw this, like I know what you're talking about, and then you're able to have a conversation with whatever, with something that maybe you never even thought you could have a conversation with, but since you just saw that stupid little video for 10 seconds it did something in your brain and to be honest most of it 99% of it I don't remember\nI feel like it's kind of diluting culture though by creating these like artificial shared experiences I feel like it is diluting some of the meaningfulness of those things like memes or what are memes replacing the ritual Yeah, yeah, thank you. Okay. Yeah, just let's just let it just let it sit. It's cool, but But yeah, I won't even take us off on some philosophical tangent at this moment But I wanted to hear you talk about your art and yourself as a stop-motion artist and VFX Like I said, this is you kind of introducing yourself to our lore as a creator-driven agency Yeah,\nwell, hello out there, all y'all out there Hello everyone, my name is Kale, I'd like to think of myself as a creative, I mean I think everybody is creative at heart, my main passion in life is definitely animation and seeing life frame by frame, photography as well, my bread and butter, for sure like stop-motion with a little bit of VFX in there. I love me some practical VFX, you know life is all about a balance, and I know that we're no longer in the 80s, and it's not all camera work, and we do have to rely on our robots and technology. I respect the robots, I don't want to make them too mad, so they don't overturn.\nYeah, you don't want them coming for you, right? Exactly. You don't want to be on the list.\nYeah, I don't want to be on anybody's list. Um, yeah, I used to work in GFX right out of school for three years for a company called Love of GFX. Um, and, yeah, we specialize in, uh, hang on, sorry, pause. I don't know how much I can say about this company.\nWell, you can, like, skip, like, skip to what you feel comfortable saying. The video will not be edited, so just like don't say stuff you don't want to say. So this is perfect\nI used to work for a VFX company, super fun. I used to work on Hollywood films, Got My Name and Mission Impossible Part 1, Part 2 What? Marvel movies, I don't know, it's fancy\nMarvel? Big time, big time\nYeah, it was pretty cool, it was pretty cool\nTrad artist\nYeah, it's Yeah, it was it was pretty fun stuff Terms like\nopportune moment\nOh my, yeah, that was actually, that was at Field of Vision, my boy is King Gizzy Um, but yeah, I, sorry, it's really hard for me to like admit that I'm a creative because I didn't believe it for such a long time and I just kind of, I just made art for me and, uh, yeah, I would make it when I'm angry or when I was sad or, uh, it was my and I release for a really long time and I think everybody needs to release our, everybody has a different term for it, but I just, I call it your metal, you know, life is all about a balance, you are in your fluid state and you're in your very mechanical, rigid state and you just kind of want to come together and live in that grey zone and sometimes I I can be really up here and just silly, laughy, goofy, not giving a fuck about the world, you know, have to be brought back down and I gotta release that metal or alkaline or rigidness or whatever.\nAnd yeah, art creating was a big part of that for me. I grew up a lot with ceramics and throwing on the wheel and additive ceramics, just like adding little pieces, sort of like so much\nso I have another question yeah if you can work what's like the dream kind of stuff you want to work on But where's the destination or what's the journey rather Okay, yeah Okay, we appreciate that invitation yeah, it is\nIt's getting a little chilly Gosh, what is my dream? Where's\nthe gentleman in me? I'm like, I'm putting on the zip of my coat I can say you want to sit inside? But I guess it was louder before, but continue\nIt's quite loud in there You know, this is a really hard question for me Because I think about this every single day Where do I want to be with my art?\nYou get the spitball though, you know, there's no like real destination, right? They're just like, the universe will take you where it's gonna take you at the end of the day The universe will\ntake you where it takes me and we're so money driven, you know, we're always, here's a memory that just popped up, you know, with my boys playing right here, it's perfect, King Gizzard and the Lizard Wizard, I saw them at Field of Vision last year in beautiful Buena Vista, Colorado, and it was a really, it was a very difficult time for me, this was the first show I had ever done by myself, completely solo, first festival I've ever even been to also\nno that's it\nyeah I just gotten out of a serious breakup I had just moved back to Colorado I had just sold my house\noh wow\nown a house my VFX jobs pay me very nicely but everything just completely turned upside down started completely from the bottom bottom the The only way you can go is up. But I haven't created anything at this point for so long. It's probably like six months at this point. Never picked up a paintbrush, a pen, pencil, whatever. Nothing. It was very automatic. Go home. Play video games. Probably get drunk. I wasn't creating anything. Then I went to this show and I... The first night was very rough, I'm not gonna lie. I did not like it. I struggled in many different ways. setting up a tent all by myself.\nVery difficult setting up a 10-person tent with one person.\nYeah, that's insane.\nAnd also it was raining and it was windy. It was horrible. I literally,\nI was like two hours in and I was like, you know what, I think I'm just going to go home. I'd have just gotten in my car and turned on the heat and said, I'll see you in the morning.\nBut I just like, something told me, the universe told me like, hey, just stick with it. Something's out there for you. I was like, all right. Better than me. I guess fine, I'll stick with it I mean the first night was horrible I'm not even going to get into that right now But you know that it was horrible But then the second day I woke up And it was such a bright day Not a cloud in the sky And I felt so alive And I was like, you know what I'm just going to listen to my boys, King Gizzy I'm just going to start making art I'm just going to start sketching and I did and I sketched for hours and hours and hours and filled a whole notebook just filled with shit.\nI mean actually some of not shit that's yeah I mean it is shit but it was it's good shit healthy shit but I just I anything that was in my head or I was you know having conversations with the universe I'd like write a question and like look up listen to the universe she would tell me something like write a down and have a question right down and it's just like it's full feedback system and what was I getting to? Fuck, I had a really good point in fits. Yeah, I just like started, oh, money, that's what I was getting to. I was creating and I filled a whole sketchbook filled with just like Posca markers, very vibrant colors, very like psychedelic art.\nThese people came by me and they like saw what I was working on and I probably looked like a crazy person I mean, I literally had paint splattered all around me\nPerfect place, Nick\nYeah, like I literally was just like, nobody talk to me, I'm like Bob Ross right now But somebody like took me out of my like flow And they're like, oh my gosh, dude, cool art, you should sell that And I You know, I was like Yeah, I just like had such a Such a weird feeling Such a different feeling I've never had And I was like, hey, you know what I appreciate what you're saying I know what you're saying, you're saying this art is like So cool and so People want this But you know, I just like, you know I had to be grateful in that moment You know what, I hear you But this is for me right now This is not for monetary value I'm not trying to get anything out of this.\nI'm not trying to make a quick.\nIt's my release.\nI just want to release Exactly, I just want to get my metal out of me You know, it was just like a quick like thank you I see you but I got to do me and I went like right back into it. I don't care what y'all think But like old me would have never been like that like I would have been like yeah You're so right like I could sell this for ten bucks like hey everybody get get your hey Hey, one of a one kind, Kale, print here, right here, hot and ready to go.\nYou got so much energy. The screen is waiting for you.\nHey, screen. But that's just like, that's not what I'm about. I think money is truly the root of all people. And my whole family, they've kind of struggled with money and are very much like, how are we going to make a quick buck? My grandma, she loves to go to garage sales and find something for a dime and flip it for a dollar\nShe's the original Gary Vee\nShe very much is I grew up with it and I respect it I understand that the world we live in, we do have to make money somehow and income somehow And I've accepted it But I'm not gonna force it Yeah You Know and I'm not gonna\nWell it's perfect we just met up and like Synchronicity universe just working\nShe works in mysterious ways And I think that's why I really Had a difficult time I might be When I was working for my VFX studio So I'd put all My creative energy and juices In doing What the client the director Whomever told me what to do Give me notes and then I'd get home and I'd have no energy, no motivation to create anything for myself. It was all like, okay, how can I make money off of my art?\nA speeding Mini Cooper wasn't on my list. Very Italian job.\nNever seen that before, I checked that off the list. But yeah, I know I did not like creating art for such a... I just had no satisfaction for many years because I put all my energy into my job and making a quick buck and yeah it just wasn't enjoyable art wasn't enjoyable for me for a long time but yeah now I'm at a point where I'm just you know working a minimum wage kitchen job job where I'm vibing I love the people I work with I'm not so trained at the end of the day and I can go home and I do my doodles\nI",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Denver",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "url": "https://wethem.xyz/places#denver"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Denver Unfiltered",
+    "url": "https://wethem.xyz/portfolio#p-denver"
+  },
+  "dateCreated": "2026-03-27"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Denver Unfiltered",
+      "item": "https://wethem.xyz/portfolio#p-denver"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Kale, a VFX artist, on grief, her mom Sarah, and working on Marvel films",
+      "item": "https://wethem.xyz/watch/vfx-artist-on-grief-art-and-starting-over"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place], who[data-pf-who]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2026-03-30" data-pf-vid="6JcW_wQyVWc" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;29:00&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="Denver" data-pf-country="United States" data-pf-project="Denver Unfiltered" data-pf-who="Maceo">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-denver">Denver Unfiltered</a></li>
+            <li aria-current="page">Kale, a VFX artist, on grief, her mom Sarah, and working on Marvel films</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">Kale, a VFX artist, on grief, her mom Sarah, and working on Marvel films.</h1>
+
+    <p class="wt-byline"><strong>Kale</strong> &middot; Reported by <strong><a href="../people/maceo.html">Maceo</a></strong> &middot; Denver &middot; 29 min &middot; filmed <time datetime="2026-03-27">27 March 2026</time></p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="6JcW_wQyVWc" live posterurl="../stills/6JcW_wQyVWc.jpg" postersrcset="../stills/6JcW_wQyVWc-320.jpg 320w, ../stills/6JcW_wQyVWc-480.jpg 480w, ../stills/6JcW_wQyVWc-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/6JcW_wQyVWc?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="Kale, a VFX artist, on grief, her mom Sarah, and working on Marvel films, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+
+    <div class="wt-prose">
+            <p>A Denver stop-motion and visual effects artist on making art after losing her mother, walking away from a Hollywood VFX job, and what release means when creating is the only thing that helps.</p>
+            <p>Kale spent three years at a visual effects studio with credits on Mission: Impossible and Marvel films, and stopped making anything of her own. &ldquo;I would put all my creative energy and juices in doing what the client, the director, whomever told me what to do, and I&rsquo;d get home and I&rsquo;d have no energy, no motivation to create anything for myself.&rdquo;</p>
+            <p>Her mother Sarah died two years ago, after a long struggle with mental illness and addiction. &ldquo;She was such a bright light in such a dark room,&rdquo; Kale says. &ldquo;She loved those connections with people, genuinely getting to know people. Not listening to your binary answers, but listening to your story.&rdquo; On the diagnoses her mother kept looking for: &ldquo;Nothing is wrong with you. You just have a different brain than everybody else. We all have different brains.&rdquo;</p>
+            <p>On finding her way back to making things, at a festival in Buena Vista, Colorado, on her own for the first time: &ldquo;I hadn&rsquo;t created anything at this point for so long. Then the second day I woke up and it was such a bright day, not a cloud in the sky, and I felt so alive.&rdquo; She filled a sketchbook in one sitting. When somebody walked past and told her she should sell it: &ldquo;I hear you, but this is for me right now. This is not for monetary value.&rdquo;</p>
+            <p>And on conversation itself, which is most of what this interview turns out to be about: &ldquo;It&rsquo;s the what and how questions that are really the thought-provoking questions. Why are you feeling this way? That will create stories and a genuine connection.&rdquo;</p>
+            <p>This conversation includes discussion of suicide, mental illness and addiction.</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../places.html#denver">Everything filmed in Denver</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="never-been-ashamed-to-cry-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/yepfMr68Rao-640.jpg" srcset="../stills/yepfMr68Rao-320.jpg 320w, ../stills/yepfMr68Rao-480.jpg 480w, ../stills/yepfMr68Rao-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>24:10</span></span><span>Eric, on grief, family, and the human race.</span></a>
+        <a class="wt-rail-card" href="racism-or-southern-hospitality-two-brothers-from-texas-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/hyGTGHgIBdQ-640.jpg" srcset="../stills/hyGTGHgIBdQ-320.jpg 320w, ../stills/hyGTGHgIBdQ-480.jpg 480w, ../stills/hyGTGHgIBdQ-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:40</span></span><span>Racism or Southern hospitality? Two brothers from Texas.</span></a>
+        <a class="wt-rail-card" href="ai-is-artificial-we-are-the-official.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/2KWrTQgRKS0-640.jpg" srcset="../stills/2KWrTQgRKS0-320.jpg 320w, ../stills/2KWrTQgRKS0-480.jpg 480w, ../stills/2KWrTQgRKS0-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>21:18</span></span><span>A poet named Phoenix.</span></a>
+        <a class="wt-rail-card" href="denver-politics-and-where-the-homeless-went-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/hT_oDk_DnMw-640.jpg" srcset="../stills/hT_oDk_DnMw-320.jpg 320w, ../stills/hT_oDk_DnMw-480.jpg 480w, ../stills/hT_oDk_DnMw-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>17:35</span></span><span>Where the homeless went before the convention came.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c9"><a class="wt-t" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=9s" target="_blank" rel="noopener" data-pagefind-ignore>0:09</a><span class="wt-s">How do you break a silence</span></li>
+                <li class="wt-line" id="c111"><a class="wt-t" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=111s" target="_blank" rel="noopener" data-pagefind-ignore>1:51</a><span class="wt-s">Which questions create a real connection?</span></li>
+                <li class="wt-line" id="c174"><a class="wt-t" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=174s" target="_blank" rel="noopener" data-pagefind-ignore>2:54</a><span class="wt-s">Growing up around mental illness and addiction</span></li>
+                <li class="wt-line" id="c273"><a class="wt-t" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=273s" target="_blank" rel="noopener" data-pagefind-ignore>4:33</a><span class="wt-s">Losing her mother, Sarah</span></li>
+                <li class="wt-line" id="c476"><a class="wt-t" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=476s" target="_blank" rel="noopener" data-pagefind-ignore>7:56</a><span class="wt-s">Pills, pain, and who a person is underneath them</span></li>
+                <li class="wt-line" id="c552"><a class="wt-t" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=552s" target="_blank" rel="noopener" data-pagefind-ignore>9:12</a><span class="wt-s">What happens when somebody asks how your day was</span></li>
+                <li class="wt-line" id="c744"><a class="wt-t" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=744s" target="_blank" rel="noopener" data-pagefind-ignore>12:24</a><span class="wt-s">Acceptance as the hardest first step</span></li>
+                <li class="wt-line" id="c1020"><a class="wt-t" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1020s" target="_blank" rel="noopener" data-pagefind-ignore>17:00</a><span class="wt-s">Kale on stop motion and why everyone is creative</span></li>
+                <li class="wt-line" id="c1118"><a class="wt-t" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1118s" target="_blank" rel="noopener" data-pagefind-ignore>18:38</a><span class="wt-s">Working VFX on Mission: Impossible and Marvel</span></li>
+                <li class="wt-line" id="c1319"><a class="wt-t" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1319s" target="_blank" rel="noopener" data-pagefind-ignore>21:59</a><span class="wt-s">Going solo to a festival in Buena Vista</span></li>
+                <li class="wt-line" id="c1356"><a class="wt-t" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1356s" target="_blank" rel="noopener" data-pagefind-ignore>22:36</a><span class="wt-s">Why she would not sell her festival sketchbook</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Who speaks, by their own introduction on the tape: <a href="../guests.html#g-kale" data-pagefind-filter="person">Kale</a> at <a class="wt-at" data-seek="1020" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1020s" target="_blank" rel="noopener" data-pagefind-ignore>17:00</a>. Transcribed from the original audio and corrected for names. Speaker letters mark turns, not names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I want to get this.</p>
+            <p id="s1"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1s" target="_blank" rel="noopener" data-pagefind-ignore>0:01</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I turned it on again.</p>
+            <p id="s2"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=2s" target="_blank" rel="noopener" data-pagefind-ignore>0:02</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>Alright, no,</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s5"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=5s" target="_blank" rel="noopener" data-pagefind-ignore>0:05</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>it&rsquo;s not there. It&rsquo;s not there.</p>
+            <p id="s6"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=6s" target="_blank" rel="noopener" data-pagefind-ignore>0:06</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It&rsquo;s a living thing.</p>
+            <p id="s6-2"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=6s" target="_blank" rel="noopener" data-pagefind-ignore>0:06</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>Yeah, it&rsquo;s literally, it&rsquo;s all this is all in the past right now.</p>
+            <p id="s9"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=9s" target="_blank" rel="noopener" data-pagefind-ignore>0:09</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>But no, I completely get like that quietness. Something I wanted to ask you, how do you break the silence?</p>
+            <p id="s16"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=16s" target="_blank" rel="noopener" data-pagefind-ignore>0:16</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>That&rsquo;s the thing.</p>
+            <p id="s16-2"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=16s" target="_blank" rel="noopener" data-pagefind-ignore>0:16</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>I don&rsquo;t feel like me too, honestly. I truly don&rsquo;t feel there&rsquo;s any meaning. If I, if something in me, if my mind and body both align, and it&rsquo;s like, oh, I&rsquo;m genuinely, genuinely curious about learning more about so-and-so and everything is connecting, then yeah, I&rsquo;m going to say something. But if my mind is just telling me like, oh my gosh, so-and-so said this, you&rsquo;ve got to fulfill their ego or you&rsquo;ve got to, you&rsquo;ve got to like delve deeper, but like, truthfully, I don&rsquo;t fucking care.</p>
+            <p id="s49"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=49s" target="_blank" rel="noopener" data-pagefind-ignore>0:49</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>there&rsquo;s power yeah,</p>
+            <p id="s51"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=51s" target="_blank" rel="noopener" data-pagefind-ignore>0:51</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>but like if my body is like kind of like if I&rsquo;m like if I&rsquo;m like reaching in and if I&rsquo;m like getting you know like all right I&rsquo;m genuinely interested because there&rsquo;s two things you know I&rsquo;m like very like oh cool really no</p>
+            <p id="s64"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=64s" target="_blank" rel="noopener" data-pagefind-ignore>1:04</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>you don&rsquo;t say</p>
+            <p id="s64-2"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=64s" target="_blank" rel="noopener" data-pagefind-ignore>1:04</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>oh how about that you know it&rsquo;s very artificial like oh okay just going with emotions</p>
+            <p id="s69"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=69s" target="_blank" rel="noopener" data-pagefind-ignore>1:09</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>it&rsquo;s not real it&rsquo;s</p>
+            <p id="s70"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=70s" target="_blank" rel="noopener" data-pagefind-ignore>1:10</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>no literally and that&rsquo;s my go-to oh okay</p>
+            <p id="s74"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=74s" target="_blank" rel="noopener" data-pagefind-ignore>1:14</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I can hear it too. You can hear it. You can so hear it.</p>
+            <p id="s79"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=79s" target="_blank" rel="noopener" data-pagefind-ignore>1:19</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It&rsquo;s like go away. Go the fuck away.</p>
+            <p id="s80"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=80s" target="_blank" rel="noopener" data-pagefind-ignore>1:20</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>Yeah, it&rsquo;s just like I&rsquo;m literally doing this for you. I truly don&rsquo;t give a fuck though. But if I&rsquo;m genuinely interested in something and I&rsquo;ll make my eye contact, I&rsquo;m like, oh, really? Tell me more. So how did you feel? What brought you to this? What was going on? It&rsquo;s the what and how questions that are really thought provoking questions. If you start a question with like, what is it, I think how is the biggest indicator, just like a binary answer, like, or not how, you know, some word out there that is slipping my tongue right now.</p>
+            <p id="s116"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=116s" target="_blank" rel="noopener" data-pagefind-ignore>1:56</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Binary answer.</p>
+            <p id="s117"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=117s" target="_blank" rel="noopener" data-pagefind-ignore>1:57</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>Yeah, just a yes and a no. That means I don&rsquo;t give a fuck. If you&rsquo;re giving me a binary answer, I don&rsquo;t give a fuck.</p>
+            <p id="s123"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=123s" target="_blank" rel="noopener" data-pagefind-ignore>2:03</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I think a why is a genuine thing</p>
+            <p id="s126"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=126s" target="_blank" rel="noopener" data-pagefind-ignore>2:06</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>Yeah, a why, yeah, exactly, the why is the biggest, I owe you, and sometimes why, that&rsquo;s the biggest one, why, why are you feeling this way, that will create stories and a genuine connection, and then that&rsquo;s when my body is reacting, my mind is reacting, every part of kale is reacting,</p>
+            <p id="s146"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=146s" target="_blank" rel="noopener" data-pagefind-ignore>2:26</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>every part of kale</p>
+            <p id="s147"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=147s" target="_blank" rel="noopener" data-pagefind-ignore>2:27</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>is reacting, all my parts, that&rsquo;s the other thing, I feel like that&rsquo;s an acronym, kale is</p>
+            <p id="s152"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=152s" target="_blank" rel="noopener" data-pagefind-ignore>2:32</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>an acronym Somewhere</p>
+            <p id="s154"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=154s" target="_blank" rel="noopener" data-pagefind-ignore>2:34</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>Yeah, I don&rsquo;t know, we&rsquo;re just conventional, and a fruit But I</p>
+            <p id="s160"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=160s" target="_blank" rel="noopener" data-pagefind-ignore>2:40</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And a human being</p>
+            <p id="s161"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=161s" target="_blank" rel="noopener" data-pagefind-ignore>2:41</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>And a human being And an alien, and a life-form, and a creature An artist And a star, and a creator And I mean so many things Like I really, not knowing, I hate labels I hate just saying I&rsquo;m I&rsquo;m this or that Growing up I My Family Struggled With Mental Illness And Alcohol And Drug Addiction And My Mom She&rsquo;s Been In Rehab More Than I Have Fingers And She Was Always Looking For That Next Diagnosis Like Oh I Have Bipolar Or I Have Depression Or I Have anxiety Yeah Something Is Wrong With Me And It&rsquo;s Like No Nothing Is Wrong We all have different brains, and that&rsquo;s what&rsquo;s so beautiful about life.</p>
+            <p id="s162"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=162s" target="_blank" rel="noopener" data-pagefind-ignore>2:42</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>We all have a different way. We all have different experiences. We&rsquo;ve all been through different shit. If we&rsquo;ve all been through the same exact things, it would be so fucking boring. And I&rsquo;m not trying to bring me too down here.</p>
+            <p id="s232"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=232s" target="_blank" rel="noopener" data-pagefind-ignore>3:52</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>You&rsquo;re all good.</p>
+            <p id="s233"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=233s" target="_blank" rel="noopener" data-pagefind-ignore>3:53</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>But, yeah, unfortunately, my mom, she did</p>
+            <p id="s237"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=237s" target="_blank" rel="noopener" data-pagefind-ignore>3:57</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>This is authentic,</p>
+            <p id="s238"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=238s" target="_blank" rel="noopener" data-pagefind-ignore>3:58</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>no ma&rsquo;am, no soul</p>
+            <p id="s238-2"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=238s" target="_blank" rel="noopener" data-pagefind-ignore>3:58</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>Yeah, no, no ma&rsquo;am</p>
+            <p id="s240"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=240s" target="_blank" rel="noopener" data-pagefind-ignore>4:00</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>With a camera,</p>
+            <p id="s241"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=241s" target="_blank" rel="noopener" data-pagefind-ignore>4:01</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>who are you? Are you Kale?</p>
+            <p id="s243"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=243s" target="_blank" rel="noopener" data-pagefind-ignore>4:03</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>There&rsquo;s no camera here, I&rsquo;m just Kale, talking to myself Because I&rsquo;m my own best friend and I love talking to myself It&rsquo;s my most favorite conversation, just talking to myself in the wall No, talking to Kale But no, unfortunately, my mother, she didn&rsquo;t do this for battle with mental illness and she took her life about two years ago now, actually, yeah, about to be two years in less than a month now, and that&rsquo;s, thank you, I, yeah, I mean, it&rsquo;s,</p>
+            <p id="s272"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=272s" target="_blank" rel="noopener" data-pagefind-ignore>4:32</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>thanks for sharing that with us,</p>
+            <p id="s274"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=274s" target="_blank" rel="noopener" data-pagefind-ignore>4:34</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>yeah, it&rsquo;s, thanks for listening, um, it&rsquo;s, it&rsquo;s definitely been the hardest thing I&rsquo;ve ever found through in my life, and it&rsquo;s put me through this big depression I&rsquo;ve ever been through, all I did was drink and smoke and mask my pain and not heal with my trauma but yeah I&rsquo;m just like now I&rsquo;m like you know what I it made me who I am here and I just like so appreciate life now and Sarah with an H and I mean she was she was such a vibe and she truly was such a bright light in such a dark room and she she loved the connections with people and just getting to know people and like genuinely getting to know people, not listening to your binary answers, but listening to your story.</p>
+            <p id="s329"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=329s" target="_blank" rel="noopener" data-pagefind-ignore>5:29</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>What are you here for? What is your, why are you here on earth? And even if you didn&rsquo;t know at that time, whatever, she didn&rsquo;t know what her whole, yeah, I don&rsquo;t think she truly knew what her reason for being here on this planet was. and many different people told her you&rsquo;re here to be a mom of four, the oldest of four siblings you&rsquo;re here to be a mom, you&rsquo;re here to be a deadhead, you&rsquo;re here to cook for the rest of your life so many different people told her things that I don&rsquo;t think it&rsquo;s like Jack Nicholson in anger management</p>
+            <p id="s375"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=375s" target="_blank" rel="noopener" data-pagefind-ignore>6:15</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Who are you? Well, I&rsquo;m a dad, and now who are you?</p>
+            <p id="s378"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=378s" target="_blank" rel="noopener" data-pagefind-ignore>6:18</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>Yeah, who are you? Like, no, who are you to others who are you? What makes you you? And I don&rsquo;t think my mom is ever comfortable answering that question. She just couldn&rsquo;t. It was just like, it was just, it fried her brain, honestly. Whenever anybody, because she, yeah, she genuinely did not know who she was.</p>
+            <p id="s398"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=398s" target="_blank" rel="noopener" data-pagefind-ignore>6:38</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>She was someone, though.</p>
+            <p id="s401"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=401s" target="_blank" rel="noopener" data-pagefind-ignore>6:41</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>She was someone. She was, she was a lot, she was a lot of people. and I don&rsquo;t think she even realized that in herself and I think I mean yeah my mom she went through a lot in life a lot of abuse and neglect yeah just a lot but she didn&rsquo;t like I mean I want to say she didn&rsquo;t let it define her but I think it did where you know she was like I&rsquo;m a strong woman I can do anything I can be a mom I can do this</p>
+            <p id="s434"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=434s" target="_blank" rel="noopener" data-pagefind-ignore>7:14</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>and that&rsquo;s true</p>
+            <p id="s435"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=435s" target="_blank" rel="noopener" data-pagefind-ignore>7:15</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>and yeah it&rsquo;s totally true but I don&rsquo;t know Well, she fully felt it, because her past really came into play, a lot. She could only just enter her mind and not her body, and her body was in pain a lot. She had to diagnose fibromyalgia and a lot of other things, but she let that define her. She was like, oh, I have fibromyalgia, therefore I&rsquo;m in pain 24-7, and I can&rsquo;t be anyone else but this person in pain.</p>
+            <p id="s467"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=467s" target="_blank" rel="noopener" data-pagefind-ignore>7:47</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>That&rsquo;s all I am, is</p>
+            <p id="s469"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=469s" target="_blank" rel="noopener" data-pagefind-ignore>7:49</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>someone in pain. She took her pills or whatever to make her move down to that base level where maybe she could be Sarah, her authentic Sarah. But she never, the pills just mask that true Sarah. It wasn&rsquo;t ever truly Sarah. It&rsquo;s like pills, I have such a hard time with pills A lot of people told me I should take them,</p>
+            <p id="s498"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=498s" target="_blank" rel="noopener" data-pagefind-ignore>8:18</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I tried them I realized, holy shit, I&rsquo;m not getting anywhere with this It&rsquo;s getting worse</p>
+            <p id="s504"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=504s" target="_blank" rel="noopener" data-pagefind-ignore>8:24</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>No way And you become so robotic So, yeah, back to the automatic thing Yeah, I&rsquo;ve been on so many different pills in my life I couldn&rsquo;t even begin to</p>
+            <p id="s515"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=515s" target="_blank" rel="noopener" data-pagefind-ignore>8:35</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And it comes down to A lot What&rsquo;s the one thing that fixes it without pills? Like you were saying Who Are You and doing the thing with you, like doing the thing that you do, it kind of fixes, it doesn&rsquo;t fix everything, but fixes the part where you need to build</p>
+            <p id="s534"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=534s" target="_blank" rel="noopener" data-pagefind-ignore>8:54</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>Just being okay with yourself in the now,</p>
+            <p id="s537"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=537s" target="_blank" rel="noopener" data-pagefind-ignore>8:57</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>it&rsquo;s just</p>
+            <p id="s538"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=538s" target="_blank" rel="noopener" data-pagefind-ignore>8:58</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>so much, we&rsquo;ve been, every single human has been through so much, all of our experiences, like how does one person even take all of that in, you know There&rsquo;s so much going on.</p>
+            <p id="s552"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=552s" target="_blank" rel="noopener" data-pagefind-ignore>9:12</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So much to integrate. Like,</p>
+            <p id="s553"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=553s" target="_blank" rel="noopener" data-pagefind-ignore>9:13</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>he&rsquo;s asking me, other people ask me, how was your day, what&rsquo;s going on? I&rsquo;m like, if I tell you, if I bring this up in my own head, it&rsquo;s going to completely fuck up every year on the earth. As much as I want to tell you, yeah, where do I begin? Like, can we just do what we were meant to do today, please?</p>
+            <p id="s573"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=573s" target="_blank" rel="noopener" data-pagefind-ignore>9:33</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>And that&rsquo;s the thing, like, we&rsquo;re, yeah, we, I just, I want to get back to the automation. I don&rsquo;t have to work 10 times harder because it&rsquo;s very uncomfortable. We&rsquo;re very comfortable with just like living in our comfort zone and like breaking out of that comfort zone is very uncomfortable. Like dealing with your trauma, dealing with your past. Yeah, and that&rsquo;s okay, and there&rsquo;s, and that&rsquo;s okay, if your brain and body wasn&rsquo;t ready for it, then it wasn&rsquo;t,</p>
+            <p id="s619"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=619s" target="_blank" rel="noopener" data-pagefind-ignore>10:19</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>it would have had me bumped up</p>
+            <p id="s621"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=621s" target="_blank" rel="noopener" data-pagefind-ignore>10:21</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah,</p>
+            <p id="s622"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=622s" target="_blank" rel="noopener" data-pagefind-ignore>10:22</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>and you cannot force it, and</p>
+            <p id="s624"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=624s" target="_blank" rel="noopener" data-pagefind-ignore>10:24</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>You can&rsquo;t, that&rsquo;s true</p>
+            <p id="s626"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=626s" target="_blank" rel="noopener" data-pagefind-ignore>10:26</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>You know what you know right now when you need to know it Yeah I have a very hard time with my memory and I don&rsquo;t remember a lot of my past, whether it be from the drugs or alcohol or trauma, who&rsquo;s to say. But also, here&rsquo;s another food for thought. We see 24 frames per second, right? I&rsquo;m sure you guys know that.</p>
+            <p id="s649"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=649s" target="_blank" rel="noopener" data-pagefind-ignore>10:49</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I didn&rsquo;t I didn&rsquo;t I didn&rsquo;t know that</p>
+            <p id="s651"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=651s" target="_blank" rel="noopener" data-pagefind-ignore>10:51</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>Pictures Second Remember all that all the friends all those photos one day you can Is</p>
+            <p id="s665"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=665s" target="_blank" rel="noopener" data-pagefind-ignore>11:05</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>at one point I thought I saw Like a glimpse into 60 like what everything is without without the motion blur</p>
+            <p id="s677"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=677s" target="_blank" rel="noopener" data-pagefind-ignore>11:17</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It&rsquo;s like, that&rsquo;s so weird. That is</p>
+            <p id="s678"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=678s" target="_blank" rel="noopener" data-pagefind-ignore>11:18</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>so weird. It&rsquo;s like, now I understand why the brain was set up that way for a reason, because it&rsquo;s more alive. It&rsquo;s more like alive. But if you&rsquo;re a 60 person, you&rsquo;d feel like a freaking camera. You&rsquo;d feel like a weird, slow motion camera. Not slow motion, actually more fast.</p>
+            <p id="s696"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=696s" target="_blank" rel="noopener" data-pagefind-ignore>11:36</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>Instead of having a blur, you&rsquo;d just see it,</p>
+            <p id="s700"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=700s" target="_blank" rel="noopener" data-pagefind-ignore>11:40</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>not the blur. That&rsquo;s freaking it.</p>
+            <p id="s701"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=701s" target="_blank" rel="noopener" data-pagefind-ignore>11:41</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>It&rsquo;s, yeah, that&rsquo;s kind of why I love psychedelics, because you very much get in that mindset where you see every single thing you bring. I don&rsquo;t know, what was I saying? I had a really big point that I...</p>
+            <p id="s716"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=716s" target="_blank" rel="noopener" data-pagefind-ignore>11:56</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>You keep sidetracking. You</p>
+            <p id="s716-2"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=716s" target="_blank" rel="noopener" data-pagefind-ignore>11:56</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>said a lot, and it&rsquo;s like, thank you, you know, I don&rsquo;t know.</p>
+            <p id="s719"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=719s" target="_blank" rel="noopener" data-pagefind-ignore>11:59</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>Yeah, no, I just, you know, I don&rsquo;t know. I think people just care too much about what others think of them, and I think we just stop that. You</p>
+            <p id="s729"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=729s" target="_blank" rel="noopener" data-pagefind-ignore>12:09</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>were just speaking about how much we experience in the course of our lifetimes, right? And to be able to integrate, to be able to really make peace with all of those things and still experience some freedom and ease, right? And not feel anxious or overwhelmed or, like, afraid. It&rsquo;s acceptance.</p>
+            <p id="s741"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=741s" target="_blank" rel="noopener" data-pagefind-ignore>12:21</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>It&rsquo;s just acceptance. And that is really the first step, and it is the hardest step. By far, the hardest step. If</p>
+            <p id="s752"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=752s" target="_blank" rel="noopener" data-pagefind-ignore>12:32</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>you go back and forth, it&rsquo;s hard to actually accept. you&rsquo;ll accept it in a moment, then you won&rsquo;t accept it later, then you&rsquo;ll accept it again, then you won&rsquo;t accept it.</p>
+            <p id="s762"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=762s" target="_blank" rel="noopener" data-pagefind-ignore>12:42</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>Yeah, but even if you don&rsquo;t accept it now, again going back to like don&rsquo;t force anything. Not like your body will tell you, listen to your body. Your body will literally put tension in places.</p>
+            <p id="s776"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=776s" target="_blank" rel="noopener" data-pagefind-ignore>12:56</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>You&rsquo;re getting out of your gut.</p>
+            <p id="s778"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=778s" target="_blank" rel="noopener" data-pagefind-ignore>12:58</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>Yeah, your gut is your second brain, almost stronger than your brain at times.</p>
+            <p id="s783"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=783s" target="_blank" rel="noopener" data-pagefind-ignore>13:03</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>But sometimes it&rsquo;s also just informed by trauma, right, it&rsquo;s not always, sometimes it&rsquo;s reacting to what it perceives as a threat, when such a threat might not ever be there, too, so I think sometimes it&rsquo;s about respecting your body, trusting it&rsquo;s also just about respecting, like, I know my body right now is having this overwhelming reaction, or it&rsquo;s in a freeze mode, you know, and there&rsquo;s nothing wrong with your freeze mode body, and sometimes it&rsquo;s hard to not feel that way.</p>
+            <p id="s805"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=805s" target="_blank" rel="noopener" data-pagefind-ignore>13:25</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Sometimes I&rsquo;ll be like, I shouldn&rsquo;t be doing this, and then it turns out to be this thing I shouldn&rsquo;t be doing But, there&rsquo;s also, you have to, there&rsquo;s times when you&rsquo;re like, I know this is not chill, and like, whether you&rsquo;re not going to be bad for me, like, physically or, but it&rsquo;s like, I am wasting the whole time of who I am Yeah Why am I doing this? You&rsquo;re like, here, we&rsquo;ll be doing it for other people, and you&rsquo;re like, I shouldn&rsquo;t be doing this for other people</p>
+            <p id="s829"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=829s" target="_blank" rel="noopener" data-pagefind-ignore>13:49</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>Yeah yeah and yeah I mean to be honest I don&rsquo;t I don&rsquo;t know if I believe I don&rsquo;t know if I believe in the word waste I think I</p>
+            <p id="s844"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=844s" target="_blank" rel="noopener" data-pagefind-ignore>14:04</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>unless you abuse nothing</p>
+            <p id="s847"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=847s" target="_blank" rel="noopener" data-pagefind-ignore>14:07</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>no what do you want to say though what do you want to say</p>
+            <p id="s848"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=848s" target="_blank" rel="noopener" data-pagefind-ignore>14:08</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>I just I I truly think the universe has everything like I whatever that may What they mean to you, if that&rsquo;s a higher power, if that&rsquo;s your god, if that&rsquo;s many gods, whatever, there&rsquo;s definitely a higher power, somewhat, yeah, but I truly, like, I, you are in control of what you&rsquo;re in control of, you know, but like,</p>
+            <p id="s875"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=875s" target="_blank" rel="noopener" data-pagefind-ignore>14:35</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>sorry, but I believe somewhat of this, you</p>
+            <p id="s878"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=878s" target="_blank" rel="noopener" data-pagefind-ignore>14:38</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>just let her finish her statement though, let her finish,</p>
+            <p id="s880"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=880s" target="_blank" rel="noopener" data-pagefind-ignore>14:40</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>let her finish,</p>
+            <p id="s881"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=881s" target="_blank" rel="noopener" data-pagefind-ignore>14:41</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>it&rsquo;s okay,</p>
+            <p id="s882"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=882s" target="_blank" rel="noopener" data-pagefind-ignore>14:42</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>I, yes, you can spend your whole day doing scrolling, And Playing Video Games And Doing This Brain Rot Shit Whatever And It&rsquo;s Not You Know You May Think That You&rsquo;re Not Getting Anything From It But There&rsquo;s Probably Something In There Somewhere That You Are Going To Remember Some Little Thing Like I&rsquo;m Not Gonna Lie I Doomscroll A lot All The Time I Mean I Don&rsquo;t Even Want To Think About How Many Hours I Spent On My Phone It&rsquo;s Sad Really I Mean Yeah it makes me sad to think about, but I get something out of it. It might be the smallest little thing, but it might be one TikTok video or silly little meme that I see that in the moment I&rsquo;m not thinking of, just something that I see in that moment that I will take with me in the future.</p>
+            <p id="s882-2"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=882s" target="_blank" rel="noopener" data-pagefind-ignore>14:42</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>Again, I&rsquo;m not thinking of it at that moment. There are so many times I&rsquo;m like, oh my God, I just spent so many hours. looking at my phone, then the next day my co-worker, friend, family member, whomever, some random person maybe even, will bring something up where I&rsquo;m like, oh my god, I literally saw this yesterday on my phone, like I saw this, like I know what you&rsquo;re talking about, and then you&rsquo;re able to have a conversation with whatever, with something that maybe you never even thought you could have a conversation with, but since you just saw that stupid little video for 10 seconds it did something in your brain and to be honest most of it 99% of it I don&rsquo;t remember</p>
+            <p id="s983"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=983s" target="_blank" rel="noopener" data-pagefind-ignore>16:23</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I feel like it&rsquo;s kind of diluting culture though by creating these like artificial shared experiences I feel like it is diluting some of the meaningfulness of those things like memes or what are memes replacing the ritual Yeah, yeah, thank you. Okay. Yeah, just let&rsquo;s just let it just let it sit. It&rsquo;s cool, but But yeah, I won&rsquo;t even take us off on some philosophical tangent at this moment But I wanted to hear you talk about your art and yourself as a stop-motion artist and VFX Like I said, this is you kind of introducing yourself to our lore as a creator-driven agency Yeah,</p>
+            <p id="s1020"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1020s" target="_blank" rel="noopener" data-pagefind-ignore>17:00</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>well, hello out there, all y&rsquo;all out there Hello everyone, my name is Kale, I&rsquo;d like to think of myself as a creative, I mean I think everybody is creative at heart, my main passion in life is definitely animation and seeing life frame by frame, photography as well, my bread and butter, for sure like stop-motion with a little bit of VFX in there. I love me some practical VFX, you know life is all about a balance, and I know that we&rsquo;re no longer in the 80s, and it&rsquo;s not all camera work, and we do have to rely on our robots and technology. I respect the robots, I don&rsquo;t want to make them too mad, so they don&rsquo;t overturn.</p>
+            <p id="s1080"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1080s" target="_blank" rel="noopener" data-pagefind-ignore>18:00</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, you don&rsquo;t want them coming for you, right? Exactly. You don&rsquo;t want to be on the list.</p>
+            <p id="s1085"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1085s" target="_blank" rel="noopener" data-pagefind-ignore>18:05</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>Yeah, I don&rsquo;t want to be on anybody&rsquo;s list. Um, yeah, I used to work in GFX right out of school for three years for a company called Love of GFX. Um, and, yeah, we specialize in, uh, hang on, sorry, pause. I don&rsquo;t know how much I can say about this company.</p>
+            <p id="s1109"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1109s" target="_blank" rel="noopener" data-pagefind-ignore>18:29</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Well, you can, like, skip, like, skip to what you feel comfortable saying. The video will not be edited, so just like don&rsquo;t say stuff you don&rsquo;t want to say. So this is perfect</p>
+            <p id="s1119"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1119s" target="_blank" rel="noopener" data-pagefind-ignore>18:39</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>I used to work for a VFX company, super fun. I used to work on Hollywood films, Got My Name and Mission Impossible Part 1, Part 2 What? Marvel movies, I don&rsquo;t know, it&rsquo;s fancy</p>
+            <p id="s1132"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1132s" target="_blank" rel="noopener" data-pagefind-ignore>18:52</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Marvel? Big time, big time</p>
+            <p id="s1135"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1135s" target="_blank" rel="noopener" data-pagefind-ignore>18:55</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>Yeah, it was pretty cool, it was pretty cool</p>
+            <p id="s1140"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1140s" target="_blank" rel="noopener" data-pagefind-ignore>19:00</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Trad artist</p>
+            <p id="s1140-2"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1140s" target="_blank" rel="noopener" data-pagefind-ignore>19:00</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>Yeah, it&rsquo;s Yeah, it was it was pretty fun stuff Terms like</p>
+            <p id="s1155"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1155s" target="_blank" rel="noopener" data-pagefind-ignore>19:15</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>opportune moment</p>
+            <p id="s1173"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1173s" target="_blank" rel="noopener" data-pagefind-ignore>19:33</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>Oh my, yeah, that was actually, that was at Field of Vision, my boy is King Gizzy Um, but yeah, I, sorry, it&rsquo;s really hard for me to like admit that I&rsquo;m a creative because I didn&rsquo;t believe it for such a long time and I just kind of, I just made art for me and, uh, yeah, I would make it when I&rsquo;m angry or when I was sad or, uh, it was my and I release for a really long time and I think everybody needs to release our, everybody has a different term for it, but I just, I call it your metal, you know, life is all about a balance, you are in your fluid state and you&rsquo;re in your very mechanical, rigid state and you just kind of want to come together and live in that grey zone and sometimes I I can be really up here and just silly, laughy, goofy, not giving a fuck about the world, you know, have to be brought back down and I gotta release that metal or alkaline or rigidness or whatever.</p>
+            <p id="s1173-2"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1173s" target="_blank" rel="noopener" data-pagefind-ignore>19:33</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>And yeah, art creating was a big part of that for me. I grew up a lot with ceramics and throwing on the wheel and additive ceramics, just like adding little pieces, sort of like so much</p>
+            <p id="s1259"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1259s" target="_blank" rel="noopener" data-pagefind-ignore>20:59</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>so I have another question yeah if you can work what&rsquo;s like the dream kind of stuff you want to work on But where&rsquo;s the destination or what&rsquo;s the journey rather Okay, yeah Okay, we appreciate that invitation yeah, it is</p>
+            <p id="s1291"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1291s" target="_blank" rel="noopener" data-pagefind-ignore>21:31</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>It&rsquo;s getting a little chilly Gosh, what is my dream? Where&rsquo;s</p>
+            <p id="s1296"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1296s" target="_blank" rel="noopener" data-pagefind-ignore>21:36</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>the gentleman in me? I&rsquo;m like, I&rsquo;m putting on the zip of my coat I can say you want to sit inside? But I guess it was louder before, but continue</p>
+            <p id="s1303"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1303s" target="_blank" rel="noopener" data-pagefind-ignore>21:43</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>It&rsquo;s quite loud in there You know, this is a really hard question for me Because I think about this every single day Where do I want to be with my art?</p>
+            <p id="s1312"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1312s" target="_blank" rel="noopener" data-pagefind-ignore>21:52</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>You get the spitball though, you know, there&rsquo;s no like real destination, right? They&rsquo;re just like, the universe will take you where it&rsquo;s gonna take you at the end of the day The universe will</p>
+            <p id="s1319"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1319s" target="_blank" rel="noopener" data-pagefind-ignore>21:59</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>take you where it takes me and we&rsquo;re so money driven, you know, we&rsquo;re always, here&rsquo;s a memory that just popped up, you know, with my boys playing right here, it&rsquo;s perfect, King Gizzard and the Lizard Wizard, I saw them at Field of Vision last year in beautiful Buena Vista, Colorado, and it was a really, it was a very difficult time for me, this was the first show I had ever done by myself, completely solo, first festival I&rsquo;ve ever even been to also</p>
+            <p id="s1356"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1356s" target="_blank" rel="noopener" data-pagefind-ignore>22:36</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>no that&rsquo;s it</p>
+            <p id="s1356-2"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1356s" target="_blank" rel="noopener" data-pagefind-ignore>22:36</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>yeah I just gotten out of a serious breakup I had just moved back to Colorado I had just sold my house</p>
+            <p id="s1362"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1362s" target="_blank" rel="noopener" data-pagefind-ignore>22:42</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>oh wow</p>
+            <p id="s1363"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1363s" target="_blank" rel="noopener" data-pagefind-ignore>22:43</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>own a house my VFX jobs pay me very nicely but everything just completely turned upside down started completely from the bottom bottom the The only way you can go is up. But I haven&rsquo;t created anything at this point for so long. It&rsquo;s probably like six months at this point. Never picked up a paintbrush, a pen, pencil, whatever. Nothing. It was very automatic. Go home. Play video games. Probably get drunk. I wasn&rsquo;t creating anything. Then I went to this show and I... The first night was very rough, I&rsquo;m not gonna lie. I did not like it. I struggled in many different ways. setting up a tent all by myself.</p>
+            <p id="s1363-2"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1363s" target="_blank" rel="noopener" data-pagefind-ignore>22:43</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>Very difficult setting up a 10-person tent with one person.</p>
+            <p id="s1414"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1414s" target="_blank" rel="noopener" data-pagefind-ignore>23:34</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, that&rsquo;s insane.</p>
+            <p id="s1414-2"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1414s" target="_blank" rel="noopener" data-pagefind-ignore>23:34</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>And also it was raining and it was windy. It was horrible. I literally,</p>
+            <p id="s1419"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1419s" target="_blank" rel="noopener" data-pagefind-ignore>23:39</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I was like two hours in and I was like, you know what, I think I&rsquo;m just going to go home. I&rsquo;d have just gotten in my car and turned on the heat and said, I&rsquo;ll see you in the morning.</p>
+            <p id="s1426"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1426s" target="_blank" rel="noopener" data-pagefind-ignore>23:46</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>But I just like, something told me, the universe told me like, hey, just stick with it. Something&rsquo;s out there for you. I was like, all right. Better than me. I guess fine, I&rsquo;ll stick with it I mean the first night was horrible I&rsquo;m not even going to get into that right now But you know that it was horrible But then the second day I woke up And it was such a bright day Not a cloud in the sky And I felt so alive And I was like, you know what I&rsquo;m just going to listen to my boys, King Gizzy I&rsquo;m just going to start making art I&rsquo;m just going to start sketching and I did and I sketched for hours and hours and hours and filled a whole notebook just filled with shit.</p>
+            <p id="s1426-2"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1426s" target="_blank" rel="noopener" data-pagefind-ignore>23:46</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>I mean actually some of not shit that&rsquo;s yeah I mean it is shit but it was it&rsquo;s good shit healthy shit but I just I anything that was in my head or I was you know having conversations with the universe I&rsquo;d like write a question and like look up listen to the universe she would tell me something like write a down and have a question right down and it&rsquo;s just like it&rsquo;s full feedback system and what was I getting to? Fuck, I had a really good point in fits. Yeah, I just like started, oh, money, that&rsquo;s what I was getting to. I was creating and I filled a whole sketchbook filled with just like Posca markers, very vibrant colors, very like psychedelic art.</p>
+            <p id="s1476"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1476s" target="_blank" rel="noopener" data-pagefind-ignore>24:36</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>These people came by me and they like saw what I was working on and I probably looked like a crazy person I mean, I literally had paint splattered all around me</p>
+            <p id="s1530"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1530s" target="_blank" rel="noopener" data-pagefind-ignore>25:30</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Perfect place, Nick</p>
+            <p id="s1532"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1532s" target="_blank" rel="noopener" data-pagefind-ignore>25:32</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>Yeah, like I literally was just like, nobody talk to me, I&rsquo;m like Bob Ross right now But somebody like took me out of my like flow And they&rsquo;re like, oh my gosh, dude, cool art, you should sell that And I You know, I was like Yeah, I just like had such a Such a weird feeling Such a different feeling I&rsquo;ve never had And I was like, hey, you know what I appreciate what you&rsquo;re saying I know what you&rsquo;re saying, you&rsquo;re saying this art is like So cool and so People want this But you know, I just like, you know I had to be grateful in that moment You know what, I hear you But this is for me right now This is not for monetary value I&rsquo;m not trying to get anything out of this.</p>
+            <p id="s1564"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1564s" target="_blank" rel="noopener" data-pagefind-ignore>26:04</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>I&rsquo;m not trying to make a quick.</p>
+            <p id="s1577"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1577s" target="_blank" rel="noopener" data-pagefind-ignore>26:17</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It&rsquo;s my release.</p>
+            <p id="s1578"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1578s" target="_blank" rel="noopener" data-pagefind-ignore>26:18</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>I just want to release Exactly, I just want to get my metal out of me You know, it was just like a quick like thank you I see you but I got to do me and I went like right back into it. I don&rsquo;t care what y&rsquo;all think But like old me would have never been like that like I would have been like yeah You&rsquo;re so right like I could sell this for ten bucks like hey everybody get get your hey Hey, one of a one kind, Kale, print here, right here, hot and ready to go.</p>
+            <p id="s1610"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1610s" target="_blank" rel="noopener" data-pagefind-ignore>26:50</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>You got so much energy. The screen is waiting for you.</p>
+            <p id="s1615"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1615s" target="_blank" rel="noopener" data-pagefind-ignore>26:55</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>Hey, screen. But that&rsquo;s just like, that&rsquo;s not what I&rsquo;m about. I think money is truly the root of all people. And my whole family, they&rsquo;ve kind of struggled with money and are very much like, how are we going to make a quick buck? My grandma, she loves to go to garage sales and find something for a dime and flip it for a dollar</p>
+            <p id="s1640"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1640s" target="_blank" rel="noopener" data-pagefind-ignore>27:20</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>She&rsquo;s the original Gary Vee</p>
+            <p id="s1641"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1641s" target="_blank" rel="noopener" data-pagefind-ignore>27:21</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>She very much is I grew up with it and I respect it I understand that the world we live in, we do have to make money somehow and income somehow And I&rsquo;ve accepted it But I&rsquo;m not gonna force it Yeah You Know and I&rsquo;m not gonna</p>
+            <p id="s1658"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1658s" target="_blank" rel="noopener" data-pagefind-ignore>27:38</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Well it&rsquo;s perfect we just met up and like Synchronicity universe just working</p>
+            <p id="s1664"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1664s" target="_blank" rel="noopener" data-pagefind-ignore>27:44</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>She works in mysterious ways And I think that&rsquo;s why I really Had a difficult time I might be When I was working for my VFX studio So I&rsquo;d put all My creative energy and juices In doing What the client the director Whomever told me what to do Give me notes and then I&rsquo;d get home and I&rsquo;d have no energy, no motivation to create anything for myself. It was all like, okay, how can I make money off of my art?</p>
+            <p id="s1694"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1694s" target="_blank" rel="noopener" data-pagefind-ignore>28:14</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>A speeding Mini Cooper wasn&rsquo;t on my list. Very Italian job.</p>
+            <p id="s1698"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1698s" target="_blank" rel="noopener" data-pagefind-ignore>28:18</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Kale at 17:00" data-pagefind-ignore>Kale</span>Never seen that before, I checked that off the list. But yeah, I know I did not like creating art for such a... I just had no satisfaction for many years because I put all my energy into my job and making a quick buck and yeah it just wasn&rsquo;t enjoyable art wasn&rsquo;t enjoyable for me for a long time but yeah now I&rsquo;m at a point where I&rsquo;m just you know working a minimum wage kitchen job job where I&rsquo;m vibing I love the people I work with I&rsquo;m not so trained at the end of the day and I can go home and I do my doodles</p>
+            <p id="s1737"><a class="wt-at" href="https://www.youtube.com/watch?v=6JcW_wQyVWc&amp;t=1737s" target="_blank" rel="noopener" data-pagefind-ignore>28:57</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+
+    <section id="after-transcript" tabindex="-1" class="wrap wt-more" aria-label="Filmed the same day">
+        <div class="country-head">
+            <h2 class="country-name">Filmed the same day.</h2>
+            <span class="country-meta">27 March 2026</span>
+        </div>
+        <ul class="rel-list">
+            <li class="rel-item">
+                <a class="rel-link" href="thirty-years-of-a-local-head-shop-and-why-community.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/PCLjSkqhm5I/mqdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">Thirty Years of a Local Head Shop: Why Community | Denver</span>
+                        <span class="rel-why">6.22pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="../archive/first-friday-denver-bts-behind-the-scenes-on-santa-fe.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/5EgAYszE9kw/mqdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">First Friday Denver BTS · Behind the Scenes on Santa Fe</span>
+                        <span class="rel-why">6.45pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Transcript</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="../archive/colorado-invitational-bongathon-fastest-grams-competition-bong-racing-.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/hzFcbYtw-T0/mqdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">Colorado Invitational Bongathon · Fastest Grams Competition &amp; Bong Racing in Denver</span>
+                        <span class="rel-why">6.49pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Transcript</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="the-earth-is-alive-denver.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/Jj1oN8qBM-w/mqdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">The Earth Is Alive: Fentanyl, Then Global Warming | Denver</span>
+                        <span class="rel-why">7.53pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="politics-divides-us-in-two-most-important-global-issue-purple-haze-denver.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/aXl20fRazeM/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">Politics Divides Us in Two: Global Issue Answer | Denver</span>
+                        <span class="rel-why">8.06pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="../archive/nichkesh-from-five-points-denver-on-spirituality-money-what-feeling-ar.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/uuDwFDp3w60/mqdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">Nichkesh From Five Points Denver on Spirituality, Money &amp; &quot;What Feeling Are You Leaving?&quot;</span>
+                        <span class="rel-why">8.06pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Transcript</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+<div><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from Denver Unfiltered.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-denver">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="a-first-interview-and-advice-back-to-newark-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/UkX8veGIl58-640.jpg" srcset="../stills/UkX8veGIl58-320.jpg 320w, ../stills/UkX8veGIl58-480.jpg 480w, ../stills/UkX8veGIl58-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:15</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · ETH Denver 2024</span>
+                    <h3 class="report-title">A first interview, and advice back to Newark.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="building-a-dao-and-making-governance-a-game-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/qcTocIWf34U-640.jpg" srcset="../stills/qcTocIWf34U-320.jpg 320w, ../stills/qcTocIWf34U-480.jpg 480w, ../stills/qcTocIWf34U-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:45</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">A content coin, and making governance a game.</h3>
+                    
+                </div>
+            </a>
+            <a href="from-america-to-denver-what-brought-you-here-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/DdXcCfCc26E-640.jpg" srcset="../stills/DdXcCfCc26E-320.jpg 320w, ../stills/DdXcCfCc26E-480.jpg 480w, ../stills/DdXcCfCc26E-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:21</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · Street</span>
+                    <h3 class="report-title">A borrowed camera, and Denver block by block.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../places.html#denver">Everything filmed in Denver</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

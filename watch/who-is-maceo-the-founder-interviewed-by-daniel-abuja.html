@@ -1,0 +1,832 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Abuja, March 2025, and for once the camera is on Maceo.">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/who-is-maceo-the-founder-interviewed-by-daniel-abuja">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="Who Is Maceo? Interviewed by Daniel | Abuja">
+    <meta property="og:description" content="Abuja, March 2025, and for once the camera is on Maceo.">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/who-is-maceo-the-founder-interviewed-by-daniel-abuja.jpg?v=08877856e8">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Who is Maceo? Interviewed by Daniel">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/who-is-maceo-the-founder-interviewed-by-daniel-abuja.jpg?v=08877856e8">
+    <meta property="og:url" content="https://wethem.xyz/watch/who-is-maceo-the-founder-interviewed-by-daniel-abuja">
+    <title>Who Is Maceo? Interviewed by Daniel | Abuja &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/who-is-maceo-the-founder-interviewed-by-daniel-abuja#video",
+  "name": "Who Is Maceo? Interviewed by Daniel | Abuja",
+  "description": "Abuja, March 2025, and for once the camera is on Maceo. Daniel is asking, with Maceo coaching him through it, and the first two minutes are false starts over the name. Maceo's answer to the question of who he is: \"I'm a rapper. I'd say first and foremost,\" then, \"I'm always a community builder, first and foremost. Like I wouldn't say I'm the best founder.\" His guiding light, in his words: \"how do I do it in a way that makes sure I'm doing everybody Who I feel is a part of this journey with me How do I do them justice?\" The road so far: \"with funding from CY, my patron I've been able to travel to more than 12 different blockchain conferences, events around the globe, eight different countries now,\" from Asia to Africa, Ethiopia the month before, now Nigeria again. The test of all of it, \"what I'm building is creating value for the people who are aligned with me who are trying to build platforms that actually serve their communities and not just you know extract value from them.\" Then the definitions this site is built on. \"We Them Media is a cooperatively run media company.\" The podcast and the company: the podcast was him documenting us, and \"We Them Media is us bringing us to market in a meaningful way.\" The goal: \"to both redefine the future of the creator economy using decentralized technologies and also to make sure that African products, African builders are getting to market irrespective of what chain they're building on.\" Why a DAO: \"the goal is to build an international organization that can outlast me.\" He is candid about output. \"people see us as a fake media company because we don't put out videos very often. Yeah. And I respect that take, you know, because I don't edit videos.\" What changed was finding people who care about post-production: Superbio and the team in Nigeria, Yofi in Ethiopia, Aziz in Nairobi. Why anyone should trust him: \"I'm community-minded You know, I'm wondering how what I'm building can serve you,\" and \"I want We The Media to feel like a place that, you know, you can safely go and be part of the new internet.\" The shout-outs name the network this archive stands on: Creative Alchemy, \"really the core community of my community,\" 40 Acres DAO, Friends with Benefits \"for getting me this camera, for getting me this tripod,\" CY, Donna and Aja. And where he wants to get to: \"no longer being Maceo, the guy who does 25% of it by himself.\" Language is unfiltered. The transcript below is from the original audio.",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/jXiGceBy7S0/maxresdefault.jpg"
+  ],
+  "uploadDate": "2025-03-04T13:30:04Z",
+  "embedUrl": "https://www.youtube.com/embed/jXiGceBy7S0",
+  "url": "https://wethem.xyz/watch/who-is-maceo-the-founder-interviewed-by-daniel-abuja",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT12M30S",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "A test run, and the name",
+      "startOffset": 0,
+      "url": "https://wethem.xyz/watch/who-is-maceo-the-founder-interviewed-by-daniel-abuja?t=0",
+      "endOffset": 121
+    },
+    {
+      "@type": "Clip",
+      "name": "Introductions, at last",
+      "startOffset": 121,
+      "url": "https://wethem.xyz/watch/who-is-maceo-the-founder-interviewed-by-daniel-abuja?t=121",
+      "endOffset": 184
+    },
+    {
+      "@type": "Clip",
+      "name": "Who is Maceo behind the scenes?",
+      "startOffset": 184,
+      "url": "https://wethem.xyz/watch/who-is-maceo-the-founder-interviewed-by-daniel-abuja?t=184",
+      "endOffset": 242
+    },
+    {
+      "@type": "Clip",
+      "name": "Twelve conferences, eight countries",
+      "startOffset": 242,
+      "url": "https://wethem.xyz/watch/who-is-maceo-the-founder-interviewed-by-daniel-abuja?t=242",
+      "endOffset": 303
+    },
+    {
+      "@type": "Clip",
+      "name": "What is We Them Media? A cooperative media company",
+      "startOffset": 303,
+      "url": "https://wethem.xyz/watch/who-is-maceo-the-founder-interviewed-by-daniel-abuja?t=303",
+      "endOffset": 381
+    },
+    {
+      "@type": "Clip",
+      "name": "Why a DAO: an organisation that outlasts him",
+      "startOffset": 381,
+      "url": "https://wethem.xyz/watch/who-is-maceo-the-founder-interviewed-by-daniel-abuja?t=381",
+      "endOffset": 405
+    },
+    {
+      "@type": "Clip",
+      "name": "The content so far",
+      "startOffset": 405,
+      "url": "https://wethem.xyz/watch/who-is-maceo-the-founder-interviewed-by-daniel-abuja?t=405",
+      "endOffset": 493
+    },
+    {
+      "@type": "Clip",
+      "name": "Post-production, and the team in Nigeria, Ethiopia and Kenya",
+      "startOffset": 493,
+      "url": "https://wethem.xyz/watch/who-is-maceo-the-founder-interviewed-by-daniel-abuja?t=493",
+      "endOffset": 584
+    },
+    {
+      "@type": "Clip",
+      "name": "Why trust him? “I’m community-minded”",
+      "startOffset": 584,
+      "url": "https://wethem.xyz/watch/who-is-maceo-the-founder-interviewed-by-daniel-abuja?t=584",
+      "endOffset": 638
+    },
+    {
+      "@type": "Clip",
+      "name": "Shout-outs, from Creative Alchemy to FWB",
+      "startOffset": 638,
+      "url": "https://wethem.xyz/watch/who-is-maceo-the-founder-interviewed-by-daniel-abuja?t=638",
+      "endOffset": 727
+    },
+    {
+      "@type": "Clip",
+      "name": "Sign-off",
+      "startOffset": 727,
+      "url": "https://wethem.xyz/watch/who-is-maceo-the-founder-interviewed-by-daniel-abuja?t=727",
+      "endOffset": 750
+    }
+  ],
+  "creator": {
+    "@type": "Person",
+    "name": "Daniel",
+    "url": "https://wethem.xyz/people/daniel"
+  },
+  "transcript": "I can't. No introduction, nothing. Okay, this is not a main video, this is like a test run.\nOkay, introduce yourself.\nOkay, good day everyone. Welcome to another episode of We Them Media Podcast. Is it We Them Media or We Them Niggas? We Them\nNiggas Podcast. Okay, okay. Go ahead and try again.\nIt feels weird. It feels weird to me say. Okay guys, welcome to another episode of We Them Niggas Podcast and I'm here with the founder of We Them Media, We Them Niggas. That feels weird too. I want to say, We Them Niggas podcast and We Them Media DAOs, huh?\nYou should say, We Them Niggas, a podcast, and We Them Media. You don't have to say DAO. I want to be the first DAO people know as a DAO without people saying it's a DAO.\nIn your mind, that sounds right, right? But it doesn't. It's not right. DAOs, do you let people know that something is a DAO?\nPeople know Google Chrome is the internet browser, but it's not Google Chrome, internet browser.\nBut do you think we have that? I'm not sure\nYeah, we gotta dream big Okay, makes sense We the media first, DAO's second\nOkay, welcome guys My name is Danny and I'm here I'm gonna start with introduction\nWhat's that?\nOnly 1.3k subscribers Only 100k views\nIt'll be okay By the time they come for us, we'll be too big Go ahead Oh, but okay, you're right, we should get credit, shout out to Proud by Zana, Zana Beats, for this fire instrumental, now what's up?\nOkay, what's up guys, this is, welcome to another episode of We Them Media, We Them Niggas, but, now I'm not messing it up\nSo go ahead, what's your name and welcome? What's\nmy name, welcome\nSay what's up everybody, I'm Daniel, you know, welcome, welcome to what, and who are you here with?\nokay guys welcome to\nall right i'll do it\nnice right i'm messing with you okay okay hello guys welcome my name is danny and i'm here today with the founder of we them media we them media and we them niggas podcast and his name is mr myself welcome it's good to have you again\nthank you mr daniel thank you it's good to be here i'm i am maceo i'm the founder of We Them Media the kundra drip media company i'm working on building in the web 3 space over the last three years A lot with your help, so big shout out to you, I'm excited to be here with you over the next month or so And to see what we can co-create and bring to the world We Them Niggas is my podcast, where I've been interviewing people across the African diaspora And Web3 building, creators, experimenting on-chain I'm really thinking about what it's like for me to bring my interests and my questions, you know, to life\nOkay, thanks for that amazing introduction So let's get to meet you, who is Maceo behind the scene? Who are you?\nWho am I? Yeah,\nwhat is your personality type is? What are other things we don't know about you already?\nWho am I? I'm a rapper. I'd say first and foremost, I started my podcast. I wanted to, you know, break into the music industry and kind of bring value. And that kind of transformed into me seeing Web3 and seeing the same kind of opportunity to bring value first. And really bring someone who was, I guess, be someone who was bringing more awareness to the black community, African community at large in the US. And it's really just transitioned to being and become more than that. I've seen myself evolve as a community builder, a founder, sure. But I'd say I'm always a community builder, first and foremost.\nLike I wouldn't say I'm the best founder. I wouldn't say I'm the best rapper, I wouldn't say I'm the best podcaster even But I'd say I'm really community minded all the time And I'd say that's my guiding light As I try and figure out how do I bring this project to life Is how do I do it in a way that makes sure I'm doing everybody Who I feel is a part of this journey with me How do I do them justice? And so who I am behind the scenes is somebody just thinking about How do I do this right for the people I say I'm doing it with and for\nOkay, okay, how has that journey been as a community leader? How has it been for you?\nI mean, I think it's been incredible, right? I think with funding from CY, my patron I've been able to travel to more than 12 different blockchain conferences, events around the globe, eight different countries now, from Asia to Africa, around the US, and just really getting to see both the Western Web3 world, the Asian Web3 world, and then now getting to be here in Africa, getting to meet builders in Ethiopia last month, and now being here in Nigeria with you all again, and hoping to make a trip to meet more of the Nigerian builders out here while we're here, while I'm here, right? So I'd say the journey's been incredible, I think, just trying to understand how do I make sure that what I'm building is creating value for the people who are aligned with me who are trying to build platforms that actually serve their communities and not just you know extract value from them.\nI think that's supposed to be the paradigm switch so for me I think it's going great and just getting to meet people and learn and better understand what my values should be and what the values aligned people look like for me I think it's been the journey. And people like you who have been a consistent guiding light and a consistent accountability partner are people who have made it possible. So shout out to you, shout out to CUL, shout out to everybody who's been showing up and giving a fuck.\nOkay, you mentioned We Them Media as your brainchild. Can you tell us what's We Them Media and what are the goals you intend to achieve?\nWe Them Media? We Them Media is a cooperatively run media company. That's kind of what I'd say. I'd say We Them Niggas is my podcast that I started in. I was like, okay, you know, if I can actually get this podcast to come out consistently, then ideally, I'd actually be able to ship more content than just my podcast. You know, ideally we'd have a approach to marketing that would help us ship additional content in the future Ideally, we'd also have, you know, a team that can help us edit content in a rapid manner And so I'd say We Them Media is ideally just like the next evolution of We Them Niggas We Them Niggas is me documenting us I think We Them Media is us bringing us to market in a meaningful way I think it's also a way for, I think, creatives like myself to better understand how we can be of service To our communities, to the diaspora with our skills and our energy in a way that bridges the gap between us and the future.\nI think We Them Media, for me, our goal is to both redefine the future of the creator economy using decentralized technologies and also to make sure that African products, African builders are getting to market irrespective of what chain they're building on.\nOkay. I feel like that makes sense. But how did your journey evolve from being a podcaster and a rapper to now trying to build a media company and then a DAO?\nWell, I'd say, you know, when I first saw DAOs, I was excited. I was in a fraternity at that point and just seeing the potential to be building new kinds of organizational structures that even had treasuries that could capture value, create value. I think the idea of being in DAO for me is about being able to build a scalable community driven organization that still maintains democratic governance and ideally can outlast me. I think the goal is to build an international organization that can outlast me.\nOkay, I think that makes sense So what contents do you hope to create or what type of content have you been creating before now and what contents do you intend to create as you take this journey across Africa?\nSo I started out interviewing some of my college friends, kind of just trying to push myself to be a host thinking about discourse broadly, you know, subjects that maybe we wouldn't talk about all the time My podcast being called We Them Niggas, obviously talking about race, about, you know, how we relate to race as people from different backgrounds, not as black people It's actually been controversial that my first episode isn't with a black person We talk about race, given that it's We Them Niggas But, you know, for me it's just about how do we start to talk about difference in a meaningful way Unpack difference, unpack what it means to erase and to recognize difference And to make sure that we're on the right side of that practice all the time And I'd really say since then, evolving into the music space I wanted to be a music rapper, or a music journalist, rather I've interviewed creatives, both on and off the Web3 space You know, artists in New York, artists in Pennsylvania California are just in California, and it's been dope.\nEven out in Manchester, I interviewed LCD Alchemist last year, coming here to meet Creative Alchemy, but also looking at who are the African builders, thinking about who are people across the diaspora, whether they're VC, lawyers, founders, software developers, really just trying to better understand what it means to be building in this space, and from what perspectives we can be creating value, and what kind of business opportunities even exist. I feel like for most people, they don't see Web3 as a startup ecosystem, but I think it is one of the most exciting startup ecosystems systems on the planet right now.\nOkay. Okay. So how is your content being produced, mastered and distributed? How's that journey been? How's the process been?\nSo that journey has been treacherous. I mean, to be honest, like people see us as a fake media company because we don't put out videos very often. Yeah. And I respect that take, you know, because I don't edit videos. And I edited my first few podcasts. My mom said, you should get someone to edit these. And I won't make her sound bad. But, you know, the point is, I edited them. And then she told me I should get someone to edit them. And I think it was a thorn in my side forever. So I've just been looking for people that really care about it. And I'd say the magic that came out of being here last year in July was that Superbio, shout out to him, he is super excited about helping us with post-production and really bringing this stuff to life, and so he, Zed, Quadrafa have really been holding it down in terms of post-production on that interview series, and I'm excited to continue to work with them to ship content, but really most excited just to showcase what it looks like for us to actually have a media team, who's excited about We Them Media, who's excited about the community, and excited about showcasing who we are, not just them as skilled, skilled editors and skilled content creators.\nBut us, you know, as really pioneers in this space, as creatives wondering what our role can be on chain And so I'd say it's been incredible to work with them Being in Ethiopia last month, I connected with Yofi He's excited to help us with post-production out there in Ethiopia Aziz, Fedesio, they're both in Kenya, Nairobi, and excited to help with post-production as well And so it's just been beautiful to find people who see the vision on the media side of things And who actually have the skills to help us bring it to life And the excitement about it to actually help us do it with their hard work So, you know, I'm excited to, you know, also be alongside them, heads down, putting work in And I think over the next few months, people will see how much content we've documented How much our team has evolved, and how our vision has evolved as well\nOkay, you already mentioned people who are supporting you But if people would like to support you, who would like to maybe join the DAO or join the media company Why do you think they should trust you? Why should they jump on this moving train? Why should they support you as you go through this journey?\nYeah, I mean, I think that the biggest thing is that I'm community-minded You know, I'm wondering how what I'm building can serve you. I think that you are, in my mind, the end customer. You know, how can everyone that I'm looking to partner with in the long term be creating value for you is my question. I want We Them Media to feel like a place that, you know, you can safely go and be part of the new internet. And whether that's access to banking products, whether that's access to tools to monetize as a creator, whether that's access to just friends online, you know, I know so many people struggle with loneliness, and we're just here trying to make sure that we have people to learn and grow with all the time.\nAnd I'm excited to be creating that space I think this new internet can be an intimidating journey to do on your own And we're just trying to make sure nobody has to do it that way\nOkay, speaking of people who are joining and supporting you I know you've mentioned a little bit about them But I think in private conversations you've mentioned some other people Would you like to send shoutouts to them? People who have been supporting your journey And community partners that we've had in the past Like you want to send shoutouts to them now?\nYeah, I mean, huge shoutout Of course, like I mentioned earlier, to see why Huge shoutout to Creative Alchemy for really being like, really the core community of my community, you know, I'm really here thinking a lot about how can We Them Media be an organization that serves creative, like creative communities and partners like Creative Alchemy, because I want people to be invested in the work that we create in the output, and I want them to feel like they can get paid to contribute to making it meaningful. And so I'm excited to be in this experiment with them. Huge shout out to 40 Acres DAO, the black community in the US thinking about the future of Web3.\nHuge shout out to Friends with Benefits for getting me this camera, for getting me this tripod. Huge shout out to CY, for all the additional stuff, you know, that's come with being part of this journey, all the insight, you know, I think shout out to people who gave us money last year, Donna and company Asia, you know, when we did the actual creative hangout last year, it's just been an incredible journey. And so many people have helped us get where we are. And I'm just excited to be doing it with company and people like yourself who have been showing up inside the community thinking about what the future of it can look like.\nSo thank you again as well. And I'm just super prompt to be, you know, I feel like in this in this next phase of thinking how do we do it together and no longer being Maceo, the guy who does 25% of it by himself.\nOh, that makes sense. Thank you guys for listening. Make sure to look out for more of our videos. In the meantime, like, subscribe and follow us on X, Instagram. And that's basically it. Thank you.\nYeah, thank you. You like that? Mm,\nI think it was good.",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Abuja",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "Nigeria"
+    },
+    "url": "https://wethem.xyz/places#abuja"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Nigeria",
+    "url": "https://wethem.xyz/portfolio#p-nigeria"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Web3 Governance",
+      "url": "https://wethem.xyz/topics/web3-governance"
+    },
+    {
+      "@type": "Thing",
+      "name": "Crypto",
+      "url": "https://wethem.xyz/topics/crypto"
+    }
+  ],
+  "keywords": [
+    "Web3 Governance",
+    "Crypto"
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Nigeria",
+      "item": "https://wethem.xyz/portfolio#p-nigeria"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Who is Maceo? Interviewed by Daniel",
+      "item": "https://wethem.xyz/watch/who-is-maceo-the-founder-interviewed-by-daniel-abuja"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place], who[data-pf-who]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2025-03-04" data-pf-vid="jXiGceBy7S0" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;12:30&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="Abuja" data-pf-country="Nigeria" data-pf-project="Nigeria" data-pf-who="Daniel">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-nigeria">Nigeria</a></li>
+            <li aria-current="page">Who is Maceo? Interviewed by Daniel</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">Who is Maceo? Interviewed by Daniel.</h1>
+
+    <p class="wt-byline"><strong>Maceo</strong> &middot; Reported by <strong><a href="../people/daniel.html">Daniel</a></strong> &middot; Abuja &middot; 12 min</p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="jXiGceBy7S0" live postersrcset="../stills/jXiGceBy7S0-320.jpg 320w, ../stills/jXiGceBy7S0-480.jpg 480w, ../stills/jXiGceBy7S0-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/jXiGceBy7S0?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="Who is Maceo? Interviewed by Daniel, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+    <p class="wt-note wt-credit">Executive producer: C.Y. Lee</p>
+
+    <div class="wt-prose">
+            <p>Abuja, March 2025, and for once the camera is on Maceo. Daniel is asking, with Maceo coaching him through it, and the first two minutes are false starts over the name. Maceo&rsquo;s answer to the question of who he is: &ldquo;I&rsquo;m a rapper. I&rsquo;d say first and foremost,&rdquo; then, &ldquo;I&rsquo;m always a community builder, first and foremost. Like I wouldn&rsquo;t say I&rsquo;m the best founder.&rdquo; His guiding light, in his words: &ldquo;how do I do it in a way that makes sure I&rsquo;m doing everybody Who I feel is a part of this journey with me How do I do them justice?&rdquo;</p>
+            <p>The road so far: &ldquo;with funding from CY, my patron I&rsquo;ve been able to travel to more than 12 different blockchain conferences, events around the globe, eight different countries now,&rdquo; from Asia to Africa, Ethiopia the month before, now Nigeria again. The test of all of it, &ldquo;what I&rsquo;m building is creating value for the people who are aligned with me who are trying to build platforms that actually serve their communities and not just you know extract value from them.&rdquo;</p>
+            <p>Then the definitions this site is built on. &ldquo;We Them Media is a cooperatively run media company.&rdquo; The podcast and the company: the podcast was him documenting us, and &ldquo;We Them Media is us bringing us to market in a meaningful way.&rdquo; The goal: &ldquo;to both redefine the future of the creator economy using decentralized technologies and also to make sure that African products, African builders are getting to market irrespective of what chain they&rsquo;re building on.&rdquo; Why a DAO: &ldquo;the goal is to build an international organization that can outlast me.&rdquo;</p>
+            <p>He is candid about output. &ldquo;people see us as a fake media company because we don&rsquo;t put out videos very often. Yeah. And I respect that take, you know, because I don&rsquo;t edit videos.&rdquo; What changed was finding people who care about post-production: Superbio and the team in Nigeria, Yofi in Ethiopia, Aziz in Nairobi. Why anyone should trust him: &ldquo;I&rsquo;m community-minded You know, I&rsquo;m wondering how what I&rsquo;m building can serve you,&rdquo; and &ldquo;I want We The Media to feel like a place that, you know, you can safely go and be part of the new internet.&rdquo; The shout-outs name the network this archive stands on: Creative Alchemy, &ldquo;really the core community of my community,&rdquo; 40 Acres DAO, Friends with Benefits &ldquo;for getting me this camera, for getting me this tripod,&rdquo; CY, Donna and Aja. And where he wants to get to: &ldquo;no longer being Maceo, the guy who does 25% of it by himself.&rdquo; Language is unfiltered. The transcript below is from the original audio.</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../places.html#abuja">Everything filmed in Abuja</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="where-the-name-came-from-maceo-interviewed-by-archive-new-york.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/M8nJR03NK5M-640.jpg" srcset="../stills/M8nJR03NK5M-320.jpg 320w, ../stills/M8nJR03NK5M-480.jpg 480w, ../stills/M8nJR03NK5M-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>17:17</span></span><span>Where the name came from: Maceo, interviewed by Archive.</span></a>
+        <a class="wt-rail-card" href="crypto-clarity-whats-happening-with-the-money-online.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/W20VlF_HHuQ-640.jpg" srcset="../stills/W20VlF_HHuQ-320.jpg 320w, ../stills/W20VlF_HHuQ-480.jpg 480w, ../stills/W20VlF_HHuQ-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>58:45</span></span><span>The first lesson of a four week crypto course.</span></a>
+        <a class="wt-rail-card" href="lets-talk-about-web-3-with-maceo-online.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/h_ncqUC-4co-640.jpg" srcset="../stills/h_ncqUC-4co-320.jpg 320w, ../stills/h_ncqUC-4co-480.jpg 480w, ../stills/h_ncqUC-4co-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>55:42</span></span><span>Maceo in the guest chair, telling the origin story.</span></a>
+        <a class="wt-rail-card" href="creative-alchemy-from-the-founder-anesi-life-camp-abuja.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/z_v7X8KBVLg-640.jpg" srcset="../stills/z_v7X8KBVLg-320.jpg 320w, ../stills/z_v7X8KBVLg-480.jpg 480w, ../stills/z_v7X8KBVLg-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>38:18</span></span><span>Creative Alchemy, from the founder: Ánesi at Life Camp.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c0"><a class="wt-t" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-s">A test run, and the name</span></li>
+                <li class="wt-line" id="c121"><a class="wt-t" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=121s" target="_blank" rel="noopener" data-pagefind-ignore>2:01</a><span class="wt-s">Introductions, at last</span></li>
+                <li class="wt-line" id="c184"><a class="wt-t" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=184s" target="_blank" rel="noopener" data-pagefind-ignore>3:04</a><span class="wt-s">Who is Maceo behind the scenes?</span></li>
+                <li class="wt-line" id="c242"><a class="wt-t" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=242s" target="_blank" rel="noopener" data-pagefind-ignore>4:02</a><span class="wt-s">Twelve conferences, eight countries</span></li>
+                <li class="wt-line" id="c303"><a class="wt-t" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=303s" target="_blank" rel="noopener" data-pagefind-ignore>5:03</a><span class="wt-s">What is We Them Media? A cooperative media company</span></li>
+                <li class="wt-line" id="c381"><a class="wt-t" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=381s" target="_blank" rel="noopener" data-pagefind-ignore>6:21</a><span class="wt-s">Why a DAO: an organisation that outlasts him</span></li>
+                <li class="wt-line" id="c405"><a class="wt-t" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=405s" target="_blank" rel="noopener" data-pagefind-ignore>6:45</a><span class="wt-s">The content so far</span></li>
+                <li class="wt-line" id="c493"><a class="wt-t" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=493s" target="_blank" rel="noopener" data-pagefind-ignore>8:13</a><span class="wt-s">Post-production, and the team in Nigeria, Ethiopia and Kenya</span></li>
+                <li class="wt-line" id="c584"><a class="wt-t" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=584s" target="_blank" rel="noopener" data-pagefind-ignore>9:44</a><span class="wt-s">Why trust him? “I’m community-minded”</span></li>
+                <li class="wt-line" id="c638"><a class="wt-t" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=638s" target="_blank" rel="noopener" data-pagefind-ignore>10:38</a><span class="wt-s">Shout-outs, from Creative Alchemy to FWB</span></li>
+                <li class="wt-line" id="c727"><a class="wt-t" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=727s" target="_blank" rel="noopener" data-pagefind-ignore>12:07</a><span class="wt-s">Sign-off</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Who speaks, by their own introduction on the tape: <a href="../guests.html#g-daniel" data-pagefind-filter="person">Daniel</a> at <a class="wt-at" data-seek="69" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=69s" target="_blank" rel="noopener" data-pagefind-ignore>1:09</a>, <a href="../guests.html#g-maceo" data-pagefind-filter="person">Maceo</a> at <a class="wt-at" data-seek="151" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=151s" target="_blank" rel="noopener" data-pagefind-ignore>2:31</a>. Transcribed from the original audio and corrected for names. Speaker letters mark turns, not names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Daniel at 1:09" data-pagefind-ignore>Daniel</span>I can&rsquo;t. No introduction, nothing. Okay, this is not a main video, this is like a test run.</p>
+            <p id="s8"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=8s" target="_blank" rel="noopener" data-pagefind-ignore>0:08</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:31" data-pagefind-ignore>Maceo</span>Okay, introduce yourself.</p>
+            <p id="s10"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=10s" target="_blank" rel="noopener" data-pagefind-ignore>0:10</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Daniel at 1:09" data-pagefind-ignore>Daniel</span>Okay, good day everyone. Welcome to another episode of We Them Media Podcast. Is it We Them Media or We Them Niggas? We Them</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s17"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=17s" target="_blank" rel="noopener" data-pagefind-ignore>0:17</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:31" data-pagefind-ignore>Maceo</span>Niggas Podcast. Okay, okay. Go ahead and try again.</p>
+            <p id="s20"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=20s" target="_blank" rel="noopener" data-pagefind-ignore>0:20</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Daniel at 1:09" data-pagefind-ignore>Daniel</span>It feels weird. It feels weird to me say. Okay guys, welcome to another episode of We Them Niggas Podcast and I&rsquo;m here with the founder of We Them Media, We Them Niggas. That feels weird too. I want to say, We Them Niggas podcast and We Them Media DAOs, huh?</p>
+            <p id="s35"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=35s" target="_blank" rel="noopener" data-pagefind-ignore>0:35</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:31" data-pagefind-ignore>Maceo</span>You should say, We Them Niggas, a podcast, and We Them Media. You don&rsquo;t have to say <a class="wt-gloss" href="../glossary.html#dao">DAO</a>. I want to be the first DAO people know as a DAO without people saying it&rsquo;s a DAO.</p>
+            <p id="s46"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=46s" target="_blank" rel="noopener" data-pagefind-ignore>0:46</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Daniel at 1:09" data-pagefind-ignore>Daniel</span>In your mind, that sounds right, right? But it doesn&rsquo;t. It&rsquo;s not right. DAOs, do you let people know that something is a DAO?</p>
+            <p id="s52"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=52s" target="_blank" rel="noopener" data-pagefind-ignore>0:52</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:31" data-pagefind-ignore>Maceo</span>People know Google Chrome is the internet browser, but it&rsquo;s not Google Chrome, internet browser.</p>
+            <p id="s59"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=59s" target="_blank" rel="noopener" data-pagefind-ignore>0:59</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Daniel at 1:09" data-pagefind-ignore>Daniel</span>But do you think we have that? I&rsquo;m not sure</p>
+            <p id="s62"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=62s" target="_blank" rel="noopener" data-pagefind-ignore>1:02</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:31" data-pagefind-ignore>Maceo</span>Yeah, we gotta dream big Okay, makes sense We the media first, DAO&rsquo;s second</p>
+            <p id="s69"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=69s" target="_blank" rel="noopener" data-pagefind-ignore>1:09</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Daniel at 1:09" data-pagefind-ignore>Daniel</span>Okay, welcome guys My name is Danny and I&rsquo;m here I&rsquo;m gonna start with introduction</p>
+            <p id="s78"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=78s" target="_blank" rel="noopener" data-pagefind-ignore>1:18</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:31" data-pagefind-ignore>Maceo</span>What&rsquo;s that?</p>
+            <p id="s81"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=81s" target="_blank" rel="noopener" data-pagefind-ignore>1:21</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Daniel at 1:09" data-pagefind-ignore>Daniel</span>Only 1.3k subscribers Only 100k views</p>
+            <p id="s89"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=89s" target="_blank" rel="noopener" data-pagefind-ignore>1:29</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:31" data-pagefind-ignore>Maceo</span>It&rsquo;ll be okay By the time they come for us, we&rsquo;ll be too big Go ahead Oh, but okay, you&rsquo;re right, we should get credit, shout out to Proud by Zana, Zana Beats, for this fire instrumental, now what&rsquo;s up?</p>
+            <p id="s110"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=110s" target="_blank" rel="noopener" data-pagefind-ignore>1:50</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Daniel at 1:09" data-pagefind-ignore>Daniel</span>Okay, what&rsquo;s up guys, this is, welcome to another episode of We Them Media, We Them Niggas, but, now I&rsquo;m not messing it up</p>
+            <p id="s118"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=118s" target="_blank" rel="noopener" data-pagefind-ignore>1:58</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:31" data-pagefind-ignore>Maceo</span>So go ahead, what&rsquo;s your name and welcome? What&rsquo;s</p>
+            <p id="s121"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=121s" target="_blank" rel="noopener" data-pagefind-ignore>2:01</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Daniel at 1:09" data-pagefind-ignore>Daniel</span>my name, welcome</p>
+            <p id="s122"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=122s" target="_blank" rel="noopener" data-pagefind-ignore>2:02</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:31" data-pagefind-ignore>Maceo</span>Say what&rsquo;s up everybody, I&rsquo;m Daniel, you know, welcome, welcome to what, and who are you here with?</p>
+            <p id="s129"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=129s" target="_blank" rel="noopener" data-pagefind-ignore>2:09</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Daniel at 1:09" data-pagefind-ignore>Daniel</span>okay guys welcome to</p>
+            <p id="s131"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=131s" target="_blank" rel="noopener" data-pagefind-ignore>2:11</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:31" data-pagefind-ignore>Maceo</span>all right i&rsquo;ll do it</p>
+            <p id="s133"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=133s" target="_blank" rel="noopener" data-pagefind-ignore>2:13</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Daniel at 1:09" data-pagefind-ignore>Daniel</span>nice right i&rsquo;m messing with you okay okay hello guys welcome my name is danny and i&rsquo;m here today with the founder of we them media we them media and we them niggas podcast and his name is mr myself welcome it&rsquo;s good to have you again</p>
+            <p id="s151"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=151s" target="_blank" rel="noopener" data-pagefind-ignore>2:31</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:31" data-pagefind-ignore>Maceo</span>thank you mr daniel thank you it&rsquo;s good to be here i&rsquo;m i am maceo i&rsquo;m the founder of We Them Media the kundra drip media company i&rsquo;m working on building in the web 3 space over the last three years A lot with your help, so big shout out to you, I&rsquo;m excited to be here with you over the next month or so And to see what we can co-create and bring to the world We Them Niggas is my podcast, where I&rsquo;ve been interviewing people across the African diaspora And Web3 building, creators, experimenting on-chain I&rsquo;m really thinking about what it&rsquo;s like for me to bring my interests and my questions, you know, to life</p>
+            <p id="s178"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=178s" target="_blank" rel="noopener" data-pagefind-ignore>2:58</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Daniel at 1:09" data-pagefind-ignore>Daniel</span>Okay, thanks for that amazing introduction So let&rsquo;s get to meet you, who is Maceo behind the scene? Who are you?</p>
+            <p id="s185"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=185s" target="_blank" rel="noopener" data-pagefind-ignore>3:05</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:31" data-pagefind-ignore>Maceo</span>Who am I? Yeah,</p>
+            <p id="s186"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=186s" target="_blank" rel="noopener" data-pagefind-ignore>3:06</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Daniel at 1:09" data-pagefind-ignore>Daniel</span>what is your personality type is? What are other things we don&rsquo;t know about you already?</p>
+            <p id="s189"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=189s" target="_blank" rel="noopener" data-pagefind-ignore>3:09</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:31" data-pagefind-ignore>Maceo</span>Who am I? I&rsquo;m a rapper. I&rsquo;d say first and foremost, I started my podcast. I wanted to, you know, break into the music industry and kind of bring value. And that kind of transformed into me seeing Web3 and seeing the same kind of opportunity to bring value first. And really bring someone who was, I guess, be someone who was bringing more awareness to the black community, African community at large in the US. And it&rsquo;s really just transitioned to being and become more than that. I&rsquo;ve seen myself evolve as a community builder, a founder, sure. But I&rsquo;d say I&rsquo;m always a community builder, first and foremost.</p>
+            <p id="s198"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=198s" target="_blank" rel="noopener" data-pagefind-ignore>3:18</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:31" data-pagefind-ignore>Maceo</span>Like I wouldn&rsquo;t say I&rsquo;m the best founder. I wouldn&rsquo;t say I&rsquo;m the best rapper, I wouldn&rsquo;t say I&rsquo;m the best podcaster even But I&rsquo;d say I&rsquo;m really community minded all the time And I&rsquo;d say that&rsquo;s my guiding light As I try and figure out how do I bring this project to life Is how do I do it in a way that makes sure I&rsquo;m doing everybody Who I feel is a part of this journey with me How do I do them justice? And so who I am behind the scenes is somebody just thinking about How do I do this right for the people I say I&rsquo;m doing it with and for</p>
+            <p id="s239"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=239s" target="_blank" rel="noopener" data-pagefind-ignore>3:59</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Daniel at 1:09" data-pagefind-ignore>Daniel</span>Okay, okay, how has that journey been as a community leader? How has it been for you?</p>
+            <p id="s243"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=243s" target="_blank" rel="noopener" data-pagefind-ignore>4:03</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:31" data-pagefind-ignore>Maceo</span>I mean, I think it&rsquo;s been incredible, right? I think with funding from CY, my patron I&rsquo;ve been able to travel to more than 12 different blockchain conferences, events around the globe, eight different countries now, from Asia to Africa, around the US, and just really getting to see both the Western Web3 world, the Asian Web3 world, and then now getting to be here in Africa, getting to meet builders in Ethiopia last month, and now being here in Nigeria with you all again, and hoping to make a trip to meet more of the Nigerian builders out here while we&rsquo;re here, while I&rsquo;m here, right? So I&rsquo;d say the journey&rsquo;s been incredible, I think, just trying to understand how do I make sure that what I&rsquo;m building is creating value for the people who are aligned with me who are trying to build platforms that actually serve their communities and not just you know extract value from them.</p>
+            <p id="s243-2"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=243s" target="_blank" rel="noopener" data-pagefind-ignore>4:03</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:31" data-pagefind-ignore>Maceo</span>I think that&rsquo;s supposed to be the paradigm switch so for me I think it&rsquo;s going great and just getting to meet people and learn and better understand what my values should be and what the values aligned people look like for me I think it&rsquo;s been the journey. And people like you who have been a consistent guiding light and a consistent accountability partner are people who have made it possible. So shout out to you, shout out to CUL, shout out to everybody who&rsquo;s been showing up and giving a fuck.</p>
+            <p id="s303"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=303s" target="_blank" rel="noopener" data-pagefind-ignore>5:03</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Daniel at 1:09" data-pagefind-ignore>Daniel</span>Okay, you mentioned We Them Media as your brainchild. Can you tell us what&rsquo;s We Them Media and what are the goals you intend to achieve?</p>
+            <p id="s311"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=311s" target="_blank" rel="noopener" data-pagefind-ignore>5:11</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:31" data-pagefind-ignore>Maceo</span>We Them Media? We Them Media is a cooperatively run media company. That&rsquo;s kind of what I&rsquo;d say. I&rsquo;d say We Them Niggas is my podcast that I started in. I was like, okay, you know, if I can actually get this podcast to come out consistently, then ideally, I&rsquo;d actually be able to ship more content than just my podcast. You know, ideally we&rsquo;d have a approach to marketing that would help us ship additional content in the future Ideally, we&rsquo;d also have, you know, a team that can help us edit content in a rapid manner And so I&rsquo;d say We Them Media is ideally just like the next evolution of We Them Niggas We Them Niggas is me documenting us I think We Them Media is us bringing us to market in a meaningful way I think it&rsquo;s also a way for, I think, creatives like myself to better understand how we can be of service To our communities, to the diaspora with our skills and our energy in a way that bridges the gap between us and the future.</p>
+            <p id="s311-2"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=311s" target="_blank" rel="noopener" data-pagefind-ignore>5:11</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:31" data-pagefind-ignore>Maceo</span>I think We Them Media, for me, our goal is to both redefine the future of the creator economy using decentralized technologies and also to make sure that African products, African builders are getting to market irrespective of what chain they&rsquo;re building on.</p>
+            <p id="s371"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=371s" target="_blank" rel="noopener" data-pagefind-ignore>6:11</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Daniel at 1:09" data-pagefind-ignore>Daniel</span>Okay. I feel like that makes sense. But how did your journey evolve from being a podcaster and a rapper to now trying to build a media company and then a DAO?</p>
+            <p id="s380"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=380s" target="_blank" rel="noopener" data-pagefind-ignore>6:20</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:31" data-pagefind-ignore>Maceo</span>Well, I&rsquo;d say, you know, when I first saw DAOs, I was excited. I was in a fraternity at that point and just seeing the potential to be building new kinds of organizational structures that even had treasuries that could capture value, create value. I think the idea of being in DAO for me is about being able to build a scalable community driven organization that still maintains democratic governance and ideally can outlast me. I think the goal is to build an international organization that can outlast me.</p>
+            <p id="s408"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=408s" target="_blank" rel="noopener" data-pagefind-ignore>6:48</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Daniel at 1:09" data-pagefind-ignore>Daniel</span>Okay, I think that makes sense So what contents do you hope to create or what type of content have you been creating before now and what contents do you intend to create as you take this journey across Africa?</p>
+            <p id="s421"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=421s" target="_blank" rel="noopener" data-pagefind-ignore>7:01</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:31" data-pagefind-ignore>Maceo</span>So I started out interviewing some of my college friends, kind of just trying to push myself to be a host thinking about discourse broadly, you know, subjects that maybe we wouldn&rsquo;t talk about all the time My podcast being called We Them Niggas, obviously talking about race, about, you know, how we relate to race as people from different backgrounds, not as black people It&rsquo;s actually been controversial that my first episode isn&rsquo;t with a black person We talk about race, given that it&rsquo;s We Them Niggas But, you know, for me it&rsquo;s just about how do we start to talk about difference in a meaningful way Unpack difference, unpack what it means to erase and to recognize difference And to make sure that we&rsquo;re on the right side of that practice all the time And I&rsquo;d really say since then, evolving into the music space I wanted to be a music rapper, or a music journalist, rather I&rsquo;ve interviewed creatives, both on and off the Web3 space You know, artists in New York, artists in Pennsylvania California are just in California, and it&rsquo;s been dope.</p>
+            <p id="s440"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=440s" target="_blank" rel="noopener" data-pagefind-ignore>7:20</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:31" data-pagefind-ignore>Maceo</span>Even out in Manchester, I interviewed LCD Alchemist last year, coming here to meet Creative Alchemy, but also looking at who are the African builders, thinking about who are people across the diaspora, whether they&rsquo;re VC, lawyers, founders, software developers, really just trying to better understand what it means to be building in this space, and from what perspectives we can be creating value, and what kind of business opportunities even exist. I feel like for most people, they don&rsquo;t see Web3 as a startup ecosystem, but I think it is one of the most exciting startup ecosystems systems on the planet right now.</p>
+            <p id="s495"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=495s" target="_blank" rel="noopener" data-pagefind-ignore>8:15</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Daniel at 1:09" data-pagefind-ignore>Daniel</span>Okay. Okay. So how is your content being produced, mastered and distributed? How&rsquo;s that journey been? How&rsquo;s the process been?</p>
+            <p id="s502"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=502s" target="_blank" rel="noopener" data-pagefind-ignore>8:22</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:31" data-pagefind-ignore>Maceo</span>So that journey has been treacherous. I mean, to be honest, like people see us as a fake media company because we don&rsquo;t put out videos very often. Yeah. And I respect that take, you know, because I don&rsquo;t edit videos. And I edited my first few podcasts. My mom said, you should get someone to edit these. And I won&rsquo;t make her sound bad. But, you know, the point is, I edited them. And then she told me I should get someone to edit them. And I think it was a thorn in my side forever. So I&rsquo;ve just been looking for people that really care about it. And I&rsquo;d say the magic that came out of being here last year in July was that Superbio, shout out to him, he is super excited about helping us with post-production and really bringing this stuff to life, and so he, Zed, Quadrafa have really been holding it down in terms of post-production on that interview series, and I&rsquo;m excited to continue to work with them to ship content, but really most excited just to showcase what it looks like for us to actually have a media team, who&rsquo;s excited about We Them Media, who&rsquo;s excited about the community, and excited about showcasing who we are, not just them as skilled, skilled editors and skilled content creators.</p>
+            <p id="s508"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=508s" target="_blank" rel="noopener" data-pagefind-ignore>8:28</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:31" data-pagefind-ignore>Maceo</span>But us, you know, as really pioneers in this space, as creatives wondering what our role can be on chain And so I&rsquo;d say it&rsquo;s been incredible to work with them Being in Ethiopia last month, I connected with Yofi He&rsquo;s excited to help us with post-production out there in Ethiopia Aziz, Fedesio, they&rsquo;re both in Kenya, Nairobi, and excited to help with post-production as well And so it&rsquo;s just been beautiful to find people who see the vision on the media side of things And who actually have the skills to help us bring it to life And the excitement about it to actually help us do it with their hard work So, you know, I&rsquo;m excited to, you know, also be alongside them, heads down, putting work in And I think over the next few months, people will see how much content we&rsquo;ve documented How much our team has evolved, and how our vision has evolved as well</p>
+            <p id="s592"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=592s" target="_blank" rel="noopener" data-pagefind-ignore>9:52</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Daniel at 1:09" data-pagefind-ignore>Daniel</span>Okay, you already mentioned people who are supporting you But if people would like to support you, who would like to maybe join the DAO or join the media company Why do you think they should trust you? Why should they jump on this moving train? Why should they support you as you go through this journey?</p>
+            <p id="s606"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=606s" target="_blank" rel="noopener" data-pagefind-ignore>10:06</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:31" data-pagefind-ignore>Maceo</span>Yeah, I mean, I think that the biggest thing is that I&rsquo;m community-minded You know, I&rsquo;m wondering how what I&rsquo;m building can serve you. I think that you are, in my mind, the end customer. You know, how can everyone that I&rsquo;m looking to partner with in the long term be creating value for you is my question. I want We Them Media to feel like a place that, you know, you can safely go and be part of the new internet. And whether that&rsquo;s access to banking products, whether that&rsquo;s access to tools to monetize as a creator, whether that&rsquo;s access to just friends online, you know, I know so many people struggle with loneliness, and we&rsquo;re just here trying to make sure that we have people to learn and grow with all the time.</p>
+            <p id="s606-2"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=606s" target="_blank" rel="noopener" data-pagefind-ignore>10:06</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:31" data-pagefind-ignore>Maceo</span>And I&rsquo;m excited to be creating that space I think this new internet can be an intimidating journey to do on your own And we&rsquo;re just trying to make sure nobody has to do it that way</p>
+            <p id="s646"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=646s" target="_blank" rel="noopener" data-pagefind-ignore>10:46</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Daniel at 1:09" data-pagefind-ignore>Daniel</span>Okay, speaking of people who are joining and supporting you I know you&rsquo;ve mentioned a little bit about them But I think in private conversations you&rsquo;ve mentioned some other people Would you like to send shoutouts to them? People who have been supporting your journey And community partners that we&rsquo;ve had in the past Like you want to send shoutouts to them now?</p>
+            <p id="s661"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=661s" target="_blank" rel="noopener" data-pagefind-ignore>11:01</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:31" data-pagefind-ignore>Maceo</span>Yeah, I mean, huge shoutout Of course, like I mentioned earlier, to see why Huge shoutout to Creative Alchemy for really being like, really the core community of my community, you know, I&rsquo;m really here thinking a lot about how can We Them Media be an organization that serves creative, like creative communities and partners like Creative Alchemy, because I want people to be invested in the work that we create in the output, and I want them to feel like they can get paid to contribute to making it meaningful. And so I&rsquo;m excited to be in this experiment with them. Huge shout out to 40 Acres DAO, the black community in the US thinking about the future of Web3.</p>
+            <p id="s665"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=665s" target="_blank" rel="noopener" data-pagefind-ignore>11:05</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:31" data-pagefind-ignore>Maceo</span>Huge shout out to Friends with Benefits for getting me this camera, for getting me this tripod. Huge shout out to CY, for all the additional stuff, you know, that&rsquo;s come with being part of this journey, all the insight, you know, I think shout out to people who gave us money last year, Donna and company Asia, you know, when we did the actual creative hangout last year, it&rsquo;s just been an incredible journey. And so many people have helped us get where we are. And I&rsquo;m just excited to be doing it with company and people like yourself who have been showing up inside the community thinking about what the future of it can look like.</p>
+            <p id="s665-2"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=665s" target="_blank" rel="noopener" data-pagefind-ignore>11:05</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:31" data-pagefind-ignore>Maceo</span>So thank you again as well. And I&rsquo;m just super prompt to be, you know, I feel like in this in this next phase of thinking how do we do it together and no longer being Maceo, the guy who does 25% of it by himself.</p>
+            <p id="s730"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=730s" target="_blank" rel="noopener" data-pagefind-ignore>12:10</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Daniel at 1:09" data-pagefind-ignore>Daniel</span>Oh, that makes sense. Thank you guys for listening. Make sure to look out for more of our videos. In the meantime, like, subscribe and follow us on X, Instagram. And that&rsquo;s basically it. Thank you.</p>
+            <p id="s742"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=742s" target="_blank" rel="noopener" data-pagefind-ignore>12:22</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:31" data-pagefind-ignore>Maceo</span>Yeah, thank you. You like that? Mm,</p>
+            <p id="s746"><a class="wt-at" href="https://www.youtube.com/watch?v=jXiGceBy7S0&amp;t=746s" target="_blank" rel="noopener" data-pagefind-ignore>12:26</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Daniel at 1:09" data-pagefind-ignore>Daniel</span>I think it was good.</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+<div id="after-transcript" tabindex="-1"><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from Nigeria.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-nigeria">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="showing-them-the-lights-web3bridge-cohort-12-episode-3-lagos.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/oEfR3iIYbBg-640.jpg" srcset="../stills/oEfR3iIYbBg-320.jpg 320w, ../stills/oEfR3iIYbBg-480.jpg 480w, ../stills/oEfR3iIYbBg-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>8:24</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Ikorodu, Lagos · Web3Bridge Cohort 12</span>
+                    <h3 class="report-title">A front-end developer who wanted to build, not consume.</h3>
+                    
+                </div>
+            </a>
+            <a href="deeper-than-defi-web3bridge-cohort-12-episode-7-lagos.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/oQAxFeYXloc-640.jpg" srcset="../stills/oQAxFeYXloc-320.jpg 320w, ../stills/oQAxFeYXloc-480.jpg 480w, ../stills/oQAxFeYXloc-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:44</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Ikorodu, Lagos · Web3Bridge Cohort 12</span>
+                    <h3 class="report-title">A developer on what smart contracts are for.</h3>
+                    
+                </div>
+            </a>
+            <a href="a-life-through-his-generation-abuja.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="https://i.ytimg.com/vi/Avxp4F3o5TQ/hqdefault.jpg" srcset="https://i.ytimg.com/vi/Avxp4F3o5TQ/mqdefault.jpg 320w, https://i.ytimg.com/vi/Avxp4F3o5TQ/hqdefault.jpg 480w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="480" height="270"><span class="wt-dur"><span class="visually-hidden">Length </span>8:55</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Abuja · Street</span>
+                    <h3 class="report-title">A life told from poverty to laying block.</h3>
+                    
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../places.html#abuja">Everything filmed in Abuja</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

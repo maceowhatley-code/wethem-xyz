@@ -1,0 +1,565 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="PotLock and Funding Public Goods on NEAR, Plug | Brussels">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/onchain/base-36559c5f-17">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://wethem.xyz/onchain/base-36559c5f-17">
+    <meta property="og:image" content="https://wethem.xyz/og-site.png?v=2f44c9ed24">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Street journalism from around the world. Real conversations with real people.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og-site.png?v=2f44c9ed24">
+    <meta name="twitter:image:alt" content="Street journalism from around the world. Real conversations with real people.">
+    <meta property="og:title" content="PotLock and Funding Public Goods on NEAR, Plug | Brussels">
+    <meta property="og:description" content="PotLock and Funding Public Goods on NEAR, Plug | Brussels">
+    <title>PotLock and Funding Public Goods on NEAR, Plug | Brussels</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "PotLock and Funding Public Goods on NEAR, Plug | Brussels",
+  "url": "https://wethem.xyz/onchain/base-36559c5f-17",
+  "image": "https://wethem.xyz/mints/base-36559c5f-17.jpg",
+  "isPartOf": {
+    "@type": "CollectionPage",
+    "name": "ETH CC",
+    "url": "https://wethem.xyz/onchain/c-eth-cc"
+  }
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap oc-piece">
+    <p class="oc-crumb"><a href="../library.html">The library</a> &middot;
+       <span><a href="c-eth-cc.html">Brussels</a></span></p>
+    <h1 class="oc-h1">PotLock and Funding Public Goods on NEAR, Plug | Brussels</h1>
+    <p class="oc-meta">Brussels &middot; minted on Base, a public blockchain,
+       as token #17 of <a href="https://basescan.org/address/0x36559c5ff2fffc5b0fb0e8eb2090f2c1b58db09c" target="_blank" rel="noopener">ETH CC</a> &middot; the file is named MAH04233</p>
+
+    <div class="oc-media">
+        <video class="oc-video" controls preload="none" poster="../mints/base-36559c5f-17.jpg">
+            <source src="https://gateway.pinata.cloud/ipfs/bafybeidykr4ici3am35q4tyiwo3nanox36kmhfz4a7jvyovjjbzl6gng6u" type="video/mp4">
+            <source src="https://ipfs.io/ipfs/bafybeidykr4ici3am35q4tyiwo3nanox36kmhfz4a7jvyovjjbzl6gng6u" type="video/mp4">
+        </video>
+        <p class="oc-fallback">The file is stored on IPFS, a public file network:
+        <a href="https://gateway.pinata.cloud/ipfs/bafybeidykr4ici3am35q4tyiwo3nanox36kmhfz4a7jvyovjjbzl6gng6u" target="_blank" rel="noopener">open the original</a>,
+        or <a href="https://ipfs.io/ipfs/bafybeidykr4ici3am35q4tyiwo3nanox36kmhfz4a7jvyovjjbzl6gng6u" target="_blank" rel="noopener">the same file from another server</a>.</p>
+    </div>
+
+    <p class="oc-do">
+        <a class="oc-a" href="https://basescan.org/address/0x36559c5ff2fffc5b0fb0e8eb2090f2c1b58db09c" target="_blank" rel="noopener">Look it up onchain <span aria-hidden="true">&rarr;</span></a>
+    </p>
+
+    <section class="oc-tx">
+        <h2 class="oc-h2">Transcript</h2>
+        <p class="oc-p"><span class="oc-at">0:00</span> All right. It&#x27;s at a full battery. Yeah, a little bit of jazz in the background. Kind of vibey. I like that, though. I&#x27;m not really mad at that. Trying to protect my camera by throwing that up here. Awesome. Yeah, all my shit&#x27;s wet sitting out here on the rocks. Okay. I don&#x27;t have an umbrella Oh, he&#x27;s not acting like it, whatever I don&#x27;t, let&#x27;s just fucking do this, I&#x27;m ready to go, I&#x27;m not going to lie Are you recording? Yeah, I pressed record already No, hold, put that back on I don&#x27;t, I forgot my one It&#x27;s like, yeah Yeah, so it&#x27;s really cool to hear you talk about, like, the role of minority programs and your journey into this space</p>
+        <p class="oc-p"><span class="oc-at">0:59</span> And you were just speaking a little bit as well about Potluck earlier today to me And I&#x27;m really curious to hear you speak a little bit about what that is If you could break that down right now in brevity for my audience And I know you&#x27;re really big, and even here you&#x27;ve been spending so much time talking about grants funding and those mechanisms What&#x27;s your involvement in that space, and what do you see as, like, why is that space important to you? Yeah, I&#x27;m deep in that space, for sure Should we start off where I cut off with the, you said it was that where I talked about being Catalyst?</p>
+        <p class="oc-p"><span class="oc-at">1:27</span> Sure, sure, you&#x27;re going to jump right back there, yeah Do you remember exactly where you were at? I mean, I was talking about like meeting kind of catalysts through Minority Programmers and then meeting Russ through Bluntdow and it was kind of overlapping and then kind of building and even meeting people at NIR through Bluntdow, so it&#x27;s been a major catalyst of actually helping minorities, building community, those coming together. Minority Programmers&#x27; slogan was Code Culture Community, so it was really an event diagram of everything we&#x27;re doing with coding, culture, and then building that community. So big shout out to the 40 Acres crew. But on the potluck side, we&#x27;re doing some amazing things, a lot of</p>
+        <p class="oc-p"><span class="oc-at">2:03</span> experimentation that&#x27;s never really been happening before. So you had the privilege of seeing a lot of grant operator workshops and even how to DAO. Shout out to Pongkar Banklets for organizing that, where essentially, yeah, someone just fell over there, these street Staying Safe, but yeah, so I&#x27;m building an open funding stack, Potluck is a protocol, it&#x27;s a series of applications, series of contracts that allow anyone to build their own funding mechanisms, and we&#x27;ve recently been building on Nier, we&#x27;re actually the first public goods funding platform on Nier, hundreds of projects have signed up, we&#x27;ve run over six quadratic funding rounds, we have given over a quarter million dollars out through</p>
+        <p class="oc-p"><span class="oc-at">2:50</span> the platform, so it&#x27;s been amazing supporting AI projects, open source builders, and then running kind of more mechanisms outside of direct donations outside of quadratic funding, but now building out pairwise and campaigns, which are their own kind of ways of coordinating capital. Recently, and we&#x27;re actually building more of an AI funding stack, so we&#x27;re talking about the origins of NIR and how it was the AI company, and especially right now, what we&#x27;re aiming to do on the more agentic level of like the agents on the application level is actually taking different parts of the grant funding and the funding workflow in general, limit the overhead, which they usually spend if they give a million dollars out for larger grant programs.</p>
+        <p class="oc-p"><span class="oc-at">3:30</span> They spend around 20% of that just on overhead of managing the grant. So there&#x27;s a lot of money to be saved in the billions of grant funding and ecosystem funding they do in the Web3 space, but also in the traditional sector and in the future venture capital where we can look at, okay, How We Diligence Teams, How We Evaluate The Projects Of A Team, The Technical Architecture, From The Proposals, From The Funding Requests, From The Generation Of A Funding Program, To The Tracking Of Impact, From The Streamlining Of How We Collect Impact, All Different Parts Of The Workflow, And Actually Build This In A No-Code Way Where We Can Develop These Agents And These Flows For Allowing Anyone To Build Their Own Funding Stack Or Their Own Way Of Distributing Funding.</p>
+        <p class="oc-p"><span class="oc-at">4:14</span> And so, actually recently, this past Monday, we dropped the AIPGF program. That&#x27;s the Artificial Intelligent Enabled Public Goods Funding Program. It is a rolling basis direct grant program where we&#x27;re giving up to 20K to projects to actually build. It&#x27;s a better program. They use open source AI to build ways to fund public goods and so basically ways to replace that grant program with AI and kind of limit that overhead and be at the intersection and not just do this on NIR but any chain or any funding workflow and even applying that to venture in the future. So I have a lot of alignment on not only just like the education part through the minority programmers and the culture</p>
+        <p class="oc-p"><span class="oc-at">4:58</span> But then actually building these systems and the whole financial part of allowing things with social impact That build this positive impact at scale to get funded And that&#x27;s primarily what I&#x27;m doing at Pot Lock And the name has a lot to do with that So we have pots, which are pots of money, you know, like in poker, what&#x27;s at the end of a rainbow And we lock it, we build secure contracts and Anyone Can Fork. They&#x27;re all MIT open source licensed and they&#x27;re locked. They&#x27;re secure. But at the same time, a potluck in American culture is a feast where everyone brings something unique. And that&#x27;s everyone brings something to the table. And that&#x27;s how we feel, whether it&#x27;s donors, sponsors, projects, everyone is contributing and everyone is getting a big plate to eat. And whether it is, you know, value exchange or direct funding, most parts in our cases.</p>
+        <p class="oc-p"><span class="oc-at">5:49</span> So that&#x27;s what&#x27;s been building out I learned a lot of these things To how to iterate on the stack from You know, these encounters But yeah, that&#x27;s where most of my focus is at right now And just helping the near ecosystem With public goods funding in general Oh yeah, well I really appreciate you coming on the podcast Do you have any final words you want to share with my audience? Yeah, I mean, if you want to join Blunt Out Become a, you know, community member Become a validator Hit Blunt Out up If you want to get involved in the movement to revolutionize the way that we fund things, or if you&#x27;re a project or a public good in the space and you want to get funded, or if you&#x27;re a builder who&#x27;s building in the intersection of AI and funding, hit me up, I love to fund projects, and if you&#x27;re also in the space learning to wanting to code, want to work on real things, connect with like-minded people and get deeper in the space, I&#x27;m also a resource there.</p>
+        <p class="oc-p"><span class="oc-at">6:43</span> It&#x27;s Klug Rel on Twitter, Farcaster, Lens You can find potluck.org You can go to blundow.org Find me as well Just know, if you see a man with a ski mask on It might not be mean So don&#x27;t approach that immediately But if you hit me up on the internet I&#x27;ll find you, because I&#x27;m good at that Well, I really appreciate you on the podcast And about your journey into this space How you got here What&#x27;s exciting to you I definitely I don&#x27;t know that you actually did share how you got into this space Oh yeah, I didn&#x27;t. I told you that. So how I got into space was, there&#x27;s a lot of different ways. And I think what it means to be space is very different. So how I look like I got ingratiated differently is actually working from the industry 24-7 is a little bit different in the time periods. But I really got into space because, I mean, they call me plug, but homage to my plug, they got me hip.</p>
+        <p class="oc-p"><span class="oc-at">7:38</span> They&#x27;re using this currency, they&#x27;re using internet systems Before it was more PHB, non-script site, escrow-based combination, a plethora of different stacks From private messaging in PGP to TAILS and hardware wallets and local Bitcoins and Ethereum And this whole marketplace of just being able to get stuff on the internet And then arbitrage that and flip that on the streets and use it as peer-to-peer currency And when I saw that around 2016, I already knew it was legit And this time I was kind of studying a lot So this is like understanding crypto, understanding how to interact with the internet We&#x27;re very core to that So this was a lot when Venmo was coming</p>
+        <p class="oc-p"><span class="oc-at">8:20</span> And to me this was a more secure alternative to peer-to-peer currencies And once you have that I can use peer-to-peer currencies implemented on a private stack That it already sells you, you don&#x27;t need this Web3 stuff In fact, being able to enter and exit without any trace and then transact and interact with applications is a far more refined skill set and an airtight skill set than what we have today with these DAFs and all those things now. And so to me, that as a stack, that working in the industry, that was 2016. And that&#x27;s kind of when I find the value of, OK, this is your buddy.</p>
+        <p class="oc-p"><span class="oc-at">8:57</span> It works internationally and you can use it for real things within your own community built system. And so, I&#x27;m a trendsetter If I use this tech stack and I want you to, you know, use it Like, okay, use that or don&#x27;t mess with me And it&#x27;s very easy to get the people around you adopted And you only keep, you know, your circle up to like five people So it&#x27;s very easy to get your whole circle of people you interact with Onto your system if you really, the plug And so, to me, that&#x27;s when I really got hip to it And then there was like, in college, like currency club, cryptocurrency clubs</p>
+        <p class="oc-p"><span class="oc-at">9:30</span> There was people trading, people building, people also in the space of kind of earning alternative coins which are building systems with it like Steam and all this other stuff that we&#x27;re into but then I had all these stuff in centralized exchanges and what happened was that they rugged all the coins there was like after you know EOS and stuff there was like you know there was a crackdown of ICO And a lot of those coins, a lot of those were tokens, tokens of Ethereum, a coin is a native crypto of a blockchain, a token is an asset, built on that blockchain, a lot of those tokens that were represented in centralized exchanges, they rugged me, and I was instead of a forget it kind of guy, I had stuff with my own keys, but I also had stuff on exchanges, but I kind of didn&#x27;t trust, I trusted Ethereum, Bitcoin, Monero, all these things, but I didn&#x27;t trust these tokens, and it made me research less, because of that, so there was a hiatus, where I just like, still used it as money, but didn&#x27;t get involved,</p>
+        <p class="oc-p"><span class="oc-at">10:25</span> I was involved in learning everything because of centralized exchanges but then with the emergence of Ethereum and actually smart contracts in building that business logic blockchain there was DeFi and you know my head DGN officer at BIDOD programmers and then also one of my co-founders who does a lot of blockchain government consulting they actually put me on in two different ways I was going to school now for instance of law for like engineering and so the whole software engineering side of building your own application which is very appealing to me and something I was already in the process of. So first, my head of degen got me hip to Uniswap and the fact that there is decentralized</p>
+        <p class="oc-p"><span class="oc-at">11:05</span> stages. Now these tokens are basically secure through smart contracts and the actual exchanging of it can happen natively and they can&#x27;t rug my coins like they were before. And then the emergence of layer twos which actually allows you to build very fast and It builds a lot of these ways of programming the business logic and a whole kind of startup ecosystem with the last bull At the same time, my suit-to-be co-founder got me hip to the whole idea of building blockchain applications as part of the stack And so this kind of combined with learning about, okay, there&#x27;s a whole new way to build smart contracts</p>
+        <p class="oc-p"><span class="oc-at">11:46</span> Contract, Smart Contract to Gable Applications, and there&#x27;s a new paradigm on how we money that is more than just transactions of Bitcoin and Ethereum and then integrated as a payments layer online, but now the business logic is there. That kind of got me deeper into the one chain to a more performant L1 to then Solana bringing kind of the NFT game out there and then all these other new generation L1 blockchains that is near and just building a whole wide variety of applications and a whole bunch of projects from DAOs, to social, to DeFi, to NFTs, to wallets, to dev tooling, to AI, to like all this intersection</p>
+        <p class="oc-p"><span class="oc-at">12:27</span> actually coming out because of that initial unlock that DeFi and building smart contract applications are a thing. So that was kind of the rabbit hole of how I got into that, like using it as money first, kind of getting in a deep hole, getting rugged by centralized stages, understanding this, building in this space and then kind of educating this space and then continuing to be a founder and building funding mechanisms into particular where I&#x27;m at today. So I really appreciate you walking us through, you know, how you got into this space and what you&#x27;ve been doing. Much love, much love, Mato. Bundt down president coming through to keep me dry.</p>
+        <p class="oc-p"><span class="oc-at">13:02</span> I&#x27;m sitting here posted in the rain. In the rain, I feel like picked up as soon as he gave it to me too. So blessings. They keep falling into my lap, as Chance Rapper said. But yeah, it&#x27;s super phenomenal to have you. PlugRail, Plug the Man, Grandfather of Bluntdow, it&#x27;s awesome to hear your story, it&#x27;s awesome to hear about what you&#x27;ve been working on, we&#x27;re super blessed to have you in the ecosystem, I&#x27;m super blessed to have you in my community, and I&#x27;m excited to continue to watch you and document you on your journey as you continue to look at, you know, how we take this space</p>
+        <p class="oc-p"><span class="oc-at">13:27</span> in new directions that are impact oriented. Do you have any final words for my audience before we kind of close out, let people know where they can find you? Yeah, hit me up, PlugRail everywhere, go to bluntdow.com, bluntdow.org, potluck.org, find Join the telegram, don&#x27;t reach out to every person with a ski mask on That might not be me, but if you reach out on the internet, I will find you I&#x27;ll recognize you, make you feel like a celebrity So hit me up if you&#x27;re trying to get into space Hit me up if you&#x27;re trying to sort of blunt out a chapter Hit me up if you try to build a funding mechanism enabled with AI</p>
+        <p class="oc-p"><span class="oc-at">14:00</span> Hit me up if you&#x27;re a public goods project and need funding or you just want to kick it And yeah, I really love seeing Maceo I&#x27;ve seen them like Denver, South by Southwest, Consensus, Farcad, here We&#x27;ll see you in a bunch of more dope places with the Cubs All over the world, no questions about it Alright Appreciate you Thank you all for listening I like to end my episodes by saying booyahs We&#x27;re going to hit them with a 3-2-1 Booyah, we&#x27;re going to get out of the rain But much love to everybody listening Thank you so much for supporting me by showing up here Being interested, you know, you&#x27;re pushing the community in a new direction</p>
+        <p class="oc-p"><span class="oc-at">14:32</span> Just by being interested So if you&#x27;re listening to this and you&#x27;re just here to learn Kudos to you It is real work to be learning this stuff And nobody&#x27;s going to pay you until they start paying you, honestly So, yeah, thank you for being here with us And have a phenomenal rest of your day From us here at ETHC Brussels This is the final night I leave tomorrow morning to go to Switzerland And then I&#x27;m out to Nigeria next week So, the adventure continues Peace out, everybody Booyah Booyah There it is Jesus Okay, but now that was recording still</p>
+    </section>
+
+    <p class="oc-note">This piece was never on YouTube. It was published straight to a public blockchain in the days it was shot, so it does not depend on any platform. The words above are the transcript of the tape, made the same way as the rest of the archive and not corrected by anyone.</p>
+</article>
+
+<div class="wrap wtm-share"></div>
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+
+<aside aria-label="Newsletter"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" class="wtm-newsletter-pill" aria-label="The We Them Weekly, once a week by email: what went up and what we are asking next">The We Them Weekly, once a week by email <span class="wtm-newsletter-pill-arrow">&rarr;</span></a></aside>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+
+<script src="../collect.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js', '../newsletter-pill.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

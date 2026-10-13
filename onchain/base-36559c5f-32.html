@@ -1,0 +1,583 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="ethsafari">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/onchain/base-36559c5f-32">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://wethem.xyz/onchain/base-36559c5f-32">
+    <meta property="og:image" content="https://wethem.xyz/og-site.png?v=2f44c9ed24">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Street journalism from around the world. Real conversations with real people.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og-site.png?v=2f44c9ed24">
+    <meta name="twitter:image:alt" content="Street journalism from around the world. Real conversations with real people.">
+    <meta property="og:title" content="ethsafari · We Them Media">
+    <meta property="og:description" content="ethsafari">
+    <title>ethsafari · We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "ethsafari",
+  "url": "https://wethem.xyz/onchain/base-36559c5f-32",
+  "image": "https://wethem.xyz/mints/base-36559c5f-32.jpg",
+  "isPartOf": {
+    "@type": "CollectionPage",
+    "name": "ETH CC",
+    "url": "https://wethem.xyz/onchain/c-eth-cc"
+  }
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap oc-piece">
+    <p class="oc-crumb"><a href="../library.html">The library</a> &middot;
+       <span><a href="c-eth-cc.html">Brussels</a></span></p>
+    <h1 class="oc-h1">ethsafari</h1>
+    <p class="oc-meta">Brussels &middot; minted on Base, a public blockchain,
+       as token #32 of <a href="https://basescan.org/address/0x36559c5ff2fffc5b0fb0e8eb2090f2c1b58db09c" target="_blank" rel="noopener">ETH CC</a></p>
+
+    <div class="oc-media">
+        <video class="oc-video" controls preload="none" poster="../mints/base-36559c5f-32.jpg">
+            <source src="https://gateway.pinata.cloud/ipfs/bafybeiadusg3hxzqfi5hpfkmcecatkbm6qcmai6gyb5iypnk7shu72hdla" type="video/mp4">
+            <source src="https://ipfs.io/ipfs/bafybeiadusg3hxzqfi5hpfkmcecatkbm6qcmai6gyb5iypnk7shu72hdla" type="video/mp4">
+        </video>
+        <p class="oc-fallback">The file is stored on IPFS, a public file network:
+        <a href="https://gateway.pinata.cloud/ipfs/bafybeiadusg3hxzqfi5hpfkmcecatkbm6qcmai6gyb5iypnk7shu72hdla" target="_blank" rel="noopener">open the original</a>,
+        or <a href="https://ipfs.io/ipfs/bafybeiadusg3hxzqfi5hpfkmcecatkbm6qcmai6gyb5iypnk7shu72hdla" target="_blank" rel="noopener">the same file from another server</a>.</p>
+    </div>
+
+    <p class="oc-do">
+        <a class="oc-a oc-zora" href="https://zora.co/collect/base:0x36559c5ff2fffc5b0fb0e8eb2090f2c1b58db09c/32" target="_blank" rel="noopener">Collect on Zora <span aria-hidden="true">&rarr;</span></a>
+        <a class="oc-a" href="https://basescan.org/address/0x36559c5ff2fffc5b0fb0e8eb2090f2c1b58db09c" target="_blank" rel="noopener">Look it up onchain <span aria-hidden="true">&rarr;</span></a>
+    </p>
+
+    <section class="oc-tx">
+        <h2 class="oc-h2">Transcript</h2>
+        <p class="oc-p"><span class="oc-at">0:02</span> Booyah. So, I press record on both already. Oh, nice. It&#x27;s my podcast called We Them Niggas. I don&#x27;t know if I told you that. We Them Niggas? It&#x27;s my podcast. I love it. Booyah. I was like, I hope she&#x27;s not concerned about that. No, no, not concerned at all. And so essentially, I&#x27;m really interested in asking you how you got into this space, what you&#x27;re doing now, where this vision for Eat Safari came from, what are some of the challenges you&#x27;re facing as you can bring Eat Safari to life, and what are some of the other projects you&#x27;ve worked on through your journey and worked through.</p>
+        <p class="oc-p"><span class="oc-at">0:34</span> And then really, if anything else, is there anything else fascinating to you in this space right now, like you&#x27;re at the Region Village? So I&#x27;d say those are kind of like the general questions, but I&#x27;ll kind of jump in, like saying hello, where we are at the regional village here at ECC, and let you introduce yourself Do I have food on my face? Mm-mm, mm-mm, is my Vaseline well-distributed? Yeah Gotta check Yeah, I was like, running around my room looking for my lotion, and I was like, I can&#x27;t look ashy, I did, and it was Manchester, and my elbows were so ashy, I felt like, I saw them</p>
+        <p class="oc-p"><span class="oc-at">1:04</span> and loved it But only we them niggas could understand Yeah, but I was like, it&#x27;s alright, I&#x27;ll be fine, but I was thinking, I was feeling self-conscious, but yeah, and then I&#x27;ll ask you where we are, I&#x27;ll ask you how you came to be at the Region Village, how you&#x27;ve been finding me Cool And then from there we&#x27;ll go, have you done other interviews? Kinda, yeah I like that, hydrating Yeah Alright everyone, welcome to another episode of We The Niggas, today we&#x27;re at ECC at the Region Village here in Brussels, I&#x27;m here with Coco Welcome Coco Hi, thank you for having me Yeah, absolutely How are you finding ETC so far?</p>
+        <p class="oc-p"><span class="oc-at">1:48</span> How are you finding the region village? Amazing, I pinch myself all the time I&#x27;m like, I&#x27;m actually in Brussels, like I&#x27;m here It&#x27;s nice to be, this is my first ETC Nice It&#x27;s my first time in Europe and my first time at ETC And I&#x27;m like, I&#x27;m like, I&#x27;m like, I&#x27;m like, I&#x27;m going to get up From a We Them Niggas podcast in a foreign country And another continent Yeah, yeah, sometimes those moments are surreal Like, wow, all these palaces All these old buildings, like, I&#x27;m like, this cathedral is from 1200, I&#x27;m like, predates everything in America, it&#x27;s pretty wild I would say, but, how have you found the Regent Village so far? I know this was right about you here yesterday as a volunteer myself, how did you find your way here?</p>
+        <p class="oc-p"><span class="oc-at">2:27</span> It actually starts with my origin story, but I discovered the Regent Village through a community called Kernel I&#x27;m also Kernel, actually Wow, really? Okay, which block? I think block 7, block 8, but it was like January I did it Oh, nice, I was in KB5 And funny enough, yesterday I went to dinner and I met someone who was also in my block and I had never met So it&#x27;s like these kernel ties, the web of Web 3, you know, coming into fruition I see, and so those kernel parties are getting into Web 3, how did you end up in this space? Yes, so I guess a little context, I studied neuroscience in my undergrad</p>
+        <p class="oc-p"><span class="oc-at">3:10</span> And I was just really interested in mental health And I realized early on I didn&#x27;t really like research I worked at a hospital for many years It was kind of like figuring things out And I got a job at a neurotech startup It was based in Toronto I grew up in Canada And I moved to Toronto And I started just going to events And as you know, Toronto is a really big crypto hub Mainly because Vitalik went to Eat Waterloo So Toronto is just like a very big Web3 hub in Canada I mean, I really didn&#x27;t know that to be honest Oh really? Okay, so like ETH Waterloo, it was the first hackathon that ETH Global did</p>
+        <p class="oc-p"><span class="oc-at">3:59</span> Like almost six years ago, seven years ago, I don&#x27;t remember the exact dates but it&#x27;s been quite a while And actually, funny enough, Colonel was almost born at ETH Waterloo like some of the early conversations of Kernel was actually at the first ETH Waterloo so it&#x27;s like origin stories of a lot of things here yeah and so I started yeah going to these events and I really I knew about Bitcoin I knew about Ethereum but I just I was like this is not for me these are finance bros how do you know about it like I feel like I never heard of Ethereum until like two years ago oh really um I feel like I heard of Bitcoin I&#x27;m like oh dark web</p>
+        <p class="oc-p"><span class="oc-at">4:41</span> Yeah, I think I heard about Bitcoin, obviously I heard about Bitcoin first, I didn&#x27;t quite understand it, I had a family member who was really into it and just bought some Bitcoin and I was like, again, finance, not related to me, I&#x27;m studying neuroscience, I have a And I met someone at an event who really, like, and physically actually shook me until I, you know, he really made me believe that Web3 is the future. And kept shaking me until I, until I gave it a shot and told me about Colonel. And yeah, and said, do this fellowship, it&#x27;ll be good for you. I didn&#x27;t know what to expect. I, you know, again, I felt so separated from</p>
+        <p class="oc-p"><span class="oc-at">5:33</span> from this world. And I said, why not? I&#x27;ll give it a shot. And yeah, I accepted his offer to join Colonel. And it&#x27;s definitely the thing that changed my life. Wow. Yes. I tell Vivek and the Colonel stewards this all the time. But another important part of the story is that I was born in Eritrea, which is a small country in East Africa. Whenever I tell people I&#x27;m from Eritrea, they usually say, what&#x27;s that? Or where is that? And I&#x27;m usually the first Eritrean person that someone has met. But Eritrea is a new country. It&#x27;s only 33 years old, kind of. It got its independence in 1991 after a 30-year-long war with Ethiopia. And why I say this is because Eritrea has had one president in power for the past 33 years.</p>
+        <p class="oc-p"><span class="oc-at">6:31</span> So there&#x27;s never been an election, there&#x27;s no democracy, everything is censored, everyone is forced to go to the military, there&#x27;s no internet, there&#x27;s only internet cafes that are controlled and monitored by the government, and so there&#x27;s no democracy. And really early on, some of the initial conversations that I was having at Kernel, and the beautiful And the most important part about kernel, maybe for people that don&#x27;t know, is that the whole basis is to have circle conversations, right? Like, your block was just like, do the reading, have these kernel combos. Yeah, a lot about discourse. Yes, exactly. And really early on, I started to understand how Ethereum could be a tool, a freedom tool, for a country like mine that suffers from dictatorship.</p>
+        <p class="oc-p"><span class="oc-at">7:32</span> I think that was the only one that was concerning me for a moment. But you say dictatorship. I&#x27;ve actually heard of Eritrea. But I wasn&#x27;t clear that Eritrea was a separate country that had gained its independence. I feel like in my mind it was like a region within Ethiopia, that that was controversial. Yeah, that&#x27;s a part of the story, which is, you know, Eritrea was colonized by seven different empires. So like the Ottoman Empire, the Egyptians, Italians were in Eritrea for a long time, the British. and so when the British left they gave Eritrea as a federal state of Ethiopia and so we belonged to Ethiopia for a long time</p>
+        <p class="oc-p"><span class="oc-at">8:12</span> until about the 1960s when the 30 year long war had begun, right? So you&#x27;re not wrong, right? Like we were a federal state of Ethiopia but then we became independent in 1991. Awesome. And how long were you living in Eritrea? Did you say you were born there? Yes, I was born there, but I moved when I was really young, so I was almost five. Yes. And I have been back a couple times, and my memories are vivid more as an adult going back than when I was a kid. And when was the last time that you were there? 2018. Okay. Yes. And that was before you got into Web3, I assume?</p>
+        <p class="oc-p"><span class="oc-at">8:55</span> Yes, yes. Before I got into Web3, what was I doing in 2018? You worked at the hospital? Yeah, yeah, yeah. I was in university, working at the hospital, and had this path of, like, you know, science and medicine, and that&#x27;s the answer, until I realized, oh, I don&#x27;t like this path. What do you feel like, you said you had an interest in mental health when you were kind of on that path. How do you feel like that, like, I guess, concern, interest translated into, like, the work that you do now? Wow, so I just came from a meditation in the meditation room that we have here at the Regen Village</p>
+        <p class="oc-p"><span class="oc-at">9:29</span> and it actually realigned me to that thing which is I have conviction that if we were to be intentional in spaces like these and guide people through meditation and in different forms whether it&#x27;s through music or guided meditation I believe we live in a more loving world, right, which is people more connected to themselves I notice a huge difference in my mental health when I am able to meditate versus when I&#x27;m just in a rush and kind of doing many things We&#x27;re sitting down so the sensor doesn&#x27;t notice us Oh, I appreciate you knowing how it works because I was like, yeah, you&#x27;re looking for the button</p>
+        <p class="oc-p"><span class="oc-at">10:15</span> It&#x27;ll be a nice podcast That&#x27;s fun That makes sense, that makes sense I think that&#x27;s cool. I definitely agree. I also studied psychology and philosophy at undergrad, and I would say mental health is something I&#x27;m very passionate about. I was primarily intending to go into grad school for social work after undergrad. I feel like that was the most likely thing. Public administration seemed interesting, but I thought it would be cool to be a counselor, which is why I took up the study in the first place. But I also wanted to make music, and I was like, well, maybe I&#x27;ll go into the music industry And so I was like, I guess crypto journalism?</p>
+        <p class="oc-p"><span class="oc-at">10:48</span> I thought it was very, like, two tangents off of, you know, my interest in mental health Yeah, I think that there&#x27;s a space in crypto for everyone, right? Because it&#x27;s the new web, like, that&#x27;s really all it is The new web is the old web plus, plus, you know? So, and I think that&#x27;s something that I didn&#x27;t understand before Kernel, right? Before Kernel, I was like, this is for finance bros I&#x27;m not a finance bro, especially because in the Toronto startup ecosystem it&#x27;s very much Finance bro? Yeah It&#x27;s like, what&#x27;s another word for that? No, there&#x27;s no other word It&#x27;s like the, like mini New York, right? Mini Wall Street</p>
+        <p class="oc-p"><span class="oc-at">11:27</span> So I think after participating in Kernel, and as you know, during Kernel you&#x27;re supposed to have a Kernel project Yeah, I was going to ask what your Kernel venture or project was Yeah, so I couldn&#x27;t think of a project. I just knew that I loved Ethereum and I wanted to learn more about Ethereum. And I knew that I care deeply about Eritrea. And I couldn&#x27;t figure out those missing pieces. And I&#x27;m still in the process of like, what does that mean? Because when you don&#x27;t have a lot of freedom in a country, it&#x27;s like, or you don&#x27;t even have internet, like, what are you supposed to do?</p>
+        <p class="oc-p"><span class="oc-at">12:09</span> Yes, but I met a woman who had done the previous block and was redoing block 5 and she had done regenerative work in Ethiopia for like the past 25 years and the first moment that I heard her speak I was in awe and because she lived in Ethiopia and Ethiopia and Eritrea have very similar culture we connected instantly and I remember actually we would we&#x27;d send each other voice notes through slack and they started becoming like 10 minute long voice notes of discourse and I yeah I just really wanted to help her in her project she was working with another fellow to create a music NFT in order to plant trees in the coast of Kenya and so the whole model was that an artist</p>
+        <p class="oc-p"><span class="oc-at">13:09</span> like yourself goes into nature. They get inspired by nature and they create music based on that. They create an NFT. That NFT gets sold, plants more trees, then more artists come and then it&#x27;s like a flywheel, right? So it still exists today. You can get this NFT. What&#x27;s it called? What&#x27;s it called? Ether Earth Art. I&#x27;m gonna look it up. Ether Earth Art. That is it. Yes. If it all goes well, it&#x27;ll be like right here when I hold it. Yes. That&#x27;s editing. Yes. And what was her name? Sister T. Sister T. Yeah. Sister T. Yeah. I just call her Sister T. That&#x27;s so cool. And so have you two been able to partner up and do things like besides that music and Etsy since then or like that project, Ether Earth Art?</p>
+        <p class="oc-p"><span class="oc-at">14:09</span> Yes. Good memory. Even I had trouble. So imagine in my kernel project, instead of doing, we combined forces and we raised a whole bunch of money through the Gitcoin grant in order to do this tree planting. So we raised almost $10,000 in crypto in order to do tree planting And so she was so excited that she invited me to Lamu Island to do the tree planting with her and her family That&#x27;s awesome, that&#x27;s on the coast of Ethiopia Coast of Kenya Coast of Kenya Coast of Kenya And so I, so she invited me over and I said sure and I spent a month with her and her family traveling through the coast, visiting indigenous tree nurseries.</p>
+        <p class="oc-p"><span class="oc-at">14:56</span> That&#x27;s crazy. Yes, and then going to Lamu and actually seeing and planting trees, you know. And the thing that actually interested me the most in this entire process was the governance of it all. Because there was a piece of land on the coast of Kenya, on the island. it&#x27;s government-owned, and so how do you decide who gets access to this piece of land? It&#x27;s a public good, right? How do you maintain whatever goes on this public good? How do you make decisions about what goes on there? Who do you have to speak to? Who are the stakeholders? Builders, and I got really fascinated by this whole decision-making process around public goods.</p>
+        <p class="oc-p"><span class="oc-at">15:43</span> And so I came for the tree planting, but then I realized, oh, this is just another topic that&#x27;s so fascinating. And that&#x27;s when I kind of started doing more governance research and participating more in governance. And so to me, Sister T is my sole sister. Since then, we&#x27;ve just been communicating about So she has other projects And I&#x27;ve been contributing to those other projects as well But she always is looking for more technical help So if you see this in your technical You want to visit Langlo Island one day I could definitely connect you to her She does really amazing work But yeah, that&#x27;s really how it started</p>
+        <p class="oc-p"><span class="oc-at">16:32</span> It was like not knowing a thing, joining Colonel, meeting Sister T, going to Kenya And then when I was in Kenya, that&#x27;s actually how I met others that wanted to do the first ETH Safari And I was like, how can I help? And I don&#x27;t know to this day how I got added into a group chat I can&#x27;t figure it out, but it was the initial ETH Safari telegram group And I just started participating and contributing where I can And now, fast forward two and a half years later, I lead the hackathon of ETH Safari Do you want to explain what ETH Safari is? Yes, so ETH Safari is the largest Web3 event on the continent</p>
+        <p class="oc-p"><span class="oc-at">17:18</span> It&#x27;s an Ethereum-focused hackathon and conference It&#x27;s been based in Kenya for the past two years So what we do is we actually start in Nairobi, the capital of Kenya And that&#x27;s where the hackathon is held And then after the hackathon, we get all attendees to go on the block train Which is our made-up name for the train And we journey to the coast of Kenya To a place called Kalifi And the Swahili word for safari Like safari translates to journey in Swahili And so the whole concept behind Eat Safari is to actually go on a journey, right? And if you&#x27;re lucky, you get to actually have a safari experience</p>
+        <p class="oc-p"><span class="oc-at">18:11</span> Because you get to see the zebras, giraffes, elephants, and other animals with all the conference attendees And so it&#x27;s like, imagine a train full of people, people hacking, people networking, people playing games And so that&#x27;s like an integral part of the ETH Safari experience It&#x27;s that journey And like you&#x27;re saying, it&#x27;s a hackathon How was the event last year? It was really good We&#x27;re always looking to improve We had about 287 hackers Over 80 projects Over 25k in bounties So I&#x27;m giving you the hackathon reports because that&#x27;s on my end But overall, I actually met someone at the Regen Village just two days ago And we actually did a meditation together this morning</p>
+        <p class="oc-p"><span class="oc-at">19:08</span> That attended Eat Safari last year And he said it changed his life And so hearing that, and I&#x27;ve never met him in real life But hearing that and being like, wow, this event that I&#x27;m participating in in executing, change someone&#x27;s life, like, pinch me again. Yeah, that&#x27;s for real. Yeah, and like meeting them here in Brussels and them knowing about it. And so even, you know, you asked a little bit earlier about some of the challenges about organizing an event in that part of the world. It&#x27;s far for a lot of people. It&#x27;s far for a lot of the, you know, crypto community. I don&#x27;t think it&#x27;s that far.</p>
+        <p class="oc-p"><span class="oc-at">19:49</span> Like, I&#x27;m in Brussels right now.</p>
+        <p class="oc-p"><span class="oc-at">19:52</span> But it&#x27;s, it&#x27;s, people have this, these misconceptions that like, Africa is dangerous. I&#x27;m like, I&#x27;m a part of Shifa and that women, you know, that women in crypto kind of community. And a lot of the times they ask me, like, do you feel safe traveling to Africa by yourself as a woman? I&#x27;m like, yes, I feel safer than traveling by myself to America as a woman. You know, it&#x27;s the same thing in my mind, right? And so a lot of people have these misconceptions about Africa, and I think that until you go and experience it, you&#x27;ll never understand the magic that&#x27;s there That&#x27;s awesome, and how can people support EatSafari now? What are things that y&#x27;all can be supported with moving forward?</p>
+        <p class="oc-p"><span class="oc-at">20:41</span> You speak to the challenges of getting people there, but I guess on the ground, people that are showing up, what are some of the challenges you&#x27;re facing and supporting them? yeah so one success metric that I really loved last year was we had both international and local volunteers and I think that was like really really great to see because there was this opportunity for a volunteer team to be diverse and get to know one another and you know you really get to know someone when you have to like perform a task together that and you don&#x27;t know them and you you&#x27;re just meeting them for the first time and all of a sudden you have to manage a stage</p>
+        <p class="oc-p"><span class="oc-at">21:22</span> together, right? It&#x27;s like you get to know each other really fast. So I think that for anyone that&#x27;s listening, check it out, like eatsafari.xyz, see if it&#x27;s something that you can attend maybe now, maybe in the future. And then the second thing is when you, you know, when you do come, consider volunteering. I think that&#x27;s like the best way. Like that&#x27;s how we met. And I love volunteering because I think it&#x27;s the best way to meet people, to contribute, and to feel like a part of community And then lastly, we are a developer-focused community, it&#x27;s a hackathon conference, like end conference And so, you know, it&#x27;s, you know, apply to speak, right? Apply to mentor, apply to have a workshop. Like, do you have a technical skill? Can you share that with the community? Um, there&#x27;s just ample opportunity and Eat Safari is like an open playground and we&#x27;re more than happy to, um, have those experiments.</p>
+        <p class="oc-p"><span class="oc-at">22:33</span> Can you explain what a hackathon is from a heart? Yes, so a hackathon is a timeline challenge, so in this case we have three days where we incentivize developers to build solutions using EVM, using anything in the EVM. I appreciate you saying that. Of course. Yeah, so there&#x27;s, a hackathon is basically challenges, developers, and let&#x27;s see what you can, like a prototype that you can develop in the shortest amount of time possible. I feel like I didn&#x27;t explain that well, but yeah. I did a really good job with a science fair for troubleshooting technical problems that developers can address and trying to do it as rapidly as possible and then judging them.</p>
+        <p class="oc-p"><span class="oc-at">23:25</span> That&#x27;s exactly it, better words I think you did a great job, but I do appreciate you breaking it down And I know earlier you also mentioned Gitcoin, I love if you could share kind of about your experience with Gitcoin and kind of what that is for people as well Quadratic land Quadratic land Yes, yeah, so I think, yeah, I&#x27;ll start with my experience I guess with Gitcoin So the first experience was through Kernel and through the Kernel Project And since then I kind of started getting interested in what are the different ways that we can operate our own round And so I&#x27;ve been fortunate enough to have the Gitcoin team support me personally in operating rounds</p>
+        <p class="oc-p"><span class="oc-at">24:11</span> That&#x27;s so cool Yeah, so you can operate a round on Gitcoin So what we did is we asked different funders for the matching pool So maybe a little bit of context Gitcoin is a funding platform. It helps projects fund their projects using crypto, using a special equation called quadratic funding, and it&#x27;s an equation that essentially helps projects get funded not by the money that they&#x27;re able to raise, but the number of unique contributions and then that gets plugged into you know that quadratic formula and gets matched by this matching pool right so it&#x27;s like imagine a matching pool let&#x27;s just say of ten thousand dollars and let&#x27;s just say I have a project and I&#x27;m able to get ten people to contribute to my project okay well every single time that I get another unique contributor to contribute to my project</p>
+        <p class="oc-p"><span class="oc-at">25:19</span> I get more of this matching pool. It was coined by Vitalik and a couple other contributors very early on and then the Gitcoin team kind of came together to actually build that platform that was the early research of quadratic funding. That makes sense. It kind of formalized this method of fundraising. Exactly. So it&#x27;s like democratic funding. What do people want to see? What are the most exciting projects. Well, you can measure that by how many people say, how many people buy into that project, right? I will say like by managing a couple rounds now, I am on the, I am kind of on like the hypothesis for me is that it&#x27;s like Gitcoin is one form of funding</p>
+        <p class="oc-p"><span class="oc-at">26:12</span> and it can&#x27;t be the only form of funding because it doesn&#x27;t apply and it&#x27;s not the best form of Funding in Certain Use Cases because, for example, when you have a hackathon and you have all these projects, sometimes they&#x27;re not able to get their own funding, right? Like they&#x27;re not able to get their own unique contributions and that&#x27;s not the best way to fund them, right? And it becomes more about a marketing tactic more than is your project valuable, right? Like, do you know the most people in crypto that have a wallet, that have a high passport score? And so I love Gitcoin as a platform and I think it&#x27;s a really amazing tool.</p>
+        <p class="oc-p"><span class="oc-at">27:00</span> Like, I&#x27;m literally repping quadratic lands right now. But I think that when you&#x27;re thinking about what you want to fund You have to think really thoroughly about what&#x27;s that use case What&#x27;s that end goal, what are some of the challenges And then see, is Gitcoin the best tool, what are the other tools Because there&#x27;s one vote, one dollar, that&#x27;s another one That also doesn&#x27;t work all the time So yeah, so just exploring the different funding mechanisms, but definitely Gitcoin is a really great option No, I appreciate you breaking it down, I realize when you mentioned it earlier, some people might not be familiar I&#x27;m familiar, but I feel like Bitcoin is at a token, just like wanting to give people the clarity</p>
+        <p class="oc-p"><span class="oc-at">27:47</span> And I think it is really cool if you were saying that it&#x27;s like a democratic mechanism, right? It&#x27;s like, as opposed to someone gives you, you know, a million dollars or $100,000 to do your thing It&#x27;s like, sure, they can still do that, but it&#x27;s more important that these people are demonstrating, that they care about what you&#x27;re doing and that it matters to them, and that it&#x27;s creating value that they recognize, such that they want to donate. And so I think it&#x27;s cool that you&#x27;re able to, I guess, reinforce that value by participating, and it kind of incentivizes participation as well from different people, such that, because they know their voice is going to be amplified, the value they provide is going to be amplified. Exactly. So get your passport score up. Yeah. And get ready to participate.</p>
+        <p class="oc-p"><span class="oc-at">28:22</span> And something that we&#x27;re really, really focused on with the Eat Safari Hackathon is longevity, like longevity of projects. We know that when you participate in hackathons, the majority of projects, they press submit, and then they never touch that code base again. They never touch that project again. And that&#x27;s okay, you know, like not all projects are meant to be continued. But we&#x27;re really, really curious how we can incentivize more projects to continue building post-hackathon And so this year, it&#x27;s actually the first year that we&#x27;re doing this But we&#x27;re allowing existing projects to come in to the hackathon So typically with an ETH Global Hackathon, you must start with fresh code</p>
+        <p class="oc-p"><span class="oc-at">29:14</span> Like if, you know, the hackathon starts tomorrow You can&#x27;t start any ideation beforehand You must do it in the weekend period People still think of that for sure, but yeah Of course, yes But, yeah, we wanted to change that We wanted to say, you know, come in with your existing projects You must, in the time frame of the hackathon You know, have frequent commits And show significant progress But we want you to come in with your existing projects and solve real-world problems, right?</p>
+    </section>
+
+    <p class="oc-note">This piece was never on YouTube. It was published straight to a public blockchain in the days it was shot, so it does not depend on any platform. The words above are the transcript of the tape, made the same way as the rest of the archive and not corrected by anyone.</p>
+</article>
+
+<div class="wrap wtm-share"></div>
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+
+<aside aria-label="Newsletter"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" class="wtm-newsletter-pill" aria-label="The We Them Weekly, once a week by email: what went up and what we are asking next">The We Them Weekly, once a week by email <span class="wtm-newsletter-pill-arrow">&rarr;</span></a></aside>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+
+<script src="../collect.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js', '../newsletter-pill.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

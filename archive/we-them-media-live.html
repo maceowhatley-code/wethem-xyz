@@ -1,0 +1,825 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Hi, good evening. Good evening everyone. Um, what have you been up to?">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/archive/we-them-media-live">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="We Them Media Live">
+    <meta property="og:description" content="Hi, good evening. Good evening everyone. Um, what have you been up to?">
+    <meta property="og:url" content="https://wethem.xyz/archive/we-them-media-live">
+    <meta property="og:image" content="https://i.ytimg.com/vi/gANcPZ7dK_o/maxresdefault.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://i.ytimg.com/vi/gANcPZ7dK_o/maxresdefault.jpg">
+    <title>We Them Media Live · We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "We Them Media Live",
+  "description": "Hi, good evening. Good evening everyone. Um, what have you been up to?",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/gANcPZ7dK_o/maxresdefault.jpg"
+  ],
+  "uploadDate": "2025-10-09",
+  "duration": "PT1H11M30S",
+  "embedUrl": "https://www.youtube.com/embed/gANcPZ7dK_o",
+  "url": "https://wethem.xyz/archive/we-them-media-live",
+  "publisher": {
+    "@type": "Organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  }
+}
+    </script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://wethem.xyz"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "The archive",
+   "item": "https://wethem.xyz/archive/index"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "We Them Media Live"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="index.html">The archive</a></li>
+            <li aria-current="page">We Them Media Live</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k]" data-pagefind-filter="kind[data-pf-kind]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="archive" data-pf-date="2025-10-09" data-pf-vid="gANcPZ7dK_o" data-pf-k="{&quot;l&quot;:&quot;1:11:30&quot;}">We Them Media Live</h1>
+
+    <p class="wt-byline">From the archive &middot; published <time datetime="2025-10-09">2025-10-09</time></p>
+
+    <div class="wt-frame">
+        <lite-yt videoid="gANcPZ7dK_o" title="We Them Media Live" postersrcset="https://i.ytimg.com/vi/gANcPZ7dK_o/mqdefault.jpg 320w, https://i.ytimg.com/vi/gANcPZ7dK_o/hqdefault.jpg 480w"><img class="lite-yt-fallback" src="https://i.ytimg.com/vi/gANcPZ7dK_o/mqdefault.jpg" srcset="https://i.ytimg.com/vi/gANcPZ7dK_o/mqdefault.jpg 320w, https://i.ytimg.com/vi/gANcPZ7dK_o/hqdefault.jpg 480w" alt="" loading="lazy" decoding="async"></lite-yt>
+    </div>
+
+    <div class="wt-prose">
+        <p>This is an archive entry: the video and its full transcript, published so
+        the words can be read, searched and quoted. It is not a written piece.
+        </p>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Who speaks, by their own introduction on the tape: <a href="../guests.html#g-winnie" data-pagefind-filter="person">Winnie</a> at <a class="wt-at" data-seek="736" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=736s" target="_blank" rel="noopener" data-pagefind-ignore>12:16</a>, <a href="../guests.html#g-zol" data-pagefind-filter="person">Zol</a> at <a class="wt-at" data-seek="771" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=771s" target="_blank" rel="noopener" data-pagefind-ignore>12:51</a>, <a href="../guests.html#g-gaddafi" data-pagefind-filter="person">Gaddafi</a> at <a class="wt-at" data-seek="4024" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=4024s" target="_blank" rel="noopener" data-pagefind-ignore>67:04</a>. Transcribed from the original audio and corrected for names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>So she reached out and wanted to pick my brain and just, uh, figure out how my approach has been to like creating Unchained and, and what that has looked like on my end. So it was a really interesting discussion with her. Um, what else? I&rsquo;ve also been actually looking into some of these protocols and claiming like my -- I realized I have a lot of unclaimed Unchained badges and whatnot. So, I&rsquo;ve been claiming and yeah, just doing research basically. And, um, yeah, all prepped up for this week&rsquo;s Spaces as well. I&rsquo;m going to be having this guy Clement from the co-founder of NowStar Africa actually, who&rsquo;s heavily into, um, seed propagation in Kenya. Um, I&rsquo;m very excited to pick his brains this Friday and just have a conversation around what it&rsquo;s been like for him, you know, building on-chain, building an on-chain community, running a <a class="wt-gloss" href="../glossary.html#dao">DAO</a>, and also, um, growing plants. Uh, but yeah, that&rsquo;s pretty much what I&rsquo;ve been up to so far. Uh, pass the mic now to Gift Angel. What&rsquo;s up, Gift? How are you doing?</p>
+            <p id="s78"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=78s" target="_blank" rel="noopener" data-pagefind-ignore>1:18</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Hi, good evening. Good evening everyone. Um, what have you been up to? I&rsquo;ve not really been up to much, just trying to prepare a little bit for resumption because classes don&rsquo;t actually come soon at all. So, and every time I&rsquo;m in shop, I guess creating Um, content for my blog. Yeah, because mental health -- World Mental Health Day is on the 10th of this month, so trying to come up with stuff to post. Yeah, that&rsquo;s, that&rsquo;s just the things I&rsquo;ve been doing. And I&rsquo;ll pass the mic to Omolola.</p>
+            <p id="s135"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=135s" target="_blank" rel="noopener" data-pagefind-ignore>2:15</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Oh, did you pass the mic to Gift?</p>
+            <p id="s137"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=137s" target="_blank" rel="noopener" data-pagefind-ignore>2:17</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Okay.</p>
+            <p id="s162"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=162s" target="_blank" rel="noopener" data-pagefind-ignore>2:42</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Amola, can you hear us? Hello, can anybody hear her?</p>
+            <p id="s174"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=174s" target="_blank" rel="noopener" data-pagefind-ignore>2:54</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I can&rsquo;t, I can&rsquo;t hear either.</p>
+            <p id="s180"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=180s" target="_blank" rel="noopener" data-pagefind-ignore>3:00</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Okay.</p>
+            <p id="s193"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=193s" target="_blank" rel="noopener" data-pagefind-ignore>3:13</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Zol at 12:51" data-pagefind-ignore>Zol</span>Okay, hi everyone.</p>
+            <p id="s198"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=198s" target="_blank" rel="noopener" data-pagefind-ignore>3:18</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>Oh, hello, Omarlah. Okay, so let me go ahead and introduce Amolola. So, uh, Amolola, uh, she&rsquo;s the UI/UX, you know, she&rsquo;s the one working with the UI/UX team. Hello, is someone talking?</p>
+            <p id="s229"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=229s" target="_blank" rel="noopener" data-pagefind-ignore>3:49</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Jed, I don&rsquo;t know if you have a hot mic.</p>
+            <p id="s233"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=233s" target="_blank" rel="noopener" data-pagefind-ignore>3:53</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Who, me? I&rsquo;m sorry.</p>
+            <p id="s234"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=234s" target="_blank" rel="noopener" data-pagefind-ignore>3:54</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Yeah. I think Mola is trying to speak also. I don&rsquo;t know, like, okay, like, let me just, let me just go on.</p>
+            <p id="s282"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=282s" target="_blank" rel="noopener" data-pagefind-ignore>4:42</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>Okay, so, uh, she&rsquo;s the UI/UX working on the We Dare Media website. So basically we have worked together on one project like that together. So, uh, with the, um, communication we had in the previous, um, projects, so that&rsquo;s why I, you know, bring her on board.</p>
+            <p id="s304"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=304s" target="_blank" rel="noopener" data-pagefind-ignore>5:04</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>That&rsquo;s okay.</p>
+            <p id="s304-2"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=304s" target="_blank" rel="noopener" data-pagefind-ignore>5:04</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>There&rsquo;s one project I want you to work on and we want -- I would like if we can, you know, work together. And she said, no problem. Then I just, you know, take her to the workflow of the project and she started working on it. So basically now she&rsquo;s the one Um, working on the Figma for the Redeminder website, and I think this is our first time in the community call.</p>
+            <p id="s331"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=331s" target="_blank" rel="noopener" data-pagefind-ignore>5:31</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Yeah.</p>
+            <p id="s331-2"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=331s" target="_blank" rel="noopener" data-pagefind-ignore>5:31</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Welcome, we&rsquo;re happy to have you. Um, Sami, do you want to pass the mic to somebody else?</p>
+            <p id="s339"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=339s" target="_blank" rel="noopener" data-pagefind-ignore>5:39</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>I don&rsquo;t know who have not yet Speaking.</p>
+            <p id="s350"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=350s" target="_blank" rel="noopener" data-pagefind-ignore>5:50</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>It&rsquo;s just, just, just J.</p>
+            <p id="s353"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=353s" target="_blank" rel="noopener" data-pagefind-ignore>5:53</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>Okay, what about King Moto Moto? Yeah, in past.</p>
+            <p id="s363"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=363s" target="_blank" rel="noopener" data-pagefind-ignore>6:03</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Yeah, can speak.</p>
+            <p id="s370"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=370s" target="_blank" rel="noopener" data-pagefind-ignore>6:10</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>I&rsquo;m like personal conversation, but very great for the work. I know you and myself have had conversations. I appreciate all that you guys are doing. We hope someday in the nearest future we can compensate you for your video. Thank you. Can you hear me?</p>
+            <p id="s394"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=394s" target="_blank" rel="noopener" data-pagefind-ignore>6:34</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>Yes, sir.</p>
+            <p id="s399"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=399s" target="_blank" rel="noopener" data-pagefind-ignore>6:39</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Did you hear what I said?</p>
+            <p id="s400"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=400s" target="_blank" rel="noopener" data-pagefind-ignore>6:40</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>No, no, no, I can&rsquo;t hear you.</p>
+            <p id="s402"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=402s" target="_blank" rel="noopener" data-pagefind-ignore>6:42</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>I said, I know we&rsquo;ve not had like a personal conversation before now, like, I, I, like, we&rsquo;ve been talking like on the community calls or like, um, group calls, but I know you&rsquo;ve been working with Marcel on the website. So I said, um, we appreciate the good work you&rsquo;re doing.</p>
+            <p id="s418"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=418s" target="_blank" rel="noopener" data-pagefind-ignore>6:58</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Okay.</p>
+            <p id="s419"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=419s" target="_blank" rel="noopener" data-pagefind-ignore>6:59</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>We hope that in the nearest future we&rsquo;ll be able to compensate you for the, for the work you&rsquo;re doing.</p>
+            <p id="s423"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=423s" target="_blank" rel="noopener" data-pagefind-ignore>7:03</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>Yeah, yeah, thank you, thank you, sir.</p>
+            <p id="s427"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=427s" target="_blank" rel="noopener" data-pagefind-ignore>7:07</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Zol at 12:51" data-pagefind-ignore>Zol</span>Yeah, right.</p>
+            <p id="s427-2"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=427s" target="_blank" rel="noopener" data-pagefind-ignore>7:07</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Appreciate.</p>
+            <p id="s428"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=428s" target="_blank" rel="noopener" data-pagefind-ignore>7:08</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Thank you.</p>
+            <p id="s429"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=429s" target="_blank" rel="noopener" data-pagefind-ignore>7:09</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Okay, Kimoto Moto, are you here? Okay, Moto Moto is not available. Let&rsquo;s go to Zao. Big man Zao, what&rsquo;s up?</p>
+            <p id="s452"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=452s" target="_blank" rel="noopener" data-pagefind-ignore>7:32</a><span class="wt-spk" title="Speaker G, as separated by the model" data-pagefind-ignore>G</span>I&rsquo;m so sorry about my network.</p>
+            <p id="s457"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=457s" target="_blank" rel="noopener" data-pagefind-ignore>7:37</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Hey, Lola is back.</p>
+            <p id="s459"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=459s" target="_blank" rel="noopener" data-pagefind-ignore>7:39</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Zol at 12:51" data-pagefind-ignore>Zol</span>What&rsquo;s up?</p>
+            <p id="s462"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=462s" target="_blank" rel="noopener" data-pagefind-ignore>7:42</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Right.</p>
+            <p id="s465"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=465s" target="_blank" rel="noopener" data-pagefind-ignore>7:45</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Yeah, I guess I was so talk about my week before my.</p>
+            <p id="s473"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=473s" target="_blank" rel="noopener" data-pagefind-ignore>7:53</a><span class="wt-spk" title="Speaker G, as separated by the model" data-pagefind-ignore>G</span>So my week was fine. There&rsquo;s nothing much like just a lot of research during the. During the night, then during the day I work as customer care service. So I was just trying to shuffle between the both. So it was very interesting.</p>
+            <p id="s517"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=517s" target="_blank" rel="noopener" data-pagefind-ignore>8:37</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Trojan, are you here?</p>
+            <p id="s518"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=518s" target="_blank" rel="noopener" data-pagefind-ignore>8:38</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>Yo, hey, what&rsquo;s up, man?</p>
+            <p id="s525"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=525s" target="_blank" rel="noopener" data-pagefind-ignore>8:45</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Zol at 12:51" data-pagefind-ignore>Zol</span>What&rsquo;s good?</p>
+            <p id="s526"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=526s" target="_blank" rel="noopener" data-pagefind-ignore>8:46</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Can you guys hear me?</p>
+            <p id="s529"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=529s" target="_blank" rel="noopener" data-pagefind-ignore>8:49</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Hello?</p>
+            <p id="s531"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=531s" target="_blank" rel="noopener" data-pagefind-ignore>8:51</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Zol at 12:51" data-pagefind-ignore>Zol</span>Can you hear me? Good evening.</p>
+            <p id="s534"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=534s" target="_blank" rel="noopener" data-pagefind-ignore>8:54</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Yeah, we can hear you.</p>
+            <p id="s534-2"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=534s" target="_blank" rel="noopener" data-pagefind-ignore>8:54</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Yo, what&rsquo;s good? What&rsquo;s good, guys? What&rsquo;s up? What&rsquo;s going on? Okay, okay. My name is, um, Abdul. I&rsquo;m a videographer, photographer in Abuja. Yeah, and I&rsquo;ve, um, just been working. I think people are saying what they&rsquo;ve been doing this week, so just been working, editing videos. Just finished the video for for a client, so actually sending. So I came to microwave dinner because you guys you guys were installing the microwave. So yeah, that&rsquo;s me. Thank you guys. I&rsquo;ve been in the space like like three times in the past. I haven&rsquo;t been in community calls for a very long time, and I&rsquo;m sorry for that, man. Niggas been busy. But yeah, I&rsquo;m gonna start joining. Yeah. Hey, boyfriend. I&rsquo;m definitely not for you. I definitely. Thank you, thank you so much. Um, who else is still in here?</p>
+            <p id="s650"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=650s" target="_blank" rel="noopener" data-pagefind-ignore>10:50</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Sorry, Trojan. Um, so Trojan is the guy you told me about, right? For the content.</p>
+            <p id="s665"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=665s" target="_blank" rel="noopener" data-pagefind-ignore>11:05</a><span class="wt-spk wt-spk-named" title="Speaker I, as separated by the model; gives the name Gaddafi at 67:04" data-pagefind-ignore>Gaddafi</span>Yeah, yeah.</p>
+            <p id="s665-2"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=665s" target="_blank" rel="noopener" data-pagefind-ignore>11:05</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Um, Trojan, please send me a DM.</p>
+            <p id="s668"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=668s" target="_blank" rel="noopener" data-pagefind-ignore>11:08</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>All right, G. I love you, Mama. How about KJX? Oh, sorry, King Pizza. Nah, nah, nah, King Pizza though. What&rsquo;s good, G? Passing the mic to you. How about King Peter? This book? King who? Pizza. The pizza king. Pizza king.</p>
+            <p id="s714"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=714s" target="_blank" rel="noopener" data-pagefind-ignore>11:54</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>What is his name?</p>
+            <p id="s716"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=716s" target="_blank" rel="noopener" data-pagefind-ignore>11:56</a><span class="wt-spk" title="Speaker G, as separated by the model" data-pagefind-ignore>G</span>Pizza.</p>
+            <p id="s716-2"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=716s" target="_blank" rel="noopener" data-pagefind-ignore>11:56</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>The heck? That&rsquo;s Oh, that&rsquo;s him. Okay, okay, okay. Um, how about Iris? Can you say something?</p>
+            <p id="s726"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=726s" target="_blank" rel="noopener" data-pagefind-ignore>12:06</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Yeah, Iris, cool.</p>
+            <p id="s730"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=730s" target="_blank" rel="noopener" data-pagefind-ignore>12:10</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Um, yeah.</p>
+            <p id="s736"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=736s" target="_blank" rel="noopener" data-pagefind-ignore>12:16</a><span class="wt-spk wt-spk-named" title="Speaker J, as separated by the model; gives the name Winnie at 12:16" data-pagefind-ignore>Winnie</span>Hello everyone, my name is, my name is Winnie.</p>
+            <p id="s744"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=744s" target="_blank" rel="noopener" data-pagefind-ignore>12:24</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>I&rsquo;m a certified ethical hacker who&rsquo;s currently expanding into Web3, and I&rsquo;m from Tanzania. Thank you.</p>
+            <p id="s754"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=754s" target="_blank" rel="noopener" data-pagefind-ignore>12:34</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Thank you, Iris.</p>
+            <p id="s755"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=755s" target="_blank" rel="noopener" data-pagefind-ignore>12:35</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Welcome.</p>
+            <p id="s756"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=756s" target="_blank" rel="noopener" data-pagefind-ignore>12:36</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Please pass the mic.</p>
+            <p id="s759"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=759s" target="_blank" rel="noopener" data-pagefind-ignore>12:39</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>I&rsquo;m not sure who I&rsquo;m talking yet, so I don&rsquo;t know who I&rsquo;m passing the mic to.</p>
+            <p id="s766"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=766s" target="_blank" rel="noopener" data-pagefind-ignore>12:46</a><span class="wt-spk wt-spk-named" title="Speaker J, as separated by the model; gives the name Winnie at 12:16" data-pagefind-ignore>Winnie</span>Queen Gift Angel.</p>
+            <p id="s770"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=770s" target="_blank" rel="noopener" data-pagefind-ignore>12:50</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Zol at 12:51" data-pagefind-ignore>Zol</span>What&rsquo;s up, everybody? My name is Zol, better called Zol, with the ZOW. We are working on a lot of different things this week. Primarily Wave Wars. We have a producer tournament happening. We&rsquo;ve had 2 battles already out of the 8 producers we have. Next 2 going on tonight and tomorrow, 8:00 PM Eastern on wavewars.com. We&rsquo;ve been really focused on how we can uplift and create new models for musicians to monetize their music. And we actually also have a metaverse concert happening this Saturday at 4 PM Eastern. I&rsquo;ll toss the Luma link down in the bottom. It&rsquo;s gonna be phenomenal. We&rsquo;re gonna be having Fullends, Dope Steelo, and Adabody performing.</p>
+            <p id="s770-2"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=770s" target="_blank" rel="noopener" data-pagefind-ignore>12:50</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Zol at 12:51" data-pagefind-ignore>Zol</span>And then during Dope Steelo&rsquo;s DJ set, he&rsquo;s gonna put 2 of his songs up and we&rsquo;re gonna play a little Wave Wars with his songs and support Dope Steelo and the whole event. So yeah, we&rsquo;re really excited, cooking on all fronts. Lots of different things going on on my front. I&rsquo;m very focused on <a class="wt-gloss" href="../glossary.html#farcaster">Farcaster</a> and how we, we as a community, We Them Media, Ohnahji, the Zao, all of these like mutual communities can leverage a platform like Farcaster as it gets more and more popular, finding the best workflows for leveraging just like marketing and networking over there. So that&rsquo;s what I&rsquo;m focused on, and it&rsquo;s good to see all you amazing folks in the building.</p>
+            <p id="s770-3"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=770s" target="_blank" rel="noopener" data-pagefind-ignore>12:50</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Zol at 12:51" data-pagefind-ignore>Zol</span>I&rsquo;ll send the Luma link. in the bottom for the metaverse.</p>
+            <p id="s859"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=859s" target="_blank" rel="noopener" data-pagefind-ignore>14:19</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Would love to see all.</p>
+            <p id="s875"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=875s" target="_blank" rel="noopener" data-pagefind-ignore>14:35</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Zol at 12:51" data-pagefind-ignore>Zol</span>Hell yeah. I&rsquo;ll kick it over to Moto Moto if he&rsquo;s there, although I see he&rsquo;s deafened, so he&rsquo;s probably Probably not.</p>
+            <p id="s890"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=890s" target="_blank" rel="noopener" data-pagefind-ignore>14:50</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Let&rsquo;s see.</p>
+            <p id="s891"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=891s" target="_blank" rel="noopener" data-pagefind-ignore>14:51</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Zol at 12:51" data-pagefind-ignore>Zol</span>I think I only see one person who hasn&rsquo;t gone. Temi? King Temi?</p>
+            <p id="s899"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=899s" target="_blank" rel="noopener" data-pagefind-ignore>14:59</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Yeah.</p>
+            <p id="s900"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=900s" target="_blank" rel="noopener" data-pagefind-ignore>15:00</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Zol at 12:51" data-pagefind-ignore>Zol</span>Oh, I don&rsquo;t know if anyone didn&rsquo;t go then.</p>
+            <p id="s917"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=917s" target="_blank" rel="noopener" data-pagefind-ignore>15:17</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Okay, yeah, thank you very much. Yeah, okay, uh, it&rsquo;s Saturday, um, we&rsquo;re organizing the biggest, um, crypto cleanup, 200 people, and this is happening in Madu Chi of Abuja, and we have the founders.</p>
+            <p id="s931"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=931s" target="_blank" rel="noopener" data-pagefind-ignore>15:31</a><span class="wt-spk wt-spk-named" title="Speaker I, as separated by the model; gives the name Gaddafi at 67:04" data-pagefind-ignore>Gaddafi</span>Can you guys hear Daniel?</p>
+            <p id="s932"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=932s" target="_blank" rel="noopener" data-pagefind-ignore>15:32</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I don&rsquo;t know if it&rsquo;s just me, but I can&rsquo;t hear him at all.</p>
+            <p id="s937"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=937s" target="_blank" rel="noopener" data-pagefind-ignore>15:37</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Can you guys hear me? I&rsquo;m using my laptop.</p>
+            <p id="s945"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=945s" target="_blank" rel="noopener" data-pagefind-ignore>15:45</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Yeah, you might want to switch over to your phone or something. I don&rsquo;t know, but it&rsquo;s really, really like not audible at all. मिसी मिसी वो ड्राइवर बेटर बेटर इन्हीं में अब सुन माइक हो रहा है राइट इस इस बेटर ओके या आई कैन Don&rsquo;t try, don&rsquo;t try and support me myself.</p>
+            <p id="s993"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=993s" target="_blank" rel="noopener" data-pagefind-ignore>16:33</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>Okay, uh, okay, let me try to share my screen. I&rsquo;m coming.</p>
+            <p id="s1014"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1014s" target="_blank" rel="noopener" data-pagefind-ignore>16:54</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>Can you guys hear me now? Yeah, I can.</p>
+            <p id="s1059"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1059s" target="_blank" rel="noopener" data-pagefind-ignore>17:39</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Yeah, I can.</p>
+            <p id="s1064"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1064s" target="_blank" rel="noopener" data-pagefind-ignore>17:44</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>Okay, कहाँ ही गए थे ये भी?</p>
+            <p id="s1068"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1068s" target="_blank" rel="noopener" data-pagefind-ignore>17:48</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Yeah, we can hear you.</p>
+            <p id="s1068-2"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1068s" target="_blank" rel="noopener" data-pagefind-ignore>17:48</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Go on.</p>
+            <p id="s1069"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1069s" target="_blank" rel="noopener" data-pagefind-ignore>17:49</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>Please, I need the response. Okay, okay. So, um, let me play the prototype. So, so she&rsquo;s the one working on this, um, Figma on the UI/UX. So she&rsquo;s the one working on it. So, so right now the homepage is, you know, 80% done. Um, I think I invite the other guy that is going to support me with the building. I think I invite him to join the call today, so I don&rsquo;t know if the guys have time to join us tonight. So I don&rsquo;t know. So I think I have network issue here, so let&rsquo;s wait. So before this one is loading, let me just take us to the website through, um, the Figma that we have here.</p>
+            <p id="s1069-2"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1069s" target="_blank" rel="noopener" data-pagefind-ignore>17:49</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>So basically, uh, this is what we have, the home page. But, um, the hero section, there&rsquo;s going to be a little bit of changing here. Um, this is not what it is, uh, this is not what it&rsquo;s supposed to be here. So we are still going to change it. Um, and then we have, um, About, about, about, uh, with the media. Then we have, uh, Meet Our Founder, which, uh, myself picture is going to be here. Then we have the total number of community we have so far, the events we have covered, and then we have Live Project 247. So this part is, is the, um, the short video of the events we have covered so far for ETH Accra, Web3 Lagos, you know, conference, you know, JAWS and Utopia.</p>
+            <p id="s1069-3"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1069s" target="_blank" rel="noopener" data-pagefind-ignore>17:49</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>Then if you click on Explore Media Gallery, so that&rsquo;s where you are going to see more pictures on Accra or Utopia or JAWS or Web3 Lagos conference. So you are going to see a lot of, you know, Um, some interviewer that we interview and pictures. Then this, this, uh, this one is indicate that, um, it&rsquo;s going to indicate the Africa we have networked with. You know, we have networked with Ghana, Nigeria. So basically that&rsquo;s what this guy is doing here. Then we now have, um, some of the events you have covered so far. So, uh, Those are the, um, pictures for the event. Then if you click on View Gallery, so that&rsquo;s where you can now see, like, as many pictures you can look at in the events you have covered so far.</p>
+            <p id="s1069-4"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1069s" target="_blank" rel="noopener" data-pagefind-ignore>17:49</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>Just go there to look at the pictures of the events you have covered so far. And for the upcoming events, this is where you&rsquo;re going to see the upcoming events that We Dare Media is going to cover. So if you are like, let&rsquo;s, let&rsquo;s imagine that the ETH Accra interview, you know, we are going live right now. So it&rsquo;s going to indicate that, okay, for this part now it&rsquo;s showing that, okay, this event is already live already. So you can click on Watch Now and it&rsquo;s going to take you to where to watch the website, um, the live on the website. So, and when you can watch the recap of the event that you have, you know, covered.</p>
+            <p id="s1069-5"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1069s" target="_blank" rel="noopener" data-pagefind-ignore>17:49</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>Maybe you miss an event that we cover last week and you are not able to attend it, so you can watch the recap here. And this is where we have the, uh, community, you know, feedback. And, you know, um, that&rsquo;s all about the, uh, that&rsquo;s about the home page. Let me check if it Give this prototype a working. Okay, can you guys hear me?</p>
+            <p id="s1310"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1310s" target="_blank" rel="noopener" data-pagefind-ignore>21:50</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Hello? Can you guys hear me?</p>
+            <p id="s1322"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1322s" target="_blank" rel="noopener" data-pagefind-ignore>22:02</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>Okay, so now, um, this is the prototype, you know, when we have any event going live, it&rsquo;s going to show here, you know. And if you click on one here, it&rsquo;s going to take you to About page. The About page is not yet ready, so if you open on this now, we are going to ask for, uh, myself on picture where we are going to -- so where we are going to, you know, put here to meet our founders. Okay, so basically I have explained this guy. So, so yeah, now this is where, this is where we have rotating it here for the Africa we have covered so far.</p>
+            <p id="s1322-2"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1322s" target="_blank" rel="noopener" data-pagefind-ignore>22:02</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>So basically that&rsquo;s all. So this is where we have you know, community feedback from the events you cover, or you just can just come to the website and talk about the media. So you can submit your story also. You can come to the website here, you know, upload your picture, your name, location, email address, and your story, then submit. Once you submit, it&rsquo;s going to show on the home page. That&rsquo;s It&rsquo;s going to show here your own story. And that&rsquo;s all for the home page now. So she&rsquo;s still working on the rest page, uh, which is the event page. Uh, this is the event page where we have, uh, next event that&rsquo;s going to happen with the countdown and then all the stuff.</p>
+            <p id="s1322-3"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1322s" target="_blank" rel="noopener" data-pagefind-ignore>22:02</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>So the, the one that is showing live is going to all come and the past events. So you can just -- this one is going -- this one is going to be based on, uh, if you click on, um, Live Now, this, um, section is going to change to only the event that is live. But this one is just all the events. Now it&rsquo;s going to, you know, bring out all the activities that is showing here with the live, with the oncoming, and with the past. So it&rsquo;s going to show everything on the event here. So for the, uh, for the media, so you can get in touch.</p>
+            <p id="s1322-4"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1322s" target="_blank" rel="noopener" data-pagefind-ignore>22:02</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>Let&rsquo;s say you want to host an event, so you can get in touch with us. So she have not done with the form, so you have, you have to get in touch with us. Let&rsquo;s say you have an event you want us to, you know, come and cover for you and stuff like that. So, um, so for the media part now, uh, we are going to have issue for this media part because Uh, most of the -- when I check the drive of my assistant to me, what I&rsquo;m seeing most is video, videos, videos, videos, videos. I&rsquo;m not seeing more of pictures, and the pictures I&rsquo;m, I&rsquo;m even seeing is not that high quality, and it&rsquo;s not even picture that we can showcase to, um, website.</p>
+            <p id="s1322-5"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1322s" target="_blank" rel="noopener" data-pagefind-ignore>22:02</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>Because anything we showcase to the website now is going to talk about us. Some people don&rsquo;t even -- some people may not know us, but checking out website for the first time is going to speak about us. So, um, we are going to have problem with this media now because all these pictures I&rsquo;m seeing -- I don&rsquo;t know if you have another, um, drive for where we keep pictures, I don&rsquo;t know. But the one I have presented right now, I think we are going to have problem with this media of a thing because all the drive I&rsquo;m seeing now is just videos, videos. And the pictures I&rsquo;m seeing is not, um, I don&rsquo;t know.</p>
+            <p id="s1322-6"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1322s" target="_blank" rel="noopener" data-pagefind-ignore>22:02</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>So basically that&rsquo;s what, uh, she have done so far. And today, uh, we, um, the dev, we are going to start working on this, on this, um, homepage today. I&rsquo;m going to have meeting with the guy immediately after the community call so, so that we can start, um, building. Dado.</p>
+            <p id="s1572"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1572s" target="_blank" rel="noopener" data-pagefind-ignore>26:12</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Dado. Can you guys hear me? Yeah, I was trying to say something the other time. I&rsquo;m gonna say something about pictures and stuff. I actually am a photographer also, so basically I could actually, you know, take pictures of upcoming events if that could help. That&rsquo;s Saturday, you know. Can you hear me? An event on Saturday, yeah, isn&rsquo;t it? I, I, are you a photographer?</p>
+            <p id="s1646"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1646s" target="_blank" rel="noopener" data-pagefind-ignore>27:26</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>Can you hear me? Please, if you are going to help us with the pictures of the events, I would appreciate if you can, you know, give us some beautiful angles of pictures because that&rsquo;s the, you know, that&rsquo;s my page.</p>
+            <p id="s1666"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1666s" target="_blank" rel="noopener" data-pagefind-ignore>27:46</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>You see my page?</p>
+            <p id="s1668"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1668s" target="_blank" rel="noopener" data-pagefind-ignore>27:48</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>Your face?</p>
+            <p id="s1670"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1670s" target="_blank" rel="noopener" data-pagefind-ignore>27:50</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>My page, my page. No, no.</p>
+            <p id="s1671"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1671s" target="_blank" rel="noopener" data-pagefind-ignore>27:51</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>Yeah, yeah, yeah, yeah. I would like, I would like to see it. I would like to see it. Yeah.</p>
+            <p id="s1675"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1675s" target="_blank" rel="noopener" data-pagefind-ignore>27:55</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Sure, sure, sure.</p>
+            <p id="s1677"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1677s" target="_blank" rel="noopener" data-pagefind-ignore>27:57</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>I would appreciate some beautiful angle pictures from you because the website is going to speak about us and I need some dope pictures of, you know, to put on the website.</p>
+            <p id="s1689"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1689s" target="_blank" rel="noopener" data-pagefind-ignore>28:09</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Thank you very much.</p>
+            <p id="s1704"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1704s" target="_blank" rel="noopener" data-pagefind-ignore>28:24</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Yeah, sure. I think I like you sent a reminder. I like the reminder, actually. All right, so I&rsquo;m gonna do that.</p>
+            <p id="s1728"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1728s" target="_blank" rel="noopener" data-pagefind-ignore>28:48</a><span class="wt-spk" title="Speaker G, as separated by the model" data-pagefind-ignore>G</span>Okay, you mentioned that we should use screenshots of videos. Actually, I tried to do that, which is, um, Temi did not show us the Watch Now. So under the Watch Now, which is going to show the user the live event that is going on, So I went to the YouTube channel for our video media. So I want to get the accurate video, which I just use the screenshot, but the image is not high quality for the website. So that&rsquo;s why we just have to keep it like that. And we just need good image, like very -- whenever the event is going on, should please like a well-quality image. So that&rsquo;s what is going to showcase our website and be more beautiful. I&rsquo;ll be more presentable. Thank you. China. Um, I&rsquo;ve been in UAE for just going to 2 years now. I started last -- so, and basically doing the job, I&rsquo;m your, um, customer service representative. I still work like I work as a UI designer. That&rsquo;s just what Yes, yes, yes.</p>
+            <p id="s1897"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1897s" target="_blank" rel="noopener" data-pagefind-ignore>31:37</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>Um, um, so basically we&rsquo;re just organizing the cleanup. We&rsquo;ve done smaller cleanups for now, but this time around we&rsquo;ll do like a 200-people cleanup. And we&rsquo;ve reached out to several organizations to partner with them. In fact, even went to a radio station and they are willing to support us with some volunteers. And the waste management company that will be coming with trash trucks and payloaders to like help us move the work faster, right? They also offered to give us some volunteers also. So like it&rsquo;s really been just -- We&rsquo;ve been getting lots of support from private organizations and individuals, so we expect it to be like a good day, no rain. Yeah, and what else? What else am I missing? Yeah, what volunteers should expect, they should expect a fun environment, a welcoming one, and they should expect like drinks, polos, and maybe a few people can go home with some Macquarie branded -- what is it called?</p>
+            <p id="s1964"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1964s" target="_blank" rel="noopener" data-pagefind-ignore>32:44</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>T-shirts.</p>
+            <p id="s1966"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=1966s" target="_blank" rel="noopener" data-pagefind-ignore>32:46</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>Textbooks. Yeah. So yeah. And also we will have PPE, and that&rsquo;s personal protection equipment. Like we have gloves, nose masks, and yeah. It&rsquo;s happening this Saturday. So we want to have as much people as possible just to prove a point that Acquiri, that blockchain, like crypto, is not just for trading. It&rsquo;s actually making a difference, like real-world difference. Did you hear what I said, Marcel?</p>
+            <p id="s2008"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2008s" target="_blank" rel="noopener" data-pagefind-ignore>33:28</a><span class="wt-spk wt-spk-named" title="Speaker I, as separated by the model; gives the name Gaddafi at 67:04" data-pagefind-ignore>Gaddafi</span>Oh yeah.</p>
+            <p id="s2008-2"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2008s" target="_blank" rel="noopener" data-pagefind-ignore>33:28</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>Oh, did anybody -- everybody else hear me? I know you guys are complaining about my --</p>
+            <p id="s2013"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2013s" target="_blank" rel="noopener" data-pagefind-ignore>33:33</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>loud and clear.</p>
+            <p id="s2015"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2015s" target="_blank" rel="noopener" data-pagefind-ignore>33:35</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Yeah, I heard you.</p>
+            <p id="s2016"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2016s" target="_blank" rel="noopener" data-pagefind-ignore>33:36</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>Okay, thank you. Yeah, and it&rsquo;s happening. The location is Mabuchi. We&rsquo;re yet to discuss, fix the time yet, but I think it should be 8 AM. And also after that, we&rsquo;re going to be having like a builders and a builders and a builders and a builders and founders meetup, just a private session to like learn, network, and just chill. Basically just have fun with like the Web3 community. It&rsquo;s private and low-key, so we&rsquo;re not expecting crowds, nothing crazy, just something just cool and fun. And also, after that, we, we want to do a hospital visitation, want to do a school visitation, a school outreach. Um, there&rsquo;s a school we were informed don&rsquo;t have books, and their classrooms are dilapidated. We want to reach out to them and see how we could just, um, for now, just give us a size books, right? And we&rsquo;re not committing to, like, renovating the school, but a size book is something really easy that we can support with. So we want to do that. We want to also, like, go to the hospital and, um, Um, say hello to the kids and just offer the little we can. So all this will be happening between Saturday and Monday, Sunday and Monday. So it&rsquo;s like a full weekend for us.</p>
+            <p id="s2087"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2087s" target="_blank" rel="noopener" data-pagefind-ignore>34:47</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Yeah, a quick question. Is there like a flyer or any piece of graphic that carries information on like the cleanup and where exactly it&rsquo;s going to be happening? You said Mabushi, but where in Mabushi?</p>
+            <p id="s2106"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2106s" target="_blank" rel="noopener" data-pagefind-ignore>35:06</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>Okay.</p>
+            <p id="s2106-2"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2106s" target="_blank" rel="noopener" data-pagefind-ignore>35:06</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>Yeah.</p>
+            <p id="s2106-3"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2106s" target="_blank" rel="noopener" data-pagefind-ignore>35:06</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>Okay.</p>
+            <p id="s2107"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2107s" target="_blank" rel="noopener" data-pagefind-ignore>35:07</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>Because we&rsquo;ve had, um, we&rsquo;ve, we had, we have a flyer as I speak to you. Paul is working on, um, he&rsquo;s working on, um, editing that. The, we have a flyer and, um, but because we had planned to use the way and where we planned to use was cleaned up in a very, like, in a, in a rushed way. And, um, we don&rsquo;t want to go clean up what people have already, like, messed up already. Like, they did the cleanup, but, like, not properly. So, Well, we can&rsquo;t use that place anymore. So just like, um, we had to look for other locations. Um, so, um, we&rsquo;re using Mabuchi by Mobile Junction. Um, we found somewhere inside that we&rsquo;re gonna be using. And, um, the time is 8:00 AM. But definitely I&rsquo;m gonna post the flyer and the, and the Luma link in the, in the, in the chat as soon as I have it, maybe tonight. And maybe just tag everyone like I know, I know might be interested.</p>
+            <p id="s2153"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2153s" target="_blank" rel="noopener" data-pagefind-ignore>35:53</a><span class="wt-spk wt-spk-named" title="Speaker J, as separated by the model; gives the name Winnie at 12:16" data-pagefind-ignore>Winnie</span>Yeah.</p>
+            <p id="s2155"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2155s" target="_blank" rel="noopener" data-pagefind-ignore>35:55</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>All right, thank you.</p>
+            <p id="s2158"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2158s" target="_blank" rel="noopener" data-pagefind-ignore>35:58</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>Yeah, yeah, anybody have any questions can, yeah, feel free to tag me in the chat or reach out to me. Yeah, I&rsquo;ll definitely like respond. Yeah, yeah. And then it&rsquo;s a free pass for We Them Media, um, community members that wants to attend the private founders meetup. It&rsquo;s a free pass for them, but like, uh, we&rsquo;re trying to keep it low-key. So, um, we&rsquo;re trying to be very selective of people we allow into the event on Sunday evening. And yeah, the event is going to be in Wuse 2. And, um, yeah, the link also will be out like Preparations and everything, meetings, moving here and there has just been really crazy.</p>
+            <p id="s2158-2"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2158s" target="_blank" rel="noopener" data-pagefind-ignore>35:58</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>And, um, we&rsquo;re just making, um, rush hour preparation. So everyone who wants to attend should just, um, bear with us, but we&rsquo;re going to try to, to, to do the best we can to make it a very smooth, um, both the cleanup and the event. Yeah. The event&rsquo;s on Sunday? It&rsquo;s on Sunday. The cleanup is on Saturday. No, no, we don&rsquo;t have flyers for now because we, we&rsquo;re looking for event space. So we finally got one that fits, um, into the budget that like, obviously I obviously don&rsquo;t have any sponsors, right? So I was looking for one that is in the city center and, um, it&rsquo;s affordable.</p>
+            <p id="s2158-3"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2158s" target="_blank" rel="noopener" data-pagefind-ignore>35:58</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>So I finally got one. So, um, I believe the flyer should be out tonight. I think I&rsquo;ll just post everything together. Are you seeing this?</p>
+            <p id="s2292"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2292s" target="_blank" rel="noopener" data-pagefind-ignore>38:12</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Wake up.</p>
+            <p id="s2320"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2320s" target="_blank" rel="noopener" data-pagefind-ignore>38:40</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>You&rsquo;re cutting out. Yeah.</p>
+            <p id="s2420"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2420s" target="_blank" rel="noopener" data-pagefind-ignore>40:20</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>我 们 需要 来 做 什么？ 需要 来 做 什么？ 好， 我们 先 做 什么？ 我们 先 做 什么？ 你说 哪 有 一个 方 法？ 啊， 一个 方 法， 反 正 啊， 大家都 有 啊， 这 哪 有 方 法？ Um, Jed should pay for my event then.</p>
+            <p id="s2481"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2481s" target="_blank" rel="noopener" data-pagefind-ignore>41:21</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>Look at his head. How much did he give me for my event?</p>
+            <p id="s2483"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2483s" target="_blank" rel="noopener" data-pagefind-ignore>41:23</a><span class="wt-spk" title="Speaker G, as separated by the model" data-pagefind-ignore>G</span>Nah.</p>
+            <p id="s2499"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2499s" target="_blank" rel="noopener" data-pagefind-ignore>41:39</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>Oh, Jed is asking how much is my ticket. For you, $1,000. If anybody, if anybody, if anybody, I can pay Trojan $5,000. That&rsquo;s fine.</p>
+            <p id="s2515"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2515s" target="_blank" rel="noopener" data-pagefind-ignore>41:55</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Hey boy, that&rsquo;s not -- uh, hey, I like that.</p>
+            <p id="s2530"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2530s" target="_blank" rel="noopener" data-pagefind-ignore>42:10</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>Yeah, but I just I sent you a message in the DMs though, Roger. Yeah, yeah, yeah. Yeah, definitely. Eat Abuja, Eat Abuja community have said they&rsquo;re interested in partnering with for the event. So it&rsquo;s a really short notice. I know I&rsquo;ve spoken to a few people about it, right? Well, everybody&rsquo;s just waiting for like the event and the registration link and everything. So I&rsquo;m going to have that all out tonight. I&rsquo;m tired of complaining and making excuses. We&rsquo;ve just been making plans behind the scenes and just being lowkey, right? Then my system decides, okay, when I need it the most, some of the buttons just stop working. So I don&rsquo;t know. It&rsquo;s just been crazy here, but like nothing is stopping us. We&rsquo;re going to deliver a good cleanup, a good event, and we all talk about it and laugh about it in the nearest future.</p>
+            <p id="s2591"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2591s" target="_blank" rel="noopener" data-pagefind-ignore>43:11</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>So.</p>
+            <p id="s2597"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2597s" target="_blank" rel="noopener" data-pagefind-ignore>43:17</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>Yeah, yeah, definitely, definitely. Yeah, yeah, yeah, definitely. I have some people.</p>
+            <p id="s2604"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2604s" target="_blank" rel="noopener" data-pagefind-ignore>43:24</a><span class="wt-spk" title="Speaker G, as separated by the model" data-pagefind-ignore>G</span>I&rsquo;m not --</p>
+            <p id="s2604-2"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2604s" target="_blank" rel="noopener" data-pagefind-ignore>43:24</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>I&rsquo;m not the only one. I have people like, um, who I delegate stuff to, to help me like reach out or like submit letters to some government organizations. I&rsquo;ve just been trying to like speed things up as fast as I can.</p>
+            <p id="s2625"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2625s" target="_blank" rel="noopener" data-pagefind-ignore>43:45</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Let&rsquo;s go.</p>
+            <p id="s2633"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2633s" target="_blank" rel="noopener" data-pagefind-ignore>43:53</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>Okay, now you sound like a high. Um, um, GM, GM everyone.</p>
+            <p id="s2788"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2788s" target="_blank" rel="noopener" data-pagefind-ignore>46:28</a><span class="wt-spk wt-spk-named" title="Speaker J, as separated by the model; gives the name Winnie at 12:16" data-pagefind-ignore>Winnie</span>Um, for AnnounceDAO Africa, currently put together a blockchain basics curriculum. It&rsquo;s called Learning Block, and we&rsquo;re kickstarting the Learning Block program on October 15th. So registrations are still open from now until on the 10th, I think. I have to, I have to check, but registrations are currently open. So If anyone has anybody around them that knows absolutely nothing about the blockchain and they are curious, this is a great fit for them. The classes are going to be virtual, it&rsquo;s going to be held in the Discord, and the way the curriculum is structured is to help everyday users, everyday people, creators to understand how blockchain is, because we&rsquo;ve noticed that there&rsquo;s so many educational programs out there but none of it is tailored towards showing real people the real use cases of blockchain technology.</p>
+            <p id="s2788-2"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2788s" target="_blank" rel="noopener" data-pagefind-ignore>46:28</a><span class="wt-spk wt-spk-named" title="Speaker J, as separated by the model; gives the name Winnie at 12:16" data-pagefind-ignore>Winnie</span>So that&rsquo;s why, um, now Africa Learning Block curriculum is really important. And another amazing part of it is that it&rsquo;s tailored to educating Africans because there&rsquo;s a huge learning gap between Africans and other people around the world about what blockchain is. And I personally strongly believe that blockchain solves major problems for us as Africans. And understanding this tech would help builders, would help creators in the space that are currently active, that are currently building solutions tailored to African problems. It will help the users to connect with those products, understand those products, and use them easily. Because I mean, of what use is it if someone builds a product and there&rsquo;s no user to use it simply because there&rsquo;s a knowledge gap between them and the technology?</p>
+            <p id="s2788-3"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2788s" target="_blank" rel="noopener" data-pagefind-ignore>46:28</a><span class="wt-spk wt-spk-named" title="Speaker J, as separated by the model; gives the name Winnie at 12:16" data-pagefind-ignore>Winnie</span>So this is why Learning Block is really, really important and I mean, if there&rsquo;s anyone in the house that is also curious, that is just starting new in blockchain and does not understand very well how this technology applies to them or how they can utilize it in their day-to-day, definitely this learning block curriculum is also for you. If you&rsquo;re someone that has been active in the space and you have people that are curious because you&rsquo;re always talking about blockchain tech, you&rsquo;re always talking about Web3, but you&rsquo;ve never had time to sit them down and educate them on a one-on-one basis, this is also a great opportunity.</p>
+            <p id="s2788-4"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2788s" target="_blank" rel="noopener" data-pagefind-ignore>46:28</a><span class="wt-spk wt-spk-named" title="Speaker J, as separated by the model; gives the name Winnie at 12:16" data-pagefind-ignore>Winnie</span>to help those people learn and learn with the community such as NounsDAO Africa. So, um, Jess, please, if you can help share the link to the students registration, please definitely help with that. And we&rsquo;ll be having an AMA Spaces this Saturday, 7 PM GMT. So announcements on that is going to be coming up on the NounsDAO Africa official X account. So yes, that&rsquo;s basically what the learning block blockchain basics is, and looking forward to seeing you guys there and inviting your folks also.</p>
+            <p id="s2967"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2967s" target="_blank" rel="noopener" data-pagefind-ignore>49:27</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Yeah, man, I just --</p>
+            <p id="s2994"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2994s" target="_blank" rel="noopener" data-pagefind-ignore>49:54</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>I shared the link to the, to the registration form in the chat.</p>
+            <p id="s2998"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=2998s" target="_blank" rel="noopener" data-pagefind-ignore>49:58</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>You guys definitely tap your friends in. I&rsquo;m sure you know a lot of people who have been bugging you about wanting to learn blockchain, right? Like, this is Um, this is an opportunity to, to get them involved and get them to learn from the basics, literally. So yeah, Gift Angel, you know, those of you that are students, please plug your friends in, man. Let&rsquo;s, let&rsquo;s, um, educate and, and learn together and liberate ourselves, basically. But yeah, thank you guys for For being here and always showing support.</p>
+            <p id="s3036"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3036s" target="_blank" rel="noopener" data-pagefind-ignore>50:36</a><span class="wt-spk wt-spk-named" title="Speaker I, as separated by the model; gives the name Gaddafi at 67:04" data-pagefind-ignore>Gaddafi</span>Yeah!</p>
+            <p id="s3217"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3217s" target="_blank" rel="noopener" data-pagefind-ignore>53:37</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>No, no, no, no. Thank you very much, Marcel, for hijacking my community call, but it&rsquo;s fine. And yeah, I think I&rsquo;ll be back fully next week. I see what you did there, but it&rsquo;s fine.</p>
+            <p id="s3234"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3234s" target="_blank" rel="noopener" data-pagefind-ignore>53:54</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>No problem.</p>
+            <p id="s3237"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3237s" target="_blank" rel="noopener" data-pagefind-ignore>53:57</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>Thank you guys for coming. We appreciate your presence. And remember, there is no media without you. Good night and enjoy the rest of your day. We&rsquo;ll catch you tomorrow or next week. Yeah, and please make sure you check out -- make sure you check out our -- what is it called? Make sure you check -- who switched off the soundboard? Uh, Gift Ninja is asking which -- to switch off the soundboard. Like, I think the soundboard still works. I think it still works. So maybe Really, nigga?</p>
+            <p id="s3281"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3281s" target="_blank" rel="noopener" data-pagefind-ignore>54:41</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Really, nigga?</p>
+            <p id="s3282"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3282s" target="_blank" rel="noopener" data-pagefind-ignore>54:42</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>Really, nigga? Okay, yeah, you guys should make sure you check out our announcement. Yes, I&rsquo;m talking for right now.</p>
+            <p id="s3318"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3318s" target="_blank" rel="noopener" data-pagefind-ignore>55:18</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Okay. So why do you have 2 sound -- why do you have 2 soundbots on the call?</p>
+            <p id="s3417"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3417s" target="_blank" rel="noopener" data-pagefind-ignore>56:57</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Why? What?</p>
+            <p id="s3421"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3421s" target="_blank" rel="noopener" data-pagefind-ignore>57:01</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>I said no, the motor plug for you.</p>
+            <p id="s3424"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3424s" target="_blank" rel="noopener" data-pagefind-ignore>57:04</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>I was going to myself.</p>
+            <p id="s3429"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3429s" target="_blank" rel="noopener" data-pagefind-ignore>57:09</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>I&rsquo;m going to listen to you myself. Don&rsquo;t worry, don&rsquo;t worry. I&rsquo;m going to listen to you myself when I leave this call. Don&rsquo;t worry.</p>
+            <p id="s3443"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3443s" target="_blank" rel="noopener" data-pagefind-ignore>57:23</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Okay.</p>
+            <p id="s3448"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3448s" target="_blank" rel="noopener" data-pagefind-ignore>57:28</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>Our sister connected.</p>
+            <p id="s3455"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3455s" target="_blank" rel="noopener" data-pagefind-ignore>57:35</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>What did you say?</p>
+            <p id="s3459"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3459s" target="_blank" rel="noopener" data-pagefind-ignore>57:39</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>I say, where are you going to play it?</p>
+            <p id="s3462"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3462s" target="_blank" rel="noopener" data-pagefind-ignore>57:42</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>On my phone now.</p>
+            <p id="s3465"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3465s" target="_blank" rel="noopener" data-pagefind-ignore>57:45</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>Who is the best soundboard? Are you gifting Javi?</p>
+            <p id="s3470"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3470s" target="_blank" rel="noopener" data-pagefind-ignore>57:50</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>No, it&rsquo;s not working though. It&rsquo;s not working on my phone. I don&rsquo;t know why.</p>
+            <p id="s3477"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3477s" target="_blank" rel="noopener" data-pagefind-ignore>57:57</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>Drum? Who is in the drum? Is that myself or Jet?</p>
+            <p id="s3506"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3506s" target="_blank" rel="noopener" data-pagefind-ignore>58:26</a><span class="wt-spk wt-spk-named" title="Speaker I, as separated by the model; gives the name Gaddafi at 67:04" data-pagefind-ignore>Gaddafi</span>My Lord, you can put me to test. I didn&rsquo;t know about my knees.</p>
+            <p id="s3513"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3513s" target="_blank" rel="noopener" data-pagefind-ignore>58:33</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Receive the blessing.</p>
+            <p id="s3516"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3516s" target="_blank" rel="noopener" data-pagefind-ignore>58:36</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Wow, you&rsquo;re singing! See your voice?</p>
+            <p id="s3526"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3526s" target="_blank" rel="noopener" data-pagefind-ignore>58:46</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Yeah, who muted the song? I&rsquo;m sure it&rsquo;s Danny.</p>
+            <p id="s3534"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3534s" target="_blank" rel="noopener" data-pagefind-ignore>58:54</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>What?</p>
+            <p id="s3534-2"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3534s" target="_blank" rel="noopener" data-pagefind-ignore>58:54</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>What?</p>
+            <p id="s3534-3"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3534s" target="_blank" rel="noopener" data-pagefind-ignore>58:54</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>What?</p>
+            <p id="s3536"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3536s" target="_blank" rel="noopener" data-pagefind-ignore>58:56</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Gift, stop attacking me.</p>
+            <p id="s3541"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3541s" target="_blank" rel="noopener" data-pagefind-ignore>59:01</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>You attacked me first, so I, I just asked you what did you say?</p>
+            <p id="s3646"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3646s" target="_blank" rel="noopener" data-pagefind-ignore>60:46</a><span class="wt-spk wt-spk-named" title="Speaker I, as separated by the model; gives the name Gaddafi at 67:04" data-pagefind-ignore>Gaddafi</span>The one with the big voice, got big name, big moves.</p>
+            <p id="s3648"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3648s" target="_blank" rel="noopener" data-pagefind-ignore>60:48</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>I be Godzilla.</p>
+            <p id="s3651"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3651s" target="_blank" rel="noopener" data-pagefind-ignore>60:51</a><span class="wt-spk wt-spk-named" title="Speaker I, as separated by the model; gives the name Gaddafi at 67:04" data-pagefind-ignore>Gaddafi</span>Too many people outside, too many people outside, too many women want try. Can&rsquo;t touch my radio. Hey yo, what is the matter? I can give you my love if you show me your love. I go there, you go. You be all I want, my love. People put me sometimes. Happy for my bride. Stuff. Lip kiss.</p>
+            <p id="s3762"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3762s" target="_blank" rel="noopener" data-pagefind-ignore>62:42</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Every day now, be dashing foodie coin. Maximize, maximize, maximize. I&rsquo;ve got all gone visit on. Overstay my welcome. But I got chop full of songs. Shaggy chop full of songs. Bastard. Oh yo yo yo yeah yeah. You know my clever step for oboe do yibo steady recharge for dollars. Oh yo yo yeah yeah. Divorced for yena le yabo do.</p>
+            <p id="s3791"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3791s" target="_blank" rel="noopener" data-pagefind-ignore>63:11</a><span class="wt-spk wt-spk-named" title="Speaker J, as separated by the model; gives the name Winnie at 12:16" data-pagefind-ignore>Winnie</span>Zama tase for yabo.</p>
+            <p id="s3859"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3859s" target="_blank" rel="noopener" data-pagefind-ignore>64:19</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Relax. Okay, just carry it strong. Carry it strong. I tell you, 2 PM in London, I just land. It&rsquo;s crazy. Look at school. When he boss, that&rsquo;s who we serve, the man. Oh my God, what the fuck?</p>
+            <p id="s3918"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3918s" target="_blank" rel="noopener" data-pagefind-ignore>65:18</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Why?</p>
+            <p id="s3919"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3919s" target="_blank" rel="noopener" data-pagefind-ignore>65:19</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>Um, you have energy tonight. I was asking what you ate.</p>
+            <p id="s3922"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3922s" target="_blank" rel="noopener" data-pagefind-ignore>65:22</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Oh, that&rsquo;s why you had -- I still want -- yes, yes. Let&rsquo;s let&rsquo;s have Joss. Do you listen to Joss? Do you know him? Yeah. Can have that. Danny, do you know Joss?</p>
+            <p id="s3949"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3949s" target="_blank" rel="noopener" data-pagefind-ignore>65:49</a><span class="wt-spk wt-spk-named" title="Speaker I, as separated by the model; gives the name Gaddafi at 67:04" data-pagefind-ignore>Gaddafi</span>No, down.</p>
+            <p id="s3950"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3950s" target="_blank" rel="noopener" data-pagefind-ignore>65:50</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>My phone is shutting down. I&rsquo;m going to block my phone.</p>
+            <p id="s3955"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3955s" target="_blank" rel="noopener" data-pagefind-ignore>65:55</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Sorry. He&rsquo;s not here.</p>
+            <p id="s3964"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3964s" target="_blank" rel="noopener" data-pagefind-ignore>66:04</a><span class="wt-spk" title="Speaker H, as separated by the model" data-pagefind-ignore>H</span>Life is too short, make up all enemies.</p>
+            <p id="s3966"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3966s" target="_blank" rel="noopener" data-pagefind-ignore>66:06</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>No time for bullshit.</p>
+            <p id="s3969"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3969s" target="_blank" rel="noopener" data-pagefind-ignore>66:09</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Zol at 12:51" data-pagefind-ignore>Zol</span>Wow.</p>
+            <p id="s3969-2"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=3969s" target="_blank" rel="noopener" data-pagefind-ignore>66:09</a><span class="wt-spk wt-spk-named" title="Speaker I, as separated by the model; gives the name Gaddafi at 67:04" data-pagefind-ignore>Gaddafi</span>Every ring I&rsquo;m wearing is gold. They&rsquo;re calling me Gaddafi. Don&rsquo;t bend, don&rsquo;t break, don&rsquo;t fold. It&rsquo;s a bad boy gangster party. All my niggas sticking to the code. You get a Rolly, AP, Cardi. Them boys say they&rsquo;re really on road. How come I see them hardly? Couple scammers there that I know. Penny and Coke, that&rsquo;s why she moving naughty. Why you wasting control? Got a naughty girl and yadi. Attitude is so cold, bad like Nicki Minaj. A chap smoking jamba past me, don&rsquo;t tell my secret, they go grab me. Illuminati, top of the food chain, the hierarchy. She want stop my thing, the moving classy, but no be that type of Blow her eye and kiss her teeth. Dot my i and cross my t. Every ring I&rsquo;m wearing is gold. They call me Gaddafi. Don&rsquo;t bend, don&rsquo;t break, don&rsquo;t fold. It&rsquo;s a bad boy gangsta party. All my niggas sticking to the code. You get a rollie, a Picardi. Them boys say they on road. See them hardly.</p>
+            <p id="s4038"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=4038s" target="_blank" rel="noopener" data-pagefind-ignore>67:18</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>It&rsquo;s a bad man party.</p>
+            <p id="s4041"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=4041s" target="_blank" rel="noopener" data-pagefind-ignore>67:21</a><span class="wt-spk wt-spk-named" title="Speaker I, as separated by the model; gives the name Gaddafi at 67:04" data-pagefind-ignore>Gaddafi</span>All white, zero fugazi.</p>
+            <p id="s4043"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=4043s" target="_blank" rel="noopener" data-pagefind-ignore>67:23</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Bad man crew.</p>
+            <p id="s4124"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=4124s" target="_blank" rel="noopener" data-pagefind-ignore>68:44</a><span class="wt-spk wt-spk-named" title="Speaker I, as separated by the model; gives the name Gaddafi at 67:04" data-pagefind-ignore>Gaddafi</span>I&rsquo;m a hustler, baby, and I be on my grind till I find a mil. With Miss Jackson, I never meant to make your daughter cry. And if I ever said I love her, it&rsquo;s all a lie.</p>
+            <p id="s4134"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=4134s" target="_blank" rel="noopener" data-pagefind-ignore>68:54</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>It&rsquo;s all a lie.</p>
+            <p id="s4135"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=4135s" target="_blank" rel="noopener" data-pagefind-ignore>68:55</a><span class="wt-spk wt-spk-named" title="Speaker I, as separated by the model; gives the name Gaddafi at 67:04" data-pagefind-ignore>Gaddafi</span>It&rsquo;s all a lie.</p>
+            <p id="s4137"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=4137s" target="_blank" rel="noopener" data-pagefind-ignore>68:57</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>It&rsquo;s all a lie.</p>
+            <p id="s4137-2"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=4137s" target="_blank" rel="noopener" data-pagefind-ignore>68:57</a><span class="wt-spk wt-spk-named" title="Speaker I, as separated by the model; gives the name Gaddafi at 67:04" data-pagefind-ignore>Gaddafi</span>I ain&rsquo;t got time for no love and affection. It&rsquo;s the money that gets all my attention. I ain&rsquo;t got time for no love and affection. It&rsquo;s the money that gets all my attention.</p>
+            <p id="s4147"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=4147s" target="_blank" rel="noopener" data-pagefind-ignore>69:07</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Bring it, ling-a-ling.</p>
+            <p id="s4148"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=4148s" target="_blank" rel="noopener" data-pagefind-ignore>69:08</a><span class="wt-spk wt-spk-named" title="Speaker I, as separated by the model; gives the name Gaddafi at 67:04" data-pagefind-ignore>Gaddafi</span>That&rsquo;s the money calling. Bring it, ling-a-ling. That&rsquo;s the money calling me. That&rsquo;s the money calling me. For the trap, I don&rsquo;t wanna wait this again.</p>
+            <p id="s4184"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=4184s" target="_blank" rel="noopener" data-pagefind-ignore>69:44</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>You all went for the money.</p>
+            <p id="s4185"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=4185s" target="_blank" rel="noopener" data-pagefind-ignore>69:45</a><span class="wt-spk wt-spk-named" title="Speaker I, as separated by the model; gives the name Gaddafi at 67:04" data-pagefind-ignore>Gaddafi</span>If you came to it, would you ride with me? Baby girl, I&rsquo;m more than what your eyes can see. You really don&rsquo;t know, man.</p>
+            <p id="s4191"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=4191s" target="_blank" rel="noopener" data-pagefind-ignore>69:51</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>You think I&rsquo;m just a road map with no goals and no plans.</p>
+            <p id="s4194"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=4194s" target="_blank" rel="noopener" data-pagefind-ignore>69:54</a><span class="wt-spk wt-spk-named" title="Speaker I, as separated by the model; gives the name Gaddafi at 67:04" data-pagefind-ignore>Gaddafi</span>I ain&rsquo;t got time for no love and affection. It&rsquo;s the money that gets all my attention. I ain&rsquo;t got time for no love and affection. It&rsquo;s the money that gets all my attention. Bring a lingaling, just the money calling. Bring a lingaling, just the money calling. That&rsquo;s the money calling me.</p>
+            <p id="s4211"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=4211s" target="_blank" rel="noopener" data-pagefind-ignore>70:11</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Bring a lingaling.</p>
+            <p id="s4213"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=4213s" target="_blank" rel="noopener" data-pagefind-ignore>70:13</a><span class="wt-spk wt-spk-named" title="Speaker I, as separated by the model; gives the name Gaddafi at 67:04" data-pagefind-ignore>Gaddafi</span>That&rsquo;s the money calling. Bring a lingaling. That&rsquo;s the money calling me. That&rsquo;s the money calling me. Bring a lingaling. That&rsquo;s the money calling. Bring a lingaling. That&rsquo;s the money calling me. That&rsquo;s the money calling me. Bring a lingaling. That&rsquo;s the money calling. That&rsquo;s the money calling me. That&rsquo;s the money calling me. I saw the baby.</p>
+            <p id="s4247"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=4247s" target="_blank" rel="noopener" data-pagefind-ignore>70:47</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>I saw the baby.</p>
+            <p id="s4250"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=4250s" target="_blank" rel="noopener" data-pagefind-ignore>70:50</a><span class="wt-spk wt-spk-named" title="Speaker I, as separated by the model; gives the name Gaddafi at 67:04" data-pagefind-ignore>Gaddafi</span>I saw the baby. I saw the baby.</p>
+            <p id="s4270"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=4270s" target="_blank" rel="noopener" data-pagefind-ignore>71:10</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Thank you.</p>
+            <p id="s4272"><a class="wt-at" href="https://www.youtube.com/watch?v=gANcPZ7dK_o&amp;t=4272s" target="_blank" rel="noopener" data-pagefind-ignore>71:12</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Thank you.</p>
+        </div>
+    </section>
+
+
+    <section class="wrap wt-more" aria-label="More from the library">
+        <div class="country-head">
+            <h2 class="country-name">Keep reading.</h2>
+            <span class="country-meta"><a href="../library.html">The whole library &rarr;</a></span>
+        </div>
+        <ul class="rel-list">
+            <li class="rel-item">
+                <a class="rel-link" href="../watch/unlearning-a-hate-for-blockchain-ethiopia.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/aFLVXj6g0Uw/mqdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">Unlearning a Hate for Blockchain: Pop-Up City | Ethiopia</span>
+                        <span class="rel-why">Ethiopia</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="../watch/crypto-clarity-whats-happening-with-the-money-online.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/W20VlF_HHuQ/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">What&#x27;s Happening With the Money | Crypto Clarity</span>
+                        <span class="rel-why">2025</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="../watch/lets-talk-about-web-3-with-maceo-online.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/h_ncqUC-4co/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">A Podcast Before Crypto, and Money as a Public Good</span>
+                        <span class="rel-why">2025</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+<div class="wrap wtm-share"></div>
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+
+<script src="../lite-yt.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

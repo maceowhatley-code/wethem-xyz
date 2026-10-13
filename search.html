@@ -1,0 +1,1373 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Search every word of 287 published We Them Media interviews, 528,300 words, and on request the rest of a transcribed archive of 1,041,313 words. Results link to the piece and to the second it is said.">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="pagefind/wasm.en.pagefind" as="fetch" crossorigin fetchpriority="low">
+    <link rel="preload" href="pagefind/pagefind-entry.json?ts=en_f62550f475" as="fetch" crossorigin fetchpriority="low" id="pf-entry">
+    <link rel="preload" href="pagefind/pagefind.en_f62550f475.pf_meta" as="fetch" crossorigin fetchpriority="low">
+    <link rel="modulepreload" href="pagefind/pagefind.js" fetchpriority="low">
+    <script>
+    (function () {
+      var qm = /[?&]q=([^&]*)/.exec(location.search), text = '';
+      if (!qm) { return; }
+      try { text = decodeURIComponent(qm[1].replace(/\+/g, ' ')).trim(); } catch (e) { text = ''; }
+      if (!text) { return; }
+      try {
+        if (typeof WebAssembly !== 'object' || typeof URL !== 'function') { return; }
+        var l = document.getElementById('pf-entry'), t = l && /[?&]ts=([^&]+)/.exec(l.getAttribute('href') || '');
+        var tag = t ? t[1] : '';
+        var p = new Function('u', 'return import(u)')(new URL('pagefind/pagefind.js', document.baseURI).href).then(function (m) {
+          return Promise.resolve(tag ? m.options({ metaCacheTag: tag }) : null)
+            .then(function () { return m.init(); })
+            .then(function () { try { m.preload(text).catch(function () {}); } catch (e) {} return m; });
+        });
+        p.catch(function () {});
+        window.wtmPf = p;
+      } catch (e) {}
+    })();
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="wtm.css">
+    <link rel="stylesheet" href="wtm-v2.css">
+    <link rel="stylesheet" href="cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/search">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Search the transcripts">
+    <meta property="og:description" content="Search every word of 287 published We Them Media interviews, 528,300 words, and on request the rest of a transcribed archive of 1,041,313 words. Results link to the piece and to the second it is said.">
+    <meta property="og:url" content="https://wethem.xyz/search">
+    <meta property="og:image" content="https://wethem.xyz/og-site.png?v=2f44c9ed24">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Street journalism from around the world. On a Mission to Keep You In The Know.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og-site.png?v=2f44c9ed24">
+    <meta name="twitter:image:alt" content="Street journalism from around the world. On a Mission to Keep You In The Know.">
+    <title>Search the transcripts &middot; We Them Media</title>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://wethem.xyz"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Search"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="index.html" class="brand">
+            <picture><source srcset="wtm-mark-64.webp 1x, wtm-mark-128.webp 2x" type="image/webp"><img src="wtm-mark-64.png" srcset="wtm-mark-64.png 1x, wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="portfolio.html" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="search.html" aria-current="page" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="search.html" aria-current="page" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece srch-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Search</li>
+        </ol>
+    </nav>
+
+    <p class="wt-byline"><span data-count="transcripts">287</span> transcripts &middot; <span data-count="words">528,300</span> words &middot; every moment linked</p>
+    <h1 class="wt-title">Search the transcripts.</h1>
+
+    <div class="wt-prose">
+        <p>Type a word or a phrase: a piece comes up when it says every word you type, and each result links to the piece and to the second it is said.</p>
+    </div>
+
+    <form class="srch-form" role="search" action="search.html" method="get">
+        <label for="srch-q" class="srch-label">Search</label>
+        <input id="srch-q" class="srch-input" type="search" name="q" autocomplete="off" spellcheck="false" placeholder="e.g. seed phrase, Colfax, gentrifier, harmony" aria-describedby="srch-status">
+        <p class="srch-status"><label class="srch-wider"><input id="srch-all" type="checkbox"> Also search the videos with no written piece yet (loads on demand)</label></p>
+        <p class="srch-status srch-archive-note">Not every transcript has a page here. Tick the box to search those too; each result links to the moment, on the video&rsquo;s archive page where it has one and on YouTube where it does not.</p>
+        <p class="srch-status"><label class="srch-wider"><input id="srch-new" type="checkbox"> Newest first, instead of the best match</label></p>
+        <p id="srch-status" class="srch-status" aria-live="polite"></p>
+    </form>
+    <noscript><p class="wt-note">Search runs in your browser and needs JavaScript, which is off here. Every piece is still a click away: <a href="portfolio.html">the projects</a>, <a href="library.html">the library</a> and <a href="onequestion.html#questions">the question pages</a>.</p></noscript>
+    <div id="srch-series" class="srch-series" hidden>
+        <p class="srch-series-n"><span class="srch-series-k">Series</span> <strong class="srch-series-name"></strong></p>
+        <p class="srch-series-go"><span class="srch-series-count">The whole series</span><a class="srch-series-clips" href="clips.html" hidden>Watch the clips &rarr;</a></p>
+        <p class="srch-series-ask"><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work. <a href="supporter.html?s=search-series">Back the work &rarr;</a></p>
+        <script type="application/json" id="srch-series-terms">{"bangkok":{"c":2,"k":"bangkok","n":"Bangkok"},"black-blockchain-summit":{"c":41,"k":"black blockchain summit","n":"Black Blockchain Summit \u00b7 Howard University"},"boulder":{"c":0,"k":"boulder","n":"Boulder"},"denver":{"c":29,"k":"denver","n":"Denver"},"eth-boulder":{"c":6,"k":"eth boulder","n":"ETH Boulder"},"eth-conf":{"c":7,"k":"eth conf","n":"ETH Conf"},"new-york":{"c":19,"k":"new york","n":"New York"},"nigeria":{"c":5,"k":"nigeria","n":"Nigeria"},"philadelphia":{"c":2,"k":"philadelphia","n":"Philadelphia"},"streamer-university":{"c":15,"k":"streamer university","n":"Streamer University"}}</script>
+    </div>
+    <div id="srch-none" class="srch-none" hidden>
+        <p id="srch-mean" class="srch-mean" hidden></p>
+        <p class="srch-try">Try one of these:</p>
+        <p class="srch-chips"><a class="hh-chip" href="search.html?q=housing">housing</a><a class="hh-chip" href="search.html?q=the+internet">the internet</a><a class="hh-chip" href="search.html?q=family">family</a><a class="hh-chip" href="search.html?q=music">music</a><a class="hh-chip" href="search.html?q=school">school</a><a class="hh-chip" href="search.html?q=social+media">social media</a></p>
+        <p class="srch-try">Or browse <a href="portfolio.html">every project</a>, or <a href="onequestion.html#questions">the questions asked in more than one place</a>.</p>
+    </div>
+
+    <div id="srch-results" class="srch-results"></div>
+
+    <p class="wt-note srch-foot">Transcripts are corrected for names; the ums stay. Where YouTube masked a word it shows as [bleeped]. Try the <a href="onequestion.html">questions</a> for the same question answered in several cities.</p>
+</article>
+
+<div class="wrap wtm-share"></div>
+<section class="wrap ask" aria-label="Back the work">
+    <div class="ask-in">
+        <span class="ask-k">Keep this going</span>
+        <p class="ask-t"><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="onequestion.html"><span data-count="oq_count">58</span> of <span data-count="oq_goal">150</span> street interviews are in</a> for One Question, which closes Wed 4 November.</p>
+        <div class="ask-cta">
+            <a class="btn btn-primary" href="supporter.html">Back the work &rarr;</a>
+            <a class="btn btn-line" href="film.html">Film one where you live</a>
+        </div>
+    </div>
+</section>
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="where-to-start.html">Where to start</a></li>
+                    <li><a href="portfolio.html">Projects</a></li>
+                    <li><a href="learn.html">Learn crypto</a></li>
+                    <li><a href="clips.html">Clips</a></li>
+                    <li><a href="library.html">The library</a></li>
+                    <li><a href="places.html">Where we filmed</a></li>
+                    <li><a href="guests.html">Who is on the tape</a></li>
+                    <li><a href="dispatches.html">Updates</a></li>
+                    <li><a href="podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="start.html">About</a></li>
+                    <li><a href="mission.html">Mission</a></li>
+                    <li><a href="history.html">How this started</a></li>
+                    <li><a href="people.html">Contributors</a></li>
+                    <li><a href="team.html">The editor roster</a></li>
+                    <li><a href="books.html">Books from the community</a></li>
+                    <li><a href="state.html">State of the network</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="ledger.html">What we have not published</a></li>
+                    <li><a href="privacy.html">What this site keeps about you</a></li>
+                    <li><a href="privacy.html#collect">Your choices</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="supporter.html">Back the work</a></li>
+                    <li><a href="dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="onequestion.html">One Question</a></li>
+                    <li><a href="commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="lite-yt.js" defer></script>
+
+<aside aria-label="Newsletter"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" class="wtm-newsletter-pill" aria-label="The We Them Weekly, once a week by email: what went up and what we are asking next">The We Them Weekly, once a week by email <span class="wtm-newsletter-pill-arrow">&rarr;</span></a></aside>
+<script src="nav.js" defer></script>
+<script src="track.js" defer></script>
+
+<script>
+(function () {
+  var q = document.getElementById('srch-q');
+  var status = document.getElementById('srch-status');
+  var out = document.getElementById('srch-results');
+  var all = document.getElementById('srch-all');
+  var srt = document.getElementById('srch-new');
+  var wantNew = true;
+  try { if (window.localStorage.getItem('wtm-search-best') === '1') { wantNew = false; } } catch (e) { wantNew = true; }
+  var none = document.getElementById('srch-none');
+  var mean = document.getElementById('srch-mean');
+  var seriesBox = document.getElementById('srch-series'), SERIES = {}, seriesOn = '', lastN = null;
+  var page = document.querySelector('.srch-page');
+  try { SERIES = JSON.parse((document.getElementById('srch-series-terms') || {}).textContent || '{}'); } catch (e) { SERIES = {}; }
+  function seriesKey(t) { return t.toLowerCase().replace(/[‘’']/g, '').replace(/[^a-z0-9]+/g, ' ').trim(); }
+  function seriesShow(text) {
+    if (!seriesBox) { return; }
+    var k = seriesKey(text), hit = '';
+    Object.keys(SERIES).forEach(function (slug) { if (SERIES[slug].k === k) { hit = slug; } });
+    seriesOn = hit;
+    seriesBox.hidden = !hit;
+    if (page) { page.classList.toggle('srch-series-on', !!hit); }
+    if (!hit) { return; }
+    seriesBox.querySelector('.srch-series-name').textContent = SERIES[hit].n;
+    seriesBox.querySelector('.srch-series-count').textContent = 'The whole series';
+    var clipsA = seriesBox.querySelector('.srch-series-clips');
+    clipsA.hidden = !SERIES[hit].c;
+    clipsA.setAttribute('href', 'clips.html#series=' + hit);
+  }
+  function seriesCount(n) {
+    if (!seriesBox || !seriesOn || typeof n !== 'number') { return; }
+    seriesBox.querySelector('.srch-series-count').textContent = 'The whole series, ' + n + (wide() ? ' result' : ' piece') + (n === 1 ? '' : 's');
+  }
+  var YT = 'https://www.youtube.com/watch?v=';
+  var SHOW = 6, timer = null, seq = 0, cur = null;
+  var NONE = 'Nothing said that. Check the spelling, or try one word.';
+  var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  function dateOf(d) {
+    var m = /^(\d{4})-(\d\d)-(\d\d)/.exec(String(d || ''));
+    return (m && MONTHS[+m[2] - 1]) ? MONTHS[+m[2] - 1] + ' ' + (+m[3]) + ', ' + m[1] : '';
+  }
+  function wtPic(id,k,sz,up){k=k||{};var y='https://i.ytimg.com/vi/'+id+'/',hq=y+'hqdefault.jpg',src,ss,w,h;if(k.w){var b=(up||'')+'stills/'+id;if(k.s){src=b+'-640.jpg';ss=b+'-320.jpg 320w, '+b+'-480.jpg 480w, '+src+' 640w'}else{src=b+'.jpg';ss=src+' '+k.w+'w, '+hq+' 480w'}w=k.w;h=k.h}else{src=hq;ss=y+'mqdefault.jpg 320w, '+hq+' 480w';w=480;h=270}return '<img src="'+src+'" srcset="'+ss+'" sizes="'+sz+'" alt="" loading="lazy" decoding="async" width="'+w+'" height="'+h+'">'+(k.l?'<span class="wt-dur"><span class="visually-hidden">Length </span>'+k.l+'</span>':'')}
+  var PICSZ = '(max-width: 560px) 112px, 168px';
+  if (!q || !status || !out) { return; }
+  if (!window.Promise || !window.fetch || !document.querySelector) {
+    status.innerHTML = 'Search runs in your browser, and this one cannot run it. Every piece is still a click away: <a href="portfolio.html">the projects</a>, <a href="library.html">the library</a> and <a href="onequestion.html#questions">the question pages</a>.';
+    return;
+  }
+  var imp = null;
+  try { if (typeof WebAssembly === 'object' && typeof URL === 'function') { imp = new Function('u', 'return import(u)'); } } catch (e) { imp = null; }
+  var mode = imp ? 'pf' : 'json';
+
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function fmt(t) { var m = Math.floor(t / 60), s = t % 60; return m + ':' + (s < 10 ? '0' : '') + s; }
+  function wide() { return !!(all && all.checked); }
+  function newest() { return !!(srt && srt.checked && !wide()); }
+  function syncSort() {
+    if (!srt) { return; }
+    var off = wide() || mode !== 'pf';
+    srt.disabled = off;
+    srt.checked = !off && wantNew;
+    var lab = srt.parentNode;
+    if (lab) {
+      lab.title = wide() ? 'Newest first cannot be combined with the wider search: the two indexes sort separately.'
+        : (mode !== 'pf' ? 'Newest first needs the full search index, which this browser cannot load.' : '');
+      lab.hidden = mode !== 'pf';
+    }
+  }
+  function showNone(on) {
+    if (none) { none.hidden = !on; }
+    if (mean) { mean.hidden = true; }
+  }
+  function nextButton(more) {
+    var old = out.querySelector('.srch-next');
+    if (old) { old.parentNode.removeChild(old); }
+    if (more) { out.insertAdjacentHTML('beforeend', '<p class="srch-next"><button type="button" class="btn btn-line" data-more="1">Show more</button></p>'); }
+  }
+
+  var index = null, loading = null, extra = null, extraLoading = null;
+  function terms(s) {
+    return s.toLowerCase().replace(/[\u2018\u2019]/g, "'").split(/[^a-z0-9']+/).filter(function (w) { return w.length > 1; });
+  }
+  var SHORT = 2;
+  function isShort(t) { return t.length <= SHORT; }
+  function wholeRe(t, flags) { return new RegExp('(^|[^a-z0-9])(' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')(?![a-z0-9])', flags); }
+  function has(low, w) { return isShort(w) ? wholeRe(w, '').test(low) : low.indexOf(w) >= 0; }
+  function wholeNote(shorts) {
+    if (!shorts.length) { return ''; }
+    return ' \u00b7 ' + shorts.map(function (t) { return '\u201c' + t + '\u201d'; }).join(', ') +
+           (shorts.length === 1 ? ' matched as a whole word only' : ' matched as whole words only');
+  }
+  function loadExtra() {
+    if (extra) { return Promise.resolve(extra); }
+    if (extraLoading) { return extraLoading; }
+    status.textContent = 'Loading the rest of the archive...';
+    extraLoading = fetch('search-archive.json').then(function (r) { return r.json(); })
+      .then(function (j) { extra = j; return j; })
+      .catch(function () { status.textContent = 'The wider archive could not be loaded.'; extraLoading = null; });
+    return extraLoading;
+  }
+  function load() {
+    if (index) return Promise.resolve(index);
+    if (loading) return loading;
+    status.textContent = 'Loading the transcripts\u2026';
+    loading = fetch('search-index.json').then(function (r) { return r.json(); }).then(function (j) {
+      index = j;
+      if (!q.value.trim()) { status.textContent = ''; }
+      return j;
+    }).catch(function () { status.textContent = 'The index could not be loaded.'; loading = null; });
+    return loading;
+  }
+  function snippet(text, ws) {
+    var low = text.toLowerCase(), first = -1;
+    for (var i = 0; i < ws.length; i++) {
+      var p = isShort(ws[i]) ? low.search(wholeRe(ws[i], '')) : low.indexOf(ws[i]);
+      if (p >= 0 && (first < 0 || p < first)) first = p;
+    }
+    var start = Math.max(0, first - 110), end = Math.min(text.length, first + 190);
+    var s = (start > 0 ? '\u2026' : '') + text.slice(start, end) + (end < text.length ? '\u2026' : '');
+    s = esc(s);
+    ws.forEach(function (w) {
+      if (isShort(w)) { s = s.replace(wholeRe(w, 'gi'), '$1<mark>$2</mark>'); }
+      else { s = s.replace(new RegExp('(' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi'), '<mark>$1</mark>'); }
+    });
+    return s;
+  }
+  function scan(pool, ws, any) {
+    var hits = [], res = ws.map(function (w) { return isShort(w) ? wholeRe(w, 'g') : null; });
+    pool.forEach(function (v) {
+      var best = [], vscore = 0;
+      v.paras.forEach(function (p) {
+        var low = p[1].toLowerCase(), score = 0, every = true, some = 0;
+        for (var i = 0; i < ws.length; i++) {
+          var n = res[i] ? (low.match(res[i]) || []).length : low.split(ws[i]).length - 1;
+          if (n) { some++; score += n; } else { every = false; if (!any) { break; } }
+        }
+        if (any ? some : every) {
+          if (any) { score += some * 1000; }
+          best.push({ t: p[0], text: p[1], score: score }); vscore += score;
+        }
+      });
+      if (best.length) {
+        best.sort(function (a, b) { return b.score - a.score; });
+        hits.push({ v: v, paras: best.slice(0, 3), n: best.length, score: vscore });
+      }
+    });
+    hits.sort(function (a, b) { return b.score - a.score; });
+    return hits;
+  }
+  function runJson(text, my) {
+    var ws = terms(text);
+    if (!ws.length) { out.innerHTML = ''; status.textContent = ''; showNone(false); return; }
+    var want = wide() ? Promise.all([load(), loadExtra()]) : load().then(function (i) { return [i, null]; });
+    want.then(function (pair) {
+      if (my !== seq) { return; }
+      var idx = pair[0], more = pair[1];
+      if (!idx) return;
+      var pool = idx.videos.concat(more && more.videos ? more.videos : []);
+      var hits = scan(pool, ws, false), some = false;
+      if (!hits.length && ws.length > 1) { hits = scan(pool, ws, true); some = true; }
+      if (!hits.length) {
+        out.innerHTML = ''; status.textContent = NONE;
+        nothing(ws, [], my);
+        return;
+      }
+      var total = hits.reduce(function (n, h) { return n + h.n; }, 0);
+      found.n = hits.length;
+      status.textContent = total + ' passage' + (total === 1 ? '' : 's') + (some ? ' with some of the words' : '') + ' in ' + hits.length + ' video' + (hits.length === 1 ? '' : 's') +
+                           (hits.length > 40 ? ', best 40 first' : '') + wholeNote(ws.filter(isShort));
+      out.innerHTML = hits.slice(0, 40).map(function (h) {
+        var v = h.v;
+        var rows = h.paras.map(function (p) {
+          var when = '';
+          if (p.t !== null) {
+            if (v.slug) { when = ' <a class="srch-at" href="watch/' + v.slug + '.html#t=' + p.t + '">play at ' + fmt(p.t) + '</a>'; }
+            else if (v.arch) { when = ' <a class="srch-at" href="archive/' + v.arch + '.html#t=' + p.t + '">play at ' + fmt(p.t) + '</a>'; }
+            else { when = ' <a class="srch-at" href="' + YT + v.id + '&t=' + p.t + 's" target="_blank" rel="noopener">' + fmt(p.t) + ' on YouTube</a>'; }
+          }
+          return '<p class="srch-hit">' + snippet(p.text, ws) + when + '</p>';
+        }).join('');
+        var more = h.n > 3 ? '<p class="srch-more">' + (h.n - 3) + ' more in this transcript</p>' : '';
+        var href = v.slug ? ('watch/' + v.slug + '.html')
+                          : (v.arch ? ('archive/' + v.arch + '.html') : (YT + v.id));
+        var vmeta = v.slug ? (esc(v.place) + (v.who ? ' \u00b7 reported by ' + esc(v.who) : ''))
+                           : (v.arch ? 'from the archive \u00b7 transcript on this site'
+                                     : 'transcribed, no page here yet \u00b7 on YouTube');
+        return '<section class="srch-video"><a class="srch-thumb wt-thumb" href="' + href + '" tabindex="-1" aria-hidden="true">' +
+               wtPic(v.id, v.k, PICSZ) + '</a><div class="srch-main"><h2 class="srch-title"><a href="' + href + '">' + esc(v.title) + '</a></h2>' +
+               '<p class="srch-meta">' + vmeta + '</p>' + rows + more + '</div></section>';
+      }).join('');
+      if (some) {
+        nothing(ws, ws.map(function (w) {
+          return pool.some(function (v) { return v.paras.some(function (p) { return has(p[1].toLowerCase(), w); }); });
+        }), my);
+      } else { showNone(false); }
+    });
+  }
+
+  var pf = null, pfLoading = null, merged = null;
+  var PF_TAG = (function () {
+    var l = document.getElementById('pf-entry'), t = l && /[?&]ts=([^&]+)/.exec(l.getAttribute('href') || '');
+    return t ? t[1] : '';
+  })();
+  function pfStart(m) {
+    return Promise.resolve(PF_TAG ? m.options({ metaCacheTag: PF_TAG }) : null)
+      .then(function () { return m.init(); }).then(function () { return m; });
+  }
+  function loadPf() {
+    if (pf) { return Promise.resolve(pf); }
+    if (pfLoading) { return pfLoading; }
+    status.textContent = 'Loading search, about 180 KB';
+    pfLoading = (window.wtmPf || imp(new URL('pagefind/pagefind.js', document.baseURI).href).then(pfStart)).then(function (m) {
+      pf = m;
+      if (!q.value.trim()) { status.textContent = ''; }
+      return m;
+    }).catch(function () {
+      pfLoading = null; mode = 'json'; syncSort(); return null;
+    });
+    return pfLoading;
+  }
+  function withArchive(m) {
+    if (!wide()) { return Promise.resolve(); }
+    if (!merged) {
+      status.textContent = 'Loading the rest of the archive\u2026';
+      merged = m.mergeIndex(new URL('pagefind/archive/', document.baseURI).href);
+    }
+    return merged;
+  }
+  function pfFilters() { return wide() ? {} : { kind: { any: ['watch', 'question', 'partner'] } }; }
+  function norm(w) { return w.toLowerCase().replace(/[^a-z0-9\u00c0-\u024f]+/g, ''); }
+  function pfq(t) { return isShort(t) ? '"' + t + '"' : t; }
+  function termOf(word, ts) {
+    var w = norm(word);
+    if (!w) { return -1; }
+    for (var i = 0; i < ts.length; i++) {
+      var t = ts[i], c = 0;
+      if (isShort(t)) { if (w === t) { return i; } continue; }
+      while (c < w.length && c < t.length && w.charAt(c) === t.charAt(c)) { c++; }
+      if (w.indexOf(t) === 0 || c >= Math.max(3, t.length - 3)) { return i; }
+    }
+    return -1;
+  }
+  function shortPrefix(word, ts) {
+    var w = norm(word);
+    for (var i = 0; i < ts.length; i++) { if (isShort(ts[i]) && w !== ts[i] && w.indexOf(ts[i]) === 0) { return true; } }
+    return false;
+  }
+  function wholeWords(m, listP, shorts) {
+    if (!shorts.length) { return listP; }
+    return Promise.all([listP].concat(shorts.map(function (t) {
+      return m.search(pfq(t), {}).then(function (r) {
+        var ids = {};
+        r.results.forEach(function (x) { ids[x.id] = 1; });
+        return ids;
+      });
+    }))).then(function (all) {
+      var sets = all.slice(1);
+      return all[0].filter(function (x) { return sets.every(function (ids) { return ids[x.id]; }); });
+    });
+  }
+  function win(words, hits, start, end, at) {
+    var s = Math.max(start, at - 14), e = Math.min(end, s + 40), hit = {}, parts = [];
+    hits.forEach(function (h) { hit[h] = 1; });
+    for (var i = s; i < e; i++) { parts.push(hit[i] ? '<mark>' + esc(words[i]) + '</mark>' : esc(words[i])); }
+    return (s > start ? '\u2026 ' : '') + parts.join(' ') + (e < end ? ' \u2026' : '');
+  }
+  function analyse(d, ts) {
+    var words = String(d.content || '').split(/[\r\n\s]+/g);
+    var anc = (d.anchors || []).filter(function (a) { return /^[sc]\d+$/.test(a.id); })
+                               .sort(function (a, b) { return a.location - b.location; });
+    var locs = (d.weighted_locations && d.weighted_locations.length) ? d.weighted_locations
+             : (d.locations || []).map(function (l) { return { location: l, balanced_score: 1 }; });
+    var by = {}, list = [], found = {}, top = null, hits = [];
+    locs.forEach(function (w) {
+      if (w.location >= words.length) { return; }
+      var ti = termOf(words[w.location] || '', ts);
+      if (ti < 0 && shortPrefix(words[w.location] || '', ts)) { return; }
+      if (ti >= 0) { found[ti] = 1; }
+      hits.push(w.location);
+      if (!top || w.balanced_score > top.balanced_score) { top = w; }
+      var ai = -1;
+      for (var x = 0; x < anc.length; x++) { if (anc[x].location <= w.location) { ai = x; } else { break; } }
+      if (ai < 0) { return; }
+      var o = by[ai];
+      if (!o) { o = by[ai] = { t: +anc[ai].id.slice(1), ai: ai, score: 0, best: w, hits: [], terms: {}, exact: {} }; list.push(o); }
+      o.score += w.balanced_score; o.hits.push(w.location);
+      if (w.balanced_score > o.best.balanced_score) { o.best = w; }
+      if (ti >= 0) {
+        o.terms[ti] = 1;
+        if (norm(words[w.location]).indexOf(ts[ti]) === 0) { o.exact[ti] = 1; }
+      }
+    });
+    list.forEach(function (o) { o.cover = Object.keys(o.terms).length; o.as = Object.keys(o.exact).length; });
+    list.sort(function (a, b) { return (b.cover - a.cover) || (b.as - a.as) || (b.score - a.score); });
+    list.forEach(function (o) {
+      var end = o.ai + 1 < anc.length ? anc[o.ai + 1].location : words.length;
+      o.html = win(words, o.hits, anc[o.ai].location, end, o.best.location);
+    });
+    return { list: list, found: found, words: words, hits: hits, top: top };
+  }
+  function metaFound(m, ts, found) {
+    var s = [m.title || '', m.place || '', m.who || '', m.show || ''].join(' ').split(/\s+/);
+    for (var i = 0; i < s.length; i++) { var ti = termOf(s[i], ts); if (ti >= 0) { found[ti] = 1; } }
+    return found;
+  }
+  function tapeAnchors(d) {
+    try { d.anchors = JSON.parse((d.meta || {}).p || '[]').map(function (x) { return { id: 's' + x[1], location: x[0] }; }); }
+    catch (e) { d.anchors = []; }
+  }
+  function isReal(d, ts) {
+    if ((d.meta || {}).kind === 'tape') { tapeAnchors(d); }
+    return Object.keys(metaFound(d.meta || {}, ts, analyse(d, ts).found)).length > 0;
+  }
+  function holds(d, ts) {
+    var ws = String(d.content || '').split(/[\r\n\s]+/g).concat(String((d.meta || {}).title || '').split(/\s+/));
+    for (var i = 0; i < ws.length; i++) {
+      var w = norm(ws[i]);
+      for (var j = 0; j < ts.length; j++) { if (isShort(ts[j]) ? w === ts[j] : w.indexOf(ts[j]) === 0) { return true; } }
+    }
+    return false;
+  }
+  function href(d) { return String(d.url || '').replace(/^\//, ''); }
+  function partnerLine(who, show, r) {
+    return (r === 'posted' ? 'posted by ' : r === 'guest' ? '' : 'by ') + esc(who || '') +
+           (r === 'guest' ? ', the guest' : '') + (show ? ' · ' + esc(show) : '');
+  }
+  function card(d, ts) {
+    var m = d.meta || {}, k = {}, tape = m.kind === 'tape';
+    try { k = JSON.parse(m.k || '{}'); } catch (e) { k = {}; }
+    if (tape) { tapeAnchors(d); }
+    var a = analyse(d, ts);
+    var h = tape ? YT + m.vid : href(d), ext = tape ? ' target="_blank" rel="noopener"' : '';
+    var rows = '', more = '';
+    a.list.slice(0, 3).forEach(function (o) {
+      rows += '<p class="srch-hit">' + o.html + ' ' + (tape
+        ? '<a class="srch-at" href="' + esc(YT + m.vid + '&t=' + o.t + 's') + '"' + ext + '>' + fmt(o.t) + ' on YouTube</a>'
+        : '<a class="srch-at" href="' + esc(h) + '#t=' + o.t + '">play at ' + fmt(o.t) + '</a>') + '</p>';
+    });
+    if (!rows && a.top) { rows = '<p class="srch-hit">' + win(a.words, a.hits, 0, a.words.length, a.top.location) + '</p>'; }
+    if (a.list.length > 3) { more = '<p class="srch-more">' + (a.list.length - 3) + ' more in this transcript</p>'; }
+    var line = m.kind === 'question' ? 'One question, answered in more than one place'
+             : m.kind === 'archive' ? 'from the archive \u00b7 transcript on this site'
+             : tape ? 'transcribed, no page here yet \u00b7 on YouTube'
+             : m.kind === 'partner' ? partnerLine(m.who, m.show, m.r)
+             : esc(m.place || '') + (m.who ? ' \u00b7 reported by ' + esc(m.who) : '');
+    var when = dateOf(m.date);
+    if (when) { line = (line ? line + ' \u00b7 ' : '') + when; }
+    var pic = m.vid ? '<a class="srch-thumb wt-thumb" href="' + esc(h) + '"' + ext + ' tabindex="-1" aria-hidden="true">' + wtPic(m.vid, k, PICSZ) + '</a>'
+                    : '<span class="srch-thumb wt-thumb" aria-hidden="true"></span>';
+    var title = esc(String(m.title || m.vid || '').replace(/\.$/, ''));
+    return { html: '<section class="srch-video">' + pic + '<div class="srch-main"><h2 class="srch-title"><a href="' + esc(h) + '"' + ext + '>' +
+                   title + '</a></h2><p class="srch-meta">' + line + '</p>' + rows + more + '</div></section>',
+             found: metaFound(m, ts, a.found) };
+  }
+  function statusLine(st) {
+    var drawn = out.querySelectorAll('.srch-video').length;
+    var n = st.list.length - st.dropped - (st.kept - drawn);
+    lastN = n;
+    var s = n + (wide() ? ' result' : ' piece') + (n === 1 ? '' : 's') + (st.some ? ' with some of the words' : '');
+    if (n > drawn && drawn) { s += (newest() ? ', newest ' : ', best ') + drawn + ' first'; }
+    return s + wholeNote(st.shorts || []) + nearNote;
+  }
+  function draw(st, force) {
+    var first = !st.shown, page = st.list.slice(st.shown, st.shown + SHOW);
+    return Promise.all(page.map(function (x) { return x.data(); })).then(function (ds) {
+      if (st.my !== seq) { return 'stale'; }
+      var cards = ds.map(function (d) { return card(d, st.ts); })
+                    .filter(function (c) { for (var k in c.found) { return true; } return false; });
+      if (first) {
+        var got = {};
+        cards.forEach(function (c) { for (var k in c.found) { got[k] = 1; } });
+        var have = Object.keys(got).length;
+        if (!have) { return 'none'; }
+        if (have < st.ts.length && !force) { return 'some'; }
+      }
+      st.shown += page.length;
+      st.kept += cards.length; st.dropped += page.length - cards.length;
+      cur = st;
+      var html = cards.map(function (c) { return c.html; }).join('');
+      if (first) { out.innerHTML = html; } else { nextButton(false); out.insertAdjacentHTML('beforeend', html); }
+      if (first) { found.n = st.list.length - st.dropped; }
+      status.textContent = statusLine(st);
+      seriesCount(lastN);
+      nextButton(st.list.length > st.shown);
+      if (first && !st.some) { showNone(false); }
+      return 'ok';
+    });
+  }
+  function fewer(st, how) {
+    var m = st.m, ts = st.ts, my = st.my, words = ts.slice(0, 4);
+    if (words.length < 2) { out.innerHTML = ''; status.textContent = NONE; nextButton(false); return Promise.resolve(nothing(ts, [], my)).then(function () { return false; }); }
+    return Promise.all(words.map(function (w) { return m.search(pfq(w), { filters: pfFilters() }); })).then(function (rs) {
+      if (my !== seq) { return; }
+      return Promise.all(rs.map(function (r, i) {
+        return r.results.length ? r.results[0].data().then(function (d) { return isReal(d, [words[i]]); }) : false;
+      })).then(function (found) {
+        if (my !== seq) { return; }
+        if (how === 'some' && found.every(Boolean)) { return draw(st, true).then(function () { return 'ok'; }); }
+        var by = {}, list = [];
+        rs.forEach(function (r, i) {
+          if (!found[i]) { return; }
+          r.results.forEach(function (x) {
+            var o = by[x.id];
+            if (!o) { o = by[x.id] = { x: x, n: 0, score: 0 }; list.push(o); }
+            o.n++; o.score += x.score || 0;
+          });
+        });
+        list.sort(function (a, b) { return (b.n - a.n) || (b.score - a.score); });
+        var st2 = { m: m, ts: ts, list: list.map(function (o) { return o.x; }), shown: 0, my: my, some: true,
+                    kept: 0, dropped: 0, shorts: st.shorts };
+        return (list.length ? draw(st2, true) : Promise.resolve('none')).then(function (res) {
+          if (my !== seq) { return; }
+          if (res !== 'ok') { out.innerHTML = ''; status.textContent = NONE; nextButton(false); }
+          return Promise.resolve(nothing(ts, found, my)).then(function () { return found.some(Boolean) ? 'partial' : false; });
+        });
+      });
+    });
+  }
+  function runPf(text, my) {
+    var ts = text.toLowerCase().split(/\s+/).map(norm).filter(function (w, i, a) { return w.length > 1 && a.indexOf(w) === i; });
+    if (!ts.length) { out.innerHTML = ''; status.textContent = ''; showNone(false); return; }
+    var shorts = ts.filter(isShort);
+    loadPf().then(function (m) {
+      if (my !== seq) { return; }
+      if (!m) { return runJson(text, my); }
+      return withArchive(m).then(function () {
+        var list;
+        if (!wide()) {
+          var opts = { filters: pfFilters() };
+          if (newest()) { opts.sort = { date: 'desc' }; }
+          list = m.search(text, opts).then(function (r) { return r.results; });
+        } else {
+          list = Promise.all([
+            m.search(text, { filters: { kind: { any: ['watch', 'question', 'archive', 'partner'] } } }),
+            m.search(text, { filters: { kind: ['tape'] } })
+          ]).then(function (rs) {
+            return Promise.all(rs.map(function (r) {
+              return Promise.all(r.results.slice(0, 3).map(function (x) { return x.data(); })).then(function (ds) {
+                return ds.some(function (d) { return holds(d, ts); });
+              });
+            })).then(function (h) {
+              var a = (h[0] || !h[1]) ? rs[0].results : [], b = (h[1] || !h[0]) ? rs[1].results : [];
+              return a.concat(b).sort(function (x, y) { return (y.score || 0) - (x.score || 0); });
+            });
+          });
+        }
+        return wholeWords(m, list, shorts);
+      }).then(function (list) {
+        if (my !== seq) { return; }
+        var st = { m: m, ts: ts, list: list, shown: 0, my: my, some: false, kept: 0, dropped: 0, shorts: shorts };
+        return draw(st).then(function (how) {
+          if (my !== seq) { return; }
+          if (how === 'none' || how === 'some') { return fewer(st, how); }
+          return 'ok';
+        });
+      }).then(function (known) { if (my === seq && known) { nearRun(text, ts, my, known); } });
+    }).catch(function () {
+      if (my !== seq) { return; }
+      mode = 'json'; syncSort(); runJson(text, my);
+    });
+  }
+
+  var NEAR_WAIT = 450, NEAR_MIN = 0.40, NEAR_SPREAD = 0.08, NEAR_PIECES = 4, NEAR_PER = 2;
+  var near = document.createElement('section'), wordsHead = document.createElement('p');
+  near.className = 'srch-near'; near.hidden = true; near.setAttribute('aria-label', 'Close in meaning');
+  wordsHead.className = 'srch-near-head'; wordsHead.hidden = true; wordsHead.textContent = 'With every word you typed';
+  out.parentNode.insertBefore(near, out.nextSibling);
+  out.parentNode.insertBefore(wordsHead, out);
+  var SEEN_MAX = 4, seenEl = document.createElement('section');
+  seenEl.className = 'srch-seen'; seenEl.hidden = true; seenEl.setAttribute('aria-label', 'Seen on screen');
+  near.parentNode.insertBefore(seenEl, near.nextSibling);
+  function seenCards(rs, floor) {
+    var by = {}, list = [];
+    rs.forEach(function (x) {
+      var m = x.m || {};
+      if (m.k !== 'seen' || !(x.s >= floor) || !m.u || !m.im || by[m.u] || list.length >= SEEN_MAX) { return; }
+      by[m.u] = 1; list.push(m);
+    });
+    return list;
+  }
+  function seenDraw(rs) {
+    var floor = NEAR_MIN;
+    rs.forEach(function (x) { if ((x.m || {}).k === 'seen' && x.s - NEAR_SPREAD > floor) { floor = x.s - NEAR_SPREAD; } });
+    var cs = seenCards(rs, floor);
+    if (!cs.length) { seenEl.hidden = true; seenEl.innerHTML = ''; return 0; }
+    seenEl.innerHTML = '<p class="srch-near-head">Seen on screen <span>· what the camera shows, whether or not anyone says it</span></p>' +
+      '<div class="srch-seen-row">' + cs.map(function (m) {
+        var h = esc(m.u) + '#t=' + m.t;
+        return '<a class="srch-seen-card" href="' + h + '"><img src="' + esc(m.im) + '" alt="" loading="lazy" decoding="async" width="' +
+               m.iw + '" height="' + m.ih + '"><span class="srch-seen-title">' + esc(String(m.ti || m.v || '').replace(/\.$/, '')) +
+               '</span><span class="srch-seen-cap">' + esc(m.s || '') + '</span><span class="srch-at">play at ' + fmt(m.t) + '</span></a>';
+      }).join('') + '</div>';
+    near.parentNode.insertBefore(seenEl, near.nextSibling);
+    seenEl.hidden = false;
+    return cs.length;
+  }
+  var nearTimer = null, nearCtl = null, nearAsked = {}, nearNote = '';
+  function nearAsk(text, wideOn) {
+    var key = text.toLowerCase().replace(/\s+/g, ' ').trim() + (wideOn ? '|all' : '');
+    if (nearAsked[key]) { return nearAsked[key]; }
+    if (nearCtl) { try { nearCtl.abort(); } catch (e) {} }
+    nearCtl = window.AbortController ? new AbortController() : null;
+    var p = fetch('/api/meaning?q=' + encodeURIComponent(text) + (wideOn ? '&all=1' : ''), nearCtl ? { signal: nearCtl.signal } : {})
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (j) { return j && j.ok ? (j.r || []) : null; })
+      .catch(function () { return null; });
+    nearAsked[key] = p;
+    p.then(function (r) { if (r === null) { delete nearAsked[key]; } });
+    return p;
+  }
+  function nearClear() {
+    clearTimeout(nearTimer); nearNote = '';
+    near.hidden = true; near.innerHTML = ''; wordsHead.hidden = true;
+    seenEl.hidden = true; seenEl.innerHTML = '';
+  }
+  var NEAR_STOP = ' about also been could does from have into just like more only over some than that their them then there they this very were what when where which with would your ';
+  var NEAR_ENDS = ['ings', 'ing', 'ers', 'er', 'es', 'ed', 'ly', 's'];
+  function stemsOf(ts) {
+    return ts.filter(function (t) { return t.length >= 3 && NEAR_STOP.indexOf(' ' + t + ' ') < 0; })
+             .map(function (t) {
+               for (var i = 0; i < NEAR_ENDS.length; i++) {
+                 var e = NEAR_ENDS[i];
+                 if (t.length - e.length >= 4 && t.slice(-e.length) === e) { return t.slice(0, -e.length); }
+               }
+               return t;
+             });
+  }
+  function stemHit(w, stems) {
+    w = norm(w);
+    for (var i = 0; i < stems.length; i++) { if (w.indexOf(stems[i]) === 0) { return true; } }
+    return false;
+  }
+  function nearSnip(s, stems, n) {
+    var w = String(s || '').split(/\s+/), best = 0, bn = 0, i;
+    if (w.length > n && stems.length) {
+      var hit = w.map(function (x) { return stemHit(x, stems) ? 1 : 0; }), c = 0;
+      for (i = 0; i < n; i++) { c += hit[i]; }
+      bn = c;
+      for (i = n; i < w.length; i++) {
+        c += hit[i] - hit[i - n];
+        if (c > bn) { bn = c; best = i - n + 1; }
+      }
+      best = bn ? Math.max(0, best - 4) : 0;
+    }
+    var end = Math.min(w.length, best + n);
+    return (best > 0 ? '\u2026 ' : '') + esc(w.slice(best, end).join(' ')) + (end < w.length ? ' \u2026' : '');
+  }
+  function nearGroups(rs, shown, stems, wordsOut) {
+    var by = {}, list = [], floor = NEAR_MIN;
+    rs.forEach(function (x) { if ((x.m || {}).k !== 'seen' && x.s - NEAR_SPREAD > floor) { floor = x.s - NEAR_SPREAD; } });
+    rs.forEach(function (x) {
+      var m = x.m || {};
+      if (m.k === 'seen' || !(x.s >= floor) || !m.u || shown[m.u]) { return; }
+      if (wordsOut && String(m.s || '').split(/\s+/).some(function (w) { return stemHit(w, stems); })) { return; }
+      var g = by[m.u];
+      if (!g) {
+        if (list.length >= NEAR_PIECES) { return; }
+        g = by[m.u] = { m: m, hits: [] }; list.push(g);
+      }
+      if (g.hits.length < NEAR_PER) { g.hits.push(m); }
+    });
+    return list;
+  }
+  function nearCard(g, stems) {
+    var m = g.m, k = {}, tape = m.k === 'tape', h = m.u, ext = tape ? ' target="_blank" rel="noopener"' : '';
+    try { k = JSON.parse(m.th || '{}'); } catch (e) { k = {}; }
+    var rows = g.hits.map(function (x) {
+      var at = '';
+      if (x.t >= 0) {
+        at = ' ' + (tape
+          ? '<a class="srch-at" href="' + esc(YT + x.v + '&t=' + x.t + 's') + '"' + ext + '>' + fmt(x.t) + ' on YouTube</a>'
+          : '<a class="srch-at" href="' + esc(h) + '#t=' + x.t + '">play at ' + fmt(x.t) + '</a>');
+      }
+      return '<p class="srch-hit">' + nearSnip(x.s, stems, 42) + at + '</p>';
+    }).join('');
+    var line = m.k === 'question' ? 'One question, answered in more than one place'
+             : m.k === 'archive' ? 'from the archive \u00b7 transcript on this site'
+             : tape ? 'transcribed, no page here yet \u00b7 on YouTube'
+             : m.k === 'partner' ? partnerLine(m.w, m.sh, m.r)
+             : esc(m.pl || '') + (m.w ? ' \u00b7 reported by ' + esc(m.w) : '');
+    var pic = m.v ? '<a class="srch-thumb wt-thumb" href="' + esc(h) + '"' + ext + ' tabindex="-1" aria-hidden="true">' + wtPic(m.v, k, PICSZ) + '</a>'
+                  : '<span class="srch-thumb wt-thumb" aria-hidden="true"></span>';
+    return '<section class="srch-video">' + pic + '<div class="srch-main"><h2 class="srch-title"><a href="' + esc(h) + '"' + ext + '>' +
+           esc(String(m.ti || m.v || '').replace(/\.$/, '')) + '</a></h2><p class="srch-meta">' + line + '</p>' + rows + '</div></section>';
+  }
+  function nearRun(text, ts, my, known) {
+    clearTimeout(nearTimer);
+    if (mode !== 'pf') { return; }
+    nearTimer = setTimeout(function () {
+      nearAsk(text, wide()).then(function (rs) {
+        if (my !== seq || !rs) { return; }
+        var top = ts.length >= 3 || known !== 'ok', stems = stemsOf(ts), shown = {};
+        if (!top) {
+          Array.prototype.forEach.call(out.querySelectorAll('.srch-title a'), function (a) { shown[a.getAttribute('href')] = 1; });
+        }
+        var gs = nearGroups(rs, shown, stems, !top);
+        seenDraw(rs);
+        if (!gs.length) { return; }
+        if (top) {
+          var mine = {};
+          gs.forEach(function (g) { mine[g.m.u] = 1; });
+          Array.prototype.forEach.call(out.querySelectorAll('.srch-video'), function (c) {
+            var a = c.querySelector('.srch-title a');
+            if (a && mine[a.getAttribute('href')]) { c.parentNode.removeChild(c); }
+          });
+        }
+        near.innerHTML = '<p class="srch-near-head">Close in meaning <span>\u00b7 the same thing, in other words</span></p>' +
+                         gs.map(function (g) { return nearCard(g, stems); }).join('');
+        out.parentNode.insertBefore(near, top ? wordsHead : out.nextSibling);
+        near.hidden = false;
+        found.m = gs.length;
+        wordsHead.hidden = !(top && out.querySelector('.srch-video'));
+        nearNote = ' \u00b7 ' + gs.length + (gs.length === 1 ? ' piece' : ' pieces') + ' close in meaning' + (top ? ' first' : ' below');
+        if (cur) { status.textContent = statusLine(cur); }
+        else { status.appendChild(document.createTextNode(nearNote)); }
+      });
+    }, NEAR_WAIT);
+  }
+
+  var vocabP = null;
+  function vocab() {
+    if (!vocabP) {
+      vocabP = fetch('pagefind/vocab.json').then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
+    }
+    return vocabP;
+  }
+  function dist(a, b, max) {
+    if (Math.abs(a.length - b.length) > max) { return max + 1; }
+    var p2 = null, p1 = [], row, i, j;
+    for (j = 0; j <= b.length; j++) { p1.push(j); }
+    for (i = 1; i <= a.length; i++) {
+      row = [i];
+      var low = i;
+      for (j = 1; j <= b.length; j++) {
+        var v = Math.min(p1[j] + 1, row[j - 1] + 1, p1[j - 1] + (a.charAt(i - 1) === b.charAt(j - 1) ? 0 : 1));
+        if (p2 && i > 1 && j > 1 && a.charAt(i - 1) === b.charAt(j - 2) && a.charAt(i - 2) === b.charAt(j - 1)) { v = Math.min(v, p2[j - 2] + 1); }
+        row.push(v);
+        if (v < low) { low = v; }
+      }
+      if (low > max) { return max + 1; }
+      p2 = p1; p1 = row;
+    }
+    return p1[b.length];
+  }
+  function within(a, b) {
+    for (var i = 0, j = 0; i < a.length && j < b.length; j++) { if (a.charAt(i) === b.charAt(j)) { i++; } }
+    return i === a.length;
+  }
+  function closest(t, list) {
+    var max = t.length > 5 ? 2 : 1, best = null, bd = max + 1, bs = -1;
+    for (var i = 0; i < list.length; i++) {
+      var w = list[i], d = dist(t, w, Math.min(max, bd));
+      if (d > max || d > bd) { continue; }
+      var sub = within(t, w) || within(w, t);
+      if (d === 2 && !sub) { continue; }
+      var s = (sub ? 2 : 0) + (w.charAt(0) === t.charAt(0) ? 1 : 0);
+      if (d < bd || s > bs) { bd = d; bs = s; best = w; }
+    }
+    return best;
+  }
+  function suggest(ts, unknown, v) {
+    var pub = v.p || [], arc = v.a || [], list = wide() ? pub.concat(arc) : pub;
+    var fixed = ts.slice(), changed = false, inArc = [], bits = [];
+    unknown.forEach(function (t) {
+      if (!wide() && arc.indexOf(t) >= 0) { inArc.push(t); return; }
+      var w = closest(t, list);
+      if (w && w !== t) { fixed[ts.indexOf(t)] = w; changed = true; }
+    });
+    if (changed) {
+      var fq = fixed.join(' ');
+      bits.push('Did you mean <a href="search.html?q=' + encodeURIComponent(fq) + '" data-q="' + esc(fq) + '">' + esc(fq) + '</a>?');
+    }
+    if (inArc.length) {
+      var say = '\u201c' + esc(inArc.join(' ')) + '\u201d is said in the videos with no written piece yet. ' +
+                '<button type="button" class="btn btn-line" data-wider="1">Search those too</button>';
+      if (out.querySelector('.srch-video')) { bits.push(say); } else { status.innerHTML = say; }
+    }
+    if (bits.length) { mean.innerHTML = bits.join(' '); mean.hidden = false; }
+  }
+  function nothing(ts, found, my) {
+    showNone(true);
+    var unknown = ts.slice(0, 4).filter(function (t, i) { return !found[i] && t.length > 3; });
+    if (!unknown.length || !mean) { return; }
+    return vocab().then(function (v) {
+      if (my !== seq || !v) { return; }
+      suggest(ts, unknown, v);
+    });
+  }
+
+  var LOG_WAIT = 2500, logTimer = null, logSent = '', logPending = null, found = { n: 0, m: 0 };
+  function logNow() {
+    clearTimeout(logTimer);
+    var p = logPending;
+    logPending = null;
+    if (!p || p.q === logSent || p.q.length < 2) { return; }
+    logSent = p.q;
+    var body = JSON.stringify({ q: p.q, n: found.n, m: found.m, all: wide() ? 1 : 0, src: p.src });
+    try {
+      if (navigator.sendBeacon) { navigator.sendBeacon('/api/searchlog', new Blob([body], { type: 'application/json' })); }
+      else { fetch('/api/searchlog', { method: 'POST', body: body, headers: { 'content-type': 'application/json' }, keepalive: true }); }
+    } catch (e) {}
+  }
+  function logLater(text, src) {
+    logPending = { q: text.toLowerCase().replace(/\s+/g, ' '), src: src };
+    clearTimeout(logTimer);
+    logTimer = setTimeout(logNow, LOG_WAIT);
+  }
+  document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'hidden') { logNow(); } });
+  window.addEventListener('pagehide', logNow);
+
+  var anchored = false;
+  function qInUrl() {
+    var m = location.search.match(/[?&]q=([^&]*)/);
+    if (!m) { return ''; }
+    try { return decodeURIComponent(m[1].replace(/\+/g, ' ')); } catch (e) { return ''; }
+  }
+  function remember(text, push) {
+    if (!window.history || !history.replaceState) { return false; }
+    var want = location.pathname + (text ? '?q=' + encodeURIComponent(text).replace(/%20/g, '+') : '') + location.hash;
+    if (want === location.pathname + location.search + location.hash) { return false; }
+    try { history[push ? 'pushState' : 'replaceState'](null, '', want); } catch (e) { return false; }
+    return true;
+  }
+
+  function run(src) {
+    var text = q.value.trim(), my = ++seq;
+    cur = null;
+    seriesShow(text);
+    nearClear();
+    found.n = 0; found.m = 0;
+    var settled = src === 'submit' || src === 'link' || src === 'pop';
+    if (remember(text, src === 'submit' || (anchored && !settled))) { anchored = false; }
+    if (settled) { anchored = true; }
+    if (!text) { out.innerHTML = ''; status.textContent = ''; showNone(false); clearTimeout(logTimer); logPending = null; return; }
+    if (src !== 'pop') { logLater(text, src === 'link' ? 'link' : 'typed'); }
+    if (mode === 'pf') { runPf(text, my); } else { runJson(text, my); }
+  }
+  function onAll() { syncSort(); if (mode === 'json' && all.checked) { loadExtra().then(function () { run(); }); } else { run(); } }
+  if (all) { all.addEventListener('change', onAll); }
+  if (srt) { srt.addEventListener('change', function () { wantNew = srt.checked; try { window.localStorage.setItem('wtm-search-best', wantNew ? '0' : '1'); } catch (e) { } run(); }); }
+  syncSort();
+  q.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(run, mode === 'pf' ? 200 : 160); });
+  q.addEventListener('focus', function () { if (mode === 'pf') { loadPf(); } else { load(); } });
+  if (q.form) {
+    q.form.addEventListener('submit', function (e) {
+      e.preventDefault(); clearTimeout(timer); run('submit');
+      if (window.matchMedia && matchMedia('(pointer: coarse)').matches) { q.blur(); }
+    });
+  }
+  document.addEventListener('click', function (e) {
+    var b = e.target && e.target.closest ? e.target.closest('button[data-wider]') : null;
+    if (!b || !all) { return; }
+    all.checked = true;
+    onAll();
+  });
+  window.addEventListener('popstate', function () {
+    var was = qInUrl();
+    if (was === q.value.trim()) { return; }
+    q.value = was; clearTimeout(timer); run('pop');
+  });
+  out.addEventListener('click', function (e) {
+    var b = e.target;
+    if (!b || !b.getAttribute || !b.getAttribute('data-more') || !cur) { return; }
+    b.disabled = true;
+    draw(cur).catch(function () { b.disabled = false; });
+  });
+  if (none) {
+    none.addEventListener('click', function (e) {
+      var a = e.target && e.target.closest ? e.target.closest('a[data-q], a.hh-chip') : null;
+      if (!a) { return; }
+      e.preventDefault();
+      q.value = a.getAttribute('data-q') || a.textContent;
+      run();
+    });
+  }
+  var q0 = qInUrl();
+  if (q0) { q.value = q0; run('link'); }
+})();
+</script>
+<script data-late>(function(){function go(){['memory.js', 'share.js', 'correct.js', 'newsletter-pill.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

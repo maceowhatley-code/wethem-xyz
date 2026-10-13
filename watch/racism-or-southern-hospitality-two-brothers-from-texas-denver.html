@@ -1,0 +1,821 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Denver, March 2026, in front of a graffiti wall, two brothers from Texas, engineers, one of whom lives here now.">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/racism-or-southern-hospitality-two-brothers-from-texas-denver">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="Racism or Southern Hospitality? Texas Brothers | Denver">
+    <meta property="og:description" content="Denver, March 2026, in front of a graffiti wall, two brothers from Texas, engineers, one of whom lives here now.">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/racism-or-southern-hospitality-two-brothers-from-texas-denver.jpg?v=f59c9fa6f1">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Racism or Southern hospitality? Two brothers from Texas">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/racism-or-southern-hospitality-two-brothers-from-texas-denver.jpg?v=f59c9fa6f1">
+    <meta property="og:url" content="https://wethem.xyz/watch/racism-or-southern-hospitality-two-brothers-from-texas-denver">
+    <title>Racism or Southern Hospitality? Texas Brothers | Denver &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/racism-or-southern-hospitality-two-brothers-from-texas-denver#video",
+  "name": "Racism or Southern Hospitality? Texas Brothers | Denver",
+  "description": "Denver, March 2026, in front of a graffiti wall, two brothers from Texas, engineers, one of whom lives here now. The question of the week is the biggest global issue. The older brother: \"people just got to let people live. And, like, right now there's a lot of people encroaching on other people's shit.\" The younger: \"We're so focused on what divides us That it causes so much conflict in the world,\" and if people focused on what they have in common, \"A lot of those issues would resolve themselves Maybe that's an idealistic approach.\" Then Texas, and the piece finds its subject. The younger brother: \"a lot of people will confuse Southern, like, hospitality with, like, everyone's just, like, nice towards each other, but I don't think that necessarily means that you're fully accepted. in every single community in the\" The older: \"Southern hospitality sometimes is just like a means of like masking other issues\" and \"you grow up not white in the South,\" and only later \"you're like, damn, that person was actually kind of racist.\" The memory, from COVID: wearing a mask at a YMCA, harassed by a man who said masks spread the virus, clapping back, and being the one thrown out, \"just for like standing on business.\" Compared with the Northeast, where people are \"randos on the street\" but will not come at you like that. Unprompted, they place the format: \"you remind me of Channel 5 News.\" The last question is what is Ethereum, and neither knows. \"Yo, I don't even know what that word means\" So they reason from the word: \"I'm assuming it corresponds to like ethereal,\" something spiritual that binds people together, and then, \"Ethereum is your experience, your human experience in the universe. It's so uniquely you.\" Maceo gives them the real answer at the end, and one of them admits he looked it up mid-sentence. Names were not given. Language is unfiltered. The transcript below is from the original audio.",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/hyGTGHgIBdQ/maxresdefault.jpg"
+  ],
+  "uploadDate": "2026-03-27T06:00:00Z",
+  "embedUrl": "https://www.youtube.com/embed/hyGTGHgIBdQ",
+  "url": "https://wethem.xyz/watch/racism-or-southern-hospitality-two-brothers-from-texas-denver",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT10M40S",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "The biggest global issue? Let people live",
+      "startOffset": 13,
+      "url": "https://wethem.xyz/watch/racism-or-southern-hospitality-two-brothers-from-texas-denver?t=13",
+      "endOffset": 50
+    },
+    {
+      "@type": "Clip",
+      "name": "Focus on what doesn't divide us",
+      "startOffset": 50,
+      "url": "https://wethem.xyz/watch/racism-or-southern-hospitality-two-brothers-from-texas-denver?t=50",
+      "endOffset": 97
+    },
+    {
+      "@type": "Clip",
+      "name": "Biggest issue in Texas? Acceptance",
+      "startOffset": 97,
+      "url": "https://wethem.xyz/watch/racism-or-southern-hospitality-two-brothers-from-texas-denver?t=97",
+      "endOffset": 149
+    },
+    {
+      "@type": "Clip",
+      "name": "Southern hospitality as a mask",
+      "startOffset": 149,
+      "url": "https://wethem.xyz/watch/racism-or-southern-hospitality-two-brothers-from-texas-denver?t=149",
+      "endOffset": 204
+    },
+    {
+      "@type": "Clip",
+      "name": "Thrown out of a YMCA after a mask argument",
+      "startOffset": 204,
+      "url": "https://wethem.xyz/watch/racism-or-southern-hospitality-two-brothers-from-texas-denver?t=204",
+      "endOffset": 316
+    },
+    {
+      "@type": "Clip",
+      "name": "Northeast strangers won't come at you like that",
+      "startOffset": 316,
+      "url": "https://wethem.xyz/watch/racism-or-southern-hospitality-two-brothers-from-texas-denver?t=316",
+      "endOffset": 383
+    },
+    {
+      "@type": "Clip",
+      "name": "What is Ethereum?",
+      "startOffset": 383,
+      "url": "https://wethem.xyz/watch/racism-or-southern-hospitality-two-brothers-from-texas-denver?t=383",
+      "endOffset": 494
+    },
+    {
+      "@type": "Clip",
+      "name": "Ethereum: the number 2 blockchain after Bitcoin",
+      "startOffset": 494,
+      "url": "https://wethem.xyz/watch/racism-or-southern-hospitality-two-brothers-from-texas-denver?t=494",
+      "endOffset": 640
+    }
+  ],
+  "creator": {
+    "@type": "Person",
+    "name": "Maceo",
+    "url": "https://wethem.xyz/people/maceo"
+  },
+  "transcript": "Oh yeah, we gotta get out the way.\nBut we got this cool like graffiti back here. Yeah, my friend said I'm doing better, uh, Mazan-san or something like that. All right, um, what do you think is the biggest global issue in the world right now? And this is for Poyd and We Them Media.\nAll right, all right. I mean, I think there's a lot of shit. There's a lot of shit going on in the world right now. It's kind of hard to say what's like the most like the biggest global issue. But I think fundamentally it comes down to people thinking other people's business is their business, you know what I'm saying? Like, I think like people just got to let people live. And like right now there's a lot of people encroaching on other people's shit, right? And like there's a lot going on. It's like hard to sum that up, right? You know, it's a crazy time to be living through.\nBut I was going to say something similar. Like, I think just division in general, um, I think there's so much That people focus on what's different between people around them that causes that division. I think that, you know, if you focus a little bit more on things that we have in common and those things that bring us together, a lot of those issues would resolve themselves. Maybe that's an idealistic approach to things, but I do think that a lot of times it comes down to just we're so focused on what divides us that it causes so much conflict in the world and that, you know, it starts within person to person. within the nation, across nations. I think it goes beyond so many different levels that, you know, I think if we just took a step back and focused on what doesn't divide us, things would be a lot better.\nOh yeah. And are you from Denver? You live here?\nI live here. This is my little brother.\nHe's visiting from Texas. I'm from Texas.\nWe're both from Texas, but I live here now.\nOkay. What about in Texas? What do you feel like is like the biggest issue in Texas? Ooh.\nI guess I'll -- I'm there more recently, right? I would probably say -- oh, that's a tough one. Biggest issue in Texas? Acceptance. Like, I think that a lot of people will confuse Southern, like, hospitality with, like, everyone's just, like, nice towards each other, but I don't think that necessarily means that you're fully accepted. in every single community in the South. And like, I think that's something that like, especially in Texas, it's like you pride yourself on being from Texas, but there's a part of being Texan that's like, there's so many different identities and stuff that come from being there that I don't think is fully accepted in the state itself. So I'd say probably acceptance is probably one of the biggest things that causes issues in the state.\nYeah, I mean, shit, like I ain't lived there in like 5 years, bro, but like, I think like To his point, like, Southern hospitality sometimes is just like a means of like masking other issues, right? Like, people like act like they're all nice, but it's like, yo, like, you grow up, you grow up not white in the South, right? It's like sometimes you see shit and you don't realize it when you're a kid, but then you grow up and you're like, damn, that person was actually kind of racist, you know what I'm saying? Like, I think, like, I think, you know, to his point, hold the mic up. I think to his point, like, There's a lot of division and there's a lot of lack of acceptance down in the South, and it's kind of sometimes guys with like people being nice and shit, you know? Yeah, that's what I said too.\nIs there like a particular vivid memory that shows up for you when you think about that? Like, I think that's what you just came to is super sick. Like, talk about it.\nYeah, I mean, that's like what I want to create content, right?\nLike, what are the subversive --\nyeah, okay, shit, dude, you remind me of Channel 5 News. I don't know if you fuck with Andrew Callaghan, baby. Yeah, All Gas No Brakes. Yeah, yeah, yeah, yeah.\nYeah.\nNo, I think journalism -- I think for me, I have a distinct memory. Yeah. Yeah. I think for me, I have like a distinct memory during COVID where it's like, you know, we got an older brother. He's a doctor. You know, we, we're all engineers, right? So like, we're like, you know, we believe in science, right? And like during COVID I have a very distinct memory where I was minding my own business at like a YMCA, just lifting. And this guy -- I was wearing a mask, right? And this guy starts like harassing me. And he's like, yo, like, you know, masks spread more COVID. And I'm just like, bro, what? What do you mean spreads more COVID? Like, I don't give a fuck. Wear your mask or don't, right? Like, that's whatever. That's your choice.\nBut like, don't gaslight me. What do you mean?\nWhat do you mean spreads more COVID, right? So I'm first just minding my own business, but this guy won't stop harassing me. And then eventually, you know, I kind of like go back on him and like, you know, one thing leads to another. I'm like, bro, you need to research blah, blah, blah, right? And then like, tell me why I got kicked out of the YMCA by the YMCA people.\nRight?\nLike, I was minding my own business. Guy started harassing me. I kind of clapped back, and then I got kicked out just for like standing on business. You know what I'm saying? Like, I think that was, and to me, I was like, I lived in the Northeast for a couple years at that point. I was just back home visiting, but like it was crazy. It was it was it was honestly kind of jarring. So I was like, dude, I like I had no desire to like get into this with you, but like you came at me, and then now I'm getting kicked out of this gym that I pay money for. Like, you know, like showing up to. So. It was weird. It was weird. After not living in Texas for a while, you know, like I've been in Denver for a bit now. Like, I think it's, it's, it's nice. Like, it's nice not being there because like, you know, like Northeast for you. I was in Maryland and Delaware for a while, Connecticut for a while, kind of all over. Oh, fuck yeah, dude. I spent a lot of time in Philly. Yeah. Yeah. Yo, Philly's sick. Philly's sick. I like Philly.\nBut to your point, right?\nYeah, right. It's like, it's just different, right? Like, you know, you lose the Southern hospitality. People are like kind of like randos on the street. They're kind of assholes, but like They're not like, you know, fundamentally gonna like come at you on some shit like that, right? Like, I think it's weird. Like, I've lived all over the US and I think like every place has got its issues, but kind of is what it is. We just live in really divided times. Like, a lot of the media we consume -- I mean, like, I, I don't know your channel, but you fuck with like All Gas No Brakes Channel 5. I like what they're doing, right? Because like they're just showing you how it is. And like, I think we see a lot of shit, right? And it's hard to know like what's real. These days, right? So I don't know.\nSo my last question, um, what, what is Ethereum?\nWhat is Ethereum? Fuck. Yo, I don't even know what that word means.\nEthereum. I mean, I'm assuming --\ntake it. What is that word?\nWe're gonna ponder on this one. Um, I'm assuming it corresponds to like ethereal, and I think like, you know, that means like some sort of like transcendentalism. But, um, I mean, shit, I don't know what it means per se, but if I had to give a guess, I think it does mean like transcending beyond the human body and like the spirit.\nDefinitely.\nI think like, I think like it really does tie back to like more of a spiritual thing and like, um, I don't know, I think like with that there's so much that can bind us together spiritually that I'm assuming that ties back to I don't know if that made any sense at all, but --\nThe infinite garden. Yo, all right, all right, all right. Ethereum ain't a word. I looked it up. So it's off the dome. I think to me, Ethereum, right? Like you're saying, like, that's like the omnipresent. That's like, what is it that like binds us all together, right? The human experience. And I think like, shit, like the hardship, like life's a trip, right? I think you can't have the ups without the downs, and you can't have the downs without the ups. That's what makes them ups and downs, right? Like, I think Ethereum is your experience, your human experience in the universe. It's so uniquely you. And I think, like, you know, I don't know what the fuck Ethereum actually means, but just like thinking about what the letters together and the word means to me, I think it's like the uniqueness of the human experience and how that like We all have a crazy fucking life, but at the end of the day, we all living in the same planet, right? We living in the same timeline. Like, we're all, we're all seeing the same shit that's happening, right? It's crazy fucking time to live through, but like, at the end of the day, like, that's what we have in common, right? It's like, what's life?\nAmen.\nAmen, bro.\nWell, Ethereum is the, is the number 2 blockchain after Bitcoin.\nDude, that's what I found. I was like, yo, that's a blockchain? I was like, that ain't gonna work. Yo, this is like sponsored by Cash App, bro. Sponsored by Cash App. You gotta bleep that out.\nI don't care, I don't care about Cash App.\nHey, Cash App!\nBut, but yeah, I, I've been traveling. I came here, there's a big Ethereum conference here every year. It's like a big tech conference, software engineers and shit. This is my third one coming out here. I've been around the world. I was in Asia for a couple months 2 years ago. I was in Africa last year for 4 months. Okay, so I haven't been to LATAM yet, but I'm on my way. I'm on my way. And right now I'm just kind of stuck here in Denver because I'm broke as shit. But I guess this is my all-gas So I'm trying to get out here.\nYou need the oversized suit, bro.\nYeah, you know, my friend in New York, he's like, I need to get a suit before I go out and do it. Like, what is this guy talking about? Just post the video. Like, but you're right, you're right. You gotta go.\nYo, let me like, let us follow you on some shit, bro.\nNah, fuck yeah. I appreciate it. My last question though, I actually had a last question ready.\nOh, there's another question.\nIs, do you have a question that you'd ask the world? Like, if you could query the world, like you query AI, what would you ask the world?\nWhat does it take to make you love your neighbor genuinely?\nBoom! That's a tough one to follow up.\nUm, that's tough.\nUm, like, my mind just goes to why. Like, I think, like, understanding the whys of people. I would just say, like, why Why do you do what you do? Why do you treat others the way you do? Why do you be the way you are? And I think just like more so for people to understand for themselves, if anything, I think digging down into that why really helps people clarify the things that they do. You know, understanding of if what they're acting on is really true to themselves.\nMm.\nFuck yeah. And what were your names one more time?\nUh, yo, my name's Ro, like a rowboat.\nAnd then I'm Gov.\nFuck yeah. Thank you guys.",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Denver",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "url": "https://wethem.xyz/places#denver"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Denver Unfiltered",
+    "url": "https://wethem.xyz/portfolio#p-denver"
+  },
+  "keywords": [
+    "What is the most important global issue today?",
+    "What is Ethereum?",
+    "If you could ask people around the world one question, what would you ask them?"
+  ],
+  "dateCreated": "2026-03-21"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Denver Unfiltered",
+      "item": "https://wethem.xyz/portfolio#p-denver"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Racism or Southern hospitality? Two brothers from Texas",
+      "item": "https://wethem.xyz/watch/racism-or-southern-hospitality-two-brothers-from-texas-denver"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place], who[data-pf-who]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2026-03-27" data-pf-vid="hyGTGHgIBdQ" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;10:40&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="Denver" data-pf-country="United States" data-pf-project="Denver Unfiltered" data-pf-who="Maceo">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-denver">Denver Unfiltered</a></li>
+            <li aria-current="page">Racism or Southern hospitality? Two brothers from Texas</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">Racism or Southern hospitality? Two brothers from Texas.</h1>
+
+    <p class="wt-byline">Reported by <strong><a href="../people/maceo.html">Maceo</a></strong> &middot; Denver &middot; 11 min &middot; filmed <time datetime="2026-03-21">21 March 2026</time></p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="hyGTGHgIBdQ" live postersrcset="../stills/hyGTGHgIBdQ-320.jpg 320w, ../stills/hyGTGHgIBdQ-480.jpg 480w, ../stills/hyGTGHgIBdQ-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/hyGTGHgIBdQ?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="Racism or Southern hospitality? Two brothers from Texas, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+    <p class="wt-answers">Answers <a href="../question/most-important-global-issue.html">What is the most important global issue today?</a> and <a href="../question/what-is-ethereum.html">What is Ethereum?</a> and <a href="../question/what-would-you-ask-the-world.html">If you could ask people around the world one question, what would you ask them?</a> &middot; see how other cities answered &rarr;</p>
+    <div class="wt-prose">
+            <p>Denver, March 2026, in front of a graffiti wall, two brothers from Texas, engineers, one of whom lives here now. The question of the week is the biggest global issue. The older brother: &ldquo;people just got to let people live. And, like, right now there&rsquo;s a lot of people encroaching on other people&rsquo;s shit.&rdquo; The younger: &ldquo;We&rsquo;re so focused on what divides us That it causes so much conflict in the world,&rdquo; and if people focused on what they have in common, &ldquo;A lot of those issues would resolve themselves Maybe that&rsquo;s an idealistic approach.&rdquo;</p>
+            <p>Then Texas, and the piece finds its subject. The younger brother: &ldquo;a lot of people will confuse Southern, like, hospitality with, like, everyone&rsquo;s just, like, nice towards each other, but I don&rsquo;t think that necessarily means that you&rsquo;re fully accepted. in every single community in the&rdquo; The older: &ldquo;Southern hospitality sometimes is just like a means of like masking other issues&rdquo; and &ldquo;you grow up not white in the South,&rdquo; and only later &ldquo;you&rsquo;re like, damn, that person was actually kind of racist.&rdquo; The memory, from COVID: wearing a mask at a YMCA, harassed by a man who said masks spread the virus, clapping back, and being the one thrown out, &ldquo;just for like standing on business.&rdquo; Compared with the Northeast, where people are &ldquo;randos on the street&rdquo; but will not come at you like that. Unprompted, they place the format: &ldquo;you remind me of Channel 5 News.&rdquo;</p>
+            <p>The last question is what is Ethereum, and neither knows. &ldquo;Yo, I don&rsquo;t even know what that word means&rdquo; So they reason from the word: &ldquo;I&rsquo;m assuming it corresponds to like ethereal,&rdquo; something spiritual that binds people together, and then, &ldquo;Ethereum is your experience, your human experience in the universe. It&rsquo;s so uniquely you.&rdquo; Maceo gives them the real answer at the end, and one of them admits he looked it up mid-sentence. Names were not given. Language is unfiltered. The transcript below is from the original audio.</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../question/most-important-global-issue.html">Every answer to “What is the most important global issue today?”</a></p>
+        <p class="wt-rail-link"><a href="../question/what-is-ethereum.html">Every answer to “What is Ethereum?”</a></p>
+        <p class="wt-rail-link"><a href="../question/what-would-you-ask-the-world.html">Every answer to “If you could ask people around the world one question, what would you ask them?”</a></p>
+        <p class="wt-rail-link"><a href="../places.html#denver">Everything filmed in Denver</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="channel-5-fans-on-what-andrew-callaghan-does-right.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/CgFdClu5uow-640.jpg" srcset="../stills/CgFdClu5uow-320.jpg 320w, ../stills/CgFdClu5uow-480.jpg 480w, ../stills/CgFdClu5uow-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>16:28</span></span><span>Channel 5 fans on what makes Andrew Callaghan work.</span></a>
+        <a class="wt-rail-card" href="vfx-artist-on-grief-art-and-starting-over.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/6JcW_wQyVWc-640.jpg" srcset="../stills/6JcW_wQyVWc-320.jpg 320w, ../stills/6JcW_wQyVWc-480.jpg 480w, ../stills/6JcW_wQyVWc-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>29:00</span></span><span>Kale, a VFX artist, on grief, her mom Sarah, and working on Marvel films.</span></a>
+        <a class="wt-rail-card" href="a-hitchhiker-on-a-spiritual-mission-outside-channel-5.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/80E_4pItE_Y-640.jpg" srcset="../stills/80E_4pItE_Y-320.jpg 320w, ../stills/80E_4pItE_Y-480.jpg 480w, ../stills/80E_4pItE_Y-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:42</span></span><span>A hitchhiker on a spiritual mission.</span></a>
+        <a class="wt-rail-card" href="an-irish-fan-and-an-aspiring-journalist-in-the-channel-5-line.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/enaFl4XPCy4-640.jpg" srcset="../stills/enaFl4XPCy4-320.jpg 320w, ../stills/enaFl4XPCy4-480.jpg 480w, ../stills/enaFl4XPCy4-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>5:42</span></span><span>An Irish fan and an aspiring journalist.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c13"><a class="wt-t" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=13s" target="_blank" rel="noopener" data-pagefind-ignore>0:13</a><span class="wt-s">The biggest global issue? Let people live</span></li>
+                <li class="wt-line" id="c50"><a class="wt-t" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=50s" target="_blank" rel="noopener" data-pagefind-ignore>0:50</a><span class="wt-s">Focus on what doesn&#x27;t divide us</span></li>
+                <li class="wt-line" id="c97"><a class="wt-t" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=97s" target="_blank" rel="noopener" data-pagefind-ignore>1:37</a><span class="wt-s">Biggest issue in Texas? Acceptance</span></li>
+                <li class="wt-line" id="c149"><a class="wt-t" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=149s" target="_blank" rel="noopener" data-pagefind-ignore>2:29</a><span class="wt-s">Southern hospitality as a mask</span></li>
+                <li class="wt-line" id="c204"><a class="wt-t" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=204s" target="_blank" rel="noopener" data-pagefind-ignore>3:24</a><span class="wt-s">Thrown out of a YMCA after a mask argument</span></li>
+                <li class="wt-line" id="c316"><a class="wt-t" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=316s" target="_blank" rel="noopener" data-pagefind-ignore>5:16</a><span class="wt-s">Northeast strangers won&#x27;t come at you like that</span></li>
+                <li class="wt-line" id="c383"><a class="wt-t" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=383s" target="_blank" rel="noopener" data-pagefind-ignore>6:23</a><span class="wt-s">What is Ethereum?</span></li>
+                <li class="wt-line" id="c494"><a class="wt-t" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=494s" target="_blank" rel="noopener" data-pagefind-ignore>8:14</a><span class="wt-s">Ethereum: the number 2 blockchain after Bitcoin</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Who speaks, by their own introduction on the tape: <a href="../guests.html#g-ro" data-pagefind-filter="person">Ro</a> at <a class="wt-at" data-seek="634" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=634s" target="_blank" rel="noopener" data-pagefind-ignore>10:34</a>, <a href="../guests.html#g-gov" data-pagefind-filter="person">Gov</a> at <a class="wt-at" data-seek="636" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=636s" target="_blank" rel="noopener" data-pagefind-ignore>10:36</a>. Transcribed from the original audio and corrected for names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Ro at 10:34" data-pagefind-ignore>Ro</span>Oh yeah, we gotta get out the way.</p>
+            <p id="s1"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=1s" target="_blank" rel="noopener" data-pagefind-ignore>0:01</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>But we got this cool like graffiti back here. Yeah, my friend said I&rsquo;m doing better, uh, Mazan-san or something like that. All right, um, what do you think is the biggest global issue in the world right now? And this is for Poyd and We Them Media.</p>
+            <p id="s23"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=23s" target="_blank" rel="noopener" data-pagefind-ignore>0:23</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Ro at 10:34" data-pagefind-ignore>Ro</span>All right, all right. I mean, I think there&rsquo;s a lot of shit. There&rsquo;s a lot of shit going on in the world right now. It&rsquo;s kind of hard to say what&rsquo;s like the most like the biggest global issue. But I think fundamentally it comes down to people thinking other people&rsquo;s business is their business, you know what I&rsquo;m saying? Like, I think like people just got to let people live. And like right now there&rsquo;s a lot of people encroaching on other people&rsquo;s shit, right? And like there&rsquo;s a lot going on. It&rsquo;s like hard to sum that up, right? You know, it&rsquo;s a crazy time to be living through.</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s48"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=48s" target="_blank" rel="noopener" data-pagefind-ignore>0:48</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Gov at 10:36" data-pagefind-ignore>Gov</span>But I was going to say something similar. Like, I think just division in general, um, I think there&rsquo;s so much That people focus on what&rsquo;s different between people around them that causes that division. I think that, you know, if you focus a little bit more on things that we have in common and those things that bring us together, a lot of those issues would resolve themselves. Maybe that&rsquo;s an idealistic approach to things, but I do think that a lot of times it comes down to just we&rsquo;re so focused on what divides us that it causes so much conflict in the world and that, you know, it starts within person to person. within the nation, across nations. I think it goes beyond so many different levels that, you know, I think if we just took a step back and focused on what doesn&rsquo;t divide us, things would be a lot better.</p>
+            <p id="s95"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=95s" target="_blank" rel="noopener" data-pagefind-ignore>1:35</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Oh yeah. And are you from Denver? You live here?</p>
+            <p id="s100"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=100s" target="_blank" rel="noopener" data-pagefind-ignore>1:40</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Ro at 10:34" data-pagefind-ignore>Ro</span>I live here. This is my little brother.</p>
+            <p id="s102"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=102s" target="_blank" rel="noopener" data-pagefind-ignore>1:42</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Gov at 10:36" data-pagefind-ignore>Gov</span>He&rsquo;s visiting from Texas. I&rsquo;m from Texas.</p>
+            <p id="s102-2"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=102s" target="_blank" rel="noopener" data-pagefind-ignore>1:42</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Ro at 10:34" data-pagefind-ignore>Ro</span>We&rsquo;re both from Texas, but I live here now.</p>
+            <p id="s105"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=105s" target="_blank" rel="noopener" data-pagefind-ignore>1:45</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Okay. What about in Texas? What do you feel like is like the biggest issue in Texas? Ooh.</p>
+            <p id="s110"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=110s" target="_blank" rel="noopener" data-pagefind-ignore>1:50</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Gov at 10:36" data-pagefind-ignore>Gov</span>I guess I&rsquo;ll -- I&rsquo;m there more recently, right? I would probably say -- oh, that&rsquo;s a tough one. Biggest issue in Texas? Acceptance. Like, I think that a lot of people will confuse Southern, like, hospitality with, like, everyone&rsquo;s just, like, nice towards each other, but I don&rsquo;t think that necessarily means that you&rsquo;re fully accepted. in every single community in the South. And like, I think that&rsquo;s something that like, especially in Texas, it&rsquo;s like you pride yourself on being from Texas, but there&rsquo;s a part of being Texan that&rsquo;s like, there&rsquo;s so many different identities and stuff that come from being there that I don&rsquo;t think is fully accepted in the state itself. So I&rsquo;d say probably acceptance is probably one of the biggest things that causes issues in the state.</p>
+            <p id="s164"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=164s" target="_blank" rel="noopener" data-pagefind-ignore>2:44</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Ro at 10:34" data-pagefind-ignore>Ro</span>Yeah, I mean, shit, like I ain&rsquo;t lived there in like 5 years, bro, but like, I think like To his point, like, Southern hospitality sometimes is just like a means of like masking other issues, right? Like, people like act like they&rsquo;re all nice, but it&rsquo;s like, yo, like, you grow up, you grow up not white in the South, right? It&rsquo;s like sometimes you see shit and you don&rsquo;t realize it when you&rsquo;re a kid, but then you grow up and you&rsquo;re like, damn, that person was actually kind of racist, you know what I&rsquo;m saying? Like, I think, like, I think, you know, to his point, hold the mic up. I think to his point, like, There&rsquo;s a lot of division and there&rsquo;s a lot of lack of acceptance down in the South, and it&rsquo;s kind of sometimes guys with like people being nice and shit, you know? Yeah, that&rsquo;s what I said too.</p>
+            <p id="s206"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=206s" target="_blank" rel="noopener" data-pagefind-ignore>3:26</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Is there like a particular vivid memory that shows up for you when you think about that? Like, I think that&rsquo;s what you just came to is super sick. Like, talk about it.</p>
+            <p id="s213"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=213s" target="_blank" rel="noopener" data-pagefind-ignore>3:33</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Ro at 10:34" data-pagefind-ignore>Ro</span>Yeah, I mean, that&rsquo;s like what I want to create content, right?</p>
+            <p id="s216"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=216s" target="_blank" rel="noopener" data-pagefind-ignore>3:36</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Like, what are the subversive --</p>
+            <p id="s217"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=217s" target="_blank" rel="noopener" data-pagefind-ignore>3:37</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Ro at 10:34" data-pagefind-ignore>Ro</span>yeah, okay, shit, dude, you remind me of <a class="wt-gloss" href="../glossary.html#channel-5">Channel 5</a> News. I don&rsquo;t know if you fuck with Andrew Callaghan, baby. Yeah, All Gas No Brakes. Yeah, yeah, yeah, yeah.</p>
+            <p id="s227"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=227s" target="_blank" rel="noopener" data-pagefind-ignore>3:47</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Gov at 10:36" data-pagefind-ignore>Gov</span>Yeah.</p>
+            <p id="s228"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=228s" target="_blank" rel="noopener" data-pagefind-ignore>3:48</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Ro at 10:34" data-pagefind-ignore>Ro</span>No, I think journalism -- I think for me, I have a distinct memory. Yeah. Yeah. I think for me, I have like a distinct memory during COVID where it&rsquo;s like, you know, we got an older brother. He&rsquo;s a doctor. You know, we, we&rsquo;re all engineers, right? So like, we&rsquo;re like, you know, we believe in science, right? And like during COVID I have a very distinct memory where I was minding my own business at like a YMCA, just lifting. And this guy -- I was wearing a mask, right? And this guy starts like harassing me. And he&rsquo;s like, yo, like, you know, masks spread more COVID. And I&rsquo;m just like, bro, what? What do you mean spreads more COVID? Like, I don&rsquo;t give a fuck. Wear your mask or don&rsquo;t, right? Like, that&rsquo;s whatever. That&rsquo;s your choice.</p>
+            <p id="s269"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=269s" target="_blank" rel="noopener" data-pagefind-ignore>4:29</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>But like, don&rsquo;t gaslight me. What do you mean?</p>
+            <p id="s271"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=271s" target="_blank" rel="noopener" data-pagefind-ignore>4:31</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Ro at 10:34" data-pagefind-ignore>Ro</span>What do you mean spreads more COVID, right? So I&rsquo;m first just minding my own business, but this guy won&rsquo;t stop harassing me. And then eventually, you know, I kind of like go back on him and like, you know, one thing leads to another. I&rsquo;m like, bro, you need to research blah, blah, blah, right? And then like, tell me why I got kicked out of the YMCA by the YMCA people.</p>
+            <p id="s288"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=288s" target="_blank" rel="noopener" data-pagefind-ignore>4:48</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Right?</p>
+            <p id="s288-2"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=288s" target="_blank" rel="noopener" data-pagefind-ignore>4:48</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Ro at 10:34" data-pagefind-ignore>Ro</span>Like, I was minding my own business. Guy started harassing me. I kind of clapped back, and then I got kicked out just for like standing on business. You know what I&rsquo;m saying? Like, I think that was, and to me, I was like, I lived in the Northeast for a couple years at that point. I was just back home visiting, but like it was crazy. It was it was it was honestly kind of jarring. So I was like, dude, I like I had no desire to like get into this with you, but like you came at me, and then now I&rsquo;m getting kicked out of this gym that I pay money for. Like, you know, like showing up to. So. It was weird. It was weird. After not living in Texas for a while, you know, like I&rsquo;ve been in Denver for a bit now. Like, I think it&rsquo;s, it&rsquo;s, it&rsquo;s nice. Like, it&rsquo;s nice not being there because like, you know, like Northeast for you. I was in Maryland and Delaware for a while, Connecticut for a while, kind of all over. Oh, fuck yeah, dude. I spent a lot of time in Philly. Yeah. Yeah. Yo, Philly&rsquo;s sick. Philly&rsquo;s sick. I like Philly.</p>
+            <p id="s339"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=339s" target="_blank" rel="noopener" data-pagefind-ignore>5:39</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>But to your point, right?</p>
+            <p id="s340"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=340s" target="_blank" rel="noopener" data-pagefind-ignore>5:40</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Ro at 10:34" data-pagefind-ignore>Ro</span>Yeah, right. It&rsquo;s like, it&rsquo;s just different, right? Like, you know, you lose the Southern hospitality. People are like kind of like randos on the street. They&rsquo;re kind of assholes, but like They&rsquo;re not like, you know, fundamentally gonna like come at you on some shit like that, right? Like, I think it&rsquo;s weird. Like, I&rsquo;ve lived all over the US and I think like every place has got its issues, but kind of is what it is. We just live in really divided times. Like, a lot of the media we consume -- I mean, like, I, I don&rsquo;t know your channel, but you fuck with like All Gas No Brakes Channel 5. I like what they&rsquo;re doing, right? Because like they&rsquo;re just showing you how it is. And like, I think we see a lot of shit, right? And it&rsquo;s hard to know like what&rsquo;s real. These days, right? So I don&rsquo;t know.</p>
+            <p id="s385"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=385s" target="_blank" rel="noopener" data-pagefind-ignore>6:25</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So my last question, um, what, what is <a class="wt-gloss" href="../glossary.html#ethereum">Ethereum</a>?</p>
+            <p id="s389"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=389s" target="_blank" rel="noopener" data-pagefind-ignore>6:29</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Ro at 10:34" data-pagefind-ignore>Ro</span>What is Ethereum? Fuck. Yo, I don&rsquo;t even know what that word means.</p>
+            <p id="s395"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=395s" target="_blank" rel="noopener" data-pagefind-ignore>6:35</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Gov at 10:36" data-pagefind-ignore>Gov</span>Ethereum. I mean, I&rsquo;m assuming --</p>
+            <p id="s398"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=398s" target="_blank" rel="noopener" data-pagefind-ignore>6:38</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Ro at 10:34" data-pagefind-ignore>Ro</span>take it. What is that word?</p>
+            <p id="s402"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=402s" target="_blank" rel="noopener" data-pagefind-ignore>6:42</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Gov at 10:36" data-pagefind-ignore>Gov</span>We&rsquo;re gonna ponder on this one. Um, I&rsquo;m assuming it corresponds to like ethereal, and I think like, you know, that means like some sort of like transcendentalism. But, um, I mean, shit, I don&rsquo;t know what it means per se, but if I had to give a guess, I think it does mean like transcending beyond the human body and like the spirit.</p>
+            <p id="s424"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=424s" target="_blank" rel="noopener" data-pagefind-ignore>7:04</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Definitely.</p>
+            <p id="s425"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=425s" target="_blank" rel="noopener" data-pagefind-ignore>7:05</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Gov at 10:36" data-pagefind-ignore>Gov</span>I think like, I think like it really does tie back to like more of a spiritual thing and like, um, I don&rsquo;t know, I think like with that there&rsquo;s so much that can bind us together spiritually that I&rsquo;m assuming that ties back to I don&rsquo;t know if that made any sense at all, but --</p>
+            <p id="s443"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=443s" target="_blank" rel="noopener" data-pagefind-ignore>7:23</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Ro at 10:34" data-pagefind-ignore>Ro</span>The infinite garden. Yo, all right, all right, all right. Ethereum ain&rsquo;t a word. I looked it up. So it&rsquo;s off the dome. I think to me, Ethereum, right? Like you&rsquo;re saying, like, that&rsquo;s like the omnipresent. That&rsquo;s like, what is it that like binds us all together, right? The human experience. And I think like, shit, like the hardship, like life&rsquo;s a trip, right? I think you can&rsquo;t have the ups without the downs, and you can&rsquo;t have the downs without the ups. That&rsquo;s what makes them ups and downs, right? Like, I think Ethereum is your experience, your human experience in the universe. It&rsquo;s so uniquely you. And I think, like, you know, I don&rsquo;t know what the fuck Ethereum actually means, but just like thinking about what the letters together and the word means to me, I think it&rsquo;s like the uniqueness of the human experience and how that like We all have a crazy fucking life, but at the end of the day, we all living in the same planet, right? We living in the same timeline. Like, we&rsquo;re all, we&rsquo;re all seeing the same shit that&rsquo;s happening, right? It&rsquo;s crazy fucking time to live through, but like, at the end of the day, like, that&rsquo;s what we have in common, right? It&rsquo;s like, what&rsquo;s life?</p>
+            <p id="s507"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=507s" target="_blank" rel="noopener" data-pagefind-ignore>8:27</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Amen.</p>
+            <p id="s509"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=509s" target="_blank" rel="noopener" data-pagefind-ignore>8:29</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Ro at 10:34" data-pagefind-ignore>Ro</span>Amen, bro.</p>
+            <p id="s510"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=510s" target="_blank" rel="noopener" data-pagefind-ignore>8:30</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Well, Ethereum is the, is the number 2 blockchain after Bitcoin.</p>
+            <p id="s514"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=514s" target="_blank" rel="noopener" data-pagefind-ignore>8:34</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Ro at 10:34" data-pagefind-ignore>Ro</span>Dude, that&rsquo;s what I found. I was like, yo, that&rsquo;s a blockchain? I was like, that ain&rsquo;t gonna work. Yo, this is like sponsored by Cash App, bro. Sponsored by Cash App. You gotta bleep that out.</p>
+            <p id="s527"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=527s" target="_blank" rel="noopener" data-pagefind-ignore>8:47</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I don&rsquo;t care, I don&rsquo;t care about Cash App.</p>
+            <p id="s530"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=530s" target="_blank" rel="noopener" data-pagefind-ignore>8:50</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Ro at 10:34" data-pagefind-ignore>Ro</span>Hey, Cash App!</p>
+            <p id="s532"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=532s" target="_blank" rel="noopener" data-pagefind-ignore>8:52</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>But, but yeah, I, I&rsquo;ve been traveling. I came here, there&rsquo;s a big Ethereum conference here every year. It&rsquo;s like a big tech conference, software engineers and shit. This is my third one coming out here. I&rsquo;ve been around the world. I was in Asia for a couple months 2 years ago. I was in Africa last year for 4 months. Okay, so I haven&rsquo;t been to LATAM yet, but I&rsquo;m on my way. I&rsquo;m on my way. And right now I&rsquo;m just kind of stuck here in Denver because I&rsquo;m broke as shit. But I guess this is my all-gas So I&rsquo;m trying to get out here.</p>
+            <p id="s556"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=556s" target="_blank" rel="noopener" data-pagefind-ignore>9:16</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Ro at 10:34" data-pagefind-ignore>Ro</span>You need the oversized suit, bro.</p>
+            <p id="s558"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=558s" target="_blank" rel="noopener" data-pagefind-ignore>9:18</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, you know, my friend in New York, he&rsquo;s like, I need to get a suit before I go out and do it. Like, what is this guy talking about? Just post the video. Like, but you&rsquo;re right, you&rsquo;re right. You gotta go.</p>
+            <p id="s565"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=565s" target="_blank" rel="noopener" data-pagefind-ignore>9:25</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Ro at 10:34" data-pagefind-ignore>Ro</span>Yo, let me like, let us follow you on some shit, bro.</p>
+            <p id="s568"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=568s" target="_blank" rel="noopener" data-pagefind-ignore>9:28</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Nah, fuck yeah. I appreciate it. My last question though, I actually had a last question ready.</p>
+            <p id="s571"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=571s" target="_blank" rel="noopener" data-pagefind-ignore>9:31</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Ro at 10:34" data-pagefind-ignore>Ro</span>Oh, there&rsquo;s another question.</p>
+            <p id="s571-2"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=571s" target="_blank" rel="noopener" data-pagefind-ignore>9:31</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Is, do you have a question that you&rsquo;d ask the world? Like, if you could query the world, like you query AI, what would you ask the world?</p>
+            <p id="s578"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=578s" target="_blank" rel="noopener" data-pagefind-ignore>9:38</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Ro at 10:34" data-pagefind-ignore>Ro</span>What does it take to make you love your neighbor genuinely?</p>
+            <p id="s585"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=585s" target="_blank" rel="noopener" data-pagefind-ignore>9:45</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Gov at 10:36" data-pagefind-ignore>Gov</span>Boom! That&rsquo;s a tough one to follow up.</p>
+            <p id="s589"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=589s" target="_blank" rel="noopener" data-pagefind-ignore>9:49</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Ro at 10:34" data-pagefind-ignore>Ro</span>Um, that&rsquo;s tough.</p>
+            <p id="s594"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=594s" target="_blank" rel="noopener" data-pagefind-ignore>9:54</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Gov at 10:36" data-pagefind-ignore>Gov</span>Um, like, my mind just goes to why. Like, I think, like, understanding the whys of people. I would just say, like, why Why do you do what you do? Why do you treat others the way you do? Why do you be the way you are? And I think just like more so for people to understand for themselves, if anything, I think digging down into that why really helps people clarify the things that they do. You know, understanding of if what they&rsquo;re acting on is really true to themselves.</p>
+            <p id="s630"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=630s" target="_blank" rel="noopener" data-pagefind-ignore>10:30</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Ro at 10:34" data-pagefind-ignore>Ro</span>Mm.</p>
+            <p id="s631"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=631s" target="_blank" rel="noopener" data-pagefind-ignore>10:31</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Fuck yeah. And what were your names one more time?</p>
+            <p id="s633"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=633s" target="_blank" rel="noopener" data-pagefind-ignore>10:33</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Ro at 10:34" data-pagefind-ignore>Ro</span>Uh, yo, my name&rsquo;s Ro, like a rowboat.</p>
+            <p id="s636"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=636s" target="_blank" rel="noopener" data-pagefind-ignore>10:36</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Gov at 10:36" data-pagefind-ignore>Gov</span>And then I&rsquo;m Gov.</p>
+            <p id="s637"><a class="wt-at" href="https://www.youtube.com/watch?v=hyGTGHgIBdQ&amp;t=637s" target="_blank" rel="noopener" data-pagefind-ignore>10:37</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Fuck yeah. Thank you guys.</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+
+    <section id="after-transcript" tabindex="-1" class="wrap wt-more" aria-label="Filmed the same day">
+        <div class="country-head">
+            <h2 class="country-name">Filmed the same day.</h2>
+            <span class="country-meta">21 March 2026</span>
+        </div>
+        <ul class="rel-list">
+            <li class="rel-item">
+                <a class="rel-link" href="../archive/trump-is-a-big-issue-friends-visiting-denver-on-the-biggest-problem-in.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/H8Lqw2csuOE/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">&quot;Trump Is a Big Issue&quot; · Friends Visiting Denver on the Biggest Problem in the World Right Now</span>
+                        <span class="rel-why">12.00am &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Transcript</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+<div><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from Denver Unfiltered.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-denver">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="a-first-interview-and-advice-back-to-newark-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/UkX8veGIl58-640.jpg" srcset="../stills/UkX8veGIl58-320.jpg 320w, ../stills/UkX8veGIl58-480.jpg 480w, ../stills/UkX8veGIl58-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:15</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · ETH Denver 2024</span>
+                    <h3 class="report-title">A first interview, and advice back to Newark.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="building-a-dao-and-making-governance-a-game-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/qcTocIWf34U-640.jpg" srcset="../stills/qcTocIWf34U-320.jpg 320w, ../stills/qcTocIWf34U-480.jpg 480w, ../stills/qcTocIWf34U-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:45</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">A content coin, and making governance a game.</h3>
+                    
+                </div>
+            </a>
+            <a href="from-america-to-denver-what-brought-you-here-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/DdXcCfCc26E-640.jpg" srcset="../stills/DdXcCfCc26E-320.jpg 320w, ../stills/DdXcCfCc26E-480.jpg 480w, ../stills/DdXcCfCc26E-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:21</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · Street</span>
+                    <h3 class="report-title">A borrowed camera, and Denver block by block.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../question/most-important-global-issue.html">Every answer to “What is the most important global issue today?”</a> &middot; <a href="../question/what-is-ethereum.html">Every answer to “What is Ethereum?”</a> &middot; <a href="../question/what-would-you-ask-the-world.html">Every answer to “If you could ask people around the world one question, what would you ask them?”</a> &middot; <a href="../places.html#denver">Everything filmed in Denver</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

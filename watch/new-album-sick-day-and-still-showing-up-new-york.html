@@ -1,0 +1,823 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Fifteen minutes in New York with an independent artist a few days after his album release party, taped at the Station 3 space courtesy of Archive.">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/new-album-sick-day-and-still-showing-up-new-york">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="New Album, a Sick Day and Still Showing Up | New York">
+    <meta property="og:description" content="Fifteen minutes in New York with an independent artist a few days after his album release party, taped at the Station 3 space courtesy of Archive.">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/new-album-sick-day-and-still-showing-up-new-york.jpg?v=d86b98f042">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="An album, a five person team and a sick day">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/new-album-sick-day-and-still-showing-up-new-york.jpg?v=d86b98f042">
+    <meta property="og:url" content="https://wethem.xyz/watch/new-album-sick-day-and-still-showing-up-new-york">
+    <title>New Album, a Sick Day and Still Showing Up | New York &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/new-album-sick-day-and-still-showing-up-new-york#video",
+  "name": "New Album, a Sick Day and Still Showing Up | New York",
+  "description": "Fifteen minutes in New York with an independent artist a few days after his album release party, taped at the Station 3 space courtesy of Archive. Life of Thom is four days into being ill and turned up anyway, which he says out loud in the first minute: \"I feel like shit low-key because I've been sick for like the last four days, but I'm Gucci.\" The route in was open mics. \"Tapped in with a bunch of open mics\", he says, and from there a scene of people putting on their own events. The step change came from leaving town: \"the crossover was really like when I went to South by Southwest for the first time\". After that it was volume and consistency, \"playing all around New York, you know, selling out most of these venues for real\". What the new record means to him is not applause, it is order. Success, he says, is everything running the way he set it up: \"all my shit's on check, you know, team's on check, this rollout's on check\". The interview keeps returning to that. He runs his work out of Notion, he thinks about the business like an operator, and he has built a team of about five or six around it. \"it's about a good five six people um I got them split up in all different roles\", with day to day people, overseers pitching labels and brand partners on the West Coast, and a lawyer. His view of what an artist owes that team is the sharpest thing on the tape. He is not outsourcing the load, he is absorbing it so everyone else can move faster: \"I want to make everyone's positions As easy as possible so they can do Way more for me\". And on where it starts: \"the groundwork has to come from the artist always\". The Web3 part of his story is treated as one more thing to learn rather than a conversion. \"Web3 was a really nice curve in the learning\", he says, and describes seeing it as a place to build financially and to be early: \"I want to be like one of the head honchos\". He is clear about why that matters to him beyond money, which is to \"kind of like give that inspiration to others in the creative space\", and about how it felt at the time: \"it's a Pandora's box that really got unlocked\". He credits two people by name for the door, his guy Matt Bond, and LaTosha, who he dropped a record with back in 2018. \"shouts LaTosha man that's that's really my big sister\". He is also honest that the fit is unsettled, and asks aloud whether the protocol layer really matches the way the music industry works. His answer is to keep it in hand either way and keep building outside it. The last stretch is what is coming. A single with an artist from Harlem, merch, production sent out for placements, something he cannot announce, and \"There is a deluxe for the project we just put out\". Asked to close on the album title, he explains Room 44 through numerology, four standing for order, two fours making eight, eight turned on its side making infinity. \"It felt like I was stepping into a timeless zone\", he says, \"It's an infinite sparring session, low-key\". His favourite song on it is Shabbat with CJ Fly, which he notes has left a lot of people with the wrong impression about his religion. What he says he is most excited about is not a release at all. \"In general, it's just the experience And what new characters is we about to meet\".",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/5SWN_3QPM7g/maxresdefault.jpg"
+  ],
+  "uploadDate": "2024-02-05T04:34:14Z",
+  "embedUrl": "https://www.youtube.com/embed/5SWN_3QPM7g",
+  "url": "https://wethem.xyz/watch/new-album-sick-day-and-still-showing-up-new-york",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT14M50S",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "Live from Station 3, four days sick",
+      "startOffset": 0,
+      "url": "https://wethem.xyz/watch/new-album-sick-day-and-still-showing-up-new-york?t=0",
+      "endOffset": 41
+    },
+    {
+      "@type": "Clip",
+      "name": "Showing up anyway, and getting organized",
+      "startOffset": 41,
+      "url": "https://wethem.xyz/watch/new-album-sick-day-and-still-showing-up-new-york?t=41",
+      "endOffset": 95
+    },
+    {
+      "@type": "Clip",
+      "name": "Coming up through New York open mics",
+      "startOffset": 95,
+      "url": "https://wethem.xyz/watch/new-album-sick-day-and-still-showing-up-new-york?t=95",
+      "endOffset": 142
+    },
+    {
+      "@type": "Clip",
+      "name": "What success means to him: everything on check",
+      "startOffset": 142,
+      "url": "https://wethem.xyz/watch/new-album-sick-day-and-still-showing-up-new-york?t=142",
+      "endOffset": 209
+    },
+    {
+      "@type": "Clip",
+      "name": "How an indie artist runs a team of five or six",
+      "startOffset": 209,
+      "url": "https://wethem.xyz/watch/new-album-sick-day-and-still-showing-up-new-york?t=209",
+      "endOffset": 308
+    },
+    {
+      "@type": "Clip",
+      "name": "How he got into the NFT space",
+      "startOffset": 308,
+      "url": "https://wethem.xyz/watch/new-album-sick-day-and-still-showing-up-new-york?t=308",
+      "endOffset": 425
+    },
+    {
+      "@type": "Clip",
+      "name": "Who opened the NFT door: Matt Bond and LaTosha",
+      "startOffset": 425,
+      "url": "https://wethem.xyz/watch/new-album-sick-day-and-still-showing-up-new-york?t=425",
+      "endOffset": 604
+    },
+    {
+      "@type": "Clip",
+      "name": "What is next: a single, merch, a deluxe",
+      "startOffset": 604,
+      "url": "https://wethem.xyz/watch/new-album-sick-day-and-still-showing-up-new-york?t=604",
+      "endOffset": 740
+    },
+    {
+      "@type": "Clip",
+      "name": "Why the album is called Room 44: numerology",
+      "startOffset": 740,
+      "url": "https://wethem.xyz/watch/new-album-sick-day-and-still-showing-up-new-york?t=740",
+      "endOffset": 785
+    },
+    {
+      "@type": "Clip",
+      "name": "His favourite track: Shabbat with CJ Fly",
+      "startOffset": 785,
+      "url": "https://wethem.xyz/watch/new-album-sick-day-and-still-showing-up-new-york?t=785",
+      "endOffset": 890
+    }
+  ],
+  "creator": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "transcript": "Welcome to New York. Welcome to another episode of We Them Niggas. Today we're live here in the Station 3 space, courtesy of the guys over at Archive. Thank you all so much. I'm here with Life of Tom. Welcome Life of Tom. Amazing to have you. Congratulations on this new album release, the release party you just had this weekend. You're really in a moment. So let's talk to us. How are you feeling today?\nI feel like shit low-key because I've been sick for like the last four days, but I'm Gucci. No COVID.\nNo COVID, yeah, but that's real, there's ups and downs\nYes, but I feel great though, I feel great, I feel great\nYeah, I hear you though, but you've been dealing with some wellness issues And I appreciate you being here in spite of that\nYeah, man, I mean, we've been talking straight for like, what, three, four days now?\nYeah, yeah, and I was gonna say, I feel like it says a lot about your hustle in general I feel like you take music super seriously I've been talking to you about, huh, I'm trying to onboard my stuff to Notion, get organized You're like, you'll be my Notion sensei, you're really on it\nDid you start it yet?\nYeah, I did, like, I've been setting it up Because\nyou mentioned it earlier, I was gonna be like, yo\nI can show you what it's like, I'll show you after, but I think it's dope, like you approach me as like a CEO, you're organized, you're thinking ahead, you're thinking about the music business like you were saying earlier, I'd love to hear about, you know, how did you get, how did you come up in the New York music scene, and you know, how do you see where you are right now inside of like your vision of where you want to go,\nword, um, that's crazy, you always ask me a lot of questions, that's one you never asked me before, uh, I came up in the New York scene, um, honestly, I really just, Tapped in with a bunch of open mics when I, you know what I mean, I got around like that community heavy and there was like Mad Creatives that was just jumping out the blue and it was doing all these cool events. So, you know, I pop out to a lot of these, a lot of these joints, you know, and the crossover was really like when I went to South by Southwest for the first time, facts, and I came back and I was like, oh shit, there's like way more to this shit.\nAnd, honestly, just being around different circles, pushing my shit consistently And, I mean, playing all around New York, you know, selling out most of these venues for real That's where we at now, and just being a real nigga\nI fuck with it, being a real nigga,\nthat's really it,\nthat's really it That's all it takes, to have a good life, that's what they say\nYeah, yeah\nAnd I fuck with it, and what does it mean to be where you are right now? like inside this new product release. What does this release mean to you? What does it signify?\nOh, it really signifies like, yo, like a good standing. I'm gonna say like, you know, success in general in me just means not being bothered that ass. And that to me means like, all my shit's on check, you know, team's on check, this rollout's on check, you know, money in, money out on check, you know, a whole system on check. And, you know, but right now with, like, everything going on, it feels, it feels great, bro Like, that I, you know, success, it feels like the world, I'm pumping my hands, you know what I mean? And that, that, that's a, that's a quote that can be perceived in many different ways\nI like, I mean, I fuck with it And something I was going to step back and say is, like, what you're saying with everything on check What I'm really hearing is things are going by design Yeah And I think it's incredible, like, like I say, I'm looking at your notion, you need a screenshot you sent me Like I think a lot of people don't really like aren't as organized like aren't as intentional for real about like like the way they approach their stuff I think like a lot of people want to outsource the organization or the communication stuff like that In my experience that you take a lot of that stuff like head on what does your team look like around music?\nUm\nthe team right now so um it's about a good five six people um I got them split up in all different roles So I got like my day-to-day, shout out to my boy Vicey and Sean And then I have like my overseers, you know, they're the ones that's like doing a lot of the pitching To like the labels and handling like the brand partners and sponsors and stuff And then, you know, the ones over, those guys are like on the West Coast And the ones over here, it's the same, same job Except they just have more of a leverage because we're in New York, you know what I mean So And then there's my lawyer Charles Jackie And then it's me But you know I'm the one pretty much doing Everything times 10 Because I want to make everyone's positions As easy as possible so they can do Way more for me,\nfacts And that's the beautiful thing to see and I'm sure there are people Who want to be on artist teams, there are people who are on artist teams Who wish people were taking on more So that their jobs were easier and they could deliver at a higher level\nI mean bro it's like Cause you telling me like yo like I see your man working like bro you have to be you know if you want to have a team you got to like set that standard for what whatever that looks like for you for yourself first and you know i mean i'm not gonna say like i never had help with this um and that's only all just been me but like a large sum of it yeah you know the ground the groundwork has to come from the artist always like that's just how it has to be\nand so how is like uh like i've discovered you to the nft space through our and Daniel McGill Mutual, and I'm curious, you know, how, like, how did you get into that space, and, you know, how has, like, that work ethic served you in that space?\nWeb3 was a really nice curve in the learning, because at first, like, I remember it stood out to something like, oh, this is something else I could build off, like, financials and, like, other things I could put into other assets for real, you know, just knowing, like, just, like, trading, you know, with stocks before and shit like that, feel me, but then, And like, you know, I started to look at it even bigger, like, yo, I want to be like one of the head honchos when this shit blow the fuck up. Like I want to be able to be one of those dudes on the front line, you know, and kind of like give that inspiration to others in the creative space.\nCause, cause, you know, it's a Pandora's box that really got unlocked. You know, you look at NFT and, you know, potentials is crazy.\nWhat do you see the potential as? What are some opportunities that you've had in this space, learning experiences, tools? You were at South by Southwest. Were you at any Web3 kind of centric events there? See any people?\nYeah, yeah. When I was at South by, I wouldn't even say this year, though, last year when I played, there were way more Web3 events. It's even for Art Basel, too. You Know the benefits I see and like just the opportunities I've gotten for me you know from like partnering with catalog works when they first came out you know like that was so fire because like you know I mean like just you know see artists like Mick Jenkins you know dropping on there crazy you know he was he was on top of it so um you know to you know have an opportunity being at being a space so early but on top of that you know in that community that had a you know a backing so fresh for me was like so far and I think like you know being in tune like shouts LaTosha man that's that's really my big sister like a lot of people don't know this but me and Tosh Fagel back um couple years like I dropped the record with her off this project I did in like 2018 um and\nwhat was the name of the record\nit was called oh it was called Bonnie and Clyde Facts\nshout out LaTosha I just met her at Friends of Benefits Fest this year\nword yo bro she is a sweetheart man and uh you know my guy matt bond that's my dude he was the one and he's the one that really introduced me to that nft to the nft space shouts that man um and the first person he had me link with was latasha i was calling her up like early 2021 and she that's when she did zora you know she became the she became the head of uh uh uh community community over at zora um and then she did zoratopia and there's Matt opportunities that came from, you know, being in all these different spaces and NFTs because a lot of them like fed, I would say the brand awareness, you know, of what, you know, my shit is as much as like, as I feel a lot of like where Web3 and his protocol stands, does it really fit, you know, the system that the industry really work off of?\nIt's just facts to be honest. It, you know, to build outside of that is technically the goal, you know, so to see the end of, you know, NFTs and what Web3 really reflects. So on that end, for me, I was just like, all right, but let me get in this now, so I have that in my arsenal\nNo, and I think that's dope, right? Like, you're saying you want to be, like, one of the head honchos Oh,\nyeah Like,\nfor real, even, like, myself, like, getting into this space, I was like, okay, like, you know, how can I add value? How can I prepare? How can I be, like, be ready, per se, when, you know, when things pop off And, like, a way to be able to capitalize on this market moving when attention shifts Yes Trying to educate artists and creatives so they could also capitalize on the opportunities And see ways to find community And people like yourself Who are influential in this space And thinking creatively And solving problems Some people don't even know exist Because it's not like real life Life consequential But in terms of there being progress in this space It is important\nDude, I think this space has so I think this space was so crazy to see In terms of progress From like Web3 kind of like its own Starting company in a way And to see that so early for that bro Like, the swarm of people, you know, it really, I think it was beautiful to see, like, people being open to a system very, very rare In terms of, like, people don't understand that type of shit, man They don't, you know, so I think it's cool just to see what it is, you know I want to see this shit through, facts Okay,\nand that's what's in, like, the rear view And so what's in the future for Life of Tom? Like, you just had this album released like what are the next six months the next quarter what is the start of 2024 look like for you what are you looking out for what should we be excited about\nyo man I'm dropping a single with Fergie baby okay facts uh top of January that's my guy right there um\nwho's Fergie baby tell us about Fergie\nyo Fergie baby that's one of my favorite artists from Harlem right now he is going nuts yo if y'all get the chance check out his music that's that dude is that dude is crazy man\nhe got Shout out a track, shout out a track\nYo, yo, y'all gotta bump that Suburbans, that shit hard Suburbans for you, baby You know what I mean, yeah, nah, he's crazy And that's off our album, actually You know what I mean, it's coming out next year We got, well, I got, like, show run up A couple, like, you know, got, like, merch I'm working, I'm super excited to put out For me, I've been working on, like, mad, like, production You know, send out for placement So like, you know, I ain't gonna lie We fake just like locked in something cool I can't really announce it right now But like, I'm mad excited for that You know, Web 3 too Like, just to, you know, keep motion active in that There is a deluxe for the project we just put out Yeah, it's a deluxe That's coming out\nThat's exciting, tune into that\nWe got some crazy names on that one, man But, I don't know, bro It's so much But that's the stuff I'm super excited for In general, it's just the experience And what new characters is we about to meet, feel me?\nI like it, it is an adventure Yeah I think it's beautiful to be able to get a window into your adventure And into your team I think having a team is so important, you know what I mean?\nI think I'm privileged to have that shit, bro That ass, I'm not even gonna lie with you, man Like, I don't see mad situations with people And, like, I be looking at my shit And I just be, like, mad grateful Because, you know, like If I didn't have a consistent, you know, like, you know, foundation, you know, platform for myself, feel me Even just, you know, living in New York where, like, boom, there's money everywhere, feel me, like, yeah\nI hear it, because, you know, New York is a good place to busk\nFacts, they be going crazy\nBut what I was going to say is, I was going to ask, like, the album, how did you come to name the album, what you did? What's your favorite song off the project? That's kind of how I like to close out the interview\nYo, my favorite song off Well, first off, I called it Room 44 Because in numerology, 4 is a representation of order And when you put 4 and 4 together, that gives you 8 You know what I mean? 8 represent infinity when you flip that So, feel me? It felt like I was stepping into a timeless zone You know, a hyperbolic time chamber that you kind of never really step out of, you know It's an infinite sparring session, low-key, you know And I felt like all the words and the songs on this project was really reflecting, like Damn, this dude, like, damn, I'm in tune with, like, a part of myself that's, like, really, like, strong, you know My favorite song, Shabbat, with CJ Fly, Facts\nThat's, that's, that's, that's,\nby the way, I'm not Jewish Everybody thinks I'm Jewish because of that song I'm not Jewish\nYeah, I thought it was funny, I invited my, my, my, my, my Jewish friend here\nHello, Jewish friend\nYes Yes And, uh, and what's it called? I was gonna, when I was listening to him on the train, I was like, dang, I wonder why he named it this\nYeah, yeah, no, no, literally, like, you know, it's like stepping in a world, man That, you know what I mean? Like, I've been doing this shit for the, for a couple years now, though Like I feel like right now, you know, like we really picking up on emotion right now And the momentum that's like, feel me, I was low-key like, you know, desiring for a minute And I think the way it manifested with like what the meaning and purpose of this project is Is very full circle, you know, in terms of my growth and just who I am as a person So, you know, room 44\nRoom 44, there you have it Well, it's been beautiful to have you on today's episode of We Them Niggas We Them Niggas Yes, sir, just like that And you want to let them know where they can find you on social media and what not\nLife of T-H-O-M, Life of Tom That's at everything, Google Life of Tom, Life of Tom.com Mr. Big Bon Voyage Mr. Big Floor 11, Room 44 Comb your hair, I cook better than your, alright\nBoom, boom, boom, there you have it, booyah And there we have another episode of We Them Niggas Thank you so much, Tom, Thomas, for being here with us",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "New York",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "url": "https://wethem.xyz/places#new-york"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Single dispatches",
+    "url": "https://wethem.xyz/portfolio#p-elsewhere"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Single dispatches",
+      "item": "https://wethem.xyz/portfolio#p-elsewhere"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "An album, a five person team and a sick day",
+      "item": "https://wethem.xyz/watch/new-album-sick-day-and-still-showing-up-new-york"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2024-02-05" data-pf-vid="5SWN_3QPM7g" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;14:50&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="New York" data-pf-country="United States" data-pf-project="Single dispatches">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-elsewhere">Single dispatches</a></li>
+            <li aria-current="page">An album, a five person team and a sick day</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">An album, a five person team and a sick day.</h1>
+
+    <p class="wt-byline"><strong>Life of Thom</strong> &middot; New York &middot; 15 min</p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="5SWN_3QPM7g" live postersrcset="../stills/5SWN_3QPM7g-320.jpg 320w, ../stills/5SWN_3QPM7g-480.jpg 480w, ../stills/5SWN_3QPM7g-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/5SWN_3QPM7g?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="An album, a five person team and a sick day, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+    <p class="wt-note wt-credit">Executive producer: C.Y. Lee</p>
+
+    <div class="wt-prose">
+            <p>Fifteen minutes in New York with an independent artist a few days after his album release party, taped at the Station 3 space courtesy of Archive. Life of Thom is four days into being ill and turned up anyway, which he says out loud in the first minute: &ldquo;I feel like shit low-key because I&rsquo;ve been sick for like the last four days, but I&rsquo;m Gucci.&rdquo;</p>
+            <p>The route in was open mics. &ldquo;Tapped in with a bunch of open mics&rdquo;, he says, and from there a scene of people putting on their own events. The step change came from leaving town: &ldquo;the crossover was really like when I went to South by Southwest for the first time&rdquo;. After that it was volume and consistency, &ldquo;playing all around New York, you know, selling out most of these venues for real&rdquo;.</p>
+            <p>What the new record means to him is not applause, it is order. Success, he says, is everything running the way he set it up: &ldquo;all my shit&rsquo;s on check, you know, team&rsquo;s on check, this rollout&rsquo;s on check&rdquo;. The interview keeps returning to that. He runs his work out of Notion, he thinks about the business like an operator, and he has built a team of about five or six around it. &ldquo;it&rsquo;s about a good five six people um I got them split up in all different roles&rdquo;, with day to day people, overseers pitching labels and brand partners on the West Coast, and a lawyer.</p>
+            <p>His view of what an artist owes that team is the sharpest thing on the tape. He is not outsourcing the load, he is absorbing it so everyone else can move faster: &ldquo;I want to make everyone&rsquo;s positions As easy as possible so they can do Way more for me&rdquo;. And on where it starts: &ldquo;the groundwork has to come from the artist always&rdquo;.</p>
+            <p>The Web3 part of his story is treated as one more thing to learn rather than a conversion. &ldquo;Web3 was a really nice curve in the learning&rdquo;, he says, and describes seeing it as a place to build financially and to be early: &ldquo;I want to be like one of the head honchos&rdquo;. He is clear about why that matters to him beyond money, which is to &ldquo;kind of like give that inspiration to others in the creative space&rdquo;, and about how it felt at the time: &ldquo;it&rsquo;s a Pandora&rsquo;s box that really got unlocked&rdquo;. He credits two people by name for the door, his guy Matt Bond, and LaTosha, who he dropped a record with back in 2018. &ldquo;shouts LaTosha man that&rsquo;s that&rsquo;s really my big sister&rdquo;.</p>
+            <p>He is also honest that the fit is unsettled, and asks aloud whether the protocol layer really matches the way the music industry works. His answer is to keep it in hand either way and keep building outside it.</p>
+            <p>The last stretch is what is coming. A single with an artist from Harlem, merch, production sent out for placements, something he cannot announce, and &ldquo;There is a deluxe for the project we just put out&rdquo;. Asked to close on the album title, he explains Room 44 through numerology, four standing for order, two fours making eight, eight turned on its side making infinity. &ldquo;It felt like I was stepping into a timeless zone&rdquo;, he says, &ldquo;It&rsquo;s an infinite sparring session, low-key&rdquo;. His favourite song on it is Shabbat with CJ Fly, which he notes has left a lot of people with the wrong impression about his religion.</p>
+            <p>What he says he is most excited about is not a release at all. &ldquo;In general, it&rsquo;s just the experience And what new characters is we about to meet&rdquo;.</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../places.html#new-york">Everything filmed in New York</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="where-the-name-came-from-maceo-interviewed-by-archive-new-york.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/M8nJR03NK5M-640.jpg" srcset="../stills/M8nJR03NK5M-320.jpg 320w, ../stills/M8nJR03NK5M-480.jpg 480w, ../stills/M8nJR03NK5M-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>17:17</span></span><span>Where the name came from: Maceo, interviewed by Archive.</span></a>
+        <a class="wt-rail-card" href="go-crazy-or-go-home-on-the-j-train.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/UbebBKiNS4M-640.jpg" srcset="../stills/UbebBKiNS4M-320.jpg 320w, ../stills/UbebBKiNS4M-480.jpg 480w, ../stills/UbebBKiNS4M-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:37</span></span><span>On the train after the Knicks won the finals.</span></a>
+        <a class="wt-rail-card" href="russ-and-sirsu-in-manhattan-use-every-resource.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/C0p8XU_efic-640.jpg" srcset="../stills/C0p8XU_efic-320.jpg 320w, ../stills/C0p8XU_efic-480.jpg 480w, ../stills/C0p8XU_efic-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>23:48</span></span><span>Russ and Sirsu in Manhattan: use every resource at your disposal.</span></a>
+        <a class="wt-rail-card" href="blvkhvnd-and-the-crypto-cookout-sirsu-at-eth-denver-2024.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/sSyrdlViK3Q-640.jpg" srcset="../stills/sSyrdlViK3Q-320.jpg 320w, ../stills/sSyrdlViK3Q-480.jpg 480w, ../stills/sSyrdlViK3Q-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>29:32</span></span><span>BLVKHVND and the Crypto Cookout: Sirsu.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c0"><a class="wt-t" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-s">Live from Station 3, four days sick</span></li>
+                <li class="wt-line" id="c41"><a class="wt-t" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=41s" target="_blank" rel="noopener" data-pagefind-ignore>0:41</a><span class="wt-s">Showing up anyway, and getting organized</span></li>
+                <li class="wt-line" id="c95"><a class="wt-t" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=95s" target="_blank" rel="noopener" data-pagefind-ignore>1:35</a><span class="wt-s">Coming up through New York open mics</span></li>
+                <li class="wt-line" id="c142"><a class="wt-t" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=142s" target="_blank" rel="noopener" data-pagefind-ignore>2:22</a><span class="wt-s">What success means to him: everything on check</span></li>
+                <li class="wt-line" id="c209"><a class="wt-t" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=209s" target="_blank" rel="noopener" data-pagefind-ignore>3:29</a><span class="wt-s">How an indie artist runs a team of five or six</span></li>
+                <li class="wt-line" id="c308"><a class="wt-t" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=308s" target="_blank" rel="noopener" data-pagefind-ignore>5:08</a><span class="wt-s">How he got into the NFT space</span></li>
+                <li class="wt-line" id="c425"><a class="wt-t" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=425s" target="_blank" rel="noopener" data-pagefind-ignore>7:05</a><span class="wt-s">Who opened the NFT door: Matt Bond and LaTosha</span></li>
+                <li class="wt-line" id="c604"><a class="wt-t" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=604s" target="_blank" rel="noopener" data-pagefind-ignore>10:04</a><span class="wt-s">What is next: a single, merch, a deluxe</span></li>
+                <li class="wt-line" id="c740"><a class="wt-t" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=740s" target="_blank" rel="noopener" data-pagefind-ignore>12:20</a><span class="wt-s">Why the album is called Room 44: numerology</span></li>
+                <li class="wt-line" id="c785"><a class="wt-t" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=785s" target="_blank" rel="noopener" data-pagefind-ignore>13:05</a><span class="wt-s">His favourite track: Shabbat with CJ Fly</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Transcribed from the original audio and corrected for names. Speaker letters mark turns, not names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s9"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=9s" target="_blank" rel="noopener" data-pagefind-ignore>0:09</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Welcome to New York. Welcome to another episode of We Them Niggas. Today we&rsquo;re live here in the Station 3 space, courtesy of the guys over at Archive. Thank you all so much. I&rsquo;m here with Life of Tom. Welcome Life of Tom. Amazing to have you. Congratulations on this new album release, the release party you just had this weekend. You&rsquo;re really in a moment. So let&rsquo;s talk to us. How are you feeling today?</p>
+            <p id="s28"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=28s" target="_blank" rel="noopener" data-pagefind-ignore>0:28</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I feel like shit low-key because I&rsquo;ve been sick for like the last four days, but I&rsquo;m Gucci. No COVID.</p>
+            <p id="s36"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=36s" target="_blank" rel="noopener" data-pagefind-ignore>0:36</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>No COVID, yeah, but that&rsquo;s real, there&rsquo;s ups and downs</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s39"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=39s" target="_blank" rel="noopener" data-pagefind-ignore>0:39</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yes, but I feel great though, I feel great, I feel great</p>
+            <p id="s41"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=41s" target="_blank" rel="noopener" data-pagefind-ignore>0:41</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, I hear you though, but you&rsquo;ve been dealing with some wellness issues And I appreciate you being here in spite of that</p>
+            <p id="s45"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=45s" target="_blank" rel="noopener" data-pagefind-ignore>0:45</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, man, I mean, we&rsquo;ve been talking straight for like, what, three, four days now?</p>
+            <p id="s50"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=50s" target="_blank" rel="noopener" data-pagefind-ignore>0:50</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, yeah, and I was gonna say, I feel like it says a lot about your hustle in general I feel like you take music super seriously I&rsquo;ve been talking to you about, huh, I&rsquo;m trying to onboard my stuff to Notion, get organized You&rsquo;re like, you&rsquo;ll be my Notion sensei, you&rsquo;re really on it</p>
+            <p id="s61"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=61s" target="_blank" rel="noopener" data-pagefind-ignore>1:01</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Did you start it yet?</p>
+            <p id="s62"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=62s" target="_blank" rel="noopener" data-pagefind-ignore>1:02</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, I did, like, I&rsquo;ve been setting it up Because</p>
+            <p id="s63"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=63s" target="_blank" rel="noopener" data-pagefind-ignore>1:03</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>you mentioned it earlier, I was gonna be like, yo</p>
+            <p id="s66"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=66s" target="_blank" rel="noopener" data-pagefind-ignore>1:06</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I can show you what it&rsquo;s like, I&rsquo;ll show you after, but I think it&rsquo;s dope, like you approach me as like a CEO, you&rsquo;re organized, you&rsquo;re thinking ahead, you&rsquo;re thinking about the music business like you were saying earlier, I&rsquo;d love to hear about, you know, how did you get, how did you come up in the New York music scene, and you know, how do you see where you are right now inside of like your vision of where you want to go,</p>
+            <p id="s83"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=83s" target="_blank" rel="noopener" data-pagefind-ignore>1:23</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>word, um, that&rsquo;s crazy, you always ask me a lot of questions, that&rsquo;s one you never asked me before, uh, I came up in the New York scene, um, honestly, I really just, Tapped in with a bunch of open mics when I, you know what I mean, I got around like that community heavy and there was like Mad Creatives that was just jumping out the blue and it was doing all these cool events. So, you know, I pop out to a lot of these, a lot of these joints, you know, and the crossover was really like when I went to South by Southwest for the first time, facts, and I came back and I was like, oh shit, there&rsquo;s like way more to this shit.</p>
+            <p id="s119"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=119s" target="_blank" rel="noopener" data-pagefind-ignore>1:59</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And, honestly, just being around different circles, pushing my shit consistently And, I mean, playing all around New York, you know, selling out most of these venues for real That&rsquo;s where we at now, and just being a real nigga</p>
+            <p id="s144"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=144s" target="_blank" rel="noopener" data-pagefind-ignore>2:24</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I fuck with it, being a real nigga,</p>
+            <p id="s146"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=146s" target="_blank" rel="noopener" data-pagefind-ignore>2:26</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>that&rsquo;s really it,</p>
+            <p id="s148"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=148s" target="_blank" rel="noopener" data-pagefind-ignore>2:28</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>that&rsquo;s really it That&rsquo;s all it takes, to have a good life, that&rsquo;s what they say</p>
+            <p id="s150"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=150s" target="_blank" rel="noopener" data-pagefind-ignore>2:30</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, yeah</p>
+            <p id="s152"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=152s" target="_blank" rel="noopener" data-pagefind-ignore>2:32</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And I fuck with it, and what does it mean to be where you are right now? like inside this new product release. What does this release mean to you? What does it signify?</p>
+            <p id="s158"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=158s" target="_blank" rel="noopener" data-pagefind-ignore>2:38</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Oh, it really signifies like, yo, like a good standing. I&rsquo;m gonna say like, you know, success in general in me just means not being bothered that ass. And that to me means like, all my shit&rsquo;s on check, you know, team&rsquo;s on check, this rollout&rsquo;s on check, you know, money in, money out on check, you know, a whole system on check. And, you know, but right now with, like, everything going on, it feels, it feels great, bro Like, that I, you know, success, it feels like the world, I&rsquo;m pumping my hands, you know what I mean? And that, that, that&rsquo;s a, that&rsquo;s a quote that can be perceived in many different ways</p>
+            <p id="s197"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=197s" target="_blank" rel="noopener" data-pagefind-ignore>3:17</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I like, I mean, I fuck with it And something I was going to step back and say is, like, what you&rsquo;re saying with everything on check What I&rsquo;m really hearing is things are going by design Yeah And I think it&rsquo;s incredible, like, like I say, I&rsquo;m looking at your notion, you need a screenshot you sent me Like I think a lot of people don&rsquo;t really like aren&rsquo;t as organized like aren&rsquo;t as intentional for real about like like the way they approach their stuff I think like a lot of people want to outsource the organization or the communication stuff like that In my experience that you take a lot of that stuff like head on what does your team look like around music?</p>
+            <p id="s197-2"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=197s" target="_blank" rel="noopener" data-pagefind-ignore>3:17</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Um</p>
+            <p id="s223"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=223s" target="_blank" rel="noopener" data-pagefind-ignore>3:43</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>the team right now so um it&rsquo;s about a good five six people um I got them split up in all different roles So I got like my day-to-day, shout out to my boy Vicey and Sean And then I have like my overseers, you know, they&rsquo;re the ones that&rsquo;s like doing a lot of the pitching To like the labels and handling like the brand partners and sponsors and stuff And then, you know, the ones over, those guys are like on the West Coast And the ones over here, it&rsquo;s the same, same job Except they just have more of a leverage because we&rsquo;re in New York, you know what I mean So And then there&rsquo;s my lawyer Charles Jackie And then it&rsquo;s me But you know I&rsquo;m the one pretty much doing Everything times 10 Because I want to make everyone&rsquo;s positions As easy as possible so they can do Way more for me,</p>
+            <p id="s280"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=280s" target="_blank" rel="noopener" data-pagefind-ignore>4:40</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>facts And that&rsquo;s the beautiful thing to see and I&rsquo;m sure there are people Who want to be on artist teams, there are people who are on artist teams Who wish people were taking on more So that their jobs were easier and they could deliver at a higher level</p>
+            <p id="s289"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=289s" target="_blank" rel="noopener" data-pagefind-ignore>4:49</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I mean bro it&rsquo;s like Cause you telling me like yo like I see your man working like bro you have to be you know if you want to have a team you got to like set that standard for what whatever that looks like for you for yourself first and you know i mean i&rsquo;m not gonna say like i never had help with this um and that&rsquo;s only all just been me but like a large sum of it yeah you know the ground the groundwork has to come from the artist always like that&rsquo;s just how it has to be</p>
+            <p id="s315"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=315s" target="_blank" rel="noopener" data-pagefind-ignore>5:15</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>and so how is like uh like i&rsquo;ve discovered you to the nft space through our and Daniel McGill Mutual, and I&rsquo;m curious, you know, how, like, how did you get into that space, and, you know, how has, like, that work ethic served you in that space?</p>
+            <p id="s326"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=326s" target="_blank" rel="noopener" data-pagefind-ignore>5:26</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Web3 was a really nice curve in the learning, because at first, like, I remember it stood out to something like, oh, this is something else I could build off, like, financials and, like, other things I could put into other assets for real, you know, just knowing, like, just, like, trading, you know, with stocks before and shit like that, feel me, but then, And like, you know, I started to look at it even bigger, like, yo, I want to be like one of the head honchos when this shit blow the fuck up. Like I want to be able to be one of those dudes on the front line, you know, and kind of like give that inspiration to others in the creative space.</p>
+            <p id="s326-2"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=326s" target="_blank" rel="noopener" data-pagefind-ignore>5:26</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Cause, cause, you know, it&rsquo;s a Pandora&rsquo;s box that really got unlocked. You know, you look at NFT and, you know, potentials is crazy.</p>
+            <p id="s372"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=372s" target="_blank" rel="noopener" data-pagefind-ignore>6:12</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>What do you see the potential as? What are some opportunities that you&rsquo;ve had in this space, learning experiences, tools? You were at South by Southwest. Were you at any Web3 kind of centric events there? See any people?</p>
+            <p id="s385"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=385s" target="_blank" rel="noopener" data-pagefind-ignore>6:25</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, yeah. When I was at South by, I wouldn&rsquo;t even say this year, though, last year when I played, there were way more Web3 events. It&rsquo;s even for Art Basel, too. You Know the benefits I see and like just the opportunities I&rsquo;ve gotten for me you know from like partnering with catalog works when they first came out you know like that was so fire because like you know I mean like just you know see artists like Mick Jenkins you know dropping on there crazy you know he was he was on top of it so um you know to you know have an opportunity being at being a space so early but on top of that you know in that community that had a you know a backing so fresh for me was like so far and I think like you know being in tune like shouts LaTosha man that&rsquo;s that&rsquo;s really my big sister like a lot of people don&rsquo;t know this but me and Tosh Fagel back um couple years like I dropped the record with her off this project I did in like 2018 um and</p>
+            <p id="s446"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=446s" target="_blank" rel="noopener" data-pagefind-ignore>7:26</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>what was the name of the record</p>
+            <p id="s447"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=447s" target="_blank" rel="noopener" data-pagefind-ignore>7:27</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>it was called oh it was called Bonnie and Clyde Facts</p>
+            <p id="s452"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=452s" target="_blank" rel="noopener" data-pagefind-ignore>7:32</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>shout out LaTosha I just met her at Friends of Benefits Fest this year</p>
+            <p id="s454"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=454s" target="_blank" rel="noopener" data-pagefind-ignore>7:34</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>word yo bro she is a sweetheart man and uh you know my guy matt bond that&rsquo;s my dude he was the one and he&rsquo;s the one that really introduced me to that nft to the nft space shouts that man um and the first person he had me link with was latasha i was calling her up like early 2021 and she that&rsquo;s when she did zora you know she became the she became the head of uh uh uh community community over at zora um and then she did zoratopia and there&rsquo;s Matt opportunities that came from, you know, being in all these different spaces and NFTs because a lot of them like fed, I would say the brand awareness, you know, of what, you know, my shit is as much as like, as I feel a lot of like where Web3 and his protocol stands, does it really fit, you know, the system that the industry really work off of?</p>
+            <p id="s454-2"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=454s" target="_blank" rel="noopener" data-pagefind-ignore>7:34</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It&rsquo;s just facts to be honest. It, you know, to build outside of that is technically the goal, you know, so to see the end of, you know, NFTs and what Web3 really reflects. So on that end, for me, I was just like, all right, but let me get in this now, so I have that in my arsenal</p>
+            <p id="s521"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=521s" target="_blank" rel="noopener" data-pagefind-ignore>8:41</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>No, and I think that&rsquo;s dope, right? Like, you&rsquo;re saying you want to be, like, one of the head honchos Oh,</p>
+            <p id="s525"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=525s" target="_blank" rel="noopener" data-pagefind-ignore>8:45</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>yeah Like,</p>
+            <p id="s525-2"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=525s" target="_blank" rel="noopener" data-pagefind-ignore>8:45</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>for real, even, like, myself, like, getting into this space, I was like, okay, like, you know, how can I add value? How can I prepare? How can I be, like, be ready, per se, when, you know, when things pop off And, like, a way to be able to capitalize on this market moving when attention shifts Yes Trying to educate artists and creatives so they could also capitalize on the opportunities And see ways to find community And people like yourself Who are influential in this space And thinking creatively And solving problems Some people don&rsquo;t even know exist Because it&rsquo;s not like real life Life consequential But in terms of there being progress in this space It is important</p>
+            <p id="s557"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=557s" target="_blank" rel="noopener" data-pagefind-ignore>9:17</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Dude, I think this space has so I think this space was so crazy to see In terms of progress From like Web3 kind of like its own Starting company in a way And to see that so early for that bro Like, the swarm of people, you know, it really, I think it was beautiful to see, like, people being open to a system very, very rare In terms of, like, people don&rsquo;t understand that type of shit, man They don&rsquo;t, you know, so I think it&rsquo;s cool just to see what it is, you know I want to see this shit through, facts Okay,</p>
+            <p id="s596"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=596s" target="_blank" rel="noopener" data-pagefind-ignore>9:56</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>and that&rsquo;s what&rsquo;s in, like, the rear view And so what&rsquo;s in the future for Life of Tom? Like, you just had this album released like what are the next six months the next quarter what is the start of 2024 look like for you what are you looking out for what should we be excited about</p>
+            <p id="s606"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=606s" target="_blank" rel="noopener" data-pagefind-ignore>10:06</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>yo man I&rsquo;m dropping a single with Fergie baby okay facts uh top of January that&rsquo;s my guy right there um</p>
+            <p id="s613"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=613s" target="_blank" rel="noopener" data-pagefind-ignore>10:13</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>who&rsquo;s Fergie baby tell us about Fergie</p>
+            <p id="s615"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=615s" target="_blank" rel="noopener" data-pagefind-ignore>10:15</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>yo Fergie baby that&rsquo;s one of my favorite artists from Harlem right now he is going nuts yo if y&rsquo;all get the chance check out his music that&rsquo;s that dude is that dude is crazy man</p>
+            <p id="s625"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=625s" target="_blank" rel="noopener" data-pagefind-ignore>10:25</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>he got Shout out a track, shout out a track</p>
+            <p id="s626"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=626s" target="_blank" rel="noopener" data-pagefind-ignore>10:26</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yo, yo, y&rsquo;all gotta bump that Suburbans, that shit hard Suburbans for you, baby You know what I mean, yeah, nah, he&rsquo;s crazy And that&rsquo;s off our album, actually You know what I mean, it&rsquo;s coming out next year We got, well, I got, like, show run up A couple, like, you know, got, like, merch I&rsquo;m working, I&rsquo;m super excited to put out For me, I&rsquo;ve been working on, like, mad, like, production You know, send out for placement So like, you know, I ain&rsquo;t gonna lie We fake just like locked in something cool I can&rsquo;t really announce it right now But like, I&rsquo;m mad excited for that You know, Web 3 too Like, just to, you know, keep motion active in that There is a deluxe for the project we just put out Yeah, it&rsquo;s a deluxe That&rsquo;s coming out</p>
+            <p id="s675"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=675s" target="_blank" rel="noopener" data-pagefind-ignore>11:15</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>That&rsquo;s exciting, tune into that</p>
+            <p id="s675-2"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=675s" target="_blank" rel="noopener" data-pagefind-ignore>11:15</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>We got some crazy names on that one, man But, I don&rsquo;t know, bro It&rsquo;s so much But that&rsquo;s the stuff I&rsquo;m super excited for In general, it&rsquo;s just the experience And what new characters is we about to meet, feel me?</p>
+            <p id="s689"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=689s" target="_blank" rel="noopener" data-pagefind-ignore>11:29</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I like it, it is an adventure Yeah I think it&rsquo;s beautiful to be able to get a window into your adventure And into your team I think having a team is so important, you know what I mean?</p>
+            <p id="s697"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=697s" target="_blank" rel="noopener" data-pagefind-ignore>11:37</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I think I&rsquo;m privileged to have that shit, bro That ass, I&rsquo;m not even gonna lie with you, man Like, I don&rsquo;t see mad situations with people And, like, I be looking at my shit And I just be, like, mad grateful Because, you know, like If I didn&rsquo;t have a consistent, you know, like, you know, foundation, you know, platform for myself, feel me Even just, you know, living in New York where, like, boom, there&rsquo;s money everywhere, feel me, like, yeah</p>
+            <p id="s724"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=724s" target="_blank" rel="noopener" data-pagefind-ignore>12:04</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I hear it, because, you know, New York is a good place to busk</p>
+            <p id="s727"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=727s" target="_blank" rel="noopener" data-pagefind-ignore>12:07</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Facts, they be going crazy</p>
+            <p id="s729"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=729s" target="_blank" rel="noopener" data-pagefind-ignore>12:09</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>But what I was going to say is, I was going to ask, like, the album, how did you come to name the album, what you did? What&rsquo;s your favorite song off the project? That&rsquo;s kind of how I like to close out the interview</p>
+            <p id="s740"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=740s" target="_blank" rel="noopener" data-pagefind-ignore>12:20</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yo, my favorite song off Well, first off, I called it Room 44 Because in numerology, 4 is a representation of order And when you put 4 and 4 together, that gives you 8 You know what I mean? 8 represent infinity when you flip that So, feel me? It felt like I was stepping into a timeless zone You know, a hyperbolic time chamber that you kind of never really step out of, you know It&rsquo;s an infinite sparring session, low-key, you know And I felt like all the words and the songs on this project was really reflecting, like Damn, this dude, like, damn, I&rsquo;m in tune with, like, a part of myself that&rsquo;s, like, really, like, strong, you know My favorite song, Shabbat, with CJ Fly, Facts</p>
+            <p id="s798"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=798s" target="_blank" rel="noopener" data-pagefind-ignore>13:18</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>That&rsquo;s, that&rsquo;s, that&rsquo;s, that&rsquo;s,</p>
+            <p id="s799"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=799s" target="_blank" rel="noopener" data-pagefind-ignore>13:19</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>by the way, I&rsquo;m not Jewish Everybody thinks I&rsquo;m Jewish because of that song I&rsquo;m not Jewish</p>
+            <p id="s803"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=803s" target="_blank" rel="noopener" data-pagefind-ignore>13:23</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, I thought it was funny, I invited my, my, my, my, my Jewish friend here</p>
+            <p id="s806"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=806s" target="_blank" rel="noopener" data-pagefind-ignore>13:26</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Hello, Jewish friend</p>
+            <p id="s808"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=808s" target="_blank" rel="noopener" data-pagefind-ignore>13:28</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yes Yes And, uh, and what&rsquo;s it called? I was gonna, when I was listening to him on the train, I was like, dang, I wonder why he named it this</p>
+            <p id="s815"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=815s" target="_blank" rel="noopener" data-pagefind-ignore>13:35</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, yeah, no, no, literally, like, you know, it&rsquo;s like stepping in a world, man That, you know what I mean? Like, I&rsquo;ve been doing this shit for the, for a couple years now, though Like I feel like right now, you know, like we really picking up on emotion right now And the momentum that&rsquo;s like, feel me, I was low-key like, you know, desiring for a minute And I think the way it manifested with like what the meaning and purpose of this project is Is very full circle, you know, in terms of my growth and just who I am as a person So, you know, room 44</p>
+            <p id="s846"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=846s" target="_blank" rel="noopener" data-pagefind-ignore>14:06</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Room 44, there you have it Well, it&rsquo;s been beautiful to have you on today&rsquo;s episode of We Them Niggas We Them Niggas Yes, sir, just like that And you want to let them know where they can find you on social media and what not</p>
+            <p id="s856"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=856s" target="_blank" rel="noopener" data-pagefind-ignore>14:16</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Life of T-H-O-M, Life of Tom That&rsquo;s at everything, Google Life of Tom, Life of Tom.com Mr. Big Bon Voyage Mr. Big Floor 11, Room 44 Comb your hair, I cook better than your, alright</p>
+            <p id="s873"><a class="wt-at" href="https://www.youtube.com/watch?v=5SWN_3QPM7g&amp;t=873s" target="_blank" rel="noopener" data-pagefind-ignore>14:33</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Boom, boom, boom, there you have it, booyah And there we have another episode of We Them Niggas Thank you so much, Tom, Thomas, for being here with us</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+<div id="after-transcript" tabindex="-1"><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More single dispatches.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-elsewhere">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="web3-pop-up-cities-and-akiya-houses-japan.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/RUGnhnzumKg-640.jpg" srcset="../stills/RUGnhnzumKg-320.jpg 320w, ../stills/RUGnhnzumKg-480.jpg 480w, ../stills/RUGnhnzumKg-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>57:46</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">The podcast · Pop-up cities</span>
+                    <h3 class="report-title">Buying abandoned houses to build a neighborhood.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="lets-talk-about-web-3-with-maceo-online.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/h_ncqUC-4co-640.jpg" srcset="../stills/h_ncqUC-4co-320.jpg 320w, ../stills/h_ncqUC-4co-480.jpg 480w, ../stills/h_ncqUC-4co-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>55:42</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">The podcast · Let's Talk about Web 3</span>
+                    <h3 class="report-title">Maceo in the guest chair, telling the origin story.</h3>
+                    
+                </div>
+            </a>
+            <a href="crypto-clarity-whats-happening-with-the-money-online.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/W20VlF_HHuQ-640.jpg" srcset="../stills/W20VlF_HHuQ-320.jpg 320w, ../stills/W20VlF_HHuQ-480.jpg 480w, ../stills/W20VlF_HHuQ-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>58:45</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">The podcast · Crypto Clarity</span>
+                    <h3 class="report-title">The first lesson of a four week crypto course.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../places.html#new-york">Everything filmed in New York</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

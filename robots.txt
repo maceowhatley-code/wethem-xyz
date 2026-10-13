@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+Disallow: /docs/
+Disallow: /votemas-rhode-island
+Disallow: /votemas-new-york
+Disallow: /votemas-washington-dc
+Disallow: /votemas-north-carolina
+Disallow: /votemas-south-carolina
+Disallow: /votemas-alabama
+Disallow: /votemas-mississippi
+# AI crawlers, decided 20 Sep 2026 (docs/journal/AI-READABILITY-SITE-2026-09-20.md):
+# the retrieval and the training crawlers are both allowed. The interviews are
+# published to be heard and quoted, the same words are already on YouTube under
+# its terms, and nothing here is sold. They fall under the * group above; a
+# named group of their own would replace it and drop the Disallow lines, so
+# none is written. The one exception: Bytespider ignores crawl rate and answers nothing back.
+User-agent: Bytespider
+Disallow: /
+# No Disallow for an unlisted or signed-in page. Each one carries a noindex
+# meta (or answers 401), and a Disallow would stop the crawler from ever
+# reading that, while naming every unlisted path to anyone who opened this
+# file (the inspection, 12 Sep 2026).
+Sitemap: https://wethem.xyz/sitemap.xml

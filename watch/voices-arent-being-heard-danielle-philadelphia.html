@@ -1,0 +1,737 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Danielle is 25, grew up in Jersey, moved to Philadelphia in high school, and works in education.">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/voices-arent-being-heard-danielle-philadelphia">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="Voices Aren't Being Heard: Danielle | Philadelphia">
+    <meta property="og:description" content="Danielle is 25, grew up in Jersey, moved to Philadelphia in high school, and works in education.">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/voices-arent-being-heard-danielle-philadelphia.jpg?v=857c4c2575">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Voices aren’t being heard: Danielle, 25">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/voices-arent-being-heard-danielle-philadelphia.jpg?v=857c4c2575">
+    <meta property="og:url" content="https://wethem.xyz/watch/voices-arent-being-heard-danielle-philadelphia">
+    <title>Voices Aren't Being Heard: Danielle | Philadelphia &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/voices-arent-being-heard-danielle-philadelphia#video",
+  "name": "Voices Aren't Being Heard: Danielle | Philadelphia",
+  "description": "Danielle is 25, grew up in Jersey, moved to Philadelphia in high school, and works in education. What does she think of the USA today? “I hate it. Okay. Sucks. Government sucks. Healthcare. Like, there's a lot of things. I work in education and the system's not great and there's not funding.” Asked to say more, she puts herself in it: “I'm a black queer woman,” she studies political science, and what she is watching is subtraction. “A lot of people, things my people and women have fought for And a lot of it is being, you know, stripped away from us, like, piece by piece.” The reply she gets is to get over it, “but we're looking at it and a lot of people are suffering.” Her answer to what the everyday person is not making enough noise about turns the question around. They are making noise. “most of the everyday people are, you know, really trying to say things, but it's, you know, being blocked out,” and either “our voice is not really being heard, or they're being heard and just ignored.” Her own question for the city is about action, not opinion: “what are ways you guys are showing up?” On Philadelphia, she loves the people and has notes for the local government, starting with the potholes she just drove over. And then the thing she saw on TikTok that she wants more of: groups of Black women organising picnics, because “a lot of time now people don't really want to go out because there's, you know, police or ICE like in the streets,” so “they find little pockets of people that are really trying to build with each other.” Her message for anyone under ten: “keep reading,” and “Just because you're 10 doesn't mean you don't have important things to say or ways to feel. Talk about it.” The transcript below is from the original audio.",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/5Vy7E31Y4xk/maxresdefault.jpg"
+  ],
+  "uploadDate": "2026-04-18T01:19:52Z",
+  "embedUrl": "https://www.youtube.com/embed/5Vy7E31Y4xk",
+  "url": "https://wethem.xyz/watch/voices-arent-being-heard-danielle-philadelphia",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT3M46S",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "Danielle, 25, education worker",
+      "startOffset": 0,
+      "url": "https://wethem.xyz/watch/voices-arent-being-heard-danielle-philadelphia?t=0",
+      "endOffset": 38
+    },
+    {
+      "@type": "Clip",
+      "name": "Rights stripped away piece by piece",
+      "startOffset": 38,
+      "url": "https://wethem.xyz/watch/voices-arent-being-heard-danielle-philadelphia?t=38",
+      "endOffset": 77
+    },
+    {
+      "@type": "Clip",
+      "name": "People are speaking up, and being ignored",
+      "startOffset": 77,
+      "url": "https://wethem.xyz/watch/voices-arent-being-heard-danielle-philadelphia?t=77",
+      "endOffset": 104
+    },
+    {
+      "@type": "Clip",
+      "name": "Her question: how are you showing up?",
+      "startOffset": 104,
+      "url": "https://wethem.xyz/watch/voices-arent-being-heard-danielle-philadelphia?t=104",
+      "endOffset": 143
+    },
+    {
+      "@type": "Clip",
+      "name": "Potholes, and why Black women hold picnics",
+      "startOffset": 143,
+      "url": "https://wethem.xyz/watch/voices-arent-being-heard-danielle-philadelphia?t=143",
+      "endOffset": 200
+    },
+    {
+      "@type": "Clip",
+      "name": "Her message for kids: you have things to say",
+      "startOffset": 200,
+      "url": "https://wethem.xyz/watch/voices-arent-being-heard-danielle-philadelphia?t=200",
+      "endOffset": 226
+    }
+  ],
+  "creator": {
+    "@type": "Person",
+    "name": "Maceo",
+    "url": "https://wethem.xyz/people/maceo"
+  },
+  "transcript": "Boom. All right. So what's your name? Danielle. Okay. And where are you from? I grew up in Jersey, but I moved out to Philly in high school. Okay. And how old are you? I'm 25. 25. Oh, yeah. And what do you think of USA Today? I hate it. Okay. Sucks. Government sucks. Healthcare. Like, there's a lot of things. I work in education and the system's not great and there's not funding. There's really not a lot good going on. There's people out there trying to, you know, say stuff and do stuff, but a lot of the government isn't really helping. Say more about that A lot of our, you know, riots are being taken away\nI'm a black queer woman, so, you know, all my, you know, riots will be weighed You know, I study a lot of political science and I'm watching history And so I'm watching a lot of the stuff that, you know, we work for A lot of people, things my people and women have fought for And a lot of it is being, you know, stripped away from us, like, piece by piece And a lot of the times we're being told that, oh, you know, just kind of like get over it. It's nothing, you know, Trump's doing what he can for the country. But we're looking at it and a lot of people are suffering. So I don't really see what great is happening.\nWhat do you feel like the everyday person isn't making a big enough deal about?\nI mean, I feel like, I feel like most of the everyday people are, you know, really trying to say things, but it's, you know, being blocked out, you know, we're not really seeing each You know, on the news, a lot of things are being, you know, blocked out so, but I feel like, you know, the people I talk to, they're doing a lot, they're saying stuff, but, you know, it's just being blocked out, so our voice is not really being heard, or they're being heard and just ignored. So would a platform like this, where you get to see, hear what your neighbors are thinking, be interesting to you?\nYeah, absolutely, I mean, you know, if work can spread out and, you know, hear other people that are feeling the same way about us, we'd love to do that, we'd love to see it. Okay, do you have any questions for people around the city? Um, what are ways you guys are showing up? I mean, I know I say I'm, you know, doing this stuff and I go to protest when I can, but what are other ways that, you know, you guys are really showing up for everybody? Okay, and what do you think about the city? Um, the people I love, I mean, it's a city, you know, when you're from here and grew up here, I'm a person that moved here, what, over 10 years ago, but, you know, I really love the community that I've made here.\nAnd it just, again, local government's also trying to show up Like, just drove down the street and hit, I don't know how many potholes Like, that's not great, but where's that money going to? But everybody that I've, you know, met out here and the people I've met, I love Okay, and what do you, talk about community in Philadelphia Yeah, I mean, what I was scrolling on, you know, like TikTok the other day And I'm seeing, like, groups of, you know, black women trying to support each other Having events where we can just go and have a picnic outside just to, you know, build a community and see each other. Especially because a lot of time now people don't really want to go out because there's, you know, police or ICE like in the streets and so we don't really get to, you know, see each other in a way that isn't really a protest. So they find little pockets of people that are really trying to build with each other. It's great to see and I love that we do that out here in Philly or just even smaller events that go on. It's nice to see. Okay. And any message for people under the age of 10?\nUnder the age of 10, keep reading. I know there's not a lot going on in our books, but try to reach out, look out to people who are older than you or even just same age. You guys have a lot to say too. Just because you're 10 doesn't mean you don't have important things to say or ways to feel. Talk about it. I like that. I like that. Thank you. Yeah, absolutely. Have a good one.",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Philadelphia",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "url": "https://wethem.xyz/places#philadelphia"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Philadelphia",
+    "url": "https://wethem.xyz/portfolio#p-philadelphia"
+  },
+  "keywords": [
+    "What do you think of the United States?",
+    "What would you say to someone under ten?"
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Philadelphia",
+      "item": "https://wethem.xyz/portfolio#p-philadelphia"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Voices aren’t being heard: Danielle, 25",
+      "item": "https://wethem.xyz/watch/voices-arent-being-heard-danielle-philadelphia"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place], who[data-pf-who]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2026-04-18" data-pf-vid="5Vy7E31Y4xk" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;3:46&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="Philadelphia" data-pf-country="United States" data-pf-project="Philadelphia" data-pf-who="Maceo">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-philadelphia">Philadelphia</a></li>
+            <li aria-current="page">Voices aren’t being heard: Danielle, 25</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">Voices aren’t being heard: Danielle, 25.</h1>
+
+    <p class="wt-byline"><strong>Danielle</strong> &middot; Reported by <strong><a href="../people/maceo.html">Maceo</a></strong> &middot; Philadelphia &middot; 4 min</p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="5Vy7E31Y4xk" live postersrcset="../stills/5Vy7E31Y4xk-320.jpg 320w, ../stills/5Vy7E31Y4xk-480.jpg 480w, ../stills/5Vy7E31Y4xk-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/5Vy7E31Y4xk?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="Voices aren’t being heard: Danielle, 25, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+    <p class="wt-answers">Answers <a href="../question/what-do-you-think-of-the-united-states.html">What do you think of the United States?</a> and <a href="../question/what-would-you-say-to-someone-under-ten.html">What would you say to someone under ten?</a> &middot; see how other cities answered &rarr;</p>
+    <div class="wt-prose">
+            <p>Danielle is 25, grew up in Jersey, moved to Philadelphia in high school, and works in education. What does she think of the USA today? “I hate it. Okay. Sucks. Government sucks. Healthcare. Like, there&rsquo;s a lot of things. I work in education and the system&rsquo;s not great and there&rsquo;s not funding.”</p>
+            <p>Asked to say more, she puts herself in it: “I&rsquo;m a black queer woman,” she studies political science, and what she is watching is subtraction. “A lot of people, things my people and women have fought for And a lot of it is being, you know, stripped away from us, like, piece by piece.” The reply she gets is to get over it, “but we&rsquo;re looking at it and a lot of people are suffering.”</p>
+            <p>Her answer to what the everyday person is not making enough noise about turns the question around. They are making noise. “most of the everyday people are, you know, really trying to say things, but it&rsquo;s, you know, being blocked out,” and either “our voice is not really being heard, or they&rsquo;re being heard and just ignored.” Her own question for the city is about action, not opinion: “what are ways you guys are showing up?”</p>
+            <p>On Philadelphia, she loves the people and has notes for the local government, starting with the potholes she just drove over. And then the thing she saw on TikTok that she wants more of: groups of Black women organising picnics, because “a lot of time now people don&rsquo;t really want to go out because there&rsquo;s, you know, police or ICE like in the streets,” so “they find little pockets of people that are really trying to build with each other.” Her message for anyone under ten: “keep reading,” and “Just because you&rsquo;re 10 doesn&rsquo;t mean you don&rsquo;t have important things to say or ways to feel. Talk about it.” The transcript below is from the original audio.</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../question/what-do-you-think-of-the-united-states.html">Every answer to “What do you think of the United States?”</a></p>
+        <p class="wt-rail-link"><a href="../question/what-would-you-say-to-someone-under-ten.html">Every answer to “What would you say to someone under ten?”</a></p>
+        <p class="wt-rail-link"><a href="../places.html#philadelphia">Everything filmed in Philadelphia</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="a-question-for-the-city-north-philly-philadelphia.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/c71Qh669IN0-640.jpg" srcset="../stills/c71Qh669IN0-320.jpg 320w, ../stills/c71Qh669IN0-480.jpg 480w, ../stills/c71Qh669IN0-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>3:16</span></span><span>Two women, a message, and a question back.</span></a>
+        <a class="wt-rail-card" href="what-we-the-people-looks-like-germantown-philadelphia.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/p3Oq_LZuOmE-640.jpg" srcset="../stills/p3Oq_LZuOmE-320.jpg 320w, ../stills/p3Oq_LZuOmE-480.jpg 480w, ../stills/p3Oq_LZuOmE-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>8:06</span></span><span>Neighbors organizing music and speakers in Germantown.</span></a>
+        <a class="wt-rail-card" href="what-do-you-think-about-the-usa-germantown-philadelphia.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/2xGaR6sXFNE-640.jpg" srcset="../stills/2xGaR6sXFNE-320.jpg 320w, ../stills/2xGaR6sXFNE-480.jpg 480w, ../stills/2xGaR6sXFNE-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>5:41</span></span><span>The USA, the city, and a cleared record.</span></a>
+        <a class="wt-rail-card" href="social-anxiety-youth-suicide-and-the-1-percent-bobby-germantown-philadelphia.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/fhGghXrP0Ww-640.jpg" srcset="../stills/fhGghXrP0Ww-320.jpg 320w, ../stills/fhGghXrP0Ww-480.jpg 480w, ../stills/fhGghXrP0Ww-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>16:05</span></span><span>Social anxiety, youth suicide and the 1%: Bobby.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c0"><a class="wt-t" href="https://www.youtube.com/watch?v=5Vy7E31Y4xk&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-s">Danielle, 25, education worker</span></li>
+                <li class="wt-line" id="c38"><a class="wt-t" href="https://www.youtube.com/watch?v=5Vy7E31Y4xk&amp;t=38s" target="_blank" rel="noopener" data-pagefind-ignore>0:38</a><span class="wt-s">Rights stripped away piece by piece</span></li>
+                <li class="wt-line" id="c77"><a class="wt-t" href="https://www.youtube.com/watch?v=5Vy7E31Y4xk&amp;t=77s" target="_blank" rel="noopener" data-pagefind-ignore>1:17</a><span class="wt-s">People are speaking up, and being ignored</span></li>
+                <li class="wt-line" id="c104"><a class="wt-t" href="https://www.youtube.com/watch?v=5Vy7E31Y4xk&amp;t=104s" target="_blank" rel="noopener" data-pagefind-ignore>1:44</a><span class="wt-s">Her question: how are you showing up?</span></li>
+                <li class="wt-line" id="c143"><a class="wt-t" href="https://www.youtube.com/watch?v=5Vy7E31Y4xk&amp;t=143s" target="_blank" rel="noopener" data-pagefind-ignore>2:23</a><span class="wt-s">Potholes, and why Black women hold picnics</span></li>
+                <li class="wt-line" id="c200"><a class="wt-t" href="https://www.youtube.com/watch?v=5Vy7E31Y4xk&amp;t=200s" target="_blank" rel="noopener" data-pagefind-ignore>3:20</a><span class="wt-s">Her message for kids: you have things to say</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Where YouTube masked a word it shows as [bleeped]. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=5Vy7E31Y4xk&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a>Boom. All right. So what&rsquo;s your name? Danielle. Okay. And where are you from? I grew up in Jersey, but I moved out to Philly in high school. Okay. And how old are you? I&rsquo;m 25. 25. Oh, yeah. And what do you think of USA Today? I hate it. Okay. Sucks. Government sucks. Healthcare. Like, there&rsquo;s a lot of things. I work in education and the system&rsquo;s not great and there&rsquo;s not funding. There&rsquo;s really not a lot good going on. There&rsquo;s people out there trying to, you know, say stuff and do stuff, but a lot of the government isn&rsquo;t really helping. Say more about that A lot of our, you know, riots are being taken away</p>
+            <p id="s38"><a class="wt-at" href="https://www.youtube.com/watch?v=5Vy7E31Y4xk&amp;t=38s" target="_blank" rel="noopener" data-pagefind-ignore>0:38</a>I&rsquo;m a black queer woman, so, you know, all my, you know, riots will be weighed You know, I study a lot of political science and I&rsquo;m watching history And so I&rsquo;m watching a lot of the stuff that, you know, we work for A lot of people, things my people and women have fought for And a lot of it is being, you know, stripped away from us, like, piece by piece And a lot of the times we&rsquo;re being told that, oh, you know, just kind of like get over it. It&rsquo;s nothing, you know, Trump&rsquo;s doing what he can for the country. But we&rsquo;re looking at it and a lot of people are suffering. So I don&rsquo;t really see what great is happening.</p>
+            <p id="s70"><a class="wt-at" href="https://www.youtube.com/watch?v=5Vy7E31Y4xk&amp;t=70s" target="_blank" rel="noopener" data-pagefind-ignore>1:10</a>What do you feel like the everyday person isn&rsquo;t making a big enough deal about?</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s77"><a class="wt-at" href="https://www.youtube.com/watch?v=5Vy7E31Y4xk&amp;t=77s" target="_blank" rel="noopener" data-pagefind-ignore>1:17</a>I mean, I feel like, I feel like most of the everyday people are, you know, really trying to say things, but it&rsquo;s, you know, being blocked out, you know, we&rsquo;re not really seeing each You know, on the news, a lot of things are being, you know, blocked out so, but I feel like, you know, the people I talk to, they&rsquo;re doing a lot, they&rsquo;re saying stuff, but, you know, it&rsquo;s just being blocked out, so our voice is not really being heard, or they&rsquo;re being heard and just ignored. So would a platform like this, where you get to see, hear what your neighbors are thinking, be interesting to you?</p>
+            <p id="s104"><a class="wt-at" href="https://www.youtube.com/watch?v=5Vy7E31Y4xk&amp;t=104s" target="_blank" rel="noopener" data-pagefind-ignore>1:44</a>Yeah, absolutely, I mean, you know, if work can spread out and, you know, hear other people that are feeling the same way about us, we&rsquo;d love to do that, we&rsquo;d love to see it. Okay, do you have any questions for people around the city? Um, what are ways you guys are showing up? I mean, I know I say I&rsquo;m, you know, doing this stuff and I go to protest when I can, but what are other ways that, you know, you guys are really showing up for everybody? Okay, and what do you think about the city? Um, the people I love, I mean, it&rsquo;s a city, you know, when you&rsquo;re from here and grew up here, I&rsquo;m a person that moved here, what, over 10 years ago, but, you know, I really love the community that I&rsquo;ve made here.</p>
+            <p id="s143"><a class="wt-at" href="https://www.youtube.com/watch?v=5Vy7E31Y4xk&amp;t=143s" target="_blank" rel="noopener" data-pagefind-ignore>2:23</a>And it just, again, local government&rsquo;s also trying to show up Like, just drove down the street and hit, I don&rsquo;t know how many potholes Like, that&rsquo;s not great, but where&rsquo;s that money going to? But everybody that I&rsquo;ve, you know, met out here and the people I&rsquo;ve met, I love Okay, and what do you, talk about community in Philadelphia Yeah, I mean, what I was scrolling on, you know, like TikTok the other day And I&rsquo;m seeing, like, groups of, you know, black women trying to support each other Having events where we can just go and have a picnic outside just to, you know, build a community and see each other. Especially because a lot of time now people don&rsquo;t really want to go out because there&rsquo;s, you know, police or ICE like in the streets and so we don&rsquo;t really get to, you know, see each other in a way that isn&rsquo;t really a protest. So they find little pockets of people that are really trying to build with each other. It&rsquo;s great to see and I love that we do that out here in Philly or just even smaller events that go on. It&rsquo;s nice to see. Okay. And any message for people under the age of 10?</p>
+            <p id="s200"><a class="wt-at" href="https://www.youtube.com/watch?v=5Vy7E31Y4xk&amp;t=200s" target="_blank" rel="noopener" data-pagefind-ignore>3:20</a>Under the age of 10, keep reading. I know there&rsquo;s not a lot going on in our books, but try to reach out, look out to people who are older than you or even just same age. You guys have a lot to say too. Just because you&rsquo;re 10 doesn&rsquo;t mean you don&rsquo;t have important things to say or ways to feel. Talk about it. I like that. I like that. Thank you. Yeah, absolutely. Have a good one.</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+<div id="after-transcript" tabindex="-1"><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from Philadelphia.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-philadelphia">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="why-a-job-stopped-adding-up-germantown.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/Cyv1UwE_K3w-640.jpg" srcset="../stills/Cyv1UwE_K3w-320.jpg 320w, ../stills/Cyv1UwE_K3w-480.jpg 480w, ../stills/Cyv1UwE_K3w-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>21:24</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Selected work · Philadelphia · 2026</span>
+                    <h3 class="report-title">“The numbers don’t add up to work for nobody.” Mr. P on Haines Street.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="what-we-the-people-looks-like-germantown-philadelphia.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/p3Oq_LZuOmE-640.jpg" srcset="../stills/p3Oq_LZuOmE-320.jpg 320w, ../stills/p3Oq_LZuOmE-480.jpg 480w, ../stills/p3Oq_LZuOmE-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>8:06</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Philadelphia · Germantown</span>
+                    <h3 class="report-title">Neighbors organizing music and speakers in Germantown.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="what-do-you-think-about-the-usa-germantown-philadelphia.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/2xGaR6sXFNE-640.jpg" srcset="../stills/2xGaR6sXFNE-320.jpg 320w, ../stills/2xGaR6sXFNE-480.jpg 480w, ../stills/2xGaR6sXFNE-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>5:41</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Philadelphia · Germantown</span>
+                    <h3 class="report-title">The USA, the city, and a cleared record.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../question/what-do-you-think-of-the-united-states.html">Every answer to “What do you think of the United States?”</a> &middot; <a href="../question/what-would-you-say-to-someone-under-ten.html">Every answer to “What would you say to someone under ten?”</a> &middot; <a href="../places.html#philadelphia">Everything filmed in Philadelphia</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

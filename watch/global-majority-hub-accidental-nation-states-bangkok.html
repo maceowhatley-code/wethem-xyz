@@ -1,0 +1,811 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="A discussion at the Global Majority Hub in Bangkok, picked up near its end, about what people should belong to first if the systems they grew up under are…">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/global-majority-hub-accidental-nation-states-bangkok">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="Accidental Nation-States and What Comes Next | Bangkok">
+    <meta property="og:description" content="A discussion at the Global Majority Hub in Bangkok, picked up near its end, about what people should belong to first if the systems they grew up under are…">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/global-majority-hub-accidental-nation-states-bangkok.jpg?v=ddbe51701c">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Global Majority Hub: accidental nation-states, and what comes next">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/global-majority-hub-accidental-nation-states-bangkok.jpg?v=ddbe51701c">
+    <meta property="og:url" content="https://wethem.xyz/watch/global-majority-hub-accidental-nation-states-bangkok">
+    <title>Accidental Nation-States and What Comes Next | Bangkok &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/global-majority-hub-accidental-nation-states-bangkok#video",
+  "name": "Accidental Nation-States and What Comes Next | Bangkok",
+  "description": "A discussion at the Global Majority Hub in Bangkok, picked up near its end, about what people should belong to first if the systems they grew up under are coming apart. One participant puts the question: if \"the current regime is collapsing and maybe crypto is like slightly like filling the kind of gaps\", why do we still introduce ourselves by country? A speaker from Malaysia answers with history. The book The Network State asks a question worth keeping, whether a community-first entity can exist, and separately offers one answer to it. For most of the global majority, he says, the nation-state came late: \"most of GM, the global majority, are kind of like accidental nation states that kind of emerged out of independence.\" Before that came the company state: \"All of Congo was basically owned by a company for the King of Belgium, right?\" Nations were then built on purpose, with a language, a curriculum and a song, the imagined communities Benedict Anderson wrote about. Others push further. \"Is anybody here thinking about bioregions?\" Because \"the nation-state is not adapted to take care of the ecology.\" A planner suggests functional rooms instead of state lines, and the history gets its bookend: \"So that was Bandung in the 1950s, maybe it's Bangkok in 2024.\" Asked how far off any of this is, the close is about the pace of collapse: \"if your banking system collapses, it doesn't matter whether you like crypto or not, you're going to look for alternatives.\" Filmed in Bangkok in November 2024. The transcript below is from the original audio.",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/b84UnWk_TCA/maxresdefault.jpg"
+  ],
+  "uploadDate": "2026-09-17T05:36:37Z",
+  "embedUrl": "https://www.youtube.com/embed/b84UnWk_TCA",
+  "url": "https://wethem.xyz/watch/global-majority-hub-accidental-nation-states-bangkok",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT10M14S",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "Value that is not a commodity",
+      "startOffset": 0,
+      "url": "https://wethem.xyz/watch/global-majority-hub-accidental-nation-states-bangkok?t=0",
+      "endOffset": 63
+    },
+    {
+      "@type": "Clip",
+      "name": "Can belonging go beyond the nation-state?",
+      "startOffset": 63,
+      "url": "https://wethem.xyz/watch/global-majority-hub-accidental-nation-states-bangkok?t=63",
+      "endOffset": 89
+    },
+    {
+      "@type": "Clip",
+      "name": "The Network State: a good question, one answer",
+      "startOffset": 89,
+      "url": "https://wethem.xyz/watch/global-majority-hub-accidental-nation-states-bangkok?t=89",
+      "endOffset": 179
+    },
+    {
+      "@type": "Clip",
+      "name": "From company states to accidental nation-states",
+      "startOffset": 179,
+      "url": "https://wethem.xyz/watch/global-majority-hub-accidental-nation-states-bangkok?t=179",
+      "endOffset": 285
+    },
+    {
+      "@type": "Clip",
+      "name": "What are imagined communities?",
+      "startOffset": 285,
+      "url": "https://wethem.xyz/watch/global-majority-hub-accidental-nation-states-bangkok?t=285",
+      "endOffset": 352
+    },
+    {
+      "@type": "Clip",
+      "name": "Should we organize by bioregion, not nation?",
+      "startOffset": 352,
+      "url": "https://wethem.xyz/watch/global-majority-hub-accidental-nation-states-bangkok?t=352",
+      "endOffset": 458
+    },
+    {
+      "@type": "Clip",
+      "name": "Is the network state a copy of an old system?",
+      "startOffset": 458,
+      "url": "https://wethem.xyz/watch/global-majority-hub-accidental-nation-states-bangkok?t=458",
+      "endOffset": 520
+    },
+    {
+      "@type": "Clip",
+      "name": "How far are we from new systems?",
+      "startOffset": 520,
+      "url": "https://wethem.xyz/watch/global-majority-hub-accidental-nation-states-bangkok?t=520",
+      "endOffset": 569
+    },
+    {
+      "@type": "Clip",
+      "name": "Why collapse will push people to alternatives",
+      "startOffset": 569,
+      "url": "https://wethem.xyz/watch/global-majority-hub-accidental-nation-states-bangkok?t=569",
+      "endOffset": 614
+    }
+  ],
+  "creator": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "transcript": "of caring for nature, they're creating value because we're not thinking in terms of commodity. It doesn't matter if it's saleable or not. What matters is, is it a contribution to the ecosystem? And I think this is a new paradigm that we need to extend basically to the whole society.\nYeah. Sorry. So I was thinking, so because you said like the current Regime is kind of like collapsing. So what reminds me is, okay, if the current regime is collapsing and maybe crypto is like slightly like filling the kind of gaps, but still, like we all like you know introduce ourselves like where from? Let's say from country. So that means like our first like Belongingness is like, you know, still the countries, nation-states. I was thinking, so how we can from here to maybe more like commons-based society where our first belongingness may be something like community or a big commons system, something like that. I think that's something like interesting to explore here together.\nI think I'll make a few comments and connect some of these things together.\ntogether.\nSo first, coming back to the network state question and then connecting to this nation-state thing, it's useful to think about books as like multiple arguments, right? I think the book, which is now a school by the way, which is in -- I think it's in Malaysia, Network School, raises the question of like, can a new kind of like entity exist, right, that was kind of like community first or internet first and all that? I think it's a really valuable question. I think it's one that is very close to the heart of what we're talking about today. But the book also has kind of like an imagination of what an answer might be, right? And that's the one that is very, very like, you know, like very Balaji, if you like, with a lot of like his proposals and all that, right? I think it's possible.\nDifferent book or the same book?\nThis is the same book, right? So like you read the book The Network State, right? There's the part of the book that says that here's a potential idea for, uh, that this kind of something like a network state can exist, right? But it's also -- he also proposes an answer to that, which is like this network state would therefore be like this and this and this and this and this and this, right? And I think it's important to separate those two because just because new network states can exist doesn't mean that what will exist will be exactly like what the rest of the book is about, right?\nThere can be many potential imaginations of network states, and I imagine if it was written for example, by someone from Colombia, right, they'll probably have quite a different answer to that. I think it's healthy to keep that space of imagination open, right. So next, coming back to nation states and all that, I think for GM especially, most of GM, the global majority, are kind of like accidental nation states that kind of emerged out of independence, right. Prior to like World War II, really, right, most of what is now the global majority, weren't even -- were basically like what some historians have called the company state, where you're basically owned by a company, right?\nAll of Congo was basically owned by a company for the King of Belgium, right? Uh, like a lot of, like, like, uh, a lot of Malaysia was owned kind of like, uh, by different companies, right? Like the, the, the first, the first few big companies in the world were like the East India Companies, respectively, of, of, of the Netherlands and of, of, of England. Right, uh, and so a company state is very different from a modern nation-state in that a company state, you're basically property to make profits for the shareholder of the thing, right? So what rights, right? You're just there to like, like do, like, I don't know, like grow some rubber, mine some stuff, and then generate kind of wealth.\nBut after, uh, after World War II independence, right, you had to kind of create a new model, right? And the model then, because of the Westphalian Agreement, was that every every state has to become a nation-state of sorts, right? And like, this is the, in a way, a success of the, of the era of the 20th century where like, uh, Malaysia was kind of like, we were basically like the leftover holdings of the British Empire that were bundled in a bundle sale and given independence by themselves, right? Out of that, we had to craft a nation. We had to kind of like become a nation, right?\nLike, but we were not an original nation in and of itself, so we had to create a national language. We had to create a national curriculum, we had to create a national song, and all those kinds of things, right? So like, we, most of all of us grew up in the era of the nation-state, where like we grew up believing, I am Colombian, this is the language we speak, this is all that kind of stuff, right? But historians who've looked at this history have actually said that like this is a history of what they call imagined communities, where you actually, like Benedict Anderson, the historian, he actually studied Indonesia and realized that like somewhere like Indonesia, Uh, there was no real Indonesia before that, right?\nIt's a collection of different islands that were under Dutch rule, right? But they picked the language, they crafted a new national identity, and in some ways that's been very valuable because it's prevented places that were often very diverse from dissolving and fighting and killing each other, right? But now we're also running into like a lot of the limitations of that, right? And I think part of the challenge that if you want to think about a future where we can have a global counterpower Right, to East-West digital, right? We're gonna have to solve some of these problems that nation states solve, but better, right? How do you forge new relationships and kinships, right?\nAnd maybe it's around values of Ethereum or values of crypto or something like that. But how do you do it in a way that appeals to like my grandma, right? And that's part of the challenge that I think we're gonna have to look at, right? So in some ways, the nation state's been useful, right? But like, unless you can solve some of those problems better, Those problems still need to be solved.\nCan I ask a question? Is anybody here thinking about bioregions? Because that's a big thing, at least in Europe and the US and Canada. So if you're green today, you're thinking about bioregions. And basically, the basic argument is the nation-state is not adapted to take care of the ecology. It's a cultural and historical entity.\nYeah.\nBut it's divorced from actually, you know, the regional realities and it can -- if you're a politician, you can like kind of, you know, play between different interests and then you don't take care of the environment. But if you're local and your food and energy depends on like a knowledge of the water and the ecosystem, that makes a lot more sense. And so the fusion of bioregional reorganization You know, and the nation-state can still exist as a cultural entity, right? And then like Web3 domain-specific Web3 communities that can help energy, food, that makes a lot of sense to me. I don't know if you agree with it.\nSo maybe you could combine it to this separation of governance thing and have like bi-regional kind of governance systems to take care of like ecological maintenance, keep some cultural entities. But then also separate, like, maybe like, uh, like things like military and peace on 2 different kind of things. So you have, uh, sort of like separation of powers within the global system.\nIs, is, uh, did she say we have to stop?\nYeah, so, uh, we're due for the next rotation. So like maybe just, uh, one or 2 final comments. If something burning to say, I'm gonna give you space to say it, and then like maybe we'll talk about the rest in the hot tub or something later. Yeah, please.\nNo, I like the, the thinking I'm also in spatial planning and regional development a lot, so there is also the term to think in functional rooms instead of the state rooms or the municipality rooms and so on. So I think it's, it's exactly what you, you say, you know, and I think that's also what I mean with those silos, to think in thematic rooms perhaps.\nYeah.\nAnd I think that's a little, perhaps also a little bit the critique on the network state theory because you just build a new copy from an old system. Yeah, for sure it has good aspects. I would say 90% are an improvement, but it's still a copy from an old --\nYeah, and maybe what you're describing could be a further improvement upon that, right? Why don't we just go for that instead?\nExactly. And that's also where I see then a big benefit for the GM movement, you know. I mean, it's this could be one of those functional rooms because you have a common challenge. So yeah, and that's why I think it's so important then to gather and create those functional rooms then.\nYeah.\nYeah. So that was Bandung in the 1950s, maybe it's Bangkok in 2024. Anyone else? If not -- oh, one more? Okay, please. Yeah.\nNot a -- more of a question. I know we're wrapping up, but it's just so fascinating with, you know, sort of this trend of counter the current systems. So we sort of all agree toward moving there, but I just wonder, you know, to what extent or how far are we to actually be able to -- okay, maybe, you know, those that actually don't think that they belong to the current systems or, you know, even the citizens Like they might be global citizens. How far are we? Do we have sort of ideas, a sense of timeline?\nI'll do a quick response to close us off. My 2 introduction words today were pop-up apocalypse, right? And I think like we are seeing in real time like the fraying and the disintegration of the current systems because they have passed their limits in many ways. So as these things begin to fray, as Michelle was describing, Right? Some people will exit first, but eventually a lot of people, if your banking system collapses, it doesn't matter whether you like crypto or not, you're going to look for alternatives. Right? I think the looking for alternatives is only going to accelerate over the coming years. And on that note, I guess, thank you all for being here. Happy to chat more outside. Thanks for recording as well. Thanks for hosting.\nYeah, for hosting.",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Bangkok",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "Thailand"
+    },
+    "url": "https://wethem.xyz/places#bangkok"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Global Majority Hub, Bangkok",
+    "url": "https://wethem.xyz/portfolio#p-global-majority-hub"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Web3 Governance",
+      "url": "https://wethem.xyz/topics/web3-governance"
+    },
+    {
+      "@type": "Thing",
+      "name": "Crypto",
+      "url": "https://wethem.xyz/topics/crypto"
+    }
+  ],
+  "keywords": [
+    "Web3 Governance",
+    "Crypto"
+  ],
+  "mentions": [
+    {
+      "@type": "Book",
+      "name": "The Network State: How To Start a New Country",
+      "author": {
+        "@type": "Person",
+        "name": "Balaji Srinivasan"
+      },
+      "isbn": "9780593713778",
+      "url": "https://openlibrary.org/works/OL37531110W"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Global Majority Hub, Bangkok",
+      "item": "https://wethem.xyz/portfolio#p-global-majority-hub"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Global Majority Hub: accidental nation-states, and what comes next",
+      "item": "https://wethem.xyz/watch/global-majority-hub-accidental-nation-states-bangkok"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2026-09-17" data-pf-vid="b84UnWk_TCA" data-pf-k="{&quot;l&quot;:&quot;10:14&quot;}" data-pf-place="Bangkok" data-pf-country="Thailand" data-pf-project="Global Majority Hub, Bangkok">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-global-majority-hub">Global Majority Hub, Bangkok</a></li>
+            <li aria-current="page">Global Majority Hub: accidental nation-states, and what comes next</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">Global Majority Hub: accidental nation-states, and what comes next.</h1>
+
+    <p class="wt-byline">Bangkok &middot; 10 min</p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="b84UnWk_TCA" live poster="hqdefault" postersrcset="https://i.ytimg.com/vi/b84UnWk_TCA/mqdefault.jpg 320w, https://i.ytimg.com/vi/b84UnWk_TCA/hqdefault.jpg 480w"><iframe src="https://www.youtube-nocookie.com/embed/b84UnWk_TCA?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="Global Majority Hub: accidental nation-states, and what comes next, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+    <p class="wt-note wt-credit">Executive producer: C.Y. Lee</p>
+
+    <div class="wt-prose">
+            <p>A discussion at the Global Majority Hub in Bangkok, picked up near its end, about what people should belong to first if the systems they grew up under are coming apart. One participant puts the question: if &ldquo;the current regime is collapsing and maybe crypto is like slightly like filling the kind of gaps&rdquo;, why do we still introduce ourselves by country?</p>
+            <p>A speaker from Malaysia answers with history. The book The Network State asks a question worth keeping, whether a community-first entity can exist, and separately offers one answer to it. For most of the global majority, he says, the nation-state came late: &ldquo;most of GM, the global majority, are kind of like accidental nation states that kind of emerged out of independence.&rdquo; Before that came the company state: &ldquo;All of Congo was basically owned by a company for the King of Belgium, right?&rdquo; Nations were then built on purpose, with a language, a curriculum and a song, the imagined communities Benedict Anderson wrote about.</p>
+            <p>Others push further. &ldquo;Is anybody here thinking about bioregions?&rdquo; Because &ldquo;the nation-state is not adapted to take care of the ecology.&rdquo; A planner suggests functional rooms instead of state lines, and the history gets its bookend: &ldquo;So that was Bandung in the 1950s, maybe it&rsquo;s Bangkok in 2024.&rdquo; Asked how far off any of this is, the close is about the pace of collapse: &ldquo;if your banking system collapses, it doesn&rsquo;t matter whether you like crypto or not, you&rsquo;re going to look for alternatives.&rdquo;</p>
+            <p>Filmed in Bangkok in November 2024. The transcript below is from the original audio.</p>
+            
+    </div>
+    <section class="wt-books" aria-labelledby="wt-books-h">
+        <h2 id="wt-books-h">Books mentioned.</h2>
+        <div class="pw-book wt-book">
+            <span class="pw-book-cover"><img src="../stills/books/9780593713778.jpg" alt="The cover of The Network State: How To Start a New Country by Balaji Srinivasan" width="120" height="160" loading="lazy" decoding="async"></span>
+            <div class="pw-book-body">
+                <h3 class="pw-book-t"><a href="https://openlibrary.org/works/OL37531110W">The Network State</a></h3>
+                <p class="pw-book-facts">Balaji Srinivasan &middot; 2022</p>
+                <p class="pw-book-line">The book this conversation is about, discussed critically.</p>
+                <p class="pw-book-note"><a class="wt-at" data-seek="132" href="#t=132" data-pagefind-ignore>Hear it at 2:12</a> &middot; <a href="https://openlibrary.org/works/OL37531110W">See the book</a> at Open Library</p>
+            </div>
+        </div>
+    </section>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../places.html#bangkok">Everything filmed in Bangkok</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="global-majority-hub-sim-card-bank-account-bangkok.html"><span class="wt-next-thumb wt-thumb"><img src="https://i.ytimg.com/vi/8KgGHVgdQYM/hqdefault.jpg" srcset="https://i.ytimg.com/vi/8KgGHVgdQYM/mqdefault.jpg 320w, https://i.ytimg.com/vi/8KgGHVgdQYM/hqdefault.jpg 480w" sizes="300px" alt="" loading="lazy" decoding="async" width="480" height="270"><span class="wt-dur"><span class="visually-hidden">Length </span>16:49</span></span><span>Global Majority Hub: if you have a SIM card, you have a bank account.</span></a>
+        <a class="wt-rail-card" href="after-the-denver-protest-project-2025-in-his-own-words.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/Xtqu9LbClYU-640.jpg" srcset="../stills/Xtqu9LbClYU-320.jpg 320w, ../stills/Xtqu9LbClYU-480.jpg 480w, ../stills/Xtqu9LbClYU-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>21:00</span></span><span>On the ground at a Denver protest, talking Project 2025.</span></a>
+        <a class="wt-rail-card" href="an-ethereum-builder-wants-to-run-for-office-ethconf-nyc.html"><span class="wt-next-thumb wt-thumb"><img src="https://i.ytimg.com/vi/ZeDpehpzkms/hqdefault.jpg" srcset="https://i.ytimg.com/vi/ZeDpehpzkms/mqdefault.jpg 320w, https://i.ytimg.com/vi/ZeDpehpzkms/hqdefault.jpg 480w" sizes="300px" alt="" loading="lazy" decoding="async" width="480" height="270"><span class="wt-dur"><span class="visually-hidden">Length </span>10:33</span></span><span>ETHConf: an Ethereum builder on his plan to run for office.</span></a>
+        <a class="wt-rail-card" href="web3-pop-up-cities-and-akiya-houses-japan.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/RUGnhnzumKg-640.jpg" srcset="../stills/RUGnhnzumKg-320.jpg 320w, ../stills/RUGnhnzumKg-480.jpg 480w, ../stills/RUGnhnzumKg-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>57:46</span></span><span>Buying abandoned houses to build a neighborhood.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap clip-sec" aria-labelledby="clips-here-h" data-pagefind-ignore="all">
+        <h2 class="clip-sec-h" id="clips-here-h">Shorts from this piece</h2>
+        <ul class="clip-row">
+            <li><a class="clip-card" href="../clips.html#b5-117"><span class="clip-card-pic"><img class="clip-img" src="../stills/clips/b5-117-360.jpg" srcset="../stills/clips/b5-117-360.jpg 360w, ../stills/clips/b5-117-720.jpg 720w" sizes="(min-width: 721px) 168px, 144px" width="360" height="640" alt="" loading="lazy" decoding="async"></span><span class="clip-card-t">Nations Are Just Imagined Communities</span><span class="clip-card-p">Bangkok</span></a><a class="clip-card-yt" href="https://www.youtube.com/shorts/zbGIGy9qSfM">On YouTube &rarr;</a></li>
+            <li><a class="clip-card" href="../clips.html#b5-118"><span class="clip-card-pic"><img class="clip-img" src="../stills/clips/b5-118-360.jpg" srcset="../stills/clips/b5-118-360.jpg 360w, ../stills/clips/b5-118-720.jpg 720w" sizes="(min-width: 721px) 168px, 144px" width="360" height="640" alt="" loading="lazy" decoding="async"></span><span class="clip-card-t">Pop-Up Apocalypse: Systems Are Fraying</span><span class="clip-card-p">Bangkok</span></a><a class="clip-card-yt" href="https://www.youtube.com/shorts/i2BSl1V_v_Y">On YouTube &rarr;</a></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c0"><a class="wt-t" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-s">Value that is not a commodity</span></li>
+                <li class="wt-line" id="c63"><a class="wt-t" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=63s" target="_blank" rel="noopener" data-pagefind-ignore>1:03</a><span class="wt-s">Can belonging go beyond the nation-state?</span></li>
+                <li class="wt-line" id="c89"><a class="wt-t" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=89s" target="_blank" rel="noopener" data-pagefind-ignore>1:29</a><span class="wt-s">The Network State: a good question, one answer</span></li>
+                <li class="wt-line" id="c179"><a class="wt-t" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=179s" target="_blank" rel="noopener" data-pagefind-ignore>2:59</a><span class="wt-s">From company states to accidental nation-states</span></li>
+                <li class="wt-line" id="c285"><a class="wt-t" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=285s" target="_blank" rel="noopener" data-pagefind-ignore>4:45</a><span class="wt-s">What are imagined communities?</span></li>
+                <li class="wt-line" id="c352"><a class="wt-t" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=352s" target="_blank" rel="noopener" data-pagefind-ignore>5:52</a><span class="wt-s">Should we organize by bioregion, not nation?</span></li>
+                <li class="wt-line" id="c458"><a class="wt-t" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=458s" target="_blank" rel="noopener" data-pagefind-ignore>7:38</a><span class="wt-s">Is the network state a copy of an old system?</span></li>
+                <li class="wt-line" id="c520"><a class="wt-t" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=520s" target="_blank" rel="noopener" data-pagefind-ignore>8:40</a><span class="wt-s">How far are we from new systems?</span></li>
+                <li class="wt-line" id="c569"><a class="wt-t" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=569s" target="_blank" rel="noopener" data-pagefind-ignore>9:29</a><span class="wt-s">Why collapse will push people to alternatives</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Transcribed from the original audio and corrected for names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>of caring for nature, they&rsquo;re creating value because we&rsquo;re not thinking in terms of commodity. It doesn&rsquo;t matter if it&rsquo;s saleable or not. What matters is, is it a contribution to the ecosystem? And I think this is a new paradigm that we need to extend basically to the whole society.</p>
+            <p id="s17"><a class="wt-at" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=17s" target="_blank" rel="noopener" data-pagefind-ignore>0:17</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah. Sorry. So I was thinking, so because you said like the current Regime is kind of like collapsing. So what reminds me is, okay, if the current regime is collapsing and maybe crypto is like slightly like filling the kind of gaps, but still, like we all like you know introduce ourselves like where from? Let&rsquo;s say from country. So that means like our first like Belongingness is like, you know, still the countries, nation-states. I was thinking, so how we can from here to maybe more like commons-based society where our first belongingness may be something like community or a big commons system, something like that. I think that&rsquo;s something like interesting to explore here together.</p>
+            <p id="s81"><a class="wt-at" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=81s" target="_blank" rel="noopener" data-pagefind-ignore>1:21</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>I think I&rsquo;ll make a few comments and connect some of these things together.</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s86"><a class="wt-at" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=86s" target="_blank" rel="noopener" data-pagefind-ignore>1:26</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>together.</p>
+            <p id="s86-2"><a class="wt-at" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=86s" target="_blank" rel="noopener" data-pagefind-ignore>1:26</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>So first, coming back to the network state question and then connecting to this nation-state thing, it&rsquo;s useful to think about books as like multiple arguments, right? I think the book, which is now a school by the way, which is in -- I think it&rsquo;s in Malaysia, Network School, raises the question of like, can a new kind of like entity exist, right, that was kind of like community first or internet first and all that? I think it&rsquo;s a really valuable question. I think it&rsquo;s one that is very close to the heart of what we&rsquo;re talking about today. But the book also has kind of like an imagination of what an answer might be, right? And that&rsquo;s the one that is very, very like, you know, like very Balaji, if you like, with a lot of like his proposals and all that, right? I think it&rsquo;s possible.</p>
+            <p id="s131"><a class="wt-at" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=131s" target="_blank" rel="noopener" data-pagefind-ignore>2:11</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Different book or the same book?</p>
+            <p id="s132"><a class="wt-at" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=132s" target="_blank" rel="noopener" data-pagefind-ignore>2:12</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>This is the same book, right? So like you read the book The Network State, right? There&rsquo;s the part of the book that says that here&rsquo;s a potential idea for, uh, that this kind of something like a network state can exist, right? But it&rsquo;s also -- he also proposes an answer to that, which is like this network state would therefore be like this and this and this and this and this and this, right? And I think it&rsquo;s important to separate those two because just because new network states can exist doesn&rsquo;t mean that what will exist will be exactly like what the rest of the book is about, right?</p>
+            <p id="s159"><a class="wt-at" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=159s" target="_blank" rel="noopener" data-pagefind-ignore>2:39</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>There can be many potential imaginations of network states, and I imagine if it was written for example, by someone from Colombia, right, they&rsquo;ll probably have quite a different answer to that. I think it&rsquo;s healthy to keep that space of imagination open, right. So next, coming back to nation states and all that, I think for GM especially, most of GM, the global majority, are kind of like accidental nation states that kind of emerged out of independence, right. Prior to like World War II, really, right, most of what is now the global majority, weren&rsquo;t even -- were basically like what some historians have called the company state, where you&rsquo;re basically owned by a company, right?</p>
+            <p id="s196"><a class="wt-at" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=196s" target="_blank" rel="noopener" data-pagefind-ignore>3:16</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>All of Congo was basically owned by a company for the King of Belgium, right? Uh, like a lot of, like, like, uh, a lot of Malaysia was owned kind of like, uh, by different companies, right? Like the, the, the first, the first few big companies in the world were like the East India Companies, respectively, of, of, of the Netherlands and of, of, of England. Right, uh, and so a company state is very different from a modern nation-state in that a company state, you&rsquo;re basically property to make profits for the shareholder of the thing, right? So what rights, right? You&rsquo;re just there to like, like do, like, I don&rsquo;t know, like grow some rubber, mine some stuff, and then generate kind of wealth.</p>
+            <p id="s232"><a class="wt-at" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=232s" target="_blank" rel="noopener" data-pagefind-ignore>3:52</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>But after, uh, after World War II independence, right, you had to kind of create a new model, right? And the model then, because of the Westphalian Agreement, was that every every state has to become a nation-state of sorts, right? And like, this is the, in a way, a success of the, of the era of the 20th century where like, uh, Malaysia was kind of like, we were basically like the leftover holdings of the British Empire that were bundled in a bundle sale and given independence by themselves, right? Out of that, we had to craft a nation. We had to kind of like become a nation, right?</p>
+            <p id="s263"><a class="wt-at" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=263s" target="_blank" rel="noopener" data-pagefind-ignore>4:23</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Like, but we were not an original nation in and of itself, so we had to create a national language. We had to create a national curriculum, we had to create a national song, and all those kinds of things, right? So like, we, most of all of us grew up in the era of the nation-state, where like we grew up believing, I am Colombian, this is the language we speak, this is all that kind of stuff, right? But historians who&rsquo;ve looked at this history have actually said that like this is a history of what they call imagined communities, where you actually, like Benedict Anderson, the historian, he actually studied Indonesia and realized that like somewhere like Indonesia, Uh, there was no real Indonesia before that, right?</p>
+            <p id="s296"><a class="wt-at" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=296s" target="_blank" rel="noopener" data-pagefind-ignore>4:56</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>It&rsquo;s a collection of different islands that were under Dutch rule, right? But they picked the language, they crafted a new national identity, and in some ways that&rsquo;s been very valuable because it&rsquo;s prevented places that were often very diverse from dissolving and fighting and killing each other, right? But now we&rsquo;re also running into like a lot of the limitations of that, right? And I think part of the challenge that if you want to think about a future where we can have a global counterpower Right, to East-West digital, right? We&rsquo;re gonna have to solve some of these problems that nation states solve, but better, right? How do you forge new relationships and kinships, right?</p>
+            <p id="s330"><a class="wt-at" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=330s" target="_blank" rel="noopener" data-pagefind-ignore>5:30</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>And maybe it&rsquo;s around values of <a class="wt-gloss" href="../glossary.html#ethereum">Ethereum</a> or values of crypto or something like that. But how do you do it in a way that appeals to like my grandma, right? And that&rsquo;s part of the challenge that I think we&rsquo;re gonna have to look at, right? So in some ways, the nation state&rsquo;s been useful, right? But like, unless you can solve some of those problems better, Those problems still need to be solved.</p>
+            <p id="s348"><a class="wt-at" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=348s" target="_blank" rel="noopener" data-pagefind-ignore>5:48</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Can I ask a question? Is anybody here thinking about bioregions? Because that&rsquo;s a big thing, at least in Europe and the US and Canada. So if you&rsquo;re green today, you&rsquo;re thinking about bioregions. And basically, the basic argument is the nation-state is not adapted to take care of the ecology. It&rsquo;s a cultural and historical entity.</p>
+            <p id="s371"><a class="wt-at" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=371s" target="_blank" rel="noopener" data-pagefind-ignore>6:11</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Yeah.</p>
+            <p id="s371-2"><a class="wt-at" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=371s" target="_blank" rel="noopener" data-pagefind-ignore>6:11</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>But it&rsquo;s divorced from actually, you know, the regional realities and it can -- if you&rsquo;re a politician, you can like kind of, you know, play between different interests and then you don&rsquo;t take care of the environment. But if you&rsquo;re local and your food and energy depends on like a knowledge of the water and the ecosystem, that makes a lot more sense. And so the fusion of bioregional reorganization You know, and the nation-state can still exist as a cultural entity, right? And then like Web3 domain-specific Web3 communities that can help energy, food, that makes a lot of sense to me. I don&rsquo;t know if you agree with it.</p>
+            <p id="s415"><a class="wt-at" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=415s" target="_blank" rel="noopener" data-pagefind-ignore>6:55</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>So maybe you could combine it to this separation of governance thing and have like bi-regional kind of governance systems to take care of like ecological maintenance, keep some cultural entities. But then also separate, like, maybe like, uh, like things like military and peace on 2 different kind of things. So you have, uh, sort of like separation of powers within the global system.</p>
+            <p id="s433"><a class="wt-at" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=433s" target="_blank" rel="noopener" data-pagefind-ignore>7:13</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Is, is, uh, did she say we have to stop?</p>
+            <p id="s435"><a class="wt-at" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=435s" target="_blank" rel="noopener" data-pagefind-ignore>7:15</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Yeah, so, uh, we&rsquo;re due for the next rotation. So like maybe just, uh, one or 2 final comments. If something burning to say, I&rsquo;m gonna give you space to say it, and then like maybe we&rsquo;ll talk about the rest in the hot tub or something later. Yeah, please.</p>
+            <p id="s448"><a class="wt-at" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=448s" target="_blank" rel="noopener" data-pagefind-ignore>7:28</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>No, I like the, the thinking I&rsquo;m also in spatial planning and regional development a lot, so there is also the term to think in functional rooms instead of the state rooms or the municipality rooms and so on. So I think it&rsquo;s, it&rsquo;s exactly what you, you say, you know, and I think that&rsquo;s also what I mean with those silos, to think in thematic rooms perhaps.</p>
+            <p id="s473"><a class="wt-at" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=473s" target="_blank" rel="noopener" data-pagefind-ignore>7:53</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Yeah.</p>
+            <p id="s474"><a class="wt-at" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=474s" target="_blank" rel="noopener" data-pagefind-ignore>7:54</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>And I think that&rsquo;s a little, perhaps also a little bit the critique on the network state theory because you just build a new copy from an old system. Yeah, for sure it has good aspects. I would say 90% are an improvement, but it&rsquo;s still a copy from an old --</p>
+            <p id="s492"><a class="wt-at" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=492s" target="_blank" rel="noopener" data-pagefind-ignore>8:12</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Yeah, and maybe what you&rsquo;re describing could be a further improvement upon that, right? Why don&rsquo;t we just go for that instead?</p>
+            <p id="s496"><a class="wt-at" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=496s" target="_blank" rel="noopener" data-pagefind-ignore>8:16</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Exactly. And that&rsquo;s also where I see then a big benefit for the GM movement, you know. I mean, it&rsquo;s this could be one of those functional rooms because you have a common challenge. So yeah, and that&rsquo;s why I think it&rsquo;s so important then to gather and create those functional rooms then.</p>
+            <p id="s517"><a class="wt-at" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=517s" target="_blank" rel="noopener" data-pagefind-ignore>8:37</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Yeah.</p>
+            <p id="s518"><a class="wt-at" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=518s" target="_blank" rel="noopener" data-pagefind-ignore>8:38</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Yeah. So that was Bandung in the 1950s, maybe it&rsquo;s Bangkok in 2024. Anyone else? If not -- oh, one more? Okay, please. Yeah.</p>
+            <p id="s529"><a class="wt-at" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=529s" target="_blank" rel="noopener" data-pagefind-ignore>8:49</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Not a -- more of a question. I know we&rsquo;re wrapping up, but it&rsquo;s just so fascinating with, you know, sort of this trend of counter the current systems. So we sort of all agree toward moving there, but I just wonder, you know, to what extent or how far are we to actually be able to -- okay, maybe, you know, those that actually don&rsquo;t think that they belong to the current systems or, you know, even the citizens Like they might be global citizens. How far are we? Do we have sort of ideas, a sense of timeline?</p>
+            <p id="s564"><a class="wt-at" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=564s" target="_blank" rel="noopener" data-pagefind-ignore>9:24</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>I&rsquo;ll do a quick response to close us off. My 2 introduction words today were pop-up apocalypse, right? And I think like we are seeing in real time like the fraying and the disintegration of the current systems because they have passed their limits in many ways. So as these things begin to fray, as Michelle was describing, Right? Some people will exit first, but eventually a lot of people, if your banking system collapses, it doesn&rsquo;t matter whether you like crypto or not, you&rsquo;re going to look for alternatives. Right? I think the looking for alternatives is only going to accelerate over the coming years. And on that note, I guess, thank you all for being here. Happy to chat more outside. Thanks for recording as well. Thanks for hosting.</p>
+            <p id="s608"><a class="wt-at" href="https://www.youtube.com/watch?v=b84UnWk_TCA&amp;t=608s" target="_blank" rel="noopener" data-pagefind-ignore>10:08</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, for hosting.</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+<div id="after-transcript" tabindex="-1"><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from the Global Majority Hub in Bangkok.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-global-majority-hub">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="global-majority-hub-sim-card-bank-account-bangkok.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="https://i.ytimg.com/vi/8KgGHVgdQYM/hqdefault.jpg" srcset="https://i.ytimg.com/vi/8KgGHVgdQYM/mqdefault.jpg 320w, https://i.ytimg.com/vi/8KgGHVgdQYM/hqdefault.jpg 480w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="480" height="270"><span class="wt-dur"><span class="visually-hidden">Length </span>16:49</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Bangkok · Global Majority Hub · 17 min</span>
+                    <h3 class="report-title">Global Majority Hub: if you have a SIM card, you have a bank account.</h3>
+                    
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../places.html#bangkok">Everything filmed in Bangkok</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

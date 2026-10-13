@@ -1,0 +1,775 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="The last episode from ETH Denver 2024, the series FWB funded, and the most personal one.">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/what-decentralized-science-means-for-health-gabrielle-at-eth-denver-2024">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="What Decentralized Science Means for Health | ETH Denver">
+    <meta property="og:description" content="The last episode from ETH Denver 2024, the series FWB funded, and the most personal one.">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/what-decentralized-science-means-for-health-gabrielle-at-eth-denver-2024.jpg?v=308d1063fb">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="What decentralized science means for health: Gabrielle at ETH Denver 2024">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/what-decentralized-science-means-for-health-gabrielle-at-eth-denver-2024.jpg?v=308d1063fb">
+    <meta property="og:url" content="https://wethem.xyz/watch/what-decentralized-science-means-for-health-gabrielle-at-eth-denver-2024">
+    <title>What Decentralized Science Means for Health | ETH Denver &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/what-decentralized-science-means-for-health-gabrielle-at-eth-denver-2024#video",
+  "name": "What Decentralized Science Means for Health | ETH Denver",
+  "description": "The last episode from ETH Denver 2024, the series FWB funded, and the most personal one. Maceo, \"headed home today,\" sits down with Gabrielle, his girlfriend, a scientist working in clinical research, who came along. What she found: \"how many people were there, how many different organizations were there, and really just the wide array of people that were there.\" Her highlight was the DeSci Summit. \"I had no idea what decentralized science was before coming here. I had gotten a taste through learning about Athena DAO, but I didn't really understand the bigger picture that they were a part of.\" She thanks the group that ran it, DeSci World, and Jelani and Josh, whose interview is on the channel. Maceo admits he was in the same place: \"I really didn't know much about decentralized science either, to be honest.\" What convinced him was the comparison speakers drew between science publishing and the music industry: \"you do all this research, you put it in the journals, you want it to get there, you finally get there and they charge other people for it. I think is a pretty crazy business model.\" What surprised her, compared with Art Basel, was age. \"how many people have been in this space for so long that are our age,\" which \"makes it feel a lot more obtainable.\" The person she did not expect to meet was Thane, a first-year from Howard who won the hackathon at the Black Blockchain Summit and was building \"a program that was supposed to make transactions go faster.\" Then Maceo asks how her view of We Them Media has changed. \"It's been great to see you work since we've been here,\" she says, and credits Julian on the cameras, \"so attentive all the time.\" What she noticed was the room: \"seeing how comfortable you are networking,\" and \"bringing all of us into a conversation with new people that we're meeting.\" He closes by naming what she is: \"you are a scientist working in clinical research and I'm excited to see you get excited about the space that I'm super excited about.\" Then the sign-off the channel still uses. The transcript below is from the original audio.",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/19agkxpJH6Q/maxresdefault.jpg"
+  ],
+  "uploadDate": "2024-06-15T00:51:05Z",
+  "embedUrl": "https://www.youtube.com/embed/19agkxpJH6Q",
+  "url": "https://wethem.xyz/watch/what-decentralized-science-means-for-health-gabrielle-at-eth-denver-2024",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT6M41S",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "Wrapping up ETH Denver, with Gabrielle",
+      "startOffset": 1,
+      "url": "https://wethem.xyz/watch/what-decentralized-science-means-for-health-gabrielle-at-eth-denver-2024?t=1",
+      "endOffset": 40
+    },
+    {
+      "@type": "Clip",
+      "name": "What is DeSci? Learning it at the summit",
+      "startOffset": 40,
+      "url": "https://wethem.xyz/watch/what-decentralized-science-means-for-health-gabrielle-at-eth-denver-2024?t=40",
+      "endOffset": 83
+    },
+    {
+      "@type": "Clip",
+      "name": "Why science publishing is like the music industry",
+      "startOffset": 83,
+      "url": "https://wethem.xyz/watch/what-decentralized-science-means-for-health-gabrielle-at-eth-denver-2024?t=83",
+      "endOffset": 114
+    },
+    {
+      "@type": "Clip",
+      "name": "What surprised her: builders her own age",
+      "startOffset": 114,
+      "url": "https://wethem.xyz/watch/what-decentralized-science-means-for-health-gabrielle-at-eth-denver-2024?t=114",
+      "endOffset": 174
+    },
+    {
+      "@type": "Clip",
+      "name": "A Howard first-year who won the hackathon",
+      "startOffset": 174,
+      "url": "https://wethem.xyz/watch/what-decentralized-science-means-for-health-gabrielle-at-eth-denver-2024?t=174",
+      "endOffset": 257
+    },
+    {
+      "@type": "Clip",
+      "name": "How she sees We Them Media now",
+      "startOffset": 257,
+      "url": "https://wethem.xyz/watch/what-decentralized-science-means-for-health-gabrielle-at-eth-denver-2024?t=257",
+      "endOffset": 335
+    },
+    {
+      "@type": "Clip",
+      "name": "A clinical researcher, and where to find her",
+      "startOffset": 335,
+      "url": "https://wethem.xyz/watch/what-decentralized-science-means-for-health-gabrielle-at-eth-denver-2024?t=335",
+      "endOffset": 401
+    }
+  ],
+  "creator": {
+    "@type": "Person",
+    "name": "Maceo",
+    "url": "https://wethem.xyz/people/maceo"
+  },
+  "transcript": "Hi, everybody. Welcome to another episode of We Them Niggas. We're out here at ETH Denver. Wrapping up, we're headed home today. I'm here with Gabrielle, my girlfriend. She joins us on the adventure. Gabrielle, how was your experience at ETH Denver this year?\nI really enjoyed it. I got somewhat of an impression of what to expect from hearing about your previous experiences, but it was really interesting to see for myself, especially like the main convention, how many people were there, how many different organizations were there, and really just the wide array of people that were there. I really enjoyed it.\nI like that. What was the highlight for you of the conference? Core moment.\nCore moment. We've been doing a lot of cool things. I really enjoyed the DeSci Summit. I had no idea what decentralized science was before coming here. I had gotten a taste through learning about Athena DAO, but I didn't really understand the bigger picture that they were a part of. So I think attending that summit was really great to hear more about Athena DAO, more about other organizations, the actual like DeSci group that made the summit, DeSci World, thank you. So I'm excited to get involved.\nShout out to Jelani and Josh, the interview is also something we did while we were here. Yeah, I really didn't know much about decentralized science either, to be honest. I went to like a house party last year, like last night I was here and there was like some DeSci people there, but I didn't really have a clear picture of what it was. So really going to that summit really let me in a lot further so I can understand like what's happening in this space, why this is important. I think Char explaining us like the parallels between like the, no, Johnny actually, and Char, I think they both spoke to some of the parallels between like the music industry and the publishing, like world academia and science.\nAnd so it was cool to look at what kinds of concessions people that want to do research and publish have to take on inside of like the existing infrastructure. Like them talking about like you do all this research, you put it in the journals, you want it to get there, you finally get there and they charge other people for it. I think is a pretty crazy business model and it was cool to see how to try to disrupt that and drive value back to people actually doing science and so yeah I was definitely happy with it once that summit. I guess outside of the summit what were some things that surprised you about ETH Denver?\nKind of like I was mentioning to you earlier I feel like in comparison to Art Basel was a lot of people that had been working in the field for a while and just I could they were older than us. So it felt a little bit out of reach what they were doing and some of the things that they were speaking about. But I feel like we've spoken to so many people that were closer to our age and it's like, or even younger than us. And it's like, wow, that's a total inspiration to learn more, to be able to get more involved and do more. I'll say that's something that surprised me was how many people have been in this space for so long that are our age or just cool things that they're doing.\nIt makes it feel a lot more obtainable to, you you know see someone that is so similar to you doing such cool things\nand who who are some people that were like a highlight of your trip that you didn't expect to meet like who was people you had conversations with\ndefinitely last night with the student from Howard the first year from Howard yes\nshout out to Thane I didn't meet Thane but I saw Thane at the Black Blockchain Summit at Howard University back in September October and he won the hackathon and I was like oh okay go crazy And then I saw him last night at the Proof of Obes event, and I was like, I know you, you won the hackathon at Howard. He was like, yeah, how do you know who I am? So definitely, and here he was the first year, I was definitely super impressed. But yeah, continue, continue. I didn't mean to cut you off.\nNo worries. He was just speaking about what actually he was doing at the hackathon was a program that was supposed to make transactions go faster. And I didn't get to like the chance to hear more about that, but I don't even know how one would do that. So that's super cool that he's already involved in such like advanced work now and getting internships that have to do with Web3. I would have never known that, you know, that was even available in undergrad. at so super cool that he's like be so ambitious, so motivated and doing such cool things.\nOh, yeah. And I guess kind of to close out the memory or close out the conversation coming to ETH Denver, you were coming here to learn, coming here, being open minded. What was like, I guess your perspective on seeing like what We Them Media is like over time, like from when you first met me, I guess, to being here at ETH Denver, how was like your perspective evolved?\nIt's been great to see you work since we've been here. Your production has been a Bazing, shout out to Julian for being so attentive all the time with the cameras and just in general, seeing how comfortable you are networking, catching up with people that you've seen either, you know, a few months ago at a previous conference or a year ago, just how personable you've been and bringing all of us into a conversation with new people that we're meeting. It's been great also just with your interest in music, hearing you continue those conversations with a wide array of people. I think you've interviewed a good handful of people that were also involved in your specific interests.\nSo really just seeing the community building that's happening within your interests and also I really appreciate you wanting to go to the DeSci Summit with me and getting more into my interests and just things that have to do with the community that you're involved with. What is everyone's interest and what more can we learn about?\nI got that. Well, I really appreciate you sitting down with me, coming out to the conference with us in the first place, really being interested and not just being here as a passenger. And it was definitely a pleasure. You know, you are a scientist working in clinical research and I'm excited to see you get excited about the space that I'm super excited about and always in awe of. I feel like it's always so fast moving and always growing and changing. So definitely dope to see you getting excited and inspired here as well. And yeah, if you you want, you can let people know where they can find you online, it's up to you.\nI'm getting more involved on Twitter, at gabaustin, G-A-B-A-L-S-T-L-N, and on Instagram, gabbygabby9999. Are\nyou a Farcaster? Just at Gabrielle?\nYes, it is.\nYes, yes, yes. And go join us in the We Them Niggas channel up there as well. Thank you for tuning in to another episode. This was a wonderful trip that we got to have, and it's been beautiful to have you on the experience, shout out to the whole team, shout out to the squadron and peace and blessings, three, two, one, booyah!",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Denver",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "url": "https://wethem.xyz/places#denver"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Denver Unfiltered",
+    "url": "https://wethem.xyz/portfolio#p-denver"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Crypto",
+      "url": "https://wethem.xyz/topics/crypto"
+    }
+  ],
+  "keywords": [
+    "Crypto"
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Denver Unfiltered",
+      "item": "https://wethem.xyz/portfolio#p-denver"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "What decentralized science means for health: Gabrielle at ETH Denver 2024",
+      "item": "https://wethem.xyz/watch/what-decentralized-science-means-for-health-gabrielle-at-eth-denver-2024"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place], who[data-pf-who]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2024-06-15" data-pf-vid="19agkxpJH6Q" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;6:41&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="Denver" data-pf-country="United States" data-pf-project="Denver Unfiltered" data-pf-who="Maceo">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-denver">Denver Unfiltered</a></li>
+            <li aria-current="page">What decentralized science means for health: Gabrielle at ETH Denver 2024</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">What decentralized science means for health: Gabrielle at ETH Denver 2024.</h1>
+
+    <p class="wt-byline"><strong>Gabrielle</strong> &middot; Reported by <strong><a href="../people/maceo.html">Maceo</a></strong> &middot; Denver &middot; 7 min</p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="19agkxpJH6Q" live postersrcset="../stills/19agkxpJH6Q-320.jpg 320w, ../stills/19agkxpJH6Q-480.jpg 480w, ../stills/19agkxpJH6Q-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/19agkxpJH6Q?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="What decentralized science means for health: Gabrielle at ETH Denver 2024, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+    <p class="wt-note wt-credit">Executive producer: C.Y. Lee</p>
+
+    <div class="wt-prose">
+            <p>The last episode from ETH Denver 2024, the series FWB funded, and the most personal one. Maceo, &ldquo;headed home today,&rdquo; sits down with Gabrielle, his girlfriend, a scientist working in clinical research, who came along. What she found: &ldquo;how many people were there, how many different organizations were there, and really just the wide array of people that were there.&rdquo;</p>
+            <p>Her highlight was the DeSci Summit. &ldquo;I had no idea what decentralized science was before coming here. I had gotten a taste through learning about Athena DAO, but I didn&rsquo;t really understand the bigger picture that they were a part of.&rdquo; She thanks the group that ran it, DeSci World, and Jelani and Josh, whose interview is on the channel. Maceo admits he was in the same place: &ldquo;I really didn&rsquo;t know much about decentralized science either, to be honest.&rdquo; What convinced him was the comparison speakers drew between science publishing and the music industry: &ldquo;you do all this research, you put it in the journals, you want it to get there, you finally get there and they charge other people for it. I think is a pretty crazy business model.&rdquo;</p>
+            <p>What surprised her, compared with Art Basel, was age. &ldquo;how many people have been in this space for so long that are our age,&rdquo; which &ldquo;makes it feel a lot more obtainable.&rdquo; The person she did not expect to meet was Thane, a first-year from Howard who won the hackathon at the Black Blockchain Summit and was building &ldquo;a program that was supposed to make transactions go faster.&rdquo;</p>
+            <p>Then Maceo asks how her view of We Them Media has changed. &ldquo;It&rsquo;s been great to see you work since we&rsquo;ve been here,&rdquo; she says, and credits Julian on the cameras, &ldquo;so attentive all the time.&rdquo; What she noticed was the room: &ldquo;seeing how comfortable you are networking,&rdquo; and &ldquo;bringing all of us into a conversation with new people that we&rsquo;re meeting.&rdquo; He closes by naming what she is: &ldquo;you are a scientist working in clinical research and I&rsquo;m excited to see you get excited about the space that I&rsquo;m super excited about.&rdquo; Then the sign-off the channel still uses. The transcript below is from the original audio.</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../places.html#denver">Everything filmed in Denver</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="onchain-science-proof-of-knowledge-desci-world-at-eth-denver-2024.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/GZSciAYuhWY-640.jpg" srcset="../stills/GZSciAYuhWY-320.jpg 320w, ../stills/GZSciAYuhWY-480.jpg 480w, ../stills/GZSciAYuhWY-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>30:00</span></span><span>Onchain science, proof of knowledge: DeSci World.</span></a>
+        <a class="wt-rail-card" href="desci-womens-health-and-funding-the-gap-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/zAIth9lIeP0-640.jpg" srcset="../stills/zAIth9lIeP0-320.jpg 320w, ../stills/zAIth9lIeP0-480.jpg 480w, ../stills/zAIth9lIeP0-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>26:42</span></span><span>DeSci, women&#x27;s health, and who gets funded.</span></a>
+        <a class="wt-rail-card" href="a-first-interview-and-advice-back-to-newark-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/UkX8veGIl58-640.jpg" srcset="../stills/UkX8veGIl58-320.jpg 320w, ../stills/UkX8veGIl58-480.jpg 480w, ../stills/UkX8veGIl58-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:15</span></span><span>A first interview, and advice back to Newark.</span></a>
+        <a class="wt-rail-card" href="real-estate-to-web3-and-40-acres-dao-big-trav-at-eth-denver-2024.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/Nc_zdA2VNUk-640.jpg" srcset="../stills/Nc_zdA2VNUk-320.jpg 320w, ../stills/Nc_zdA2VNUk-480.jpg 480w, ../stills/Nc_zdA2VNUk-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:53</span></span><span>Real estate to Web3, and 40 Acres DAO: Big Trav.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c1"><a class="wt-t" href="https://www.youtube.com/watch?v=19agkxpJH6Q&amp;t=1s" target="_blank" rel="noopener" data-pagefind-ignore>0:01</a><span class="wt-s">Wrapping up ETH Denver, with Gabrielle</span></li>
+                <li class="wt-line" id="c40"><a class="wt-t" href="https://www.youtube.com/watch?v=19agkxpJH6Q&amp;t=40s" target="_blank" rel="noopener" data-pagefind-ignore>0:40</a><span class="wt-s">What is DeSci? Learning it at the summit</span></li>
+                <li class="wt-line" id="c83"><a class="wt-t" href="https://www.youtube.com/watch?v=19agkxpJH6Q&amp;t=83s" target="_blank" rel="noopener" data-pagefind-ignore>1:23</a><span class="wt-s">Why science publishing is like the music industry</span></li>
+                <li class="wt-line" id="c114"><a class="wt-t" href="https://www.youtube.com/watch?v=19agkxpJH6Q&amp;t=114s" target="_blank" rel="noopener" data-pagefind-ignore>1:54</a><span class="wt-s">What surprised her: builders her own age</span></li>
+                <li class="wt-line" id="c174"><a class="wt-t" href="https://www.youtube.com/watch?v=19agkxpJH6Q&amp;t=174s" target="_blank" rel="noopener" data-pagefind-ignore>2:54</a><span class="wt-s">A Howard first-year who won the hackathon</span></li>
+                <li class="wt-line" id="c257"><a class="wt-t" href="https://www.youtube.com/watch?v=19agkxpJH6Q&amp;t=257s" target="_blank" rel="noopener" data-pagefind-ignore>4:17</a><span class="wt-s">How she sees We Them Media now</span></li>
+                <li class="wt-line" id="c335"><a class="wt-t" href="https://www.youtube.com/watch?v=19agkxpJH6Q&amp;t=335s" target="_blank" rel="noopener" data-pagefind-ignore>5:35</a><span class="wt-s">A clinical researcher, and where to find her</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Transcribed from the original audio and corrected for names. Speaker letters mark turns, not names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s1"><a class="wt-at" href="https://www.youtube.com/watch?v=19agkxpJH6Q&amp;t=1s" target="_blank" rel="noopener" data-pagefind-ignore>0:01</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Hi, everybody. Welcome to another episode of We Them Niggas. We&rsquo;re out here at ETH Denver. Wrapping up, we&rsquo;re headed home today. I&rsquo;m here with Gabrielle, my girlfriend. She joins us on the adventure. Gabrielle, how was your experience at ETH Denver this year?</p>
+            <p id="s11"><a class="wt-at" href="https://www.youtube.com/watch?v=19agkxpJH6Q&amp;t=11s" target="_blank" rel="noopener" data-pagefind-ignore>0:11</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I really enjoyed it. I got somewhat of an impression of what to expect from hearing about your previous experiences, but it was really interesting to see for myself, especially like the main convention, how many people were there, how many different organizations were there, and really just the wide array of people that were there. I really enjoyed it.</p>
+            <p id="s35"><a class="wt-at" href="https://www.youtube.com/watch?v=19agkxpJH6Q&amp;t=35s" target="_blank" rel="noopener" data-pagefind-ignore>0:35</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I like that. What was the highlight for you of the conference? Core moment.</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s40"><a class="wt-at" href="https://www.youtube.com/watch?v=19agkxpJH6Q&amp;t=40s" target="_blank" rel="noopener" data-pagefind-ignore>0:40</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Core moment. We&rsquo;ve been doing a lot of cool things. I really enjoyed the DeSci Summit. I had no idea what decentralized science was before coming here. I had gotten a taste through learning about Athena <a class="wt-gloss" href="../glossary.html#dao">DAO</a>, but I didn&rsquo;t really understand the bigger picture that they were a part of. So I think attending that summit was really great to hear more about Athena DAO, more about other organizations, the actual like DeSci group that made the summit, DeSci World, thank you. So I&rsquo;m excited to get involved.</p>
+            <p id="s75"><a class="wt-at" href="https://www.youtube.com/watch?v=19agkxpJH6Q&amp;t=75s" target="_blank" rel="noopener" data-pagefind-ignore>1:15</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Shout out to Jelani and Josh, the interview is also something we did while we were here. Yeah, I really didn&rsquo;t know much about decentralized science either, to be honest. I went to like a house party last year, like last night I was here and there was like some DeSci people there, but I didn&rsquo;t really have a clear picture of what it was. So really going to that summit really let me in a lot further so I can understand like what&rsquo;s happening in this space, why this is important. I think Char explaining us like the parallels between like the, no, Johnny actually, and Char, I think they both spoke to some of the parallels between like the music industry and the publishing, like world academia and science.</p>
+            <p id="s75-2"><a class="wt-at" href="https://www.youtube.com/watch?v=19agkxpJH6Q&amp;t=75s" target="_blank" rel="noopener" data-pagefind-ignore>1:15</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And so it was cool to look at what kinds of concessions people that want to do research and publish have to take on inside of like the existing infrastructure. Like them talking about like you do all this research, you put it in the journals, you want it to get there, you finally get there and they charge other people for it. I think is a pretty crazy business model and it was cool to see how to try to disrupt that and drive value back to people actually doing science and so yeah I was definitely happy with it once that summit. I guess outside of the summit what were some things that surprised you about ETH Denver?</p>
+            <p id="s136"><a class="wt-at" href="https://www.youtube.com/watch?v=19agkxpJH6Q&amp;t=136s" target="_blank" rel="noopener" data-pagefind-ignore>2:16</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Kind of like I was mentioning to you earlier I feel like in comparison to Art Basel was a lot of people that had been working in the field for a while and just I could they were older than us. So it felt a little bit out of reach what they were doing and some of the things that they were speaking about. But I feel like we&rsquo;ve spoken to so many people that were closer to our age and it&rsquo;s like, or even younger than us. And it&rsquo;s like, wow, that&rsquo;s a total inspiration to learn more, to be able to get more involved and do more. I&rsquo;ll say that&rsquo;s something that surprised me was how many people have been in this space for so long that are our age or just cool things that they&rsquo;re doing.</p>
+            <p id="s136-2"><a class="wt-at" href="https://www.youtube.com/watch?v=19agkxpJH6Q&amp;t=136s" target="_blank" rel="noopener" data-pagefind-ignore>2:16</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It makes it feel a lot more obtainable to, you you know see someone that is so similar to you doing such cool things</p>
+            <p id="s178"><a class="wt-at" href="https://www.youtube.com/watch?v=19agkxpJH6Q&amp;t=178s" target="_blank" rel="noopener" data-pagefind-ignore>2:58</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>and who who are some people that were like a highlight of your trip that you didn&rsquo;t expect to meet like who was people you had conversations with</p>
+            <p id="s185"><a class="wt-at" href="https://www.youtube.com/watch?v=19agkxpJH6Q&amp;t=185s" target="_blank" rel="noopener" data-pagefind-ignore>3:05</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>definitely last night with the student from Howard the first year from Howard yes</p>
+            <p id="s193"><a class="wt-at" href="https://www.youtube.com/watch?v=19agkxpJH6Q&amp;t=193s" target="_blank" rel="noopener" data-pagefind-ignore>3:13</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>shout out to Thane I didn&rsquo;t meet Thane but I saw Thane at the Black Blockchain Summit at Howard University back in September October and he won the hackathon and I was like oh okay go crazy And then I saw him last night at the Proof of Obes event, and I was like, I know you, you won the hackathon at Howard. He was like, yeah, how do you know who I am? So definitely, and here he was the first year, I was definitely super impressed. But yeah, continue, continue. I didn&rsquo;t mean to cut you off.</p>
+            <p id="s216"><a class="wt-at" href="https://www.youtube.com/watch?v=19agkxpJH6Q&amp;t=216s" target="_blank" rel="noopener" data-pagefind-ignore>3:36</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>No worries. He was just speaking about what actually he was doing at the hackathon was a program that was supposed to make transactions go faster. And I didn&rsquo;t get to like the chance to hear more about that, but I don&rsquo;t even know how one would do that. So that&rsquo;s super cool that he&rsquo;s already involved in such like advanced work now and getting internships that have to do with Web3. I would have never known that, you know, that was even available in undergrad. at so super cool that he&rsquo;s like be so ambitious, so motivated and doing such cool things.</p>
+            <p id="s251"><a class="wt-at" href="https://www.youtube.com/watch?v=19agkxpJH6Q&amp;t=251s" target="_blank" rel="noopener" data-pagefind-ignore>4:11</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Oh, yeah. And I guess kind of to close out the memory or close out the conversation coming to ETH Denver, you were coming here to learn, coming here, being open minded. What was like, I guess your perspective on seeing like what We Them Media is like over time, like from when you first met me, I guess, to being here at ETH Denver, how was like your perspective evolved?</p>
+            <p id="s269"><a class="wt-at" href="https://www.youtube.com/watch?v=19agkxpJH6Q&amp;t=269s" target="_blank" rel="noopener" data-pagefind-ignore>4:29</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It&rsquo;s been great to see you work since we&rsquo;ve been here. Your production has been a Bazing, shout out to Julian for being so attentive all the time with the cameras and just in general, seeing how comfortable you are networking, catching up with people that you&rsquo;ve seen either, you know, a few months ago at a previous conference or a year ago, just how personable you&rsquo;ve been and bringing all of us into a conversation with new people that we&rsquo;re meeting. It&rsquo;s been great also just with your interest in music, hearing you continue those conversations with a wide array of people. I think you&rsquo;ve interviewed a good handful of people that were also involved in your specific interests.</p>
+            <p id="s269-2"><a class="wt-at" href="https://www.youtube.com/watch?v=19agkxpJH6Q&amp;t=269s" target="_blank" rel="noopener" data-pagefind-ignore>4:29</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So really just seeing the community building that&rsquo;s happening within your interests and also I really appreciate you wanting to go to the DeSci Summit with me and getting more into my interests and just things that have to do with the community that you&rsquo;re involved with. What is everyone&rsquo;s interest and what more can we learn about?</p>
+            <p id="s331"><a class="wt-at" href="https://www.youtube.com/watch?v=19agkxpJH6Q&amp;t=331s" target="_blank" rel="noopener" data-pagefind-ignore>5:31</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I got that. Well, I really appreciate you sitting down with me, coming out to the conference with us in the first place, really being interested and not just being here as a passenger. And it was definitely a pleasure. You know, you are a scientist working in clinical research and I&rsquo;m excited to see you get excited about the space that I&rsquo;m super excited about and always in awe of. I feel like it&rsquo;s always so fast moving and always growing and changing. So definitely dope to see you getting excited and inspired here as well. And yeah, if you you want, you can let people know where they can find you online, it&rsquo;s up to you.</p>
+            <p id="s359"><a class="wt-at" href="https://www.youtube.com/watch?v=19agkxpJH6Q&amp;t=359s" target="_blank" rel="noopener" data-pagefind-ignore>5:59</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I&rsquo;m getting more involved on Twitter, at gabaustin, G-A-B-A-L-S-T-L-N, and on Instagram, gabbygabby9999. Are</p>
+            <p id="s373"><a class="wt-at" href="https://www.youtube.com/watch?v=19agkxpJH6Q&amp;t=373s" target="_blank" rel="noopener" data-pagefind-ignore>6:13</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>you a <a class="wt-gloss" href="../glossary.html#farcaster">Farcaster</a>? Just at Gabrielle?</p>
+            <p id="s376"><a class="wt-at" href="https://www.youtube.com/watch?v=19agkxpJH6Q&amp;t=376s" target="_blank" rel="noopener" data-pagefind-ignore>6:16</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yes, it is.</p>
+            <p id="s377"><a class="wt-at" href="https://www.youtube.com/watch?v=19agkxpJH6Q&amp;t=377s" target="_blank" rel="noopener" data-pagefind-ignore>6:17</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yes, yes, yes. And go join us in the We Them Niggas channel up there as well. Thank you for tuning in to another episode. This was a wonderful trip that we got to have, and it&rsquo;s been beautiful to have you on the experience, shout out to the whole team, shout out to the squadron and peace and blessings, three, two, one, booyah!</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+
+    <section id="after-transcript" tabindex="-1" class="wrap wt-talk" aria-labelledby="wt-talk-h">
+        <details class="wt-talk-fold" open>
+        <summary class="wt-talk-open"><h2 id="wt-talk-h">From the comments (1).</h2></summary>
+        <ul class="wt-talk-list">
+            <li class="wt-talk-c"><blockquote class="wt-talk-q"><p>Great recap on Desci summit! Great to see the support you both share for each other!</p></blockquote>
+            <p class="wt-talk-by">@nubianizm7280 &middot; <a href="https://www.youtube.com/watch?v=19agkxpJH6Q&amp;lc=Ugw5lWt9fabbVOAQkQB4AaABAg" target="_blank" rel="noopener">On YouTube</a></p></li>
+        </ul>
+        <p class="wt-talk-join"><a href="https://www.youtube.com/watch?v=19agkxpJH6Q&amp;lc=Ugw5lWt9fabbVOAQkQB4AaABAg" target="_blank" rel="noopener">Join the conversation on YouTube &rarr;</a></p>
+        </details>
+        <script>(function(){var d=document.currentScript.previousElementSibling;if(d&&d.open&&window.matchMedia&&matchMedia("(max-width: 700px)").matches)d.open=false;})();</script>
+    </section>
+<div><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from Denver Unfiltered.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-denver">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="a-first-interview-and-advice-back-to-newark-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/UkX8veGIl58-640.jpg" srcset="../stills/UkX8veGIl58-320.jpg 320w, ../stills/UkX8veGIl58-480.jpg 480w, ../stills/UkX8veGIl58-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:15</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · ETH Denver 2024</span>
+                    <h3 class="report-title">A first interview, and advice back to Newark.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="building-a-dao-and-making-governance-a-game-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/qcTocIWf34U-640.jpg" srcset="../stills/qcTocIWf34U-320.jpg 320w, ../stills/qcTocIWf34U-480.jpg 480w, ../stills/qcTocIWf34U-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:45</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">A content coin, and making governance a game.</h3>
+                    
+                </div>
+            </a>
+            <a href="from-america-to-denver-what-brought-you-here-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/DdXcCfCc26E-640.jpg" srcset="../stills/DdXcCfCc26E-320.jpg 320w, ../stills/DdXcCfCc26E-480.jpg 480w, ../stills/DdXcCfCc26E-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:21</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · Street</span>
+                    <h3 class="report-title">A borrowed camera, and Denver block by block.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../places.html#denver">Everything filmed in Denver</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

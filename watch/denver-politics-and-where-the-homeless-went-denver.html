@@ -1,0 +1,949 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="A note before this one: near the end John talks about two people who were shot, and about the videos of it.">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/denver-politics-and-where-the-homeless-went-denver">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="Denver Politics and Where the Homeless Went">
+    <meta property="og:description" content="A note before this one: near the end John talks about two people who were shot, and about the videos of it.">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/denver-politics-and-where-the-homeless-went-denver.jpg?v=fba44be8c8">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Where the homeless went before the convention came">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/denver-politics-and-where-the-homeless-went-denver.jpg?v=fba44be8c8">
+    <meta property="og:url" content="https://wethem.xyz/watch/denver-politics-and-where-the-homeless-went-denver">
+    <title>Denver Politics and Where the Homeless Went &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/denver-politics-and-where-the-homeless-went-denver#video",
+  "name": "Denver Politics and Where the Homeless Went",
+  "description": "A note before this one: near the end John talks about two people who were shot, and about the videos of it. He raises it himself, in the middle of an argument about deportation, and it sits here where he put it. What did people in a conservative white town say out loud in the civil rights era? John, who has lived in Denver a long time, says the words were the quiet part: \"they would work around it. But they would still subject people to like not being able to do what they should be able to do.\" And: \"And they kept it quiet.\" Asked the motive: \"Because they're racist.\" He is unhappy to say it: \"I hate to say that cuz I want people to be better than that.\" He calls it arithmetic: \"Within 20 25 years, Hispanics will hold the majority of the people in our country.\" And: \"it's ironic because we stole the United States in the first place.\" Seventeen minutes on a Denver street.",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/hT_oDk_DnMw/maxresdefault.jpg"
+  ],
+  "uploadDate": "2026-03-31T06:11:50Z",
+  "embedUrl": "https://www.youtube.com/embed/hT_oDk_DnMw",
+  "url": "https://wethem.xyz/watch/denver-politics-and-where-the-homeless-went-denver",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT17M35S",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "His daughter the doctor, and what AI is doing to surgery",
+      "startOffset": 0,
+      "url": "https://wethem.xyz/watch/denver-politics-and-where-the-homeless-went-denver?t=0",
+      "endOffset": 77
+    },
+    {
+      "@type": "Clip",
+      "name": "The question: what was the discourse like back then",
+      "startOffset": 77,
+      "url": "https://wethem.xyz/watch/denver-politics-and-where-the-homeless-went-denver?t=77",
+      "endOffset": 124
+    },
+    {
+      "@type": "Clip",
+      "name": "Why they kept it quiet",
+      "startOffset": 124,
+      "url": "https://wethem.xyz/watch/denver-politics-and-where-the-homeless-went-denver?t=124",
+      "endOffset": 182
+    },
+    {
+      "@type": "Clip",
+      "name": "Why the pushback, in his view: demographics",
+      "startOffset": 182,
+      "url": "https://wethem.xyz/watch/denver-politics-and-where-the-homeless-went-denver?t=182",
+      "endOffset": 277
+    },
+    {
+      "@type": "Clip",
+      "name": "Why he calls this fight a last stand",
+      "startOffset": 277,
+      "url": "https://wethem.xyz/watch/denver-politics-and-where-the-homeless-went-denver?t=277",
+      "endOffset": 348
+    },
+    {
+      "@type": "Clip",
+      "name": "Old school: no Facebook, no Amazon, letters",
+      "startOffset": 348,
+      "url": "https://wethem.xyz/watch/denver-politics-and-where-the-homeless-went-denver?t=348",
+      "endOffset": 448
+    },
+    {
+      "@type": "Clip",
+      "name": "Art museums, and free on the first Saturday",
+      "startOffset": 448,
+      "url": "https://wethem.xyz/watch/denver-politics-and-where-the-homeless-went-denver?t=448",
+      "endOffset": 541
+    },
+    {
+      "@type": "Clip",
+      "name": "The Clyfford Still Museum and the former mayor",
+      "startOffset": 541,
+      "url": "https://wethem.xyz/watch/denver-politics-and-where-the-homeless-went-denver?t=541",
+      "endOffset": 594
+    },
+    {
+      "@type": "Clip",
+      "name": "Where the homeless went before the convention",
+      "startOffset": 594,
+      "url": "https://wethem.xyz/watch/denver-politics-and-where-the-homeless-went-denver?t=594",
+      "endOffset": 733
+    },
+    {
+      "@type": "Clip",
+      "name": "No proof, and a liberal city",
+      "startOffset": 733,
+      "url": "https://wethem.xyz/watch/denver-politics-and-where-the-homeless-went-denver?t=733",
+      "endOffset": 791
+    },
+    {
+      "@type": "Clip",
+      "name": "His question: how do you put up with America?",
+      "startOffset": 791,
+      "url": "https://wethem.xyz/watch/denver-politics-and-where-the-homeless-went-denver?t=791",
+      "endOffset": 834
+    },
+    {
+      "@type": "Clip",
+      "name": "Deportation, and a number he keeps",
+      "startOffset": 834,
+      "url": "https://wethem.xyz/watch/denver-politics-and-where-the-homeless-went-denver?t=834",
+      "endOffset": 898
+    },
+    {
+      "@type": "Clip",
+      "name": "Minnesota, and two people shot",
+      "startOffset": 898,
+      "url": "https://wethem.xyz/watch/denver-politics-and-where-the-homeless-went-denver?t=898",
+      "endOffset": 1055
+    }
+  ],
+  "creator": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "transcript": "Yeah. Because if we would be talking about it afterwards like that, no, you got to still keep it on the down low. Mhm. Okay. Go. Yeah. Yeah. [bleeped] those guys. Who are they?\nMhm. Mhm. Yeah. Yeah. Yeah. It's not even worth the time. Yeah. Yeah. And that is the coolest thing I've done in my [bleeped] life besides raising my daughter to be a doctor.\nWhat kind of doctor is she? She's two. She's two different kinds of doctors. Oh, wow. Which ones? in internal and GP. Oh, wow. That's cool. Internal internal body.\nAnd her husband is a surgeon. And because of AI Mhm. they're switching everything. Oh, interesting. I believe that. Okay. Because within 3 years, AI is going to be operating on people.\nImagine. Like seriously. Okay. I mean, they told me that. Okay. So, they're moving to burn. Well, AI cannot assimilate burn victims because they're all different.\nThat's how come they're doing it. And I feel horrible for my son-in-law because he's going to be working on burn victims. But he'll have a job.\nYeah, that's true. You know, what do I say? And I'm sorry I probably talked too long. I apologize. No, no, you still didn't answer my the one question I had though, right? Like how did you see like in the civil rights movement, the opinions of people being challenged? What was that discourse like in uh like in a conservative white town in, you know, North America? Like what is the public discourse actually like there? Like in that moment, what are people saying about what's going on?\nIt's different now because of Trump. They're more vocal. Oh, yeah. But I'm saying at that time, right? Do you remember what people were saying? Oh. Oh. Oh. They they would work around it,\nokay? But they would still subject people to like not being able to do what they should be able to do. Mhm. Okay. And they kept it quiet.\nWhy? Like what's their motivation to do that? Because they're racist. And I I'm sorry. I'm I'm just going to break it down to that. Mhm.\nAnd I never thought I would be saying this 10 years ago, but Trump proved that were a whole lot more racist than what I ever realized.\nI don't know. Cuz I I I thought like like like with Well, hell, even Bush Bush wasn't racist. Okay. Obama obviously. Okay. Yeah. Yeah. We're just racist, man.\nMhm. And I I hate to say that. I hate to say that cuz I want people to be better than that. Well, how do you feel people become racist? Like how do they assume this position of like I am I am better or they are less. What do you think that's like culturally?\nI honestly think and and this is getting proven and now we're going to go past black. Let's go to Hispanic. Mhm. Okay. Within 20 25 years, Hispanics will hold the majority of the people in our country.\nAnd we've got this last bastion of older white traditionalists. They don't want that [bleeped] to happen. And that's how come you got the push back. And like with Trump, Trump's helping to accelerate that. And that's how come Okay. They think, and it's ironic because we stole the United States\nin the first place, right? Yeah. I mean, Texas was Mexico for Christ's sake. So was Louisiana. And but people forget that. Okay. We stole the [bleeped] place anyways. That's simple, you know. But but you know, if you're a white traditionalist, you don't think that way.\nSo it's just it's just a desire to maintain at least the majority of power. White power. Yeah. White power. And once you become minority, power is a lot less certain.\nWell, cuz you're outnumbered. Yeah. Yeah. Which is why they're fighting so hard cuz like I said, within 20 25 years, and I ain't talking African-Americans.\nYeah. I'm talking Hispanics. Yeah. Yeah. Yeah. Okay. And and they're going to be How we doing, my friend? Doing good. How are Glad to hear.\nUh yeah. Yeah. That's how come we're having this big ass fight right now. Mhm. You mean in terms of ICE? You mean in terms of the whole world?\nWell, mainly US. Mhm. Okay. They This is the last stand for what? And I And I don't believe in it before I say it, but why in America?\nThis is the last stand for white America. Yeah. Yeah. Because we are this close and these guys are realizing that and they still have power.\nAnd Yeah. Yeah. Like I said, I apologize for talking. Perfect. Okay. Now, how did you decide to come from Philly to here? I came out here for a tech conference.\nAnd you're just sticking around? Yeah. My car broke down in Lyman. So I I got it towed from 75 miles. 100 miles. No, no, no, no, no, no. 75 miles from my hometown.\nOh, yeah. Is what I'm saying. Okay. Yeah. Yeah. Yeah. Yeah. 76 to be exact. Yeah. Yeah. Yeah. I was 76 miles past then. Yeah. So you you broke down in [bleeped] line.\nYeah. My my engine sees so I don't have a car anymore. And I didn't really I came here looking for a job. I didn't get a job. I got some leads. I have meeting up for a job lead tonight which is exciting. But I should be prepping. I'm kind of procrastinating right now, but you know, this is a worthwhile moment in my journey. Honestly, it's like really cool to hear what you have to say. I have to say it's really cool.\nWell, I apologize if I I talk too much. No, I mean, my YouTube's just going to be an archive of people around the world doing this. And so, there's no such thing as talking too much. I think my goal is like people can go on my YouTube page and always be like, \"Oh, this a video nobody's ever seen.\" Like,\nokay, I got to ask this. Yeah. Okay. Because I'm not even on [bleeped] Facebook. Mhm. Mhm. I've never gotten a thing from Amazon. Mhm. You don't use AI at all? No crypto for you.\nOkay. No, I'm old school. Okay. So, is that email? Every now and then. Okay. You write letters? Yeah. Yeah. Okay. Yeah, I do. I do. Okay. Which is stupid. I admit that. Compared to email.\nYeah. It's more intimate, more personal. Well, but still stupid. Okay. But but yeah, yeah, yeah. I I'm I'm old school. What do I say? I ain't nothing wrong with that. I think I encourage you to try out the AI. I use Quad. You can use it for free, I think, without even having an account.\nOkay. All I know is about chat, chat, GP. Yeah, whatever. Okay. You said Claude. Oh, yeah. Yeah. Claude. It's like the like Claude Monae wrote some like theory of intelligence or some [bleeped] like that.\nAs in Claude Mon. Yeah, I'm wrong. It's like a something clawed. I don't know. I don't know. Okay. Cuz I love Monet. Cuz I love\nMonet. That's cool. I seen some Monae panties in Philly. That's where I'm from. Philadelphia. You said that. You said that. And And hey, I'll do this.\nOkay. Like I I'll get high and I'll go to the art museums, man. And Yeah. I love that. Hey, cool thing about here. First Saturday of every month, they're all free. Oh, really? That's coming up. That's just coming Saturday.\nYeah. Yeah. You can go to whatever the [bleeped] art museum wanting, which Well, hey, down this street, you know, you can see the asteroid. Okay. Which, by the way, horrible.\nYeah. Oh, it looks like it looks like a Martian spit out something. Okay. But I will say this inside it works because of the walls because it's so weird.\nMhm. The the art actually does stick out. Okay. Well, that's cool. Maybe Maybe it's for the inside, not the outside experience, then. Well, yeah, cuz not the outside in my opinion.\nLooks like a skate park. Good point. It It looks like it's trying to be like the the Sydney, Australia thing. Well, it's not that, but we can stop harping on it.\nNo, no. And you're totally correct. Hey, hey, I've been knocking it, right? I'm I'm knocking the [bleeped] out of the place. Okay. But hey, right next to that,\nlike, do you get high at all? Yeah, for sure. Okay. I'm out of weed, though. But yeah. Okay. Uh, right past the art museum, like the weird thing is the Clifford Still Museum.\nMhm. Okay. Abstract artist, Jackson Pollock, thought he was gone. Okay. And for some reason, our mayor, who is now a US senator, he decided the mayor of Denver is a US senator at the same time.\nNo, the former mayor is a US senator. Interesting. Yeah. He went from mayor to governor to US senator. And and to his credit, okay, dude. Okay. Like uh 98, that's when Obama ran against Hillary Clinton and the national convention was here. Democratic Interesting.\nOkay. All are homeless disappear. To his credit. That's a facade though now. Yeah. No. Where'd they go? I'm getting there. Okay. I'm listening. I'm getting there. Okay. Literally down this street.\nUhhuh. Same one. My first place was on 17th. That is 14th. Right there. Okay. And on 16th was a church. And I go serve there like once a week. Mhm.\nOkay. And and Hickinlooper, that's the guy's name, he goes from mayor to governor and then all of a sudden I start seeing like all these people like getting food.\nMhm. And and I and I know everybody there and tell these new people. And so I asked like one of the guys I know. I said, \"Hey, what what the fuck?\" He goes, \"Oh, well not married.\" I said, \"So,\" I said, \"So, he actually did move all the homeless out.\" He goes, \"Oh, yeah.\"\nYeah. They put them on [bleeped] buses all the way to Texas. Damn. So, that it look good on TV to Texas. They just deported them from Denver.\nYeah. Yeah. You know, I I would like to argue with your word, but yeah, you're totally correct. Okay. And Yeah. Yeah. A and then once Hickin Looper became governor\ninstead of mayor, they moved back. The same people. When was that? You said '98. Well, no. I'd say 2000 by then. 2000. Okay. I'm going to see if I can ask people and get somebody's take on that. Like, I'd be really curious to get somebody's actual take on what that whole thing was like,\nif I can find anybody. Well, like I said, officially I didn't tell you, but go ahead. Okay. Because Yeah. And and hey, my old man like in my small town\nMhm. Okay. He did the same [bleeped] Okay. Like if somebody like showed up on I7 and like they crashed like in a deserted house Mhm.\nOh, they moved him 30 miles 30 miles away to Kansas. So yeah. Yeah, he did that. And I And I always thought it's [bleeped] Okay. Until all of a sudden all these people are moving back.\nMhm. Look where they come from. That was pretty Texas. Yeah. You know, Kansas, I wasn't just Texas. Yeah. Yeah. Greyhound buses moved their asses out. So, the Democratic National Convention looked good.\nYeah. Yeah. Yeah. So, Denver looked good. Yeah. That's crazy. Yeah. Kind of usher more capital here, I'm sure. And hey, we're liberal here and we still did that. So God knows what happens in conservative places.\nYeah, that's true. That never gets talked about, never gets documented, never publicized. Yeah. Well, hey, this wouldn't have either. I just happen to notice. Yeah. Oh, it wasn't a thing people knew happened. It just happened and there was nothing.\nAnd we all heard it. Okay. But no proof. No proof. Okay. And and all of a sudden like these people are moving back. So [bleeped] it's true. It's [bleeped] true.\nYeah. What do I say? Like I said, I'm sorry I talked. No, it's all good. So, do you have any questions you'd ask people around the world?\nHow do the hell you put up with us right now as America? Cuz it's cluster [bleeped] son. It's cluster [bleeped] Hell yeah. I I mean just this past weekend you had 9 million people protesting across America the no kings thing.\nWell that's a point now isn't it? Mhm. Absolutely. We're just like Israel now with BB. We're like all like what do we do? All we go outside and do a protest.\nIt's horrible right now. It's horrible. I I'm embarrassed to live here right now. And I live in a liberal city and I'm embarrassed to live here.\nMhm. It's wrong. It's just wrong. People shouldn't be treated that way. And and like the deportation, all this crap. Well, first of all, I said this earlier, we stole the goddamn land anyway.\nMhm. What's wrong with people coming in? And I I I do know this number. Okay. Like even like illegal aliens paid over $86 billion in tax last year.\nYou imagine? Cuz they're on the Well, they're on the rolls. They came over illegally, but they're on the rolls now. Mhm. Mhm. And so is that a bad thing? No. No. No. They sit there and talk about, \"Oh, we just want to get like the drug dealers and like the criminals out.\" Well, there's not that many of them. And and then and you know what? Thank God for the state of Milwaukee.\nHow they stuck up and like literally open everybody's eyes cuz beforehand, well, a year before the [bleeped] happened like in uh uh you know, Wisconsin\nor uh Minnesota. I was thinking he went Minnesota and you said walking. Yeah. Yeah. I'm sorry. Yeah. Uh there there was a guy in Texas got killed for no reason.\nAnd now we're seeing the video. Okay. But until until Minnesota like just said, \"Hey, [bleeped] this.\" Okay, we're going to stand up and you know what? We might get shot. And you know what? Two of them did.\nWe wouldn't know. So God bless the people of Minnesota, which is why this past weekend, Jane Fonda, okay, and Bruce Springsteen singing that Minnesota song. Now they go down there to protest.\nOkay. But I didn't know Springsteen was in Minnesota. Yeah. So is Jane Fonda. I don't know why. Yeah. And he played his song. Okay. Which Trump hated obviously.\nWhich song? Well, he protest song about uh the Oh, this is terrible. I can't remember the guy's name. You know, the girl got shot then the guy.\nMhm. Okay. It was about the guy. And he wrote a protest song. I didn't know that. I didn't know the guy got shot. I knew the girl got shot. I didn't know the guy got shot.\nYeah. I know. Yeah. Not doing nothing. Not doing nothing. In fact, the guy the girl they claim said she was like driving in a halfhazardly way\nand 30 seconds beforehand they film her. Oh, hey, you guys are good, you know, etc., etc. Within 30 seconds, they shoot her ass to death.\nOkay, but at least she might have been moving wrong. The guy Oh, no. No, he was on it. He was on his stomach. Okay. wasn't doing nothing and they put six, seven bullets in.\nYeah. Imagine. Okay. And and thank God for the people of Minnesota. They just kept [bleeped] protesting. So good for them. Definitely not. Yeah. Once again, I'm sorry, my friend.\nNo, I'm sorry for holding you, but it's been almost an hour. Oh, well, I live up here. Okay. Yeah, it was nice. I'm going to go talk to my cat. Okay. So you be",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Denver",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "url": "https://wethem.xyz/places#denver"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Denver Unfiltered",
+    "url": "https://wethem.xyz/portfolio#p-denver"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "The Engaged Citizens",
+      "url": "https://wethem.xyz/topics/engaged-citizens"
+    }
+  ],
+  "keywords": [
+    "The Engaged Citizens"
+  ],
+  "dateCreated": "2026-03-30"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Denver Unfiltered",
+      "item": "https://wethem.xyz/portfolio#p-denver"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Where the homeless went before the convention came",
+      "item": "https://wethem.xyz/watch/denver-politics-and-where-the-homeless-went-denver"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2026-03-31" data-pf-vid="hT_oDk_DnMw" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;17:35&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="Denver" data-pf-country="United States" data-pf-project="Denver Unfiltered">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-denver">Denver Unfiltered</a></li>
+            <li aria-current="page">Where the homeless went before the convention came</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">Where the homeless went before the convention came.</h1>
+
+    <p class="wt-byline"><strong>John</strong> &middot; Denver &middot; 18 min &middot; filmed <time datetime="2026-03-30">30 March 2026</time></p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="hT_oDk_DnMw" live postersrcset="../stills/hT_oDk_DnMw-320.jpg 320w, ../stills/hT_oDk_DnMw-480.jpg 480w, ../stills/hT_oDk_DnMw-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/hT_oDk_DnMw?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="Where the homeless went before the convention came, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+
+    <div class="wt-prose">
+            <p>A note before this one: near the end John talks about two people who were shot, and about the videos of it. He raises it himself, in the middle of an argument about deportation, and it sits here where he put it.</p>
+            <p>What did people in a conservative white town say out loud in the civil rights era? John, who has lived in Denver a long time, says the words were the quiet part: &ldquo;they would work around it. But they would still subject people to like not being able to do what they should be able to do.&rdquo; And: &ldquo;And they kept it quiet.&rdquo; Asked the motive: &ldquo;Because they&rsquo;re racist.&rdquo; He is unhappy to say it: &ldquo;I hate to say that cuz I want people to be better than that.&rdquo;</p>
+            <p>He calls it arithmetic: &ldquo;Within 20 25 years, Hispanics will hold the majority of the people in our country.&rdquo; And: &ldquo;it&rsquo;s ironic because we stole the United States in the first place.&rdquo;</p>
+            <p>Seventeen minutes on a Denver street.</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../places.html#denver">Everything filmed in Denver</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="housing-school-and-the-street-from-somebody-born-here-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/JwJOZGs3bqA-640.jpg" srcset="../stills/JwJOZGs3bqA-320.jpg 320w, ../stills/JwJOZGs3bqA-480.jpg 480w, ../stills/JwJOZGs3bqA-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>12:58</span></span><span>Housed, then evicted, and what happened to her daughter.</span></a>
+        <a class="wt-rail-card" href="learn-from-your-mistakes-and-pay-it-forward-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/IbLjjIn0T3k-640.jpg" srcset="../stills/IbLjjIn0T3k-320.jpg 320w, ../stills/IbLjjIn0T3k-480.jpg 480w, ../stills/IbLjjIn0T3k-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:56</span></span><span>Life advice, a cop story and a prison story.</span></a>
+        <a class="wt-rail-card" href="first-friday-freestyle-on-the-corner-of-santa-fe.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/uSyxfx1ldXE-640.jpg" srcset="../stills/uSyxfx1ldXE-320.jpg 320w, ../stills/uSyxfx1ldXE-480.jpg 480w, ../stills/uSyxfx1ldXE-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>19:15</span></span><span>A First Friday freestyle, caught on camera.</span></a>
+        <a class="wt-rail-card" href="never-been-ashamed-to-cry-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/yepfMr68Rao-640.jpg" srcset="../stills/yepfMr68Rao-320.jpg 320w, ../stills/yepfMr68Rao-480.jpg 480w, ../stills/yepfMr68Rao-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>24:10</span></span><span>Eric, on grief, family, and the human race.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap clip-sec" aria-labelledby="clips-here-h" data-pagefind-ignore="all">
+        <h2 class="clip-sec-h" id="clips-here-h">Shorts from this piece</h2>
+        <ul class="clip-row">
+            <li><a class="clip-card" href="../clips.html#b6-004"><span class="clip-card-pic"><img class="clip-img" src="../stills/clips/b6-004-360.jpg" srcset="../stills/clips/b6-004-360.jpg 360w, ../stills/clips/b6-004-720.jpg 720w" sizes="(min-width: 721px) 168px, 144px" width="360" height="640" alt="" loading="lazy" decoding="async"></span><span class="clip-card-t">They Bused the Homeless Out of Town</span><span class="clip-card-p">Denver</span></a><a class="clip-card-yt" href="https://www.youtube.com/shorts/RM6aR7sXJ0w">On YouTube &rarr;</a></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c0"><a class="wt-t" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-s">His daughter the doctor, and what AI is doing to surgery</span></li>
+                <li class="wt-line" id="c77"><a class="wt-t" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=77s" target="_blank" rel="noopener" data-pagefind-ignore>1:17</a><span class="wt-s">The question: what was the discourse like back then</span></li>
+                <li class="wt-line" id="c124"><a class="wt-t" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=124s" target="_blank" rel="noopener" data-pagefind-ignore>2:04</a><span class="wt-s">Why they kept it quiet</span></li>
+                <li class="wt-line" id="c182"><a class="wt-t" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=182s" target="_blank" rel="noopener" data-pagefind-ignore>3:02</a><span class="wt-s">Why the pushback, in his view: demographics</span></li>
+                <li class="wt-line" id="c277"><a class="wt-t" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=277s" target="_blank" rel="noopener" data-pagefind-ignore>4:37</a><span class="wt-s">Why he calls this fight a last stand</span></li>
+                <li class="wt-line" id="c348"><a class="wt-t" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=348s" target="_blank" rel="noopener" data-pagefind-ignore>5:48</a><span class="wt-s">Old school: no Facebook, no Amazon, letters</span></li>
+                <li class="wt-line" id="c448"><a class="wt-t" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=448s" target="_blank" rel="noopener" data-pagefind-ignore>7:28</a><span class="wt-s">Art museums, and free on the first Saturday</span></li>
+                <li class="wt-line" id="c541"><a class="wt-t" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=541s" target="_blank" rel="noopener" data-pagefind-ignore>9:01</a><span class="wt-s">The Clyfford Still Museum and the former mayor</span></li>
+                <li class="wt-line" id="c594"><a class="wt-t" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=594s" target="_blank" rel="noopener" data-pagefind-ignore>9:54</a><span class="wt-s">Where the homeless went before the convention</span></li>
+                <li class="wt-line" id="c733"><a class="wt-t" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=733s" target="_blank" rel="noopener" data-pagefind-ignore>12:13</a><span class="wt-s">No proof, and a liberal city</span></li>
+                <li class="wt-line" id="c791"><a class="wt-t" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=791s" target="_blank" rel="noopener" data-pagefind-ignore>13:11</a><span class="wt-s">His question: how do you put up with America?</span></li>
+                <li class="wt-line" id="c834"><a class="wt-t" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=834s" target="_blank" rel="noopener" data-pagefind-ignore>13:54</a><span class="wt-s">Deportation, and a number he keeps</span></li>
+                <li class="wt-line" id="c898"><a class="wt-t" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=898s" target="_blank" rel="noopener" data-pagefind-ignore>14:58</a><span class="wt-s">Minnesota, and two people shot</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Transcribed from the original audio and corrected for names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a>Yeah. Because if we would be talking about it afterwards like that, no, you got to still keep it on the down low. Mhm. Okay. Go. Yeah. Yeah. [bleeped] those guys. Who are they?</p>
+            <p id="s11"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=11s" target="_blank" rel="noopener" data-pagefind-ignore>0:11</a>Mhm. Mhm. Yeah. Yeah. Yeah. It&rsquo;s not even worth the time. Yeah. Yeah. And that is the coolest thing I&rsquo;ve done in my [bleeped] life besides raising my daughter to be a doctor.</p>
+            <p id="s22"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=22s" target="_blank" rel="noopener" data-pagefind-ignore>0:22</a>What kind of doctor is she? She&rsquo;s two. She&rsquo;s two different kinds of doctors. Oh, wow. Which ones? in internal and GP. Oh, wow. That&rsquo;s cool. Internal internal body.</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s35"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=35s" target="_blank" rel="noopener" data-pagefind-ignore>0:35</a>And her husband is a surgeon. And because of AI Mhm. they&rsquo;re switching everything. Oh, interesting. I believe that. Okay. Because within 3 years, AI is going to be operating on people.</p>
+            <p id="s50"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=50s" target="_blank" rel="noopener" data-pagefind-ignore>0:50</a>Imagine. Like seriously. Okay. I mean, they told me that. Okay. So, they&rsquo;re moving to burn. Well, AI cannot assimilate burn victims because they&rsquo;re all different.</p>
+            <p id="s65"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=65s" target="_blank" rel="noopener" data-pagefind-ignore>1:05</a>That&rsquo;s how come they&rsquo;re doing it. And I feel horrible for my son-in-law because he&rsquo;s going to be working on burn victims. But he&rsquo;ll have a job.</p>
+            <p id="s77"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=77s" target="_blank" rel="noopener" data-pagefind-ignore>1:17</a>Yeah, that&rsquo;s true. You know, what do I say? And I&rsquo;m sorry I probably talked too long. I apologize. No, no, you still didn&rsquo;t answer my the one question I had though, right? Like how did you see like in the civil rights movement, the opinions of people being challenged? What was that discourse like in uh like in a conservative white town in, you know, North America? Like what is the public discourse actually like there? Like in that moment, what are people saying about what&rsquo;s going on?</p>
+            <p id="s104"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=104s" target="_blank" rel="noopener" data-pagefind-ignore>1:44</a>It&rsquo;s different now because of Trump. They&rsquo;re more vocal. Oh, yeah. But I&rsquo;m saying at that time, right? Do you remember what people were saying? Oh. Oh. Oh. They they would work around it,</p>
+            <p id="s114"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=114s" target="_blank" rel="noopener" data-pagefind-ignore>1:54</a>okay? But they would still subject people to like not being able to do what they should be able to do. Mhm. Okay. And they kept it quiet.</p>
+            <p id="s124"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=124s" target="_blank" rel="noopener" data-pagefind-ignore>2:04</a>Why? Like what&rsquo;s their motivation to do that? Because they&rsquo;re racist. And I I&rsquo;m sorry. I&rsquo;m I&rsquo;m just going to break it down to that. Mhm.</p>
+            <p id="s133"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=133s" target="_blank" rel="noopener" data-pagefind-ignore>2:13</a>And I never thought I would be saying this 10 years ago, but Trump proved that were a whole lot more racist than what I ever realized.</p>
+            <p id="s147"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=147s" target="_blank" rel="noopener" data-pagefind-ignore>2:27</a>I don&rsquo;t know. Cuz I I I thought like like like with Well, hell, even Bush Bush wasn&rsquo;t racist. Okay. Obama obviously. Okay. Yeah. Yeah. We&rsquo;re just racist, man.</p>
+            <p id="s163"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=163s" target="_blank" rel="noopener" data-pagefind-ignore>2:43</a>Mhm. And I I hate to say that. I hate to say that cuz I want people to be better than that. Well, how do you feel people become racist? Like how do they assume this position of like I am I am better or they are less. What do you think that&rsquo;s like culturally?</p>
+            <p id="s182"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=182s" target="_blank" rel="noopener" data-pagefind-ignore>3:02</a>I honestly think and and this is getting proven and now we&rsquo;re going to go past black. Let&rsquo;s go to Hispanic. Mhm. Okay. Within 20 25 years, Hispanics will hold the majority of the people in our country.</p>
+            <p id="s200"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=200s" target="_blank" rel="noopener" data-pagefind-ignore>3:20</a>And we&rsquo;ve got this last bastion of older white traditionalists. They don&rsquo;t want that [bleeped] to happen. And that&rsquo;s how come you got the push back. And like with Trump, Trump&rsquo;s helping to accelerate that. And that&rsquo;s how come Okay. They think, and it&rsquo;s ironic because we stole the United States</p>
+            <p id="s226"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=226s" target="_blank" rel="noopener" data-pagefind-ignore>3:46</a>in the first place, right? Yeah. I mean, Texas was Mexico for Christ&rsquo;s sake. So was Louisiana. And but people forget that. Okay. We stole the [bleeped] place anyways. That&rsquo;s simple, you know. But but you know, if you&rsquo;re a white traditionalist, you don&rsquo;t think that way.</p>
+            <p id="s250"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=250s" target="_blank" rel="noopener" data-pagefind-ignore>4:10</a>So it&rsquo;s just it&rsquo;s just a desire to maintain at least the majority of power. White power. Yeah. White power. And once you become minority, power is a lot less certain.</p>
+            <p id="s259"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=259s" target="_blank" rel="noopener" data-pagefind-ignore>4:19</a>Well, cuz you&rsquo;re outnumbered. Yeah. Yeah. Which is why they&rsquo;re fighting so hard cuz like I said, within 20 25 years, and I ain&rsquo;t talking African-Americans.</p>
+            <p id="s268"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=268s" target="_blank" rel="noopener" data-pagefind-ignore>4:28</a>Yeah. I&rsquo;m talking Hispanics. Yeah. Yeah. Yeah. Okay. And and they&rsquo;re going to be How we doing, my friend? Doing good. How are Glad to hear.</p>
+            <p id="s277"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=277s" target="_blank" rel="noopener" data-pagefind-ignore>4:37</a>Uh yeah. Yeah. That&rsquo;s how come we&rsquo;re having this big ass fight right now. Mhm. You mean in terms of ICE? You mean in terms of the whole world?</p>
+            <p id="s289"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=289s" target="_blank" rel="noopener" data-pagefind-ignore>4:49</a>Well, mainly US. Mhm. Okay. They This is the last stand for what? And I And I don&rsquo;t believe in it before I say it, but why in America?</p>
+            <p id="s301"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=301s" target="_blank" rel="noopener" data-pagefind-ignore>5:01</a>This is the last stand for white America. Yeah. Yeah. Because we are this close and these guys are realizing that and they still have power.</p>
+            <p id="s311"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=311s" target="_blank" rel="noopener" data-pagefind-ignore>5:11</a>And Yeah. Yeah. Like I said, I apologize for talking. Perfect. Okay. Now, how did you decide to come from Philly to here? I came out here for a tech conference.</p>
+            <p id="s328"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=328s" target="_blank" rel="noopener" data-pagefind-ignore>5:28</a>And you&rsquo;re just sticking around? Yeah. My car broke down in Lyman. So I I got it towed from 75 miles. 100 miles. No, no, no, no, no, no. 75 miles from my hometown.</p>
+            <p id="s339"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=339s" target="_blank" rel="noopener" data-pagefind-ignore>5:39</a>Oh, yeah. Is what I&rsquo;m saying. Okay. Yeah. Yeah. Yeah. Yeah. 76 to be exact. Yeah. Yeah. Yeah. I was 76 miles past then. Yeah. So you you broke down in [bleeped] line.</p>
+            <p id="s348"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=348s" target="_blank" rel="noopener" data-pagefind-ignore>5:48</a>Yeah. My my engine sees so I don&rsquo;t have a car anymore. And I didn&rsquo;t really I came here looking for a job. I didn&rsquo;t get a job. I got some leads. I have meeting up for a job lead tonight which is exciting. But I should be prepping. I&rsquo;m kind of procrastinating right now, but you know, this is a worthwhile moment in my journey. Honestly, it&rsquo;s like really cool to hear what you have to say. I have to say it&rsquo;s really cool.</p>
+            <p id="s366"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=366s" target="_blank" rel="noopener" data-pagefind-ignore>6:06</a>Well, I apologize if I I talk too much. No, I mean, my YouTube&rsquo;s just going to be an archive of people around the world doing this. And so, there&rsquo;s no such thing as talking too much. I think my goal is like people can go on my YouTube page and always be like, &ldquo;Oh, this a video nobody&rsquo;s ever seen.&rdquo; Like,</p>
+            <p id="s379"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=379s" target="_blank" rel="noopener" data-pagefind-ignore>6:19</a>okay, I got to ask this. Yeah. Okay. Because I&rsquo;m not even on [bleeped] Facebook. Mhm. Mhm. I&rsquo;ve never gotten a thing from Amazon. Mhm. You don&rsquo;t use AI at all? No crypto for you.</p>
+            <p id="s394"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=394s" target="_blank" rel="noopener" data-pagefind-ignore>6:34</a>Okay. No, I&rsquo;m old school. Okay. So, is that email? Every now and then. Okay. You write letters? Yeah. Yeah. Okay. Yeah, I do. I do. Okay. Which is stupid. I admit that. Compared to email.</p>
+            <p id="s409"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=409s" target="_blank" rel="noopener" data-pagefind-ignore>6:49</a>Yeah. It&rsquo;s more intimate, more personal. Well, but still stupid. Okay. But but yeah, yeah, yeah. I I&rsquo;m I&rsquo;m old school. What do I say? I ain&rsquo;t nothing wrong with that. I think I encourage you to try out the AI. I use Quad. You can use it for free, I think, without even having an account.</p>
+            <p id="s429"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=429s" target="_blank" rel="noopener" data-pagefind-ignore>7:09</a>Okay. All I know is about chat, chat, GP. Yeah, whatever. Okay. You said Claude. Oh, yeah. Yeah. Claude. It&rsquo;s like the like Claude Monae wrote some like theory of intelligence or some [bleeped] like that.</p>
+            <p id="s441"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=441s" target="_blank" rel="noopener" data-pagefind-ignore>7:21</a>As in Claude Mon. Yeah, I&rsquo;m wrong. It&rsquo;s like a something clawed. I don&rsquo;t know. I don&rsquo;t know. Okay. Cuz I love Monet. Cuz I love</p>
+            <p id="s448"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=448s" target="_blank" rel="noopener" data-pagefind-ignore>7:28</a>Monet. That&rsquo;s cool. I seen some Monae panties in Philly. That&rsquo;s where I&rsquo;m from. Philadelphia. You said that. You said that. And And hey, I&rsquo;ll do this.</p>
+            <p id="s457"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=457s" target="_blank" rel="noopener" data-pagefind-ignore>7:37</a>Okay. Like I I&rsquo;ll get high and I&rsquo;ll go to the art museums, man. And Yeah. I love that. Hey, cool thing about here. First Saturday of every month, they&rsquo;re all free. Oh, really? That&rsquo;s coming up. That&rsquo;s just coming Saturday.</p>
+            <p id="s475"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=475s" target="_blank" rel="noopener" data-pagefind-ignore>7:55</a>Yeah. Yeah. You can go to whatever the [bleeped] art museum wanting, which Well, hey, down this street, you know, you can see the asteroid. Okay. Which, by the way, horrible.</p>
+            <p id="s486"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=486s" target="_blank" rel="noopener" data-pagefind-ignore>8:06</a>Yeah. Oh, it looks like it looks like a Martian spit out something. Okay. But I will say this inside it works because of the walls because it&rsquo;s so weird.</p>
+            <p id="s499"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=499s" target="_blank" rel="noopener" data-pagefind-ignore>8:19</a>Mhm. The the art actually does stick out. Okay. Well, that&rsquo;s cool. Maybe Maybe it&rsquo;s for the inside, not the outside experience, then. Well, yeah, cuz not the outside in my opinion.</p>
+            <p id="s508"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=508s" target="_blank" rel="noopener" data-pagefind-ignore>8:28</a>Looks like a skate park. Good point. It It looks like it&rsquo;s trying to be like the the Sydney, Australia thing. Well, it&rsquo;s not that, but we can stop harping on it.</p>
+            <p id="s518"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=518s" target="_blank" rel="noopener" data-pagefind-ignore>8:38</a>No, no. And you&rsquo;re totally correct. Hey, hey, I&rsquo;ve been knocking it, right? I&rsquo;m I&rsquo;m knocking the [bleeped] out of the place. Okay. But hey, right next to that,</p>
+            <p id="s529"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=529s" target="_blank" rel="noopener" data-pagefind-ignore>8:49</a>like, do you get high at all? Yeah, for sure. Okay. I&rsquo;m out of weed, though. But yeah. Okay. Uh, right past the art museum, like the weird thing is the Clifford Still Museum.</p>
+            <p id="s541"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=541s" target="_blank" rel="noopener" data-pagefind-ignore>9:01</a>Mhm. Okay. Abstract artist, Jackson Pollock, thought he was gone. Okay. And for some reason, our mayor, who is now a US senator, he decided the mayor of Denver is a US senator at the same time.</p>
+            <p id="s556"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=556s" target="_blank" rel="noopener" data-pagefind-ignore>9:16</a>No, the former mayor is a US senator. Interesting. Yeah. He went from mayor to governor to US senator. And and to his credit, okay, dude. Okay. Like uh 98, that&rsquo;s when Obama ran against Hillary Clinton and the national convention was here. Democratic Interesting.</p>
+            <p id="s578"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=578s" target="_blank" rel="noopener" data-pagefind-ignore>9:38</a>Okay. All are homeless disappear. To his credit. That&rsquo;s a facade though now. Yeah. No. Where&rsquo;d they go? I&rsquo;m getting there. Okay. I&rsquo;m listening. I&rsquo;m getting there. Okay. Literally down this street.</p>
+            <p id="s594"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=594s" target="_blank" rel="noopener" data-pagefind-ignore>9:54</a>Uhhuh. Same one. My first place was on 17th. That is 14th. Right there. Okay. And on 16th was a church. And I go serve there like once a week. Mhm.</p>
+            <p id="s606"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=606s" target="_blank" rel="noopener" data-pagefind-ignore>10:06</a>Okay. And and Hickinlooper, that&rsquo;s the guy&rsquo;s name, he goes from mayor to governor and then all of a sudden I start seeing like all these people like getting food.</p>
+            <p id="s620"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=620s" target="_blank" rel="noopener" data-pagefind-ignore>10:20</a>Mhm. And and I and I know everybody there and tell these new people. And so I asked like one of the guys I know. I said, &ldquo;Hey, what what the fuck?&rdquo; He goes, &ldquo;Oh, well not married.&rdquo; I said, &ldquo;So,&rdquo; I said, &ldquo;So, he actually did move all the homeless out.&rdquo; He goes, &ldquo;Oh, yeah.&rdquo;</p>
+            <p id="s641"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=641s" target="_blank" rel="noopener" data-pagefind-ignore>10:41</a>Yeah. They put them on [bleeped] buses all the way to Texas. Damn. So, that it look good on TV to Texas. They just deported them from Denver.</p>
+            <p id="s653"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=653s" target="_blank" rel="noopener" data-pagefind-ignore>10:53</a>Yeah. Yeah. You know, I I would like to argue with your word, but yeah, you&rsquo;re totally correct. Okay. And Yeah. Yeah. A and then once Hickin Looper became governor</p>
+            <p id="s664"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=664s" target="_blank" rel="noopener" data-pagefind-ignore>11:04</a>instead of mayor, they moved back. The same people. When was that? You said &rsquo;98. Well, no. I&rsquo;d say 2000 by then. 2000. Okay. I&rsquo;m going to see if I can ask people and get somebody&rsquo;s take on that. Like, I&rsquo;d be really curious to get somebody&rsquo;s actual take on what that whole thing was like,</p>
+            <p id="s683"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=683s" target="_blank" rel="noopener" data-pagefind-ignore>11:23</a>if I can find anybody. Well, like I said, officially I didn&rsquo;t tell you, but go ahead. Okay. Because Yeah. And and hey, my old man like in my small town</p>
+            <p id="s695"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=695s" target="_blank" rel="noopener" data-pagefind-ignore>11:35</a>Mhm. Okay. He did the same [bleeped] Okay. Like if somebody like showed up on I7 and like they crashed like in a deserted house Mhm.</p>
+            <p id="s704"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=704s" target="_blank" rel="noopener" data-pagefind-ignore>11:44</a>Oh, they moved him 30 miles 30 miles away to Kansas. So yeah. Yeah, he did that. And I And I always thought it&rsquo;s [bleeped] Okay. Until all of a sudden all these people are moving back.</p>
+            <p id="s717"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=717s" target="_blank" rel="noopener" data-pagefind-ignore>11:57</a>Mhm. Look where they come from. That was pretty Texas. Yeah. You know, Kansas, I wasn&rsquo;t just Texas. Yeah. Yeah. Greyhound buses moved their asses out. So, the Democratic National Convention looked good.</p>
+            <p id="s733"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=733s" target="_blank" rel="noopener" data-pagefind-ignore>12:13</a>Yeah. Yeah. Yeah. So, Denver looked good. Yeah. That&rsquo;s crazy. Yeah. Kind of usher more capital here, I&rsquo;m sure. And hey, we&rsquo;re liberal here and we still did that. So God knows what happens in conservative places.</p>
+            <p id="s750"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=750s" target="_blank" rel="noopener" data-pagefind-ignore>12:30</a>Yeah, that&rsquo;s true. That never gets talked about, never gets documented, never publicized. Yeah. Well, hey, this wouldn&rsquo;t have either. I just happen to notice. Yeah. Oh, it wasn&rsquo;t a thing people knew happened. It just happened and there was nothing.</p>
+            <p id="s760"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=760s" target="_blank" rel="noopener" data-pagefind-ignore>12:40</a>And we all heard it. Okay. But no proof. No proof. Okay. And and all of a sudden like these people are moving back. So [bleeped] it&rsquo;s true. It&rsquo;s [bleeped] true.</p>
+            <p id="s779"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=779s" target="_blank" rel="noopener" data-pagefind-ignore>12:59</a>Yeah. What do I say? Like I said, I&rsquo;m sorry I talked. No, it&rsquo;s all good. So, do you have any questions you&rsquo;d ask people around the world?</p>
+            <p id="s791"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=791s" target="_blank" rel="noopener" data-pagefind-ignore>13:11</a>How do the hell you put up with us right now as America? Cuz it&rsquo;s cluster [bleeped] son. It&rsquo;s cluster [bleeped] Hell yeah. I I mean just this past weekend you had 9 million people protesting across America the no kings thing.</p>
+            <p id="s812"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=812s" target="_blank" rel="noopener" data-pagefind-ignore>13:32</a>Well that&rsquo;s a point now isn&rsquo;t it? Mhm. Absolutely. We&rsquo;re just like Israel now with BB. We&rsquo;re like all like what do we do? All we go outside and do a protest.</p>
+            <p id="s823"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=823s" target="_blank" rel="noopener" data-pagefind-ignore>13:43</a>It&rsquo;s horrible right now. It&rsquo;s horrible. I I&rsquo;m embarrassed to live here right now. And I live in a liberal city and I&rsquo;m embarrassed to live here.</p>
+            <p id="s834"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=834s" target="_blank" rel="noopener" data-pagefind-ignore>13:54</a>Mhm. It&rsquo;s wrong. It&rsquo;s just wrong. People shouldn&rsquo;t be treated that way. And and like the deportation, all this crap. Well, first of all, I said this earlier, we stole the goddamn land anyway.</p>
+            <p id="s852"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=852s" target="_blank" rel="noopener" data-pagefind-ignore>14:12</a>Mhm. What&rsquo;s wrong with people coming in? And I I I do know this number. Okay. Like even like illegal aliens paid over $86 billion in tax last year.</p>
+            <p id="s866"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=866s" target="_blank" rel="noopener" data-pagefind-ignore>14:26</a>You imagine? Cuz they&rsquo;re on the Well, they&rsquo;re on the rolls. They came over illegally, but they&rsquo;re on the rolls now. Mhm. Mhm. And so is that a bad thing? No. No. No. They sit there and talk about, &ldquo;Oh, we just want to get like the drug dealers and like the criminals out.&rdquo; Well, there&rsquo;s not that many of them. And and then and you know what? Thank God for the state of Milwaukee.</p>
+            <p id="s898"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=898s" target="_blank" rel="noopener" data-pagefind-ignore>14:58</a>How they stuck up and like literally open everybody&rsquo;s eyes cuz beforehand, well, a year before the [bleeped] happened like in uh uh you know, Wisconsin</p>
+            <p id="s910"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=910s" target="_blank" rel="noopener" data-pagefind-ignore>15:10</a>or uh Minnesota. I was thinking he went Minnesota and you said walking. Yeah. Yeah. I&rsquo;m sorry. Yeah. Uh there there was a guy in Texas got killed for no reason.</p>
+            <p id="s922"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=922s" target="_blank" rel="noopener" data-pagefind-ignore>15:22</a>And now we&rsquo;re seeing the video. Okay. But until until Minnesota like just said, &ldquo;Hey, [bleeped] this.&rdquo; Okay, we&rsquo;re going to stand up and you know what? We might get shot. And you know what? Two of them did.</p>
+            <p id="s940"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=940s" target="_blank" rel="noopener" data-pagefind-ignore>15:40</a>We wouldn&rsquo;t know. So God bless the people of Minnesota, which is why this past weekend, Jane Fonda, okay, and Bruce Springsteen singing that Minnesota song. Now they go down there to protest.</p>
+            <p id="s956"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=956s" target="_blank" rel="noopener" data-pagefind-ignore>15:56</a>Okay. But I didn&rsquo;t know Springsteen was in Minnesota. Yeah. So is Jane Fonda. I don&rsquo;t know why. Yeah. And he played his song. Okay. Which Trump hated obviously.</p>
+            <p id="s969"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=969s" target="_blank" rel="noopener" data-pagefind-ignore>16:09</a>Which song? Well, he protest song about uh the Oh, this is terrible. I can&rsquo;t remember the guy&rsquo;s name. You know, the girl got shot then the guy.</p>
+            <p id="s980"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=980s" target="_blank" rel="noopener" data-pagefind-ignore>16:20</a>Mhm. Okay. It was about the guy. And he wrote a protest song. I didn&rsquo;t know that. I didn&rsquo;t know the guy got shot. I knew the girl got shot. I didn&rsquo;t know the guy got shot.</p>
+            <p id="s989"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=989s" target="_blank" rel="noopener" data-pagefind-ignore>16:29</a>Yeah. I know. Yeah. Not doing nothing. Not doing nothing. In fact, the guy the girl they claim said she was like driving in a halfhazardly way</p>
+            <p id="s1002"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=1002s" target="_blank" rel="noopener" data-pagefind-ignore>16:42</a>and 30 seconds beforehand they film her. Oh, hey, you guys are good, you know, etc., etc. Within 30 seconds, they shoot her ass to death.</p>
+            <p id="s1011"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=1011s" target="_blank" rel="noopener" data-pagefind-ignore>16:51</a>Okay, but at least she might have been moving wrong. The guy Oh, no. No, he was on it. He was on his stomach. Okay. wasn&rsquo;t doing nothing and they put six, seven bullets in.</p>
+            <p id="s1028"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=1028s" target="_blank" rel="noopener" data-pagefind-ignore>17:08</a>Yeah. Imagine. Okay. And and thank God for the people of Minnesota. They just kept [bleeped] protesting. So good for them. Definitely not. Yeah. Once again, I&rsquo;m sorry, my friend.</p>
+            <p id="s1044"><a class="wt-at" href="https://www.youtube.com/watch?v=hT_oDk_DnMw&amp;t=1044s" target="_blank" rel="noopener" data-pagefind-ignore>17:24</a>No, I&rsquo;m sorry for holding you, but it&rsquo;s been almost an hour. Oh, well, I live up here. Okay. Yeah, it was nice. I&rsquo;m going to go talk to my cat. Okay. So you be</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+
+    <section id="after-transcript" tabindex="-1" class="wrap wt-more" aria-label="Filmed the same day">
+        <div class="country-head">
+            <h2 class="country-name">Filmed the same day.</h2>
+            <span class="country-meta">30 March 2026</span>
+        </div>
+        <ul class="rel-list">
+            <li class="rel-item">
+                <a class="rel-link" href="not-for-polish-but-for-posterity-a-walk-in-denver.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/FVUdLfuW7YE/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">Not for Polish, But for Posterity: A Walk in Denver</span>
+                        <span class="rel-why">7.45pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="the-100-dollar-weekly-video-journalism-contest-explained-denver.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/N7_cgBQEMmY/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">The $100 Weekly Video Journalism Contest Explained | Denver</span>
+                        <span class="rel-why">7.47pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="what-made-you-smile-today-exploring-denver-from-wyoming.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/kz9_bbpmBJM/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">What Made You Smile? Denver, Seen From Wyoming | Denver</span>
+                        <span class="rel-why">7.49pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="../archive/what-makes-you-smile-umerdoctor-team-from-shanghai-at-denver-dermatolo.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/T6A_5HF7VSc/mqdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">&quot;What Makes You Smile?&quot; · UmerDoctor Team From Shanghai at Denver Dermatology Conference</span>
+                        <span class="rel-why">7.55pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Transcript</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="what-made-you-smile-today-a-bookcase-and-lovecraft-denver.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/3S93_0F7EIw/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">What Made You Smile? A Bookcase and Lovecraft | Denver</span>
+                        <span class="rel-why">8.22pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="what-made-you-smile-dogs-at-cheesman-park-denver.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/mtO0yYgrXOs/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">What Made You Smile Today? Dogs at Cheesman Park | Denver</span>
+                        <span class="rel-why">8.29pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+<div><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from Denver Unfiltered.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-denver">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="a-first-interview-and-advice-back-to-newark-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/UkX8veGIl58-640.jpg" srcset="../stills/UkX8veGIl58-320.jpg 320w, ../stills/UkX8veGIl58-480.jpg 480w, ../stills/UkX8veGIl58-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:15</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · ETH Denver 2024</span>
+                    <h3 class="report-title">A first interview, and advice back to Newark.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="building-a-dao-and-making-governance-a-game-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/qcTocIWf34U-640.jpg" srcset="../stills/qcTocIWf34U-320.jpg 320w, ../stills/qcTocIWf34U-480.jpg 480w, ../stills/qcTocIWf34U-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:45</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">A content coin, and making governance a game.</h3>
+                    
+                </div>
+            </a>
+            <a href="from-america-to-denver-what-brought-you-here-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/DdXcCfCc26E-640.jpg" srcset="../stills/DdXcCfCc26E-320.jpg 320w, ../stills/DdXcCfCc26E-480.jpg 480w, ../stills/DdXcCfCc26E-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:21</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · Street</span>
+                    <h3 class="report-title">A borrowed camera, and Denver block by block.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../places.html#denver">Everything filmed in Denver</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

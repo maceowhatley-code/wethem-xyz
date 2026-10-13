@@ -1,0 +1,895 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Milan came to Day 1 of the Black Blockchain Summit 2026 at Howard University after seeing an ad on Facebook.">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/dao-for-black-liberation-and-the-petrodollar-howard">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="A DAO for Black Liberation and the Petrodollar | Howard | DC">
+    <meta property="og:description" content="Milan came to Day 1 of the Black Blockchain Summit 2026 at Howard University after seeing an ad on Facebook.">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/dao-for-black-liberation-and-the-petrodollar-howard.jpg?v=2480d94e2c">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="A DAO for Black liberation, and the petrodollar">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/dao-for-black-liberation-and-the-petrodollar-howard.jpg?v=2480d94e2c">
+    <meta property="og:url" content="https://wethem.xyz/watch/dao-for-black-liberation-and-the-petrodollar-howard">
+    <title>A DAO for Black Liberation and the Petrodollar | Howard | DC &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/dao-for-black-liberation-and-the-petrodollar-howard#video",
+  "name": "A DAO for Black Liberation and the Petrodollar | Howard | DC",
+  "description": "Milan came to Day 1 of the Black Blockchain Summit 2026 at Howard University after seeing an ad on Facebook. He is not a Howard student. He is from California, where studying politics led him into blockchain. He calls his focus sovereignty within your community, and has started his own DAO, THP, which he says stands for the healing paradigm. He describes a four-tier, education-based governance structure, a shared treasury and a currency he calls scrip, all enforced by smart contracts rather than trust. Maceo puts Kamal Hubbard's question to him: is DeFi still a liberatory technology for Black people? Milan answers with his own account of decentralized finance, the 1971 end of the gold standard, the petrodollar, and the GENIUS Act, plus a claim about Vice President JD Vance and de-dollarization, his own reading of a video he saw, not a sourced quote. He closes on real hope, on the show's closing question, and spells his name for the record.",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/I3m_z7ujJRw/mqdefault.jpg"
+  ],
+  "uploadDate": "2026-09-26T12:52:03Z",
+  "embedUrl": "https://www.youtube.com/embed/I3m_z7ujJRw",
+  "url": "https://wethem.xyz/watch/dao-for-black-liberation-and-the-petrodollar-howard",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT16M48S",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "Arriving at the Black Blockchain Summit",
+      "startOffset": 0,
+      "url": "https://wethem.xyz/watch/dao-for-black-liberation-and-the-petrodollar-howard?t=0",
+      "endOffset": 14
+    },
+    {
+      "@type": "Clip",
+      "name": "Blockchain as liberation, for everybody",
+      "startOffset": 14,
+      "url": "https://wethem.xyz/watch/dao-for-black-liberation-and-the-petrodollar-howard?t=14",
+      "endOffset": 97
+    },
+    {
+      "@type": "Clip",
+      "name": "How a DAO lets a community set its own rules",
+      "startOffset": 97,
+      "url": "https://wethem.xyz/watch/dao-for-black-liberation-and-the-petrodollar-howard?t=97",
+      "endOffset": 131
+    },
+    {
+      "@type": "Clip",
+      "name": "What is THP? The healing paradigm, his DAO",
+      "startOffset": 131,
+      "url": "https://wethem.xyz/watch/dao-for-black-liberation-and-the-petrodollar-howard?t=131",
+      "endOffset": 145
+    },
+    {
+      "@type": "Clip",
+      "name": "How THP would govern: four tiers, smart contracts",
+      "startOffset": 145,
+      "url": "https://wethem.xyz/watch/dao-for-black-liberation-and-the-petrodollar-howard?t=145",
+      "endOffset": 350
+    },
+    {
+      "@type": "Clip",
+      "name": "Kamal's question: is DeFi still liberatory?",
+      "startOffset": 350,
+      "url": "https://wethem.xyz/watch/dao-for-black-liberation-and-the-petrodollar-howard?t=350",
+      "endOffset": 414
+    },
+    {
+      "@type": "Clip",
+      "name": "DeFi as a break from the Fed and IMF, in his view",
+      "startOffset": 414,
+      "url": "https://wethem.xyz/watch/dao-for-black-liberation-and-the-petrodollar-howard?t=414",
+      "endOffset": 477
+    },
+    {
+      "@type": "Clip",
+      "name": "From gold to the petrodollar, in his account",
+      "startOffset": 477,
+      "url": "https://wethem.xyz/watch/dao-for-black-liberation-and-the-petrodollar-howard?t=477",
+      "endOffset": 665
+    },
+    {
+      "@type": "Clip",
+      "name": "Crypto lobbying and a de-dollarization claim",
+      "startOffset": 665,
+      "url": "https://wethem.xyz/watch/dao-for-black-liberation-and-the-petrodollar-howard?t=665",
+      "endOffset": 782
+    },
+    {
+      "@type": "Clip",
+      "name": "Where the real hope is: the tools are here",
+      "startOffset": 782,
+      "url": "https://wethem.xyz/watch/dao-for-black-liberation-and-the-petrodollar-howard?t=782",
+      "endOffset": 850
+    },
+    {
+      "@type": "Clip",
+      "name": "If money did not exist, what would you do?",
+      "startOffset": 850,
+      "url": "https://wethem.xyz/watch/dao-for-black-liberation-and-the-petrodollar-howard?t=850",
+      "endOffset": 952
+    },
+    {
+      "@type": "Clip",
+      "name": "The closing question, and his name spelled out",
+      "startOffset": 952,
+      "url": "https://wethem.xyz/watch/dao-for-black-liberation-and-the-petrodollar-howard?t=952",
+      "endOffset": 1008
+    }
+  ],
+  "creator": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "transcript": "All right, so what's everybody? My name is Maceo, founder of We Them Media. Where are we at today?\nShit, we at Howard University.\nFor what?\nFor the Black Blockchain Summit.\nAll right, man. And what's your name?\nMilan.\nAnd how'd you find your way here today?\nI actually seen the ad on Facebook, and it's just in alignment with my movement I'm pushing.\nSo okay, tell us about yourself and your movement.\nMy name is Milan. I'm originally from California, basically. I just got a -- it's just in me. I'm heavily interested in politics and stuff like that. So, uh, through, through my development, my self-development, I started to learn about crypto and the blockchain and how much potential it has to be able to liberate not only Black people but everybody. So I went ahead and, uh, just been studying about blockchain, crypto, and all the things that that it could do for people as far as liberation and, you know what I'm saying, freeing ourselves into a better system.\nSo, uh, what does that mean to you? Like, when you talk about liberation and this, like, what is -- yeah, what would that look like?\nThat's a good question because, you know, liberation -- well, anything, anything that's of value has a -- has its own perspective depending on who the person is, you know what I mean? But it can be shared too. But, uh, my perspective on what freedom looked like is basically sovereignty within your community. So being able to order and construct and collaborate amongst one another, that's mainly -- that's the -- that's liberation to me. You know what I mean? Not having somebody above your own governance within your own community is sovereign to me. You know what I'm saying?\nAnd how could crypto give us access to a new way of doing that?\nSo crypto within the blockchain, so anybody could start up a DAO, which is a decentralized autonomous organization. And within, uh, and then from there you can have a governance. You can set your own rules. You could, um, basically get with your community on how you want it set up. So you can have any type of government that you would like to construct on there. So, um, you could do that.\nAnd, uh, I mean, are you in any DAOs? Like, what's like a practical example?\nYeah, I mean, I started my own DAO, you know what I mean? It's THP. That's the initials. It's for -- it stands for the healing paradigm, you know what I mean?\nUm, so New DAO unlocked. Okay, talk about it. Yeah, yeah, yeah. So basically, you know, DAOs, they're like, they're like hidden villages.\nOh yeah, for sure, for sure. Especially right now because, you know, we're in the development stage of all this. So, um, yeah, basically my DAO pretty much is gonna have like 4 tiers of, uh, education-based, you know what I mean, for the governance. Uh, anybody could learn their way to the top tier. The top tiers basically would be viewed as looking like the, uh, looking like what you would consider Congress now, right? Uh, but that way when you're up there, then you're able to like put out initiatives for everybody to vote on, but everything's transparent. Everything's with smart contracts. So you ain't gotta, you ain't gotta worry about trusting the people within your thing.\nYou just gotta, you just gotta know what the smart contract is and just know it's gonna work. So, um, yeah, everything's transparent though. So So you know what you're getting into before you even get into it, you know what I mean? But all in all, it's basically pushing a more direct democracy instead of representative democracy. Because to me personally, it doesn't make sense for a smaller group amount of people to be representing a large amount, you know what I mean? So that's how corruption happens, and that's why, you know what I'm saying, we kind of in the system we is today. And it's basically a colonial, uh, empire that we under.\nSo I'm just trying to break that, you know what I mean? So yeah, pretty much, man. Yeah, I mean, But, um, yeah, it's educational tier. Um, learn your way because education is like the foundation to anything, for real, for real. That's what Fred Hampton was pushing hella tough, and I peep game on that. So, you know, I just took a lot of bits and pieces throughout history and, uh, major Black leaders especially, and just pretty much implemented in one. But, you know, as far as making systematic change, if you really want change, it got to come with the education. If not, then, you know, like Fred Hampton said, You're gonna have neocolonialism and just have the people that you, you live around oppress you rather than the next one up, next person that will, you know what I'm saying?\nSo that's basically what it is. It's basically a construct. And then also that comes with a treasury. You create your own treasury, you create your own cryptocurrency that's linked to your DAO so that your own community has its own, uh, has its own, um, currency. Currency, you know what I mean? And to even take it a step further, you know what I mean, you could, you could make it to where it's Scrip. So a little bit of game, you know what I mean. So you could go ahead and open up a purpose trust, you know what I'm saying, that's, that's dedicated to community building. And then you go ahead and that purpose trust is on, got a DAO connected to it because that's legal.\nAnd you just implement the cryptocurrency as Scrip. And then after that, you, you can make it to where the only tax within the community is just transactional tax. So every time you do transactional tax, let's say it's 10%, okay, you take 5% and then you push it to the, um, you push that into like, uh, a treasury. And then the other 5%, you could push towards minerals or resources to back up that cryptocurrency. So look, so once you do that, you know what I'm saying, the The treasury is all transparent because it's on a blockchain. You can't -- nobody even tamper with it. So everybody within the DAO, no matter what tier you want, you're able to at least vote towards where that allocates for your community.\nSo it's every time you make it a transaction, you're literally building up your cryptocurrency for your community.\nYou're hedging for everybody.\nYeah. And you're building up your community.\nYou're hedging faster than you could alone.\nYeah, for sure. So you basically able to build from the ground up with this technology. You know what I'm saying?\nSo, and build your own safety net.\nYeah, you can't really lose, you know what I'm saying?\nSo, and so do you feel like, uh, like, uh, we have this guy Kamal. I met him here actually a couple years ago. He interviewed me, and he has a book he wrote called DeFi for the Diaspora. Okay. And he writes our newsletter now for We Them Media.\nOh, that's good.\nUm, and, you know, he researches, keeps up with the macro, what's going on with crypto and policy. And a question he had for me to ask is, uh, do you feel like the promises of DeFi being a liberatory technology for us are still true? Is it still Is this still an opportunity for us? And if so, what does that mean?\nYeah, for sure. You know, basically within the same construct and implementation that I mentioned, you know what I'm saying, just now about the DAO and the governments, because that's the biggest thing. Once you, once you get some land and then you get your communities, basically find your tribe season. So, but the thing, so you basically do that, you get your tribe and you find your people that want to build with you. And that's what you do. You know what I mean? Once you get the land, the only thing you got to worry about is paying, paying the people they tax, paying Uncle Sam taxes until that's over. You know what I'm saying? But that's another story. But outside of that, you know what I mean? You just gotta, uh, yeah, that's the best way. Uh, wait, what was your question?\nBecause I think I had just like, you know, is DeFi still a big opportunity for us? And if so, how so? And then what really is decentralized finance?\nYeah, decentralized finance is basically something that's decentralized because currently the Federal Reserve is in control of the currency and that's pretty much global. So that's affecting, that's what's creating a colonialism state. That we're in right now globally and oppressing like the most richest resources because all they're doing is taking one way or another, they're taking resources from outside and basically, and basically selling them for the high. So, you know, basically doing, making it decentralized, you're breaking the chains from allowing these countries that are funded by the IMF, by the central banking system. So you're breaking off from that and basically building from your own from scratch. So you basically had that opportunity to do that along with other tribes, other decentralized, you know what I'm saying, communities. So that's basically what you have. Now the problem is, you know, they just passed the GENIUS Act because the, the, uh, US is trying to peg the dollar so that it's -- yeah.\nSo what does that mean? Huh? What does that mean, depeg the dollar?\nSo they're trying to -- no, they're trying to, they trying to, they trying to peg it to a stablecoin. So it's -- they Like right now, ever since 1971, after they, they took out the gold standard, you know, once they took away the -- you being able to turn your cash into gold, then they made it fiat currency, which means there's no value behind it. So what they did, well, after that is they used -- they pegged it. They went to Saudi Arabia, made a deal for the oil, and then they pegged their dollar to the oil.\nThat's the petrodollar.\nYeah. So once they did that, they was able to leverage that with the other countries to be able to, you know what I'm saying, oppress them, be like, hey, nah, If you don't, if you don't, if you don't use this dollar, then, you know, the resources and all this other stuff is going to affect you.\nSo that's how a lot of trade happens in dollars, right? Yeah.\nAnd that's why the American dollar is so powerful, you know what I mean? So, and that's why we in Iran right now. But --\nOh wait, so what's that about? Elaborate on that because that's like a -- you just --\nIt's a lot of game right now.\nYeah, that's why I'm here for the high context people like yourself to teach us.\nYeah, yeah, yeah, yeah. So, um, Yeah, pretty much.\nEach one teach one.\nYeah, yeah, for sure. That's how it's supposed to go, man. But yeah, so pretty much what was the question? Oh, about Iran. I can't really get too much into Iran, you know what I mean? I just know that the resources there is oil, and that's, that's the best resource that is, is modern right now for power, which is so essential to power everything, and it's the most reliant. So, and there's an abundance of it. So because of the current infrastructure is already built on that, they're gonna continuously look to, uh, expand that, you know what I mean? So they're basically copy and pasting what they've been doing for, for years.\nSo yeah, yeah, but yeah, seeing where they can go and get it and going and getting --\nthat's why we're in there. They talking about nuclear. They don't want them to have no nuclear war, man. No nuclear, uh, weapons, man. I don't see them going in China and running nothing. I don't see them going to North Korea and trying to try nothing, you know what I'm saying? So you, man, you already know that's That's not it. But yeah, man, that's pretty much, that's pretty much it, man. Yeah. But did I answer your question though?\nOh, you answered it, man. You just dropped so much game. This is the best 10 minutes of my day. I've been teaching people all day, right? But you just taught me a lot. So it's really, um, that's why I'm here, man, to let -- to give a platform to hear what Black people have to say to other Black people, right? Where we can learn. You know, I've been teaching people from what I know, but you know, you're even helping me better understand, like, that whole petrodollar stuff isn't still really stuff I have a concrete understanding of, right? Yeah. But I understand, well, that it's dangerous if we see hyperinflation and I'm not -- all I got is dollars.\nAnd you know the inflation thing, you know, the economy keeps going up and crashing, but you know, they passed the GENIUS Act because they're trying to push a stablecoin. So what they're doing is they're intentionally crashing the, the, the currency, the American dollar, so that they could, they could slowly incentivize people to buy into stablecoins. Because if the American dollar ain't shit and then they end up just having, you you have to like pay for something, but then they say, oh well, you're gonna need a stablecoin because the US dollar isn't worth nothing. Then what? You don't end up having to push it. So that's what they pushing. So that's why like we kind of on like a --\nThey turn off cash and say, now we operate on a Bitcoin-backed dollar on-chain.\nYeah, pretty much. And, and you see, and they was talking about in there, you know what I mean, like how, how they be, uh, you got all these big companies and stuff like that buying into it. And you know, lobbying is a major thing in America.\nIt's the Last year, this time, everything was, uh, uh, Stand With Crypto at Union Station. Huh? Last year at Union Station, every sign in there says Stand With Crypto.\nWait, it said Stand With Crypto?\nYeah, like, Stand With Crypto is like the big crypto lobbying platform here in the US.\nOh snap, I didn't hear about that. I gotta check into that.\nYeah, yeah, but I'm just saying they had, they had ads all over DC when I came last year for this conference. Oh yeah, so I'm saying crypto lobbying was visible everywhere.\nYeah, yeah, but see, but you know, the, the main thing about the laws with crypto is it's only set in place for the government to be able to get involved and control it some way or another. But the problem is they can't control it. So the GENIUS Act, like, they, they implemented because, oh, they're like, they were saying, oh, crypto's bad until they learned a way to be able to tax it. Oh, so now it's all the GENIUS Act.\nWe're gonna --\nwe're trying to move to crypto now. We're trying to move to -- like, it's, it's really just a money thing.\nYou heard JD Vance talk about de-dollarization?\nDe-dollarization? JD Vance? Nah.\nHe was saying that we might need to give up our reserve currency status. It might be necessary.\nGive up the current reserve status?\nOf the US dollar. He said we might need to move away from that.\nWait, who is that?\nJD Vance is the vice president.\nOh, okay.\nOf US.\nOh, okay. Got you, got you, got you, got you. Yeah, my bad.\nIt's okay. I only know because of the video. Like, I'm not gonna lie.\nHey, but I did, I did recently see about, uh, the video, the, the chairman for the, uh, Federal Reserve, and he was talking about how we gonna need a global economic reset. Yeah, stuff like that.\nSo that's what I'm saying, they're talking about some -- the time, the day is coming, Judgment Day must come. That's what it's feeling like. I'm like, what are you talking about, man? It mean --\nit's really -- I mean, when you think about it though, for real, man, I wish they sound like they would propose something, some solution that feels hopeful.\nThat would be a great reset. There's no hope in great reset.\nYeah, no, no, absolutely not. I mean, the real hope is, you know what I'm saying, people, uh, waking the hell up about what we have available And saying, okay, well, this is what we could do, and it's better than the direction that this government is sending us in. That's probably the best thing you can do is confide within yourself and your community and building with them, because the tools is there. Imagine if Malcolm X had these type of tools, or Fred Hampton had these type of tools.\nAmen.\nOr Martin Luther had these type of tools.\nAI agents. Yeah.\nOh man, AI agents, a whole different story, man. That's how I -- man, I can't wait to get mine up and running, man. Man, I ain't gonna lie, hey, it's, it's, it's a tool, man, you know what I'm saying? So what you gonna do, you just gonna, uh, let it pass you by, or you gonna step up to the, to the time that we living in and capitalize off it, you know what I'm saying?\nYeah, exactly, man. You're gonna get fucked by capitalism or capitalizing the opportunity.\nOh man, man, I'm so tired of capitalization, man, because capitalization ain't nothing but political or economic structure that's by private owners for profit, man. That don't make no sense for an economy, bro. It don't make no sense for an economy, but you know.\nSo I got 2 more things. If you could ask people around the world one question, what would you ask them?\nUm, if you, if you were to do something without money being involved, what would it be? You know what I mean? Like, if money didn't exist, what would you do? You know what I'm saying? To contribute to the people that you care about or your community, like Without just out of love, you know what I mean? And outside of that, another question for people I'd ask, I say, I don't know what's your purpose, you know what I mean? And if you ain't got one, find it, you know what I mean? Yeah, yeah, for sure.\nYeah. Why should people make the trip out here to the Black Blockchain Summit next year?\nUm, because I see it constantly growing. Um, I see it having a direction to go somewhere, and there ain't really nothing of this magnitude that's really happening in America, you know what I'm saying? But the blockchain is being more prevalent, and the more people that are starting to lead within the blockchain community and stuff like that, decentralization, It's going to continue to grow and it's going to shift. It's going to shift the paradigm. The blockchain, the blockchain is here and the future is here. It's now. Things are already changing. So it's -- this is only going to pick up. We're in the early development stage, you know what I'm saying? So you better get in where you fit in when time comes or get in now. You know what I mean?\nAnd then I told you I used to have a podcast called We Them Niggas, and I've been asking people today, we them niggas or no?\nYeah, yeah, we for sure them niggas, man.\nOkay, and elaborate on that take. Why, why you feel comfortable saying that?\nUh, about what exactly?\nAbout -- but yeah, you -- what, we them niggas resonates with you in some capacity?\nOh, for me? Yeah, exactly, man. Because I'm the man with the plan, you know what I'm saying? Shit, man, as long as I'm putting something in the air where it's fair, you know what I'm saying, then I'll take you there. But you know what I'm saying, if I -- if you hear me saying something, you know what I'm saying, If you hear me saying something, you don't pick it up, then it's your loss because there's money on the ground. You know what I'm saying? So pick up what I'm putting down. Yeah, for sure.\nAll right.\nI appreciate that, man.\nAnd I think that I think those are all my questions. So I appreciate you. You say it one more time. Milan. Milan.\nYeah.\nHow you spell it?\nM I L A N like the city Italy.\nOkay. Boom. You know what I'm saying? Yeah.",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Washington, DC",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "url": "https://wethem.xyz/places#washington-dc"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Black Blockchain Summit",
+    "url": "https://wethem.xyz/portfolio#p-black-blockchain-summit"
+  },
+  "dateCreated": "2026-09-25",
+  "mentions": [
+    {
+      "@type": "Book",
+      "name": "DeFi for the Diaspora",
+      "author": {
+        "@type": "Person",
+        "name": "Kamal Hubbard"
+      },
+      "isbn": "9781736709740",
+      "url": "https://wethem.xyz/defi-for-the-diaspora"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Black Blockchain Summit",
+      "item": "https://wethem.xyz/portfolio#p-black-blockchain-summit"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "A DAO for Black liberation, and the petrodollar",
+      "item": "https://wethem.xyz/watch/dao-for-black-liberation-and-the-petrodollar-howard"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2026-09-26" data-pf-vid="I3m_z7ujJRw" data-pf-k="{&quot;l&quot;:&quot;16:48&quot;}" data-pf-place="Washington, DC" data-pf-country="United States" data-pf-project="Black Blockchain Summit">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-black-blockchain-summit">Black Blockchain Summit</a></li>
+            <li aria-current="page">A DAO for Black liberation, and the petrodollar</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">A DAO for Black liberation, and the petrodollar.</h1>
+
+    <p class="wt-byline"><strong>Milan</strong> &middot; Washington, DC &middot; 17 min &middot; filmed <time datetime="2026-09-25">25 September 2026</time></p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="I3m_z7ujJRw" live poster="hqdefault" postersrcset="https://i.ytimg.com/vi/I3m_z7ujJRw/mqdefault.jpg 320w, https://i.ytimg.com/vi/I3m_z7ujJRw/hqdefault.jpg 480w"><iframe src="https://www.youtube-nocookie.com/embed/I3m_z7ujJRw?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="A DAO for Black liberation, and the petrodollar, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+
+    <div class="wt-prose">
+            <p>Milan came to Day 1 of the Black Blockchain Summit 2026 at Howard University after seeing an ad on Facebook. He is not a Howard student. He is from California, where studying politics led him into blockchain. He calls his focus sovereignty within your community, and has started his own DAO, THP, which he says stands for the healing paradigm. He describes a four-tier, education-based governance structure, a shared treasury and a currency he calls scrip, all enforced by smart contracts rather than trust. Maceo puts Kamal Hubbard&rsquo;s question to him: is DeFi still a liberatory technology for Black people? Milan answers with his own account of decentralized finance, the 1971 end of the gold standard, the petrodollar, and the GENIUS Act, plus a claim about Vice President JD Vance and de-dollarization, his own reading of a video he saw, not a sourced quote. He closes on real hope, on the show&rsquo;s closing question, and spells his name for the record.</p>
+            
+    </div>
+    <section class="wt-books" aria-labelledby="wt-books-h">
+        <h2 id="wt-books-h">Books mentioned.</h2>
+        <div class="pw-book wt-book">
+            <span class="pw-book-cover"><img src="../stills/books/9781736709740.jpg" alt="The cover of DeFi for the Diaspora by Kamal Hubbard" width="120" height="161" loading="lazy" decoding="async"></span>
+            <div class="pw-book-body">
+                <h3 class="pw-book-t"><a href="../defi-for-the-diaspora.html">DeFi for the Diaspora</a></h3>
+                <p class="pw-book-facts">Kamal Hubbard &middot; 2021</p>
+                <p class="pw-book-line">Maceo tells the guest about Kamal Hubbard’s book.</p>
+                <p class="pw-book-note"><a class="wt-at" data-seek="350" href="#t=350" data-pagefind-ignore>Hear it at 5:50</a> &middot; <a href="../defi-for-the-diaspora.html">See the book</a> on our site</p>
+            </div>
+        </div>
+    </section>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../places.html#washington-dc">Everything filmed in Washington, DC</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="stablecoins-explained-and-who-gets-the-yield-howard.html"><span class="wt-next-thumb wt-thumb"><img src="https://i.ytimg.com/vi/0YTn7P3fp_Y/hqdefault.jpg" srcset="https://i.ytimg.com/vi/0YTn7P3fp_Y/mqdefault.jpg 320w, https://i.ytimg.com/vi/0YTn7P3fp_Y/hqdefault.jpg 480w" sizes="300px" alt="" loading="lazy" decoding="async" width="480" height="270"><span class="wt-dur"><span class="visually-hidden">Length </span>19:07</span></span><span>Stablecoins explained, and who gets the yield.</span></a>
+        <a class="wt-rail-card" href="when-the-bank-closed-his-account-a-cpa-on-bitcoin-howard.html"><span class="wt-next-thumb wt-thumb"><img src="https://i.ytimg.com/vi/YTpzKPMIn6w/hqdefault.jpg" srcset="https://i.ytimg.com/vi/YTpzKPMIn6w/mqdefault.jpg 320w, https://i.ytimg.com/vi/YTpzKPMIn6w/hqdefault.jpg 480w" sizes="300px" alt="" loading="lazy" decoding="async" width="480" height="270"><span class="wt-dur"><span class="visually-hidden">Length </span>13:36</span></span><span>When the bank closed his account: a CPA on Bitcoin.</span></a>
+        <a class="wt-rail-card" href="old-money-vs-new-money-and-read-your-contract-howard.html"><span class="wt-next-thumb wt-thumb"><img src="https://i.ytimg.com/vi/gii2K5BmFUc/hqdefault.jpg" srcset="https://i.ytimg.com/vi/gii2K5BmFUc/mqdefault.jpg 320w, https://i.ytimg.com/vi/gii2K5BmFUc/hqdefault.jpg 480w" sizes="300px" alt="" loading="lazy" decoding="async" width="480" height="270"><span class="wt-dur"><span class="visually-hidden">Length </span>55:38</span></span><span>Old money vs new money, and read your contract.</span></a>
+        <a class="wt-rail-card" href="the-dollar-is-not-your-friend-an-author-on-power-howard.html"><span class="wt-next-thumb wt-thumb"><img src="https://i.ytimg.com/vi/u75qI1zLz6Y/hqdefault.jpg" srcset="https://i.ytimg.com/vi/u75qI1zLz6Y/mqdefault.jpg 320w, https://i.ytimg.com/vi/u75qI1zLz6Y/hqdefault.jpg 480w" sizes="300px" alt="" loading="lazy" decoding="async" width="480" height="270"><span class="wt-dur"><span class="visually-hidden">Length </span>19:29</span></span><span>The dollar is not your friend: an author on power.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c0"><a class="wt-t" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-s">Arriving at the Black Blockchain Summit</span></li>
+                <li class="wt-line" id="c14"><a class="wt-t" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=14s" target="_blank" rel="noopener" data-pagefind-ignore>0:14</a><span class="wt-s">Blockchain as liberation, for everybody</span></li>
+                <li class="wt-line" id="c97"><a class="wt-t" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=97s" target="_blank" rel="noopener" data-pagefind-ignore>1:37</a><span class="wt-s">How a DAO lets a community set its own rules</span></li>
+                <li class="wt-line" id="c131"><a class="wt-t" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=131s" target="_blank" rel="noopener" data-pagefind-ignore>2:11</a><span class="wt-s">What is THP? The healing paradigm, his DAO</span></li>
+                <li class="wt-line" id="c145"><a class="wt-t" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=145s" target="_blank" rel="noopener" data-pagefind-ignore>2:25</a><span class="wt-s">How THP would govern: four tiers, smart contracts</span></li>
+                <li class="wt-line" id="c350"><a class="wt-t" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=350s" target="_blank" rel="noopener" data-pagefind-ignore>5:50</a><span class="wt-s">Kamal&#x27;s question: is DeFi still liberatory?</span></li>
+                <li class="wt-line" id="c414"><a class="wt-t" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=414s" target="_blank" rel="noopener" data-pagefind-ignore>6:54</a><span class="wt-s">DeFi as a break from the Fed and IMF, in his view</span></li>
+                <li class="wt-line" id="c477"><a class="wt-t" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=477s" target="_blank" rel="noopener" data-pagefind-ignore>7:57</a><span class="wt-s">From gold to the petrodollar, in his account</span></li>
+                <li class="wt-line" id="c665"><a class="wt-t" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=665s" target="_blank" rel="noopener" data-pagefind-ignore>11:05</a><span class="wt-s">Crypto lobbying and a de-dollarization claim</span></li>
+                <li class="wt-line" id="c782"><a class="wt-t" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=782s" target="_blank" rel="noopener" data-pagefind-ignore>13:02</a><span class="wt-s">Where the real hope is: the tools are here</span></li>
+                <li class="wt-line" id="c850"><a class="wt-t" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=850s" target="_blank" rel="noopener" data-pagefind-ignore>14:10</a><span class="wt-s">If money did not exist, what would you do?</span></li>
+                <li class="wt-line" id="c952"><a class="wt-t" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=952s" target="_blank" rel="noopener" data-pagefind-ignore>15:52</a><span class="wt-s">The closing question, and his name spelled out</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Who speaks, by their own introduction on the tape: <a href="../guests.html#g-maceo" data-pagefind-filter="person">Maceo</a> at <a class="wt-at" data-seek="0" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a>, <a href="../guests.html#g-milan" data-pagefind-filter="person">Milan</a> at <a class="wt-at" data-seek="22" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=22s" target="_blank" rel="noopener" data-pagefind-ignore>0:22</a>. Transcribed from the original audio and corrected for names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>All right, so what&rsquo;s everybody? My name is Maceo, founder of We Them Media. Where are we at today?</p>
+            <p id="s5"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=5s" target="_blank" rel="noopener" data-pagefind-ignore>0:05</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Shit, we at Howard University.</p>
+            <p id="s7"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=7s" target="_blank" rel="noopener" data-pagefind-ignore>0:07</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>For what?</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s8"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=8s" target="_blank" rel="noopener" data-pagefind-ignore>0:08</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>For the Black Blockchain Summit.</p>
+            <p id="s10"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=10s" target="_blank" rel="noopener" data-pagefind-ignore>0:10</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>All right, man. And what&rsquo;s your name?</p>
+            <p id="s11"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=11s" target="_blank" rel="noopener" data-pagefind-ignore>0:11</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Milan.</p>
+            <p id="s12"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=12s" target="_blank" rel="noopener" data-pagefind-ignore>0:12</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>And how&rsquo;d you find your way here today?</p>
+            <p id="s14"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=14s" target="_blank" rel="noopener" data-pagefind-ignore>0:14</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>I actually seen the ad on Facebook, and it&rsquo;s just in alignment with my movement I&rsquo;m pushing.</p>
+            <p id="s20"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=20s" target="_blank" rel="noopener" data-pagefind-ignore>0:20</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>So okay, tell us about yourself and your movement.</p>
+            <p id="s22"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=22s" target="_blank" rel="noopener" data-pagefind-ignore>0:22</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>My name is Milan. I&rsquo;m originally from California, basically. I just got a -- it&rsquo;s just in me. I&rsquo;m heavily interested in politics and stuff like that. So, uh, through, through my development, my self-development, I started to learn about crypto and the blockchain and how much potential it has to be able to liberate not only Black people but everybody. So I went ahead and, uh, just been studying about blockchain, crypto, and all the things that that it could do for people as far as liberation and, you know what I&rsquo;m saying, freeing ourselves into a better system.</p>
+            <p id="s58"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=58s" target="_blank" rel="noopener" data-pagefind-ignore>0:58</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>So, uh, what does that mean to you? Like, when you talk about liberation and this, like, what is -- yeah, what would that look like?</p>
+            <p id="s63"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=63s" target="_blank" rel="noopener" data-pagefind-ignore>1:03</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>That&rsquo;s a good question because, you know, liberation -- well, anything, anything that&rsquo;s of value has a -- has its own perspective depending on who the person is, you know what I mean? But it can be shared too. But, uh, my perspective on what freedom looked like is basically sovereignty within your community. So being able to order and construct and collaborate amongst one another, that&rsquo;s mainly -- that&rsquo;s the -- that&rsquo;s liberation to me. You know what I mean? Not having somebody above your own governance within your own community is sovereign to me. You know what I&rsquo;m saying?</p>
+            <p id="s97"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=97s" target="_blank" rel="noopener" data-pagefind-ignore>1:37</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>And how could crypto give us access to a new way of doing that?</p>
+            <p id="s101"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=101s" target="_blank" rel="noopener" data-pagefind-ignore>1:41</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>So crypto within the blockchain, so anybody could start up a <a class="wt-gloss" href="../glossary.html#dao">DAO</a>, which is a decentralized autonomous organization. And within, uh, and then from there you can have a governance. You can set your own rules. You could, um, basically get with your community on how you want it set up. So you can have any type of government that you would like to construct on there. So, um, you could do that.</p>
+            <p id="s127"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=127s" target="_blank" rel="noopener" data-pagefind-ignore>2:07</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>And, uh, I mean, are you in any DAOs? Like, what&rsquo;s like a practical example?</p>
+            <p id="s131"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=131s" target="_blank" rel="noopener" data-pagefind-ignore>2:11</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Yeah, I mean, I started my own DAO, you know what I mean? It&rsquo;s THP. That&rsquo;s the initials. It&rsquo;s for -- it stands for the healing paradigm, you know what I mean?</p>
+            <p id="s139"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=139s" target="_blank" rel="noopener" data-pagefind-ignore>2:19</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Um, so New DAO unlocked. Okay, talk about it. Yeah, yeah, yeah. So basically, you know, DAOs, they&rsquo;re like, they&rsquo;re like hidden villages.</p>
+            <p id="s145"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=145s" target="_blank" rel="noopener" data-pagefind-ignore>2:25</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Oh yeah, for sure, for sure. Especially right now because, you know, we&rsquo;re in the development stage of all this. So, um, yeah, basically my DAO pretty much is gonna have like 4 tiers of, uh, education-based, you know what I mean, for the governance. Uh, anybody could learn their way to the top tier. The top tiers basically would be viewed as looking like the, uh, looking like what you would consider Congress now, right? Uh, but that way when you&rsquo;re up there, then you&rsquo;re able to like put out initiatives for everybody to vote on, but everything&rsquo;s transparent. Everything&rsquo;s with smart contracts. So you ain&rsquo;t gotta, you ain&rsquo;t gotta worry about trusting the people within your thing.</p>
+            <p id="s181"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=181s" target="_blank" rel="noopener" data-pagefind-ignore>3:01</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>You just gotta, you just gotta know what the smart contract is and just know it&rsquo;s gonna work. So, um, yeah, everything&rsquo;s transparent though. So So you know what you&rsquo;re getting into before you even get into it, you know what I mean? But all in all, it&rsquo;s basically pushing a more direct democracy instead of representative democracy. Because to me personally, it doesn&rsquo;t make sense for a smaller group amount of people to be representing a large amount, you know what I mean? So that&rsquo;s how corruption happens, and that&rsquo;s why, you know what I&rsquo;m saying, we kind of in the system we is today. And it&rsquo;s basically a colonial, uh, empire that we under.</p>
+            <p id="s210"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=210s" target="_blank" rel="noopener" data-pagefind-ignore>3:30</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>So I&rsquo;m just trying to break that, you know what I mean? So yeah, pretty much, man. Yeah, I mean, But, um, yeah, it&rsquo;s educational tier. Um, learn your way because education is like the foundation to anything, for real, for real. That&rsquo;s what Fred Hampton was pushing hella tough, and I peep game on that. So, you know, I just took a lot of bits and pieces throughout history and, uh, major Black leaders especially, and just pretty much implemented in one. But, you know, as far as making systematic change, if you really want change, it got to come with the education. If not, then, you know, like Fred Hampton said, You&rsquo;re gonna have neocolonialism and just have the people that you, you live around oppress you rather than the next one up, next person that will, you know what I&rsquo;m saying?</p>
+            <p id="s251"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=251s" target="_blank" rel="noopener" data-pagefind-ignore>4:11</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>So that&rsquo;s basically what it is. It&rsquo;s basically a construct. And then also that comes with a treasury. You create your own treasury, you create your own cryptocurrency that&rsquo;s linked to your DAO so that your own community has its own, uh, has its own, um, currency. Currency, you know what I mean? And to even take it a step further, you know what I mean, you could, you could make it to where it&rsquo;s Scrip. So a little bit of game, you know what I mean. So you could go ahead and open up a purpose trust, you know what I&rsquo;m saying, that&rsquo;s, that&rsquo;s dedicated to community building. And then you go ahead and that purpose trust is on, got a DAO connected to it because that&rsquo;s legal.</p>
+            <p id="s289"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=289s" target="_blank" rel="noopener" data-pagefind-ignore>4:49</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>And you just implement the cryptocurrency as Scrip. And then after that, you, you can make it to where the only tax within the community is just transactional tax. So every time you do transactional tax, let&rsquo;s say it&rsquo;s 10%, okay, you take 5% and then you push it to the, um, you push that into like, uh, a treasury. And then the other 5%, you could push towards minerals or resources to back up that cryptocurrency. So look, so once you do that, you know what I&rsquo;m saying, the The treasury is all transparent because it&rsquo;s on a blockchain. You can&rsquo;t -- nobody even tamper with it. So everybody within the DAO, no matter what tier you want, you&rsquo;re able to at least vote towards where that allocates for your community.</p>
+            <p id="s333"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=333s" target="_blank" rel="noopener" data-pagefind-ignore>5:33</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>So it&rsquo;s every time you make it a transaction, you&rsquo;re literally building up your cryptocurrency for your community.</p>
+            <p id="s337"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=337s" target="_blank" rel="noopener" data-pagefind-ignore>5:37</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>You&rsquo;re hedging for everybody.</p>
+            <p id="s338"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=338s" target="_blank" rel="noopener" data-pagefind-ignore>5:38</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Yeah. And you&rsquo;re building up your community.</p>
+            <p id="s340"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=340s" target="_blank" rel="noopener" data-pagefind-ignore>5:40</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>You&rsquo;re hedging faster than you could alone.</p>
+            <p id="s342"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=342s" target="_blank" rel="noopener" data-pagefind-ignore>5:42</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Yeah, for sure. So you basically able to build from the ground up with this technology. You know what I&rsquo;m saying?</p>
+            <p id="s346"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=346s" target="_blank" rel="noopener" data-pagefind-ignore>5:46</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>So, and build your own safety net.</p>
+            <p id="s347"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=347s" target="_blank" rel="noopener" data-pagefind-ignore>5:47</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Yeah, you can&rsquo;t really lose, you know what I&rsquo;m saying?</p>
+            <p id="s350"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=350s" target="_blank" rel="noopener" data-pagefind-ignore>5:50</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>So, and so do you feel like, uh, like, uh, we have this guy Kamal. I met him here actually a couple years ago. He interviewed me, and he has a book he wrote called DeFi for the Diaspora. Okay. And he writes our newsletter now for We Them Media.</p>
+            <p id="s359"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=359s" target="_blank" rel="noopener" data-pagefind-ignore>5:59</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Oh, that&rsquo;s good.</p>
+            <p id="s360"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=360s" target="_blank" rel="noopener" data-pagefind-ignore>6:00</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Um, and, you know, he researches, keeps up with the macro, what&rsquo;s going on with crypto and policy. And a question he had for me to ask is, uh, do you feel like the promises of DeFi being a liberatory technology for us are still true? Is it still Is this still an opportunity for us? And if so, what does that mean?</p>
+            <p id="s374"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=374s" target="_blank" rel="noopener" data-pagefind-ignore>6:14</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Yeah, for sure. You know, basically within the same construct and implementation that I mentioned, you know what I&rsquo;m saying, just now about the DAO and the governments, because that&rsquo;s the biggest thing. Once you, once you get some land and then you get your communities, basically find your tribe season. So, but the thing, so you basically do that, you get your tribe and you find your people that want to build with you. And that&rsquo;s what you do. You know what I mean? Once you get the land, the only thing you got to worry about is paying, paying the people they tax, paying Uncle Sam taxes until that&rsquo;s over. You know what I&rsquo;m saying? But that&rsquo;s another story. But outside of that, you know what I mean? You just gotta, uh, yeah, that&rsquo;s the best way. Uh, wait, what was your question?</p>
+            <p id="s408"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=408s" target="_blank" rel="noopener" data-pagefind-ignore>6:48</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Because I think I had just like, you know, is DeFi still a big opportunity for us? And if so, how so? And then what really is decentralized finance?</p>
+            <p id="s414"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=414s" target="_blank" rel="noopener" data-pagefind-ignore>6:54</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Yeah, decentralized finance is basically something that&rsquo;s decentralized because currently the Federal Reserve is in control of the currency and that&rsquo;s pretty much global. So that&rsquo;s affecting, that&rsquo;s what&rsquo;s creating a colonialism state. That we&rsquo;re in right now globally and oppressing like the most richest resources because all they&rsquo;re doing is taking one way or another, they&rsquo;re taking resources from outside and basically, and basically selling them for the high. So, you know, basically doing, making it decentralized, you&rsquo;re breaking the chains from allowing these countries that are funded by the IMF, by the central banking system. So you&rsquo;re breaking off from that and basically building from your own from scratch. So you basically had that opportunity to do that along with other tribes, other decentralized, you know what I&rsquo;m saying, communities. So that&rsquo;s basically what you have. Now the problem is, you know, they just passed the GENIUS Act because the, the, uh, US is trying to peg the dollar so that it&rsquo;s -- yeah.</p>
+            <p id="s474"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=474s" target="_blank" rel="noopener" data-pagefind-ignore>7:54</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>So what does that mean? Huh? What does that mean, depeg the dollar?</p>
+            <p id="s477"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=477s" target="_blank" rel="noopener" data-pagefind-ignore>7:57</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>So they&rsquo;re trying to -- no, they&rsquo;re trying to, they trying to, they trying to peg it to a stablecoin. So it&rsquo;s -- they Like right now, ever since 1971, after they, they took out the gold standard, you know, once they took away the -- you being able to turn your cash into gold, then they made it fiat currency, which means there&rsquo;s no value behind it. So what they did, well, after that is they used -- they pegged it. They went to Saudi Arabia, made a deal for the oil, and then they pegged their dollar to the oil.</p>
+            <p id="s504"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=504s" target="_blank" rel="noopener" data-pagefind-ignore>8:24</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>That&rsquo;s the petrodollar.</p>
+            <p id="s505"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=505s" target="_blank" rel="noopener" data-pagefind-ignore>8:25</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Yeah. So once they did that, they was able to leverage that with the other countries to be able to, you know what I&rsquo;m saying, oppress them, be like, hey, nah, If you don&rsquo;t, if you don&rsquo;t, if you don&rsquo;t use this dollar, then, you know, the resources and all this other stuff is going to affect you.</p>
+            <p id="s518"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=518s" target="_blank" rel="noopener" data-pagefind-ignore>8:38</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>So that&rsquo;s how a lot of trade happens in dollars, right? Yeah.</p>
+            <p id="s521"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=521s" target="_blank" rel="noopener" data-pagefind-ignore>8:41</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>And that&rsquo;s why the American dollar is so powerful, you know what I mean? So, and that&rsquo;s why we in Iran right now. But --</p>
+            <p id="s527"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=527s" target="_blank" rel="noopener" data-pagefind-ignore>8:47</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Oh wait, so what&rsquo;s that about? Elaborate on that because that&rsquo;s like a -- you just --</p>
+            <p id="s530"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=530s" target="_blank" rel="noopener" data-pagefind-ignore>8:50</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>It&rsquo;s a lot of game right now.</p>
+            <p id="s532"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=532s" target="_blank" rel="noopener" data-pagefind-ignore>8:52</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Yeah, that&rsquo;s why I&rsquo;m here for the high context people like yourself to teach us.</p>
+            <p id="s535"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=535s" target="_blank" rel="noopener" data-pagefind-ignore>8:55</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Yeah, yeah, yeah, yeah. So, um, Yeah, pretty much.</p>
+            <p id="s539"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=539s" target="_blank" rel="noopener" data-pagefind-ignore>8:59</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Each one teach one.</p>
+            <p id="s540"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=540s" target="_blank" rel="noopener" data-pagefind-ignore>9:00</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Yeah, yeah, for sure. That&rsquo;s how it&rsquo;s supposed to go, man. But yeah, so pretty much what was the question? Oh, about Iran. I can&rsquo;t really get too much into Iran, you know what I mean? I just know that the resources there is oil, and that&rsquo;s, that&rsquo;s the best resource that is, is modern right now for power, which is so essential to power everything, and it&rsquo;s the most reliant. So, and there&rsquo;s an abundance of it. So because of the current infrastructure is already built on that, they&rsquo;re gonna continuously look to, uh, expand that, you know what I mean? So they&rsquo;re basically copy and pasting what they&rsquo;ve been doing for, for years.</p>
+            <p id="s581"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=581s" target="_blank" rel="noopener" data-pagefind-ignore>9:41</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>So yeah, yeah, but yeah, seeing where they can go and get it and going and getting --</p>
+            <p id="s583"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=583s" target="_blank" rel="noopener" data-pagefind-ignore>9:43</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>that&rsquo;s why we&rsquo;re in there. They talking about nuclear. They don&rsquo;t want them to have no nuclear war, man. No nuclear, uh, weapons, man. I don&rsquo;t see them going in China and running nothing. I don&rsquo;t see them going to North Korea and trying to try nothing, you know what I&rsquo;m saying? So you, man, you already know that&rsquo;s That&rsquo;s not it. But yeah, man, that&rsquo;s pretty much, that&rsquo;s pretty much it, man. Yeah. But did I answer your question though?</p>
+            <p id="s603"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=603s" target="_blank" rel="noopener" data-pagefind-ignore>10:03</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Oh, you answered it, man. You just dropped so much game. This is the best 10 minutes of my day. I&rsquo;ve been teaching people all day, right? But you just taught me a lot. So it&rsquo;s really, um, that&rsquo;s why I&rsquo;m here, man, to let -- to give a platform to hear what Black people have to say to other Black people, right? Where we can learn. You know, I&rsquo;ve been teaching people from what I know, but you know, you&rsquo;re even helping me better understand, like, that whole petrodollar stuff isn&rsquo;t still really stuff I have a concrete understanding of, right? Yeah. But I understand, well, that it&rsquo;s dangerous if we see hyperinflation and I&rsquo;m not -- all I got is dollars.</p>
+            <p id="s629"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=629s" target="_blank" rel="noopener" data-pagefind-ignore>10:29</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>And you know the inflation thing, you know, the economy keeps going up and crashing, but you know, they passed the GENIUS Act because they&rsquo;re trying to push a stablecoin. So what they&rsquo;re doing is they&rsquo;re intentionally crashing the, the, the currency, the American dollar, so that they could, they could slowly incentivize people to buy into stablecoins. Because if the American dollar ain&rsquo;t shit and then they end up just having, you you have to like pay for something, but then they say, oh well, you&rsquo;re gonna need a stablecoin because the US dollar isn&rsquo;t worth nothing. Then what? You don&rsquo;t end up having to push it. So that&rsquo;s what they pushing. So that&rsquo;s why like we kind of on like a --</p>
+            <p id="s665"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=665s" target="_blank" rel="noopener" data-pagefind-ignore>11:05</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>They turn off cash and say, now we operate on a Bitcoin-backed dollar on-chain.</p>
+            <p id="s669"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=669s" target="_blank" rel="noopener" data-pagefind-ignore>11:09</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Yeah, pretty much. And, and you see, and they was talking about in there, you know what I mean, like how, how they be, uh, you got all these big companies and stuff like that buying into it. And you know, lobbying is a major thing in America.</p>
+            <p id="s681"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=681s" target="_blank" rel="noopener" data-pagefind-ignore>11:21</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>It&rsquo;s the Last year, this time, everything was, uh, uh, Stand With Crypto at Union Station. Huh? Last year at Union Station, every sign in there says Stand With Crypto.</p>
+            <p id="s689"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=689s" target="_blank" rel="noopener" data-pagefind-ignore>11:29</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Wait, it said Stand With Crypto?</p>
+            <p id="s691"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=691s" target="_blank" rel="noopener" data-pagefind-ignore>11:31</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Yeah, like, Stand With Crypto is like the big crypto lobbying platform here in the US.</p>
+            <p id="s695"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=695s" target="_blank" rel="noopener" data-pagefind-ignore>11:35</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Oh snap, I didn&rsquo;t hear about that. I gotta check into that.</p>
+            <p id="s698"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=698s" target="_blank" rel="noopener" data-pagefind-ignore>11:38</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Yeah, yeah, but I&rsquo;m just saying they had, they had ads all over DC when I came last year for this conference. Oh yeah, so I&rsquo;m saying crypto lobbying was visible everywhere.</p>
+            <p id="s705"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=705s" target="_blank" rel="noopener" data-pagefind-ignore>11:45</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Yeah, yeah, but see, but you know, the, the main thing about the laws with crypto is it&rsquo;s only set in place for the government to be able to get involved and control it some way or another. But the problem is they can&rsquo;t control it. So the GENIUS Act, like, they, they implemented because, oh, they&rsquo;re like, they were saying, oh, crypto&rsquo;s bad until they learned a way to be able to tax it. Oh, so now it&rsquo;s all the GENIUS Act.</p>
+            <p id="s727"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=727s" target="_blank" rel="noopener" data-pagefind-ignore>12:07</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>We&rsquo;re gonna --</p>
+            <p id="s728"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=728s" target="_blank" rel="noopener" data-pagefind-ignore>12:08</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>we&rsquo;re trying to move to crypto now. We&rsquo;re trying to move to -- like, it&rsquo;s, it&rsquo;s really just a money thing.</p>
+            <p id="s732"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=732s" target="_blank" rel="noopener" data-pagefind-ignore>12:12</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>You heard JD Vance talk about de-dollarization?</p>
+            <p id="s736"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=736s" target="_blank" rel="noopener" data-pagefind-ignore>12:16</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>De-dollarization? JD Vance? Nah.</p>
+            <p id="s738"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=738s" target="_blank" rel="noopener" data-pagefind-ignore>12:18</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>He was saying that we might need to give up our reserve currency status. It might be necessary.</p>
+            <p id="s742"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=742s" target="_blank" rel="noopener" data-pagefind-ignore>12:22</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Give up the current reserve status?</p>
+            <p id="s745"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=745s" target="_blank" rel="noopener" data-pagefind-ignore>12:25</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Of the US dollar. He said we might need to move away from that.</p>
+            <p id="s747"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=747s" target="_blank" rel="noopener" data-pagefind-ignore>12:27</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Wait, who is that?</p>
+            <p id="s748"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=748s" target="_blank" rel="noopener" data-pagefind-ignore>12:28</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>JD Vance is the vice president.</p>
+            <p id="s749"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=749s" target="_blank" rel="noopener" data-pagefind-ignore>12:29</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Oh, okay.</p>
+            <p id="s750"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=750s" target="_blank" rel="noopener" data-pagefind-ignore>12:30</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Of US.</p>
+            <p id="s751"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=751s" target="_blank" rel="noopener" data-pagefind-ignore>12:31</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Oh, okay. Got you, got you, got you, got you. Yeah, my bad.</p>
+            <p id="s754"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=754s" target="_blank" rel="noopener" data-pagefind-ignore>12:34</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>It&rsquo;s okay. I only know because of the video. Like, I&rsquo;m not gonna lie.</p>
+            <p id="s758"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=758s" target="_blank" rel="noopener" data-pagefind-ignore>12:38</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Hey, but I did, I did recently see about, uh, the video, the, the chairman for the, uh, Federal Reserve, and he was talking about how we gonna need a global economic reset. Yeah, stuff like that.</p>
+            <p id="s768"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=768s" target="_blank" rel="noopener" data-pagefind-ignore>12:48</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>So that&rsquo;s what I&rsquo;m saying, they&rsquo;re talking about some -- the time, the day is coming, Judgment Day must come. That&rsquo;s what it&rsquo;s feeling like. I&rsquo;m like, what are you talking about, man? It mean --</p>
+            <p id="s776"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=776s" target="_blank" rel="noopener" data-pagefind-ignore>12:56</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>it&rsquo;s really -- I mean, when you think about it though, for real, man, I wish they sound like they would propose something, some solution that feels hopeful.</p>
+            <p id="s782"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=782s" target="_blank" rel="noopener" data-pagefind-ignore>13:02</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>That would be a great reset. There&rsquo;s no hope in great reset.</p>
+            <p id="s785"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=785s" target="_blank" rel="noopener" data-pagefind-ignore>13:05</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Yeah, no, no, absolutely not. I mean, the real hope is, you know what I&rsquo;m saying, people, uh, waking the hell up about what we have available And saying, okay, well, this is what we could do, and it&rsquo;s better than the direction that this government is sending us in. That&rsquo;s probably the best thing you can do is confide within yourself and your community and building with them, because the tools is there. Imagine if Malcolm X had these type of tools, or Fred Hampton had these type of tools.</p>
+            <p id="s810"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=810s" target="_blank" rel="noopener" data-pagefind-ignore>13:30</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Amen.</p>
+            <p id="s811"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=811s" target="_blank" rel="noopener" data-pagefind-ignore>13:31</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Or Martin Luther had these type of tools.</p>
+            <p id="s812"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=812s" target="_blank" rel="noopener" data-pagefind-ignore>13:32</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>AI agents. Yeah.</p>
+            <p id="s814"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=814s" target="_blank" rel="noopener" data-pagefind-ignore>13:34</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Oh man, AI agents, a whole different story, man. That&rsquo;s how I -- man, I can&rsquo;t wait to get mine up and running, man. Man, I ain&rsquo;t gonna lie, hey, it&rsquo;s, it&rsquo;s, it&rsquo;s a tool, man, you know what I&rsquo;m saying? So what you gonna do, you just gonna, uh, let it pass you by, or you gonna step up to the, to the time that we living in and capitalize off it, you know what I&rsquo;m saying?</p>
+            <p id="s831"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=831s" target="_blank" rel="noopener" data-pagefind-ignore>13:51</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Yeah, exactly, man. You&rsquo;re gonna get fucked by capitalism or capitalizing the opportunity.</p>
+            <p id="s834"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=834s" target="_blank" rel="noopener" data-pagefind-ignore>13:54</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Oh man, man, I&rsquo;m so tired of capitalization, man, because capitalization ain&rsquo;t nothing but political or economic structure that&rsquo;s by private owners for profit, man. That don&rsquo;t make no sense for an economy, bro. It don&rsquo;t make no sense for an economy, but you know.</p>
+            <p id="s850"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=850s" target="_blank" rel="noopener" data-pagefind-ignore>14:10</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>So I got 2 more things. If you could ask people around the world one question, what would you ask them?</p>
+            <p id="s854"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=854s" target="_blank" rel="noopener" data-pagefind-ignore>14:14</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Um, if you, if you were to do something without money being involved, what would it be? You know what I mean? Like, if money didn&rsquo;t exist, what would you do? You know what I&rsquo;m saying? To contribute to the people that you care about or your community, like Without just out of love, you know what I mean? And outside of that, another question for people I&rsquo;d ask, I say, I don&rsquo;t know what&rsquo;s your purpose, you know what I mean? And if you ain&rsquo;t got one, find it, you know what I mean? Yeah, yeah, for sure.</p>
+            <p id="s900"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=900s" target="_blank" rel="noopener" data-pagefind-ignore>15:00</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Yeah. Why should people make the trip out here to the Black Blockchain Summit next year?</p>
+            <p id="s904"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=904s" target="_blank" rel="noopener" data-pagefind-ignore>15:04</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Um, because I see it constantly growing. Um, I see it having a direction to go somewhere, and there ain&rsquo;t really nothing of this magnitude that&rsquo;s really happening in America, you know what I&rsquo;m saying? But the blockchain is being more prevalent, and the more people that are starting to lead within the blockchain community and stuff like that, decentralization, It&rsquo;s going to continue to grow and it&rsquo;s going to shift. It&rsquo;s going to shift the paradigm. The blockchain, the blockchain is here and the future is here. It&rsquo;s now. Things are already changing. So it&rsquo;s -- this is only going to pick up. We&rsquo;re in the early development stage, you know what I&rsquo;m saying? So you better get in where you fit in when time comes or get in now. You know what I mean?</p>
+            <p id="s952"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=952s" target="_blank" rel="noopener" data-pagefind-ignore>15:52</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>And then I told you I used to have a podcast called We Them Niggas, and I&rsquo;ve been asking people today, we them niggas or no?</p>
+            <p id="s958"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=958s" target="_blank" rel="noopener" data-pagefind-ignore>15:58</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Yeah, yeah, we for sure them niggas, man.</p>
+            <p id="s962"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=962s" target="_blank" rel="noopener" data-pagefind-ignore>16:02</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Okay, and elaborate on that take. Why, why you feel comfortable saying that?</p>
+            <p id="s965"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=965s" target="_blank" rel="noopener" data-pagefind-ignore>16:05</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Uh, about what exactly?</p>
+            <p id="s968"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=968s" target="_blank" rel="noopener" data-pagefind-ignore>16:08</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>About -- but yeah, you -- what, we them niggas resonates with you in some capacity?</p>
+            <p id="s971"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=971s" target="_blank" rel="noopener" data-pagefind-ignore>16:11</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Oh, for me? Yeah, exactly, man. Because I&rsquo;m the man with the plan, you know what I&rsquo;m saying? Shit, man, as long as I&rsquo;m putting something in the air where it&rsquo;s fair, you know what I&rsquo;m saying, then I&rsquo;ll take you there. But you know what I&rsquo;m saying, if I -- if you hear me saying something, you know what I&rsquo;m saying, If you hear me saying something, you don&rsquo;t pick it up, then it&rsquo;s your loss because there&rsquo;s money on the ground. You know what I&rsquo;m saying? So pick up what I&rsquo;m putting down. Yeah, for sure.</p>
+            <p id="s993"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=993s" target="_blank" rel="noopener" data-pagefind-ignore>16:33</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>All right.</p>
+            <p id="s993-2"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=993s" target="_blank" rel="noopener" data-pagefind-ignore>16:33</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>I appreciate that, man.</p>
+            <p id="s995"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=995s" target="_blank" rel="noopener" data-pagefind-ignore>16:35</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>And I think that I think those are all my questions. So I appreciate you. You say it one more time. Milan. Milan.</p>
+            <p id="s1002"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=1002s" target="_blank" rel="noopener" data-pagefind-ignore>16:42</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>Yeah.</p>
+            <p id="s1002-2"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=1002s" target="_blank" rel="noopener" data-pagefind-ignore>16:42</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>How you spell it?</p>
+            <p id="s1003"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=1003s" target="_blank" rel="noopener" data-pagefind-ignore>16:43</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Milan at 0:22" data-pagefind-ignore>Milan</span>M I L A N like the city Italy.</p>
+            <p id="s1006"><a class="wt-at" href="https://www.youtube.com/watch?v=I3m_z7ujJRw&amp;t=1006s" target="_blank" rel="noopener" data-pagefind-ignore>16:46</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Okay. Boom. You know what I&rsquo;m saying? Yeah.</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+<div id="after-transcript" tabindex="-1"><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from the Black Blockchain Summit.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-black-blockchain-summit">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="scam-man-ricasso-on-crypto-and-inflation-howard.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="https://i.ytimg.com/vi/UP0J8UFdIMU/hqdefault.jpg" srcset="https://i.ytimg.com/vi/UP0J8UFdIMU/mqdefault.jpg 320w, https://i.ytimg.com/vi/UP0J8UFdIMU/hqdefault.jpg 480w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="480" height="270"><span class="wt-dur"><span class="visually-hidden">Length </span>12:48</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Washington, DC · Black Blockchain Summit 2026 · 13 min</span>
+                    <h3 class="report-title">Scam, man: Ricasso on crypto and inflation.</h3>
+                    
+                </div>
+            </a>
+            <a href="a-computer-science-student-learns-bitcoin-howard.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="https://i.ytimg.com/vi/FECEC0yVugw/hqdefault.jpg" srcset="https://i.ytimg.com/vi/FECEC0yVugw/mqdefault.jpg 320w, https://i.ytimg.com/vi/FECEC0yVugw/hqdefault.jpg 480w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="480" height="270"><span class="wt-dur"><span class="visually-hidden">Length </span>5:49</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Washington, DC · Black Blockchain Summit 2026 · 6 min</span>
+                    <h3 class="report-title">A computer science student learns Bitcoin.</h3>
+                    
+                </div>
+            </a>
+            <a href="ingrid-sturgis-crypto-inflation-trust-howard.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="https://i.ytimg.com/vi/g8Yzm2pjNho/hqdefault.jpg" srcset="https://i.ytimg.com/vi/g8Yzm2pjNho/mqdefault.jpg 320w, https://i.ytimg.com/vi/g8Yzm2pjNho/hqdefault.jpg 480w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="480" height="270"><span class="wt-dur"><span class="visually-hidden">Length </span>16:23</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Washington, DC · Black Blockchain Summit 2026 · 16 min</span>
+                    <h3 class="report-title">A journalism professor on crypto and inflation.</h3>
+                    
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../places.html#washington-dc">Everything filmed in Washington, DC</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

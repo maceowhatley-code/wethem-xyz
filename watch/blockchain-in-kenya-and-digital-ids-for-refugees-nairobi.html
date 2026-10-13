@@ -1,0 +1,851 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Twenty-three minutes in Nairobi, filmed at a hackathon called Hack the Dot, with a Kenyan developer building identity software.">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/blockchain-in-kenya-and-digital-ids-for-refugees-nairobi">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="Blockchain in Kenya and Digital IDs for Refugees">
+    <meta property="og:description" content="Twenty-three minutes in Nairobi, filmed at a hackathon called Hack the Dot, with a Kenyan developer building identity software.">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/blockchain-in-kenya-and-digital-ids-for-refugees-nairobi.jpg?v=1fd0f594a8">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="A developer building digital IDs for people without papers">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/blockchain-in-kenya-and-digital-ids-for-refugees-nairobi.jpg?v=1fd0f594a8">
+    <meta property="og:url" content="https://wethem.xyz/watch/blockchain-in-kenya-and-digital-ids-for-refugees-nairobi">
+    <title>Blockchain in Kenya and Digital IDs for Refugees &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/blockchain-in-kenya-and-digital-ids-for-refugees-nairobi#video",
+  "name": "Blockchain in Kenya and Digital IDs for Refugees",
+  "description": "Twenty-three minutes in Nairobi, filmed at a hackathon called Hack the Dot, with a Kenyan developer building identity software. The batteries almost ran out before it started, and the first question is the simple one: how do people in Kenya actually see this technology. James Wasonga answers it in two halves. There is the technology, which he describes as \"a revolutionary technology meaning the upcoming technology whereby people are diving into blockchain as a whole\", and then there is the way most people actually arrive at it, which is not through the technology at all. \"People see it as a money like I want to have some Ethereum or can I be a trader and I get some Bitcoin?\" He is bullish in a way the page will not editorialise about: he thinks adoption raises a country, \"any country that employs economy employs Bitcoin means the economy automatically gets to shoot up\", and he sets that against what Kenya's economy actually runs on. \"the gross domestic product in Kenya like it's mainly from the agricultural sector\". The main export is tea. So the useful question, and he gets to it himself, is what the technology does for the sector that already exists: \"several applications have been developed to enable farmers to be able to get paid in Bitcoin\", and a payment between two people that never touches fiat, \"we just send Bitcoin and you get transacted directly\". Asked about the region, he goes somewhere unexpected. He says he has covered almost all of East Africa and has spent the last four or five months in Ethiopia, and what he wants to say about it is about movement and peace rather than markets. \"In East Africa you move without any border\". And: \"So East Africa we say no war, no violence.\" The centre of the tape is his project. \"I'm building an application in my country, I mean, in sub-Saharan Africa, and I do like to generate digital IDs.\" The problem he is aiming at is documentation: refugee and displaced populations who cannot prove who they are, and therefore cannot get anything from an institution, because \"you must have a valid identification for that specific country\". His design takes biometrics and whatever document a person carries from the country they came from, and out of it, \"The certificate itself will be able to generate a digital ID for him. A unique ID\". He does not want to run it alone: \"I'm planning to integrate the application with government websites and government sites through partnership.\" It is not meant to stop at the hackathon either. \"Not totally a prototype mode but a live mode.\" Two definitions close the piece out, both asked plainly and answered plainly. A blockchain: \"let me just say it's a decentralized secure and transparent web 2 itself. So, it's an improved web 2.\" A meme coin: the easiest coin for a developer to make, \"a coin with the least lowest value\", where \"within 0.1 seconds its value can drop to zero you lose everything\", most of them built on Solana, \"the mother of meme coins\". The last stretch is mostly the interviewer, on creators, extraction and what infrastructure artists do not have. Wasonga's own sign-off is shorter. \"Make it simple like begin and make it simple and stupid\", and then, twice: \"just keep building\".",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/hIS-Q0EEXPs/maxresdefault.jpg"
+  ],
+  "uploadDate": "2026-04-17T22:09:31Z",
+  "embedUrl": "https://www.youtube.com/embed/hIS-Q0EEXPs",
+  "url": "https://wethem.xyz/watch/blockchain-in-kenya-and-digital-ids-for-refugees-nairobi",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT23M13S",
+  "inLanguage": "en-US",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "How people in Kenya see blockchain",
+      "startOffset": 0,
+      "url": "https://wethem.xyz/watch/blockchain-in-kenya-and-digital-ids-for-refugees-nairobi?t=0",
+      "endOffset": 72
+    },
+    {
+      "@type": "Clip",
+      "name": "Why most Kenyans see crypto as money first",
+      "startOffset": 72,
+      "url": "https://wethem.xyz/watch/blockchain-in-kenya-and-digital-ids-for-refugees-nairobi?t=72",
+      "endOffset": 143
+    },
+    {
+      "@type": "Clip",
+      "name": "Does Bitcoin make an economy grow? His view",
+      "startOffset": 143,
+      "url": "https://wethem.xyz/watch/blockchain-in-kenya-and-digital-ids-for-refugees-nairobi?t=143",
+      "endOffset": 217
+    },
+    {
+      "@type": "Clip",
+      "name": "What drives Kenya's economy? Farming and tea",
+      "startOffset": 217,
+      "url": "https://wethem.xyz/watch/blockchain-in-kenya-and-digital-ids-for-refugees-nairobi?t=217",
+      "endOffset": 283
+    },
+    {
+      "@type": "Clip",
+      "name": "How Kenyan farmers can get paid in Bitcoin",
+      "startOffset": 283,
+      "url": "https://wethem.xyz/watch/blockchain-in-kenya-and-digital-ids-for-refugees-nairobi?t=283",
+      "endOffset": 345
+    },
+    {
+      "@type": "Clip",
+      "name": "Is East Africa united? No borders, no war",
+      "startOffset": 345,
+      "url": "https://wethem.xyz/watch/blockchain-in-kenya-and-digital-ids-for-refugees-nairobi?t=345",
+      "endOffset": 508
+    },
+    {
+      "@type": "Clip",
+      "name": "What he is building at Hack the Dot",
+      "startOffset": 508,
+      "url": "https://wethem.xyz/watch/blockchain-in-kenya-and-digital-ids-for-refugees-nairobi?t=508",
+      "endOffset": 540
+    },
+    {
+      "@type": "Clip",
+      "name": "How digital IDs could get refugees a loan",
+      "startOffset": 540,
+      "url": "https://wethem.xyz/watch/blockchain-in-kenya-and-digital-ids-for-refugees-nairobi?t=540",
+      "endOffset": 642
+    },
+    {
+      "@type": "Clip",
+      "name": "The team, and the friends on it",
+      "startOffset": 642,
+      "url": "https://wethem.xyz/watch/blockchain-in-kenya-and-digital-ids-for-refugees-nairobi?t=642",
+      "endOffset": 704
+    },
+    {
+      "@type": "Clip",
+      "name": "Why developers are leaving web 2",
+      "startOffset": 704,
+      "url": "https://wethem.xyz/watch/blockchain-in-kenya-and-digital-ids-for-refugees-nairobi?t=704",
+      "endOffset": 774
+    },
+    {
+      "@type": "Clip",
+      "name": "What is a blockchain? An improved Web2",
+      "startOffset": 774,
+      "url": "https://wethem.xyz/watch/blockchain-in-kenya-and-digital-ids-for-refugees-nairobi?t=774",
+      "endOffset": 882
+    },
+    {
+      "@type": "Clip",
+      "name": "What is a meme coin?",
+      "startOffset": 882,
+      "url": "https://wethem.xyz/watch/blockchain-in-kenya-and-digital-ids-for-refugees-nairobi?t=882",
+      "endOffset": 1038
+    },
+    {
+      "@type": "Clip",
+      "name": "Maceo: why most creatives are not happy",
+      "startOffset": 1038,
+      "url": "https://wethem.xyz/watch/blockchain-in-kenya-and-digital-ids-for-refugees-nairobi?t=1038",
+      "endOffset": 1259
+    },
+    {
+      "@type": "Clip",
+      "name": "Final thoughts: keep building",
+      "startOffset": 1259,
+      "url": "https://wethem.xyz/watch/blockchain-in-kenya-and-digital-ids-for-refugees-nairobi?t=1259",
+      "endOffset": 1393
+    }
+  ],
+  "creator": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "transcript": "Well, yeah. Thanks for bearing with me through these technical difficulties as all my batteries seem to be depleted. But, we found one with 95%. But, the question I was just asking you before you got cut off was how do people see blockchain crypto in Kenya? What is the adoption like? Yeah, what do you think is like the most the most prevalent way people actually kind of crypto right now in Kenya? Okay. In Kenya, currently use uh Blockchain people see blockchain or do you think it's to be a revolutionary technology? What do you mean by revolutionary technology? It's it's more like a secure, transparent, and everything does\nin blockchain is secure and transparent and good and view even transaction that on chain is very it's very clear to everyone that in such chain like millions of transactions. So, it's a revolutionary technology meaning the upcoming technology whereby people are diving into blockchain as a whole. Several developers, several builders, several investors, several people within Kenya as a whole, right? Let me say the entire world are aiming at blockchain because it's a revolutionary technology. It aims to create and transparency as a whole. And another thing why people are not Another key thing that's only being a developer why other people are like going into blockchain or crypto as a as\na huge number of similar is because of its foundation of cryptocurrency. What do I mean by foundation of cryptocurrency? This aspect whereby people look at it like a money. People see it as a money like I want to have some Ethereum or can I be a trader and I get some Bitcoin? Like aim of crypto, you know all the value of Bitcoin, you know all the value of Ethereum when you transact it in your local country currency. The big equality is so people see it in different aspects like it's aiming at driving people into such a huge case then currency itself it has people in currency trading in it,\nbuilding in it. So, it's more like worldwide like driving massive number of attraction. Yeah, I was saying people are already seeing what the exponential growth and looking at it like $30,000 maybe $97,000 for Bitcoin a week. Yeah, but it's saying like even like a like a $500 difference in ETH like from now to to next year is like a like an exponential shift in in like maybe like the shillings now? Yeah, exactly. So it's it's up to people to adopt. How do you see the economy in Kenya and like this technology like I guess evolving and growing over time? Uh the economy between like any country\nthat employs Bitcoin technology automatically between that country needs to be updated like gets to be more. That's where the future has to come up with aspect like can it be like transaction with that first media to like several applications that are coming through whereby you have to make a payment that first change in the currency because the volume in that in that currency Bitcoin or currency or any currency of like the currency itself Ethereum, Solana, any. So like the economy any country that employs economy employs Bitcoin means the economy automatically gets to shoot up. So in Kenya uh since we are now like in Kenya we are now in in Kenya into\nBitcoin like people get to advance knowledge of Bitcoin as as years go about we get to advance like vision our vision for 2025 onwards like being a country of blockchain free like every transaction by Bitcoin mining companies, Bitcoin mining machines everywhere like it's going to be like let me say the economy as a whole like in Kenya perspective. With other countries already have like the US employing the Bitcoin as their major crypto currency trade like any country with their Bitcoin and blockchain meaning since more like let me say it's a 100 100 as far as major GDP as gross domestic gross concern. Yeah, that's That's And I guess\nbefore I finally shift subjects I was curious to hear you talk about what you think the what what are like the major exports of Kenya? You know, what is what are the existing major industries in Kenya that impact the GDP? And do you see those industries, so you could adopt crypto now? Exactly. So, yeah, yeah, sure, sure, sure. Then with the with the major GDP, the gross domestic product in Kenya like it's mainly from the agricultural sector. What is it? Uh agricultural sector. Like agricultural tea, like tea as you said what we export as Kenya. You know Kenya exports\nYeah, what did you say again? It's tea, tea farming like tea, tea What's the word you said? Uh tea. You said it's the one sector? Uh agricultural agricultural agricultural agricultural sector. Yeah. So, the main export is tea like tea gets to be like Kenya but like a lot of tea in Ethiopia. You also the key tea tea tea itself in Kenya is like the main key like provided the agricultural also constant. And not only to talk about the sectors of export, maybe just like see how blockchain gets to interact with this sector of exports as part of uh blockchain for example as a whole. So, like in Kenya several applications\nhave been developed like uh to enable farmers to be able to get paid in Bitcoin or let's say I want to be able to pay for something like you want to sell something for some sugar to sell to me maybe from my farm. You go to the industry like I want to be able to give you cash money directly but in case I have Bitcoin or I have Ethereum or any cryptocurrency within my wallet, I can be able to send to you directly through the technology of Bitcoins. Uh the technology of blockchain I mean has been able to be implemented at several levels and several transactions can be able to\ntransact without getting in touch with fiat money like we just send Bitcoin and you get get transacted directly. Take for the case with uh several wallets have been implemented with the same functionality. We have mini pay wallets, there is Celo built on Celo. So, blockchain is a massive uh key it's it's mainly in every sector of economy in each every sector in country as a whole. So, it's very critical actually. The economy economy employs it like every individual in the country from getting into going to blockchain. Like countries like not sure which countries I know to speak about them but other countries they have restricted\nindividuals from getting into blockchain. I think these 16 individuals from East Africa are actually all changing payment once I include them. That's why you like if they're normal wallet they such company we try to make I can't see the the economic growth of the country more like depreciation. The country like it's more like compared to lower compared to the others the information blockchain that And aside from Ethiopia, have you been to any other countries outside of Kenya? Yeah, yeah. I've covered almost East Africa at all like yeah, East Africa's at all. Then again, I'm planning to more advance more and more like And what's your perspective on like the\nI don't know, I guess on East Africa. Do you feel like there is like a lot of collaboration between these countries? Are they like politically aligned? Do you feel economically do you feel like they're leveraging each other in ways that make sense? Yeah, yeah, yeah. East Africa East Africa is a mutual and South Africa is the mother of peace. In East Africa you move without any border. border and If you're moving peacefully, you get to associate with any East Africa like I East Africa that I used to South Africa that I used to East Africa that I used to the same as Me moving to Kenya, it's more easier\nlike me moving from my big position from Ethiopia yeah, I mean Ethiopia Kenya back And if East Africa is South Africa like we are the unit of our unit of our land. We are the unit of the East, we are the South, we are the South, we are the South and South. So we are the one who gives South Africa the South. So like we are So the unity in the economic growth as far as I'm concerned, a little bit when every export compared from East Africa to East Africa is surely gets to be the tax and capital depreciation very minimal or less compared to the\nshifting very fast in Africa or in other parts of the world. So East Africa we say no war, no violence. So we want to bring that aspect to everything being done in East Africa. I'm very glad about it speaking on the aspect of technology. East Africa is now booming having very implementation of the way things are like everything aspect of peace becoming very high. Taking it's a good perspective of here in Ethiopia for the past uh 4 months or 5 months I've been in Ethiopia. I have seen several changes between machines being in several areas here in Ethiopia. It's a very good sign for the blockchain as a whole.\nEverything is uh good. And um uh I appreciate that answer, I think, you know, it really offer people a perspective on how you see these Africa East Africa see themselves, how these countries have historically engaged what you think, you know, is a special East African perspective. Yeah. Um I feel like, you know, the way that Africa is represented in the multimedia is frequently, at least what reaches the US, at least what reaches the Western world, I think it's it's frequently not, you know, people speaking themselves from their perspectives themselves, you know. Um so I think it's a beautiful thing that that we got to put in the conversation,\nright? And kind of returning to freshman year, we are at Hack the Dot. What are you building for Hack the Dot? I mean, let's put it really uh what I'm building for Hack the Dot uh I'm building an application uh in my country, I mean, in sub-Saharan Africa, and I do like to generate digital IDs. So what this application I am aiming at doing is basing my challenges on uh several challenges Africans face. Like in Africa, we want to make it at least where in Africa you get to like just starting with Africa, but the application is meant to go worldwide as per my uh even ability. So what this\napplication is aiming to do what I'm building I'm building in this Hack the Dot Hackathon. So the application is aiming at we have several African several individual refugees and those who are part of the the city uh populations over 1 million usually lack various identification like IDs to for them to access data and that people etc. to access various frequently. They can't be able to get uh financial like you want to get some loan from a financial institution, you must have a valid identification for that specific country. But in Africa, we want to make it so like like any refugee when I become refugee in Ethiopia, don't have\nthe basic financial in Ethiopia. How can I be able to access the finance finance uh to to get an access to loan service within Ethiopia? So how can I get it? people will be meeting today. You see this is really amazing. It's really amazing. The app itself within that country can be able to afford biometrics. Definitely. Any valid Any valid document he has maybe from the country he's from or anything like that. The certificate itself will be able to generate a digital ID for him. A unique ID and basically you know that several things which are related to the government to get an ID from the government like\nthe ID of the same country which I think the person gets to be active. And I'm not aiming at working on my own on my own but I'm planning to integrate the application with government websites and government sites through partnership. So that's the key game of African ID. We are aiming at making Africa be the country of the country of easiness like you get to be able to get something with easiness. So we still like the way African governments are doing it. I'm I'm the tech team and I'm developing the application. The African governments Everyone 11 cents And so does that mean that you can actually have a time when you can\ncontinue to roll on this project? Yeah, it's going to be a continuous stuff to to make it be a reality. Not totally a prototype mode but a live mode. It's a live mode. Yeah, exactly like that. A family mode. All right. Perfect. Oh, that's dope. And so how big is your team? What What does your team look like as you're trying to build this product? Okay. My team uh I have basically I'm proud of my team that team of capability that team of strength. Uh we have several guys team members there are very supportive Okay, very supportive of my team. So that's that's the ground. Like we are\nvery so capable we believe in ourselves to implement this application. Who's on your team though? Like shout them out if you want. Uh hopefully you get to meet the guys on my team. Uh I have several guys I have several team members they have one friend from Ghana called John. I have a friend from also from Kenya. He's a good friend. Then also I have one friend from Kenya called Felix. Okay. So we are very so strong team. building in Kenya. And also, not only for achieving meeting others, we are already famous developers. All of them, not including others, we have several teams as well. These are just mine and those\nof my friends, like I said earlier. Yeah. And do you think that the majority of developers in Kenya are buying into web 3 and blockchain as well? Yes, that's true. But now, like majority of developers There's something coming up with the web developers in my life. When you are web 2 developer, you are not really a developer in the industry. In short, like So, several developers have been that way. So, several developers are moving into web 3 because now most applicable apps, like if you you feature your application to an investor, to a given institution, or like a given platform, and they say the same application is on web 2, like web 2\nis capable of being dumped at will because of security. But blockchain, like it's like chains that link with each other. It's the chains. So, things are very secure. Like the data is very secure. It's 100% secure. So, that's the aspect of web 3 that developers are building on blockchain. So, very many developers now are like 27 developers have now transitioned fully like into web 3. Like that's the key number of web 3 developers. I appreciate that. And I ask my last two questions. We we use the word blockchain a lot. We don't have an actual word word for what a blockchain is. Can you say in\nyour words what a blockchain is? Okay. How about you? You may not want to I think you may not want to say it. A blockchain is a decentralized uh It's it's it's an improved decentralized web 2. It's like it's a decentralized application like Like let me just say it's a decentralized secure and transparent web 2 itself. So, it's an improved web 2. Okay. So, I have Yeah. So, different people have different thoughts, but that's what blockchain is. Okay. And is blockchain in your eyes the future of the world and you know, like people talk about Bitcoin being a world reserve currency. Do you think that's that's the future? Do you\nthink like yeah, what do you feel like the role of this emerging technology is in the future of the global economy? Yeah. So, it's true. People see blockchain it's going to be the like starting That's true. Knowing what it is it's going to come down. When you become the mother of the house it's forever you'll be the mother after you You're the one who will enable the children to know what the world is all about. So, Bitcoin is all like the decision of Bitcoin as a Satoshi team like it's all going to be strong like there's a market cap lift of price like maybe say from $100,000 to $90,000 but\nit still will be there the key point like the strong wall for the blockchains and the rest. But several blockchains are coming through. That's as you say both the future of blockchain. Several blockchains are being coming out coming through into the world. Several tokens are being minted into different chain being Solana the key world of several meme coins like we have several several blockchains as a future. The future of blockchain is all like eternal future like it's not going meme down anymore like blockchain is going to be strong. What's the meme token? You you mentioned meme coins and so I I'd love to hear you like say\nyou know, like if watching the future is going up, you know, but like how what is a meme coin distinct from like the rest like you know, of crypto? Yeah. In your eyes how? So, meme coins distinct from the rest of the crypto. So, like to make it break down a bit we know what Ethereum Solana is that? Solana is a right. You know what Solana Solana coin Solana as a blockchain is all about. So, meme coin the term meme coin what what why they use the term meme coin? Coming to perspective like you have a currency you can be able to your currency within week coming up this\nfollowing morning then waking up the the next morning you find your currency at zero. So, this this the term meme coin not saying saying it's it's it's a bad meme or bad perspective of calling it like that but that's what it's all about. The white papers they all the papers are generally papers about meme coins that people take. So, a meme coin to make it easy for a person who maybe want to trade or want to join perspective of creating coins. So, a meme coin like the easiest coin to create when you are a developer you are building something like you want to create a meme coin surely the meme coin.\nA meme coin is based on aspect like it's value is usually lower very lower like 0.something. It's the any coin with a a value cap market cap lower than the than the aspect of big cap that's surely a meme coin. A meme coin is a coin that has no like it's very it's let me say it's very like volatile like within 0.1 seconds its value can drop to zero you lose everything. So, it's like a coin it's surely not like a coin. So, it's a it's it's a still it's a coin though it's a coin it's not a chain but it's a coin itself inside a chain. So,\nbuild on several like layers. So, the Solana being the mother of meme coins. So, like several developers made their coins inside Solana. So, like it's a it's a it's a meme a meme coin is a coin with the least lowest value. So, I like I like different ones but that's how I prefer like for us for the aspect of what I'm really about meme coins. So, they are Yeah, I agree with everything you said and I feel like like the biggest thing you said is like in a split second they can go to zero. Yeah. And I feel like it's just it's about attention. I think\nmeme coins are all attention like it's just a tokenized way of getting attention economy. Yeah. And people kind of gambling on where attention will be and where it has been. Um and I I definitely yeah you know people will ask me what is this stuff I said it's just a casino. You're a casino person meme coins are Yeah, it's making it easy for investors to talk about this situation. Oh, how how would you define life to be about like in your perspective of meme coins? I would define it as Say your images from your initial organization. Yeah. Yeah. So, how would you define it as to\nbe like as a for the kids like to enable them to be able to participate to be able to build something in the music industry like Mhm. Yeah, so how do you see the music industry to be able to grow more? Yeah, I mean, so that's true. I got started in Web3 space living interested in the in the intersection of music and Web3. So, we're a platform trying to help people sell NFTs, but you know, the the big thing with like startups, right? It's just supposed to have a problem statement, but the like artists don't struggle with the fact that they can't sell NFTs. That's not like a real industry problem.\nI think capturing value is a big issue. I think like middle men that are extractive are a big issue. I think people having to take concessions to find funding as creatives is a big issue. And even just sourcing funding and becoming like a like uh creative it's not starving like starving artists are the majority of artists. Um and so, I'd say really looking at like, you know, how can you be building composable tools for creators, but also looking at like what are creatives like what what infrastructure do creatives actually like they don't have? Um is that I think just an important question to start asking. I think\nis in my opinion maybe too early to say what what developers should build. I feel like not enough creatives are actually looking at what we could build. Um and so, I'd say like the most important thing is to really start creating that conversation. That's really what I'm committed to doing here with We Them Media um is bringing together the minds, you know, with the technology, the minds thinking about economics, tokenomics, you know, but also the minds thinking about the future of the creator economy, the future of Hollywood, the future of major film production in the um I think most creatives in the world right now are are not happy. You see the\nwriters strike you see in the US, right? Something You see musicians complaining about their deals. Um I think you see actors talking about how they don't necessarily have the kind of benefits they want especially with AI coming into play, right? They're getting upset, etc. Um and so, I think just starting to look at you know, what are the grievances that creatives have around these industries and you know, what does it look like to start building like uh even just like social infrastructure, right? That can offer, you know, people the opportunity to choose paths to success that don't come with those same possessions and concerns. You know, so I don't know if that's\nreally what it's about technology, but I think it is more about the practices that we agree on, right? And then how can we in the long term give creators, I guess, some say in like what those practices that we prescribe will be. Does that make sense? How do we decentralize so they have some say? Yeah, yeah, yeah. I think great great think music social media big industry in the world big decentralized matter of uh matter of matter of what's up that's sort of musicians now this is something about the blockchain dream build us like dream musicians about it the case of Germany from Germany so they\ncan come into the actual dance like you know if you guys for yourself always try and like there's something about like I'm not sure about the name but it's saying like several like uh what I can say like when you are given industry you need to create the industry like so that's cool about sharing Yeah, I do you know who I'm talking about? Eek A the artist name, yeah? Eek A Eek A? Yeah, I think yeah. Yeah, yeah. I met him at that time and he did a presentation like their creator like creator economy space. And it was really cool being there and about channel like I'm very\nbullish. I feel right now we have pods like one like podcast podcasting web like web video platform and so I think it's cool to like since I came in looking at already audio stuff, it's cool to see how they do a new a new wave of creative applications emerging. And I think it's cool that he's already like creative asking the questions. I think a lot of the platforms in this space, they come in really focused on creators and then they overtime they you know burn their money and then they become concerned with like profits and then they kind of just become you know the same the same as the extractive\nindustries which exist also to survive. That's all. Um but I really appreciate your time. I I you sitting with me through the technical difficulties. Uh yeah, I appreciate everyone like joining up, sharing their different minds, ideas together. It's very blessed. And do you have any final thoughts for my audience before we wrap up? Um one thing I'll say to your audience before we wrap up, uh like you got to put it together with personal maybe just be on your own like when you're building something like build something don't care about what they think is. Like they usually say build take it as a stupid thing and build it.\nDon't just take like what they have to do like what they have to do like whatever you have like basic problems you want to solve don't just consider like even being given challenges that are there like pushing you on this video like build focus like that. Make it simple like begin and make it simple and stupid you so that you can build build build so that you can build. Yeah, just keep building. Yeah, just keep building. So my final thoughts to them, my fellow colleagues and the rest Any any any thoughts in Swahili? Uh enter today. Okay, I can just do the speaking but Swahili because it's my it's my my\nlanguage my mother tongue. Uh so Uh you like what you have in hand it's all of that going to be created at the end. You will be. All right. Well, thank you everybody for tuning in to another episode of Building the Future I'm really excited to to be here in Nairobi to be at this hackathon to be getting to see you know, just people who are super invested in this ecosystem growing in the future of the African economy, people who are interested in the future of technology. I'm just blessed to be on this journey. I'm blessed to have you here with me, Shane. So thank you again.\nUm yeah, thank you for listening and have a great rest of your day. I like to say booyah to my episode, so 3 2 1 Booyah. That was really",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Nairobi",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "Kenya"
+    },
+    "url": "https://wethem.xyz/places#nairobi"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Kenya",
+    "url": "https://wethem.xyz/portfolio#p-kenya"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Blockchain Builders",
+      "url": "https://wethem.xyz/topics/blockchain-builders"
+    },
+    {
+      "@type": "Thing",
+      "name": "Pan-African Web3",
+      "url": "https://wethem.xyz/topics/pan-african-web3"
+    }
+  ],
+  "keywords": [
+    "Blockchain Builders",
+    "Pan-African Web3"
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Kenya",
+      "item": "https://wethem.xyz/portfolio#p-kenya"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "A developer building digital IDs for people without papers",
+      "item": "https://wethem.xyz/watch/blockchain-in-kenya-and-digital-ids-for-refugees-nairobi"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2026-04-17" data-pf-vid="hIS-Q0EEXPs" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;23:13&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="Nairobi" data-pf-country="Kenya" data-pf-project="Kenya">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-kenya">Kenya</a></li>
+            <li aria-current="page">A developer building digital IDs for people without papers</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">A developer building digital IDs for people without papers.</h1>
+
+    <p class="wt-byline"><strong>James Wasonga</strong> &middot; Nairobi &middot; 23 min</p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="hIS-Q0EEXPs" live postersrcset="../stills/hIS-Q0EEXPs-320.jpg 320w, ../stills/hIS-Q0EEXPs-480.jpg 480w, ../stills/hIS-Q0EEXPs-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/hIS-Q0EEXPs?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="A developer building digital IDs for people without papers, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+    <p class="wt-note wt-credit">Executive producer: C.Y. Lee</p>
+
+    <div class="wt-prose">
+            <p>Twenty-three minutes in Nairobi, filmed at a hackathon called Hack the Dot, with a Kenyan developer building identity software. The batteries almost ran out before it started, and the first question is the simple one: how do people in Kenya actually see this technology.</p>
+            <p>James Wasonga answers it in two halves. There is the technology, which he describes as &ldquo;a revolutionary technology meaning the upcoming technology whereby people are diving into blockchain as a whole&rdquo;, and then there is the way most people actually arrive at it, which is not through the technology at all. &ldquo;People see it as a money like I want to have some Ethereum or can I be a trader and I get some Bitcoin?&rdquo;</p>
+            <p>He is bullish in a way the page will not editorialise about: he thinks adoption raises a country, &ldquo;any country that employs economy employs Bitcoin means the economy automatically gets to shoot up&rdquo;, and he sets that against what Kenya&rsquo;s economy actually runs on. &ldquo;the gross domestic product in Kenya like it&rsquo;s mainly from the agricultural sector&rdquo;. The main export is tea. So the useful question, and he gets to it himself, is what the technology does for the sector that already exists: &ldquo;several applications have been developed to enable farmers to be able to get paid in Bitcoin&rdquo;, and a payment between two people that never touches fiat, &ldquo;we just send Bitcoin and you get transacted directly&rdquo;.</p>
+            <p>Asked about the region, he goes somewhere unexpected. He says he has covered almost all of East Africa and has spent the last four or five months in Ethiopia, and what he wants to say about it is about movement and peace rather than markets. &ldquo;In East Africa you move without any border&rdquo;. And: &ldquo;So East Africa we say no war, no violence.&rdquo;</p>
+            <p>The centre of the tape is his project. &ldquo;I&rsquo;m building an application in my country, I mean, in sub-Saharan Africa, and I do like to generate digital IDs.&rdquo; The problem he is aiming at is documentation: refugee and displaced populations who cannot prove who they are, and therefore cannot get anything from an institution, because &ldquo;you must have a valid identification for that specific country&rdquo;. His design takes biometrics and whatever document a person carries from the country they came from, and out of it, &ldquo;The certificate itself will be able to generate a digital ID for him. A unique ID&rdquo;. He does not want to run it alone: &ldquo;I&rsquo;m planning to integrate the application with government websites and government sites through partnership.&rdquo; It is not meant to stop at the hackathon either. &ldquo;Not totally a prototype mode but a live mode.&rdquo;</p>
+            <p>Two definitions close the piece out, both asked plainly and answered plainly. A blockchain: &ldquo;let me just say it&rsquo;s a decentralized secure and transparent web 2 itself. So, it&rsquo;s an improved web 2.&rdquo; A meme coin: the easiest coin for a developer to make, &ldquo;a coin with the least lowest value&rdquo;, where &ldquo;within 0.1 seconds its value can drop to zero you lose everything&rdquo;, most of them built on Solana, &ldquo;the mother of meme coins&rdquo;.</p>
+            <p>The last stretch is mostly the interviewer, on creators, extraction and what infrastructure artists do not have. Wasonga&rsquo;s own sign-off is shorter. &ldquo;Make it simple like begin and make it simple and stupid&rdquo;, and then, twice: &ldquo;just keep building&rdquo;.</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../places.html#nairobi">Everything filmed in Nairobi</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="what-a-hackathon-is-and-why-ethereum-came-about-addis-ababa.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/7vR7rtYlIoQ-640.jpg" srcset="../stills/7vR7rtYlIoQ-320.jpg 320w, ../stills/7vR7rtYlIoQ-480.jpg 480w, ../stills/7vR7rtYlIoQ-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:14</span></span><span>A Kenyan developer explains the chain from the ground up.</span></a>
+        <a class="wt-rail-card" href="crypto-clarity-whats-happening-with-the-money-online.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/W20VlF_HHuQ-640.jpg" srcset="../stills/W20VlF_HHuQ-320.jpg 320w, ../stills/W20VlF_HHuQ-480.jpg 480w, ../stills/W20VlF_HHuQ-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>58:45</span></span><span>The first lesson of a four week crypto course.</span></a>
+        <a class="wt-rail-card" href="ethconf-you-dont-have-to-be-technical-to-start-in-crypto.html"><span class="wt-next-thumb wt-thumb"><img src="https://i.ytimg.com/vi/hXCHPWdwxeU/hqdefault.jpg" srcset="https://i.ytimg.com/vi/hXCHPWdwxeU/mqdefault.jpg 320w, https://i.ytimg.com/vi/hXCHPWdwxeU/hqdefault.jpg 480w" sizes="300px" alt="" loading="lazy" decoding="async" width="480" height="270"><span class="wt-dur"><span class="visually-hidden">Length </span>5:20</span></span><span>ETHConf: you don&#x27;t have to be technical to start in crypto.</span></a>
+        <a class="wt-rail-card" href="awareness-then-action-blockchain-from-africa-jos.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/97S0g1GHphM-640.jpg" srcset="../stills/97S0g1GHphM-320.jpg 320w, ../stills/97S0g1GHphM-480.jpg 480w, ../stills/97S0g1GHphM-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>9:24</span></span><span>Awareness, action, and what is missing between builders.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c0"><a class="wt-t" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-s">How people in Kenya see blockchain</span></li>
+                <li class="wt-line" id="c72"><a class="wt-t" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=72s" target="_blank" rel="noopener" data-pagefind-ignore>1:12</a><span class="wt-s">Why most Kenyans see crypto as money first</span></li>
+                <li class="wt-line" id="c143"><a class="wt-t" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=143s" target="_blank" rel="noopener" data-pagefind-ignore>2:23</a><span class="wt-s">Does Bitcoin make an economy grow? His view</span></li>
+                <li class="wt-line" id="c217"><a class="wt-t" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=217s" target="_blank" rel="noopener" data-pagefind-ignore>3:37</a><span class="wt-s">What drives Kenya&#x27;s economy? Farming and tea</span></li>
+                <li class="wt-line" id="c283"><a class="wt-t" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=283s" target="_blank" rel="noopener" data-pagefind-ignore>4:43</a><span class="wt-s">How Kenyan farmers can get paid in Bitcoin</span></li>
+                <li class="wt-line" id="c345"><a class="wt-t" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=345s" target="_blank" rel="noopener" data-pagefind-ignore>5:45</a><span class="wt-s">Is East Africa united? No borders, no war</span></li>
+                <li class="wt-line" id="c508"><a class="wt-t" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=508s" target="_blank" rel="noopener" data-pagefind-ignore>8:28</a><span class="wt-s">What he is building at Hack the Dot</span></li>
+                <li class="wt-line" id="c540"><a class="wt-t" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=540s" target="_blank" rel="noopener" data-pagefind-ignore>9:00</a><span class="wt-s">How digital IDs could get refugees a loan</span></li>
+                <li class="wt-line" id="c642"><a class="wt-t" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=642s" target="_blank" rel="noopener" data-pagefind-ignore>10:42</a><span class="wt-s">The team, and the friends on it</span></li>
+                <li class="wt-line" id="c704"><a class="wt-t" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=704s" target="_blank" rel="noopener" data-pagefind-ignore>11:44</a><span class="wt-s">Why developers are leaving web 2</span></li>
+                <li class="wt-line" id="c774"><a class="wt-t" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=774s" target="_blank" rel="noopener" data-pagefind-ignore>12:54</a><span class="wt-s">What is a blockchain? An improved Web2</span></li>
+                <li class="wt-line" id="c882"><a class="wt-t" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=882s" target="_blank" rel="noopener" data-pagefind-ignore>14:42</a><span class="wt-s">What is a meme coin?</span></li>
+                <li class="wt-line" id="c1038"><a class="wt-t" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=1038s" target="_blank" rel="noopener" data-pagefind-ignore>17:18</a><span class="wt-s">Maceo: why most creatives are not happy</span></li>
+                <li class="wt-line" id="c1259"><a class="wt-t" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=1259s" target="_blank" rel="noopener" data-pagefind-ignore>20:59</a><span class="wt-s">Final thoughts: keep building</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Where YouTube masked a word it shows as [bleeped]. Speaker letters mark turns, not names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s2"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=2s" target="_blank" rel="noopener" data-pagefind-ignore>0:02</a>Well, yeah. Thanks for bearing with me through these technical difficulties as all my batteries seem to be depleted. But, we found one with 95%. But, the question I was just asking you before you got cut off was how do people see blockchain crypto in Kenya? What is the adoption like? Yeah, what do you think is like the most the most prevalent way people actually kind of crypto right now in Kenya? Okay. In Kenya, currently use uh Blockchain people see blockchain or do you think it&rsquo;s to be a revolutionary technology? What do you mean by revolutionary technology? It&rsquo;s it&rsquo;s more like a secure, transparent, and everything does</p>
+            <p id="s37"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=37s" target="_blank" rel="noopener" data-pagefind-ignore>0:37</a>in blockchain is secure and transparent and good and view even transaction that on chain is very it&rsquo;s very clear to everyone that in such chain like millions of transactions. So, it&rsquo;s a revolutionary technology meaning the upcoming technology whereby people are diving into blockchain as a whole. Several developers, several builders, several investors, several people within Kenya as a whole, right? Let me say the entire world are aiming at blockchain because it&rsquo;s a revolutionary technology. It aims to create and transparency as a whole. And another thing why people are not Another key thing that&rsquo;s only being a developer why other people are like going into blockchain or crypto as a as</p>
+            <p id="s72"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=72s" target="_blank" rel="noopener" data-pagefind-ignore>1:12</a>a huge number of similar is because of its foundation of cryptocurrency. What do I mean by foundation of cryptocurrency? This aspect whereby people look at it like a money. People see it as a money like I want to have some <a class="wt-gloss" href="../glossary.html#ethereum">Ethereum</a> or can I be a trader and I get some Bitcoin? Like aim of crypto, you know all the value of Bitcoin, you know all the value of Ethereum when you transact it in your local country currency. The big equality is so people see it in different aspects like it&rsquo;s aiming at driving people into such a huge case then currency itself it has people in currency trading in it,</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s102"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=102s" target="_blank" rel="noopener" data-pagefind-ignore>1:42</a>building in it. So, it&rsquo;s more like worldwide like driving massive number of attraction. Yeah, I was saying people are already seeing what the exponential growth and looking at it like $30,000 maybe $97,000 for Bitcoin a week. Yeah, but it&rsquo;s saying like even like a like a $500 difference in ETH like from now to to next year is like a like an exponential shift in in like maybe like the shillings now? Yeah, exactly. So it&rsquo;s it&rsquo;s up to people to adopt. How do you see the economy in Kenya and like this technology like I guess evolving and growing over time? Uh the economy between like any country</p>
+            <p id="s143"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=143s" target="_blank" rel="noopener" data-pagefind-ignore>2:23</a>that employs Bitcoin technology automatically between that country needs to be updated like gets to be more. That&rsquo;s where the future has to come up with aspect like can it be like transaction with that first media to like several applications that are coming through whereby you have to make a payment that first change in the currency because the volume in that in that currency Bitcoin or currency or any currency of like the currency itself Ethereum, Solana, any. So like the economy any country that employs economy employs Bitcoin means the economy automatically gets to shoot up. So in Kenya uh since we are now like in Kenya we are now in in Kenya into</p>
+            <p id="s177"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=177s" target="_blank" rel="noopener" data-pagefind-ignore>2:57</a>Bitcoin like people get to advance knowledge of Bitcoin as as years go about we get to advance like vision our vision for 2025 onwards like being a country of blockchain free like every transaction by Bitcoin mining companies, Bitcoin mining machines everywhere like it&rsquo;s going to be like let me say the economy as a whole like in Kenya perspective. With other countries already have like the US employing the Bitcoin as their major crypto currency trade like any country with their Bitcoin and blockchain meaning since more like let me say it&rsquo;s a 100 100 as far as major GDP as gross domestic gross concern. Yeah, that&rsquo;s That&rsquo;s And I guess</p>
+            <p id="s217"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=217s" target="_blank" rel="noopener" data-pagefind-ignore>3:37</a>before I finally shift subjects I was curious to hear you talk about what you think the what what are like the major exports of Kenya? You know, what is what are the existing major industries in Kenya that impact the GDP? And do you see those industries, so you could adopt crypto now? Exactly. So, yeah, yeah, sure, sure, sure. Then with the with the major GDP, the gross domestic product in Kenya like it&rsquo;s mainly from the agricultural sector. What is it? Uh agricultural sector. Like agricultural tea, like tea as you said what we export as Kenya. You know Kenya exports</p>
+            <p id="s248"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=248s" target="_blank" rel="noopener" data-pagefind-ignore>4:08</a>Yeah, what did you say again? It&rsquo;s tea, tea farming like tea, tea What&rsquo;s the word you said? Uh tea. You said it&rsquo;s the one sector? Uh agricultural agricultural agricultural agricultural sector. Yeah. So, the main export is tea like tea gets to be like Kenya but like a lot of tea in Ethiopia. You also the key tea tea tea itself in Kenya is like the main key like provided the agricultural also constant. And not only to talk about the sectors of export, maybe just like see how blockchain gets to interact with this sector of exports as part of uh blockchain for example as a whole. So, like in Kenya several applications</p>
+            <p id="s283"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=283s" target="_blank" rel="noopener" data-pagefind-ignore>4:43</a>have been developed like uh to enable farmers to be able to get paid in Bitcoin or let&rsquo;s say I want to be able to pay for something like you want to sell something for some sugar to sell to me maybe from my farm. You go to the industry like I want to be able to give you cash money directly but in case I have Bitcoin or I have Ethereum or any cryptocurrency within my wallet, I can be able to send to you directly through the technology of Bitcoins. Uh the technology of blockchain I mean has been able to be implemented at several levels and several transactions can be able to</p>
+            <p id="s312"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=312s" target="_blank" rel="noopener" data-pagefind-ignore>5:12</a>transact without getting in touch with fiat money like we just send Bitcoin and you get get transacted directly. Take for the case with uh several wallets have been implemented with the same functionality. We have mini pay wallets, there is Celo built on Celo. So, blockchain is a massive uh key it&rsquo;s it&rsquo;s mainly in every sector of economy in each every sector in country as a whole. So, it&rsquo;s very critical actually. The economy economy employs it like every individual in the country from getting into going to blockchain. Like countries like not sure which countries I know to speak about them but other countries they have restricted</p>
+            <p id="s345"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=345s" target="_blank" rel="noopener" data-pagefind-ignore>5:45</a>individuals from getting into blockchain. I think these 16 individuals from East Africa are actually all changing payment once I include them. That&rsquo;s why you like if they&rsquo;re normal wallet they such company we try to make I can&rsquo;t see the the economic growth of the country more like depreciation. The country like it&rsquo;s more like compared to lower compared to the others the information blockchain that And aside from Ethiopia, have you been to any other countries outside of Kenya? Yeah, yeah. I&rsquo;ve covered almost East Africa at all like yeah, East Africa&rsquo;s at all. Then again, I&rsquo;m planning to more advance more and more like And what&rsquo;s your perspective on like the</p>
+            <p id="s381"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=381s" target="_blank" rel="noopener" data-pagefind-ignore>6:21</a>I don&rsquo;t know, I guess on East Africa. Do you feel like there is like a lot of collaboration between these countries? Are they like politically aligned? Do you feel economically do you feel like they&rsquo;re leveraging each other in ways that make sense? Yeah, yeah, yeah. East Africa East Africa is a mutual and South Africa is the mother of peace. In East Africa you move without any border. border and If you&rsquo;re moving peacefully, you get to associate with any East Africa like I East Africa that I used to South Africa that I used to East Africa that I used to the same as Me moving to Kenya, it&rsquo;s more easier</p>
+            <p id="s413"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=413s" target="_blank" rel="noopener" data-pagefind-ignore>6:53</a>like me moving from my big position from Ethiopia yeah, I mean Ethiopia Kenya back And if East Africa is South Africa like we are the unit of our unit of our land. We are the unit of the East, we are the South, we are the South, we are the South and South. So we are the one who gives South Africa the South. So like we are So the unity in the economic growth as far as I&rsquo;m concerned, a little bit when every export compared from East Africa to East Africa is surely gets to be the tax and capital depreciation very minimal or less compared to the</p>
+            <p id="s443"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=443s" target="_blank" rel="noopener" data-pagefind-ignore>7:23</a>shifting very fast in Africa or in other parts of the world. So East Africa we say no war, no violence. So we want to bring that aspect to everything being done in East Africa. I&rsquo;m very glad about it speaking on the aspect of technology. East Africa is now booming having very implementation of the way things are like everything aspect of peace becoming very high. Taking it&rsquo;s a good perspective of here in Ethiopia for the past uh 4 months or 5 months I&rsquo;ve been in Ethiopia. I have seen several changes between machines being in several areas here in Ethiopia. It&rsquo;s a very good sign for the blockchain as a whole.</p>
+            <p id="s474"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=474s" target="_blank" rel="noopener" data-pagefind-ignore>7:54</a>Everything is uh good. And um uh I appreciate that answer, I think, you know, it really offer people a perspective on how you see these Africa East Africa see themselves, how these countries have historically engaged what you think, you know, is a special East African perspective. Yeah. Um I feel like, you know, the way that Africa is represented in the multimedia is frequently, at least what reaches the US, at least what reaches the Western world, I think it&rsquo;s it&rsquo;s frequently not, you know, people speaking themselves from their perspectives themselves, you know. Um so I think it&rsquo;s a beautiful thing that that we got to put in the conversation,</p>
+            <p id="s508"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=508s" target="_blank" rel="noopener" data-pagefind-ignore>8:28</a>right? And kind of returning to freshman year, we are at Hack the Dot. What are you building for Hack the Dot? I mean, let&rsquo;s put it really uh what I&rsquo;m building for Hack the Dot uh I&rsquo;m building an application uh in my country, I mean, in sub-Saharan Africa, and I do like to generate digital IDs. So what this application I am aiming at doing is basing my challenges on uh several challenges Africans face. Like in Africa, we want to make it at least where in Africa you get to like just starting with Africa, but the application is meant to go worldwide as per my uh even ability. So what this</p>
+            <p id="s540"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=540s" target="_blank" rel="noopener" data-pagefind-ignore>9:00</a>application is aiming to do what I&rsquo;m building I&rsquo;m building in this Hack the Dot Hackathon. So the application is aiming at we have several African several individual refugees and those who are part of the the city uh populations over 1 million usually lack various identification like IDs to for them to access data and that people etc. to access various frequently. They can&rsquo;t be able to get uh financial like you want to get some loan from a financial institution, you must have a valid identification for that specific country. But in Africa, we want to make it so like like any refugee when I become refugee in Ethiopia, don&rsquo;t have</p>
+            <p id="s571"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=571s" target="_blank" rel="noopener" data-pagefind-ignore>9:31</a>the basic financial in Ethiopia. How can I be able to access the finance finance uh to to get an access to loan service within Ethiopia? So how can I get it? people will be meeting today. You see this is really amazing. It&rsquo;s really amazing. The app itself within that country can be able to afford biometrics. Definitely. Any valid Any valid document he has maybe from the country he&rsquo;s from or anything like that. The certificate itself will be able to generate a digital ID for him. A unique ID and basically you know that several things which are related to the government to get an ID from the government like</p>
+            <p id="s609"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=609s" target="_blank" rel="noopener" data-pagefind-ignore>10:09</a>the ID of the same country which I think the person gets to be active. And I&rsquo;m not aiming at working on my own on my own but I&rsquo;m planning to integrate the application with government websites and government sites through partnership. So that&rsquo;s the key game of African ID. We are aiming at making Africa be the country of the country of easiness like you get to be able to get something with easiness. So we still like the way African governments are doing it. I&rsquo;m I&rsquo;m the tech team and I&rsquo;m developing the application. The African governments Everyone 11 cents And so does that mean that you can actually have a time when you can</p>
+            <p id="s642"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=642s" target="_blank" rel="noopener" data-pagefind-ignore>10:42</a>continue to roll on this project? Yeah, it&rsquo;s going to be a continuous stuff to to make it be a reality. Not totally a prototype mode but a live mode. It&rsquo;s a live mode. Yeah, exactly like that. A family mode. All right. Perfect. Oh, that&rsquo;s dope. And so how big is your team? What What does your team look like as you&rsquo;re trying to build this product? Okay. My team uh I have basically I&rsquo;m proud of my team that team of capability that team of strength. Uh we have several guys team members there are very supportive Okay, very supportive of my team. So that&rsquo;s that&rsquo;s the ground. Like we are</p>
+            <p id="s672"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=672s" target="_blank" rel="noopener" data-pagefind-ignore>11:12</a>very so capable we believe in ourselves to implement this application. Who&rsquo;s on your team though? Like shout them out if you want. Uh hopefully you get to meet the guys on my team. Uh I have several guys I have several team members they have one friend from Ghana called John. I have a friend from also from Kenya. He&rsquo;s a good friend. Then also I have one friend from Kenya called Felix. Okay. So we are very so strong team. building in Kenya. And also, not only for achieving meeting others, we are already famous developers. All of them, not including others, we have several teams as well. These are just mine and those</p>
+            <p id="s704"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=704s" target="_blank" rel="noopener" data-pagefind-ignore>11:44</a>of my friends, like I said earlier. Yeah. And do you think that the majority of developers in Kenya are buying into web 3 and blockchain as well? Yes, that&rsquo;s true. But now, like majority of developers There&rsquo;s something coming up with the web developers in my life. When you are web 2 developer, you are not really a developer in the industry. In short, like So, several developers have been that way. So, several developers are moving into web 3 because now most applicable apps, like if you you feature your application to an investor, to a given institution, or like a given platform, and they say the same application is on web 2, like web 2</p>
+            <p id="s741"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=741s" target="_blank" rel="noopener" data-pagefind-ignore>12:21</a>is capable of being dumped at will because of security. But blockchain, like it&rsquo;s like chains that link with each other. It&rsquo;s the chains. So, things are very secure. Like the data is very secure. It&rsquo;s 100% secure. So, that&rsquo;s the aspect of web 3 that developers are building on blockchain. So, very many developers now are like 27 developers have now transitioned fully like into web 3. Like that&rsquo;s the key number of web 3 developers. I appreciate that. And I ask my last two questions. We we use the word blockchain a lot. We don&rsquo;t have an actual word word for what a blockchain is. Can you say in</p>
+            <p id="s774"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=774s" target="_blank" rel="noopener" data-pagefind-ignore>12:54</a>your words what a blockchain is? Okay. How about you? You may not want to I think you may not want to say it. A blockchain is a decentralized uh It&rsquo;s it&rsquo;s it&rsquo;s an improved decentralized web 2. It&rsquo;s like it&rsquo;s a decentralized application like Like let me just say it&rsquo;s a decentralized secure and transparent web 2 itself. So, it&rsquo;s an improved web 2. Okay. So, I have Yeah. So, different people have different thoughts, but that&rsquo;s what blockchain is. Okay. And is blockchain in your eyes the future of the world and you know, like people talk about Bitcoin being a world reserve currency. Do you think that&rsquo;s that&rsquo;s the future? Do you</p>
+            <p id="s815"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=815s" target="_blank" rel="noopener" data-pagefind-ignore>13:35</a>think like yeah, what do you feel like the role of this emerging technology is in the future of the global economy? Yeah. So, it&rsquo;s true. People see blockchain it&rsquo;s going to be the like starting That&rsquo;s true. Knowing what it is it&rsquo;s going to come down. When you become the mother of the house it&rsquo;s forever you&rsquo;ll be the mother after you You&rsquo;re the one who will enable the children to know what the world is all about. So, Bitcoin is all like the decision of Bitcoin as a Satoshi team like it&rsquo;s all going to be strong like there&rsquo;s a market cap lift of price like maybe say from $100,000 to $90,000 but</p>
+            <p id="s848"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=848s" target="_blank" rel="noopener" data-pagefind-ignore>14:08</a>it still will be there the key point like the strong wall for the blockchains and the rest. But several blockchains are coming through. That&rsquo;s as you say both the future of blockchain. Several blockchains are being coming out coming through into the world. Several tokens are being minted into different chain being Solana the key world of several meme coins like we have several several blockchains as a future. The future of blockchain is all like eternal future like it&rsquo;s not going meme down anymore like blockchain is going to be strong. What&rsquo;s the meme token? You you mentioned meme coins and so I I&rsquo;d love to hear you like say</p>
+            <p id="s882"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=882s" target="_blank" rel="noopener" data-pagefind-ignore>14:42</a>you know, like if watching the future is going up, you know, but like how what is a meme coin distinct from like the rest like you know, of crypto? Yeah. In your eyes how? So, meme coins distinct from the rest of the crypto. So, like to make it break down a bit we know what Ethereum Solana is that? Solana is a right. You know what Solana Solana coin Solana as a blockchain is all about. So, meme coin the term meme coin what what why they use the term meme coin? Coming to perspective like you have a currency you can be able to your currency within week coming up this</p>
+            <p id="s917"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=917s" target="_blank" rel="noopener" data-pagefind-ignore>15:17</a>following morning then waking up the the next morning you find your currency at zero. So, this this the term meme coin not saying saying it&rsquo;s it&rsquo;s it&rsquo;s a bad meme or bad perspective of calling it like that but that&rsquo;s what it&rsquo;s all about. The white papers they all the papers are generally papers about meme coins that people take. So, a meme coin to make it easy for a person who maybe want to trade or want to join perspective of creating coins. So, a meme coin like the easiest coin to create when you are a developer you are building something like you want to create a meme coin surely the meme coin.</p>
+            <p id="s948"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=948s" target="_blank" rel="noopener" data-pagefind-ignore>15:48</a>A meme coin is based on aspect like it&rsquo;s value is usually lower very lower like 0.something. It&rsquo;s the any coin with a a value cap market cap lower than the than the aspect of big cap that&rsquo;s surely a meme coin. A meme coin is a coin that has no like it&rsquo;s very it&rsquo;s let me say it&rsquo;s very like volatile like within 0.1 seconds its value can drop to zero you lose everything. So, it&rsquo;s like a coin it&rsquo;s surely not like a coin. So, it&rsquo;s a it&rsquo;s it&rsquo;s a still it&rsquo;s a coin though it&rsquo;s a coin it&rsquo;s not a chain but it&rsquo;s a coin itself inside a chain. So,</p>
+            <p id="s977"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=977s" target="_blank" rel="noopener" data-pagefind-ignore>16:17</a>build on several like layers. So, the Solana being the mother of meme coins. So, like several developers made their coins inside Solana. So, like it&rsquo;s a it&rsquo;s a it&rsquo;s a meme a meme coin is a coin with the least lowest value. So, I like I like different ones but that&rsquo;s how I prefer like for us for the aspect of what I&rsquo;m really about meme coins. So, they are Yeah, I agree with everything you said and I feel like like the biggest thing you said is like in a split second they can go to zero. Yeah. And I feel like it&rsquo;s just it&rsquo;s about attention. I think</p>
+            <p id="s1005"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=1005s" target="_blank" rel="noopener" data-pagefind-ignore>16:45</a>meme coins are all attention like it&rsquo;s just a tokenized way of getting attention economy. Yeah. And people kind of gambling on where attention will be and where it has been. Um and I I definitely yeah you know people will ask me what is this stuff I said it&rsquo;s just a casino. You&rsquo;re a casino person meme coins are Yeah, it&rsquo;s making it easy for investors to talk about this situation. Oh, how how would you define life to be about like in your perspective of meme coins? I would define it as Say your images from your initial organization. Yeah. Yeah. So, how would you define it as to</p>
+            <p id="s1038"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=1038s" target="_blank" rel="noopener" data-pagefind-ignore>17:18</a>be like as a for the kids like to enable them to be able to participate to be able to build something in the music industry like Mhm. Yeah, so how do you see the music industry to be able to grow more? Yeah, I mean, so that&rsquo;s true. I got started in Web3 space living interested in the in the intersection of music and Web3. So, we&rsquo;re a platform trying to help people sell NFTs, but you know, the the big thing with like startups, right? It&rsquo;s just supposed to have a problem statement, but the like artists don&rsquo;t struggle with the fact that they can&rsquo;t sell NFTs. That&rsquo;s not like a real industry problem.</p>
+            <p id="s1068"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=1068s" target="_blank" rel="noopener" data-pagefind-ignore>17:48</a>I think capturing value is a big issue. I think like middle men that are extractive are a big issue. I think people having to take concessions to find funding as creatives is a big issue. And even just sourcing funding and becoming like a like uh creative it&rsquo;s not starving like starving artists are the majority of artists. Um and so, I&rsquo;d say really looking at like, you know, how can you be building composable tools for creators, but also looking at like what are creatives like what what infrastructure do creatives actually like they don&rsquo;t have? Um is that I think just an important question to start asking. I think</p>
+            <p id="s1099"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=1099s" target="_blank" rel="noopener" data-pagefind-ignore>18:19</a>is in my opinion maybe too early to say what what developers should build. I feel like not enough creatives are actually looking at what we could build. Um and so, I&rsquo;d say like the most important thing is to really start creating that conversation. That&rsquo;s really what I&rsquo;m committed to doing here with We Them Media um is bringing together the minds, you know, with the technology, the minds thinking about economics, tokenomics, you know, but also the minds thinking about the future of the creator economy, the future of Hollywood, the future of major film production in the um I think most creatives in the world right now are are not happy. You see the</p>
+            <p id="s1128"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=1128s" target="_blank" rel="noopener" data-pagefind-ignore>18:48</a>writers strike you see in the US, right? Something You see musicians complaining about their deals. Um I think you see actors talking about how they don&rsquo;t necessarily have the kind of benefits they want especially with AI coming into play, right? They&rsquo;re getting upset, etc. Um and so, I think just starting to look at you know, what are the grievances that creatives have around these industries and you know, what does it look like to start building like uh even just like social infrastructure, right? That can offer, you know, people the opportunity to choose paths to success that don&rsquo;t come with those same possessions and concerns. You know, so I don&rsquo;t know if that&rsquo;s</p>
+            <p id="s1163"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=1163s" target="_blank" rel="noopener" data-pagefind-ignore>19:23</a>really what it&rsquo;s about technology, but I think it is more about the practices that we agree on, right? And then how can we in the long term give creators, I guess, some say in like what those practices that we prescribe will be. Does that make sense? How do we decentralize so they have some say? Yeah, yeah, yeah. I think great great think music social media big industry in the world big decentralized matter of uh matter of matter of what&rsquo;s up that&rsquo;s sort of musicians now this is something about the blockchain dream build us like dream musicians about it the case of Germany from Germany so they</p>
+            <p id="s1197"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=1197s" target="_blank" rel="noopener" data-pagefind-ignore>19:57</a>can come into the actual dance like you know if you guys for yourself always try and like there&rsquo;s something about like I&rsquo;m not sure about the name but it&rsquo;s saying like several like uh what I can say like when you are given industry you need to create the industry like so that&rsquo;s cool about sharing Yeah, I do you know who I&rsquo;m talking about? Eek A the artist name, yeah? Eek A Eek A? Yeah, I think yeah. Yeah, yeah. I met him at that time and he did a presentation like their creator like creator economy space. And it was really cool being there and about channel like I&rsquo;m very</p>
+            <p id="s1228"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=1228s" target="_blank" rel="noopener" data-pagefind-ignore>20:28</a>bullish. I feel right now we have pods like one like podcast podcasting web like web video platform and so I think it&rsquo;s cool to like since I came in looking at already audio stuff, it&rsquo;s cool to see how they do a new a new wave of creative applications emerging. And I think it&rsquo;s cool that he&rsquo;s already like creative asking the questions. I think a lot of the platforms in this space, they come in really focused on creators and then they overtime they you know burn their money and then they become concerned with like profits and then they kind of just become you know the same the same as the extractive</p>
+            <p id="s1259"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=1259s" target="_blank" rel="noopener" data-pagefind-ignore>20:59</a>industries which exist also to survive. That&rsquo;s all. Um but I really appreciate your time. I I you sitting with me through the technical difficulties. Uh yeah, I appreciate everyone like joining up, sharing their different minds, ideas together. It&rsquo;s very blessed. And do you have any final thoughts for my audience before we wrap up? Um one thing I&rsquo;ll say to your audience before we wrap up, uh like you got to put it together with personal maybe just be on your own like when you&rsquo;re building something like build something don&rsquo;t care about what they think is. Like they usually say build take it as a stupid thing and build it.</p>
+            <p id="s1294"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=1294s" target="_blank" rel="noopener" data-pagefind-ignore>21:34</a>Don&rsquo;t just take like what they have to do like what they have to do like whatever you have like basic problems you want to solve don&rsquo;t just consider like even being given challenges that are there like pushing you on this video like build focus like that. Make it simple like begin and make it simple and stupid you so that you can build build build so that you can build. Yeah, just keep building. Yeah, just keep building. So my final thoughts to them, my fellow colleagues and the rest Any any any thoughts in Swahili? Uh enter today. Okay, I can just do the speaking but Swahili because it&rsquo;s my it&rsquo;s my my</p>
+            <p id="s1333"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=1333s" target="_blank" rel="noopener" data-pagefind-ignore>22:13</a>language my mother tongue. Uh so Uh you like what you have in hand it&rsquo;s all of that going to be created at the end. You will be. All right. Well, thank you everybody for tuning in to another episode of Building the Future I&rsquo;m really excited to to be here in Nairobi to be at this hackathon to be getting to see you know, just people who are super invested in this ecosystem growing in the future of the African economy, people who are interested in the future of technology. I&rsquo;m just blessed to be on this journey. I&rsquo;m blessed to have you here with me, Shane. So thank you again.</p>
+            <p id="s1382"><a class="wt-at" href="https://www.youtube.com/watch?v=hIS-Q0EEXPs&amp;t=1382s" target="_blank" rel="noopener" data-pagefind-ignore>23:02</a>Um yeah, thank you for listening and have a great rest of your day. I like to say booyah to my episode, so 3 2 1 Booyah. That was really</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+<div id="after-transcript" tabindex="-1"><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from Kenya.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-kenya">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="bybit-kenya-mascot-on-getting-paid-to-dance.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/iq2RZffD-6E-640.jpg" srcset="../stills/iq2RZffD-6E-320.jpg 320w, ../stills/iq2RZffD-6E-480.jpg 480w, ../stills/iq2RZffD-6E-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>1:40</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Nairobi · Antler</span>
+                    <h3 class="report-title">Bybit Kenya’s dancing robot.</h3>
+                    <p class="report-byline">By <strong>Aziz</strong></p>
+                </div>
+            </a>
+            <a href="why-africa-has-few-crypto-creators-chasing-mavericks.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/F-vrPxqAwHY-640.jpg" srcset="../stills/F-vrPxqAwHY-320.jpg 320w, ../stills/F-vrPxqAwHY-480.jpg 480w, ../stills/F-vrPxqAwHY-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>1:46</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Nairobi · Antler</span>
+                    <h3 class="report-title">Chasing Mavericks CEO on crypto creators.</h3>
+                    <p class="report-byline">By <strong>Aziz</strong></p>
+                </div>
+            </a>
+            <a href="coffee-farming-financed-on-chain-project-mocha.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/PdxBcoAEyVo-640.jpg" srcset="../stills/PdxBcoAEyVo-320.jpg 320w, ../stills/PdxBcoAEyVo-480.jpg 480w, ../stills/PdxBcoAEyVo-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>1:41</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Nairobi · Antler</span>
+                    <h3 class="report-title">Coffee on the blockchain. Project Mocha.</h3>
+                    <p class="report-byline">By <strong>Aziz</strong></p>
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../places.html#nairobi">Everything filmed in Nairobi</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

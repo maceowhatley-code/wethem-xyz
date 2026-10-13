@@ -1,0 +1,898 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Twenty-six minutes at the DeSci Summit during ETH Denver 2024, part of a run of interviews We Them Media filmed in Colorado to document people of color in…">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/desci-womens-health-and-funding-the-gap-denver">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="Funding the Gap in Women's Health | ETH Denver">
+    <meta property="og:description" content="Twenty-six minutes at the DeSci Summit during ETH Denver 2024, part of a run of interviews We Them Media filmed in Colorado to document people of color in…">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/desci-womens-health-and-funding-the-gap-denver.jpg?v=aecf900147">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="DeSci, women&#x27;s health, and who gets funded">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/desci-womens-health-and-funding-the-gap-denver.jpg?v=aecf900147">
+    <meta property="og:url" content="https://wethem.xyz/watch/desci-womens-health-and-funding-the-gap-denver">
+    <title>Funding the Gap in Women's Health | ETH Denver &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/desci-womens-health-and-funding-the-gap-denver#video",
+  "name": "Funding the Gap in Women's Health | ETH Denver",
+  "description": "Twenty-six minutes at the DeSci Summit during ETH Denver 2024, part of a run of interviews We Them Media filmed in Colorado to document people of color in Web3. The subject is Laura Minquini, who started Athena DAO, and the conversation is about decentralized science, women's health research, and who ends up holding the money. She corrects the framing in her first answer. \"I guess technically I'm the founder, but then because it's a DAO, there's a lot of other people that contribute\", she says, and names Inez Santos Silva as the second person on board. Her route in is not the usual one. Fashion editorial, then trend forecasting for luxury groups, then her own company doing licensed fashion phone cases sold to Apple, Amazon and Neiman Marcus. Crypto arrived during the pandemic, and she came to it through longevity rather than through NFTs, learning about Vita DAO, the first bio DAO in decentralized science. Contributing there is where the problem became visible: \"there's not that many women here\", and \"I realized that the funding wasn't there, that we're also not talking about it enough\". The conclusion she drew was not to petition anybody. It was that \"we're just going to have to create our own thing\". The strongest stretch of the tape is her answer to the idea that women's health has no market. She starts with the joke she is tired of, that \"guys make fun of girls from aligning our chakras or crystals and incense and creams\", and then explains where that behaviour comes from: a doctor saying \"sorry but there's no way to diagnose your endometriosis other than eight operations\". The spending, she argues, is the proof rather than the punchline. \"women are spending that capital. So that capital is available.\" Industry claiming there is no market she calls absurd. She is blunt about the timeline too. \"it's 2024 and women are still dying giving birth. And it disproportionately affects women of color\", and in the same breath, that \"we can't figure out how women could have children without dying\". On fertility she says \"we are also not educating women into their fertility\", that \"The reality is that by 35, it's already very hard\", and that the economics compound it: \"our parents owned their homes when they were 25\", while people at that age now cannot picture affording either a house or a baby. The last third is craft. Running a DAO, she says, means \"you have to think of it as coordinating multiple startups in one\", each working group with its own KPIs, and leadership that \"it cannot be flat, because flat can go very wrong\". She likes the current market for it: \"it's been very good to build during the bear time because it's truly people that are motivated that join\". Asked about research on people of color, she goes to the data. The most complete biobank in the world is in the UK, she says, and \"a lot of that genomic data doesn't include a lot of samples from people of color\". The fix is more studies in Africa, India, Southeast Asia and Latin America, and scientists onboarded there. She puts it in one line: \"You have to be intentional. That's the biggest thing.\" The rest of the tape is what intentional looks like in practice.",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/zAIth9lIeP0/maxresdefault.jpg"
+  ],
+  "uploadDate": "2024-06-21T21:27:52Z",
+  "embedUrl": "https://www.youtube.com/embed/zAIth9lIeP0",
+  "url": "https://wethem.xyz/watch/desci-womens-health-and-funding-the-gap-denver",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT26M42S",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "At the DeSci Summit, and who founded Athena DAO",
+      "startOffset": 0,
+      "url": "https://wethem.xyz/watch/desci-womens-health-and-funding-the-gap-denver?t=0",
+      "endOffset": 101
+    },
+    {
+      "@type": "Clip",
+      "name": "A cancelled flight, and two and a half days of ETH Denver",
+      "startOffset": 101,
+      "url": "https://wethem.xyz/watch/desci-womens-health-and-funding-the-gap-denver?t=101",
+      "endOffset": 194
+    },
+    {
+      "@type": "Clip",
+      "name": "From fashion editorial to phone cases to crypto",
+      "startOffset": 194,
+      "url": "https://wethem.xyz/watch/desci-womens-health-and-funding-the-gap-denver?t=194",
+      "endOffset": 288
+    },
+    {
+      "@type": "Clip",
+      "name": "Vita DAO, longevity, and the first bio DAO",
+      "startOffset": 288,
+      "url": "https://wethem.xyz/watch/desci-womens-health-and-funding-the-gap-denver?t=288",
+      "endOffset": 328
+    },
+    {
+      "@type": "Clip",
+      "name": "Not that many women here",
+      "startOffset": 328,
+      "url": "https://wethem.xyz/watch/desci-womens-health-and-funding-the-gap-denver?t=328",
+      "endOffset": 403
+    },
+    {
+      "@type": "Clip",
+      "name": "The barrier of entry, and the next billion people",
+      "startOffset": 403,
+      "url": "https://wethem.xyz/watch/desci-womens-health-and-funding-the-gap-denver?t=403",
+      "endOffset": 483
+    },
+    {
+      "@type": "Clip",
+      "name": "Chakras, crystals and what the doctor actually says",
+      "startOffset": 483,
+      "url": "https://wethem.xyz/watch/desci-womens-health-and-funding-the-gap-denver?t=483",
+      "endOffset": 607
+    },
+    {
+      "@type": "Clip",
+      "name": "Open doors, and what she wants said about 2024",
+      "startOffset": 607,
+      "url": "https://wethem.xyz/watch/desci-womens-health-and-funding-the-gap-denver?t=607",
+      "endOffset": 694
+    },
+    {
+      "@type": "Clip",
+      "name": "Coordinating people and resources",
+      "startOffset": 694,
+      "url": "https://wethem.xyz/watch/desci-womens-health-and-funding-the-gap-denver?t=694",
+      "endOffset": 761
+    },
+    {
+      "@type": "Clip",
+      "name": "What IVF costs, and what it does not deliver",
+      "startOffset": 761,
+      "url": "https://wethem.xyz/watch/desci-womens-health-and-funding-the-gap-denver?t=761",
+      "endOffset": 915
+    },
+    {
+      "@type": "Clip",
+      "name": "Founder-led or DAO-led, and what she is not",
+      "startOffset": 915,
+      "url": "https://wethem.xyz/watch/desci-womens-health-and-funding-the-gap-denver?t=915",
+      "endOffset": 1070
+    },
+    {
+      "@type": "Clip",
+      "name": "Community equity, and the word corporation",
+      "startOffset": 1070,
+      "url": "https://wethem.xyz/watch/desci-womens-health-and-funding-the-gap-denver?t=1070",
+      "endOffset": 1155
+    },
+    {
+      "@type": "Clip",
+      "name": "Building in the bear, and what a bull run does",
+      "startOffset": 1155,
+      "url": "https://wethem.xyz/watch/desci-womens-health-and-funding-the-gap-denver?t=1155",
+      "endOffset": 1368
+    },
+    {
+      "@type": "Clip",
+      "name": "Women of color, biobanks, and where the samples are not",
+      "startOffset": 1368,
+      "url": "https://wethem.xyz/watch/desci-womens-health-and-funding-the-gap-denver?t=1368",
+      "endOffset": 1602
+    }
+  ],
+  "creator": {
+    "@type": "Person",
+    "name": "Maceo",
+    "url": "https://wethem.xyz/people/maceo"
+  },
+  "transcript": "Well, hello everyone and welcome to this interview. We're here in East Denver representing We Them Media, myself, Gabrielle, Julianne, Foran, and Amir Sirsu. And we're here doing interviews to document people of color in Web3 and what they're up to to help people better understand what is Web3, what does adaptation look like here, and what are people that are representing people of color doing in this space and why. And so today we're at the DeSci Summit here in Colorado, East Denver. With Lorah, one of the founders of AthenaDAO. Are you the only founder?\nI guess technically I'm the founder, but then because it's a DAO, there's a lot of other people that contribute. Yeah. And my second person on board that is like the co-signer is Ines Santos Silva. She's in Europe right now, but it was first me, then second her, then a bunch of other people that have been so important to make this happen. It's technically with DAOs, it's hard because, you know, in venture capital and in Web3 and in companies, they believe in like the founder-led movement. And a DAO is a part of that, but it's also just a lot of people that make it happen. So, but yeah, I'm so thrilled to be your first interview and especially congratulations for getting this project going and being here doing this. So --\nThank you so much.\nI'm glad to be part of that too.\nI really appreciate that. I feel like the journey is kind of starting. I feel like this is the beginning of definitely a higher production value overall. I'm excited to be doing Web3 content here, but also to go back home and do more local content and also be able to use the same tools. So I'm so thrilled and so appreciative of you being here with us. And yeah, I'm really intrigued to hear about how ETHDenver has been for you so far. How has it been?\nSo I arrived very late because my flight was canceled. So it's been like, go, go, go. And unfortunately, I'm only here for 2 days and a half. So I try to have -- I have to try to make the most of it. But even going to the events, you realize that there's like a very big culture here. ETHDenver has been going on for a while. So some people, they're like OGs of ETHDenver. It's a conference that people that have been coming here a long time say it's grown so much. And then there are people that talked about how it was during the bull run versus like how it is now, which is maybe a bull run. So it's very interesting, but I think it's so great to have it in a place where there's space, it's a nice scenery, it's warm enough. It's still winter technically in most of North America, and it's still a nice vibe. And you feel the people are super excited to be here. It kind of kicks off the year of conferences, I feel like, for crypto. Yeah, which is great.\nI would definitely say so. I came to Denver last year as well, and I actually wanted to do content, but I felt too shy, so I didn't really do any interviews with anybody. But I feel like that was really, for me, like, oh, wow, I should be going to more of these conferences. I feel like I'm Met so many cool people. I feel like all the questions I have on like the technical side or even just areas I don't know, like I first heard of DeSci last year, like my last day at ETH Denver, and I went home like, what is that? You know, like where's the money in that?\nI don't really understand. And so I was pretty excited last night when someone approached us and was like, oh, you guys come to the summit, you know, publishing, it's being disrupted. That's what we're interested in and just like to better understand the space. And then she'd already expressed interest in AthenaDAO and to see that you speaking today was definitely super exciting. And yeah, I'm I'm excited to see things come full circle in that way. And I love to hear how you got into Web3 more broadly. And I know you said you worked in like luxury goods before coming into this space. And yeah, I'm really interested.\nYeah. So my career was completely different. I started in fashion editorial and the creative side of things. I moved into business, then I was doing trend forecasting for luxury groups. So funnily enough, LVMH, Bernard Arnault that I mentioned in the talk, LVMH was one of my clients, Louis Vuitton. And I worked with a couple of other companies in the group doing brand and go-to-market strategies. And from that, I had an opportunity to start a company myself. We were the first company to do licensed fashion design cases. Like, we work with super big companies, like cases for, like, phones, for phones, for Apple. Yeah. So we took, you know, we were selling to Apple, Amazon, and also we did all the special cases for, like, Neiman Marcus back in the day and Lane Crawford in Hong Kong, Selfridges.\nWe did collabs with with Pierre Hardy, which is like a really big shoemaker, Giovanna Battaglia. And then we even did a prototype for, oh my God, why is that? Why am I blanking out in the shoes that everybody wants to have with the red soles? Louboutin. We even did that. But that gave me an exposure of really running a consumer business. And I got into DSI through, during the pandemic, You know, it was a bull run. So I understood like Ethereum, Bitcoin was a new way to accrue value or to store value. You know, people had had like their economy -- I mean, 2008 was a big moment when the economic crash happened and other ones have happened.\nSo people have looked for other ways in which they can either store value or create value. And crypto became that, I think, during the pandemic. So, I was not into the NFT craze. I was not into like the 4 screens and trading. But, from my work in longevity because I'm very passionate about it, I learned about VitaDAO, which is the first bio DAO in decentralized science, DeSci.\nI didn't know that. I never knew what VitaDAO was.\nI was always confused.\nYeah.\nSo, VitaDAO was the first one to launch and the DeSci movement in terms of funding really kicked off with that. Now, there's the tooling and all these other projects that are very separate from funding.\nMm-hmm.\nBut I became a contributor to VitaDAO. And I just, as I said in my talk, I realized that, wait, there's not that many women here. And wait, we're still addressing some of the same things that we were addressing before in legacy systems. And I became very aware of reproductive longevity, which is everything that impacts women. And I realized that the funding wasn't there, that we're also not talking about it enough. I didn't know about this either until I learned it like 3 years ago. And then I realized a lot of women don't know about this. And then I thought, well, we need to get women into Web3 and we need to get women interested into this space. So, that was part of the inception of AthenaDAO because I feel like it was a lot of the same people still getting the upside in Web3.\nMm-hmm.\nAnd that means that we need to, hey, we're just going to have to create our own thing to also get other people involved. And I feel very strong about women getting into Web3. The barrier of entry can be very tricky, even for men, getting a wallet, understanding, sending a token, getting a token, not getting an NFT. The whole notion of you're like this self-custodian. If you send it to the wrong wallet, it's gone. And there's so many intrinsic difficult things in Web3. And then so many technical developers, very incredibly smart people, but then they're talking all to themselves. And you're like, this is not how we're going to onboard like the next 1 billion people. We will get on board them when we make it very simple or when it's about something that women care about. And we all care about our health. Yeah, right.\nYeah, I really think like hearing your panel downstairs, I was Really, I would say moved, or I think it really clicked for me when you were talking about how like people are spending like forty thousand dollars on these bags, for example. But and like these are things they don't need, and things that they simply want. And there are things that women like need to have things that maybe like they just want to feel full. They want to have children, you know, and they don't have. There's not even like there's a market, but there's no like product to acquire because the funding is not there.\nThey're giving us. I just want to add to this, and something that I always say is that you know guys make fun of girls from. aligning our chakras or like crystals and incense and creams. It's because that's all there is. Like you go to the doctor and the doctor says, sorry, but there's no way to diagnose your endometriosis other than 8 operations. Or sorry, but there's no treatment for PCOS. Or sorry, your hormones. Or sorry, you're a woman, we don't know. Or you're a woman, just take it.\nYeah.\nSo what do we do? We go find like crystals to see if we can align our hormonal period, like our hormones, and feel better.\nYeah.\nBut if we had solutions, women would be actually buying them.\nI hear what you're saying. You're saying there's demand and right now the incumbents aren't super thrilling, aren't fulfilling, aren't satisfying the desires.\nAnd then I really dislike when we make fun of women for, oh, they spend too much, or they're buying creams, or they're buying beauty. or they want supplements. That's because that's what's available. Like you said, it's an incumbent of what's being offered. And we'll do anything to try to feel better or to -- if you're in a lot of pain, so what if buying tons of makeup and putting it on makes you feel better? That's what you're going to do.\nYeah.\nThe fact of the matter is, it's -- women are spending that capital. So, that capital is available. So, biopharma or industry saying, oh, but there's no market. It's absurd.\nIt is obscene. Yeah. And I'm really excited for what you do and just like to continue to learn more about the femtech space because I feel like I am very bullish and I'm very excited to see like what problems are resolved, even just to better understand the existing problems. I don't remember like the researcher or the scientist downstairs who was speaking, but I know like Gabrielle does work around endometriosis.\nI love her question. Yeah.\nAnd I'm excited to continue to learn about what she's doing as she continues on her scientific journey. I feel like --\nWell, I think she's going to join AthenaDAO now. So very excited about that because for us, our mission is to also get more women in science, even working with this kind of ecosystem, because our network is really great in terms of the researchers, you know, like Dr. Joshua Johnson. He is -- he's leading one of the best labs working reproductive longevity in America. He's here at Colorado University. He's collaborated with us. And then I feel that a lot of women that are either going into medical school, coming out, or researchers in STEM and biotech, that they get exposed to this network is great because it also opens the doors. And I think one thing that DSITE did really well, for instance, in longevity is open doors. And that's what we want to do, open doors for women, for women of color, for men, men of color, everything, you know. But our focus is obviously already giving a much easier entrance for women where we also try to make it very simple. Like, if all you want to do is subscribe to our newsletter because that's what you're used to, that's all it takes.\nMm-hmm.\nYou don't have to have a wallet. You don't have to be on Discord. If you talk about us, even if you don't have like any, you know, you're not necessarily involved, it's already a major thing. And I want to say something specifically even for women of color, that it's 2024 and women are still dying giving birth. And it disproportionately affects women of color. And to me, that's insane because it's 2024 and we're having AGI, like finally nascent AI, I guess, sorry, sentient AI. And we can't figure out how women could have children without dying.\nSafely. Yeah.\nIt's like, it doesn't make sense.\nYeah. And you're saying it's just like, like, like poor distribution of resources.\nYes.\nAnd I think it's really exciting what you're talking about really is starting to help people coordinate, coordinate people and coordinate resources to start to address these problems with people who are value-aligned and driven to actually make the difference.\nYeah. Because if they're not going to make it happen for us, we're going to make it happen for us.\nYeah. Yeah. Yeah. So you're like, you're, you're part of -- you're a leader in a movement. And what has it been like for you kind of co-creating this community and this movement inside and under the umbrella of Athena DAO?\nSuper exciting. I think there's a lot of work to do in terms of education. And even as I said it in my talk, I think the hardest part is sometimes even the fact that women don't know this, you know, because for instance, you're going to medical -- you're going to go to medical school. But a lot of my -- even my girlfriends, when I got into this, they're like, why are you doing that? There's already apps, there's already IVF. I'm like, First of all, IVF is still too painful. It's 40 years, it's 45 years old IVF, and it's still not very efficient. Women that freeze their eggs, it's still very painful. All those hormone treatments, very expensive. So it's very prohibiting. If you're not middle class or upper middle class, you cannot get IVF because it's just so expensive.\nYou said it's like a quarter million dollars, what you said downstairs?\nWell, if you do up to like 5 cycles, like it can go $150,000. There's people who spend up there. according -- it's like $30,000 to $45,000, $60,000 per cycle. And if you don't get the baby, then, then you have to do the whole cycle again. Yeah. The hormones, all of that stuff. So if you don't have that kind of money --\nYeah. And traditionally, I take it, it takes more than one cycle or people want more than one child. Is that what you're saying?\nWell, the problem is that we are also not educating women into their fertility. The reality is that by 35, it's already very hard. And a lot of women are going to get their eggs froze -- I mean, the egg freezing too late. So already then, by then, the eggs are not as good quality. And by the time they actually try to do the IVF, they're even older. So when you think of those 2 combined, the efficacy rates keeps going down. So the older you are, the harder it's going to get. And the older you froze your egg, the harder it's going to get too. And that efficacy rate is crucial because that's where the magic happens in terms of being able to have the kids. And a lot of women come out of it with no success.\nHmm.\nSo it's tricky because even freezing your eggs, you're $25, you're 25 years old, nobody's talking about it. A lot of women today don't even want kids. Like, that's a reality. And the other part is that Our economy is not so great for young people. You know, our parents owned their homes when they were 25, or there was economic mobility. And most people right now at 25, they're like, I don't even make enough to like live, never mind buy a house and have a baby. So it's not even in their, you know, in their frame of thought. So by the time you actually have money in your 30s, we start seeing the problems.\nI understand.\nYeah.\nAnd by that time, it's almost too late. It's like, like, like, there's --\nWell, it's just every day, every hour, every year reduces the chance of that happening.\nAnd I guess my, my final question kind of ties back to what you were speaking about initially around like the, like being like kind of founder-centric as like a startup versus a DAO. You kind of speak to there being a difference. And I'm really like, I've heard a lot of people speak about that difference. I'm really curious about how you see that difference, especially in how you approach leadership inside of AthenaDAO. inside wanting to make a difference for a lot of, a lot of people, you know, in the intersectional community?\nWell, I mean, I guess I'm the founder because I got the first steps going and I'm still like the first person going to make a lot of the pitch. But I always say that I wouldn't have been able to make a lot of this happen if I hadn't had the researchers that are in our core team with me. I'm very passionate about the science, pushing scientists funding the science and pitching the notion that this is important, but I'm not a scientist myself, right? So, I don't think anybody would've trusted me saying, this is the science we should fund, if it hadn't been me alone. And that's the very powerful tooling about DAOs, is that you can bring people that are so motivated, that have the expertise to work in this for a period of time.\nYou know, our science and deal flow team, which is the one that I was mentioning to you, most of the people working there do 5 to 10 hours a week, and they do it on their own, like independent. We have weekly tasks, reach-outs, follow-ups, and all of this. And it's very powerful tooling because some of them are labs, some of them are in industry, some of them are in school, and they're still motivated to come do this with us and push things forward. So, That is the coordination that Web3 brings. That is very powerful tooling that doesn't happen in a startup because in a startup you have to hire 10 people and you're the founder and you guys have to hit certain metrics to raise more money.\nIn a DAO, it's almost the same. You have to figure out how to get the funding, all these things, but the coordination is completely different and the motivations are completely different.\nAnd I know that was my last question, but hearing you speak more about, like, I guess the breakdown inside of AthenaDAO, How did you guys come to determine structures for coordination inside of the DAOs? I feel like that is still a big question is what is the most efficient way to coordinate in this really proving ground? You are proving concepts for coordination and evidently in a space where there's not a lot of innovation already happening.\nIn the end, you have to think of it as coordinating multiple startups in one.\nOh, okay.\nBecause each working group is almost like its own startup and you have to have at least in my -- what we've done, very specific KPIs, which you always talk in industry, and metrics of success. I think one thing is that in Web3, there's a lot of talk about community, decentralization, we're all in this together. But in the end, to get it done, There's going to have to be very specific people leading each project, having what is the end goal, and almost working it like any corporation. And I'm sorry to say the word corporation for a DAO, but if you want to actually get researchers to believe you, funders to believe you, other stakeholders that are like, you know, you need them to collaborate with you. you will have to show a level of professionalism that you would do with any other institute, like regular institute, whether it is industry or academia.\nI see. And so you're really saying that having like these different groups to coordinate with allows both for like a more heightened reputation of people that are coming from different points, different values, or different --\nYou still need like one, like a couple of stewards. You still need leadership. Yeah, like it cannot be flat. Because flat can go very wrong. You're still going to need somebody that can say, hey guys, are we on time? Or hey, what is the next thing? That's super important. And I'm saying, I'm not saying that it has to be like me, but that's why I say each group, it is because every group has its own mandates. And that is the thing about DAOs that, well, we're also not so huge yet. So to come talk to me in a year or after a bull run when you have thousands of people joining and then you're like, how do we coordinate all of this?\nYeah.\nBecause for us, it's been very good to build during the bear time because it's truly people that are motivated that join, you know, it's there. There's no upside. It's in the bull run when everybody's like, I want to get some of this. That gets tricky because there's just tons of overflow.\nYeah.\nAnd how do you keep people motivated? How do you keep them engaged? How do you make sure that they get out of it what they want to get out of it while also contributing? I mean, it's exciting, but it is kind of still -- I'm sure you're going to talk to a lot of people that have their own theories of how we make this happen.\nYeah, but I mean, I appreciate it because even inside this project, I tried to have different channels on my Discord so we could coordinate different committees when there's only 5 people really are in my Discord doing stuff in the first place. Why do we have all these channels? I feel so overwhelmed.\nI've done that. I'm like, I'm always like, kill that channel, kill that channel. Like nothing's happening. And there's nothing worse than crickets in the channel. You know, I'm like, why is it only one channel?\nYeah. And that's kind of where we're leaning towards now. It's like, oh, I guess I should just have one channel. We should do one thing at a time as opposed to me doing different things with different people who are not necessarily like committed to doing it all the way through in the first place.\nAnd it takes that 4, 3, Committed people. It took that for us, and that's how we grew. It just takes a team, like a small team that are like, \"Let's go!\" Circle. Yeah, and then you expand the circles. But it takes that.\nAnd I feel like that's been a big part of why I've been so focused on community first because I feel like finding people that are value aligned and like excited about it. I feel like find those people first rather than like trying to do it. Find people that maybe don't care as much and trying to make it work. I feel like find those people. I feel like it's going to make it go so much faster when we do finally sit down at the table, and I feel like. Coming here last year and being like in this space of, okay, I'm going to meet the Black people versus this year coming and like having my girlfriend, obviously Julianne as well, one of my like core community members here is like super exciting.\nI feel like it's very full circle to see who's excited about what I'm up to and supporting me. And yeah, and even just hearing you speak about the multiple startups, I feel like it's so like inside of one DAO, it's like really about accountability around each individual project and making sure that someone is actually accountable. Because I feel like if I'm the person accountable for 5 channels in the Discord, then it's not really likely that I'm going to be on top of anything.\nIt gets crazy because you start working like 14-hour days and you're like, okay, this is cute for maybe 3, 6 months, but if this is going to be my life, I better just own the entire DAO, which is not the point, you know?\nYeah.\nLike, that's not what it should be.\nYeah.\nSo creating those pods of people that are accountable from within that first core and then expanding, even say people, they want to feel that they're valued and they want to feel independent. That's another thing in Web3 that's super important, that people have agency. And I think a lot of it is A/B testing because you can get one thing right and you can get a lot of things wrong, but you just have to keep trying.\nYeah, trying and iterating. And I feel like that's what we've been doing. And I really appreciate you sitting down with us, Gabrielle. Do you have any more specific questions around AthenaDAO and kind of being someone interested? I'd love to give you the floor to Yeah, ask some questions during your space. I kind of just wanted to tie it back to kind of the streamline of the interviews highlighting voices of color.\nAnd you were mentioning the health disparities and just like lack of the inclusion of women of color in research.\nSo I was wondering what initiatives does AthenaDAO take to not only increase the amount of people of color that are the researchers, but also including research that is focusing on people of color as well?\nWell, I mean, the first layer of it is already making sure that women are included, right? And let's start with, like, I was saying today that there was this meme that our partner Molecule showed, which is Web3 is hard, biotech is hard, so DeSci is very hard. And I said, well, DeSci with women's health is like Olympic effort. Super hard. Super, super, super, super hard. So the first part is already making sure that women are brought into the space and women are included. Then the second part is obviously trying to find when we're doing those, when we're looking at more specific clinical trials and inclusion, it's trying to see how we can put incentives that would make sure that we're paying attention to other ethnicities and geographies.\nSo one thing I wanted to mention, for instance, the most complete biobank in the world is in the UK because it's nationalized healthcare, right? It's centralized. So, they've been able to collect a lot of data. But a lot of that genomic data doesn't include a lot of samples from people of color. And one thing that we have to do is actually start to fund people, like more studies in Africa, more studies in India, in Southeast Asia, even Latin America, to get all those sample sizes because obviously how There are things that happen to certain genotypes that don't happen to others. And paying attention to that is super crucial.\nSo, how do we onboard those scientists across the globe that will be able to help us with that? Even in the US, I think that there are projects that are specifically working on that, and we've become more attuned to it. But it's a monumental effort in terms of even access to healthcare. That's also very restrictive as to who has the dollars to get, you know, We were saying the big thing is that having children, it is a fact that you have more access to healthcare that prevents you from dying when you have a child, and that in 2024 this is still happening is not correct.\nSo us ourselves, we try to onboard obviously more people in other areas that are not just in North America. We're very happy that we have people in Asia, we have people in India, a lot in Mexico. So we've really had the reach out in terms of like very different ethnicities. We had somebody in Africa, but she kind of dropped out. So we're sad. We need to find -- and it's that one person is not enough.\nYeah.\nWe really need to onboard like a lot. You know, we need to work also on onboarding different chapters and people that are able to focus on those areas and onboard more of those scientists so that when we're looking at funding and research, the focus is working with those different phenotypes and those kind of Very intentional collection of data. You have to be intentional. That's the biggest thing.\nAnd you know, I'm once again super honored that you're here with us. I think it is incredible to meet a Mexican woman founder here in this space. You know, building international community that is committed to building things that serve a global population. So thank you so much. Thank you.\nThank you, and let's do this in Spanish.\nAdiós! Adiós!",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Denver",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "url": "https://wethem.xyz/places#denver"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Denver Unfiltered",
+    "url": "https://wethem.xyz/portfolio#p-denver"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Web3 Governance",
+      "url": "https://wethem.xyz/topics/web3-governance"
+    },
+    {
+      "@type": "Thing",
+      "name": "Crypto",
+      "url": "https://wethem.xyz/topics/crypto"
+    }
+  ],
+  "keywords": [
+    "Web3 Governance",
+    "Crypto"
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Denver Unfiltered",
+      "item": "https://wethem.xyz/portfolio#p-denver"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "DeSci, women's health, and who gets funded",
+      "item": "https://wethem.xyz/watch/desci-womens-health-and-funding-the-gap-denver"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place], who[data-pf-who]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2024-06-21" data-pf-vid="zAIth9lIeP0" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;26:42&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="Denver" data-pf-country="United States" data-pf-project="Denver Unfiltered" data-pf-who="Maceo">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-denver">Denver Unfiltered</a></li>
+            <li aria-current="page">DeSci, women's health, and who gets funded</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">DeSci, women's health, and who gets funded.</h1>
+
+    <p class="wt-byline"><strong>Laura Minquini</strong> &middot; Reported by <strong><a href="../people/maceo.html">Maceo</a></strong> &middot; Denver &middot; 27 min</p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="zAIth9lIeP0" live postersrcset="../stills/zAIth9lIeP0-320.jpg 320w, ../stills/zAIth9lIeP0-480.jpg 480w, ../stills/zAIth9lIeP0-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/zAIth9lIeP0?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="DeSci, women&#x27;s health, and who gets funded, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+    <p class="wt-note wt-credit">Executive producer: C.Y. Lee</p>
+
+    <div class="wt-prose">
+            <p>Twenty-six minutes at the DeSci Summit during ETH Denver 2024, part of a run of interviews We Them Media filmed in Colorado to document people of color in Web3. The subject is Laura Minquini, who started Athena DAO, and the conversation is about decentralized science, women&rsquo;s health research, and who ends up holding the money.</p>
+            <p>She corrects the framing in her first answer. &ldquo;I guess technically I&rsquo;m the founder, but then because it&rsquo;s a DAO, there&rsquo;s a lot of other people that contribute&rdquo;, she says, and names Inez Santos Silva as the second person on board.</p>
+            <p>Her route in is not the usual one. Fashion editorial, then trend forecasting for luxury groups, then her own company doing licensed fashion phone cases sold to Apple, Amazon and Neiman Marcus. Crypto arrived during the pandemic, and she came to it through longevity rather than through NFTs, learning about Vita DAO, the first bio DAO in decentralized science. Contributing there is where the problem became visible: &ldquo;there&rsquo;s not that many women here&rdquo;, and &ldquo;I realized that the funding wasn&rsquo;t there, that we&rsquo;re also not talking about it enough&rdquo;. The conclusion she drew was not to petition anybody. It was that &ldquo;we&rsquo;re just going to have to create our own thing&rdquo;.</p>
+            <p>The strongest stretch of the tape is her answer to the idea that women&rsquo;s health has no market. She starts with the joke she is tired of, that &ldquo;guys make fun of girls from aligning our chakras or crystals and incense and creams&rdquo;, and then explains where that behaviour comes from: a doctor saying &ldquo;sorry but there&rsquo;s no way to diagnose your endometriosis other than eight operations&rdquo;. The spending, she argues, is the proof rather than the punchline. &ldquo;women are spending that capital. So that capital is available.&rdquo; Industry claiming there is no market she calls absurd.</p>
+            <p>She is blunt about the timeline too. &ldquo;it&rsquo;s 2024 and women are still dying giving birth. And it disproportionately affects women of color&rdquo;, and in the same breath, that &ldquo;we can&rsquo;t figure out how women could have children without dying&rdquo;. On fertility she says &ldquo;we are also not educating women into their fertility&rdquo;, that &ldquo;The reality is that by 35, it&rsquo;s already very hard&rdquo;, and that the economics compound it: &ldquo;our parents owned their homes when they were 25&rdquo;, while people at that age now cannot picture affording either a house or a baby.</p>
+            <p>The last third is craft. Running a DAO, she says, means &ldquo;you have to think of it as coordinating multiple startups in one&rdquo;, each working group with its own KPIs, and leadership that &ldquo;it cannot be flat, because flat can go very wrong&rdquo;. She likes the current market for it: &ldquo;it&rsquo;s been very good to build during the bear time because it&rsquo;s truly people that are motivated that join&rdquo;.</p>
+            <p>Asked about research on people of color, she goes to the data. The most complete biobank in the world is in the UK, she says, and &ldquo;a lot of that genomic data doesn&rsquo;t include a lot of samples from people of color&rdquo;. The fix is more studies in Africa, India, Southeast Asia and Latin America, and scientists onboarded there. She puts it in one line: &ldquo;You have to be intentional. That&rsquo;s the biggest thing.&rdquo; The rest of the tape is what intentional looks like in practice.</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../places.html#denver">Everything filmed in Denver</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="onchain-science-proof-of-knowledge-desci-world-at-eth-denver-2024.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/GZSciAYuhWY-640.jpg" srcset="../stills/GZSciAYuhWY-320.jpg 320w, ../stills/GZSciAYuhWY-480.jpg 480w, ../stills/GZSciAYuhWY-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>30:00</span></span><span>Onchain science, proof of knowledge: DeSci World.</span></a>
+        <a class="wt-rail-card" href="what-decentralized-science-means-for-health-gabrielle-at-eth-denver-2024.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/19agkxpJH6Q-640.jpg" srcset="../stills/19agkxpJH6Q-320.jpg 320w, ../stills/19agkxpJH6Q-480.jpg 480w, ../stills/19agkxpJH6Q-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>6:41</span></span><span>What decentralized science means for health: Gabrielle at ETH Denver 2024.</span></a>
+        <a class="wt-rail-card" href="social-tokens-community-and-url-to-irl-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/4uN9BrX2Ztg-640.jpg" srcset="../stills/4uN9BrX2Ztg-320.jpg 320w, ../stills/4uN9BrX2Ztg-480.jpg 480w, ../stills/4uN9BrX2Ztg-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>18:21</span></span><span>Social tokens, and a conference for Cape Verde.</span></a>
+        <a class="wt-rail-card" href="a-first-interview-and-advice-back-to-newark-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/UkX8veGIl58-640.jpg" srcset="../stills/UkX8veGIl58-320.jpg 320w, ../stills/UkX8veGIl58-480.jpg 480w, ../stills/UkX8veGIl58-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:15</span></span><span>A first interview, and advice back to Newark.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c0"><a class="wt-t" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-s">At the DeSci Summit, and who founded Athena DAO</span></li>
+                <li class="wt-line" id="c101"><a class="wt-t" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=101s" target="_blank" rel="noopener" data-pagefind-ignore>1:41</a><span class="wt-s">A cancelled flight, and two and a half days of ETH Denver</span></li>
+                <li class="wt-line" id="c194"><a class="wt-t" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=194s" target="_blank" rel="noopener" data-pagefind-ignore>3:14</a><span class="wt-s">From fashion editorial to phone cases to crypto</span></li>
+                <li class="wt-line" id="c288"><a class="wt-t" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=288s" target="_blank" rel="noopener" data-pagefind-ignore>4:48</a><span class="wt-s">Vita DAO, longevity, and the first bio DAO</span></li>
+                <li class="wt-line" id="c328"><a class="wt-t" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=328s" target="_blank" rel="noopener" data-pagefind-ignore>5:28</a><span class="wt-s">Not that many women here</span></li>
+                <li class="wt-line" id="c403"><a class="wt-t" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=403s" target="_blank" rel="noopener" data-pagefind-ignore>6:43</a><span class="wt-s">The barrier of entry, and the next billion people</span></li>
+                <li class="wt-line" id="c483"><a class="wt-t" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=483s" target="_blank" rel="noopener" data-pagefind-ignore>8:03</a><span class="wt-s">Chakras, crystals and what the doctor actually says</span></li>
+                <li class="wt-line" id="c607"><a class="wt-t" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=607s" target="_blank" rel="noopener" data-pagefind-ignore>10:07</a><span class="wt-s">Open doors, and what she wants said about 2024</span></li>
+                <li class="wt-line" id="c694"><a class="wt-t" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=694s" target="_blank" rel="noopener" data-pagefind-ignore>11:34</a><span class="wt-s">Coordinating people and resources</span></li>
+                <li class="wt-line" id="c761"><a class="wt-t" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=761s" target="_blank" rel="noopener" data-pagefind-ignore>12:41</a><span class="wt-s">What IVF costs, and what it does not deliver</span></li>
+                <li class="wt-line" id="c915"><a class="wt-t" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=915s" target="_blank" rel="noopener" data-pagefind-ignore>15:15</a><span class="wt-s">Founder-led or DAO-led, and what she is not</span></li>
+                <li class="wt-line" id="c1070"><a class="wt-t" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1070s" target="_blank" rel="noopener" data-pagefind-ignore>17:50</a><span class="wt-s">Community equity, and the word corporation</span></li>
+                <li class="wt-line" id="c1155"><a class="wt-t" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1155s" target="_blank" rel="noopener" data-pagefind-ignore>19:15</a><span class="wt-s">Building in the bear, and what a bull run does</span></li>
+                <li class="wt-line" id="c1368"><a class="wt-t" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1368s" target="_blank" rel="noopener" data-pagefind-ignore>22:48</a><span class="wt-s">Women of color, biobanks, and where the samples are not</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Transcribed from the original audio and corrected for names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Well, hello everyone and welcome to this interview. We&rsquo;re here in East Denver representing We Them Media, myself, Gabrielle, Julianne, Foran, and Amir Sirsu. And we&rsquo;re here doing interviews to document people of color in Web3 and what they&rsquo;re up to to help people better understand what is Web3, what does adaptation look like here, and what are people that are representing people of color doing in this space and why. And so today we&rsquo;re at the DeSci Summit here in Colorado, East Denver. With Lorah, one of the founders of AthenaDAO. Are you the only founder?</p>
+            <p id="s30"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=30s" target="_blank" rel="noopener" data-pagefind-ignore>0:30</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I guess technically I&rsquo;m the founder, but then because it&rsquo;s a <a class="wt-gloss" href="../glossary.html#dao">DAO</a>, there&rsquo;s a lot of other people that contribute. Yeah. And my second person on board that is like the co-signer is Ines Santos Silva. She&rsquo;s in Europe right now, but it was first me, then second her, then a bunch of other people that have been so important to make this happen. It&rsquo;s technically with DAOs, it&rsquo;s hard because, you know, in venture capital and in Web3 and in companies, they believe in like the founder-led movement. And a DAO is a part of that, but it&rsquo;s also just a lot of people that make it happen. So, but yeah, I&rsquo;m so thrilled to be your first interview and especially congratulations for getting this project going and being here doing this. So --</p>
+            <p id="s79"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=79s" target="_blank" rel="noopener" data-pagefind-ignore>1:19</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Thank you so much.</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s80"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=80s" target="_blank" rel="noopener" data-pagefind-ignore>1:20</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I&rsquo;m glad to be part of that too.</p>
+            <p id="s82"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=82s" target="_blank" rel="noopener" data-pagefind-ignore>1:22</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I really appreciate that. I feel like the journey is kind of starting. I feel like this is the beginning of definitely a higher production value overall. I&rsquo;m excited to be doing Web3 content here, but also to go back home and do more local content and also be able to use the same tools. So I&rsquo;m so thrilled and so appreciative of you being here with us. And yeah, I&rsquo;m really intrigued to hear about how ETHDenver has been for you so far. How has it been?</p>
+            <p id="s102"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=102s" target="_blank" rel="noopener" data-pagefind-ignore>1:42</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So I arrived very late because my flight was canceled. So it&rsquo;s been like, go, go, go. And unfortunately, I&rsquo;m only here for 2 days and a half. So I try to have -- I have to try to make the most of it. But even going to the events, you realize that there&rsquo;s like a very big culture here. ETHDenver has been going on for a while. So some people, they&rsquo;re like OGs of ETHDenver. It&rsquo;s a conference that people that have been coming here a long time say it&rsquo;s grown so much. And then there are people that talked about how it was during the bull run versus like how it is now, which is maybe a bull run. So it&rsquo;s very interesting, but I think it&rsquo;s so great to have it in a place where there&rsquo;s space, it&rsquo;s a nice scenery, it&rsquo;s warm enough. It&rsquo;s still winter technically in most of North America, and it&rsquo;s still a nice vibe. And you feel the people are super excited to be here. It kind of kicks off the year of conferences, I feel like, for crypto. Yeah, which is great.</p>
+            <p id="s164"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=164s" target="_blank" rel="noopener" data-pagefind-ignore>2:44</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I would definitely say so. I came to Denver last year as well, and I actually wanted to do content, but I felt too shy, so I didn&rsquo;t really do any interviews with anybody. But I feel like that was really, for me, like, oh, wow, I should be going to more of these conferences. I feel like I&rsquo;m Met so many cool people. I feel like all the questions I have on like the technical side or even just areas I don&rsquo;t know, like I first heard of DeSci last year, like my last day at ETH Denver, and I went home like, what is that? You know, like where&rsquo;s the money in that?</p>
+            <p id="s164-2"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=164s" target="_blank" rel="noopener" data-pagefind-ignore>2:44</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I don&rsquo;t really understand. And so I was pretty excited last night when someone approached us and was like, oh, you guys come to the summit, you know, publishing, it&rsquo;s being disrupted. That&rsquo;s what we&rsquo;re interested in and just like to better understand the space. And then she&rsquo;d already expressed interest in AthenaDAO and to see that you speaking today was definitely super exciting. And yeah, I&rsquo;m I&rsquo;m excited to see things come full circle in that way. And I love to hear how you got into Web3 more broadly. And I know you said you worked in like luxury goods before coming into this space. And yeah, I&rsquo;m really interested.</p>
+            <p id="s209"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=209s" target="_blank" rel="noopener" data-pagefind-ignore>3:29</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah. So my career was completely different. I started in fashion editorial and the creative side of things. I moved into business, then I was doing trend forecasting for luxury groups. So funnily enough, LVMH, Bernard Arnault that I mentioned in the talk, LVMH was one of my clients, Louis Vuitton. And I worked with a couple of other companies in the group doing brand and go-to-market strategies. And from that, I had an opportunity to start a company myself. We were the first company to do licensed fashion design cases. Like, we work with super big companies, like cases for, like, phones, for phones, for Apple. Yeah. So we took, you know, we were selling to Apple, Amazon, and also we did all the special cases for, like, Neiman Marcus back in the day and Lane Crawford in Hong Kong, Selfridges.</p>
+            <p id="s209-2"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=209s" target="_blank" rel="noopener" data-pagefind-ignore>3:29</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>We did collabs with with Pierre Hardy, which is like a really big shoemaker, Giovanna Battaglia. And then we even did a prototype for, oh my God, why is that? Why am I blanking out in the shoes that everybody wants to have with the red soles? Louboutin. We even did that. But that gave me an exposure of really running a consumer business. And I got into DSI through, during the pandemic, You know, it was a bull run. So I understood like <a class="wt-gloss" href="../glossary.html#ethereum">Ethereum</a>, Bitcoin was a new way to accrue value or to store value. You know, people had had like their economy -- I mean, 2008 was a big moment when the economic crash happened and other ones have happened.</p>
+            <p id="s209-3"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=209s" target="_blank" rel="noopener" data-pagefind-ignore>3:29</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So people have looked for other ways in which they can either store value or create value. And crypto became that, I think, during the pandemic. So, I was not into the NFT craze. I was not into like the 4 screens and trading. But, from my work in longevity because I&rsquo;m very passionate about it, I learned about VitaDAO, which is the first bio DAO in decentralized science, DeSci.</p>
+            <p id="s328"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=328s" target="_blank" rel="noopener" data-pagefind-ignore>5:28</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I didn&rsquo;t know that. I never knew what VitaDAO was.</p>
+            <p id="s330"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=330s" target="_blank" rel="noopener" data-pagefind-ignore>5:30</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I was always confused.</p>
+            <p id="s332"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=332s" target="_blank" rel="noopener" data-pagefind-ignore>5:32</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah.</p>
+            <p id="s332-2"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=332s" target="_blank" rel="noopener" data-pagefind-ignore>5:32</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So, VitaDAO was the first one to launch and the DeSci movement in terms of funding really kicked off with that. Now, there&rsquo;s the tooling and all these other projects that are very separate from funding.</p>
+            <p id="s346"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=346s" target="_blank" rel="noopener" data-pagefind-ignore>5:46</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Mm-hmm.</p>
+            <p id="s347"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=347s" target="_blank" rel="noopener" data-pagefind-ignore>5:47</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>But I became a contributor to VitaDAO. And I just, as I said in my talk, I realized that, wait, there&rsquo;s not that many women here. And wait, we&rsquo;re still addressing some of the same things that we were addressing before in legacy systems. And I became very aware of reproductive longevity, which is everything that impacts women. And I realized that the funding wasn&rsquo;t there, that we&rsquo;re also not talking about it enough. I didn&rsquo;t know about this either until I learned it like 3 years ago. And then I realized a lot of women don&rsquo;t know about this. And then I thought, well, we need to get women into Web3 and we need to get women interested into this space. So, that was part of the inception of AthenaDAO because I feel like it was a lot of the same people still getting the upside in Web3.</p>
+            <p id="s397"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=397s" target="_blank" rel="noopener" data-pagefind-ignore>6:37</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Mm-hmm.</p>
+            <p id="s398"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=398s" target="_blank" rel="noopener" data-pagefind-ignore>6:38</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And that means that we need to, hey, we&rsquo;re just going to have to create our own thing to also get other people involved. And I feel very strong about women getting into Web3. The barrier of entry can be very tricky, even for men, getting a wallet, understanding, sending a token, getting a token, not getting an NFT. The whole notion of you&rsquo;re like this self-custodian. If you send it to the wrong wallet, it&rsquo;s gone. And there&rsquo;s so many intrinsic difficult things in Web3. And then so many technical developers, very incredibly smart people, but then they&rsquo;re talking all to themselves. And you&rsquo;re like, this is not how we&rsquo;re going to onboard like the next 1 billion people. We will get on board them when we make it very simple or when it&rsquo;s about something that women care about. And we all care about our health. Yeah, right.</p>
+            <p id="s454"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=454s" target="_blank" rel="noopener" data-pagefind-ignore>7:34</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, I really think like hearing your panel downstairs, I was Really, I would say moved, or I think it really clicked for me when you were talking about how like people are spending like forty thousand dollars on these bags, for example. But and like these are things they don&rsquo;t need, and things that they simply want. And there are things that women like need to have things that maybe like they just want to feel full. They want to have children, you know, and they don&rsquo;t have. There&rsquo;s not even like there&rsquo;s a market, but there&rsquo;s no like product to acquire because the funding is not there.</p>
+            <p id="s479"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=479s" target="_blank" rel="noopener" data-pagefind-ignore>7:59</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>They&rsquo;re giving us. I just want to add to this, and something that I always say is that you know guys make fun of girls from. aligning our chakras or like crystals and incense and creams. It&rsquo;s because that&rsquo;s all there is. Like you go to the doctor and the doctor says, sorry, but there&rsquo;s no way to diagnose your endometriosis other than 8 operations. Or sorry, but there&rsquo;s no treatment for PCOS. Or sorry, your hormones. Or sorry, you&rsquo;re a woman, we don&rsquo;t know. Or you&rsquo;re a woman, just take it.</p>
+            <p id="s508"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=508s" target="_blank" rel="noopener" data-pagefind-ignore>8:28</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah.</p>
+            <p id="s509"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=509s" target="_blank" rel="noopener" data-pagefind-ignore>8:29</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So what do we do? We go find like crystals to see if we can align our hormonal period, like our hormones, and feel better.</p>
+            <p id="s518"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=518s" target="_blank" rel="noopener" data-pagefind-ignore>8:38</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah.</p>
+            <p id="s518-2"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=518s" target="_blank" rel="noopener" data-pagefind-ignore>8:38</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>But if we had solutions, women would be actually buying them.</p>
+            <p id="s523"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=523s" target="_blank" rel="noopener" data-pagefind-ignore>8:43</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I hear what you&rsquo;re saying. You&rsquo;re saying there&rsquo;s demand and right now the incumbents aren&rsquo;t super thrilling, aren&rsquo;t fulfilling, aren&rsquo;t satisfying the desires.</p>
+            <p id="s532"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=532s" target="_blank" rel="noopener" data-pagefind-ignore>8:52</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And then I really dislike when we make fun of women for, oh, they spend too much, or they&rsquo;re buying creams, or they&rsquo;re buying beauty. or they want supplements. That&rsquo;s because that&rsquo;s what&rsquo;s available. Like you said, it&rsquo;s an incumbent of what&rsquo;s being offered. And we&rsquo;ll do anything to try to feel better or to -- if you&rsquo;re in a lot of pain, so what if buying tons of makeup and putting it on makes you feel better? That&rsquo;s what you&rsquo;re going to do.</p>
+            <p id="s557"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=557s" target="_blank" rel="noopener" data-pagefind-ignore>9:17</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah.</p>
+            <p id="s557-2"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=557s" target="_blank" rel="noopener" data-pagefind-ignore>9:17</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>The fact of the matter is, it&rsquo;s -- women are spending that capital. So, that capital is available. So, biopharma or industry saying, oh, but there&rsquo;s no market. It&rsquo;s absurd.</p>
+            <p id="s572"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=572s" target="_blank" rel="noopener" data-pagefind-ignore>9:32</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>It is obscene. Yeah. And I&rsquo;m really excited for what you do and just like to continue to learn more about the femtech space because I feel like I am very bullish and I&rsquo;m very excited to see like what problems are resolved, even just to better understand the existing problems. I don&rsquo;t remember like the researcher or the scientist downstairs who was speaking, but I know like Gabrielle does work around endometriosis.</p>
+            <p id="s592"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=592s" target="_blank" rel="noopener" data-pagefind-ignore>9:52</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I love her question. Yeah.</p>
+            <p id="s593"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=593s" target="_blank" rel="noopener" data-pagefind-ignore>9:53</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And I&rsquo;m excited to continue to learn about what she&rsquo;s doing as she continues on her scientific journey. I feel like --</p>
+            <p id="s598"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=598s" target="_blank" rel="noopener" data-pagefind-ignore>9:58</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Well, I think she&rsquo;s going to join AthenaDAO now. So very excited about that because for us, our mission is to also get more women in science, even working with this kind of ecosystem, because our network is really great in terms of the researchers, you know, like Dr. Joshua Johnson. He is -- he&rsquo;s leading one of the best labs working reproductive longevity in America. He&rsquo;s here at Colorado University. He&rsquo;s collaborated with us. And then I feel that a lot of women that are either going into medical school, coming out, or researchers in STEM and biotech, that they get exposed to this network is great because it also opens the doors. And I think one thing that DSITE did really well, for instance, in longevity is open doors. And that&rsquo;s what we want to do, open doors for women, for women of color, for men, men of color, everything, you know. But our focus is obviously already giving a much easier entrance for women where we also try to make it very simple. Like, if all you want to do is subscribe to our newsletter because that&rsquo;s what you&rsquo;re used to, that&rsquo;s all it takes.</p>
+            <p id="s666"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=666s" target="_blank" rel="noopener" data-pagefind-ignore>11:06</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Mm-hmm.</p>
+            <p id="s666-2"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=666s" target="_blank" rel="noopener" data-pagefind-ignore>11:06</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>You don&rsquo;t have to have a wallet. You don&rsquo;t have to be on Discord. If you talk about us, even if you don&rsquo;t have like any, you know, you&rsquo;re not necessarily involved, it&rsquo;s already a major thing. And I want to say something specifically even for women of color, that it&rsquo;s 2024 and women are still dying giving birth. And it disproportionately affects women of color. And to me, that&rsquo;s insane because it&rsquo;s 2024 and we&rsquo;re having AGI, like finally nascent AI, I guess, sorry, sentient AI. And we can&rsquo;t figure out how women could have children without dying.</p>
+            <p id="s703"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=703s" target="_blank" rel="noopener" data-pagefind-ignore>11:43</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Safely. Yeah.</p>
+            <p id="s704"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=704s" target="_blank" rel="noopener" data-pagefind-ignore>11:44</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It&rsquo;s like, it doesn&rsquo;t make sense.</p>
+            <p id="s706"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=706s" target="_blank" rel="noopener" data-pagefind-ignore>11:46</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah. And you&rsquo;re saying it&rsquo;s just like, like, like poor distribution of resources.</p>
+            <p id="s710"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=710s" target="_blank" rel="noopener" data-pagefind-ignore>11:50</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yes.</p>
+            <p id="s710-2"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=710s" target="_blank" rel="noopener" data-pagefind-ignore>11:50</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And I think it&rsquo;s really exciting what you&rsquo;re talking about really is starting to help people coordinate, coordinate people and coordinate resources to start to address these problems with people who are value-aligned and driven to actually make the difference.</p>
+            <p id="s720"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=720s" target="_blank" rel="noopener" data-pagefind-ignore>12:00</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah. Because if they&rsquo;re not going to make it happen for us, we&rsquo;re going to make it happen for us.</p>
+            <p id="s724"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=724s" target="_blank" rel="noopener" data-pagefind-ignore>12:04</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah. Yeah. Yeah. So you&rsquo;re like, you&rsquo;re, you&rsquo;re part of -- you&rsquo;re a leader in a movement. And what has it been like for you kind of co-creating this community and this movement inside and under the umbrella of Athena DAO?</p>
+            <p id="s734"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=734s" target="_blank" rel="noopener" data-pagefind-ignore>12:14</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Super exciting. I think there&rsquo;s a lot of work to do in terms of education. And even as I said it in my talk, I think the hardest part is sometimes even the fact that women don&rsquo;t know this, you know, because for instance, you&rsquo;re going to medical -- you&rsquo;re going to go to medical school. But a lot of my -- even my girlfriends, when I got into this, they&rsquo;re like, why are you doing that? There&rsquo;s already apps, there&rsquo;s already IVF. I&rsquo;m like, First of all, IVF is still too painful. It&rsquo;s 40 years, it&rsquo;s 45 years old IVF, and it&rsquo;s still not very efficient. Women that freeze their eggs, it&rsquo;s still very painful. All those hormone treatments, very expensive. So it&rsquo;s very prohibiting. If you&rsquo;re not middle class or upper middle class, you cannot get IVF because it&rsquo;s just so expensive.</p>
+            <p id="s784"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=784s" target="_blank" rel="noopener" data-pagefind-ignore>13:04</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>You said it&rsquo;s like a quarter million dollars, what you said downstairs?</p>
+            <p id="s785"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=785s" target="_blank" rel="noopener" data-pagefind-ignore>13:05</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Well, if you do up to like 5 cycles, like it can go $150,000. There&rsquo;s people who spend up there. according -- it&rsquo;s like $30,000 to $45,000, $60,000 per cycle. And if you don&rsquo;t get the baby, then, then you have to do the whole cycle again. Yeah. The hormones, all of that stuff. So if you don&rsquo;t have that kind of money --</p>
+            <p id="s805"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=805s" target="_blank" rel="noopener" data-pagefind-ignore>13:25</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah. And traditionally, I take it, it takes more than one cycle or people want more than one child. Is that what you&rsquo;re saying?</p>
+            <p id="s809"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=809s" target="_blank" rel="noopener" data-pagefind-ignore>13:29</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Well, the problem is that we are also not educating women into their fertility. The reality is that by 35, it&rsquo;s already very hard. And a lot of women are going to get their eggs froze -- I mean, the egg freezing too late. So already then, by then, the eggs are not as good quality. And by the time they actually try to do the IVF, they&rsquo;re even older. So when you think of those 2 combined, the efficacy rates keeps going down. So the older you are, the harder it&rsquo;s going to get. And the older you froze your egg, the harder it&rsquo;s going to get too. And that efficacy rate is crucial because that&rsquo;s where the magic happens in terms of being able to have the kids. And a lot of women come out of it with no success.</p>
+            <p id="s854"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=854s" target="_blank" rel="noopener" data-pagefind-ignore>14:14</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Hmm.</p>
+            <p id="s855"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=855s" target="_blank" rel="noopener" data-pagefind-ignore>14:15</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So it&rsquo;s tricky because even freezing your eggs, you&rsquo;re $25, you&rsquo;re 25 years old, nobody&rsquo;s talking about it. A lot of women today don&rsquo;t even want kids. Like, that&rsquo;s a reality. And the other part is that Our economy is not so great for young people. You know, our parents owned their homes when they were 25, or there was economic mobility. And most people right now at 25, they&rsquo;re like, I don&rsquo;t even make enough to like live, never mind buy a house and have a baby. So it&rsquo;s not even in their, you know, in their frame of thought. So by the time you actually have money in your 30s, we start seeing the problems.</p>
+            <p id="s894"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=894s" target="_blank" rel="noopener" data-pagefind-ignore>14:54</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I understand.</p>
+            <p id="s895"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=895s" target="_blank" rel="noopener" data-pagefind-ignore>14:55</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah.</p>
+            <p id="s896"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=896s" target="_blank" rel="noopener" data-pagefind-ignore>14:56</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And by that time, it&rsquo;s almost too late. It&rsquo;s like, like, like, there&rsquo;s --</p>
+            <p id="s899"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=899s" target="_blank" rel="noopener" data-pagefind-ignore>14:59</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Well, it&rsquo;s just every day, every hour, every year reduces the chance of that happening.</p>
+            <p id="s905"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=905s" target="_blank" rel="noopener" data-pagefind-ignore>15:05</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And I guess my, my final question kind of ties back to what you were speaking about initially around like the, like being like kind of founder-centric as like a startup versus a DAO. You kind of speak to there being a difference. And I&rsquo;m really like, I&rsquo;ve heard a lot of people speak about that difference. I&rsquo;m really curious about how you see that difference, especially in how you approach leadership inside of AthenaDAO. inside wanting to make a difference for a lot of, a lot of people, you know, in the intersectional community?</p>
+            <p id="s927"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=927s" target="_blank" rel="noopener" data-pagefind-ignore>15:27</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Well, I mean, I guess I&rsquo;m the founder because I got the first steps going and I&rsquo;m still like the first person going to make a lot of the pitch. But I always say that I wouldn&rsquo;t have been able to make a lot of this happen if I hadn&rsquo;t had the researchers that are in our core team with me. I&rsquo;m very passionate about the science, pushing scientists funding the science and pitching the notion that this is important, but I&rsquo;m not a scientist myself, right? So, I don&rsquo;t think anybody would&rsquo;ve trusted me saying, this is the science we should fund, if it hadn&rsquo;t been me alone. And that&rsquo;s the very powerful tooling about DAOs, is that you can bring people that are so motivated, that have the expertise to work in this for a period of time.</p>
+            <p id="s927-2"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=927s" target="_blank" rel="noopener" data-pagefind-ignore>15:27</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>You know, our science and deal flow team, which is the one that I was mentioning to you, most of the people working there do 5 to 10 hours a week, and they do it on their own, like independent. We have weekly tasks, reach-outs, follow-ups, and all of this. And it&rsquo;s very powerful tooling because some of them are labs, some of them are in industry, some of them are in school, and they&rsquo;re still motivated to come do this with us and push things forward. So, That is the coordination that Web3 brings. That is very powerful tooling that doesn&rsquo;t happen in a startup because in a startup you have to hire 10 people and you&rsquo;re the founder and you guys have to hit certain metrics to raise more money.</p>
+            <p id="s927-3"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=927s" target="_blank" rel="noopener" data-pagefind-ignore>15:27</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>In a DAO, it&rsquo;s almost the same. You have to figure out how to get the funding, all these things, but the coordination is completely different and the motivations are completely different.</p>
+            <p id="s1028"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1028s" target="_blank" rel="noopener" data-pagefind-ignore>17:08</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And I know that was my last question, but hearing you speak more about, like, I guess the breakdown inside of AthenaDAO, How did you guys come to determine structures for coordination inside of the DAOs? I feel like that is still a big question is what is the most efficient way to coordinate in this really proving ground? You are proving concepts for coordination and evidently in a space where there&rsquo;s not a lot of innovation already happening.</p>
+            <p id="s1049"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1049s" target="_blank" rel="noopener" data-pagefind-ignore>17:29</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>In the end, you have to think of it as coordinating multiple startups in one.</p>
+            <p id="s1055"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1055s" target="_blank" rel="noopener" data-pagefind-ignore>17:35</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Oh, okay.</p>
+            <p id="s1056"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1056s" target="_blank" rel="noopener" data-pagefind-ignore>17:36</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Because each working group is almost like its own startup and you have to have at least in my -- what we&rsquo;ve done, very specific KPIs, which you always talk in industry, and metrics of success. I think one thing is that in Web3, there&rsquo;s a lot of talk about community, decentralization, we&rsquo;re all in this together. But in the end, to get it done, There&rsquo;s going to have to be very specific people leading each project, having what is the end goal, and almost working it like any corporation. And I&rsquo;m sorry to say the word corporation for a DAO, but if you want to actually get researchers to believe you, funders to believe you, other stakeholders that are like, you know, you need them to collaborate with you. you will have to show a level of professionalism that you would do with any other institute, like regular institute, whether it is industry or academia.</p>
+            <p id="s1121"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1121s" target="_blank" rel="noopener" data-pagefind-ignore>18:41</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I see. And so you&rsquo;re really saying that having like these different groups to coordinate with allows both for like a more heightened reputation of people that are coming from different points, different values, or different --</p>
+            <p id="s1131"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1131s" target="_blank" rel="noopener" data-pagefind-ignore>18:51</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>You still need like one, like a couple of stewards. You still need leadership. Yeah, like it cannot be flat. Because flat can go very wrong. You&rsquo;re still going to need somebody that can say, hey guys, are we on time? Or hey, what is the next thing? That&rsquo;s super important. And I&rsquo;m saying, I&rsquo;m not saying that it has to be like me, but that&rsquo;s why I say each group, it is because every group has its own mandates. And that is the thing about DAOs that, well, we&rsquo;re also not so huge yet. So to come talk to me in a year or after a bull run when you have thousands of people joining and then you&rsquo;re like, how do we coordinate all of this?</p>
+            <p id="s1172"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1172s" target="_blank" rel="noopener" data-pagefind-ignore>19:32</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah.</p>
+            <p id="s1172-2"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1172s" target="_blank" rel="noopener" data-pagefind-ignore>19:32</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Because for us, it&rsquo;s been very good to build during the bear time because it&rsquo;s truly people that are motivated that join, you know, it&rsquo;s there. There&rsquo;s no upside. It&rsquo;s in the bull run when everybody&rsquo;s like, I want to get some of this. That gets tricky because there&rsquo;s just tons of overflow.</p>
+            <p id="s1190"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1190s" target="_blank" rel="noopener" data-pagefind-ignore>19:50</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah.</p>
+            <p id="s1190-2"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1190s" target="_blank" rel="noopener" data-pagefind-ignore>19:50</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And how do you keep people motivated? How do you keep them engaged? How do you make sure that they get out of it what they want to get out of it while also contributing? I mean, it&rsquo;s exciting, but it is kind of still -- I&rsquo;m sure you&rsquo;re going to talk to a lot of people that have their own theories of how we make this happen.</p>
+            <p id="s1209"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1209s" target="_blank" rel="noopener" data-pagefind-ignore>20:09</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, but I mean, I appreciate it because even inside this project, I tried to have different channels on my Discord so we could coordinate different committees when there&rsquo;s only 5 people really are in my Discord doing stuff in the first place. Why do we have all these channels? I feel so overwhelmed.</p>
+            <p id="s1222"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1222s" target="_blank" rel="noopener" data-pagefind-ignore>20:22</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I&rsquo;ve done that. I&rsquo;m like, I&rsquo;m always like, kill that channel, kill that channel. Like nothing&rsquo;s happening. And there&rsquo;s nothing worse than crickets in the channel. You know, I&rsquo;m like, why is it only one channel?</p>
+            <p id="s1235"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1235s" target="_blank" rel="noopener" data-pagefind-ignore>20:35</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah. And that&rsquo;s kind of where we&rsquo;re leaning towards now. It&rsquo;s like, oh, I guess I should just have one channel. We should do one thing at a time as opposed to me doing different things with different people who are not necessarily like committed to doing it all the way through in the first place.</p>
+            <p id="s1247"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1247s" target="_blank" rel="noopener" data-pagefind-ignore>20:47</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And it takes that 4, 3, Committed people. It took that for us, and that&rsquo;s how we grew. It just takes a team, like a small team that are like, &ldquo;Let&rsquo;s go!&rdquo; Circle. Yeah, and then you expand the circles. But it takes that.</p>
+            <p id="s1264"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1264s" target="_blank" rel="noopener" data-pagefind-ignore>21:04</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And I feel like that&rsquo;s been a big part of why I&rsquo;ve been so focused on community first because I feel like finding people that are value aligned and like excited about it. I feel like find those people first rather than like trying to do it. Find people that maybe don&rsquo;t care as much and trying to make it work. I feel like find those people. I feel like it&rsquo;s going to make it go so much faster when we do finally sit down at the table, and I feel like. Coming here last year and being like in this space of, okay, I&rsquo;m going to meet the Black people versus this year coming and like having my girlfriend, obviously Julianne as well, one of my like core community members here is like super exciting.</p>
+            <p id="s1264-2"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1264s" target="_blank" rel="noopener" data-pagefind-ignore>21:04</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I feel like it&rsquo;s very full circle to see who&rsquo;s excited about what I&rsquo;m up to and supporting me. And yeah, and even just hearing you speak about the multiple startups, I feel like it&rsquo;s so like inside of one DAO, it&rsquo;s like really about accountability around each individual project and making sure that someone is actually accountable. Because I feel like if I&rsquo;m the person accountable for 5 channels in the Discord, then it&rsquo;s not really likely that I&rsquo;m going to be on top of anything.</p>
+            <p id="s1310"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1310s" target="_blank" rel="noopener" data-pagefind-ignore>21:50</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It gets crazy because you start working like 14-hour days and you&rsquo;re like, okay, this is cute for maybe 3, 6 months, but if this is going to be my life, I better just own the entire DAO, which is not the point, you know?</p>
+            <p id="s1325"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1325s" target="_blank" rel="noopener" data-pagefind-ignore>22:05</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah.</p>
+            <p id="s1325-2"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1325s" target="_blank" rel="noopener" data-pagefind-ignore>22:05</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Like, that&rsquo;s not what it should be.</p>
+            <p id="s1327"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1327s" target="_blank" rel="noopener" data-pagefind-ignore>22:07</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah.</p>
+            <p id="s1328"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1328s" target="_blank" rel="noopener" data-pagefind-ignore>22:08</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So creating those pods of people that are accountable from within that first core and then expanding, even say people, they want to feel that they&rsquo;re valued and they want to feel independent. That&rsquo;s another thing in Web3 that&rsquo;s super important, that people have agency. And I think a lot of it is A/B testing because you can get one thing right and you can get a lot of things wrong, but you just have to keep trying.</p>
+            <p id="s1353"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1353s" target="_blank" rel="noopener" data-pagefind-ignore>22:33</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, trying and iterating. And I feel like that&rsquo;s what we&rsquo;ve been doing. And I really appreciate you sitting down with us, Gabrielle. Do you have any more specific questions around AthenaDAO and kind of being someone interested? I&rsquo;d love to give you the floor to Yeah, ask some questions during your space. I kind of just wanted to tie it back to kind of the streamline of the interviews highlighting voices of color.</p>
+            <p id="s1376"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1376s" target="_blank" rel="noopener" data-pagefind-ignore>22:56</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And you were mentioning the health disparities and just like lack of the inclusion of women of color in research.</p>
+            <p id="s1383"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1383s" target="_blank" rel="noopener" data-pagefind-ignore>23:03</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>So I was wondering what initiatives does AthenaDAO take to not only increase the amount of people of color that are the researchers, but also including research that is focusing on people of color as well?</p>
+            <p id="s1396"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1396s" target="_blank" rel="noopener" data-pagefind-ignore>23:16</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Well, I mean, the first layer of it is already making sure that women are included, right? And let&rsquo;s start with, like, I was saying today that there was this meme that our partner Molecule showed, which is Web3 is hard, biotech is hard, so DeSci is very hard. And I said, well, DeSci with women&rsquo;s health is like Olympic effort. Super hard. Super, super, super, super hard. So the first part is already making sure that women are brought into the space and women are included. Then the second part is obviously trying to find when we&rsquo;re doing those, when we&rsquo;re looking at more specific clinical trials and inclusion, it&rsquo;s trying to see how we can put incentives that would make sure that we&rsquo;re paying attention to other ethnicities and geographies.</p>
+            <p id="s1396-2"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1396s" target="_blank" rel="noopener" data-pagefind-ignore>23:16</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So one thing I wanted to mention, for instance, the most complete biobank in the world is in the UK because it&rsquo;s nationalized healthcare, right? It&rsquo;s centralized. So, they&rsquo;ve been able to collect a lot of data. But a lot of that genomic data doesn&rsquo;t include a lot of samples from people of color. And one thing that we have to do is actually start to fund people, like more studies in Africa, more studies in India, in Southeast Asia, even Latin America, to get all those sample sizes because obviously how There are things that happen to certain genotypes that don&rsquo;t happen to others. And paying attention to that is super crucial.</p>
+            <p id="s1396-3"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1396s" target="_blank" rel="noopener" data-pagefind-ignore>23:16</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So, how do we onboard those scientists across the globe that will be able to help us with that? Even in the US, I think that there are projects that are specifically working on that, and we&rsquo;ve become more attuned to it. But it&rsquo;s a monumental effort in terms of even access to healthcare. That&rsquo;s also very restrictive as to who has the dollars to get, you know, We were saying the big thing is that having children, it is a fact that you have more access to healthcare that prevents you from dying when you have a child, and that in 2024 this is still happening is not correct.</p>
+            <p id="s1396-4"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1396s" target="_blank" rel="noopener" data-pagefind-ignore>23:16</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So us ourselves, we try to onboard obviously more people in other areas that are not just in North America. We&rsquo;re very happy that we have people in Asia, we have people in India, a lot in Mexico. So we&rsquo;ve really had the reach out in terms of like very different ethnicities. We had somebody in Africa, but she kind of dropped out. So we&rsquo;re sad. We need to find -- and it&rsquo;s that one person is not enough.</p>
+            <p id="s1548"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1548s" target="_blank" rel="noopener" data-pagefind-ignore>25:48</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah.</p>
+            <p id="s1549"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1549s" target="_blank" rel="noopener" data-pagefind-ignore>25:49</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>We really need to onboard like a lot. You know, we need to work also on onboarding different chapters and people that are able to focus on those areas and onboard more of those scientists so that when we&rsquo;re looking at funding and research, the focus is working with those different phenotypes and those kind of Very intentional collection of data. You have to be intentional. That&rsquo;s the biggest thing.</p>
+            <p id="s1575"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1575s" target="_blank" rel="noopener" data-pagefind-ignore>26:15</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And you know, I&rsquo;m once again super honored that you&rsquo;re here with us. I think it is incredible to meet a Mexican woman founder here in this space. You know, building international community that is committed to building things that serve a global population. So thank you so much. Thank you.</p>
+            <p id="s1591"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1591s" target="_blank" rel="noopener" data-pagefind-ignore>26:31</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Thank you, and let&rsquo;s do this in Spanish.</p>
+            <p id="s1593"><a class="wt-at" href="https://www.youtube.com/watch?v=zAIth9lIeP0&amp;t=1593s" target="_blank" rel="noopener" data-pagefind-ignore>26:33</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Adiós! Adiós!</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+<div id="after-transcript" tabindex="-1"><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from Denver Unfiltered.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-denver">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="a-first-interview-and-advice-back-to-newark-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/UkX8veGIl58-640.jpg" srcset="../stills/UkX8veGIl58-320.jpg 320w, ../stills/UkX8veGIl58-480.jpg 480w, ../stills/UkX8veGIl58-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:15</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · ETH Denver 2024</span>
+                    <h3 class="report-title">A first interview, and advice back to Newark.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="building-a-dao-and-making-governance-a-game-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/qcTocIWf34U-640.jpg" srcset="../stills/qcTocIWf34U-320.jpg 320w, ../stills/qcTocIWf34U-480.jpg 480w, ../stills/qcTocIWf34U-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:45</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">A content coin, and making governance a game.</h3>
+                    
+                </div>
+            </a>
+            <a href="from-america-to-denver-what-brought-you-here-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/DdXcCfCc26E-640.jpg" srcset="../stills/DdXcCfCc26E-320.jpg 320w, ../stills/DdXcCfCc26E-480.jpg 480w, ../stills/DdXcCfCc26E-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:21</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · Street</span>
+                    <h3 class="report-title">A borrowed camera, and Denver block by block.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../places.html#denver">Everything filmed in Denver</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

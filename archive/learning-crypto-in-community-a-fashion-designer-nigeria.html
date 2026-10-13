@@ -1,0 +1,685 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="This is this is someone who was once depressed. This was how they came out of it. Nobody&#x27;s judging you.">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/archive/learning-crypto-in-community-a-fashion-designer-nigeria">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="Learning Crypto in Community, a Fashion Designer | Nigeria">
+    <meta property="og:description" content="This is this is someone who was once depressed. This was how they came out of it. Nobody&#x27;s judging you.">
+    <meta property="og:url" content="https://wethem.xyz/archive/learning-crypto-in-community-a-fashion-designer-nigeria">
+    <meta property="og:image" content="https://i.ytimg.com/vi/gxvuDzVX5WE/maxresdefault.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://i.ytimg.com/vi/gxvuDzVX5WE/maxresdefault.jpg">
+    <title>Learning Crypto in Community, a Fashion Designer | Nigeria</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Learning Crypto in Community, a Fashion Designer | Nigeria",
+  "description": "This is this is someone who was once depressed. This was how they came out of it. Nobody's judging you.",
+  "alternateName": "We Them Media Live Stream",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/gxvuDzVX5WE/maxresdefault.jpg"
+  ],
+  "uploadDate": "2025-09-08",
+  "duration": "PT27M54S",
+  "embedUrl": "https://www.youtube.com/embed/gxvuDzVX5WE",
+  "url": "https://wethem.xyz/archive/learning-crypto-in-community-a-fashion-designer-nigeria",
+  "publisher": {
+    "@type": "Organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  }
+}
+    </script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://wethem.xyz"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "The archive",
+   "item": "https://wethem.xyz/archive/index"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Learning Crypto in Community, a Fashion Designer | Nigeria"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="index.html">The archive</a></li>
+            <li aria-current="page">Learning Crypto in Community, a Fashion Designer | Nigeria</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k]" data-pagefind-filter="kind[data-pf-kind]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="archive" data-pf-date="2025-09-08" data-pf-vid="gxvuDzVX5WE" data-pf-k="{&quot;l&quot;:&quot;27:54&quot;}">Learning Crypto in Community, a Fashion Designer | Nigeria</h1>
+
+    <p class="wt-byline">From the archive &middot; published <time datetime="2025-09-08">2025-09-08</time></p>
+
+    <div class="wt-frame">
+        <lite-yt videoid="gxvuDzVX5WE" title="Learning Crypto in Community, a Fashion Designer | Nigeria" postersrcset="https://i.ytimg.com/vi/gxvuDzVX5WE/mqdefault.jpg 320w, https://i.ytimg.com/vi/gxvuDzVX5WE/hqdefault.jpg 480w"><img class="lite-yt-fallback" src="https://i.ytimg.com/vi/gxvuDzVX5WE/mqdefault.jpg" srcset="https://i.ytimg.com/vi/gxvuDzVX5WE/mqdefault.jpg 320w, https://i.ytimg.com/vi/gxvuDzVX5WE/hqdefault.jpg 480w" alt="" loading="lazy" decoding="async"></lite-yt>
+    </div>
+
+    <div class="wt-prose">
+        <p>This is an archive entry: the video and its full transcript, published so
+        the words can be read, searched and quoted. It is not a written piece.
+        On the channel this video is titled only “We Them Media Live Stream”; the title here is taken from what is said on it. </p>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Transcribed from the original audio and corrected for names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s405"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=405s" target="_blank" rel="noopener" data-pagefind-ignore>6:45</a>This is this is someone who was once depressed. This was how they came out of it. Nobody&rsquo;s judging you. You&rsquo;re feeling very very like oh so there&rsquo;s a platform like this who is not judging me for for doing this or oh I&rsquo;m not oh you know you know that time where something that has happened to you and you see someone talk about it and you&rsquo;re like damn I&rsquo;m not alone. That feeling is so relieving. So picking topics, speaking people that have experiences that are relatable. You will be shocked how much of a lifesaver you&rsquo;ve been to someone listening because that maybe you just hear someone talk about your story and</p>
+            <p id="s441"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=441s" target="_blank" rel="noopener" data-pagefind-ignore>7:21</a>like oh wow so I&rsquo;m not the only one who went through this. You are eager to want to hear their testimony of that story. So I feel like a good podcast would do that. A good podcast or a talk show or whatever it is would really do that. So I think I would be passing out my own information not through just through fashion. I&rsquo;m a fashion designer. I started I started my I started doing that from a very little age. I remember when my my neighbor&rsquo;s a tailor and when she&rsquo;s done cutting all those fabrics and throws them in I will go and pack them.</p>
+            <p id="s473"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=473s" target="_blank" rel="noopener" data-pagefind-ignore>7:53</a>Oh yeah. And my mom always be like you they dirty my house like like I&rsquo;m always bringing in those rags and then I just use needle and I stitch and I make clothes for my door. And that&rsquo;s how she&rsquo;s like oh this child can be creative. I made my graduation dress</p>
+            <p id="s490"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=490s" target="_blank" rel="noopener" data-pagefind-ignore>8:10</a>from my secondary school. I made it with needle and thread myself. I used my hand and I just and I went and my mom was so proud and she&rsquo;s like this is so nice but you can&rsquo;t wear it out there. I&rsquo;m like, but she was so proud and she supported me and I&rsquo;m in it now for about 3 years. I&rsquo;m a unisex designer and it&rsquo;s not just basic outfit. I let people express their yourself in my outfits and I&rsquo;m hoping to not just own a fashion house but let people feel confident in their style and and all. So, I&rsquo;m also hoping I I&rsquo;m also um a</p>
+            <p id="s526"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=526s" target="_blank" rel="noopener" data-pagefind-ignore>8:46</a>voiceover artist, which also relates to being a podcast cuz it basically has to do with you talking and all of that. So, yeah. And you&rsquo;re a singer as well.</p>
+            <p id="s536"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=536s" target="_blank" rel="noopener" data-pagefind-ignore>8:56</a>Oh, yeah. You know, the whole singing thing, we all started from church. You go to church, you join the choir, and then you&rsquo;re like, &ldquo;Okay, should I take the carrier?&rdquo; But, um, it&rsquo;s not a profession, but I just do it for fun cuz I just when I&rsquo;m angry, I sing. when I when I just want to ease off some certain pain or distress, I just sing or I listen to songs. Yeah.</p>
+            <p id="s556"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=556s" target="_blank" rel="noopener" data-pagefind-ignore>9:16</a>And so you write your own music? Uh I have but none has been published. Yeah. Now what? I&rsquo;ve not published any. That&rsquo;s okay. It could be for yourself.</p>
+            <p id="s565"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=565s" target="_blank" rel="noopener" data-pagefind-ignore>9:25</a>Yeah. I just keep them for myself and I write. One time I was going to sell my lyrics, but you know how it can get where they they breach agreements and it just happened. Just happened. You shouldn&rsquo;t sell your lyrics. You should you should you should record your songs and put them out.</p>
+            <p id="s582"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=582s" target="_blank" rel="noopener" data-pagefind-ignore>9:42</a>Yeah, that&rsquo;s what I think. I think it&rsquo;s just like I think it&rsquo;s valid to be like scared. I think it&rsquo;s like it is vulnerable. You know, sometimes music out there. And I think I you know, I used to think like all these rappers, they only make music about stuff that&rsquo;s surface level. But the truth is they probably make really vulnerable music and they&rsquo;re like, I&rsquo;m not giving that to them.</p>
+            <p id="s598"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=598s" target="_blank" rel="noopener" data-pagefind-ignore>9:58</a>Nobody&rsquo;s going to accept that from me. But you you will never know. And I feel like maybe it&rsquo;s not even about acceptance. It&rsquo;s just like I want people to see me that way. It&rsquo;s like how can I keep up an appearance if I put out this kind of music? And so I think it&rsquo;s like are you more committed to the appearance or are you more committed to like the people that resonate with you really getting to know you and like like you know get something from you expressing yourself like what the podcast are saying right like maybe young person really get a lot from hearing in a certain conversation but if</p>
+            <p id="s622"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=622s" target="_blank" rel="noopener" data-pagefind-ignore>10:22</a>that artist never puts out that song you know the only things they&rsquo;re putting out are things that are talking about drugs and sex they&rsquo;re at the strip club and it&rsquo;s like what are those kids getting from that kind of music you know but when you take a moment to let down your guard to be vulnerable maybe that young person now it&rsquo;s more vulnerable be vulnerable themselves asking for help asking questions they weren&rsquo;t willing to ask before.</p>
+            <p id="s637"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=637s" target="_blank" rel="noopener" data-pagefind-ignore>10:37</a>Yeah. So, I think it&rsquo;s like I always say if you&rsquo;re an artist and you write music like you should put your music out. Yeah. And I I think when you basically when it comes to the music industry, mostly here in Africa, we we are more sexist about our music and it&rsquo;s it&rsquo;s quite disheartening.</p>
+            <p id="s655"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=655s" target="_blank" rel="noopener" data-pagefind-ignore>10:55</a>Talk about what you mean by that. We are more Okay, let me use my country. Yeah. Yeah. Sometimes Nigeria. Ah. Must your music be about bomb bomb?</p>
+            <p id="s666"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=666s" target="_blank" rel="noopener" data-pagefind-ignore>11:06</a>Oh. Ask them why why is it always about somebody shaking and my mom will be like why are the men covered and the women are not they are barely never covered and then you&rsquo;re like oh my children can&rsquo;t watch that but you see some other you can be so creative and not promote nudity.</p>
+            <p id="s688"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=688s" target="_blank" rel="noopener" data-pagefind-ignore>11:28</a>Yeah. You can be so creative and not promote nudity. Yeah. And just like the sexualization exploitation of women. Yeah. You can have like X-rated music and all of that. Not bad. Because, you know, I think the stereotype is like, oh, for my music to blow,</p>
+            <p id="s701"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=701s" target="_blank" rel="noopener" data-pagefind-ignore>11:41</a>Yeah. for my music to trend, I must have some certain exposure. But it&rsquo;s not supposed to be like that. It&rsquo;s the sound. Yes. The visual can also matter where people are saying stuff, but sometimes everybody somebody was saying something about about ice spice and you&rsquo;re like, remove your ass. Nobody&rsquo;s going to be watching your video</p>
+            <p id="s721"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=721s" target="_blank" rel="noopener" data-pagefind-ignore>12:01</a>because girl, your next song should be worth it because we&rsquo;re tired of after the ask what else are we seeing? You don&rsquo;t give us real content.</p>
+            <p id="s732"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=732s" target="_blank" rel="noopener" data-pagefind-ignore>12:12</a>Give us real content, right? And I think this is something that all artists should work at. There should be meaning to your songs. There should be meaning to your art, not just promoting nudity. It should be it should be educated,</p>
+            <p id="s744"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=744s" target="_blank" rel="noopener" data-pagefind-ignore>12:24</a>catering to horny boy energy. Yeah. Yeah. You could just imagine that summer video. I just chuckle at the at the I&rsquo;m telling you it&rsquo;s so dope. So dope.</p>
+            <p id="s754"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=754s" target="_blank" rel="noopener" data-pagefind-ignore>12:34</a>No, the the video is super dope and and I agree with you and it&rsquo;s it&rsquo;s awesome to hear you bring that up because I&rsquo;m really curious to hear about like you&rsquo;re experiencing creative alchemy. You know, you&rsquo;re here at the event by way of that community. How did you first get introduced to creative alchemy?</p>
+            <p id="s765"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=765s" target="_blank" rel="noopener" data-pagefind-ignore>12:45</a>Okay, I was introduced by a friend. She&rsquo;s like, &ldquo;Oh, girl, no.&rdquo; She posted one thing one time and she&rsquo;s like, &ldquo;Tech.&rdquo; I&rsquo;m like, &ldquo;Oh, what is this about?&rdquo; And then she&rsquo;s like, it&rsquo;s a community where they could teach me like for a beginner how to own my own forex, how to create my own NFTts. They&rsquo;re willing to take me through the process. They&rsquo;re willing to give me other platforms where I can meet with other creatives and do other fun stuff. So, this is like my first physical meeting.</p>
+            <p id="s796"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=796s" target="_blank" rel="noopener" data-pagefind-ignore>13:16</a>Yeah. Yeah. Yeah. I I&rsquo;ve been in the group. I think I I got into the group like um two weeks. I&rsquo;m not I&rsquo;m not sure. have been two weeks but I just got into the group so I&rsquo;ve not really engaged in I only joined the spaces one time but and then I was looking really lost because they were talking more of this outing so I really like okay maybe over time I&rsquo;ll get to really know what they do but from today&rsquo;s meeting it&rsquo;s been really good I&rsquo;ve loved it already I&rsquo;m like oh defin so it&rsquo;s not as difficult as I thought it was yeah</p>
+            <p id="s830"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=830s" target="_blank" rel="noopener" data-pagefind-ignore>13:50</a>and so what was your what was your favorite part of today like what stood out to you most Oh, I think the the the the workshop,</p>
+            <p id="s838"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=838s" target="_blank" rel="noopener" data-pagefind-ignore>13:58</a>the fact that it was so beginner friendly. Yeah. And this podcast too and I got I I think I have I should I say this on camera, but I think right I can be very shy.</p>
+            <p id="s852"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=852s" target="_blank" rel="noopener" data-pagefind-ignore>14:12</a>I talk a lot, but I just want to be with my own people to talk, right? And then my my friend always tell me, she&rsquo;s over there. She&rsquo;s like, &ldquo;If you want to be that influential, you have to be able to meet with people and then talk to people.&rdquo; I remember when I came this morning and I didn&rsquo;t meet anybody. I saw Daniel, but I couldn&rsquo;t talk to him.</p>
+            <p id="s872"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=872s" target="_blank" rel="noopener" data-pagefind-ignore>14:32</a>Oh, you didn&rsquo;t speak? But I had an idea that this person was coming for this, but how to approach them and be like, &ldquo;Hi.&rdquo; But she&rsquo;s like, &ldquo;Just say it anyways that they&rsquo;re not going to bite you.&rdquo; Like so I&rsquo;m even surprised that oh I&rsquo;m this able to click and bond with this community easily cuz I could go to an entire party and just be like this. I&rsquo;m like hurry up I want to go home type of thing and just maybe talk to the persons I know but like I like a community where everybody can just be themselves and nobody&rsquo;s judgy. At least by the time I&rsquo;m</p>
+            <p id="s905"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=905s" target="_blank" rel="noopener" data-pagefind-ignore>15:05</a>leaving here I&rsquo;m talking to like two three persons and then we&rsquo;re sharing ideas. We&rsquo;re checking up on each other cuz the world is hard now. Everybody is all smiley but people are depressed and sad. So any little thing to keep them sane. Anybody wants to hop on that? Yeah.</p>
+            <p id="s922"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=922s" target="_blank" rel="noopener" data-pagefind-ignore>15:22</a>My community is so important. Like I think like you really pointing to like the welcomingness being one of your favorite parts. Like you have the like the conversation was beginner friendly. I think at times we started veering away from beginner friendly. I&rsquo;m not going to lie. But I think for me it was still cool to to see like who in this community is like knowledge about this conversation as well. I feel like it&rsquo;s cool to know like who like the the thought leaders when it comes to blockchain are in this community because like just to have one is is really valuable.</p>
+            <p id="s949"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=949s" target="_blank" rel="noopener" data-pagefind-ignore>15:49</a>Yeah. Yeah. Very true. And so to have like you know three, four or five, you know, like like the core team, you could literally just go to this. This one says I&rsquo;m busy. You could go to the next, you could go to the next and then there&rsquo;s a lot of there&rsquo;s a lot of knowledge cuz imagine having this session online. It will cost you a lot of dollars.</p>
+            <p id="s966"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=966s" target="_blank" rel="noopener" data-pagefind-ignore>16:06</a>Yeah. And then you just have all you just have to do is make friends and then go to them and ask questions for free. So this is the this is the importance of community and I think I&rsquo;m going to like it here.</p>
+            <p id="s979"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=979s" target="_blank" rel="noopener" data-pagefind-ignore>16:19</a>You hear that? I really you know I&rsquo;m really happy here today because I know belonging is so important to them. That&rsquo;s that&rsquo;s something I&rsquo;ve learned in conversation with them over the last week.</p>
+            <p id="s987"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=987s" target="_blank" rel="noopener" data-pagefind-ignore>16:27</a>And you know like for me it&rsquo;s it&rsquo;s the same. You know I really have been aspiring to be building a space like crypto like what black person is talking about crypto in America? Like I saw one podcast called Earn Your Leisure. They&rsquo;re talking about like Bitcoin went up, but they don&rsquo;t know anything about like the <a class="wt-gloss" href="../glossary.html#ethereum">Ethereum</a> ecosystem and how people are building apps. Like they&rsquo;re not really talking about that stuff. And I was like, that could be me. That could be me.</p>
+            <p id="s1006"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1006s" target="_blank" rel="noopener" data-pagefind-ignore>16:46</a>Yeah. Yeah. Yeah. Like I know. I know. And I mean, I don&rsquo;t know actually, but it&rsquo;s like, but I&rsquo;ll learn and I&rsquo;ll ask people who know.</p>
+            <p id="s1013"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1013s" target="_blank" rel="noopener" data-pagefind-ignore>16:53</a>I I I do this thing, right? When you come to me, okay, let&rsquo;s say you come, you&rsquo;re like, I&rsquo;m looking for uh what should I use as an example? I&rsquo;m looking for an artist. I am an artist.</p>
+            <p id="s1027"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1027s" target="_blank" rel="noopener" data-pagefind-ignore>17:07</a>Even when I&rsquo;m not. All I just have to do is make a few calls. I&rsquo;ll get a friend that&rsquo;s an artist. And yes, we are all artist. I just All I just have to do is learn. Give me time. I will learn.</p>
+            <p id="s1037"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1037s" target="_blank" rel="noopener" data-pagefind-ignore>17:17</a>I can do what you need. I can get you what you need. It&rsquo;s either I can do it or I know someone who can. And that&rsquo;s the essence of community. You&rsquo;re giving platforms to other people to do things that you can do. But other than let it go outside, you&rsquo;re bringing it home. Community is home.</p>
+            <p id="s1052"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1052s" target="_blank" rel="noopener" data-pagefind-ignore>17:32</a>Yeah. So I I think that&rsquo;s the whole essence and and I was going I mean I absolutely agree and I was going to say you know for me such a big thing has been like crypto is so intimidating like just to learn about it&rsquo;s like crypto finance if you don&rsquo;t know if you don&rsquo;t feel you understand finance then crypto can just feel like tech finance and it&rsquo;s like</p>
+            <p id="s1068"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1068s" target="_blank" rel="noopener" data-pagefind-ignore>17:48</a>so when people just when some I used to think so too like once I just think I&rsquo;m thinking tech I&rsquo;m like ah count me out.</p>
+            <p id="s1075"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1075s" target="_blank" rel="noopener" data-pagefind-ignore>17:55</a>Yeah. Mhm. Count me out. But then when you have platforms like where where they make you realize, oh, it&rsquo;s not so deep. It&rsquo;s deep. It&rsquo;s actually deep. But it&rsquo;s not so it&rsquo;s not as deep as I thought, right? It&rsquo;s not as hectic as I thought it would be. Yeah.</p>
+            <p id="s1089"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1089s" target="_blank" rel="noopener" data-pagefind-ignore>18:09</a>It&rsquo;s not so above your head. You can actually learn it. Yeah. And I think like spaces like this, that&rsquo;s what I was going to say. Like when I got into crypto, I was in like five, six, seven different communities asking my questions until the community would fade and I&rsquo;d be like, &ldquo;All right, like I guess I&rsquo;ll go find friends somewhere else.&rdquo; like they&rsquo;re not really my friends, you know, longterm if I have to do that all the time. And so, I think over time, it&rsquo;s been awesome for me to discover like that with consistency, you can find spaces like these, you know. I think like I go to conferences in the</p>
+            <p id="s1116"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1116s" target="_blank" rel="noopener" data-pagefind-ignore>18:36</a>US. I&rsquo;ve been to more than 10 different crypto conferences and I met probably like maybe 60, maybe 70 different black people in crypto. But it&rsquo;s like I have to do all that to meet those people. The idea that you all have a community, you know, within like a three-hour radius that you can see like and be in conversation, learn and grow together. I think I think you all are so lucky to have that and to have like thought leaders that are local to have a space to be able to build together.</p>
+            <p id="s1137"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1137s" target="_blank" rel="noopener" data-pagefind-ignore>18:57</a>You know, I think you all are so fortunate to have that and that many people don&rsquo;t get to have that. But that&rsquo;s really the reason that I&rsquo;m creating my my platform is that I can start to find the people who want to be the leaders in creating spaces like these so that we can have more of them be accessible to people our diaspora around the world</p>
+            <p id="s1151"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1151s" target="_blank" rel="noopener" data-pagefind-ignore>19:11</a>because it&rsquo;s important for us to feel resourced. It&rsquo;s important for us to feel like we can learn and like there&rsquo;s a place for us to go to learn even if it is online, you know? It&rsquo;s just like we need to feel like we have like a friend in the game as we do it, someone else to ask our questions with.</p>
+            <p id="s1163"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1163s" target="_blank" rel="noopener" data-pagefind-ignore>19:23</a>So, I appreciate you saying that and I&rsquo;m curious, how do you feel like uh the Nigerian culture fits into your into your creative expression and your vision for this platform that you want to create?</p>
+            <p id="s1172"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1172s" target="_blank" rel="noopener" data-pagefind-ignore>19:32</a>Okay. Nigerian culture, um, we are very colorful. We are very creative. You&rsquo;ll be shocked at how much you can do. All you just have to do is ask questions, right? So like I said, I would like to express myself more in style in styling people and then making putting out my own designs and then some what and when it comes to um the talk part of it like my podcast and all I also want to like give out platforms to young individual to be able to express themselves um in diverse forms in in in those places where you best feel you you can express yourself</p>
+            <p id="s1216"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1216s" target="_blank" rel="noopener" data-pagefind-ignore>20:16</a>You know, if I can talk better instead, you can talk better on something else. And everybody has where their strength lies. Look for people in their strength and just let them bloom there. You get let them bloom there. And then have a I already have a brand. Rush adon. You can check it on Instagram. I just style people. I style women. I style men. Whatever representative I just have. You just make them feel beautiful. Oh, you make them feel unique in whatever the child they choose to show themselves in. So, that&rsquo;s what I that&rsquo;s what I plan to do.</p>
+            <p id="s1249"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1249s" target="_blank" rel="noopener" data-pagefind-ignore>20:49</a>I mean, I&rsquo;m excited to hear that. It&rsquo;s been really nice to hear you talk about your vision of of of a podcast and the kind of conversations that you would have when you talk about music and the sexism and like how there&rsquo;s room for cultural progress, for it to be a space that promotes things that actually serve people. Um, I&rsquo;m curious like with your with your with your brand, what&rsquo;s your vision for your brand? Like what&rsquo;s your impetus? You say making sure people can feel beautiful and self-expressed and not be judged. I I also want to make sure I teach people.</p>
+            <p id="s1274"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1274s" target="_blank" rel="noopener" data-pagefind-ignore>21:14</a>I I want to make sure like like myself now I&rsquo;m trying to build confidence. I&rsquo;m trying to be bold. I also I I am very sure that people like me out there who is finding it difficult to be able to relate to people for different reasons. I want to build a platform where I&rsquo;ll be able to educate young individuals to be bold to be able to speak out to express their creativity and not just express it show it out to the world in different platforms in whatever like I said bloom in where they flourish like whatever platform they flourish in give them platforms to build give them that be</p>
+            <p id="s1305"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1305s" target="_blank" rel="noopener" data-pagefind-ignore>21:45</a>there to show them the stage until they&rsquo;re out there you get in whatever platforms they choose. Yeah. Just make sure I&rsquo;m following them up until they progress. You know, there are some people that are meant to be behind the scenes, right? There are people that are meant to be behind the scenes. You&rsquo;re just, nobody knows, but just that person knows that, oh, this was who put me out there. Oh, this was who trained me and all of that. Give these platforms to young people, mostly teenagers, because the world is so loud right now.</p>
+            <p id="s1336"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1336s" target="_blank" rel="noopener" data-pagefind-ignore>22:16</a>There&rsquo;s so much going on. There&rsquo;s so much going on. And you be sure there are a lot of people that just need someone to listen to them. So like I just want to be that ear that listens and probably that voice that you need just give you captain fly baby fly. You have the wings fly. Like I didn&rsquo;t really get that. I have to do that myself.</p>
+            <p id="s1355"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1355s" target="_blank" rel="noopener" data-pagefind-ignore>22:35</a>So I want to make sure I&rsquo;m giving it out as much as I can while I can. Yeah. No, I appreciate that. I definitely feel like I also feel like in many ways I wasn&rsquo;t comfortable like especially as a teenager figuring myself out like discovering what I want to do with my life, who do I want to be? And I feel like having a space someone&rsquo;s going to listen to you is so invaluable. I know when I was talking to to bio and uh and ano they were talking about like people are are are really busy you know and there&rsquo;s not a lot of people who are</p>
+            <p id="s1383"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1383s" target="_blank" rel="noopener" data-pagefind-ignore>23:03</a>necessarily emotionally available uh like here in Nigeria and like in Africa broadly but even like in the in the US I would say like everybody&rsquo;s working you know everybody&rsquo;s at work everybody&rsquo;s working like who actually has time to do things that don&rsquo;t pay you but still demand attention and care. Um, and I think that&rsquo;s a shame. And so people that I think are holding those spaces like you&rsquo;re talking about, like creative option, creative space, people feel like they belong and say whatever they want, you know, be themselves. I think they&rsquo;re so essential.</p>
+            <p id="s1404"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1404s" target="_blank" rel="noopener" data-pagefind-ignore>23:24</a>Yeah. Very. I think especially for young people because every day matters, you know, every day matters. Your adolescence is gone one day and you&rsquo;re like, I need to be working like and I have kids</p>
+            <p id="s1414"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1414s" target="_blank" rel="noopener" data-pagefind-ignore>23:34</a>and it&rsquo;s like now your life is really our life. this is the time to do it because when I can cuz the next thing you get a job,</p>
+            <p id="s1421"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1421s" target="_blank" rel="noopener" data-pagefind-ignore>23:41</a>you&rsquo;re so busy trying to make money and then you find out you&rsquo;re not really living the life you really want to live because you&rsquo;re trying to chase chase chase chase chase money. It&rsquo;s never enough.</p>
+            <p id="s1430"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1430s" target="_blank" rel="noopener" data-pagefind-ignore>23:50</a>Yeah. So even if so in the midst of chasing that money, it has to be what makes you happy. It has to be you doing what makes you happy. That&rsquo;s the only way you can feel proposed. You can feel like you&rsquo;re you&rsquo;re really working in purpose. You&rsquo;re delivering that purpose at that time. Yes. I think that&rsquo;s that&rsquo;s just it.</p>
+            <p id="s1447"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1447s" target="_blank" rel="noopener" data-pagefind-ignore>24:07</a>Well, I think you have so much wisdom to be able to say all these things that you&rsquo;ve been saying and I&rsquo;m like so glad that we made sure to sit down and have this conversation.</p>
+            <p id="s1453"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1453s" target="_blank" rel="noopener" data-pagefind-ignore>24:13</a>I am. Please, thank you for the platform. Like it&rsquo;s been a while I actually spoke to. I I like it. Like if you know me, my love language, I like smart people. When I just see smart people, oo, butterflies in my belly.</p>
+            <p id="s1469"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1469s" target="_blank" rel="noopener" data-pagefind-ignore>24:29</a>Like I just like it when like when I just see smart people and I&rsquo;m like, &ldquo;Oh, wow.&rdquo; Speak. I can hear you. You have my attention and</p>
+            <p id="s1478"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1478s" target="_blank" rel="noopener" data-pagefind-ignore>24:38</a>that&rsquo;s just it. So, it just gives me platform that, oh, there&rsquo;s somebody I could learn from. I just love it. And I, like I said earlier, I think I&rsquo;m just going to love it here.</p>
+            <p id="s1486"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1486s" target="_blank" rel="noopener" data-pagefind-ignore>24:46</a>No, I definitely think you are. And I would say that&rsquo;s the reason I love being here in Nigeria so much. I&rsquo;ve met so many incredibly brilliant black people, you know, and I feel like it&rsquo;s it&rsquo;s a shame like like how undervalued I feel like people can be here to be so smart and to feel like they just don&rsquo;t have resources or a platform. I think like like I&rsquo;m so excited to continue to figure out what my role is, what our role is. We the media uh here in Africa and in Nigeria, but just like like on the global scale, how do we bring people who have so much knowledge and value</p>
+            <p id="s1511"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1511s" target="_blank" rel="noopener" data-pagefind-ignore>25:11</a>like to the people who are excited to receive that value? Um and I&rsquo;m so blessed that we got to have this conversation that I got to have this experience, you know, putting myself out there.</p>
+            <p id="s1520"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1520s" target="_blank" rel="noopener" data-pagefind-ignore>25:20</a>Thanks for having me. Do you have any final words for my audience? Oh yes, please, please. This is going to be an awesome It is awesome. So you should watch his videos, listen to his podcast, subscribe, like, leave a comment, engage, everything you can do. Everything you can do, engage because you&rsquo;ll be surprised that share the links if necessary. Once you find anything relatable, there&rsquo;s definitely someone who&rsquo;s going to need something someone is saying at a time. Just spread love.</p>
+            <p id="s1552"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1552s" target="_blank" rel="noopener" data-pagefind-ignore>25:52</a>Well, thank you everybody for tuning in to my podcast today. Thank you for being along with me on this journey as I&rsquo;m building this platform, as I&rsquo;m connecting with people who are new to the community and who are new to my community, whose communities I&rsquo;m new to as well. I think this whole experience here in Africa and Nigeria has been mind-blowing, eye opening in so many ways. And I feel so blessed to have had this homecoming as the first person in my family to return to Africa, which is like crazy to realize. Um, but also to feel like I&rsquo;m finding belonging in a space that, you know, from across the</p>
+            <p id="s1579"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1579s" target="_blank" rel="noopener" data-pagefind-ignore>26:19</a>world feels foreign, even though it&rsquo;s a place full of people like me. Um, and so I feel so lucky. I feel so enlightened to be in this space and and so excited to return in the future. Um, and just really say thank you for you for giving us your attention. Um, and I hope that you do return. I hope you make our way to the Discord and you join us sometime soon so we can learn about what you are and how we can support you. And I hope that you do launch your podcast. You meant as an NFT and I hope that you all go and collect those NFTs and support</p>
+            <p id="s1604"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1604s" target="_blank" rel="noopener" data-pagefind-ignore>26:44</a>precious patients and creating that platform. uh to think that you&rsquo;re such a beautiful soul and I hear that your vision is is going to be so impactful if you really do take time to put energy into it. So, I hope that you do.</p>
+            <p id="s1615"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1615s" target="_blank" rel="noopener" data-pagefind-ignore>26:55</a>I will. I will. I will. I&rsquo;ll hold you to that. Oh, I Well, definitely. So, thank you so much and I hope that you have a blessed day. I like to say booyah to close out the interview. So, we say 3, two, one.</p>
+            <p id="s1626"><a class="wt-at" href="https://www.youtube.com/watch?v=gxvuDzVX5WE&amp;t=1626s" target="_blank" rel="noopener" data-pagefind-ignore>27:06</a>Booyah. Take up some space. You&rsquo;re too far away. I think you should stay. You stay.</p>
+        </div>
+    </section>
+
+
+    <section class="wrap wt-more" aria-label="More from the library">
+        <div class="country-head">
+            <h2 class="country-name">Keep reading.</h2>
+            <span class="country-meta"><a href="../library.html">The whole library &rarr;</a></span>
+        </div>
+        <ul class="rel-list">
+            <li class="rel-item">
+                <a class="rel-link" href="../watch/unlearning-a-hate-for-blockchain-ethiopia.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/aFLVXj6g0Uw/mqdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">Unlearning a Hate for Blockchain: Pop-Up City | Ethiopia</span>
+                        <span class="rel-why">Ethiopia</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="../watch/crypto-clarity-whats-happening-with-the-money-online.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/W20VlF_HHuQ/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">What&#x27;s Happening With the Money | Crypto Clarity</span>
+                        <span class="rel-why">2025</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="../watch/lets-talk-about-web-3-with-maceo-online.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/h_ncqUC-4co/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">A Podcast Before Crypto, and Money as a Public Good</span>
+                        <span class="rel-why">2025</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+<div class="wrap wtm-share"></div>
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+
+<script src="../lite-yt.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

@@ -1,0 +1,821 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="ETH Denver 2024, in the series FWB paid for.">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/real-estate-to-web3-and-40-acres-dao-big-trav-at-eth-denver-2024">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="Real Estate to Web3 and 40 Acres DAO: Big Trav | ETH Denver">
+    <meta property="og:description" content="ETH Denver 2024, in the series FWB paid for.">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/real-estate-to-web3-and-40-acres-dao-big-trav-at-eth-denver-2024.jpg?v=22288c518a">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Real estate to Web3, and 40 Acres DAO: Big Trav">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/real-estate-to-web3-and-40-acres-dao-big-trav-at-eth-denver-2024.jpg?v=22288c518a">
+    <meta property="og:url" content="https://wethem.xyz/watch/real-estate-to-web3-and-40-acres-dao-big-trav-at-eth-denver-2024">
+    <title>Real Estate to Web3 and 40 Acres DAO: Big Trav | ETH Denver &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/real-estate-to-web3-and-40-acres-dao-big-trav-at-eth-denver-2024#video",
+  "name": "Real Estate to Web3 and 40 Acres DAO: Big Trav | ETH Denver",
+  "description": "ETH Denver 2024, in the series FWB paid for. Maceo opens by saying so: \"Shout out to FWB, everybody who voted for me to come out here and work on this project.\" Across from him is Big Trav, founder of W3bbie, at his first ETH Denver: \"lived up to the hype, I will say.\" What he likes most is seeing people again, the ones he stayed with at a hacker house in Paris, and \"being with my boys Russ and Dave.\" Maceo remembers meeting Russ the year before, walking around \"trying to meet black people,\" and being told \"you got to meet 40 acres they're the community,\" and now being back at the event Russ organised. How Trav got in is the surprise of the piece. \"real estate brought me into Web3 space.\" Someone who knew his real estate development work was moving into \"physical locations backed by NFTs\" and wanted him on the team. \"three, four years later, here I am now.\" Before that, a few rental properties, then the pandemic and Clubhouse, \"I got to meet like a crazy network that I probably wouldn't have gotten any other way.\" On his own progress he is unbothered by the pivots: \"As I always say, I have past lives I like to evolve, I like to be, you know, water.\" The core memory is a hackathon. \"I'd never done a hackathon. I did it for my 30th birthday,\" three days with two friends at an ETH Global and Zora hackathon, \"we were top eight finalists,\" second place from Polygon. It told him W3bbie should build products, not only collectibles. W3bbie, in his words: \"we are rebranding Web3,\" making it \"make more sense culturally, especially for our communities,\" and \"we're really just a collective of builders of color.\" The first project, Found on Mars, was Midjourney art, 3,333 pieces, dropped free with no marketing. \"I thought that would take a couple weeks maybe a month it happened in an hour.\" Then the secondary market made money for the collectors: \"we've made two and a half ETH for people off something that we put out for free.\" The product he uses to explain utility is the Nasty Pass, a fast pass for DJ Mike Nasty's New York parties with rarity levels that let you skip the line and bring \"a plus one to a plus four.\" At the end Trav turns it around and congratulates Maceo on the FWB proposal: \"Governance is crazy,\" and \"a lot of people get stuff passed and get the funds and then they disappear.\" Language is unfiltered; the show intro uses its earlier name. The transcript below is from the original audio.",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/Nc_zdA2VNUk/maxresdefault.jpg"
+  ],
+  "uploadDate": "2024-06-21T22:39:26Z",
+  "embedUrl": "https://www.youtube.com/embed/Nc_zdA2VNUk",
+  "url": "https://wethem.xyz/watch/real-estate-to-web3-and-40-acres-dao-big-trav-at-eth-denver-2024",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT10M53S",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "FWB, and a first ETH Denver",
+      "startOffset": 0,
+      "url": "https://wethem.xyz/watch/real-estate-to-web3-and-40-acres-dao-big-trav-at-eth-denver-2024?t=0",
+      "endOffset": 52
+    },
+    {
+      "@type": "Clip",
+      "name": "Seeing people again: Russ, Dave, 40 Acres",
+      "startOffset": 52,
+      "url": "https://wethem.xyz/watch/real-estate-to-web3-and-40-acres-dao-big-trav-at-eth-denver-2024?t=52",
+      "endOffset": 107
+    },
+    {
+      "@type": "Clip",
+      "name": "Real estate brought him into Web3",
+      "startOffset": 107,
+      "url": "https://wethem.xyz/watch/real-estate-to-web3-and-40-acres-dao-big-trav-at-eth-denver-2024?t=107",
+      "endOffset": 169
+    },
+    {
+      "@type": "Clip",
+      "name": "How Clubhouse built his network in the pandemic",
+      "startOffset": 169,
+      "url": "https://wethem.xyz/watch/real-estate-to-web3-and-40-acres-dao-big-trav-at-eth-denver-2024?t=169",
+      "endOffset": 206
+    },
+    {
+      "@type": "Clip",
+      "name": "Why he keeps pivoting: be like water",
+      "startOffset": 206,
+      "url": "https://wethem.xyz/watch/real-estate-to-web3-and-40-acres-dao-big-trav-at-eth-denver-2024?t=206",
+      "endOffset": 236
+    },
+    {
+      "@type": "Clip",
+      "name": "The first hackathon win, on his 30th birthday",
+      "startOffset": 236,
+      "url": "https://wethem.xyz/watch/real-estate-to-web3-and-40-acres-dao-big-trav-at-eth-denver-2024?t=236",
+      "endOffset": 323
+    },
+    {
+      "@type": "Clip",
+      "name": "What is W3bbie? A collective of builders of color",
+      "startOffset": 323,
+      "url": "https://wethem.xyz/watch/real-estate-to-web3-and-40-acres-dao-big-trav-at-eth-denver-2024?t=323",
+      "endOffset": 391
+    },
+    {
+      "@type": "Clip",
+      "name": "Found on Mars: 3,333 pieces, gone in an hour",
+      "startOffset": 391,
+      "url": "https://wethem.xyz/watch/real-estate-to-web3-and-40-acres-dao-big-trav-at-eth-denver-2024?t=391",
+      "endOffset": 485
+    },
+    {
+      "@type": "Clip",
+      "name": "The Nasty Pass: skip the line",
+      "startOffset": 485,
+      "url": "https://wethem.xyz/watch/real-estate-to-web3-and-40-acres-dao-big-trav-at-eth-denver-2024?t=485",
+      "endOffset": 546
+    },
+    {
+      "@type": "Clip",
+      "name": "What is next",
+      "startOffset": 546,
+      "url": "https://wethem.xyz/watch/real-estate-to-web3-and-40-acres-dao-big-trav-at-eth-denver-2024?t=546",
+      "endOffset": 600
+    },
+    {
+      "@type": "Clip",
+      "name": "The proposal that passed, and where to find him",
+      "startOffset": 600,
+      "url": "https://wethem.xyz/watch/real-estate-to-web3-and-40-acres-dao-big-trav-at-eth-denver-2024?t=600",
+      "endOffset": 653
+    }
+  ],
+  "creator": {
+    "@type": "Person",
+    "name": "Maceo",
+    "url": "https://wethem.xyz/people/maceo"
+  },
+  "transcript": "Well, what's up everybody? Welcome to another episode of We Them Niggas. We're out here at ETH Denver. Shout out to FWB, everybody who voted for me to come out here and work on this project. I'm super excited to be out here with Trav, founder of W3bbie, a big guy in the space. I'm excited to be connecting with you. I know I talked a couple months ago about doing an interview.\nIt didn't come to fruition as I was being a bit frantic, but... Timing. Timing, man.\nAnd I'm excited that we're here and getting some IRL, because I think that really does bridge the gap, I think. And yeah, how has your ETH Denver been, man?\nReal smooth, this is actually my first ETH Denver Okay So it's been real smooth, lived up to the hype, I will say Yeah, I really enjoyed it I like Denver in general, but coming here for a crypto event is really a different, you know, like a unique way to be here, I guess But it's been cool, no complaints\nAnd what's been most exciting to you, like, being here this year? First ETH Denver, what's the impression of the value?\nMost exciting is seeing people I've met over the last two, three years in the space at other conferences I saw a lot of people I stayed at, we stayed at a hacker house in Paris together last summer at ECC So just running into people I've met over the last couple of years, being with my boys Russ and Dave, we've kind of like really built a really cool friendship because of this space over like the last two or three years and just, you know, seeing the growth of what they're building and what other people are building over time and I think it's really cool to just, you know, check in with people in real life and just see the progress.\nI appreciate that and I have to say I agree I think it's cool like even for myself to see like how far I've come in in the space I've got the space that moves so fast I think just continuing it show up makes a difference I know I connected with Russ last year at ETH Denver and him and Catalyst I was like walking around trying to meet black people who's here who's here people like oh you got to meet 40 acres they're the community\nyeah I'm like\noh okay and so it's dope to be back here full circle at the event that he's organized you know he's a people of color black people you know it's me them niggas so yeah yeah You must be partnering up with Russ and other folks just to highlight and tell the stories 100% This is your first ETH Denver, but how did you actually get into the Web3, into the tech world? You say you have an artistic background as well\nYeah, funny enough, actually, real estate brought me into Web3 space I was just wrapping up some time in the real estate space doing some real estate development projects, actually And someone who knew my work in the real estate space who was venturing into digital real estate with the NFT-backed, like physical locations backed by NFTs, put the bug in my ear about the space. It really wanted me on their team for what they're about to do in this space. And they just made it make enough sense where I was like, oh, this sounds interesting. Like, okay, I want to go see what's going on over here.\nAnd three, four years later, here I am now, you know, W3bbie, a few hackathons, like a lot of projects, you know, out in the ecosystem. It's just really cool. Like, it's funny, that's what brought me in because it wasn't my creative. If it wasn't anything creative, it was actually real estate, which was just, you know, funny\nAnd how long did you have been in real estate at that point?\nA couple of years maybe, I started out with like some rental properties and then I ended up getting into, during the pandemic, I ended up locking in and like really meeting some people because of the clubhouse, I got to meet like a crazy network that I probably wouldn't have gotten any other way, and that led me to real estate development for a while, so So, like, maybe, like, let's say about four years total, I guess, from that to 2017 to 2021-ish,\nyeah. And what would you say have been some of the key milestones in, like, seeing your progression as, like, a learner in the space or someone that wants to contribute to the space culturally and other ways? And even now, like you're saying, you do work professionally with HBCU students, helping them think about how they can use this emerging technology and innovative ways to be, like, out in the workforce and on the forefront.\nYeah, so many milestones, man. Like, too many, honestly. I've done a lot of pivoting. Like, you know, I kind of,\nI like that challenge of being able to pivot\nI don't like being stuck in one space As I always say, I have past lives I like to evolve, I like to be, you know, water, you know, so to speak So, it's so many milestones in so many different areas of work I've done And I'm just like, I'm really just grateful to even be able to do that You know, I think that's a skill in itself It's very challenging, you know A lot of times making pivots quickly Like you said, this space moves really fast So to even be able to be in this space as long as I have been It's only been a few years, but to be able to adapt to what the space was doing and, you know, continue to build and have success, it's just like, it's a blessing, bro.\nLike, I'm super grateful for that. And a lot of help from cool, meeting the right people along the way, you know, like yourself. So, yeah. Too many Miles songs and names. I can't pinpoint one.\nThat's okay. What about like a core memory,\ncore memory? W3bbie's first hackathon win. We got our first hackathon win. It was an ETH Global and Zora hackathon. I'd never done a hackathon. I did it for my 30th birthday, actually. That was my, I decided I was going to sit there for three days with two of my homies and jam on a project for a hackathon.\nAnd we ended up getting a, we won, we were top eight finalists.\nWe won a prize from Polygon. We got second place from Polygon. And then we won something, I think, from like NFT Wizard or NFT Storage or something like that. And that was just cool. It was really reassuring because I knew I wanted to go I wanted to go into products at that point. I had done art in the space, but I knew I really wanted to get into consumer products and building things that people can use outside of just collectibles. So that was really reassuring and just like, that's what, it gave W3bbie validation in my eyes first to continue doing what we were doing.\nAnd so was that product that you were building W3bbie at that point or was something different?\nNo, it was a W3bbie product. It was a W3bbie product. W3bbie already existed, but up until then we had only done a couple of collectible projects. We did an AI-generated project, which is our first project as a collective\nSo I'm remiss to not have really asked to introduce what WebE is to my audience So can you speak about what WebE is and what your mission is, what your vision is for it?\nRight now, we are rebranding Web3, right? We're trying to make it make more sense culturally, especially for our communities, for sure That's first and foremost And so, yeah, when you say Web3 or blockchain, crypto, the people who aren't in this space It comes with a certain, I don't know, energy So we're trying to rebrand that in our community's eyes And make way more user-friendly products We've really been having fun in the Web3 gaming space I believe in the Web3 gaming space a lot But we're really just a collective of builders of color A lot of them are my friends before Web3 Who I just kind of pushed down the rabbit hole with me They saw me having enough success to come look Some already knew about it But, yeah, we've been jamming, you know, together for about two, three years now, I think I can't even remember, I think July 4th, 2022 was Found on Mars That was our first project, so, yeah Very cool,\nand what was Found on Mars, what was the premise of that?\nYeah, that was an AI-generated, it was mid-journey-generated artwork It was just a digital collectible project Right after NFT NYC that year, we went up there and promoted W3bbie Like, we had just started our Twitter and Instagram So that was the alpha we were giving out, like, hey, follow this page and then we did a no marketing free drop and that my goal was to mint out the project I had never it was 3333 pieces I never like had that many pieces out in the world as an artist and so I just wanted it to all be collected I thought that would take a couple weeks maybe a month it happened in an hour funny enough and we didn't do any pre-promotion so that was really cool and the cool thing that started happening after that is because of Web3, the secondary market immediately started happening after it meant it out.\nAnd that was just really big for me as an artist to see people buying and selling something I put out in the world for free. And not only did we get to make some money because of royalties, other people made money. That's what I love the most about that is I think it's only done like two and a half ETH or something like that. It's like we've made two and a half ETH for people off something that we put out for free, which is just really cool.\nI think that's definitely incredible, and I think that really speaks to what's so exciting about the spaces of creative, is being able to do your creative process, create because you want to create, and walk away with a portfolio. I think that's something that really excited me, compelled me to start wanting to speak to creative specifically. And as you're looking at trying to rebrand Web3, what are the things that, sticking points, what are the things that you see as making this space culturally relevant? What's your approach to that? What do you feel like are guide points?\nYeah, like I said, better user-centered products, stuff that people can actually use in their lives, whether it's a game because you game or something like the Nasty Pass, which is one of our early products we did for DJ Mike Nasty out of New York, which is basically like a fast pass, you know, for its events. If you've ever gone to a New York, I mean a DJ Mike nasty party, the lines are long, crazy But to be able to mint a fast pass with different levels of rarity that would grant you Not only skip the line, but you can bring a plus one to a plus four depending on which rarity you got That's real utility, that's something people, it can make it make sense for people That you don't really have to care about, well three, you go to this party every week, right?\nYou stand in this line for X amount of hours, you spend this money, not only you get in for free You get to skip the line and you can bring, you know, more people with you,\nso That makes a lot of sense, user-centric, user-centric, like tools Yeah And things that pertain to everyday life For the next year, like this 2024, what's on the horizon for W3bbie? What should you be looking out for?\nWe're trying to figure out what our North Star is as a product And we're trying to just expand the brand And like, we're very much so water too as a collective We haven't kind of put ourselves in any kind of corner Just like taking a hard direction on anything Because this space is so volatile and it moves really fast So we're staying flexible Just more presence overall, I think, in this space I think we want to have a larger presence in this space And outside of this space as a brand So whatever that means, like whatever that is that leads to that The goal is to expand, just to be, like I said, a larger presence\nI got that, Will, I'm excited to think about how we can play positive some games So I can apply what you're up to, how I can show up to you I know you have a Discord, I'm in your Discord I've come to some of your calls this year I'm a big fan of Ken, Ken's come to my calls throughout the year and most people don't really come to my Discord calls in the bear market, but I think it's been really cool to see Ken as a continuous space. He's the man, bro. He's been gassing you up to me for a couple months as well, so I'm excited we really got to do this interview.\nI want to say this before we dip. Congratulations on getting that proposal passed because that's not easy in this space. Governance is crazy. It's kind of difficult sometimes. It can be strenuous, so having that success with getting an idea passed by a body of governance in this space is something to be applauded, so salute on you coming out here and fulfilling what you proposed because a lot of people get stuff passed and get the funds and then they disappear. Shout out to you\nI appreciate that, I'm trying to make it happen, shout out to my team, shout out to Jules, shout out to Gabrielle Shout out to Foran as well as we're showing up a little bit And shout out to you for really being here and letting me do it So thank you again so much If you have anything you want to let people know where they can find you, keep up with you Go ahead and shout it out BigTrav205\non Twitter and Instagram W3bbie, W3B-B-I-E dot XYZ is our website You can find everything else from there\nAlright, shout out to W3bbie, shout out to Trav Thank you all very much, we had to say booyah So booyah, thanks for another episode of We Them Niggas We Them Media, Maceo, Piano, Piano, Piano, Piano, Piano, Piano, Piano,",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Denver",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "url": "https://wethem.xyz/places#denver"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Denver Unfiltered",
+    "url": "https://wethem.xyz/portfolio#p-denver"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Web3 Governance",
+      "url": "https://wethem.xyz/topics/web3-governance"
+    },
+    {
+      "@type": "Thing",
+      "name": "Crypto",
+      "url": "https://wethem.xyz/topics/crypto"
+    }
+  ],
+  "keywords": [
+    "Web3 Governance",
+    "Crypto"
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Denver Unfiltered",
+      "item": "https://wethem.xyz/portfolio#p-denver"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Real estate to Web3, and 40 Acres DAO: Big Trav",
+      "item": "https://wethem.xyz/watch/real-estate-to-web3-and-40-acres-dao-big-trav-at-eth-denver-2024"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place], who[data-pf-who]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2024-06-21" data-pf-vid="Nc_zdA2VNUk" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;10:53&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="Denver" data-pf-country="United States" data-pf-project="Denver Unfiltered" data-pf-who="Maceo">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-denver">Denver Unfiltered</a></li>
+            <li aria-current="page">Real estate to Web3, and 40 Acres DAO: Big Trav</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">Real estate to Web3, and 40 Acres DAO: Big Trav.</h1>
+
+    <p class="wt-byline"><strong>Big Trav</strong> &middot; Reported by <strong><a href="../people/maceo.html">Maceo</a></strong> &middot; Denver &middot; 11 min</p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="Nc_zdA2VNUk" live postersrcset="../stills/Nc_zdA2VNUk-320.jpg 320w, ../stills/Nc_zdA2VNUk-480.jpg 480w, ../stills/Nc_zdA2VNUk-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/Nc_zdA2VNUk?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="Real estate to Web3, and 40 Acres DAO: Big Trav, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+    <p class="wt-note wt-credit">Executive producer: C.Y. Lee</p>
+
+    <div class="wt-prose">
+            <p>ETH Denver 2024, in the series FWB paid for. Maceo opens by saying so: &ldquo;Shout out to FWB, everybody who voted for me to come out here and work on this project.&rdquo; Across from him is Big Trav, founder of W3bbie, at his first ETH Denver: &ldquo;lived up to the hype, I will say.&rdquo; What he likes most is seeing people again, the ones he stayed with at a hacker house in Paris, and &ldquo;being with my boys Russ and Dave.&rdquo; Maceo remembers meeting Russ the year before, walking around &ldquo;trying to meet black people,&rdquo; and being told &ldquo;you got to meet 40 acres they&rsquo;re the community,&rdquo; and now being back at the event Russ organised.</p>
+            <p>How Trav got in is the surprise of the piece. &ldquo;real estate brought me into Web3 space.&rdquo; Someone who knew his real estate development work was moving into &ldquo;physical locations backed by NFTs&rdquo; and wanted him on the team. &ldquo;three, four years later, here I am now.&rdquo; Before that, a few rental properties, then the pandemic and Clubhouse, &ldquo;I got to meet like a crazy network that I probably wouldn&rsquo;t have gotten any other way.&rdquo;</p>
+            <p>On his own progress he is unbothered by the pivots: &ldquo;As I always say, I have past lives I like to evolve, I like to be, you know, water.&rdquo; The core memory is a hackathon. &ldquo;I&rsquo;d never done a hackathon. I did it for my 30th birthday,&rdquo; three days with two friends at an ETH Global and Zora hackathon, &ldquo;we were top eight finalists,&rdquo; second place from Polygon. It told him W3bbie should build products, not only collectibles.</p>
+            <p>W3bbie, in his words: &ldquo;we are rebranding Web3,&rdquo; making it &ldquo;make more sense culturally, especially for our communities,&rdquo; and &ldquo;we&rsquo;re really just a collective of builders of color.&rdquo; The first project, Found on Mars, was Midjourney art, 3,333 pieces, dropped free with no marketing. &ldquo;I thought that would take a couple weeks maybe a month it happened in an hour.&rdquo; Then the secondary market made money for the collectors: &ldquo;we&rsquo;ve made two and a half ETH for people off something that we put out for free.&rdquo; The product he uses to explain utility is the Nasty Pass, a fast pass for DJ Mike Nasty&rsquo;s New York parties with rarity levels that let you skip the line and bring &ldquo;a plus one to a plus four.&rdquo;</p>
+            <p>At the end Trav turns it around and congratulates Maceo on the FWB proposal: &ldquo;Governance is crazy,&rdquo; and &ldquo;a lot of people get stuff passed and get the funds and then they disappear.&rdquo; Language is unfiltered; the show intro uses its earlier name. The transcript below is from the original audio.</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../places.html#denver">Everything filmed in Denver</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="blvkhvnd-and-the-crypto-cookout-sirsu-at-eth-denver-2024.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/sSyrdlViK3Q-640.jpg" srcset="../stills/sSyrdlViK3Q-320.jpg 320w, ../stills/sSyrdlViK3Q-480.jpg 480w, ../stills/sSyrdlViK3Q-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>29:32</span></span><span>BLVKHVND and the Crypto Cookout: Sirsu.</span></a>
+        <a class="wt-rail-card" href="social-tokens-community-and-url-to-irl-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/4uN9BrX2Ztg-640.jpg" srcset="../stills/4uN9BrX2Ztg-320.jpg 320w, ../stills/4uN9BrX2Ztg-480.jpg 480w, ../stills/4uN9BrX2Ztg-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>18:21</span></span><span>Social tokens, and a conference for Cape Verde.</span></a>
+        <a class="wt-rail-card" href="a-first-interview-and-advice-back-to-newark-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/UkX8veGIl58-640.jpg" srcset="../stills/UkX8veGIl58-320.jpg 320w, ../stills/UkX8veGIl58-480.jpg 480w, ../stills/UkX8veGIl58-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:15</span></span><span>A first interview, and advice back to Newark.</span></a>
+        <a class="wt-rail-card" href="what-decentralized-science-means-for-health-gabrielle-at-eth-denver-2024.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/19agkxpJH6Q-640.jpg" srcset="../stills/19agkxpJH6Q-320.jpg 320w, ../stills/19agkxpJH6Q-480.jpg 480w, ../stills/19agkxpJH6Q-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>6:41</span></span><span>What decentralized science means for health: Gabrielle at ETH Denver 2024.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c0"><a class="wt-t" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-s">FWB, and a first ETH Denver</span></li>
+                <li class="wt-line" id="c52"><a class="wt-t" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=52s" target="_blank" rel="noopener" data-pagefind-ignore>0:52</a><span class="wt-s">Seeing people again: Russ, Dave, 40 Acres</span></li>
+                <li class="wt-line" id="c107"><a class="wt-t" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=107s" target="_blank" rel="noopener" data-pagefind-ignore>1:47</a><span class="wt-s">Real estate brought him into Web3</span></li>
+                <li class="wt-line" id="c169"><a class="wt-t" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=169s" target="_blank" rel="noopener" data-pagefind-ignore>2:49</a><span class="wt-s">How Clubhouse built his network in the pandemic</span></li>
+                <li class="wt-line" id="c206"><a class="wt-t" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=206s" target="_blank" rel="noopener" data-pagefind-ignore>3:26</a><span class="wt-s">Why he keeps pivoting: be like water</span></li>
+                <li class="wt-line" id="c236"><a class="wt-t" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=236s" target="_blank" rel="noopener" data-pagefind-ignore>3:56</a><span class="wt-s">The first hackathon win, on his 30th birthday</span></li>
+                <li class="wt-line" id="c323"><a class="wt-t" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=323s" target="_blank" rel="noopener" data-pagefind-ignore>5:23</a><span class="wt-s">What is W3bbie? A collective of builders of color</span></li>
+                <li class="wt-line" id="c391"><a class="wt-t" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=391s" target="_blank" rel="noopener" data-pagefind-ignore>6:31</a><span class="wt-s">Found on Mars: 3,333 pieces, gone in an hour</span></li>
+                <li class="wt-line" id="c485"><a class="wt-t" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=485s" target="_blank" rel="noopener" data-pagefind-ignore>8:05</a><span class="wt-s">The Nasty Pass: skip the line</span></li>
+                <li class="wt-line" id="c546"><a class="wt-t" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=546s" target="_blank" rel="noopener" data-pagefind-ignore>9:06</a><span class="wt-s">What is next</span></li>
+                <li class="wt-line" id="c600"><a class="wt-t" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=600s" target="_blank" rel="noopener" data-pagefind-ignore>10:00</a><span class="wt-s">The proposal that passed, and where to find him</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Transcribed from the original audio and corrected for names. Speaker letters mark turns, not names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Well, what&rsquo;s up everybody? Welcome to another episode of We Them Niggas. We&rsquo;re out here at ETH Denver. Shout out to FWB, everybody who voted for me to come out here and work on this project. I&rsquo;m super excited to be out here with Trav, founder of W3bbie, a big guy in the space. I&rsquo;m excited to be connecting with you. I know I talked a couple months ago about doing an interview.</p>
+            <p id="s18"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=18s" target="_blank" rel="noopener" data-pagefind-ignore>0:18</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It didn&rsquo;t come to fruition as I was being a bit frantic, but... Timing. Timing, man.</p>
+            <p id="s22"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=22s" target="_blank" rel="noopener" data-pagefind-ignore>0:22</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And I&rsquo;m excited that we&rsquo;re here and getting some IRL, because I think that really does bridge the gap, I think. And yeah, how has your ETH Denver been, man?</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s28"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=28s" target="_blank" rel="noopener" data-pagefind-ignore>0:28</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Real smooth, this is actually my first ETH Denver Okay So it&rsquo;s been real smooth, lived up to the hype, I will say Yeah, I really enjoyed it I like Denver in general, but coming here for a crypto event is really a different, you know, like a unique way to be here, I guess But it&rsquo;s been cool, no complaints</p>
+            <p id="s42"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=42s" target="_blank" rel="noopener" data-pagefind-ignore>0:42</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And what&rsquo;s been most exciting to you, like, being here this year? First ETH Denver, what&rsquo;s the impression of the value?</p>
+            <p id="s47"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=47s" target="_blank" rel="noopener" data-pagefind-ignore>0:47</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Most exciting is seeing people I&rsquo;ve met over the last two, three years in the space at other conferences I saw a lot of people I stayed at, we stayed at a hacker house in Paris together last summer at ECC So just running into people I&rsquo;ve met over the last couple of years, being with my boys Russ and Dave, we&rsquo;ve kind of like really built a really cool friendship because of this space over like the last two or three years and just, you know, seeing the growth of what they&rsquo;re building and what other people are building over time and I think it&rsquo;s really cool to just, you know, check in with people in real life and just see the progress.</p>
+            <p id="s76"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=76s" target="_blank" rel="noopener" data-pagefind-ignore>1:16</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I appreciate that and I have to say I agree I think it&rsquo;s cool like even for myself to see like how far I&rsquo;ve come in in the space I&rsquo;ve got the space that moves so fast I think just continuing it show up makes a difference I know I connected with Russ last year at ETH Denver and him and Catalyst I was like walking around trying to meet black people who&rsquo;s here who&rsquo;s here people like oh you got to meet 40 acres they&rsquo;re the community</p>
+            <p id="s94"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=94s" target="_blank" rel="noopener" data-pagefind-ignore>1:34</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>yeah I&rsquo;m like</p>
+            <p id="s94-2"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=94s" target="_blank" rel="noopener" data-pagefind-ignore>1:34</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>oh okay and so it&rsquo;s dope to be back here full circle at the event that he&rsquo;s organized you know he&rsquo;s a people of color black people you know it&rsquo;s me them niggas so yeah yeah You must be partnering up with Russ and other folks just to highlight and tell the stories 100% This is your first ETH Denver, but how did you actually get into the Web3, into the tech world? You say you have an artistic background as well</p>
+            <p id="s114"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=114s" target="_blank" rel="noopener" data-pagefind-ignore>1:54</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, funny enough, actually, real estate brought me into Web3 space I was just wrapping up some time in the real estate space doing some real estate development projects, actually And someone who knew my work in the real estate space who was venturing into digital real estate with the NFT-backed, like physical locations backed by NFTs, put the bug in my ear about the space. It really wanted me on their team for what they&rsquo;re about to do in this space. And they just made it make enough sense where I was like, oh, this sounds interesting. Like, okay, I want to go see what&rsquo;s going on over here.</p>
+            <p id="s114-2"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=114s" target="_blank" rel="noopener" data-pagefind-ignore>1:54</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And three, four years later, here I am now, you know, W3bbie, a few hackathons, like a lot of projects, you know, out in the ecosystem. It&rsquo;s just really cool. Like, it&rsquo;s funny, that&rsquo;s what brought me in because it wasn&rsquo;t my creative. If it wasn&rsquo;t anything creative, it was actually real estate, which was just, you know, funny</p>
+            <p id="s163"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=163s" target="_blank" rel="noopener" data-pagefind-ignore>2:43</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And how long did you have been in real estate at that point?</p>
+            <p id="s164"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=164s" target="_blank" rel="noopener" data-pagefind-ignore>2:44</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>A couple of years maybe, I started out with like some rental properties and then I ended up getting into, during the pandemic, I ended up locking in and like really meeting some people because of the clubhouse, I got to meet like a crazy network that I probably wouldn&rsquo;t have gotten any other way, and that led me to real estate development for a while, so So, like, maybe, like, let&rsquo;s say about four years total, I guess, from that to 2017 to 2021-ish,</p>
+            <p id="s190"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=190s" target="_blank" rel="noopener" data-pagefind-ignore>3:10</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>yeah. And what would you say have been some of the key milestones in, like, seeing your progression as, like, a learner in the space or someone that wants to contribute to the space culturally and other ways? And even now, like you&rsquo;re saying, you do work professionally with HBCU students, helping them think about how they can use this emerging technology and innovative ways to be, like, out in the workforce and on the forefront.</p>
+            <p id="s206"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=206s" target="_blank" rel="noopener" data-pagefind-ignore>3:26</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, so many milestones, man. Like, too many, honestly. I&rsquo;ve done a lot of pivoting. Like, you know, I kind of,</p>
+            <p id="s213"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=213s" target="_blank" rel="noopener" data-pagefind-ignore>3:33</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I like that challenge of being able to pivot</p>
+            <p id="s216"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=216s" target="_blank" rel="noopener" data-pagefind-ignore>3:36</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I don&rsquo;t like being stuck in one space As I always say, I have past lives I like to evolve, I like to be, you know, water, you know, so to speak So, it&rsquo;s so many milestones in so many different areas of work I&rsquo;ve done And I&rsquo;m just like, I&rsquo;m really just grateful to even be able to do that You know, I think that&rsquo;s a skill in itself It&rsquo;s very challenging, you know A lot of times making pivots quickly Like you said, this space moves really fast So to even be able to be in this space as long as I have been It&rsquo;s only been a few years, but to be able to adapt to what the space was doing and, you know, continue to build and have success, it&rsquo;s just like, it&rsquo;s a blessing, bro.</p>
+            <p id="s239"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=239s" target="_blank" rel="noopener" data-pagefind-ignore>3:59</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Like, I&rsquo;m super grateful for that. And a lot of help from cool, meeting the right people along the way, you know, like yourself. So, yeah. Too many Miles songs and names. I can&rsquo;t pinpoint one.</p>
+            <p id="s260"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=260s" target="_blank" rel="noopener" data-pagefind-ignore>4:20</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>That&rsquo;s okay. What about like a core memory,</p>
+            <p id="s261"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=261s" target="_blank" rel="noopener" data-pagefind-ignore>4:21</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>core memory? W3bbie&rsquo;s first hackathon win. We got our first hackathon win. It was an ETH Global and Zora hackathon. I&rsquo;d never done a hackathon. I did it for my 30th birthday, actually. That was my, I decided I was going to sit there for three days with two of my homies and jam on a project for a hackathon.</p>
+            <p id="s277"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=277s" target="_blank" rel="noopener" data-pagefind-ignore>4:37</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And we ended up getting a, we won, we were top eight finalists.</p>
+            <p id="s281"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=281s" target="_blank" rel="noopener" data-pagefind-ignore>4:41</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>We won a prize from Polygon. We got second place from Polygon. And then we won something, I think, from like NFT Wizard or NFT Storage or something like that. And that was just cool. It was really reassuring because I knew I wanted to go I wanted to go into products at that point. I had done art in the space, but I knew I really wanted to get into consumer products and building things that people can use outside of just collectibles. So that was really reassuring and just like, that&rsquo;s what, it gave W3bbie validation in my eyes first to continue doing what we were doing.</p>
+            <p id="s307"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=307s" target="_blank" rel="noopener" data-pagefind-ignore>5:07</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And so was that product that you were building W3bbie at that point or was something different?</p>
+            <p id="s311"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=311s" target="_blank" rel="noopener" data-pagefind-ignore>5:11</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>No, it was a W3bbie product. It was a W3bbie product. W3bbie already existed, but up until then we had only done a couple of collectible projects. We did an AI-generated project, which is our first project as a collective</p>
+            <p id="s323"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=323s" target="_blank" rel="noopener" data-pagefind-ignore>5:23</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>So I&rsquo;m remiss to not have really asked to introduce what WebE is to my audience So can you speak about what WebE is and what your mission is, what your vision is for it?</p>
+            <p id="s331"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=331s" target="_blank" rel="noopener" data-pagefind-ignore>5:31</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Right now, we are rebranding Web3, right? We&rsquo;re trying to make it make more sense culturally, especially for our communities, for sure That&rsquo;s first and foremost And so, yeah, when you say Web3 or blockchain, crypto, the people who aren&rsquo;t in this space It comes with a certain, I don&rsquo;t know, energy So we&rsquo;re trying to rebrand that in our community&rsquo;s eyes And make way more user-friendly products We&rsquo;ve really been having fun in the Web3 gaming space I believe in the Web3 gaming space a lot But we&rsquo;re really just a collective of builders of color A lot of them are my friends before Web3 Who I just kind of pushed down the rabbit hole with me They saw me having enough success to come look Some already knew about it But, yeah, we&rsquo;ve been jamming, you know, together for about two, three years now, I think I can&rsquo;t even remember, I think July 4th, 2022 was Found on Mars That was our first project, so, yeah Very cool,</p>
+            <p id="s386"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=386s" target="_blank" rel="noopener" data-pagefind-ignore>6:26</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>and what was Found on Mars, what was the premise of that?</p>
+            <p id="s388"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=388s" target="_blank" rel="noopener" data-pagefind-ignore>6:28</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, that was an AI-generated, it was mid-journey-generated artwork It was just a digital collectible project Right after NFT NYC that year, we went up there and promoted W3bbie Like, we had just started our Twitter and Instagram So that was the alpha we were giving out, like, hey, follow this page and then we did a no marketing free drop and that my goal was to mint out the project I had never it was 3333 pieces I never like had that many pieces out in the world as an artist and so I just wanted it to all be collected I thought that would take a couple weeks maybe a month it happened in an hour funny enough and we didn&rsquo;t do any pre-promotion so that was really cool and the cool thing that started happening after that is because of Web3, the secondary market immediately started happening after it meant it out.</p>
+            <p id="s438"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=438s" target="_blank" rel="noopener" data-pagefind-ignore>7:18</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And that was just really big for me as an artist to see people buying and selling something I put out in the world for free. And not only did we get to make some money because of royalties, other people made money. That&rsquo;s what I love the most about that is I think it&rsquo;s only done like two and a half ETH or something like that. It&rsquo;s like we&rsquo;ve made two and a half ETH for people off something that we put out for free, which is just really cool.</p>
+            <p id="s460"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=460s" target="_blank" rel="noopener" data-pagefind-ignore>7:40</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I think that&rsquo;s definitely incredible, and I think that really speaks to what&rsquo;s so exciting about the spaces of creative, is being able to do your creative process, create because you want to create, and walk away with a portfolio. I think that&rsquo;s something that really excited me, compelled me to start wanting to speak to creative specifically. And as you&rsquo;re looking at trying to rebrand Web3, what are the things that, sticking points, what are the things that you see as making this space culturally relevant? What&rsquo;s your approach to that? What do you feel like are guide points?</p>
+            <p id="s486"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=486s" target="_blank" rel="noopener" data-pagefind-ignore>8:06</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, like I said, better user-centered products, stuff that people can actually use in their lives, whether it&rsquo;s a game because you game or something like the Nasty Pass, which is one of our early products we did for DJ Mike Nasty out of New York, which is basically like a fast pass, you know, for its events. If you&rsquo;ve ever gone to a New York, I mean a DJ Mike nasty party, the lines are long, crazy But to be able to mint a fast pass with different levels of rarity that would grant you Not only skip the line, but you can bring a plus one to a plus four depending on which rarity you got That&rsquo;s real utility, that&rsquo;s something people, it can make it make sense for people That you don&rsquo;t really have to care about, well three, you go to this party every week, right?</p>
+            <p id="s518"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=518s" target="_blank" rel="noopener" data-pagefind-ignore>8:38</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>You stand in this line for X amount of hours, you spend this money, not only you get in for free You get to skip the line and you can bring, you know, more people with you,</p>
+            <p id="s532"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=532s" target="_blank" rel="noopener" data-pagefind-ignore>8:52</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>so That makes a lot of sense, user-centric, user-centric, like tools Yeah And things that pertain to everyday life For the next year, like this 2024, what&rsquo;s on the horizon for W3bbie? What should you be looking out for?</p>
+            <p id="s543"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=543s" target="_blank" rel="noopener" data-pagefind-ignore>9:03</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>We&rsquo;re trying to figure out what our North Star is as a product And we&rsquo;re trying to just expand the brand And like, we&rsquo;re very much so water too as a collective We haven&rsquo;t kind of put ourselves in any kind of corner Just like taking a hard direction on anything Because this space is so volatile and it moves really fast So we&rsquo;re staying flexible Just more presence overall, I think, in this space I think we want to have a larger presence in this space And outside of this space as a brand So whatever that means, like whatever that is that leads to that The goal is to expand, just to be, like I said, a larger presence</p>
+            <p id="s576"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=576s" target="_blank" rel="noopener" data-pagefind-ignore>9:36</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I got that, Will, I&rsquo;m excited to think about how we can play positive some games So I can apply what you&rsquo;re up to, how I can show up to you I know you have a Discord, I&rsquo;m in your Discord I&rsquo;ve come to some of your calls this year I&rsquo;m a big fan of Ken, Ken&rsquo;s come to my calls throughout the year and most people don&rsquo;t really come to my Discord calls in the bear market, but I think it&rsquo;s been really cool to see Ken as a continuous space. He&rsquo;s the man, bro. He&rsquo;s been gassing you up to me for a couple months as well, so I&rsquo;m excited we really got to do this interview.</p>
+            <p id="s599"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=599s" target="_blank" rel="noopener" data-pagefind-ignore>9:59</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I want to say this before we dip. Congratulations on getting that proposal passed because that&rsquo;s not easy in this space. Governance is crazy. It&rsquo;s kind of difficult sometimes. It can be strenuous, so having that success with getting an idea passed by a body of governance in this space is something to be applauded, so salute on you coming out here and fulfilling what you proposed because a lot of people get stuff passed and get the funds and then they disappear. Shout out to you</p>
+            <p id="s619"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=619s" target="_blank" rel="noopener" data-pagefind-ignore>10:19</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I appreciate that, I&rsquo;m trying to make it happen, shout out to my team, shout out to Jules, shout out to Gabrielle Shout out to Foran as well as we&rsquo;re showing up a little bit And shout out to you for really being here and letting me do it So thank you again so much If you have anything you want to let people know where they can find you, keep up with you Go ahead and shout it out BigTrav205</p>
+            <p id="s633"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=633s" target="_blank" rel="noopener" data-pagefind-ignore>10:33</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>on Twitter and Instagram W3bbie, W3B-B-I-E dot XYZ is our website You can find everything else from there</p>
+            <p id="s642"><a class="wt-at" href="https://www.youtube.com/watch?v=Nc_zdA2VNUk&amp;t=642s" target="_blank" rel="noopener" data-pagefind-ignore>10:42</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Alright, shout out to W3bbie, shout out to Trav Thank you all very much, we had to say booyah So booyah, thanks for another episode of We Them Niggas We Them Media, Maceo, Piano, Piano, Piano, Piano, Piano, Piano, Piano,</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+<div id="after-transcript" tabindex="-1"><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from Denver Unfiltered.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-denver">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="a-first-interview-and-advice-back-to-newark-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/UkX8veGIl58-640.jpg" srcset="../stills/UkX8veGIl58-320.jpg 320w, ../stills/UkX8veGIl58-480.jpg 480w, ../stills/UkX8veGIl58-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:15</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · ETH Denver 2024</span>
+                    <h3 class="report-title">A first interview, and advice back to Newark.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="building-a-dao-and-making-governance-a-game-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/qcTocIWf34U-640.jpg" srcset="../stills/qcTocIWf34U-320.jpg 320w, ../stills/qcTocIWf34U-480.jpg 480w, ../stills/qcTocIWf34U-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:45</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">A content coin, and making governance a game.</h3>
+                    
+                </div>
+            </a>
+            <a href="from-america-to-denver-what-brought-you-here-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/DdXcCfCc26E-640.jpg" srcset="../stills/DdXcCfCc26E-320.jpg 320w, ../stills/DdXcCfCc26E-480.jpg 480w, ../stills/DdXcCfCc26E-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:21</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · Street</span>
+                    <h3 class="report-title">A borrowed camera, and Denver block by block.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../places.html#denver">Everything filmed in Denver</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

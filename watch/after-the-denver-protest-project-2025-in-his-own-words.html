@@ -1,0 +1,890 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Why did he march?">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/after-the-denver-protest-project-2025-in-his-own-words">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="After the Denver Protest: Project 2025 in His Own Words">
+    <meta property="og:description" content="Why did he march?">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/after-the-denver-protest-project-2025-in-his-own-words.jpg?v=f6ad009949">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="On the ground at a Denver protest, talking Project 2025">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/after-the-denver-protest-project-2025-in-his-own-words.jpg?v=f6ad009949">
+    <meta property="og:url" content="https://wethem.xyz/watch/after-the-denver-protest-project-2025-in-his-own-words">
+    <title>After the Denver Protest: Project 2025 in His Own Words &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/after-the-denver-protest-project-2025-in-his-own-words#video",
+  "name": "After the Denver Protest: Project 2025 in His Own Words",
+  "description": "Why did he march? After a large protest in Denver, a man who calls himself a history nerd and a Christian answers over twenty minutes. This is his account, in his own words. Daniel Wheadon spells his name for the camera. His summary: \"It's a pretty classic authoritarian coup, to say it very simply. Erosion of the separation of powers, erosion of church and state, erosion of effectively the rule of law.\" He does not want to be the boy who cried wolf, and says why he thinks this is the time to use the word. On Project 2025 and the Heritage Foundation: \"For the love of God, people, it's not a conspiracy. They wrote their playbook.\" He says he means it as a Christian: \"That is not real Christianity. Christianity doesn't say demonise your neighbour, lionise the wealthy.\"",
+  "thumbnailUrl": [
+    "https://wethem.xyz/stills/Xtqu9LbClYU.jpg",
+    "https://i.ytimg.com/vi/Xtqu9LbClYU/maxresdefault.jpg"
+  ],
+  "uploadDate": "2026-04-17T22:14:20Z",
+  "embedUrl": "https://www.youtube.com/embed/Xtqu9LbClYU",
+  "url": "https://wethem.xyz/watch/after-the-denver-protest-project-2025-in-his-own-words",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT21M",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "How big the day was",
+      "startOffset": 0,
+      "url": "https://wethem.xyz/watch/after-the-denver-protest-project-2025-in-his-own-words?t=0",
+      "endOffset": 80
+    },
+    {
+      "@type": "Clip",
+      "name": "Why the protests were happening, in his account",
+      "startOffset": 80,
+      "url": "https://wethem.xyz/watch/after-the-denver-protest-project-2025-in-his-own-words?t=80",
+      "endOffset": 169
+    },
+    {
+      "@type": "Clip",
+      "name": "Scapegoats, and who gets swept up",
+      "startOffset": 169,
+      "url": "https://wethem.xyz/watch/after-the-denver-protest-project-2025-in-his-own-words?t=169",
+      "endOffset": 234
+    },
+    {
+      "@type": "Clip",
+      "name": "Project 2025: “They wrote their playbook”",
+      "startOffset": 234,
+      "url": "https://wethem.xyz/watch/after-the-denver-protest-project-2025-in-his-own-words?t=234",
+      "endOffset": 271
+    },
+    {
+      "@type": "Clip",
+      "name": "“That is not real Christianity”",
+      "startOffset": 271,
+      "url": "https://wethem.xyz/watch/after-the-denver-protest-project-2025-in-his-own-words?t=271",
+      "endOffset": 339
+    },
+    {
+      "@type": "Clip",
+      "name": "The 1920s, and who ran the Colorado capitol",
+      "startOffset": 339,
+      "url": "https://wethem.xyz/watch/after-the-denver-protest-project-2025-in-his-own-words?t=339",
+      "endOffset": 443
+    },
+    {
+      "@type": "Clip",
+      "name": "A pattern he sees from Washington to Moscow",
+      "startOffset": 443,
+      "url": "https://wethem.xyz/watch/after-the-denver-protest-project-2025-in-his-own-words?t=443",
+      "endOffset": 496
+    },
+    {
+      "@type": "Clip",
+      "name": "Israel, and the far right within it",
+      "startOffset": 496,
+      "url": "https://wethem.xyz/watch/after-the-denver-protest-project-2025-in-his-own-words?t=496",
+      "endOffset": 650
+    },
+    {
+      "@type": "Clip",
+      "name": "Against police states in America and Iran at once",
+      "startOffset": 650,
+      "url": "https://wethem.xyz/watch/after-the-denver-protest-project-2025-in-his-own-words?t=650",
+      "endOffset": 829
+    },
+    {
+      "@type": "Clip",
+      "name": "“What about the left coming together?”",
+      "startOffset": 829,
+      "url": "https://wethem.xyz/watch/after-the-denver-protest-project-2025-in-his-own-words?t=829",
+      "endOffset": 899
+    },
+    {
+      "@type": "Clip",
+      "name": "“Right makes might”",
+      "startOffset": 899,
+      "url": "https://wethem.xyz/watch/after-the-denver-protest-project-2025-in-his-own-words?t=899",
+      "endOffset": 960
+    },
+    {
+      "@type": "Clip",
+      "name": "What is Project 2025? Explained for a newcomer",
+      "startOffset": 960,
+      "url": "https://wethem.xyz/watch/after-the-denver-protest-project-2025-in-his-own-words?t=960",
+      "endOffset": 1105
+    },
+    {
+      "@type": "Clip",
+      "name": "Why separation of church and state protects the church",
+      "startOffset": 1105,
+      "url": "https://wethem.xyz/watch/after-the-denver-protest-project-2025-in-his-own-words?t=1105",
+      "endOffset": 1260
+    }
+  ],
+  "creator": {
+    "@type": "Person",
+    "name": "Maceo",
+    "url": "https://wethem.xyz/people/maceo"
+  },
+  "transcript": "It's awesome. It was a lot of people.\nIt was a lot. I'm not sure. I haven't had a chance to get online yet to see. But it was big. I know when we started going, it might have been comparable to the largest we had. So it was good. It's awesome.\nYeah. I think the message definitely got across. Especially I was watching. I seen TikTok later on in the day and it definitely seemed like it spread.\nYeah. It was good. There's a lot of people out here paying attention to the important things happening in the world, in our country. Yeah. It's important. the underbinding of our country constitution, wanted to stand out actually in defense of the rule of law, of the not abuses of, you know, the wealthy against the rest of our country effectively, but I'll not jump ahead.\nDefinitely. Because\nwhatever you want to ask first. The day was good. Say it short. I'm already recording.\nOkay. Three, two, one. Okay. So for my first question, if you could just tell me your first and last name and spill it out.\nDaniel Wheadon. I don't know, do I have to spell it out? That's a little weird for the internet\nI was just going to put a little lower third in for you\nOkay, it's Daniel, D-A-N-I-E-L, then W-H-E-A-D-O-N\nOkay, great, and okay, so for my first question, let me just ask you for today It was such a really big day for I think the entire country Just if you could recap for those who are unaware Because there's definitely some that are still sleeping Can you just maybe recap what happened today? Well, for\nabout why the protests were happening Well, yeah As somebody who's a history nerd myself, in a world affairs, politics nerd, it's a pretty classic authoritarian coup to say it very simply, right it's erosion of the separation of powers, erosion of church and state, erosion of sorry, I didn't feel it, I thought there was something happening but erosion of effectively the rule of law, right, once we start devolving into the things, like if you read the Declaration of Independence and the qualms we had against King George by fabricating cases to disappear political opponents, right, like, ooh, hey doggy.\nSorry. She's friendly, she's just energetic. Really strong. Yeah. Okay, Ash, all right. Calm it down. Stop flirting. Sorry about that.\nNo, you're good. I love dogs. Just saying hello in dog manner. But, um, yeah, that, um, effectively, Wealthy are pillaging our country and eroding all the barriers to their power, in the way, right? So, in terms of defending the country or constitution, especially as, I don't want to abuse, but this is the time to use it, right? I don't want to be the boy who cries wolf, but the F word that people always throw around for a long time, the way fascism always works, you need to have the, usually the racial minority to escape that, right? Right, so first it's coming for the immigrants. We've already seen it starting to spread towards American citizens who happen to be brown, right?\nAnd they're already trying to be like, and also Haitian immigrants, Somalian people, code word, if you're black and on the street, you can be just swept up, right? Which to some degree our history is a very long practice of that, right? But re-sanctioning it in the way of, the problem is the immigrants coming to our country, not the wealthy rigging the system in their favor, right? Don't look at the actual corruption of the state, it's those other poor people who are actually coming here to fulfill the American dream, contribute to our economy, contribute to the melting pot that is America, that actually gives us strength, right?\nIt's like, nope, it just goes back to just for white people, sort of mentality.\nAnd if you had to boil it down, what really is the biggest issue that's happening in our country right now?\nI'm going to say it super simply It's a takeover by Christian nationalist religious nutjobs That's the big takeover It's been the Heritage Foundation They wrote it in Project 2025 For the love of God, people It's not a conspiracy Project 2025 is not a conspiracy If you still think that somehow It's literally If you know the Heritage Foundation It's one of the most important think tanks For the conservative movement They wrote their playbook Trump has almost been following it 2 A.T. The whole thing is to make a Christian, and it's not real Christianity, right? I'm saying somebody myself would like to consider myself a follower of Christ as much as I'm able, right?\nThat is not real Christianity. Definitely. Christianity doesn't say demonize your neighbor, lionize the wealthy, fuck over the poor to give more to the wealthy. That's not Christianity. But you know what that is? Shit, they used to control this capital in the 20s. It's white nationalism that masquerades as Christian nationalism, right? And the same movement here, it's not just happening in America. All across Europe, there's a rise of the far right, the same traditional culture value, right? And for them, their first scapegoats are LGBT people, especially trans people and women, and then whatever minority group is handy, right? But it's the same playbook. It's the same far right Christian nationalist takeover, right?\nThat's the biggest thing in our country, in Europe. The same thing's happened in Russia long ago. They're five plus years ahead. They've already said the LGBT movement is domestic terrorist extremist movement. They're illegal, so anybody can be accused of being gay and then hauled off the street for being a terrorist This is the sort of like abuses of the rule of law Our country was supposed to be founded against, right? That you can't just have somebody make up shit to criminalize people, you know? Supposed to be, we've never totally lived up to that dream, but hopefully we do want it\nAnd I just wanted to ask, is there any experience or a series of experience that has led up to your opinion?\nI mean, kind of being a nerd of history, I wouldn't agree to realize, like, oh, wait a second, in the 20s and 30s, as I said, the group that used to control the Colorado Capitol, right, there was this 100% Christian nationalist America First movement that wanted America First because they wanted peace with Hitler, and they called themselves the American fascisti in their own papers, it was the Klan, right, they were going up all the way through, they've never gone away, right, the civil rights movement, this is all a lash back to what happened to the\nSo the Klan's taking over?\nThe legacy of it. The same mentality. It's the same abuses of Christianity, the same really is just coded white nationalism, right? It's the same basic, this is all the stuff that's in Project 2025, right? We have to make this white Christian nation again. You know, some countries say it more directly, like the AFD in Germany, that just happens that Musk loves, that Vance loves too. The rest of Germany is like, hey, they're talking about re-migration, just like our own DHS is with ICE. which is we're gonna even people who are in that case German-born or American-born citizens if they happen to be of a racial minority that has a definite ethnic origin They could be hauled off the street Put it in a boat or a train somewhere and disappear.\nThey're like, hey, does this sound familiar? Wake up world. Well, this is exactly how it started before they've just changed the language a little bit Right we had the Klan and Nazi movement here in the 20s and 30s when it was rising in Europe It's rising in Europe again I would say this time the nexus is coming from Putin's playbook It's the Christian nationalist weaponization that's happened in Moscow And they're all in league with the same The AFD also loves They all, they can just look at their politics So for me, to say as a car goes It's studying like the bigger world patterns Of which groups are aligned with which groups Right, and they may not directly be like in cahoots But they're on the same ideological bus going the same direction And you start having people like Musk Appearing on like The AFD party's thing Being like, effectively Make Germany great again Definitely And it's tied into too, to say somebody who, I might consider myself I am a Christian But my mom's Jewish I have Jewish roots, right?\nJesus did too, I don't think there should be a differentiation between them But the same shit's happening in Israel Right? The far right there Is also bastardizing Their religion\nAnd do you have any thoughts on Israel? I know it's a very controversial subject.\nIt's the same, it's ultimately, as I've tried to point out to America, because I've learned out about their politics too, right? Because I have roots there, like way back, but not like any of my friends are Israeli.\nIt seems like a very confusing topic, especially for myself. You know, one side you hear it's anti-Semitic and the other, they're controlling the whole, you know, United States.\nIt's the same playbook whenever there's raw imperial power, whatever form it takes, weaponizing behind Christianity. They want to blame the Jews, right? So, for example, the settler crackpots doing race pogroms in the West Bank and when gossiped before, they were considered domestic terrorists until Bibi started to put them in his own cabinet, right? But the rest of Israel hates them, right? It would be the equivalent. It's kind of similar to you have legacy of Klan-like people here. Most of America is like, that's not cool anymore. Then Trump wants to put the Project 2025 Heritage Foundation people in his cabinet, right? It's the same pattern. And it ties into, like, ultimately, if you look into the thing, there's a thing called Christian Zionism, and they want to provoke the biblical end times.\nAnd for that, they've always supported the far right in Israel. Because they need Israel, and they can't have peace.\nOkay. Right?\nBecause they need Israel to be at war with all the surrounding nations to bring about what they think they can bomb enough kids that they'll make Jesus come back, and they think they're going to go to heaven. Right? And because that's totally how it's gonna work out, right? And it's a death cult. It's a Christian death cult that's been backing the far-right fringe of Israel for a long time, right? Trying to make it make sure they can't have peace against the will of the rest of the country, right? I wouldn't definitely be less popular than Trump is here, right? Bibi was being mass protested on the streets.\nThey had shut the country down in a mass general strike, trying to get him to try for his corruption case before all of a sudden October 7th just fell out of the sky and distracted from all of it and he's still kicking the can down the road Trump's still trying to tell even the president of Israel that you should pardon Bibi for his corruption trials it's all one big corrupt far-right bullshit bastardization of whatever sheepskin they can wear right and to say the same thing to separate I've always had sympathy for the Iranian people but it's like multiple truths at once the same thing's happening there too it's like Trump bad Bibi bad Ayatollah also so bad.\nRight? And, you know, so it's like having the same moral as an Iranian activist Afalo said, you know, we can support like, we can be against, I should say, we can be against authoritarian, pseudo-fascist police states in America and in Iran at the same time. Right? We can be against the takeover here and against the takeover in Israel at the same time, because he's been trying to erode the judiciary there. It's the same authoritarian, weaponizing the religion to use it as a sheepskin playbook, right? And I'd say in the middle of all that, a big part of it would tie into where I think the modern, a lot of that modern movement, it's between the Heritage Foundation here and the people who took over after the Soviet Union fell in the USSR, right?\nWhat became their using Christian nationalism in their own Eastern Orthodox way of demonizing gay trans people It's this weird ideology of like the Crusaders have to go invade and retake the Middle East The same shit that Hegseth has tattooed on his chest, right? That is the overarching thing that goes from Washington across Europe to Moscow And they need the Israeli far-right at war with the rest of the country to provoke their biblical end times,\nright? Right,\nand in the meantime, all the guards are profiting, and I don't think Trump or Putin actually care about Christianity\nSo do you think the Rebbe and the Meshia, is that tied to what you're talking about? Duh There's this rabbi, they say, we see the Meshia, you know what I'm talking about, it's like Rebbe something\nWhen was that?\nWhen was this? There's just a lot of stickers, like I've seen my Orthodox friends, he tells me there's stickers around New York It's like this, like a rabbi who passed away. I feel like it's like, I can't think of what it's called. They do like the, they, I can't think of what it's called. They had one at my college. It's okay. I feel like if you didn't know what I'm talking about, it's okay.\nNo, I mean, they have the same\nThe right-wing Right-wing hyper-nationalism That weaponizes A religion to wear as a sheepskin to justify Its own bullshit\nis nothing unique To any set religion It's nothing unique to any set It doesn't even have to be religion You can say the same thing happened in the USSR with Stalin Using the sheepskin of Marxism To do a totally corrupt I would say almost, anyway, it's a tangent But the To say the big thing, to put back and the Russian activists who I've been following for a long time too, that's my Jewish side is Eastern European, Russian and Romanian, and they all point out that all this Christian stuff that Putin saying Trump here, it's all bullshit. The real ideology is rampant corruption and destruction of any separation of power that can get in their way for their own wealth and power that they're addicted to.\nWell, for me to wrap it all up, is there any message you'd like to send out to the community?\nWe should all be in this together, right? All of us, the same way the far right has a, they're all kind of in cahoots to drive all their nationalist bullshit everywhere. What about the left coming together, right? Those of us who care about human rights, those of us who care about basic human dignity, right? I do care about the rule of law that nobody, depending on how wealthy they are, should be exempt from, if they committed a crime, actually being held accountable, right? What about like, you know, the same idea that we should all be backing each other, right? And to have the same moral movements, we're like, to say, for example, I feel like on the left, if we had been listening to people on the left in Israel and people on the left in Iran, they have been trying to sound the war over We've had the alarm over this for a long time.\nSame thing with the left in Russia, who have mostly been kicked out of the country, right? But there's a lot of people who have been like, this is an authoritarian takeover, right? And unless we can get rid of the idea of this flag good, this flag bad, and start realizing the basic common human decency we all have with each other. And to be people who think that right makes might, not might makes right. That's like the core flip, right? The fascists think might makes right. If they can get away with it and force their will upon you, it makes it right. I tend to think the other way.\nI would tend to think that aligns with actually biblical teachings. I would think that aligns with actual liberal values. To be like, no, what's morally right? That's what makes might. And the goal shouldn't be the might. The goal should just be trying to respect our fellow human beings. And to stand up when people are suffering under the boot of oppression to try to have some heart for them. right and realize the same that just because we're not yet being maybe targeted by ICE doesn't mean that like people who are shouldn't be you know cared for right and I don't know so we could all come together like that'd be great because the right wing the fascists have all come together already\ndefinitely all right well thank you so much for talking to us I appreciate it\ncan I say one more thing you seem like a really good person to speak about this this thing you said a lot of people just say like propaganda the project whatever whatever can you like say what that is like give\nIt was just a book that, it was their, like, so after the first Trump administration, they kind of didn't expect to win, from my understanding of it, and it was kind of a hodgepodge, then afterwards, those same, the actual people in the shadows, right, which is not some shady cabal of Jewish people, which is what they always try to say, the shady cabal of Heritage Foundation, white nationalists, Christian bastardizing people, all went, oh, how do we actually, the mandate for leadership, if Trump wins again, in 2020, or 2024, how do we in 2025 start enacting an effectively white Christian nationalist takeover of our country? And if you look at it, you can just look it up.\nRussell Vought, Stephen Miller, all of these people are a part of the Heritage Foundation, right? So it's a playbook to effectively dismantle America from within, the democracy, and install a theocracy in their version of Christianity, Which is like the demonize your neighbor, lionize the wealthy, right? Fuck over the poor. That's sort of the Christianity, right? But it's the same thing. And to say the way I saw some ideological connections, a big part of it too is also privatize everything, right? So all the wealthy people can try to profit off of it all. And it's very similar in a longer scale or shorter scale sense to what happened in Russia once the Soviet Union fell.\nAnd to say, I'm not a fan of the Soviet Union either, right? All oppressive police states. I'm against oppressive police states. Gotta be against that too. But what took over just because one thing is bad, if you throw that out the window doesn't mean the next thing's gonna be better. It could be worse, right? And in Russia it was the same thing. You took shock therapy. That's what they did there, where everything got mass privatized. It led to a bunch of couple people gaining power. And then they solidified their power, crushed the competition, and killed any experiment with democracy and a fair-functioning capitalist economy and they've got the corrupt oligarchy that wears the sheepskin of Christianity.\nAnd that's the same thing they're trying to do here with Project 2025, just at the American lens.\nWhich is ridiculous, because when you think about it, it's like freedom of religion. Freedom of religion? Is it?\nThere's a good, in my mind, if somebody who is an actual Christian who happens to be a politician, too, there's a guy named James Tallarico in Texas, and he talks about he says it better than I can do justice but why being a Christian it's so important to keep church and state separated because else once you have is to protect the state and to protect the church from corruption because once you get a bunch of like Christian nationalists telling you that's the only way to worship Jesus there goes all\nI just seen an article JD Vance said that UFOs are being piloted by demons I said I don't even know what that means that is the core that is the most out of pop what are we talking about at this\nyeah that's it's the same to say whatever they can to dog whistle to scare they're very superstitious things right it's the same stuff that who's been saying they're fighting Satanism in Ukraine yeah it's the same playbook right they need to protect Christians and Ukrainians are killing Christians it's like wait a second you can use our Christians of whom's the one bombing them all Christmas right an accusation is confession is a big thing to see the\nI'm sure some people do, but for the majority, I don't think we do.\nExactly. I would say most Christians, I would hope, would think that too. You know, to say, so that, right, exactly, separation of church and state, freedom of religion is important so the state doesn't start telling you how to worship, right? So it's important to preserve religion, too. It's not just about preserving the state. It's not just about giving them a very powerful sheepskin. They have always warned since time immemorial. It's also about preserving the church of whatever church or temple or mosque or whatever it is from being\nIt's terrible\nI think Trump and the Christian Nationalists right here have a lot more in common with the Ayatollah and the IRGC than anything else.\nI thought it was like some bat brakes What was\nthat? Just enthusiasm!\nCar crash\nFor protecting democracy and human dignity\nOh yeah\nAlright\nSweet Good to see you there, man\nThank you so much, thanks for the interview\nOf course, of course\nThank you for",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Denver",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "url": "https://wethem.xyz/places#denver"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Denver Unfiltered",
+    "url": "https://wethem.xyz/portfolio#p-denver"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "The Engaged Citizens",
+      "url": "https://wethem.xyz/topics/engaged-citizens"
+    }
+  ],
+  "keywords": [
+    "The Engaged Citizens"
+  ],
+  "dateCreated": "2026-03-28"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Denver Unfiltered",
+      "item": "https://wethem.xyz/portfolio#p-denver"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "On the ground at a Denver protest, talking Project 2025",
+      "item": "https://wethem.xyz/watch/after-the-denver-protest-project-2025-in-his-own-words"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place], who[data-pf-who]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2026-04-17" data-pf-vid="Xtqu9LbClYU" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;21:00&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="Denver" data-pf-country="United States" data-pf-project="Denver Unfiltered" data-pf-who="Maceo">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-denver">Denver Unfiltered</a></li>
+            <li aria-current="page">On the ground at a Denver protest, talking Project 2025</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">On the ground at a Denver protest, talking Project 2025.</h1>
+
+    <p class="wt-byline"><strong>Daniel Wheadon</strong> &middot; Reported by <strong><a href="../people/maceo.html">Maceo</a></strong> &middot; Denver &middot; 21 min &middot; filmed <time datetime="2026-03-28">28 March 2026</time></p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="Xtqu9LbClYU" live posterurl="../stills/Xtqu9LbClYU.jpg" postersrcset="../stills/Xtqu9LbClYU-320.jpg 320w, ../stills/Xtqu9LbClYU-480.jpg 480w, ../stills/Xtqu9LbClYU-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/Xtqu9LbClYU?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="On the ground at a Denver protest, talking Project 2025, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+
+    <div class="wt-prose">
+            <p>Why did he march? After a large protest in Denver, a man who calls himself a history nerd and a Christian answers over twenty minutes. This is his account, in his own words.</p>
+            <p>Daniel Wheadon spells his name for the camera. His summary: &ldquo;It&rsquo;s a pretty classic authoritarian coup, to say it very simply. Erosion of the separation of powers, erosion of church and state, erosion of effectively the rule of law.&rdquo; He does not want to be the boy who cried wolf, and says why he thinks this is the time to use the word.</p>
+            <p>On Project 2025 and the Heritage Foundation: &ldquo;For the love of God, people, it&rsquo;s not a conspiracy. They wrote their playbook.&rdquo; He says he means it as a Christian: &ldquo;That is not real Christianity. Christianity doesn&rsquo;t say demonise your neighbour, lionise the wealthy.&rdquo;</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../places.html#denver">Everything filmed in Denver</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="no-kings-protest-del-gomez-on-imperialism-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/nMbRUrfU8TU-640.jpg" srcset="../stills/nMbRUrfU8TU-320.jpg 320w, ../stills/nMbRUrfU8TU-480.jpg 480w, ../stills/nMbRUrfU8TU-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>5:35</span></span><span>No Kings: Del Gomez on empire.</span></a>
+        <a class="wt-rail-card" href="denver-politics-and-where-the-homeless-went-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/hT_oDk_DnMw-640.jpg" srcset="../stills/hT_oDk_DnMw-320.jpg 320w, ../stills/hT_oDk_DnMw-480.jpg 480w, ../stills/hT_oDk_DnMw-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>17:35</span></span><span>Where the homeless went before the convention came.</span></a>
+        <a class="wt-rail-card" href="ai-is-artificial-we-are-the-official.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/2KWrTQgRKS0-640.jpg" srcset="../stills/2KWrTQgRKS0-320.jpg 320w, ../stills/2KWrTQgRKS0-480.jpg 480w, ../stills/2KWrTQgRKS0-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>21:18</span></span><span>A poet named Phoenix.</span></a>
+        <a class="wt-rail-card" href="legalize-it-all-but-tax-it-bo-from-boulder-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/bXW2h2aYtMk-640.jpg" srcset="../stills/bXW2h2aYtMk-320.jpg 320w, ../stills/bXW2h2aYtMk-480.jpg 480w, ../stills/bXW2h2aYtMk-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>6:39</span></span><span>Legalize it all, but tax it: Bo from Boulder.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap clip-sec" aria-labelledby="clips-here-h" data-pagefind-ignore="all">
+        <h2 class="clip-sec-h" id="clips-here-h">Shorts from this piece</h2>
+        <ul class="clip-row">
+            <li><a class="clip-card" href="../clips.html#b6-066"><span class="clip-card-pic"><img class="clip-img" src="../stills/clips/b6-066-360.jpg" srcset="../stills/clips/b6-066-360.jpg 360w, ../stills/clips/b6-066-720.jpg 720w" sizes="(min-width: 721px) 168px, 144px" width="360" height="640" alt="" loading="lazy" decoding="async"></span><span class="clip-card-t">The Biggest Threat to America</span><span class="clip-card-p">No Kings</span></a><a class="clip-card-yt" href="https://www.youtube.com/shorts/kqsYCNRMTUE">On YouTube &rarr;</a></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c0"><a class="wt-t" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-s">How big the day was</span></li>
+                <li class="wt-line" id="c80"><a class="wt-t" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=80s" target="_blank" rel="noopener" data-pagefind-ignore>1:20</a><span class="wt-s">Why the protests were happening, in his account</span></li>
+                <li class="wt-line" id="c169"><a class="wt-t" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=169s" target="_blank" rel="noopener" data-pagefind-ignore>2:49</a><span class="wt-s">Scapegoats, and who gets swept up</span></li>
+                <li class="wt-line" id="c234"><a class="wt-t" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=234s" target="_blank" rel="noopener" data-pagefind-ignore>3:54</a><span class="wt-s">Project 2025: “They wrote their playbook”</span></li>
+                <li class="wt-line" id="c271"><a class="wt-t" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=271s" target="_blank" rel="noopener" data-pagefind-ignore>4:31</a><span class="wt-s">“That is not real Christianity”</span></li>
+                <li class="wt-line" id="c339"><a class="wt-t" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=339s" target="_blank" rel="noopener" data-pagefind-ignore>5:39</a><span class="wt-s">The 1920s, and who ran the Colorado capitol</span></li>
+                <li class="wt-line" id="c443"><a class="wt-t" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=443s" target="_blank" rel="noopener" data-pagefind-ignore>7:23</a><span class="wt-s">A pattern he sees from Washington to Moscow</span></li>
+                <li class="wt-line" id="c496"><a class="wt-t" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=496s" target="_blank" rel="noopener" data-pagefind-ignore>8:16</a><span class="wt-s">Israel, and the far right within it</span></li>
+                <li class="wt-line" id="c650"><a class="wt-t" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=650s" target="_blank" rel="noopener" data-pagefind-ignore>10:50</a><span class="wt-s">Against police states in America and Iran at once</span></li>
+                <li class="wt-line" id="c829"><a class="wt-t" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=829s" target="_blank" rel="noopener" data-pagefind-ignore>13:49</a><span class="wt-s">“What about the left coming together?”</span></li>
+                <li class="wt-line" id="c899"><a class="wt-t" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=899s" target="_blank" rel="noopener" data-pagefind-ignore>14:59</a><span class="wt-s">“Right makes might”</span></li>
+                <li class="wt-line" id="c960"><a class="wt-t" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=960s" target="_blank" rel="noopener" data-pagefind-ignore>16:00</a><span class="wt-s">What is Project 2025? Explained for a newcomer</span></li>
+                <li class="wt-line" id="c1105"><a class="wt-t" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=1105s" target="_blank" rel="noopener" data-pagefind-ignore>18:25</a><span class="wt-s">Why separation of church and state protects the church</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Transcribed from the original audio and corrected for names. Speaker letters mark turns, not names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>It&rsquo;s awesome. It was a lot of people.</p>
+            <p id="s1"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=1s" target="_blank" rel="noopener" data-pagefind-ignore>0:01</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It was a lot. I&rsquo;m not sure. I haven&rsquo;t had a chance to get online yet to see. But it was big. I know when we started going, it might have been comparable to the largest we had. So it was good. It&rsquo;s awesome.</p>
+            <p id="s12"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=12s" target="_blank" rel="noopener" data-pagefind-ignore>0:12</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah. I think the message definitely got across. Especially I was watching. I seen TikTok later on in the day and it definitely seemed like it spread.</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s21"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=21s" target="_blank" rel="noopener" data-pagefind-ignore>0:21</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah. It was good. There&rsquo;s a lot of people out here paying attention to the important things happening in the world, in our country. Yeah. It&rsquo;s important. the underbinding of our country constitution, wanted to stand out actually in defense of the rule of law, of the not abuses of, you know, the wealthy against the rest of our country effectively, but I&rsquo;ll not jump ahead.</p>
+            <p id="s45"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=45s" target="_blank" rel="noopener" data-pagefind-ignore>0:45</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Definitely. Because</p>
+            <p id="s46"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=46s" target="_blank" rel="noopener" data-pagefind-ignore>0:46</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>whatever you want to ask first. The day was good. Say it short. I&rsquo;m already recording.</p>
+            <p id="s52"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=52s" target="_blank" rel="noopener" data-pagefind-ignore>0:52</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Okay. Three, two, one. Okay. So for my first question, if you could just tell me your first and last name and spill it out.</p>
+            <p id="s57"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=57s" target="_blank" rel="noopener" data-pagefind-ignore>0:57</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Daniel Wheadon. I don&rsquo;t know, do I have to spell it out? That&rsquo;s a little weird for the internet</p>
+            <p id="s63"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=63s" target="_blank" rel="noopener" data-pagefind-ignore>1:03</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I was just going to put a little lower third in for you</p>
+            <p id="s68"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=68s" target="_blank" rel="noopener" data-pagefind-ignore>1:08</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Okay, it&rsquo;s Daniel, D-A-N-I-E-L, then W-H-E-A-D-O-N</p>
+            <p id="s72"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=72s" target="_blank" rel="noopener" data-pagefind-ignore>1:12</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Okay, great, and okay, so for my first question, let me just ask you for today It was such a really big day for I think the entire country Just if you could recap for those who are unaware Because there&rsquo;s definitely some that are still sleeping Can you just maybe recap what happened today? Well, for</p>
+            <p id="s92"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=92s" target="_blank" rel="noopener" data-pagefind-ignore>1:32</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>about why the protests were happening Well, yeah As somebody who&rsquo;s a history nerd myself, in a world affairs, politics nerd, it&rsquo;s a pretty classic authoritarian coup to say it very simply, right it&rsquo;s erosion of the separation of powers, erosion of church and state, erosion of sorry, I didn&rsquo;t feel it, I thought there was something happening but erosion of effectively the rule of law, right, once we start devolving into the things, like if you read the Declaration of Independence and the qualms we had against King George by fabricating cases to disappear political opponents, right, like, ooh, hey doggy.</p>
+            <p id="s132"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=132s" target="_blank" rel="noopener" data-pagefind-ignore>2:12</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Sorry. She&rsquo;s friendly, she&rsquo;s just energetic. Really strong. Yeah. Okay, Ash, all right. Calm it down. Stop flirting. Sorry about that.</p>
+            <p id="s144"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=144s" target="_blank" rel="noopener" data-pagefind-ignore>2:24</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>No, you&rsquo;re good. I love dogs. Just saying hello in dog manner. But, um, yeah, that, um, effectively, Wealthy are pillaging our country and eroding all the barriers to their power, in the way, right? So, in terms of defending the country or constitution, especially as, I don&rsquo;t want to abuse, but this is the time to use it, right? I don&rsquo;t want to be the boy who cries wolf, but the F word that people always throw around for a long time, the way fascism always works, you need to have the, usually the racial minority to escape that, right? Right, so first it&rsquo;s coming for the immigrants. We&rsquo;ve already seen it starting to spread towards American citizens who happen to be brown, right?</p>
+            <p id="s144-2"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=144s" target="_blank" rel="noopener" data-pagefind-ignore>2:24</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And they&rsquo;re already trying to be like, and also Haitian immigrants, Somalian people, code word, if you&rsquo;re black and on the street, you can be just swept up, right? Which to some degree our history is a very long practice of that, right? But re-sanctioning it in the way of, the problem is the immigrants coming to our country, not the wealthy rigging the system in their favor, right? Don&rsquo;t look at the actual corruption of the state, it&rsquo;s those other poor people who are actually coming here to fulfill the American dream, contribute to our economy, contribute to the melting pot that is America, that actually gives us strength, right?</p>
+            <p id="s201"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=201s" target="_blank" rel="noopener" data-pagefind-ignore>3:21</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It&rsquo;s like, nope, it just goes back to just for white people, sort of mentality.</p>
+            <p id="s226"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=226s" target="_blank" rel="noopener" data-pagefind-ignore>3:46</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And if you had to boil it down, what really is the biggest issue that&rsquo;s happening in our country right now?</p>
+            <p id="s231"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=231s" target="_blank" rel="noopener" data-pagefind-ignore>3:51</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I&rsquo;m going to say it super simply It&rsquo;s a takeover by Christian nationalist religious nutjobs That&rsquo;s the big takeover It&rsquo;s been the Heritage Foundation They wrote it in Project 2025 For the love of God, people It&rsquo;s not a conspiracy Project 2025 is not a conspiracy If you still think that somehow It&rsquo;s literally If you know the Heritage Foundation It&rsquo;s one of the most important think tanks For the conservative movement They wrote their playbook Trump has almost been following it 2 A.T. The whole thing is to make a Christian, and it&rsquo;s not real Christianity, right? I&rsquo;m saying somebody myself would like to consider myself a follower of Christ as much as I&rsquo;m able, right?</p>
+            <p id="s231-2"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=231s" target="_blank" rel="noopener" data-pagefind-ignore>3:51</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>That is not real Christianity. Definitely. Christianity doesn&rsquo;t say demonize your neighbor, lionize the wealthy, fuck over the poor to give more to the wealthy. That&rsquo;s not Christianity. But you know what that is? Shit, they used to control this capital in the 20s. It&rsquo;s white nationalism that masquerades as Christian nationalism, right? And the same movement here, it&rsquo;s not just happening in America. All across Europe, there&rsquo;s a rise of the far right, the same traditional culture value, right? And for them, their first scapegoats are LGBT people, especially trans people and women, and then whatever minority group is handy, right? But it&rsquo;s the same playbook. It&rsquo;s the same far right Christian nationalist takeover, right?</p>
+            <p id="s274"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=274s" target="_blank" rel="noopener" data-pagefind-ignore>4:34</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>That&rsquo;s the biggest thing in our country, in Europe. The same thing&rsquo;s happened in Russia long ago. They&rsquo;re five plus years ahead. They&rsquo;ve already said the LGBT movement is domestic terrorist extremist movement. They&rsquo;re illegal, so anybody can be accused of being gay and then hauled off the street for being a terrorist This is the sort of like abuses of the rule of law Our country was supposed to be founded against, right? That you can&rsquo;t just have somebody make up shit to criminalize people, you know? Supposed to be, we&rsquo;ve never totally lived up to that dream, but hopefully we do want it</p>
+            <p id="s340"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=340s" target="_blank" rel="noopener" data-pagefind-ignore>5:40</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And I just wanted to ask, is there any experience or a series of experience that has led up to your opinion?</p>
+            <p id="s347"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=347s" target="_blank" rel="noopener" data-pagefind-ignore>5:47</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I mean, kind of being a nerd of history, I wouldn&rsquo;t agree to realize, like, oh, wait a second, in the 20s and 30s, as I said, the group that used to control the Colorado Capitol, right, there was this 100% Christian nationalist America First movement that wanted America First because they wanted peace with Hitler, and they called themselves the American fascisti in their own papers, it was the Klan, right, they were going up all the way through, they&rsquo;ve never gone away, right, the civil rights movement, this is all a lash back to what happened to the</p>
+            <p id="s382"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=382s" target="_blank" rel="noopener" data-pagefind-ignore>6:22</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>So the Klan&rsquo;s taking over?</p>
+            <p id="s383"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=383s" target="_blank" rel="noopener" data-pagefind-ignore>6:23</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>The legacy of it. The same mentality. It&rsquo;s the same abuses of Christianity, the same really is just coded white nationalism, right? It&rsquo;s the same basic, this is all the stuff that&rsquo;s in Project 2025, right? We have to make this white Christian nation again. You know, some countries say it more directly, like the AFD in Germany, that just happens that Musk loves, that Vance loves too. The rest of Germany is like, hey, they&rsquo;re talking about re-migration, just like our own DHS is with ICE. which is we&rsquo;re gonna even people who are in that case German-born or American-born citizens if they happen to be of a racial minority that has a definite ethnic origin They could be hauled off the street Put it in a boat or a train somewhere and disappear.</p>
+            <p id="s426"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=426s" target="_blank" rel="noopener" data-pagefind-ignore>7:06</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>They&rsquo;re like, hey, does this sound familiar? Wake up world. Well, this is exactly how it started before they&rsquo;ve just changed the language a little bit Right we had the Klan and Nazi movement here in the 20s and 30s when it was rising in Europe It&rsquo;s rising in Europe again I would say this time the nexus is coming from Putin&rsquo;s playbook It&rsquo;s the Christian nationalist weaponization that&rsquo;s happened in Moscow And they&rsquo;re all in league with the same The AFD also loves They all, they can just look at their politics So for me, to say as a car goes It&rsquo;s studying like the bigger world patterns Of which groups are aligned with which groups Right, and they may not directly be like in cahoots But they&rsquo;re on the same ideological bus going the same direction And you start having people like Musk Appearing on like The AFD party&rsquo;s thing Being like, effectively Make Germany great again Definitely And it&rsquo;s tied into too, to say somebody who, I might consider myself I am a Christian But my mom&rsquo;s Jewish I have Jewish roots, right?</p>
+            <p id="s477"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=477s" target="_blank" rel="noopener" data-pagefind-ignore>7:57</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Jesus did too, I don&rsquo;t think there should be a differentiation between them But the same shit&rsquo;s happening in Israel Right? The far right there Is also bastardizing Their religion</p>
+            <p id="s496"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=496s" target="_blank" rel="noopener" data-pagefind-ignore>8:16</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And do you have any thoughts on Israel? I know it&rsquo;s a very controversial subject.</p>
+            <p id="s499"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=499s" target="_blank" rel="noopener" data-pagefind-ignore>8:19</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It&rsquo;s the same, it&rsquo;s ultimately, as I&rsquo;ve tried to point out to America, because I&rsquo;ve learned out about their politics too, right? Because I have roots there, like way back, but not like any of my friends are Israeli.</p>
+            <p id="s509"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=509s" target="_blank" rel="noopener" data-pagefind-ignore>8:29</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>It seems like a very confusing topic, especially for myself. You know, one side you hear it&rsquo;s anti-Semitic and the other, they&rsquo;re controlling the whole, you know, United States.</p>
+            <p id="s518"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=518s" target="_blank" rel="noopener" data-pagefind-ignore>8:38</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It&rsquo;s the same playbook whenever there&rsquo;s raw imperial power, whatever form it takes, weaponizing behind Christianity. They want to blame the Jews, right? So, for example, the settler crackpots doing race pogroms in the West Bank and when gossiped before, they were considered domestic terrorists until Bibi started to put them in his own cabinet, right? But the rest of Israel hates them, right? It would be the equivalent. It&rsquo;s kind of similar to you have legacy of Klan-like people here. Most of America is like, that&rsquo;s not cool anymore. Then Trump wants to put the Project 2025 Heritage Foundation people in his cabinet, right? It&rsquo;s the same pattern. And it ties into, like, ultimately, if you look into the thing, there&rsquo;s a thing called Christian Zionism, and they want to provoke the biblical end times.</p>
+            <p id="s559"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=559s" target="_blank" rel="noopener" data-pagefind-ignore>9:19</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And for that, they&rsquo;ve always supported the far right in Israel. Because they need Israel, and they can&rsquo;t have peace.</p>
+            <p id="s573"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=573s" target="_blank" rel="noopener" data-pagefind-ignore>9:33</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Okay. Right?</p>
+            <p id="s573-2"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=573s" target="_blank" rel="noopener" data-pagefind-ignore>9:33</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Because they need Israel to be at war with all the surrounding nations to bring about what they think they can bomb enough kids that they&rsquo;ll make Jesus come back, and they think they&rsquo;re going to go to heaven. Right? And because that&rsquo;s totally how it&rsquo;s gonna work out, right? And it&rsquo;s a death cult. It&rsquo;s a Christian death cult that&rsquo;s been backing the far-right fringe of Israel for a long time, right? Trying to make it make sure they can&rsquo;t have peace against the will of the rest of the country, right? I wouldn&rsquo;t definitely be less popular than Trump is here, right? Bibi was being mass protested on the streets.</p>
+            <p id="s600"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=600s" target="_blank" rel="noopener" data-pagefind-ignore>10:00</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>They had shut the country down in a mass general strike, trying to get him to try for his corruption case before all of a sudden October 7th just fell out of the sky and distracted from all of it and he&rsquo;s still kicking the can down the road Trump&rsquo;s still trying to tell even the president of Israel that you should pardon Bibi for his corruption trials it&rsquo;s all one big corrupt far-right bullshit bastardization of whatever sheepskin they can wear right and to say the same thing to separate I&rsquo;ve always had sympathy for the Iranian people but it&rsquo;s like multiple truths at once the same thing&rsquo;s happening there too it&rsquo;s like Trump bad Bibi bad Ayatollah also so bad.</p>
+            <p id="s600-2"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=600s" target="_blank" rel="noopener" data-pagefind-ignore>10:00</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Right? And, you know, so it&rsquo;s like having the same moral as an Iranian activist Afalo said, you know, we can support like, we can be against, I should say, we can be against authoritarian, pseudo-fascist police states in America and in Iran at the same time. Right? We can be against the takeover here and against the takeover in Israel at the same time, because he&rsquo;s been trying to erode the judiciary there. It&rsquo;s the same authoritarian, weaponizing the religion to use it as a sheepskin playbook, right? And I&rsquo;d say in the middle of all that, a big part of it would tie into where I think the modern, a lot of that modern movement, it&rsquo;s between the Heritage Foundation here and the people who took over after the Soviet Union fell in the USSR, right?</p>
+            <p id="s600-3"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=600s" target="_blank" rel="noopener" data-pagefind-ignore>10:00</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>What became their using Christian nationalism in their own Eastern Orthodox way of demonizing gay trans people It&rsquo;s this weird ideology of like the Crusaders have to go invade and retake the Middle East The same shit that Hegseth has tattooed on his chest, right? That is the overarching thing that goes from Washington across Europe to Moscow And they need the Israeli far-right at war with the rest of the country to provoke their biblical end times,</p>
+            <p id="s721"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=721s" target="_blank" rel="noopener" data-pagefind-ignore>12:01</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>right? Right,</p>
+            <p id="s721-2"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=721s" target="_blank" rel="noopener" data-pagefind-ignore>12:01</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>and in the meantime, all the guards are profiting, and I don&rsquo;t think Trump or Putin actually care about Christianity</p>
+            <p id="s727"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=727s" target="_blank" rel="noopener" data-pagefind-ignore>12:07</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>So do you think the Rebbe and the Meshia, is that tied to what you&rsquo;re talking about? Duh There&rsquo;s this rabbi, they say, we see the Meshia, you know what I&rsquo;m talking about, it&rsquo;s like Rebbe something</p>
+            <p id="s738"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=738s" target="_blank" rel="noopener" data-pagefind-ignore>12:18</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>When was that?</p>
+            <p id="s740"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=740s" target="_blank" rel="noopener" data-pagefind-ignore>12:20</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>When was this? There&rsquo;s just a lot of stickers, like I&rsquo;ve seen my Orthodox friends, he tells me there&rsquo;s stickers around New York It&rsquo;s like this, like a rabbi who passed away. I feel like it&rsquo;s like, I can&rsquo;t think of what it&rsquo;s called. They do like the, they, I can&rsquo;t think of what it&rsquo;s called. They had one at my college. It&rsquo;s okay. I feel like if you didn&rsquo;t know what I&rsquo;m talking about, it&rsquo;s okay.</p>
+            <p id="s760"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=760s" target="_blank" rel="noopener" data-pagefind-ignore>12:40</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>No, I mean, they have the same</p>
+            <p id="s762"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=762s" target="_blank" rel="noopener" data-pagefind-ignore>12:42</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>The right-wing Right-wing hyper-nationalism That weaponizes A religion to wear as a sheepskin to justify Its own bullshit</p>
+            <p id="s772"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=772s" target="_blank" rel="noopener" data-pagefind-ignore>12:52</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>is nothing unique To any set religion It&rsquo;s nothing unique to any set It doesn&rsquo;t even have to be religion You can say the same thing happened in the USSR with Stalin Using the sheepskin of Marxism To do a totally corrupt I would say almost, anyway, it&rsquo;s a tangent But the To say the big thing, to put back and the Russian activists who I&rsquo;ve been following for a long time too, that&rsquo;s my Jewish side is Eastern European, Russian and Romanian, and they all point out that all this Christian stuff that Putin saying Trump here, it&rsquo;s all bullshit. The real ideology is rampant corruption and destruction of any separation of power that can get in their way for their own wealth and power that they&rsquo;re addicted to.</p>
+            <p id="s818"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=818s" target="_blank" rel="noopener" data-pagefind-ignore>13:38</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Well, for me to wrap it all up, is there any message you&rsquo;d like to send out to the community?</p>
+            <p id="s823"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=823s" target="_blank" rel="noopener" data-pagefind-ignore>13:43</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>We should all be in this together, right? All of us, the same way the far right has a, they&rsquo;re all kind of in cahoots to drive all their nationalist bullshit everywhere. What about the left coming together, right? Those of us who care about human rights, those of us who care about basic human dignity, right? I do care about the rule of law that nobody, depending on how wealthy they are, should be exempt from, if they committed a crime, actually being held accountable, right? What about like, you know, the same idea that we should all be backing each other, right? And to have the same moral movements, we&rsquo;re like, to say, for example, I feel like on the left, if we had been listening to people on the left in Israel and people on the left in Iran, they have been trying to sound the war over We&rsquo;ve had the alarm over this for a long time.</p>
+            <p id="s856"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=856s" target="_blank" rel="noopener" data-pagefind-ignore>14:16</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Same thing with the left in Russia, who have mostly been kicked out of the country, right? But there&rsquo;s a lot of people who have been like, this is an authoritarian takeover, right? And unless we can get rid of the idea of this flag good, this flag bad, and start realizing the basic common human decency we all have with each other. And to be people who think that right makes might, not might makes right. That&rsquo;s like the core flip, right? The fascists think might makes right. If they can get away with it and force their will upon you, it makes it right. I tend to think the other way.</p>
+            <p id="s856-2"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=856s" target="_blank" rel="noopener" data-pagefind-ignore>14:16</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I would tend to think that aligns with actually biblical teachings. I would think that aligns with actual liberal values. To be like, no, what&rsquo;s morally right? That&rsquo;s what makes might. And the goal shouldn&rsquo;t be the might. The goal should just be trying to respect our fellow human beings. And to stand up when people are suffering under the boot of oppression to try to have some heart for them. right and realize the same that just because we&rsquo;re not yet being maybe targeted by ICE doesn&rsquo;t mean that like people who are shouldn&rsquo;t be you know cared for right and I don&rsquo;t know so we could all come together like that&rsquo;d be great because the right wing the fascists have all come together already</p>
+            <p id="s945"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=945s" target="_blank" rel="noopener" data-pagefind-ignore>15:45</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>definitely all right well thank you so much for talking to us I appreciate it</p>
+            <p id="s948"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=948s" target="_blank" rel="noopener" data-pagefind-ignore>15:48</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>can I say one more thing you seem like a really good person to speak about this this thing you said a lot of people just say like propaganda the project whatever whatever can you like say what that is like give</p>
+            <p id="s959"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=959s" target="_blank" rel="noopener" data-pagefind-ignore>15:59</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It was just a book that, it was their, like, so after the first Trump administration, they kind of didn&rsquo;t expect to win, from my understanding of it, and it was kind of a hodgepodge, then afterwards, those same, the actual people in the shadows, right, which is not some shady cabal of Jewish people, which is what they always try to say, the shady cabal of Heritage Foundation, white nationalists, Christian bastardizing people, all went, oh, how do we actually, the mandate for leadership, if Trump wins again, in 2020, or 2024, how do we in 2025 start enacting an effectively white Christian nationalist takeover of our country? And if you look at it, you can just look it up.</p>
+            <p id="s959-2"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=959s" target="_blank" rel="noopener" data-pagefind-ignore>15:59</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Russell Vought, Stephen Miller, all of these people are a part of the Heritage Foundation, right? So it&rsquo;s a playbook to effectively dismantle America from within, the democracy, and install a theocracy in their version of Christianity, Which is like the demonize your neighbor, lionize the wealthy, right? Fuck over the poor. That&rsquo;s sort of the Christianity, right? But it&rsquo;s the same thing. And to say the way I saw some ideological connections, a big part of it too is also privatize everything, right? So all the wealthy people can try to profit off of it all. And it&rsquo;s very similar in a longer scale or shorter scale sense to what happened in Russia once the Soviet Union fell.</p>
+            <p id="s959-3"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=959s" target="_blank" rel="noopener" data-pagefind-ignore>15:59</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And to say, I&rsquo;m not a fan of the Soviet Union either, right? All oppressive police states. I&rsquo;m against oppressive police states. Gotta be against that too. But what took over just because one thing is bad, if you throw that out the window doesn&rsquo;t mean the next thing&rsquo;s gonna be better. It could be worse, right? And in Russia it was the same thing. You took shock therapy. That&rsquo;s what they did there, where everything got mass privatized. It led to a bunch of couple people gaining power. And then they solidified their power, crushed the competition, and killed any experiment with democracy and a fair-functioning capitalist economy and they&rsquo;ve got the corrupt oligarchy that wears the sheepskin of Christianity.</p>
+            <p id="s1057"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=1057s" target="_blank" rel="noopener" data-pagefind-ignore>17:37</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And that&rsquo;s the same thing they&rsquo;re trying to do here with Project 2025, just at the American lens.</p>
+            <p id="s1083"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=1083s" target="_blank" rel="noopener" data-pagefind-ignore>18:03</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Which is ridiculous, because when you think about it, it&rsquo;s like freedom of religion. Freedom of religion? Is it?</p>
+            <p id="s1091"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=1091s" target="_blank" rel="noopener" data-pagefind-ignore>18:11</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>There&rsquo;s a good, in my mind, if somebody who is an actual Christian who happens to be a politician, too, there&rsquo;s a guy named James Tallarico in Texas, and he talks about he says it better than I can do justice but why being a Christian it&rsquo;s so important to keep church and state separated because else once you have is to protect the state and to protect the church from corruption because once you get a bunch of like Christian nationalists telling you that&rsquo;s the only way to worship Jesus there goes all</p>
+            <p id="s1123"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=1123s" target="_blank" rel="noopener" data-pagefind-ignore>18:43</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I just seen an article JD Vance said that UFOs are being piloted by demons I said I don&rsquo;t even know what that means that is the core that is the most out of pop what are we talking about at this</p>
+            <p id="s1136"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=1136s" target="_blank" rel="noopener" data-pagefind-ignore>18:56</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>yeah that&rsquo;s it&rsquo;s the same to say whatever they can to dog whistle to scare they&rsquo;re very superstitious things right it&rsquo;s the same stuff that who&rsquo;s been saying they&rsquo;re fighting Satanism in Ukraine yeah it&rsquo;s the same playbook right they need to protect Christians and Ukrainians are killing Christians it&rsquo;s like wait a second you can use our Christians of whom&rsquo;s the one bombing them all Christmas right an accusation is confession is a big thing to see the</p>
+            <p id="s1177"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=1177s" target="_blank" rel="noopener" data-pagefind-ignore>19:37</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I&rsquo;m sure some people do, but for the majority, I don&rsquo;t think we do.</p>
+            <p id="s1180"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=1180s" target="_blank" rel="noopener" data-pagefind-ignore>19:40</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Exactly. I would say most Christians, I would hope, would think that too. You know, to say, so that, right, exactly, separation of church and state, freedom of religion is important so the state doesn&rsquo;t start telling you how to worship, right? So it&rsquo;s important to preserve religion, too. It&rsquo;s not just about preserving the state. It&rsquo;s not just about giving them a very powerful sheepskin. They have always warned since time immemorial. It&rsquo;s also about preserving the church of whatever church or temple or mosque or whatever it is from being</p>
+            <p id="s1233"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=1233s" target="_blank" rel="noopener" data-pagefind-ignore>20:33</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>It&rsquo;s terrible</p>
+            <p id="s1234"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=1234s" target="_blank" rel="noopener" data-pagefind-ignore>20:34</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I think Trump and the Christian Nationalists right here have a lot more in common with the Ayatollah and the IRGC than anything else.</p>
+            <p id="s1242"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=1242s" target="_blank" rel="noopener" data-pagefind-ignore>20:42</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>I thought it was like some bat brakes What was</p>
+            <p id="s1245"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=1245s" target="_blank" rel="noopener" data-pagefind-ignore>20:45</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>that? Just enthusiasm!</p>
+            <p id="s1248"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=1248s" target="_blank" rel="noopener" data-pagefind-ignore>20:48</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Car crash</p>
+            <p id="s1249"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=1249s" target="_blank" rel="noopener" data-pagefind-ignore>20:49</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>For protecting democracy and human dignity</p>
+            <p id="s1251"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=1251s" target="_blank" rel="noopener" data-pagefind-ignore>20:51</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Oh yeah</p>
+            <p id="s1252"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=1252s" target="_blank" rel="noopener" data-pagefind-ignore>20:52</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Alright</p>
+            <p id="s1253"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=1253s" target="_blank" rel="noopener" data-pagefind-ignore>20:53</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Sweet Good to see you there, man</p>
+            <p id="s1256"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=1256s" target="_blank" rel="noopener" data-pagefind-ignore>20:56</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Thank you so much, thanks for the interview</p>
+            <p id="s1257"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=1257s" target="_blank" rel="noopener" data-pagefind-ignore>20:57</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Of course, of course</p>
+            <p id="s1258"><a class="wt-at" href="https://www.youtube.com/watch?v=Xtqu9LbClYU&amp;t=1258s" target="_blank" rel="noopener" data-pagefind-ignore>20:58</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Thank you for</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+
+    <section id="after-transcript" tabindex="-1" class="wrap wt-more" aria-label="Filmed the same day">
+        <div class="country-head">
+            <h2 class="country-name">Filmed the same day.</h2>
+            <span class="country-meta">28 March 2026</span>
+        </div>
+        <ul class="rel-list">
+            <li class="rel-item">
+                <a class="rel-link" href="no-kings-protest-del-gomez-on-imperialism-denver.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/nMbRUrfU8TU/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">No Kings Denver Protest · Dell on World War III &amp; Civil Engine</span>
+                        <span class="rel-why">7.27pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+<div><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from Denver Unfiltered.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-denver">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="a-first-interview-and-advice-back-to-newark-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/UkX8veGIl58-640.jpg" srcset="../stills/UkX8veGIl58-320.jpg 320w, ../stills/UkX8veGIl58-480.jpg 480w, ../stills/UkX8veGIl58-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:15</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · ETH Denver 2024</span>
+                    <h3 class="report-title">A first interview, and advice back to Newark.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="building-a-dao-and-making-governance-a-game-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/qcTocIWf34U-640.jpg" srcset="../stills/qcTocIWf34U-320.jpg 320w, ../stills/qcTocIWf34U-480.jpg 480w, ../stills/qcTocIWf34U-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:45</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">A content coin, and making governance a game.</h3>
+                    
+                </div>
+            </a>
+            <a href="from-america-to-denver-what-brought-you-here-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/DdXcCfCc26E-640.jpg" srcset="../stills/DdXcCfCc26E-320.jpg 320w, ../stills/DdXcCfCc26E-480.jpg 480w, ../stills/DdXcCfCc26E-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:21</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · Street</span>
+                    <h3 class="report-title">A borrowed camera, and Denver block by block.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../places.html#denver">Everything filmed in Denver</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

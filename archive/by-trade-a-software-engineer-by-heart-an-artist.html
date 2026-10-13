@@ -1,0 +1,709 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="The one who trained Mark. This is my product, and now he&#x27;s an AI developer. Yeah, I take full credit. Next person is James. James J. Where are you?">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/archive/by-trade-a-software-engineer-by-heart-an-artist">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="By Trade a Software Engineer, By Heart an Artist">
+    <meta property="og:description" content="The one who trained Mark. This is my product, and now he&#x27;s an AI developer. Yeah, I take full credit. Next person is James. James J. Where are you?">
+    <meta property="og:url" content="https://wethem.xyz/archive/by-trade-a-software-engineer-by-heart-an-artist">
+    <meta property="og:image" content="https://i.ytimg.com/vi/oCEuoXQHv1o/maxresdefault.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://i.ytimg.com/vi/oCEuoXQHv1o/maxresdefault.jpg">
+    <title>By Trade a Software Engineer, By Heart an Artist</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "By Trade a Software Engineer, By Heart an Artist",
+  "description": "The one who trained Mark. This is my product, and now he's an AI developer. Yeah, I take full credit. Next person is James. James J. Where are you?",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/oCEuoXQHv1o/maxresdefault.jpg"
+  ],
+  "uploadDate": "2025-09-12",
+  "duration": "PT45M52S",
+  "embedUrl": "https://www.youtube.com/embed/oCEuoXQHv1o",
+  "url": "https://wethem.xyz/archive/by-trade-a-software-engineer-by-heart-an-artist",
+  "publisher": {
+    "@type": "Organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  }
+}
+    </script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://wethem.xyz"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "The archive",
+   "item": "https://wethem.xyz/archive/index"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "By Trade a Software Engineer, By Heart an Artist"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="index.html">The archive</a></li>
+            <li aria-current="page">By Trade a Software Engineer, By Heart an Artist</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k]" data-pagefind-filter="kind[data-pf-kind]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="archive" data-pf-date="2025-09-12" data-pf-vid="oCEuoXQHv1o" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;45:52&quot;,&quot;s&quot;:1,&quot;w&quot;:640}">By Trade a Software Engineer, By Heart an Artist</h1>
+
+    <p class="wt-byline">From the archive &middot; published <time datetime="2025-09-12">2025-09-12</time></p>
+
+    <div class="wt-frame">
+        <lite-yt videoid="oCEuoXQHv1o" title="By Trade a Software Engineer, By Heart an Artist" postersrcset="../stills/oCEuoXQHv1o-320.jpg 320w, ../stills/oCEuoXQHv1o-480.jpg 480w, ../stills/oCEuoXQHv1o-640.jpg 640w"><img class="lite-yt-fallback" src="../stills/oCEuoXQHv1o-320.jpg" srcset="../stills/oCEuoXQHv1o-320.jpg 320w, ../stills/oCEuoXQHv1o-480.jpg 480w, ../stills/oCEuoXQHv1o-640.jpg 640w" alt="" loading="lazy" decoding="async"></lite-yt>
+    </div>
+
+    <div class="wt-prose">
+        <p>This is an archive entry: the video and its full transcript, published so
+        the words can be read, searched and quoted. It is not a written piece.
+        </p>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Who speaks, by their own introduction on the tape: <a href="../guests.html#g-liki-nzeru" data-pagefind-filter="person">Liki Nzeru</a> at <a class="wt-at" data-seek="80" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=80s" target="_blank" rel="noopener" data-pagefind-ignore>1:20</a>, <a href="../guests.html#g-james">James</a> at <a class="wt-at" data-seek="131" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=131s" target="_blank" rel="noopener" data-pagefind-ignore>2:11</a>, <a href="../guests.html#g-mark-matakile">Mark Matakile</a> at <a class="wt-at" data-seek="171" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=171s" target="_blank" rel="noopener" data-pagefind-ignore>2:51</a>, <a href="../guests.html#g-dennis">Dennis</a> at <a class="wt-at" data-seek="360" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=360s" target="_blank" rel="noopener" data-pagefind-ignore>6:00</a>, <a href="../guests.html#g-moses" data-pagefind-filter="person">Moses</a> at <a class="wt-at" data-seek="396" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=396s" target="_blank" rel="noopener" data-pagefind-ignore>6:36</a>, <a href="../guests.html#g-george">George</a> at <a class="wt-at" data-seek="435" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=435s" target="_blank" rel="noopener" data-pagefind-ignore>7:15</a>, <a href="../guests.html#g-francis">Francis</a> at <a class="wt-at" data-seek="458" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=458s" target="_blank" rel="noopener" data-pagefind-ignore>7:38</a>, <a href="../guests.html#g-aziz">Aziz</a> at <a class="wt-at" data-seek="531" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=531s" target="_blank" rel="noopener" data-pagefind-ignore>8:51</a>. Transcribed from the original audio and corrected for names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>The one who trained Mark. This is my product, and now he&rsquo;s an AI developer. Yeah, I take full credit. Next person is James. James J. Where are you? Karibu sana. Yay! And thank you guys for sitting here with me. As I said, I have a reward. I know you heard, and it&rsquo;s a very serious reward for tomorrow. For those who will sit with me, I&rsquo;ve noted all your faces. So I&rsquo;ll hand over to Alfred.</p>
+            <p id="s39"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=39s" target="_blank" rel="noopener" data-pagefind-ignore>0:39</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>Mic check, mic check, one, two. Okay, GM, GM, thank you guys for being with us. Uh, thank you, Yvonne, for the intro. By trade, I&rsquo;m a software engineer, but by heart, I&rsquo;m an artist, and I&rsquo;m also building Sasa Sasa. Sasa Sasa, like now now, which is a creator community and ecosystem focusing right now on music. Yeah, this is a very interesting panel. I&rsquo;d like Liki, founder of Quest Panda, to start off with intros, and then we&rsquo;ll pass it on over.</p>
+            <p id="s78"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=78s" target="_blank" rel="noopener" data-pagefind-ignore>1:18</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Liki Nzeru at 1:20" data-pagefind-ignore>Liki Nzeru</span>Okay, thank you, Alfred. My name is Liki Nzeru. I&rsquo;m a computer science graduate, so my passion is in building consumer applications. So after Compass, I built PesaBits, which is a platform where you can use your Bitcoin as collateral to get a Kenya shilling loan. So the product which, uh, I have today is called QuestFunder. It&rsquo;s empowering creators in Africa like TikTok creators, Instagram creators, and X creators to be able to earn money by using their influence to help small brands across Africa to market their products. Yeah, so thank you, and this is going to be an engaging session.</p>
+            <p id="s131"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=131s" target="_blank" rel="noopener" data-pagefind-ignore>2:11</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Hello guys, my name is James. I&rsquo;m a blockchain software developer. Yeah, so I work at Yamata, which is a a company that is trying to bring in the centralized exchange goodies with the security of centralized exchange. So we are building this exchange where we are able to own your crypto and able to trade with all the advantages of centralized exchange. This is, uh, with all the liquidity. So, uh, happy to engage with you guys.</p>
+            <p id="s166"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=166s" target="_blank" rel="noopener" data-pagefind-ignore>2:46</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Liki Nzeru at 1:20" data-pagefind-ignore>Liki Nzeru</span>Yeah.</p>
+            <p id="s166-2"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=166s" target="_blank" rel="noopener" data-pagefind-ignore>2:46</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>Okay.</p>
+            <p id="s168"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=168s" target="_blank" rel="noopener" data-pagefind-ignore>2:48</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Hello everyone. My name is Mark Matakile. I&rsquo;m a founder of Health -- To make it AI-powered, which means that we are introducing a brain in the midst of an application that is telemedicine. That is, you are able -- the fact that you are storing your health data on the same system, uh, being it being AI powered, uh, you are able to get, uh, human, uh, human-guided responses and analytics on the same. So within the session, we are going to explore more on how we are using that. Thank you.</p>
+            <p id="s215"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=215s" target="_blank" rel="noopener" data-pagefind-ignore>3:35</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>Awesome. So as a, as a panel, we have a request. We are a bunch of nerds, right? We know a lot about the tech, but we also want the crowd to help engage because AI is not a nerd&rsquo;s technology, it&rsquo;s everyone&rsquo;s. So we&rsquo;re gonna -- I think you&rsquo;re gonna kick us off, right? I think you have a question that can start us off, and we&rsquo;re gonna ask the crowd to kind of engage with us as much as possible. Not at the end, during. Okay, please.</p>
+            <p id="s252"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=252s" target="_blank" rel="noopener" data-pagefind-ignore>4:12</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Um, so I understand that AI is not a new thing. Everyone in the crowd understands what AI is, or rather has used an AI product before. Love to, to try and maybe share something you&rsquo;ve done with AI, maybe a tool, so that better understand you guys, engage with you on this. Uh, we wanna make it a one-on-one conversation with you guys also. So if you get someone to pass a mic around and try, maybe, uh, 2 or 3 people to give us, uh, an example of a tool they have used before.</p>
+            <p id="s295"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=295s" target="_blank" rel="noopener" data-pagefind-ignore>4:55</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>So just to summarize, what AI tool are you currently using? Currently currently using, right, that wasn&rsquo;t there in your daily driver before. Does that make sense? And hopefully it&rsquo;s not all devs in the crowd, so you can just -- it doesn&rsquo;t have to be something crazy. For example, I use Perplexity. Perplexity, anybody? Shoutouts to Project Tomoka for that free Perplexity subscription. It is an amazing research tool. Popularity is Google&rsquo;s rival, and this is how I do my research now. So for you guys, what is one AI tool that you just can&rsquo;t get rid of, right? Moses, is there anyone else? Please, a few volunteers. All right, we&rsquo;ll take 2 from the crowd and then we&rsquo;ll kick it off.</p>
+            <p id="s353"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=353s" target="_blank" rel="noopener" data-pagefind-ignore>5:53</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yvonne?</p>
+            <p id="s354"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=354s" target="_blank" rel="noopener" data-pagefind-ignore>5:54</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Hi, my name is Dennis. Um, thank you. Uh, the AI tool that I mostly use is one&rsquo;s called Decagon. Um, another one is Lexica as well. Lexica and Midjourney, those 3 are the AI tools that I cannot get rid of to build my art and as well as engage with the community, not here but globally. That&rsquo;s why I use they are going to help me, you know, structure some messages and all that.</p>
+            <p id="s389"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=389s" target="_blank" rel="noopener" data-pagefind-ignore>6:29</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yes.</p>
+            <p id="s392"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=392s" target="_blank" rel="noopener" data-pagefind-ignore>6:32</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>Yes.</p>
+            <p id="s394"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=394s" target="_blank" rel="noopener" data-pagefind-ignore>6:34</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Liki Nzeru at 1:20" data-pagefind-ignore>Liki Nzeru</span>Uh, hi guys.</p>
+            <p id="s396"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=396s" target="_blank" rel="noopener" data-pagefind-ignore>6:36</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>Uh, so my name is Moses, so you can just call me the on-chain chef.</p>
+            <p id="s402"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=402s" target="_blank" rel="noopener" data-pagefind-ignore>6:42</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Liki Nzeru at 1:20" data-pagefind-ignore>Liki Nzeru</span>So, uh, uh, one AI tool that I use most of the time is, uh, Cloud Code. Yeah. So it helps me to ship features very fast, uh, within hours.</p>
+            <p id="s415"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=415s" target="_blank" rel="noopener" data-pagefind-ignore>6:55</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Like I can launch a product within 24 hours. So yeah. So that&rsquo;s the, the best tool I guess, uh, I can recommend for developers and also Copilot.</p>
+            <p id="s426"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=426s" target="_blank" rel="noopener" data-pagefind-ignore>7:06</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>Yeah.</p>
+            <p id="s426-2"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=426s" target="_blank" rel="noopener" data-pagefind-ignore>7:06</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Thank you, Yvonne.</p>
+            <p id="s435"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=435s" target="_blank" rel="noopener" data-pagefind-ignore>7:15</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>My name is George. I&rsquo;m a data scientist and a builder.</p>
+            <p id="s441"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=441s" target="_blank" rel="noopener" data-pagefind-ignore>7:21</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>Um, like we said, I also do use Perplexity for code, but I also use the so-called Manas to help me with my writing.</p>
+            <p id="s452"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=452s" target="_blank" rel="noopener" data-pagefind-ignore>7:32</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>And yeah, thank you. Okay, hello, my name is Francis. Yeah, so, uh, I&rsquo;m Francis. So my favorite AI tools is one is Copilot. I like it. I started with Casa, but when I switched to Copilot, it&rsquo;s best. And then the other one is Gemini, and the last one ChatGPT.</p>
+            <p id="s486"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=486s" target="_blank" rel="noopener" data-pagefind-ignore>8:06</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Yeah.</p>
+            <p id="s498"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=498s" target="_blank" rel="noopener" data-pagefind-ignore>8:18</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>So hi.</p>
+            <p id="s499"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=499s" target="_blank" rel="noopener" data-pagefind-ignore>8:19</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>Okay.</p>
+            <p id="s513"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=513s" target="_blank" rel="noopener" data-pagefind-ignore>8:33</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Uh, the main AI that I use most of the time is Casa and Cloudy, which I find is cloud course. Yeah, it helps with my work for dev to make it more seamless or something.</p>
+            <p id="s527"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=527s" target="_blank" rel="noopener" data-pagefind-ignore>8:47</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>I&rsquo;m an undeveloped. Hi, I&rsquo;m Aziz. I go by Moto Moto in the space. I use Lindy AI to automate most Yeah, I use NDI and ATN Make to automate most of mundane tasks, cloud and ChatGPT, complexity, and that one.</p>
+            <p id="s558"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=558s" target="_blank" rel="noopener" data-pagefind-ignore>9:18</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>Okay, now it comes back to me. I think the sound is really, you know, breaking there. Check. So from what I hear, Perplexity, Cloud Code, Decagon, Lindy AI, Copilot, ChatGPT, Gemini. I&rsquo;m sure that another 100 in the crowd that all of you know that maybe came out last week, right? The space is shifting so fast, and I think that&rsquo;s a good segue to start, right? For the people on the panel, you guys are building, but how has AI transformed your agency and your ability to you know, reach, reach the objectives. I think, I think you already started this conversation, but on an individual level, what are you leveraging AI for? Like, on what level are you using the same tools to, to scale?</p>
+            <p id="s632"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=632s" target="_blank" rel="noopener" data-pagefind-ignore>10:32</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Okay, once again, um, AI tools are coming up like I&rsquo;ll check. Okay. From the crowd, the way you people have discussed with us, there are so many tools out there, hundreds of them, and The way we are speaking, there are also other companies that are coming up with tools. I&rsquo;ll dwell mostly from a founder&rsquo;s perspective. I&rsquo;ve heard most of you have talked about the AI tools that are more specific on developer -- on the developer side. But I&rsquo;ll talk about now as a founder or someone who is running a business, an entrepreneur. I&rsquo;ve gotten to like this aspect of the AI agents that automate tasks. And we are mostly using tools like N8n.</p>
+            <p id="s632-2"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=632s" target="_blank" rel="noopener" data-pagefind-ignore>10:32</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>We have Zapier and we have another intelligent one called Pipedream that you can just also just give it a prompt and it also gives you another, it auto-generates for you, it creates for you another AI tool that you can use to automate your tasks. Some of the tasks that I use for them, like I have one that is, it&rsquo;s able to web scrap for me some of the leads within the market from social media. It&rsquo;s able to go through the Twitter and be able to tell me granting of grant opportunities that are out there, the remote works and remote works that are available that have just have just been advertised maybe in the span of like 24 hours ago.</p>
+            <p id="s632-3"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=632s" target="_blank" rel="noopener" data-pagefind-ignore>10:32</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>So such an AI agent, I&rsquo;ve automated it in such a way that every day at 7 AM it sends me those emails with all those updates. So from that, I see that as one of the use cases where founders and entrepreneurs can use such kind of skills skills to build tools that can give them information. Because, you know, when you&rsquo;re a builder, a founder, or an entrepreneur, information is the key to everything. You need information on the news, on the upcoming trends, and generally even regulations. So those are some of the tools that you can use and you&rsquo;ll be up to date. with the latest news.</p>
+            <p id="s632-4"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=632s" target="_blank" rel="noopener" data-pagefind-ignore>10:32</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>And it can purely align with the motives of your company, your goal, and everything that you need. And now, talking with the -- on the blockchain side also, these tools, they&rsquo;re not just that you can -- they&rsquo;re user-friendly. You can automate them in such a way that it can send you information to even your WhatsApp and SMS. You don&rsquo;t need a website or something that is you need to log in, just user-friendly. But if you are trying to also build something on the blockchain, you can incorporate them onto your websites if you want them to push some, some notifications on the, on the webs -- uh, on your website.</p>
+            <p id="s632-5"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=632s" target="_blank" rel="noopener" data-pagefind-ignore>10:32</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>That&rsquo;s how we are using them. Uh, we are using them at Helcon to pull, to push some, to push, uh, updates. And also anyone who is visiting our website, we have a chatbot that they&rsquo;re able to chat with. It gives them all that information. information and they&rsquo;ll be up to date. So I think that&rsquo;s one use case that we are currently using.</p>
+            <p id="s866"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=866s" target="_blank" rel="noopener" data-pagefind-ignore>14:26</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>Okay. Um, I, I guess I can, I can also share, um, this, this is the part where I want us to transition to the conversation of the hype Africa end where this ties in. So it&rsquo;s obvious that it&rsquo;s adding value despite these tools&rsquo; business models not being built for our pockets, right? Like, all these subscriptions matter to us, but the value we get from them compared to the amount of money we make in this economy is not the same. So my question to you as a panel is, as AI has grown, what are the shifts in the African space that you&rsquo;re seeing are transforming our ability to actually take agency.</p>
+            <p id="s866-2"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=866s" target="_blank" rel="noopener" data-pagefind-ignore>14:26</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>We&rsquo;ve talked about consuming it, right? Like, you -- we are all obvious. I, I use AI at Sasa Sasa to help us extract data from images for things like KYC. It&rsquo;s cheaper than most OCR scans that you either -- and instead of setting up your own OCR pipeline. But I see a problem where the data is skewed. The darkness of the continent makes it harder, for example, for the training data to notice a face that might have a different complexion, right? So let&rsquo;s dive into, given the leverage and the utility, what are the gaps in the state of Africa as a region that this hype train is missing?</p>
+            <p id="s866-3"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=866s" target="_blank" rel="noopener" data-pagefind-ignore>14:26</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>I don&rsquo;t know if, like, you want to take that.</p>
+            <p id="s969"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=969s" target="_blank" rel="noopener" data-pagefind-ignore>16:09</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Yeah, sure.</p>
+            <p id="s971"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=971s" target="_blank" rel="noopener" data-pagefind-ignore>16:11</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Liki Nzeru at 1:20" data-pagefind-ignore>Liki Nzeru</span>That&rsquo;s a very nice question. So like, we, we can begin by looking how you like -- how AI, uh, applications are made. So first of all, you need like a very expensive hardware. These are GPUs. And in Africa, uh, getting such amount of capital whereby you can have 1,000 GPUs in your maybe gathered to train an AI, it&rsquo;s, uh, it&rsquo;s quite a challenge. So, uh, first of all, so that&rsquo;s one of the things that, uh, I think we are missing in Africa, our own trained AI models. And, uh, this, this hackathon I was, uh, checking lately whereby they are building, uh, uh, AI platforms for Africans who have, uh, resource-constrained, uh, devices.</p>
+            <p id="s971-2"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=971s" target="_blank" rel="noopener" data-pagefind-ignore>16:11</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Liki Nzeru at 1:20" data-pagefind-ignore>Liki Nzeru</span>Like, think, uh, like most of us here, if you have been on a Zoom call before, you found out that, uh, maybe your, your video was kinda not smooth like, uh, for like other users in different parts of the world. So like when you are building AI platforms for Africa, they should first of all not be resource intensive. You should cater for the bandwidth, so that it can be not very consuming. So like, and also we need like AI models which are light, which can run offline in our own devices. Like how you use like a simple tool like a calculator, think an AI model which can run in most people&rsquo;s devices, which can serve people in remote areas.</p>
+            <p id="s1073"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=1073s" target="_blank" rel="noopener" data-pagefind-ignore>17:53</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Thank you.</p>
+            <p id="s1074"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=1074s" target="_blank" rel="noopener" data-pagefind-ignore>17:54</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Liki Nzeru at 1:20" data-pagefind-ignore>Liki Nzeru</span>Yeah, so that&rsquo;s what I&rsquo;m thinking about. And as an example, there is -- if you look in northeastern Kenya, we have a lack of education for most of the children because there&rsquo;s no schools, there&rsquo;s a small number of teachers around. And I think if we can be able to use AI platforms where the kids from that region can be able to access education from a simple platform like ChatGPT, which is, uh, running offline, where the children can, uh, learn. So that&rsquo;s what I&rsquo;m thinking about.</p>
+            <p id="s1113"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=1113s" target="_blank" rel="noopener" data-pagefind-ignore>18:33</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>Very interesting. So you&rsquo;re mentioning things around not just network bandwidth, but I guess infrastructure struggles. So also energy, right? Like the need for Africa&rsquo;s energy to come online so that even these low-bandwidth solutions can be sustainable. I think one of the struggles that we&rsquo;re struggling with, one of the things I&rsquo;m noticing is the coordination of data so that these local models can run efficiently. I don&rsquo;t know if any of you had comments on the data capture aspect.</p>
+            <p id="s1145"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=1145s" target="_blank" rel="noopener" data-pagefind-ignore>19:05</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>I think -- all of us can agree that most of these AI models are trained on data that is not African-based, right? For example, you&rsquo;d ask ChatGPT a question, you want it to aim in the Kenyan or African market, but it gives you solutions that maybe don&rsquo;t really match what we experience on the ground, right? So, this is a major issue we&rsquo;ve got because most of the data that has been scraped from all these platforms like Reddit, Google, and all that. These are most of the comments, most of the posts that have been more focused on the maybe outside of African way of doing things, right?</p>
+            <p id="s1145-2"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=1145s" target="_blank" rel="noopener" data-pagefind-ignore>19:05</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>So, I think that&rsquo;s one of the major issues that is really impacting how AI becomes a benefit to the African market and to the continent as a whole. So, yeah, I think that&rsquo;s one of the major things and something we could do around that is to ensure we collect data that is more African-based, yeah? We integrate our local languages into these AI models because I have some good friends of mine who are trying to build a model around the Luo language to try to make the AI understand the Luo language and all that, right? So, these are some steps you can make, you can put us as the African builders to try and ensure that we are not left behind in this AI race as these other nations are trying to, like, aim for AGI and all this, right?</p>
+            <p id="s1145-3"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=1145s" target="_blank" rel="noopener" data-pagefind-ignore>19:05</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Yeah, I think that would be my comment on that.</p>
+            <p id="s1248"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=1248s" target="_blank" rel="noopener" data-pagefind-ignore>20:48</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Okay, just to add on, I listened to the previous panel and they talked more about the issue of regulatories. within the African ecosystem mostly. And that is the issue of governance. I&rsquo;ll come to this scenario that I think lately within the Kenyan ecosystem where we experienced people being abducted because they were auto-generating some content using AI. And it was a bit challenging. It&rsquo;s a call to -- So the issue of regulations and The government on how it&rsquo;s handling these AI tools. It was some kind of bit harsh to me. It showed to me that we don&rsquo;t have clear guidelines from the government. Maybe that shows to the users, like we the users, how can we use these AI tools ethically with with those in authority. Yeah, so that can also be one of the challenges that the African ecosystem --</p>
+            <p id="s1316"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=1316s" target="_blank" rel="noopener" data-pagefind-ignore>21:56</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>One of the things that is currently difficult to do is in our space where data isn&rsquo;t protected, right? The communities and the people are providing the information are gaining from it. And so I, I really think that regulation question, as much as Africans might give their data Regular is really important. Um, could you just color that again for us?</p>
+            <p id="s1344"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=1344s" target="_blank" rel="noopener" data-pagefind-ignore>22:24</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Again for us.</p>
+            <p id="s1344-2"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=1344s" target="_blank" rel="noopener" data-pagefind-ignore>22:24</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Liki Nzeru at 1:20" data-pagefind-ignore>Liki Nzeru</span>So, uh, so like what I would say, like, uh, for smartphone right now, you are able to see the current, uh, weather conditions of the place you are, uh, currently. So imagine in different parts of In Kenya, we have some weather stations which are providing weather data to insurance companies. So in case a certain part of -- in the -- for a certain region in the country faces like famine or drought, the insurance company is able to automatically disburse the insurance compensation to these farmers. So that&rsquo;s one of the most interesting use cases I&rsquo;ve found recently. And actually, the panel was about AI and Web3 use cases in Africa.</p>
+            <p id="s1344-3"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=1344s" target="_blank" rel="noopener" data-pagefind-ignore>22:24</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Liki Nzeru at 1:20" data-pagefind-ignore>Liki Nzeru</span>So when I talked -- when I look into Web3, we have like DeFi lending platforms which are providing access to credit to people in Africa. So like, uh, how we are doing is that, uh, we look for capital on-chain. So like, uh, there&rsquo;s a global liquidity pool of investors who provide their money in a central place. Then the money is able to be used in the real world. The money goes to the farmer in a in Kenya, in Tanzania. They use the, the money to, uh, produce, uh, agricultural products. When they make a profit, the money is sent back to investors who provided the capital. All this is done by the, by the power of Web3.</p>
+            <p id="s1344-4"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=1344s" target="_blank" rel="noopener" data-pagefind-ignore>22:24</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Liki Nzeru at 1:20" data-pagefind-ignore>Liki Nzeru</span>So those are some of the use cases we are seeing, uh, locally, and, uh, they are working actually.</p>
+            <p id="s1465"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=1465s" target="_blank" rel="noopener" data-pagefind-ignore>24:25</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>Thank you. I think I&rsquo;ll put the same question to you guys. Is there, is there a path forward for us to capitalize on this regardless of where we&rsquo;re starting from? So that whether it&rsquo;s whether the industry&rsquo;s hype or momentum, whatever you call it, is also Africa&rsquo;s windfall, like we use that same energy.</p>
+            <p id="s1497"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=1497s" target="_blank" rel="noopener" data-pagefind-ignore>24:57</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>So, um, anytime someone asks me if, uh, AI is, uh, a bubble or just something that is here for a short while, I always turn back to the Devin story. I think every dev in the house remember when, uh, was it Devin? I think it was last year or last year but one when we were told that there&rsquo;s this AI bot that can go on GitHub, get an issue, and resolve the issue and all that. Yeah. Many of us devs thought that work would be done for us, right? Because you have something that can build that thing that you were supposed to be doing, right? But I think we were all jealous when we learned that maybe there was some backstory to that.</p>
+            <p id="s1543"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=1543s" target="_blank" rel="noopener" data-pagefind-ignore>25:43</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>Yeah.</p>
+            <p id="s1544"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=1544s" target="_blank" rel="noopener" data-pagefind-ignore>25:44</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Just that&rsquo;s by the way, but AI I think is here to stay. It&rsquo;s not a hype or something, but we have companies like OpenAI rushing for AGI, right? We have Anthropic trying to build the best AI models out there for coding. So I believe when you bring it to the African market, what can we build? What can we do with this? What can we try to build on top of this? whatever people are trying to say is a boom or just something passing, right? So, let&rsquo;s dive down into it, right? We are way back when it comes to AI development in Africa.</p>
+            <p id="s1584"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=1584s" target="_blank" rel="noopener" data-pagefind-ignore>26:24</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Liki Nzeru at 1:20" data-pagefind-ignore>Liki Nzeru</span>We are --</p>
+            <p id="s1584-2"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=1584s" target="_blank" rel="noopener" data-pagefind-ignore>26:24</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>I can&rsquo;t say we are marginalized when it comes to AI because most of the solutions, most of the data trained on this thing doesn&rsquo;t take care of us as Zahid said earlier on. And I think this is our time. This is our period to like double down on this because we&rsquo;ve got nations like betting on AI. We&rsquo;ve got nations investing heavily on AI. We got China trying to integrate AI into development of students, right? So this is something that you see development nations are banking on this. And I think us as Africans, we should not be left back. We should embrace AI as it is and try to -- push forward into it.</p>
+            <p id="s1584-3"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=1584s" target="_blank" rel="noopener" data-pagefind-ignore>26:24</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>I understand that there&rsquo;s a very big knowledge gap when it comes to African development because we&rsquo;ve got developers being signed like football players with hundreds of millions to just switch companies, right? And we&rsquo;ve got devs here in Africa who maybe are just trying to use products that are built by these devs to try and build. This is our time to create our own AI models that are challenges that we go through as Africans and build on top of this. I don&rsquo;t think AI is a, is a hoax or a boom. I just believe this is something just waiting to, to boom, right? Like waiting to, to, to accelerate like what we have crypto in 2020 and 2021, right?</p>
+            <p id="s1584-4"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=1584s" target="_blank" rel="noopener" data-pagefind-ignore>26:24</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>But this is here to stay.</p>
+            <p id="s1675"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=1675s" target="_blank" rel="noopener" data-pagefind-ignore>27:55</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>Yeah.</p>
+            <p id="s1677"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=1677s" target="_blank" rel="noopener" data-pagefind-ignore>27:57</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Okay. Talking about the hype, I think this is something that relies much on builders and innovators. It&rsquo;s us who will make it just a hype and disappear, or like, it&rsquo;s for us to choose. We either make it a hype and let it disappear, or make it look -- rebuild it to, to resound with our own culture with our own native understanding and along with those lines, I like giving an example of M-Pesa. M-Pesa has captured the mobile money market because it&rsquo;s something that its origin is from here, Kenya, and it&rsquo;s really hard for any other mobile banking company that is trying to come up, it&rsquo;s a bit hard for them to take over Safaricom because it has that aspect of originality from us. So if we can turn around this AI thing that its origin is not from -- is from Europe, USA, and those other countries, if we can try as builders, as innovators, and make it actually resonate with us and in such a way that if you&rsquo;re using this tool, you feel that this is something that is -- we own it. That is the point where we will use it for a long term, and it won&rsquo;t just stay -- be there as a hype. It&rsquo;s something that will stay, you know.</p>
+            <p id="s1777"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=1777s" target="_blank" rel="noopener" data-pagefind-ignore>29:37</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>I think we are in a bubble. Yeah, I -- that&rsquo;s my honest opinion, that we are in a bubble and it will burst. And like all bubbles bursting, like you said, the builders will continue building even when the bubble is burst, right? So I think the message is, even with our problems, right, the hype or the opportunity is in the hands of the people like us, or everyone here who&rsquo;s mentioned one or another tool that gives you the ability to feel like you have a team, or you can 10x your outputs like Moses and, you know, output something in 24 hours. That is the promise of AI.</p>
+            <p id="s1777-2"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=1777s" target="_blank" rel="noopener" data-pagefind-ignore>29:37</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>And I think for me it&rsquo;s not hype because every, every task that is done by AI and now we can access has a higher standard of the minimum Quality. Does that make sense? Like we can now do a better bare minimum, and for us where every like in the token economy where you&rsquo;re paying where you&rsquo;re paying in the token economy where you&rsquo;re paying percent for each request, who knows that better than the person paying for pre-filled tokens? Right? Than the African who&rsquo;s used to being frugal. So there is an opportunity in how we understand these systems from, I guess, from a struggle perspective. We&rsquo;ve done so much with so little that if we can leverage this technology to create more opportunity despite our infrastructural challenges, then certainly this can&rsquo;t be hype for us because our bare minimum for everyone with a phone and an internet internet connection, just like with Bitcoin, has gone higher.</p>
+            <p id="s1777-3"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=1777s" target="_blank" rel="noopener" data-pagefind-ignore>29:37</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>So that&rsquo;s, that&rsquo;s my take on the, on the AI part. Now I want to segue into something you mentioned, and I, again, maybe it&rsquo;s controversial, I don&rsquo;t think we&rsquo;ll reach AGI. I think Balaji says it best, um, this version of AI is augmented intelligence, right? It allows and enhances your abilities as a builder or as a founder or as a creator. But it&rsquo;s using that leverage to be better. Without that, it cannot function well, and it&rsquo;s guessing really well. So I wanted to hear from the panelists. Do you guys believe we&rsquo;re on our path to AGI? Because that is -- I don&rsquo;t, I don&rsquo;t think that&rsquo;s where we&rsquo;re headed to with this, with this interpretation of AI.</p>
+            <p id="s1777-4"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=1777s" target="_blank" rel="noopener" data-pagefind-ignore>29:37</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>Leaky?</p>
+            <p id="s1937"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=1937s" target="_blank" rel="noopener" data-pagefind-ignore>32:17</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Liki Nzeru at 1:20" data-pagefind-ignore>Liki Nzeru</span>Yeah, so are we on our, our path to AGI? So like, uh, looking from it from, uh, the African perspective, we have, uh, so many like, uh, challenges which can be solved by AI and, uh, Web3 intersection. Uh, we look like, uh, we look at raising standards of living. How many people in Africa and Kenya are able to, to earn, to get employment or make money by using the AI and Web3 applications. So we have also, uh, cross-border remittance. You know, it&rsquo;s not easy to send money from one African country to another because of the high forex fees. We have stablecoins in Web3 space which have cut down the -- cut down the fees to more than 80% because, uh, Sending money in using Web3 platforms is almost free. Yeah, so yeah, so I believe in my own perspective, we are not in a in a rush to AGI. That&rsquo;s my own opinion because we have core problems in Africa which can be solved by special special AI models which have been trained to solve that specific challenge. Yeah, so that&rsquo;s what I&rsquo;m thinking about.</p>
+            <p id="s2027"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=2027s" target="_blank" rel="noopener" data-pagefind-ignore>33:47</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>Yeah, I love that you brought up the, the local model. I think that could be an interesting way for Africans to -- and like how M-Pesa leapfrogged, um, you know, traditional banking, maybe we skip the large language models and go to small language models and see how that works for us. But please continue with the question.</p>
+            <p id="s2051"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=2051s" target="_blank" rel="noopener" data-pagefind-ignore>34:11</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Yeah, so I think I&rsquo;d beg to differ. So I&rsquo;m a bit, uh, I&rsquo;m a sci-fi guy, so my -- I&rsquo;d like to bet on the AGI to be a reality thing, right? So we are headed there. So I can see it might take quite some time, but like, deep down my heart, I would love us to have an AGI, have Something that we could all have something think for you, right? And quite at a level where a human could do, right? Imagine if we could involve emotion into an AI, right? Make it could make decisions in a way that a human could do, right? Right now, AI is more of a let&rsquo;s say AI is more of a good pattern matcher, but not a thinker, right?</p>
+            <p id="s2051-2"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=2051s" target="_blank" rel="noopener" data-pagefind-ignore>34:11</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>If you could make this AI a thinker, imagine all these possibilities that we could unlock, right? Maybe we have all drug -- sorry, all cures to diseases right in front of our eyes. We can&rsquo;t see it. Or we could start intergalactic voyages and we can&rsquo;t right now because we don&rsquo;t have the the knowledge or the -- we like how an AI could think if he had our emotions and intellect. So I think these are things that would come. Not just to make this short, I believe in it. And yeah, let&rsquo;s wait and see.</p>
+            <p id="s2142"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=2142s" target="_blank" rel="noopener" data-pagefind-ignore>35:42</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Okay, I&rsquo;ll be brief on the same. Uh, when it comes to AGI, I believe that, uh, okay, I always believe, uh, there&rsquo;s nothing that is almost impossible when it comes to technology. But again, there is nothing that is perfect. So we might get close, a bit close, but not really sure if we can fully achieve the meaning of AGI the way we are defining it. But if you can think the way -- by the year 2000, no one ever thought about AI, but here &rsquo;80s. So you never know.</p>
+            <p id="s2181"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=2181s" target="_blank" rel="noopener" data-pagefind-ignore>36:21</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah.</p>
+            <p id="s2181-2"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=2181s" target="_blank" rel="noopener" data-pagefind-ignore>36:21</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>Okay, thank you. So consensus is there&rsquo;s possibility, but maybe it&rsquo;s -- yeah, maybe we&rsquo;re not properly on that path with this technology stack. I know I&rsquo;m out of time, so Yvonne, I will let you be. But my question to the crowd is the same. What he mentioned around the builders being the decider is us. And these tools are not things we&rsquo;re consuming, they&rsquo;re things we can innovate on right now. How many of us have been on Hugging Face? Hugging Face, right? How many of us have heard of Hugging Face? It sounds familiar. The things that we use every day are right there for us to tap into.</p>
+            <p id="s2181-3"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=2181s" target="_blank" rel="noopener" data-pagefind-ignore>36:21</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>And Helcom is using it right now, and they don&rsquo;t need to cost much. Our challenge as Africans is to figure out how do we make this accessible at our price range and in our business context so that the Africans can use it without making -- without losing out on something else. I think that&rsquo;s the challenge here, right? Whether it&rsquo;s the use of data capture methods that you mentioned which are lower in fees or better efficient because they&rsquo;re focused on a specific use case, or it&rsquo;s making sure that as an ecosystem we build data capture regulation that allows us to collectively keep this data and grow it so it scales.</p>
+            <p id="s2181-4"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=2181s" target="_blank" rel="noopener" data-pagefind-ignore>36:21</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>I just wanted to ask each of the panelists to just summarize whether -- just your summary on this very, very long topic, because I think there&rsquo;s 2 other conversations coming in on AI.</p>
+            <p id="s2282"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=2282s" target="_blank" rel="noopener" data-pagefind-ignore>38:02</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Okay, just to summarize about, uh, the topic of this panel, which was AI and Web3, um, I generally say, uh, if you are a builder, uh, if you are a blockchain builder, incorporating AI is like giving your, your blockchain a brain. So it&rsquo;s a cool feature that you can try to leverage.</p>
+            <p id="s2318"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=2318s" target="_blank" rel="noopener" data-pagefind-ignore>38:38</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah.</p>
+            <p id="s2319"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=2319s" target="_blank" rel="noopener" data-pagefind-ignore>38:39</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>I would love to retell it or not, you said about this, right? Whether it&rsquo;s a hype or not, let&rsquo;s keep building. When crypto was coming up, everyone said it&rsquo;s it&rsquo;s a hype. Yeah, when the internet came up, everyone said it&rsquo;s a hype, but look where we are. Look where we are at the moment, right? We are, we are reaping the benefit of internet, reaping the benefit of crypto and blockchain. You can go, you can buy anything you want at the moment with crypto. You can interact or communicate communicate with anyone using the internet. So let&rsquo;s keep building. Let&rsquo;s not be left behind. Uh, yeah, let&rsquo;s acknowledge and take this as part of a technology that will, uh, um, will be the future of us.</p>
+            <p id="s2377"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=2377s" target="_blank" rel="noopener" data-pagefind-ignore>39:37</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>Thank you.</p>
+            <p id="s2378"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=2378s" target="_blank" rel="noopener" data-pagefind-ignore>39:38</a><span class="wt-spk wt-spk-named" title="Speaker C, as separated by the model; gives the name Liki Nzeru at 1:20" data-pagefind-ignore>Liki Nzeru</span>So my final thoughts about, uh, AI and, uh, Web3 use case in Africa. is that I see this as a very promising future because, first of all, as a developer, you want to build a product maybe which uses AI for making manual and for easing the life of people. So, first of all, what I would like to tell you is that we have open source AI models. which you can integrate in your solution. We have a lot of models which deal with visual analytics where it&rsquo;s able to understand video and image data. Yeah, so you can use the open source models because we don&rsquo;t have the GPUs to train our own AI. And yeah, that&rsquo;s, some of the thoughts which I have. And, uh, to add on to something, we should build, uh, AI models taking into perspective that, uh, majority of our users have, uh, simple smartphones which are maybe $100 or less. So those devices should be able to run your -- run the product which you are building, uh, smoothly. So those are, uh, My thoughts.</p>
+            <p id="s2467"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=2467s" target="_blank" rel="noopener" data-pagefind-ignore>41:07</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>Thank you.</p>
+            <p id="s2470"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=2470s" target="_blank" rel="noopener" data-pagefind-ignore>41:10</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Thank you very much. Round of applause. Thank you guys. And you guys are amazing. You&rsquo;re sitting through It&rsquo;s Safari 2024, we&rsquo;d never. So next we&rsquo;re going to have a startup showcase, but before that we&rsquo;ll have someone small telling us about one of our partners speaking about something. Not now, just a second. Before that, Jerome has requested that I get people to stretch because you guys have been sitting through, and I know you want my reward. I&rsquo;ll give you tomorrow. So we&rsquo;re first going to do a stretch. Please, if you could rise up. I&rsquo;m going to entertain you. So we&rsquo;re going to try and spell It&rsquo;s Safari with ourselves.</p>
+            <p id="s2470-2"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=2470s" target="_blank" rel="noopener" data-pagefind-ignore>41:10</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, you&rsquo;re going to spell It&rsquo;s Safari, and if you can guess how -- but do it with me. So we&rsquo;ll start with the letter E. Now letter E We do it like, like that to the farthest you can. Letter E, everyone, let&rsquo;s go! Are you feeling that stretch? Yeah. Okay, let&rsquo;s go to T. T, you put your hands like this and bend your head. So T, let&rsquo;s go T! Until until you feel like a crack on your back. Yeah. Let&rsquo;s do H. H you stand like a monkey, uh, fetching something. Yeah. You&rsquo;re feeling it? Eat eat yeah. S uh we make an S like This, like this.</p>
+            <p id="s2470-3"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=2470s" target="_blank" rel="noopener" data-pagefind-ignore>41:10</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, this -- that&rsquo;s an S, right? Yeah, it&rsquo;s kind of an S. Yeah, let&rsquo;s do A, and then you stretch to the farthest you can. Yeah, get to as high as you can. You stretch those legs. Yeah, let&rsquo;s do F. F you. Stretch your hands. You guys are feeling it? Is it working? It&rsquo;s working for me. Wait, it&rsquo;s a fa fa fa e e e. That looks good. You guys look good from up here. Let&rsquo;s go. R is Yay! And I -- lastly, I. Stretch to the farthest you can. Let&rsquo;s call the heavens. Yeah, and what have we spelled?</p>
+            <p id="s2673"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=2673s" target="_blank" rel="noopener" data-pagefind-ignore>44:33</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>Safari.</p>
+            <p id="s2675"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=2675s" target="_blank" rel="noopener" data-pagefind-ignore>44:35</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Let&rsquo;s go! 1, 2, 3.</p>
+            <p id="s2677"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=2677s" target="_blank" rel="noopener" data-pagefind-ignore>44:37</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Safari.</p>
+            <p id="s2680"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=2680s" target="_blank" rel="noopener" data-pagefind-ignore>44:40</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I can&rsquo;t hear you. Oh my God, is it me? 1, 2, 3.</p>
+            <p id="s2684"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=2684s" target="_blank" rel="noopener" data-pagefind-ignore>44:44</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>eSafari.</p>
+            <p id="s2686"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=2686s" target="_blank" rel="noopener" data-pagefind-ignore>44:46</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Thank you. So I&rsquo;ll allow my -- the person who did all the designs for eSafari this year is apparently our partner. So I&rsquo;ll let him speak for just 1 second, 1 minute, 1 minute, 2 minutes about the event they&rsquo;re hosting in Rwanda. And then we&rsquo;ll go into the startup showcase.</p>
+            <p id="s2709"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=2709s" target="_blank" rel="noopener" data-pagefind-ignore>45:09</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>I don&rsquo;t need to come up.</p>
+            <p id="s2711"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=2711s" target="_blank" rel="noopener" data-pagefind-ignore>45:11</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>No, you can come up.</p>
+            <p id="s2712"><a class="wt-at" href="https://www.youtube.com/watch?v=oCEuoXQHv1o&amp;t=2712s" target="_blank" rel="noopener" data-pagefind-ignore>45:12</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Moses at 6:36" data-pagefind-ignore>Moses</span>Okay, yeah.</p>
+        </div>
+    </section>
+
+
+    <section class="wrap wt-more" aria-label="More from the library">
+        <div class="country-head">
+            <h2 class="country-name">Keep reading.</h2>
+            <span class="country-meta"><a href="../library.html">The whole library &rarr;</a></span>
+        </div>
+        <ul class="rel-list">
+            <li class="rel-item">
+                <a class="rel-link" href="../watch/unlearning-a-hate-for-blockchain-ethiopia.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/aFLVXj6g0Uw/mqdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">Unlearning a Hate for Blockchain: Pop-Up City | Ethiopia</span>
+                        <span class="rel-why">Ethiopia</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="../watch/crypto-clarity-whats-happening-with-the-money-online.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/W20VlF_HHuQ/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">What&#x27;s Happening With the Money | Crypto Clarity</span>
+                        <span class="rel-why">2025</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="../watch/lets-talk-about-web-3-with-maceo-online.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/h_ncqUC-4co/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">A Podcast Before Crypto, and Money as a Public Good</span>
+                        <span class="rel-why">2025</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+<div class="wrap wtm-share"></div>
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+
+<script src="../lite-yt.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

@@ -1,0 +1,760 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Three and a half minutes behind the scenes at ETH Denver 2026, filmed on the move at what the crew call a family meal.">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/east-denver-vibe-check-eth-denver-2026-family-meal-denver">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="A Family Meal and a Vibe Check at ETH Denver 2026">
+    <meta property="og:description" content="Three and a half minutes behind the scenes at ETH Denver 2026, filmed on the move at what the crew call a family meal.">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/east-denver-vibe-check-eth-denver-2026-family-meal-denver.jpg?v=2b25e6f180">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="A family meal and a vibe check at the venue">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/east-denver-vibe-check-eth-denver-2026-family-meal-denver.jpg?v=2b25e6f180">
+    <meta property="og:url" content="https://wethem.xyz/watch/east-denver-vibe-check-eth-denver-2026-family-meal-denver">
+    <title>A Family Meal and a Vibe Check at ETH Denver 2026 &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/east-denver-vibe-check-eth-denver-2026-family-meal-denver#video",
+  "name": "A Family Meal and a Vibe Check at ETH Denver 2026",
+  "description": "Three and a half minutes behind the scenes at ETH Denver 2026, filmed on the move at what the crew call a family meal. \"Family meal. You guys call this family meal\", the man with the mic says, works out where he sits in the household, \"We're like the Jackson 3 now\", and then sets the segment: \"ETH Denver vibe check. The vibes are amazing.\" The roll call is the first minute. \"so who we here with today?\" gets three answers, \"Sharon\", then \"Anabolo, drinking coffee\", then Humpty, whose introduction is a refusal to introduce him: \"That's it, just Humpty. He like Cher\", and \"If you know Humpty, you know.\" A shout goes out to Real Motion and \"shout out to on-chain creators\". The question underneath the segment is whether the week was any good. \"A lot of people been talking a lot of smack\", the host says, and asks \"what's really the vibes here at ETH Denver?\" His own answer starts with Sharon. \"Sharon's the vibes. You were the vibes\", he says, she was there at the start of the day and the end of it, she contributed to the rally several times, \"she has dripped out on like nouns gear\", and \"If you are in this space, everybody knows Sharon.\" Sharon's own verdict is the shortest thing on the tape and the least sentimental. \"No, it was a little shorter. I wanted more before I knew it was over\", she says of this year, and when he asks whether she wanted more, \"Always. I love the art. I love that Nouns popped up and did your project.\" The last stretch is a case for the room itself. \"this venue is, is something else\", he says, and does not pretend it is polished: \"I'm saying it's very grassroots. I feel like a lot of crypto people would never come to something like this.\" He gives the origin as a decision three people made, that when he, David and Rob came together \"we wanted to create a space for creatives to have a good time, get to know people, get to have a vibe and not feel like pressure\", instead of the usual round of what do you do and who are you. What that looks like on the night is people painting, \"We're writing on walls\", dabs going round, and a tray of food nobody can name until David does: \"Yeah, it's a Polish dumpling. We got Polish dumplings.\" Then a group shot, and a line about how it looks from behind the camera.",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/sYtf84GCU2M/maxresdefault.jpg"
+  ],
+  "uploadDate": "2026-03-29T23:35:26Z",
+  "embedUrl": "https://www.youtube.com/embed/sYtf84GCU2M",
+  "url": "https://wethem.xyz/watch/east-denver-vibe-check-eth-denver-2026-family-meal-denver",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT3M38S",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "Family meal, and the ETH Denver vibe check",
+      "startOffset": 0,
+      "url": "https://wethem.xyz/watch/east-denver-vibe-check-eth-denver-2026-family-meal-denver?t=0",
+      "endOffset": 41
+    },
+    {
+      "@type": "Clip",
+      "name": "So who we here with today",
+      "startOffset": 41,
+      "url": "https://wethem.xyz/watch/east-denver-vibe-check-eth-denver-2026-family-meal-denver?t=41",
+      "endOffset": 52
+    },
+    {
+      "@type": "Clip",
+      "name": "That is it, just Humpty",
+      "startOffset": 52,
+      "url": "https://wethem.xyz/watch/east-denver-vibe-check-eth-denver-2026-family-meal-denver?t=52",
+      "endOffset": 79
+    },
+    {
+      "@type": "Clip",
+      "name": "Sharon was the vibes all week",
+      "startOffset": 79,
+      "url": "https://wethem.xyz/watch/east-denver-vibe-check-eth-denver-2026-family-meal-denver?t=79",
+      "endOffset": 118
+    },
+    {
+      "@type": "Clip",
+      "name": "Was ETH Denver too short? Sharon says yes",
+      "startOffset": 118,
+      "url": "https://wethem.xyz/watch/east-denver-vibe-check-eth-denver-2026-family-meal-denver?t=118",
+      "endOffset": 135
+    },
+    {
+      "@type": "Clip",
+      "name": "Why the venue exists: a space with no pressure",
+      "startOffset": 135,
+      "url": "https://wethem.xyz/watch/east-denver-vibe-check-eth-denver-2026-family-meal-denver?t=135",
+      "endOffset": 175
+    },
+    {
+      "@type": "Clip",
+      "name": "Polish dumplings, and a family picture",
+      "startOffset": 175,
+      "url": "https://wethem.xyz/watch/east-denver-vibe-check-eth-denver-2026-family-meal-denver?t=175",
+      "endOffset": 218
+    }
+  ],
+  "creator": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "transcript": "Family meal. You guys call this family meal. You call me Tito. Tito. We're like the Jackson now. Okay. You Yeah. Theo. We got Nana. Nana.\nKrypto. Nana. And then I'm just a young, you know, young man trying to find his way. I'm I'm really your cousin or I'm almost almost\nalmost. Yeah. I'm still young. Yeah. Yeah. Yeah. For some people. You're a little green to be Okay, so we at East Denver Vibe Check. The vibes are amazing. We here with Oh, wait. Come in the frame real quick. Come in this one. And he going to shoot and he going to get this right here. Okay, so who we here with today?\nSharon. Sharon Annabolo drinking coffee. Hey, we here. And Humpty. Let's go. Humpty. That's it. That's it. Just Humpty. He's like, share. That's it. Man, a man of uh if you know, you know. If you know Humpty, you know, you know, you don't need to say too much. Real Motion. Shout out to Onchain creators. So, favorite favorite memory from ETH Denver 2026 so far. A lot of people been talking a lot of smack. They've been they've been kind of\nhaters spitting their foot, but let's talk about it. What's What's really the vibes here at Eve Denver? Yeah. Thank you. Oh my goodness. I've got to say Sharon Shares.\nYou were the vibes. You were around us all week long. You were with us when we started our day. When we finished our day, you you made me happy all week long. Honestly,\nthat was too sweet. And she contributed to the rally. Wow. Several times. Several times. And she has dripped out on like nouns gear on Chain N. Stop playing with her.\nYeah. Wow. A one of one. There's not too many people. If you are in this stage, everybody know Sharon. So, um, what's been your what's been your vibes this year, though?\nCuz this is not your first rodeo. No, it was a little shorter. I wanted more before I knew it was over. He wanted more. I love the art. I love that nouns popped up and did your project. Oh my gosh. And vibe check again.\n4.0. This is This is the best one. I've got to be real. This venue is is something else. I'm saying it's very grassroot. I feel like a lot of crypto people would never come to something like this. But our whole thing is since the beginning when me, David, and Rob came together was to provide a space. Shout out to Dave. Shout out Dave in the back. But when we were trying to That's Zen Shorts in the building, the one and only. Check them out. When we when we came together, we wanted to create a space for creatives to have a good time, get to know people,\nget to have a vibe, and not feel like pressure like, \"What do you do? Who are you?\" and I'll be interviewed. We're writing on walls.\nWe're writing on walls. Writing on walls giving out dabs and uh input. What's a What's that snack in there? What's that snack in there? David is empire.\nDavid, what's that? What's that? Perogi. Perogi. Perogi. It's a Polish dumpling. We got Polish dumplings. Come on. Base don't got no Polish dumplings. Polish empanada. Really?\nPolish empanada here. But we here. This is the party to be at. This is the party to be at. The vibes have been proven. Thank you, Humpty. Thank you, David. Thank you, Sharon.\nSharon, back in the picture. There you go. Family picture. Oh, wait. Slide that way. WAIT, WAIT. THIS WAY. OH, WAIT. I feel like this is an episode of like in living single or something. A\nLet's go. Amazing. Let's go. Heck yeah. Thank you.",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Denver",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "url": "https://wethem.xyz/places#denver"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Denver Unfiltered",
+    "url": "https://wethem.xyz/portfolio#p-denver"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Crypto",
+      "url": "https://wethem.xyz/topics/crypto"
+    }
+  ],
+  "keywords": [
+    "Crypto"
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Denver Unfiltered",
+      "item": "https://wethem.xyz/portfolio#p-denver"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "A family meal and a vibe check at the venue",
+      "item": "https://wethem.xyz/watch/east-denver-vibe-check-eth-denver-2026-family-meal-denver"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2026-03-29" data-pf-vid="sYtf84GCU2M" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;3:38&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="Denver" data-pf-country="United States" data-pf-project="Denver Unfiltered">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-denver">Denver Unfiltered</a></li>
+            <li aria-current="page">A family meal and a vibe check at the venue</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">A family meal and a vibe check at the venue.</h1>
+
+    <p class="wt-byline"><strong>Sharon, Annabolo &amp; Humpty</strong> &middot; Denver &middot; 4 min</p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="sYtf84GCU2M" live postersrcset="../stills/sYtf84GCU2M-320.jpg 320w, ../stills/sYtf84GCU2M-480.jpg 480w, ../stills/sYtf84GCU2M-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/sYtf84GCU2M?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="A family meal and a vibe check at the venue, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+
+    <div class="wt-prose">
+            <p>Three and a half minutes behind the scenes at ETH Denver 2026, filmed on the move at what the crew call a family meal. &ldquo;Family meal. You guys call this family meal&rdquo;, the man with the mic says, works out where he sits in the household, &ldquo;We&rsquo;re like the Jackson 3 now&rdquo;, and then sets the segment: &ldquo;ETH Denver vibe check. The vibes are amazing.&rdquo;</p>
+            <p>The roll call is the first minute. &ldquo;so who we here with today?&rdquo; gets three answers, &ldquo;Sharon&rdquo;, then &ldquo;Anabolo, drinking coffee&rdquo;, then Humpty, whose introduction is a refusal to introduce him: &ldquo;That&rsquo;s it, just Humpty. He like Cher&rdquo;, and &ldquo;If you know Humpty, you know.&rdquo; A shout goes out to Real Motion and &ldquo;shout out to on-chain creators&rdquo;.</p>
+            <p>The question underneath the segment is whether the week was any good. &ldquo;A lot of people been talking a lot of smack&rdquo;, the host says, and asks &ldquo;what&rsquo;s really the vibes here at ETH Denver?&rdquo; His own answer starts with Sharon. &ldquo;Sharon&rsquo;s the vibes. You were the vibes&rdquo;, he says, she was there at the start of the day and the end of it, she contributed to the rally several times, &ldquo;she has dripped out on like nouns gear&rdquo;, and &ldquo;If you are in this space, everybody knows Sharon.&rdquo;</p>
+            <p>Sharon&rsquo;s own verdict is the shortest thing on the tape and the least sentimental. &ldquo;No, it was a little shorter. I wanted more before I knew it was over&rdquo;, she says of this year, and when he asks whether she wanted more, &ldquo;Always. I love the art. I love that Nouns popped up and did your project.&rdquo;</p>
+            <p>The last stretch is a case for the room itself. &ldquo;this venue is, is something else&rdquo;, he says, and does not pretend it is polished: &ldquo;I&rsquo;m saying it&rsquo;s very grassroots. I feel like a lot of crypto people would never come to something like this.&rdquo; He gives the origin as a decision three people made, that when he, David and Rob came together &ldquo;we wanted to create a space for creatives to have a good time, get to know people, get to have a vibe and not feel like pressure&rdquo;, instead of the usual round of what do you do and who are you. What that looks like on the night is people painting, &ldquo;We&rsquo;re writing on walls&rdquo;, dabs going round, and a tray of food nobody can name until David does: &ldquo;Yeah, it&rsquo;s a Polish dumpling. We got Polish dumplings.&rdquo; Then a group shot, and a line about how it looks from behind the camera.</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../places.html#denver">Everything filmed in Denver</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="not-for-polish-but-for-posterity-a-walk-in-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/FVUdLfuW7YE-640.jpg" srcset="../stills/FVUdLfuW7YE-320.jpg 320w, ../stills/FVUdLfuW7YE-480.jpg 480w, ../stills/FVUdLfuW7YE-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>0:51</span></span><span>Not for polish, but for posterity: a walk in Denver.</span></a>
+        <a class="wt-rail-card" href="a-house-band-a-historic-room-and-a-for-sale-sign-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/GD_cOjcMPqg-640.jpg" srcset="../stills/GD_cOjcMPqg-320.jpg 320w, ../stills/GD_cOjcMPqg-480.jpg 480w, ../stills/GD_cOjcMPqg-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>12:51</span></span><span>Twenty years in a room somebody wants to sell.</span></a>
+        <a class="wt-rail-card" href="which-denver-stories-go-uncovered.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/qjfvrsmwJSI-640.jpg" srcset="../stills/qjfvrsmwJSI-320.jpg 320w, ../stills/qjfvrsmwJSI-480.jpg 480w, ../stills/qjfvrsmwJSI-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>1:05</span></span><span>Which Denver stories go uncovered.</span></a>
+        <a class="wt-rail-card" href="post-miguel-concert-on-the-city-the-show-and-ai-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/hlq0Z7z1XE0-640.jpg" srcset="../stills/hlq0Z7z1XE0-320.jpg 320w, ../stills/hlq0Z7z1XE0-480.jpg 480w, ../stills/hlq0Z7z1XE0-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>3:05</span></span><span>Two high school seniors after a Miguel show.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c0"><a class="wt-t" href="https://www.youtube.com/watch?v=sYtf84GCU2M&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-s">Family meal, and the ETH Denver vibe check</span></li>
+                <li class="wt-line" id="c41"><a class="wt-t" href="https://www.youtube.com/watch?v=sYtf84GCU2M&amp;t=41s" target="_blank" rel="noopener" data-pagefind-ignore>0:41</a><span class="wt-s">So who we here with today</span></li>
+                <li class="wt-line" id="c52"><a class="wt-t" href="https://www.youtube.com/watch?v=sYtf84GCU2M&amp;t=52s" target="_blank" rel="noopener" data-pagefind-ignore>0:52</a><span class="wt-s">That is it, just Humpty</span></li>
+                <li class="wt-line" id="c79"><a class="wt-t" href="https://www.youtube.com/watch?v=sYtf84GCU2M&amp;t=79s" target="_blank" rel="noopener" data-pagefind-ignore>1:19</a><span class="wt-s">Sharon was the vibes all week</span></li>
+                <li class="wt-line" id="c118"><a class="wt-t" href="https://www.youtube.com/watch?v=sYtf84GCU2M&amp;t=118s" target="_blank" rel="noopener" data-pagefind-ignore>1:58</a><span class="wt-s">Was ETH Denver too short? Sharon says yes</span></li>
+                <li class="wt-line" id="c135"><a class="wt-t" href="https://www.youtube.com/watch?v=sYtf84GCU2M&amp;t=135s" target="_blank" rel="noopener" data-pagefind-ignore>2:15</a><span class="wt-s">Why the venue exists: a space with no pressure</span></li>
+                <li class="wt-line" id="c175"><a class="wt-t" href="https://www.youtube.com/watch?v=sYtf84GCU2M&amp;t=175s" target="_blank" rel="noopener" data-pagefind-ignore>2:55</a><span class="wt-s">Polish dumplings, and a family picture</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Transcribed from the original audio and corrected for names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=sYtf84GCU2M&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a>Family meal. You guys call this family meal. You call me Tito. Tito. We&rsquo;re like the Jackson now. Okay. You Yeah. Theo. We got Nana. Nana.</p>
+            <p id="s13"><a class="wt-at" href="https://www.youtube.com/watch?v=sYtf84GCU2M&amp;t=13s" target="_blank" rel="noopener" data-pagefind-ignore>0:13</a>Krypto. Nana. And then I&rsquo;m just a young, you know, young man trying to find his way. I&rsquo;m I&rsquo;m really your cousin or I&rsquo;m almost almost</p>
+            <p id="s22"><a class="wt-at" href="https://www.youtube.com/watch?v=sYtf84GCU2M&amp;t=22s" target="_blank" rel="noopener" data-pagefind-ignore>0:22</a>almost. Yeah. I&rsquo;m still young. Yeah. Yeah. Yeah. For some people. You&rsquo;re a little green to be Okay, so we at East Denver Vibe Check. The vibes are amazing. We here with Oh, wait. Come in the frame real quick. Come in this one. And he going to shoot and he going to get this right here. Okay, so who we here with today?</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s43"><a class="wt-at" href="https://www.youtube.com/watch?v=sYtf84GCU2M&amp;t=43s" target="_blank" rel="noopener" data-pagefind-ignore>0:43</a>Sharon. Sharon Annabolo drinking coffee. Hey, we here. And Humpty. Let&rsquo;s go. Humpty. That&rsquo;s it. That&rsquo;s it. Just Humpty. He&rsquo;s like, share. That&rsquo;s it. Man, a man of uh if you know, you know. If you know Humpty, you know, you know, you don&rsquo;t need to say too much. Real Motion. Shout out to Onchain creators. So, favorite favorite memory from ETH Denver 2026 so far. A lot of people been talking a lot of smack. They&rsquo;ve been they&rsquo;ve been kind of</p>
+            <p id="s71"><a class="wt-at" href="https://www.youtube.com/watch?v=sYtf84GCU2M&amp;t=71s" target="_blank" rel="noopener" data-pagefind-ignore>1:11</a>haters spitting their foot, but let&rsquo;s talk about it. What&rsquo;s What&rsquo;s really the vibes here at Eve Denver? Yeah. Thank you. Oh my goodness. I&rsquo;ve got to say Sharon Shares.</p>
+            <p id="s83"><a class="wt-at" href="https://www.youtube.com/watch?v=sYtf84GCU2M&amp;t=83s" target="_blank" rel="noopener" data-pagefind-ignore>1:23</a>You were the vibes. You were around us all week long. You were with us when we started our day. When we finished our day, you you made me happy all week long. Honestly,</p>
+            <p id="s96"><a class="wt-at" href="https://www.youtube.com/watch?v=sYtf84GCU2M&amp;t=96s" target="_blank" rel="noopener" data-pagefind-ignore>1:36</a>that was too sweet. And she contributed to the rally. Wow. Several times. Several times. And she has dripped out on like nouns gear on Chain N. Stop playing with her.</p>
+            <p id="s106"><a class="wt-at" href="https://www.youtube.com/watch?v=sYtf84GCU2M&amp;t=106s" target="_blank" rel="noopener" data-pagefind-ignore>1:46</a>Yeah. Wow. A one of one. There&rsquo;s not too many people. If you are in this stage, everybody know Sharon. So, um, what&rsquo;s been your what&rsquo;s been your vibes this year, though?</p>
+            <p id="s117"><a class="wt-at" href="https://www.youtube.com/watch?v=sYtf84GCU2M&amp;t=117s" target="_blank" rel="noopener" data-pagefind-ignore>1:57</a>Cuz this is not your first rodeo. No, it was a little shorter. I wanted more before I knew it was over. He wanted more. I love the art. I love that nouns popped up and did your project. Oh my gosh. And vibe check again.</p>
+            <p id="s135"><a class="wt-at" href="https://www.youtube.com/watch?v=sYtf84GCU2M&amp;t=135s" target="_blank" rel="noopener" data-pagefind-ignore>2:15</a>4.0. This is This is the best one. I&rsquo;ve got to be real. This venue is is something else. I&rsquo;m saying it&rsquo;s very grassroot. I feel like a lot of crypto people would never come to something like this. But our whole thing is since the beginning when me, David, and Rob came together was to provide a space. Shout out to Dave. Shout out Dave in the back. But when we were trying to That&rsquo;s Zen Shorts in the building, the one and only. Check them out. When we when we came together, we wanted to create a space for creatives to have a good time, get to know people,</p>
+            <p id="s162"><a class="wt-at" href="https://www.youtube.com/watch?v=sYtf84GCU2M&amp;t=162s" target="_blank" rel="noopener" data-pagefind-ignore>2:42</a>get to have a vibe, and not feel like pressure like, &ldquo;What do you do? Who are you?&rdquo; and I&rsquo;ll be interviewed. We&rsquo;re writing on walls.</p>
+            <p id="s169"><a class="wt-at" href="https://www.youtube.com/watch?v=sYtf84GCU2M&amp;t=169s" target="_blank" rel="noopener" data-pagefind-ignore>2:49</a>We&rsquo;re writing on walls. Writing on walls giving out dabs and uh input. What&rsquo;s a What&rsquo;s that snack in there? What&rsquo;s that snack in there? David is empire.</p>
+            <p id="s178"><a class="wt-at" href="https://www.youtube.com/watch?v=sYtf84GCU2M&amp;t=178s" target="_blank" rel="noopener" data-pagefind-ignore>2:58</a>David, what&rsquo;s that? What&rsquo;s that? Perogi. Perogi. Perogi. It&rsquo;s a Polish dumpling. We got Polish dumplings. Come on. Base don&rsquo;t got no Polish dumplings. Polish empanada. Really?</p>
+            <p id="s192"><a class="wt-at" href="https://www.youtube.com/watch?v=sYtf84GCU2M&amp;t=192s" target="_blank" rel="noopener" data-pagefind-ignore>3:12</a>Polish empanada here. But we here. This is the party to be at. This is the party to be at. The vibes have been proven. Thank you, Humpty. Thank you, David. Thank you, Sharon.</p>
+            <p id="s201"><a class="wt-at" href="https://www.youtube.com/watch?v=sYtf84GCU2M&amp;t=201s" target="_blank" rel="noopener" data-pagefind-ignore>3:21</a>Sharon, back in the picture. There you go. Family picture. Oh, wait. Slide that way. WAIT, WAIT. THIS WAY. OH, WAIT. I feel like this is an episode of like in living single or something. A</p>
+            <p id="s214"><a class="wt-at" href="https://www.youtube.com/watch?v=sYtf84GCU2M&amp;t=214s" target="_blank" rel="noopener" data-pagefind-ignore>3:34</a>Let&rsquo;s go. Amazing. Let&rsquo;s go. Heck yeah. Thank you.</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+<div id="after-transcript" tabindex="-1"><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from Denver Unfiltered.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-denver">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="a-first-interview-and-advice-back-to-newark-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/UkX8veGIl58-640.jpg" srcset="../stills/UkX8veGIl58-320.jpg 320w, ../stills/UkX8veGIl58-480.jpg 480w, ../stills/UkX8veGIl58-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:15</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · ETH Denver 2024</span>
+                    <h3 class="report-title">A first interview, and advice back to Newark.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="building-a-dao-and-making-governance-a-game-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/qcTocIWf34U-640.jpg" srcset="../stills/qcTocIWf34U-320.jpg 320w, ../stills/qcTocIWf34U-480.jpg 480w, ../stills/qcTocIWf34U-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:45</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">A content coin, and making governance a game.</h3>
+                    
+                </div>
+            </a>
+            <a href="from-america-to-denver-what-brought-you-here-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/DdXcCfCc26E-640.jpg" srcset="../stills/DdXcCfCc26E-320.jpg 320w, ../stills/DdXcCfCc26E-480.jpg 480w, ../stills/DdXcCfCc26E-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:21</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · Street</span>
+                    <h3 class="report-title">A borrowed camera, and Denver block by block.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../places.html#denver">Everything filmed in Denver</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

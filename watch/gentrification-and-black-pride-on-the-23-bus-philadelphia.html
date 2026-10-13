@@ -1,0 +1,833 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="On the 23 bus in Philadelphia, Ranier, 33, from North Philadelphia, is on his way to R-Fest, the Black Pride festival, when Maceo asks what he thinks of…">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/gentrification-and-black-pride-on-the-23-bus-philadelphia">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="Gentrification and Black Pride, Bound for R-Fest | Philly">
+    <meta property="og:description" content="On the 23 bus in Philadelphia, Ranier, 33, from North Philadelphia, is on his way to R-Fest, the Black Pride festival, when Maceo asks what he thinks of…">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/gentrification-and-black-pride-on-the-23-bus-philadelphia.jpg?v=450be7608b">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Gentrification and Black Pride, on the 23 bus">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/gentrification-and-black-pride-on-the-23-bus-philadelphia.jpg?v=450be7608b">
+    <meta property="og:url" content="https://wethem.xyz/watch/gentrification-and-black-pride-on-the-23-bus-philadelphia">
+    <title>Gentrification and Black Pride, Bound for R-Fest | Philly &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/gentrification-and-black-pride-on-the-23-bus-philadelphia#video",
+  "name": "Gentrification and Black Pride, Bound for R-Fest | Philly",
+  "description": "On the 23 bus in Philadelphia, Ranier, 33, from North Philadelphia, is on his way to R-Fest, the Black Pride festival, when Maceo asks what he thinks of the city. \"It's gentrifying. It's beautiful though. Like I love my city.\" The cost is personal. \"The negative impact is that all of the kids I grew up with is now gone. I had the liberty of owning my house. I paid taxes like my mama taught me and I still got my mama house.\" A cosmetologist since 21 who says he does New York Fashion Week twice a year, he explains what R-Fest is for. \"Every June is Pride. So R-Fest is just, you know, it acknowledges the Black people a little bit more. It highlights the different people of color that's around the city that's doing big things for the Pride community.\" The block party is on 13th and Walnut in front of Woody's, and it is free: \"We love free things, right? Amen.\" He shouts out the Phirm, \"like a black gay community\" that runs events across the city, \"because it's not a lot of them.\" Asked what a reporter should cover in Philadelphia this summer, he points to the people around him. \"People are going through a lot of issues here in Philadelphia and it's not too many people trying to help. It's a lot of resources, but people don't know how to open up their phone and look up these different programs.\" Then a message for children under ten: \"Never stop, keep dreaming, believe in yourself, pat yourself on the back when you do good accomplishments and listen to your mama.\" And for his own mother: \"She taught me how to be exactly who I am.\" Language is unfiltered. The transcript below is from the original audio.",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/7V-emMWh0ig/maxresdefault.jpg"
+  ],
+  "uploadDate": "2026-04-25T23:32:06Z",
+  "embedUrl": "https://www.youtube.com/embed/7V-emMWh0ig",
+  "url": "https://wethem.xyz/watch/gentrification-and-black-pride-on-the-23-bus-philadelphia",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT10M3S",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "North Philly, and a city that is gentrifying",
+      "startOffset": 0,
+      "url": "https://wethem.xyz/watch/gentrification-and-black-pride-on-the-23-bus-philadelphia?t=0",
+      "endOffset": 41
+    },
+    {
+      "@type": "Clip",
+      "name": "His mother's house on a changed block",
+      "startOffset": 41,
+      "url": "https://wethem.xyz/watch/gentrification-and-black-pride-on-the-23-bus-philadelphia?t=41",
+      "endOffset": 89
+    },
+    {
+      "@type": "Clip",
+      "name": "What is R-Fest, Philadelphia's Black Pride?",
+      "startOffset": 89,
+      "url": "https://wethem.xyz/watch/gentrification-and-black-pride-on-the-23-bus-philadelphia?t=89",
+      "endOffset": 161
+    },
+    {
+      "@type": "Clip",
+      "name": "The block party at 13th and Walnut",
+      "startOffset": 161,
+      "url": "https://wethem.xyz/watch/gentrification-and-black-pride-on-the-23-bus-philadelphia?t=161",
+      "endOffset": 207
+    },
+    {
+      "@type": "Clip",
+      "name": "Why his favorite part is meeting someone new",
+      "startOffset": 207,
+      "url": "https://wethem.xyz/watch/gentrification-and-black-pride-on-the-23-bus-philadelphia?t=207",
+      "endOffset": 262
+    },
+    {
+      "@type": "Clip",
+      "name": "What should a reporter cover in Philly?",
+      "startOffset": 262,
+      "url": "https://wethem.xyz/watch/gentrification-and-black-pride-on-the-23-bus-philadelphia?t=262",
+      "endOffset": 344
+    },
+    {
+      "@type": "Clip",
+      "name": "Why he usually avoids the 23 bus",
+      "startOffset": 344,
+      "url": "https://wethem.xyz/watch/gentrification-and-black-pride-on-the-23-bus-philadelphia?t=344",
+      "endOffset": 403
+    },
+    {
+      "@type": "Clip",
+      "name": "How to interview people who need help",
+      "startOffset": 403,
+      "url": "https://wethem.xyz/watch/gentrification-and-black-pride-on-the-23-bus-philadelphia?t=403",
+      "endOffset": 516
+    },
+    {
+      "@type": "Clip",
+      "name": "A message to kids under ten",
+      "startOffset": 516,
+      "url": "https://wethem.xyz/watch/gentrification-and-black-pride-on-the-23-bus-philadelphia?t=516",
+      "endOffset": 556
+    },
+    {
+      "@type": "Clip",
+      "name": "A shout out to his mother",
+      "startOffset": 556,
+      "url": "https://wethem.xyz/watch/gentrification-and-black-pride-on-the-23-bus-philadelphia?t=556",
+      "endOffset": 603
+    }
+  ],
+  "creator": {
+    "@type": "Person",
+    "name": "Maceo",
+    "url": "https://wethem.xyz/people/maceo"
+  },
+  "transcript": "Ready. Boom.\nWhat's up? My name is Maceo and this is for We Them Media. What's your name? Ranier. How old are you?\nI'm 33. I'll be 34 on May 8th.\nOkay. Happy early birthday. And where are you from?\nI'm from North Philadelphia.\nOkay. And what do you think about the city?\nIt's gentrifying.\nIt's beautiful though. Like\nI love my city. I ain't gonna egg like I don't.\nWhat's your favorite part?\nIt's gentrifying. I guess my favorite part would be the home ball that's still in it. It's still the city. The negative impact is that all of the kids I grew up with is now gone. I had the liberty of owning my house. I paid taxes like my mama taught me and I still got my mama house. A lot of the people I grew up with is born. White people live in their homes. That's a negative impact in my head anyway.\nYeah, yeah, people have been displaced. I mean, yeah. Absolutely.\nOkay. And where are you headed today? I'm headed to the Black Pride Festival. It's called R-Fest. I just left work. I work at RASA Hair Salon.\nOkay. How's the hair business?\nAmazing. I've been licensed in cosmetology since I was 21. I've always worked in a salon. I've always worked for myself.\nOkay, that's cool.\nI do New York Fashion Week twice a year.\nOh, yeah? That's tough, that's tough. So you're established out here.\nI like to say that.\nThat's cool. Yeah, you should say it. Absolutely. And so what would you say about the R-Fest that happens here in Philadelphia? Where'd that come from? What do you know about that?\nWell, it's like, cause you know, every June is Pride. So R-Fest is just, you know, it acknowledges the Black people a little bit more. It highlights the different people of color that's around the city that's doing big things for the Pride community. You know, the LGBTQ++ community. The Art Fest is just like a spin-off on OutFest or a spin-off on the regular June Pride If I'm not mistaken, it was going on since 1999 and I was born in 92\nOkay, I was born in 99\nOkay, you was born in 99? Yeah, yeah\nI'm out here That's cool! And how did you first find out about it?\nProbably when I was a teenager I've been watching before for years. It's not that I'm actually going to any of the events or anything, but I hang around in the ollie. We call it the ollie, but it's the entire Gabriel. There's a bunch of ollies put together with a bunch of gay bars in it. So it's just, really it's a block party happening today. Tomorrow is an actual Warfest parade. So I'm going, it's in front of Woody's, it's on the block of 13th and Walnut.\nOkay, yeah. I've been to Woody's before. We're going to a block\nparty. I'm going to the block party, if you say it like that, because I ain't doing anything. I'm just walking up for free. It's a free festival, so that's another thing that we love. We love free things, right?\nAmen. But it takes real work to do that. So who are some of the people you would shout out who actually put in time and energy to organize? Who knows the FIRM?\nP-H-R-I-M. I believe I'm explaining that right. The FIRM is like a black gay community. It does a lot of the different events around the city. It's really a community-based program for us black people because it's not a lot of them. There's not too many things that people of color can go to for the LGBT girls anyway\nWhat's it called? What's been your favorite memory from attending these events the last several years?\nAlways meeting somebody new, you never know who you meet, you never know\nI was asking what's been your favorite event\nI guess this is happening right now unfolding right on camera Anyway, what was the question?\nOkay, I got this has been your favorite event from our fest year to year to year.\nThis is my favorite event happening right now. We\nsaid shout out to the firm. What do you feel like is a story I should be focused on covering this summer with my friends here? I'm about to go see Omar. He shoots a lot of content. I'm really trying to recruit him. So it's funny that I met you and you're like, oh, I know there's one dude you follow and it happens to be the dude I'm going to see.\nI only dance here a few times, but if I'm not mistaken, I did the holidays, will God. I think that's so cool. You never know who you know in the world, it's very small. I love networking and I love the idea of talking to me randomly and making me be on your podcast because I really didn't want to do it, but I'm glad you made me do it. And that's a good thing. Networking can get you far and you never know who you know and word of mouth will get you farther. So absolutely, I'm here for it. And one of the things you should do is maybe talk to more of the people that's going through I'm looking at my teeth like I'm looking through different issues.\nI'm not going to name issues, but people are going through a lot of issues here in Philadelphia and it's not too many people trying to help. It's a lot of resources, but people don't know how to open up their phone and look up these different programs, different buildings. There's different institutes that you can go to when you have issues. I just feel like maybe you can stop and talk to some people like this one young lady up in the front.\nI'm sucking my teeth, like I did talk to her before you got on the bus, I'm the only person actually back here who talked to her\nThe gag is when I first got on the bus, she's like oh my god I haven't seen you in so long and you look so good and I didn't know who she was right But I paid it because I'm like oh nice to see you too I don't ever get on the 23, I normally get on the XH But I wanted to go straight downtown so I was like let me get on the 23 But that's a great reason why I don't get on the 23 Because you never know who's on it And the XH is a little bit more sophisticated\nIt's now called, what is it called?\nThe 81? Something like that?\nI don't know. I haven't been on it.\nIt's called the 81.\nBut yeah. My car broke down like two months ago. I drove it across the country and it broke down in Denver. Oh, that was fun. Yeah, but this is my first time being on a bus in a couple of years. I really try not to. Omar is the reason. I said, all right, I got to go see Omar.\nI utilize Septa a lot, but I actually utilize the Indigo bikes more. That's a good incentive at the city port. and I would ride the bike to work.\nWe need more of those.\nWe need more of them farther up Germantown. Absolutely. They're not past ordinaries. Anyway, what was the last question? Maybe I should get back on task.\nIt's okay. It's pretty open-ended, right? But you were saying that something I should focus on is people who are going through stuff, right?\nYeah, maybe talk more to people that need help. Like clearly, need help.\nBut what do you think good? What good does me doing that do? What do you see is like the value? I don't want people to feel like I'm coming to... offended or used. I don't want them to feel like I'm going to use their stuff to go viral. Like, oh, he's just trying to get me in my craziness.\nI wouldn't say, you know, definitely you're always going to ask permission to record like you did with me. And if they deny it, they deny it. But you can still use that good old brain you got to maybe, what do you call it, dismantle the situation. But she definitely came back here like she wanted to be a part of the interview.\nYeah, for sure. She was like, I'm going viral today.\nTyler Perry. Maybe we could have tuned in together and help her because I feel like she wanted our attention But she was in center stage. Yeah, she just didn't say anything. She looked at me a few times, but I'm not really sure how I could have Interacted, right? Right, but because we was together and I felt like you're recording this Maybe we could have tried something new, but that's just for future reference Maybe you never know when you meet.\nYou can play, right? It's just like yeah, I appreciate that.\nYou never know I carry Mace, I carry Tazers, and my nose are going to be long, I mean I hear it. Weapons everywhere, you never know. I tackle people. You have to be prepared, stay ready, okay? Or you're going to have to get ready. And you don't want that? Never.\nOkay, okay.\nI think, um, oh, my Instagram, teddybear underscore razor blade, my business, 1500 styles, I'm from 1500 styles, um, I work at Ross and her salons owned by a white woman, she does locks, always on her back, she's amazing.\nAny message for children under the age of 10 years old in Philadelphia?\nNever stop, keep dreaming, believe in yourself, pat yourself on the back when you do good accomplishments and listen to your mama and give your daddy a chance, if he's worth it, a lot of these daddies in Philly ain't shit and mamas rule the world, listen to your mother's fucking mother, alright that was it,\nwhat do you feel like fathers could be doing better?\nI'm not going to answer that question, that question I refuse Because I'll be on this bus for another hour talking about some trashy things Anyway,\nokay, well thank you for letting me\nMother's rule\nOkay, what are some things you'd acknowledge your mom for if you were to give her a little shout out\nShe taught me how to be exactly who I am She gave me the mouth that I got, she gave me the fashion sense that I have And she gave me the brain that operates everything else So yeah, I don't know what else to say about that My mama is my goal, okay Hell\nyeah. Shout out to her.\nShout out to our chef.\nShout out to our chef. Boom. We got 20 seconds there. 10 minutes. Are we going 10 minutes?\nWhat was your name again? Maceo. Maceo. Shout out to Maceo for making me do this because I was like, no. And show me your other videos first and let's see. But I think it came out kind of cool. We got some raw footage, which I really, really love actually. I can't wait to repost it on my Instagram. Hell\nyeah. Let's go.",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Philadelphia",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "url": "https://wethem.xyz/places#philadelphia"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Philadelphia",
+    "url": "https://wethem.xyz/portfolio#p-philadelphia"
+  },
+  "keywords": [
+    "How has the place you live changed in your lifetime?",
+    "What would you say to someone under ten?"
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Philadelphia",
+      "item": "https://wethem.xyz/portfolio#p-philadelphia"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Gentrification and Black Pride, on the 23 bus",
+      "item": "https://wethem.xyz/watch/gentrification-and-black-pride-on-the-23-bus-philadelphia"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place], who[data-pf-who]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2026-04-25" data-pf-vid="7V-emMWh0ig" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;10:03&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="Philadelphia" data-pf-country="United States" data-pf-project="Philadelphia" data-pf-who="Maceo">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-philadelphia">Philadelphia</a></li>
+            <li aria-current="page">Gentrification and Black Pride, on the 23 bus</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">Gentrification and Black Pride, on the 23 bus.</h1>
+
+    <p class="wt-byline"><strong>Ranier</strong> &middot; Reported by <strong><a href="../people/maceo.html">Maceo</a></strong> &middot; Philadelphia &middot; 10 min</p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="7V-emMWh0ig" live postersrcset="../stills/7V-emMWh0ig-320.jpg 320w, ../stills/7V-emMWh0ig-480.jpg 480w, ../stills/7V-emMWh0ig-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/7V-emMWh0ig?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="Gentrification and Black Pride, on the 23 bus, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+    <p class="wt-answers">Answers <a href="../question/how-has-your-city-changed.html">How has the place you live changed in your lifetime?</a> and <a href="../question/what-would-you-say-to-someone-under-ten.html">What would you say to someone under ten?</a> &middot; see how other cities answered &rarr;</p>
+    <div class="wt-prose">
+            <p>On the 23 bus in Philadelphia, Ranier, 33, from North Philadelphia, is on his way to R-Fest, the Black Pride festival, when Maceo asks what he thinks of the city. &ldquo;It&rsquo;s gentrifying. It&rsquo;s beautiful though. Like I love my city.&rdquo; The cost is personal. &ldquo;The negative impact is that all of the kids I grew up with is now gone. I had the liberty of owning my house. I paid taxes like my mama taught me and I still got my mama house.&rdquo;</p>
+            <p>A cosmetologist since 21 who says he does New York Fashion Week twice a year, he explains what R-Fest is for. &ldquo;Every June is Pride. So R-Fest is just, you know, it acknowledges the Black people a little bit more. It highlights the different people of color that&rsquo;s around the city that&rsquo;s doing big things for the Pride community.&rdquo; The block party is on 13th and Walnut in front of Woody&rsquo;s, and it is free: &ldquo;We love free things, right? Amen.&rdquo; He shouts out the Phirm, &ldquo;like a black gay community&rdquo; that runs events across the city, &ldquo;because it&rsquo;s not a lot of them.&rdquo;</p>
+            <p>Asked what a reporter should cover in Philadelphia this summer, he points to the people around him. &ldquo;People are going through a lot of issues here in Philadelphia and it&rsquo;s not too many people trying to help. It&rsquo;s a lot of resources, but people don&rsquo;t know how to open up their phone and look up these different programs.&rdquo; Then a message for children under ten: &ldquo;Never stop, keep dreaming, believe in yourself, pat yourself on the back when you do good accomplishments and listen to your mama.&rdquo; And for his own mother: &ldquo;She taught me how to be exactly who I am.&rdquo;</p>
+            <p>Language is unfiltered. The transcript below is from the original audio.</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../question/how-has-your-city-changed.html">Every answer to “How has the place you live changed in your lifetime?”</a></p>
+        <p class="wt-rail-link"><a href="../question/what-would-you-say-to-someone-under-ten.html">Every answer to “What would you say to someone under ten?”</a></p>
+        <p class="wt-rail-link"><a href="../places.html#philadelphia">Everything filmed in Philadelphia</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="a-question-for-the-city-north-philly-philadelphia.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/c71Qh669IN0-640.jpg" srcset="../stills/c71Qh669IN0-320.jpg 320w, ../stills/c71Qh669IN0-480.jpg 480w, ../stills/c71Qh669IN0-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>3:16</span></span><span>Two women, a message, and a question back.</span></a>
+        <a class="wt-rail-card" href="barber-law-and-two-barbers-in-germantown.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/3VjwHZa_AYI-640.jpg" srcset="../stills/3VjwHZa_AYI-320.jpg 320w, ../stills/3VjwHZa_AYI-480.jpg 480w, ../stills/3VjwHZa_AYI-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>28:37</span></span><span>The Philly barbershop interview.</span></a>
+        <a class="wt-rail-card" href="the-last-salon-of-the-season-cyrano-philadelphia.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/yS_XrX81ya4-640.jpg" srcset="../stills/yS_XrX81ya4-320.jpg 320w, ../stills/yS_XrX81ya4-480.jpg 480w, ../stills/yS_XrX81ya4-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>4:32</span></span><span>The last salon of the season: Cyrano, 18.</span></a>
+        <a class="wt-rail-card" href="why-a-job-stopped-adding-up-germantown.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/Cyv1UwE_K3w-640.jpg" srcset="../stills/Cyv1UwE_K3w-320.jpg 320w, ../stills/Cyv1UwE_K3w-480.jpg 480w, ../stills/Cyv1UwE_K3w-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>21:24</span></span><span>“The numbers don’t add up to work for nobody.” Mr. P on Haines Street.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c0"><a class="wt-t" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-s">North Philly, and a city that is gentrifying</span></li>
+                <li class="wt-line" id="c41"><a class="wt-t" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=41s" target="_blank" rel="noopener" data-pagefind-ignore>0:41</a><span class="wt-s">His mother&#x27;s house on a changed block</span></li>
+                <li class="wt-line" id="c89"><a class="wt-t" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=89s" target="_blank" rel="noopener" data-pagefind-ignore>1:29</a><span class="wt-s">What is R-Fest, Philadelphia&#x27;s Black Pride?</span></li>
+                <li class="wt-line" id="c161"><a class="wt-t" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=161s" target="_blank" rel="noopener" data-pagefind-ignore>2:41</a><span class="wt-s">The block party at 13th and Walnut</span></li>
+                <li class="wt-line" id="c207"><a class="wt-t" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=207s" target="_blank" rel="noopener" data-pagefind-ignore>3:27</a><span class="wt-s">Why his favorite part is meeting someone new</span></li>
+                <li class="wt-line" id="c262"><a class="wt-t" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=262s" target="_blank" rel="noopener" data-pagefind-ignore>4:22</a><span class="wt-s">What should a reporter cover in Philly?</span></li>
+                <li class="wt-line" id="c344"><a class="wt-t" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=344s" target="_blank" rel="noopener" data-pagefind-ignore>5:44</a><span class="wt-s">Why he usually avoids the 23 bus</span></li>
+                <li class="wt-line" id="c403"><a class="wt-t" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=403s" target="_blank" rel="noopener" data-pagefind-ignore>6:43</a><span class="wt-s">How to interview people who need help</span></li>
+                <li class="wt-line" id="c516"><a class="wt-t" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=516s" target="_blank" rel="noopener" data-pagefind-ignore>8:36</a><span class="wt-s">A message to kids under ten</span></li>
+                <li class="wt-line" id="c556"><a class="wt-t" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=556s" target="_blank" rel="noopener" data-pagefind-ignore>9:16</a><span class="wt-s">A shout out to his mother</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Who speaks, by their own introduction on the tape: <a href="../guests.html#g-maceo" data-pagefind-filter="person">Maceo</a> at <a class="wt-at" data-seek="1" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=1s" target="_blank" rel="noopener" data-pagefind-ignore>0:01</a>. Transcribed from the original audio and corrected for names. Speaker letters mark turns, not names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Ready. Boom.</p>
+            <p id="s0-2"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>What&rsquo;s up? My name is Maceo and this is for We Them Media. What&rsquo;s your name? Ranier. How old are you?</p>
+            <p id="s5"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=5s" target="_blank" rel="noopener" data-pagefind-ignore>0:05</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I&rsquo;m 33. I&rsquo;ll be 34 on May 8th.</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s8"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=8s" target="_blank" rel="noopener" data-pagefind-ignore>0:08</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>Okay. Happy early birthday. And where are you from?</p>
+            <p id="s10"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=10s" target="_blank" rel="noopener" data-pagefind-ignore>0:10</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I&rsquo;m from North Philadelphia.</p>
+            <p id="s13"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=13s" target="_blank" rel="noopener" data-pagefind-ignore>0:13</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>Okay. And what do you think about the city?</p>
+            <p id="s14"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=14s" target="_blank" rel="noopener" data-pagefind-ignore>0:14</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>It&rsquo;s gentrifying.</p>
+            <p id="s17"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=17s" target="_blank" rel="noopener" data-pagefind-ignore>0:17</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>It&rsquo;s beautiful though. Like</p>
+            <p id="s18"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=18s" target="_blank" rel="noopener" data-pagefind-ignore>0:18</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I love my city. I ain&rsquo;t gonna egg like I don&rsquo;t.</p>
+            <p id="s20"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=20s" target="_blank" rel="noopener" data-pagefind-ignore>0:20</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>What&rsquo;s your favorite part?</p>
+            <p id="s23"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=23s" target="_blank" rel="noopener" data-pagefind-ignore>0:23</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>It&rsquo;s gentrifying. I guess my favorite part would be the home ball that&rsquo;s still in it. It&rsquo;s still the city. The negative impact is that all of the kids I grew up with is now gone. I had the liberty of owning my house. I paid taxes like my mama taught me and I still got my mama house. A lot of the people I grew up with is born. White people live in their homes. That&rsquo;s a negative impact in my head anyway.</p>
+            <p id="s59"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=59s" target="_blank" rel="noopener" data-pagefind-ignore>0:59</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>Yeah, yeah, people have been displaced. I mean, yeah. Absolutely.</p>
+            <p id="s61"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=61s" target="_blank" rel="noopener" data-pagefind-ignore>1:01</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Okay. And where are you headed today? I&rsquo;m headed to the Black Pride Festival. It&rsquo;s called R-Fest. I just left work. I work at RASA Hair Salon.</p>
+            <p id="s70"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=70s" target="_blank" rel="noopener" data-pagefind-ignore>1:10</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>Okay. How&rsquo;s the hair business?</p>
+            <p id="s73"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=73s" target="_blank" rel="noopener" data-pagefind-ignore>1:13</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Amazing. I&rsquo;ve been licensed in cosmetology since I was 21. I&rsquo;ve always worked in a salon. I&rsquo;ve always worked for myself.</p>
+            <p id="s81"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=81s" target="_blank" rel="noopener" data-pagefind-ignore>1:21</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>Okay, that&rsquo;s cool.</p>
+            <p id="s82"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=82s" target="_blank" rel="noopener" data-pagefind-ignore>1:22</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I do New York Fashion Week twice a year.</p>
+            <p id="s84"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=84s" target="_blank" rel="noopener" data-pagefind-ignore>1:24</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>Oh, yeah? That&rsquo;s tough, that&rsquo;s tough. So you&rsquo;re established out here.</p>
+            <p id="s87"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=87s" target="_blank" rel="noopener" data-pagefind-ignore>1:27</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I like to say that.</p>
+            <p id="s89"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=89s" target="_blank" rel="noopener" data-pagefind-ignore>1:29</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>That&rsquo;s cool. Yeah, you should say it. Absolutely. And so what would you say about the R-Fest that happens here in Philadelphia? Where&rsquo;d that come from? What do you know about that?</p>
+            <p id="s98"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=98s" target="_blank" rel="noopener" data-pagefind-ignore>1:38</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Well, it&rsquo;s like, cause you know, every June is Pride. So R-Fest is just, you know, it acknowledges the Black people a little bit more. It highlights the different people of color that&rsquo;s around the city that&rsquo;s doing big things for the Pride community. You know, the LGBTQ++ community. The Art Fest is just like a spin-off on OutFest or a spin-off on the regular June Pride If I&rsquo;m not mistaken, it was going on since 1999 and I was born in 92</p>
+            <p id="s132"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=132s" target="_blank" rel="noopener" data-pagefind-ignore>2:12</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>Okay, I was born in 99</p>
+            <p id="s134"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=134s" target="_blank" rel="noopener" data-pagefind-ignore>2:14</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Okay, you was born in 99? Yeah, yeah</p>
+            <p id="s138"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=138s" target="_blank" rel="noopener" data-pagefind-ignore>2:18</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>I&rsquo;m out here That&rsquo;s cool! And how did you first find out about it?</p>
+            <p id="s142"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=142s" target="_blank" rel="noopener" data-pagefind-ignore>2:22</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Probably when I was a teenager I&rsquo;ve been watching before for years. It&rsquo;s not that I&rsquo;m actually going to any of the events or anything, but I hang around in the ollie. We call it the ollie, but it&rsquo;s the entire Gabriel. There&rsquo;s a bunch of ollies put together with a bunch of gay bars in it. So it&rsquo;s just, really it&rsquo;s a block party happening today. Tomorrow is an actual Warfest parade. So I&rsquo;m going, it&rsquo;s in front of Woody&rsquo;s, it&rsquo;s on the block of 13th and Walnut.</p>
+            <p id="s164"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=164s" target="_blank" rel="noopener" data-pagefind-ignore>2:44</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>Okay, yeah. I&rsquo;ve been to Woody&rsquo;s before. We&rsquo;re going to a block</p>
+            <p id="s166"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=166s" target="_blank" rel="noopener" data-pagefind-ignore>2:46</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>party. I&rsquo;m going to the block party, if you say it like that, because I ain&rsquo;t doing anything. I&rsquo;m just walking up for free. It&rsquo;s a free festival, so that&rsquo;s another thing that we love. We love free things, right?</p>
+            <p id="s178"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=178s" target="_blank" rel="noopener" data-pagefind-ignore>2:58</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>Amen. But it takes real work to do that. So who are some of the people you would shout out who actually put in time and energy to organize? Who knows the FIRM?</p>
+            <p id="s185"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=185s" target="_blank" rel="noopener" data-pagefind-ignore>3:05</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>P-H-R-I-M. I believe I&rsquo;m explaining that right. The FIRM is like a black gay community. It does a lot of the different events around the city. It&rsquo;s really a community-based program for us black people because it&rsquo;s not a lot of them. There&rsquo;s not too many things that people of color can go to for the LGBT girls anyway</p>
+            <p id="s210"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=210s" target="_blank" rel="noopener" data-pagefind-ignore>3:30</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>What&rsquo;s it called? What&rsquo;s been your favorite memory from attending these events the last several years?</p>
+            <p id="s216"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=216s" target="_blank" rel="noopener" data-pagefind-ignore>3:36</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Always meeting somebody new, you never know who you meet, you never know</p>
+            <p id="s240"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=240s" target="_blank" rel="noopener" data-pagefind-ignore>4:00</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>I was asking what&rsquo;s been your favorite event</p>
+            <p id="s243"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=243s" target="_blank" rel="noopener" data-pagefind-ignore>4:03</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I guess this is happening right now unfolding right on camera Anyway, what was the question?</p>
+            <p id="s264"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=264s" target="_blank" rel="noopener" data-pagefind-ignore>4:24</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>Okay, I got this has been your favorite event from our fest year to year to year.</p>
+            <p id="s267"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=267s" target="_blank" rel="noopener" data-pagefind-ignore>4:27</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>This is my favorite event happening right now. We</p>
+            <p id="s270"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=270s" target="_blank" rel="noopener" data-pagefind-ignore>4:30</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>said shout out to the firm. What do you feel like is a story I should be focused on covering this summer with my friends here? I&rsquo;m about to go see Omar. He shoots a lot of content. I&rsquo;m really trying to recruit him. So it&rsquo;s funny that I met you and you&rsquo;re like, oh, I know there&rsquo;s one dude you follow and it happens to be the dude I&rsquo;m going to see.</p>
+            <p id="s285"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=285s" target="_blank" rel="noopener" data-pagefind-ignore>4:45</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I only dance here a few times, but if I&rsquo;m not mistaken, I did the holidays, will God. I think that&rsquo;s so cool. You never know who you know in the world, it&rsquo;s very small. I love networking and I love the idea of talking to me randomly and making me be on your podcast because I really didn&rsquo;t want to do it, but I&rsquo;m glad you made me do it. And that&rsquo;s a good thing. Networking can get you far and you never know who you know and word of mouth will get you farther. So absolutely, I&rsquo;m here for it. And one of the things you should do is maybe talk to more of the people that&rsquo;s going through I&rsquo;m looking at my teeth like I&rsquo;m looking through different issues.</p>
+            <p id="s285-2"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=285s" target="_blank" rel="noopener" data-pagefind-ignore>4:45</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I&rsquo;m not going to name issues, but people are going through a lot of issues here in Philadelphia and it&rsquo;s not too many people trying to help. It&rsquo;s a lot of resources, but people don&rsquo;t know how to open up their phone and look up these different programs, different buildings. There&rsquo;s different institutes that you can go to when you have issues. I just feel like maybe you can stop and talk to some people like this one young lady up in the front.</p>
+            <p id="s344"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=344s" target="_blank" rel="noopener" data-pagefind-ignore>5:44</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>I&rsquo;m sucking my teeth, like I did talk to her before you got on the bus, I&rsquo;m the only person actually back here who talked to her</p>
+            <p id="s349"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=349s" target="_blank" rel="noopener" data-pagefind-ignore>5:49</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>The gag is when I first got on the bus, she&rsquo;s like oh my god I haven&rsquo;t seen you in so long and you look so good and I didn&rsquo;t know who she was right But I paid it because I&rsquo;m like oh nice to see you too I don&rsquo;t ever get on the 23, I normally get on the XH But I wanted to go straight downtown so I was like let me get on the 23 But that&rsquo;s a great reason why I don&rsquo;t get on the 23 Because you never know who&rsquo;s on it And the XH is a little bit more sophisticated</p>
+            <p id="s373"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=373s" target="_blank" rel="noopener" data-pagefind-ignore>6:13</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>It&rsquo;s now called, what is it called?</p>
+            <p id="s373-2"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=373s" target="_blank" rel="noopener" data-pagefind-ignore>6:13</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>The 81? Something like that?</p>
+            <p id="s377"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=377s" target="_blank" rel="noopener" data-pagefind-ignore>6:17</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>I don&rsquo;t know. I haven&rsquo;t been on it.</p>
+            <p id="s379"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=379s" target="_blank" rel="noopener" data-pagefind-ignore>6:19</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>It&rsquo;s called the 81.</p>
+            <p id="s381"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=381s" target="_blank" rel="noopener" data-pagefind-ignore>6:21</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>But yeah. My car broke down like two months ago. I drove it across the country and it broke down in Denver. Oh, that was fun. Yeah, but this is my first time being on a bus in a couple of years. I really try not to. Omar is the reason. I said, all right, I got to go see Omar.</p>
+            <p id="s395"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=395s" target="_blank" rel="noopener" data-pagefind-ignore>6:35</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I utilize Septa a lot, but I actually utilize the Indigo bikes more. That&rsquo;s a good incentive at the city port. and I would ride the bike to work.</p>
+            <p id="s405"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=405s" target="_blank" rel="noopener" data-pagefind-ignore>6:45</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>We need more of those.</p>
+            <p id="s406"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=406s" target="_blank" rel="noopener" data-pagefind-ignore>6:46</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>We need more of them farther up <a class="wt-gloss" href="../glossary.html#germantown">Germantown</a>. Absolutely. They&rsquo;re not past ordinaries. Anyway, what was the last question? Maybe I should get back on task.</p>
+            <p id="s415"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=415s" target="_blank" rel="noopener" data-pagefind-ignore>6:55</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>It&rsquo;s okay. It&rsquo;s pretty open-ended, right? But you were saying that something I should focus on is people who are going through stuff, right?</p>
+            <p id="s420"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=420s" target="_blank" rel="noopener" data-pagefind-ignore>7:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, maybe talk more to people that need help. Like clearly, need help.</p>
+            <p id="s426"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=426s" target="_blank" rel="noopener" data-pagefind-ignore>7:06</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>But what do you think good? What good does me doing that do? What do you see is like the value? I don&rsquo;t want people to feel like I&rsquo;m coming to... offended or used. I don&rsquo;t want them to feel like I&rsquo;m going to use their stuff to go viral. Like, oh, he&rsquo;s just trying to get me in my craziness.</p>
+            <p id="s438"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=438s" target="_blank" rel="noopener" data-pagefind-ignore>7:18</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I wouldn&rsquo;t say, you know, definitely you&rsquo;re always going to ask permission to record like you did with me. And if they deny it, they deny it. But you can still use that good old brain you got to maybe, what do you call it, dismantle the situation. But she definitely came back here like she wanted to be a part of the interview.</p>
+            <p id="s454"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=454s" target="_blank" rel="noopener" data-pagefind-ignore>7:34</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>Yeah, for sure. She was like, I&rsquo;m going viral today.</p>
+            <p id="s457"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=457s" target="_blank" rel="noopener" data-pagefind-ignore>7:37</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Tyler Perry. Maybe we could have tuned in together and help her because I feel like she wanted our attention But she was in center stage. Yeah, she just didn&rsquo;t say anything. She looked at me a few times, but I&rsquo;m not really sure how I could have Interacted, right? Right, but because we was together and I felt like you&rsquo;re recording this Maybe we could have tried something new, but that&rsquo;s just for future reference Maybe you never know when you meet.</p>
+            <p id="s481"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=481s" target="_blank" rel="noopener" data-pagefind-ignore>8:01</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>You can play, right? It&rsquo;s just like yeah, I appreciate that.</p>
+            <p id="s484"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=484s" target="_blank" rel="noopener" data-pagefind-ignore>8:04</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>You never know I carry Mace, I carry Tazers, and my nose are going to be long, I mean I hear it. Weapons everywhere, you never know. I tackle people. You have to be prepared, stay ready, okay? Or you&rsquo;re going to have to get ready. And you don&rsquo;t want that? Never.</p>
+            <p id="s501"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=501s" target="_blank" rel="noopener" data-pagefind-ignore>8:21</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>Okay, okay.</p>
+            <p id="s503"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=503s" target="_blank" rel="noopener" data-pagefind-ignore>8:23</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I think, um, oh, my Instagram, teddybear underscore razor blade, my business, 1500 styles, I&rsquo;m from 1500 styles, um, I work at Ross and her salons owned by a white woman, she does locks, always on her back, she&rsquo;s amazing.</p>
+            <p id="s516"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=516s" target="_blank" rel="noopener" data-pagefind-ignore>8:36</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>Any message for children under the age of 10 years old in Philadelphia?</p>
+            <p id="s519"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=519s" target="_blank" rel="noopener" data-pagefind-ignore>8:39</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Never stop, keep dreaming, believe in yourself, pat yourself on the back when you do good accomplishments and listen to your mama and give your daddy a chance, if he&rsquo;s worth it, a lot of these daddies in Philly ain&rsquo;t shit and mamas rule the world, listen to your mother&rsquo;s fucking mother, alright that was it,</p>
+            <p id="s541"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=541s" target="_blank" rel="noopener" data-pagefind-ignore>9:01</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>what do you feel like fathers could be doing better?</p>
+            <p id="s544"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=544s" target="_blank" rel="noopener" data-pagefind-ignore>9:04</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I&rsquo;m not going to answer that question, that question I refuse Because I&rsquo;ll be on this bus for another hour talking about some trashy things Anyway,</p>
+            <p id="s554"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=554s" target="_blank" rel="noopener" data-pagefind-ignore>9:14</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>okay, well thank you for letting me</p>
+            <p id="s556"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=556s" target="_blank" rel="noopener" data-pagefind-ignore>9:16</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Mother&rsquo;s rule</p>
+            <p id="s558"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=558s" target="_blank" rel="noopener" data-pagefind-ignore>9:18</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>Okay, what are some things you&rsquo;d acknowledge your mom for if you were to give her a little shout out</p>
+            <p id="s561"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=561s" target="_blank" rel="noopener" data-pagefind-ignore>9:21</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>She taught me how to be exactly who I am She gave me the mouth that I got, she gave me the fashion sense that I have And she gave me the brain that operates everything else So yeah, I don&rsquo;t know what else to say about that My mama is my goal, okay Hell</p>
+            <p id="s575"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=575s" target="_blank" rel="noopener" data-pagefind-ignore>9:35</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>yeah. Shout out to her.</p>
+            <p id="s577"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=577s" target="_blank" rel="noopener" data-pagefind-ignore>9:37</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Shout out to our chef.</p>
+            <p id="s578"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=578s" target="_blank" rel="noopener" data-pagefind-ignore>9:38</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>Shout out to our chef. Boom. We got 20 seconds there. 10 minutes. Are we going 10 minutes?</p>
+            <p id="s583"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=583s" target="_blank" rel="noopener" data-pagefind-ignore>9:43</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>What was your name again? Maceo. Maceo. Shout out to Maceo for making me do this because I was like, no. And show me your other videos first and let&rsquo;s see. But I think it came out kind of cool. We got some raw footage, which I really, really love actually. I can&rsquo;t wait to repost it on my Instagram. Hell</p>
+            <p id="s601"><a class="wt-at" href="https://www.youtube.com/watch?v=7V-emMWh0ig&amp;t=601s" target="_blank" rel="noopener" data-pagefind-ignore>10:01</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 0:01" data-pagefind-ignore>Maceo</span>yeah. Let&rsquo;s go.</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+<div id="after-transcript" tabindex="-1"><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from Philadelphia.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-philadelphia">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="why-a-job-stopped-adding-up-germantown.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/Cyv1UwE_K3w-640.jpg" srcset="../stills/Cyv1UwE_K3w-320.jpg 320w, ../stills/Cyv1UwE_K3w-480.jpg 480w, ../stills/Cyv1UwE_K3w-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>21:24</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Selected work · Philadelphia · 2026</span>
+                    <h3 class="report-title">“The numbers don’t add up to work for nobody.” Mr. P on Haines Street.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="what-we-the-people-looks-like-germantown-philadelphia.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/p3Oq_LZuOmE-640.jpg" srcset="../stills/p3Oq_LZuOmE-320.jpg 320w, ../stills/p3Oq_LZuOmE-480.jpg 480w, ../stills/p3Oq_LZuOmE-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>8:06</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Philadelphia · Germantown</span>
+                    <h3 class="report-title">Neighbors organizing music and speakers in Germantown.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="what-do-you-think-about-the-usa-germantown-philadelphia.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/2xGaR6sXFNE-640.jpg" srcset="../stills/2xGaR6sXFNE-320.jpg 320w, ../stills/2xGaR6sXFNE-480.jpg 480w, ../stills/2xGaR6sXFNE-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>5:41</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Philadelphia · Germantown</span>
+                    <h3 class="report-title">The USA, the city, and a cleared record.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../question/how-has-your-city-changed.html">Every answer to “How has the place you live changed in your lifetime?”</a> &middot; <a href="../question/what-would-you-say-to-someone-under-ten.html">Every answer to “What would you say to someone under ten?”</a> &middot; <a href="../places.html#philadelphia">Everything filmed in Philadelphia</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

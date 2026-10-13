@@ -1,0 +1,809 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Is Bitcoin just Wall Street now?">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/the-group-photo-and-what-came-after">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="Is Bitcoin Just Wall Street Now? Pizza Day Photo | Philly">
+    <meta property="og:description" content="Is Bitcoin just Wall Street now?">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/the-group-photo-and-what-came-after.jpg?v=4e820ee84c">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="The group photo, and the real conversations that started after it">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/the-group-photo-and-what-came-after.jpg?v=4e820ee84c">
+    <meta property="og:url" content="https://wethem.xyz/watch/the-group-photo-and-what-came-after">
+    <title>Is Bitcoin Just Wall Street Now? Pizza Day Photo | Philly &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/the-group-photo-and-what-came-after#video",
+  "name": "Is Bitcoin Just Wall Street Now? Pizza Day Photo | Philly",
+  "description": "Is Bitcoin just Wall Street now? Asked at the Bitcoin Pizza Day party in Philadelphia, Jake says it is: \"That's debatable. Bitcoin is just part of Wall Street at this point.\" If everything collapses, he says, it gets wrecked exactly as much as the thing it was supposed to be an alternative to. He first heard of Bitcoin in the Silk Road days: \"This is for drugs and terrorists. This is not going to be a valuable thing anyone's going to care about beyond that.\" Bitcoin or pizza boxes? \"Bitcoin has plateaued. The pizza boxes are nothing right now. We're at the bottom.\" The man who keeps the global party running says: \"I am just facilitating it. I'm out there changing the tyres on it. When somebody has a dispute, I am talking to them.\" His background is a web series in South Philly: \"If you want to learn how to organise people to do something, go make a film.\" There is also a trivia giveaway nobody can win and the group photo. Philadelphia, May 2026.",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/SA_ZnjyI3Kg/maxresdefault.jpg"
+  ],
+  "uploadDate": "2026-05-23T04:19:53Z",
+  "embedUrl": "https://www.youtube.com/embed/SA_ZnjyI3Kg",
+  "url": "https://wethem.xyz/watch/the-group-photo-and-what-came-after",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT18M11S",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "Getting the last boxes down the stairs",
+      "startOffset": 110,
+      "url": "https://wethem.xyz/watch/the-group-photo-and-what-came-after?t=110",
+      "endOffset": 267
+    },
+    {
+      "@type": "Clip",
+      "name": "The Bitcoin Pizza Day quiz",
+      "startOffset": 267,
+      "url": "https://wethem.xyz/watch/the-group-photo-and-what-came-after?t=267",
+      "endOffset": 312
+    },
+    {
+      "@type": "Clip",
+      "name": "Nobody knows the dog’s actual name",
+      "startOffset": 312,
+      "url": "https://wethem.xyz/watch/the-group-photo-and-what-came-after?t=312",
+      "endOffset": 441
+    },
+    {
+      "@type": "Clip",
+      "name": "The group photo",
+      "startOffset": 441,
+      "url": "https://wethem.xyz/watch/the-group-photo-and-what-came-after?t=441",
+      "endOffset": 567
+    },
+    {
+      "@type": "Clip",
+      "name": "Locked out of Clubhouse for not having an iPhone",
+      "startOffset": 567,
+      "url": "https://wethem.xyz/watch/the-group-photo-and-what-came-after?t=567",
+      "endOffset": 637
+    },
+    {
+      "@type": "Clip",
+      "name": "A roommate up sixty thousand on Doodles",
+      "startOffset": 637,
+      "url": "https://wethem.xyz/watch/the-group-photo-and-what-came-after?t=637",
+      "endOffset": 669
+    },
+    {
+      "@type": "Clip",
+      "name": "Hearing about Bitcoin in the Silk Road days",
+      "startOffset": 669,
+      "url": "https://wethem.xyz/watch/the-group-photo-and-what-came-after?t=669",
+      "endOffset": 717
+    },
+    {
+      "@type": "Clip",
+      "name": "“Bitcoin is just part of Wall Street at this point”",
+      "startOffset": 717,
+      "url": "https://wethem.xyz/watch/the-group-photo-and-what-came-after?t=717",
+      "endOffset": 765
+    },
+    {
+      "@type": "Clip",
+      "name": "Bitcoin or pizza boxes?",
+      "startOffset": 765,
+      "url": "https://wethem.xyz/watch/the-group-photo-and-what-came-after?t=765",
+      "endOffset": 926
+    },
+    {
+      "@type": "Clip",
+      "name": "Why this reaches people a conference does not",
+      "startOffset": 926,
+      "url": "https://wethem.xyz/watch/the-group-photo-and-what-came-after?t=926",
+      "endOffset": 961
+    },
+    {
+      "@type": "Clip",
+      "name": "“I am just facilitating it”",
+      "startOffset": 961,
+      "url": "https://wethem.xyz/watch/the-group-photo-and-what-came-after?t=961",
+      "endOffset": 1022
+    },
+    {
+      "@type": "Clip",
+      "name": "From a South Philly web series to a global party",
+      "startOffset": 1022,
+      "url": "https://wethem.xyz/watch/the-group-photo-and-what-came-after?t=1022",
+      "endOffset": 1067
+    },
+    {
+      "@type": "Clip",
+      "name": "“Go make a film”",
+      "startOffset": 1067,
+      "url": "https://wethem.xyz/watch/the-group-photo-and-what-came-after?t=1067",
+      "endOffset": 1091
+    }
+  ],
+  "creator": {
+    "@type": "Person",
+    "name": "Maceo",
+    "url": "https://wethem.xyz/people/maceo"
+  },
+  "transcript": "Enjoy that pizza. Her leaving with a box of pepperoni did kind of hurt me. I was going to eat another piece or two of that one. Yeah. Alright, let's go. It's okay. Take your time. Yeah, you're doing great. Carol's on a roll. They're exempt. They're exempt. And you know. Hello little ladies. How back? How back. I think that's the way to do it. You're welcome to use me as a steady if you'd like to. Okay. I said you're welcome to use me as a steady if you'd like to. Hello. We're gonna have back. Everybody home This If you go out and get it in the air Let's go outside Let's go outside Yes, I hope you can try this Alright, let's go outside Let's go outside Teamwork makes the dream work We just put this back outside.\nYeah. Okay. All right. Let's uh, we gotta take this outside. Somebody help. All right, Justin. Get in there. Get in there. Get the top. Wow. Come on. Okay. All right. Okay. All right. Can you take the rest? It's teamwork. It's teamwork. That's a risky business, sir. It's air time. Go ahead. Yeah, go ahead. Go ahead. Sorry, we need the bottom. Jeffrey, you guys? I can't see it. Barman, don't let me fall down. Can you take this? Don't let me fall down the stairs. That's right. Help her out. You got steps. Aw, look at that. They're so nice. I think we all go on that side, we take it from you.\nWhat's up man? What's going on? Happy pizza day. Yeah, happy pizza day to you too. How's your pizza day been? Great. I had a lot of pizza. Okay. I've been doing a good amount of videos. I didn't get the pizza that I wanted. But, you know, it's been a good one So, my brother says My brother knows him, his wine doesn't suit He has his wine doesn't suit For Sam's own So, back in the day, he used to be a What's up, man? Good to see you It used to be Hello, hello This looks like an exit to me We're outside You're going to lock us all out?\nThe Trojan horse Oh, let's go. All right, Maria's our photographer. Okay, pass out those signs. While we're passing out the signs and getting ready, you know it's Bitcoin Pizzaday. Everyone knows that story, right? Put your hand up if you don't know Bitcoin Pizzaday's story. Kinda know? Okay, it's like a billion dollars today for two pizzas. Pilot John's. We threw parties in 400 cities today across like 100 countries. There was a 24-hour live stream. I have a couple things I want to give away Okay, who knows the actual name of the dog That is in the meme The actual name That's the breed, what's the name?\nIt's the breed, what's the name of the dog? Shibuki No, nobody knows. Nobody knows. Nobody knows. Nobody knows. We called it. All right. Hurry up. You're losing everyone. You're losing everyone. Okay. Who said Chiba first? All right. We're not going to do the throws. Okay. Put it on top of the top. We should put it on top of the top. We should put it on top of the top. This one goes to, okay, what is the guy's name who bought the two pizzas? Laszlo had a chance What is the guy's name who Laszlo gave the ten... Okay, okay, what kind of pizzas did he get?\nPapa John's! Domino's. Okay, all right, we'll take the Papa John's. I have a couple more prizes. Oh, a man of many prizes. This lighting is so horrid. Wait, what do we come out in the dark for? We should go like 10 feet that way. What's the song of this pin? We can't even see it. Your lighting is terrible. Nyon cat. It's a rainbow cat. How's the song, how's the song go? How's the song, how's the song go? Okay, I think you got it. I heard that. Okay, okay. It's na-na-na-na-na-na-na-na-na-na-na-na-na-na. You know? Okay. I think they're just, it's okay. All right, I have one more of those.\nI'll let you live. Okay, what is the name of the guy we can't see that in cat? Oh It is Chris actually Nyan cat All right all right we say cheese all right we don't say happy pizza day no we say cheese oh and let's do a video we're gonna say stand with crypto oh let's go birds i like that let's go can we say happy pizza day can we say happy pizza day That's right, that's right, that's right Let's go, one more time Three, two, one Thank you I like that, hype them up, I like that Call them out, you can't live tonight Staying with crypto But you know, I respect that you want to do the sponsor justice I can't, I can't, I can't fault you It's like, would not even go one pizza day?\nI said, not on my watch I like that, we're doing my YouTube justice We're doing my YouTube justice for sure It's good Thank you I feel pretty excited Sorry Your dog's cute Thanks man So how's your pizza night turned out? Pizza day? It's good It's one of the better pizza days that's happened here I think Hell yeah, hell yeah, hell yeah Anyone tell us how long you've been involved with the pizza day? Anyone give us your lore? Yeah, I think it's sort of in Clubhouse, right? No, I didn't have an iPhone So I could not be in that clubhouse The early days of exclusion Yeah, so I've known Snacks a few years before Pizza DAO That's cool So we were talking about crypto and NFTs and like all the stuff before this whole manifested itself But it was like the day after he was just like, yo, we got this thing called Pizza DAO, join the Discord I like that So I was in the Discord within like a few days of it manifesting itself in clubhouse I mean, but there would be no Snacks as we know them today if it weren't for you, so you're not a part of Pizza DAO's founding per se in that sense, but you're like a part of Snacks' crypto origin story Yeah, you could say that, yeah, that's pretty cool I like that, I got into crypto They really delved into the meta of what you could do with some of this stuff Do you have any other early day co-conspirators who were trying to understand the design space and crypto who you were looking at it with, or was it just you two?\nThere is, I think, like, two other people involved Are they still on Pizza DAO? Maybe, that's a good question, I don't know That's okay, I was just asking You know, I got into crypto, my college roommate, he was, like, super into it Like, he'd been working and, like, banking before, the summer before And then he was up, like, 60k on doodles And he just, like, I just chased him to whatever alpha chats he was in Let me, like, nouns down and stuff like that, and shark down And then I found out about Pizza DAO after ETH Denver So, you know, but he's, like, one of my best friends and one of the first people I invited to my discord and stuff like that.\nSo I feel like if we don't have people to talk to about crypto, you know, then we never get our big ideas. I actually heard about crypto during Silk Road days. During what days? Silk Road days. You know, Ross Ulbricht. Yeah, yeah, absolutely. Yep. Friends were using it, right? Yeah, yeah, yeah, I get that. For the original use case. But I never, ever would have predicted like Bitcoin to have any value. It's this thing you can monet that's kind of cool. But it was like in-game currency to you, right? No, it's just for drugs and terrorists. And it's like, no one's ever going to like, this is not going to be like a valuable thing anyone's going to like care about beyond that.\nYeah, yeah. The fight against fiat wasn't clear to you yet? No, not really. No one would ever pitch it if anyone was just like, yo, we need to get drugs. How are we going to get, well, we need this thing called Bitcoin, all right? That's great. That was, you know. But now Bitcoin is the fight against fiat, yeah? That's debatable. Oh, okay, okay. Hit us with your take. Can we switch into the light? I mean Bitcoin is just part of Wall Street at this point Like Michael said You have I mean like Wall Street collapses They have like So much of a Bitcoin supply So much of it is owned by the US government And Wall Street that Like it will survive probably But like it will get wrecked It will get wrecked every bit as much As like Wall Street will get wrecked if like everything collapses.\nWhat do you think about Michael? I don't know that much about him. I've heard his pitch. It's a good pitch. Better than Pizza Dolls? Should we buy BTC or pizza boxes? Ooh, um, you need some, I don't know, like pizza backed box? I don't know. I like that. I like that. I like the idea of backing the pizza boxes as to start something new. I like that. Whoo, this guy's pitching hot takes Okay, I will say this Bitcoin has plateaued, the pizza boxes are like nothing right now We're at the bottom, we're at the bottom of pizza boxes There's a lot of opportunity I like that There's more risk, more opportunity I like that, I like that We're gonna go run on both snacks now What's up sir?\nDid you answer the RSVP with your preferences? No, I didn't I don't know, I didn't order the pizza, and he might have liked that She neither The AI wasn't quite ready to order the pizza this year, next year it will be It literally will order the pizza, it's close now, it just gets hung up on because it's an AI and they're like, uh, no I'm really excited to be a mom, so as a person who raised a snack, what was it like? What was it like? What was it like? It was a challenge It was a challenge not lying, it was a challenge. Let the world know.\nIt's still a challenge. What was your developmental philosophy? Developmental? That's a good question. Will. There was no development involved. It was like, we didn't have a lot of choice. He was the agency. He took agency, right? Sam Wade 11-5. Let's start that. Sandy's right here. On arrival. Just start that. What does that do to a person, right? Yikes, that's a lot Well now he's out taking on the world I was pigeon-toed He's a wonderful He's my feet wearing the wrong feet So I had to wear my feet, my shoes in the wrong feet So I was talking to Jake And we were talking about Bitcoin being owned by Wall Street And I said, I got that So now we have foot on Bitcoin I said, so we're taking Bitcoin or pizza boxes And he said, we landed on it We're at the bottom for pizza boxes The second day, Sam was in the basket I was like, wait, my son's brilliant Yeah, you're welcome So yeah, Pizza Box or Bitcoin?\nLike Pizza Box Like am I buying pizza or keeping my Bitcoin? Oh my god, that's that baby Oh I don't know right now Like the upside on the I don't know dude I'm not a fan I have a lot of them I believe in it I bought a lot of them I'm not going to sell them either I'm going to give them to my friends I like that None of the people If you could see, like, I look at what, like, Pizza DAO is kind of like a movement, like, people who are caring about community. I think we don't have a lot of, like, crypto community facing events that really happen.\nLike I said, it's going to be a holiday. I feel like people that show up, I feel like when this is a conference, we don't really show up. And I know, I've met some people on Bitcoin Pizza Day, but I've never met at conferences. And I think that's, I think that's a really cool touch point for people. Like, there's Crypto Mondays, but I think this is bigger than Crypto Mondays. Absolutely, obviously, right? Yeah. And so I'm curious for you, like, how do you see yourself as someone who's been building, like, a movement, an international community opportunity for crypto? How do I see myself? Yeah, you're the, you're the, you're the, you're the clearing.\nThis is Gargi. I am just, I'm just facilitating it. I am, I'm out there changing the tires on it. I'm maintaining it. I am, when somebody has a dispute, I am talking to them. I'm helping them to communicate. When someone loses a venue, I'm helping them to brainstorm. When we need new tech, I'm figuring it out. It's fun to have a mission and we have a very clear mission and that's to throw a global pizza party. It's relatively simple but it's also complex and there are a lot of moving parts and you can really make it as simple or as complex as you want. and we are gradually becoming more complex which is fun and there's yeah there's a lot to do even with something as simple as this so what's the learning curve been like for you from like discord moderator to global pizza party facilitator it's like uh it's like not it's not so different because I was already I was already making making a web series yeah yeah for years in South Philly.\nWith South Philly now. And a lot of the skills when you are an organizer or a producer are kind of the same. And it's about communication with people, it's about being organized, knowing when you have to know the deadlines, like you have to know all of the reliances of the component parts, you know, so that you can hit the deadlines and everything winds up at the end. It's like three minutes to get out of here Alright, alright, I should go see how I can be helpful I think it's just about being a producer Being a producer, like if you want to learn how to organize people to do something, go make a film And that was your background already?\nYeah So, okay, okay, okay Thank you for your time Let us hit us with a booyah and a happy pizza day Booyah, happy pizza day Let's go",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Philadelphia",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "url": "https://wethem.xyz/places#philadelphia"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Bitcoin Pizza Day",
+    "url": "https://wethem.xyz/portfolio#p-pizza-day"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Crypto",
+      "url": "https://wethem.xyz/topics/crypto"
+    }
+  ],
+  "keywords": [
+    "Crypto"
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Bitcoin Pizza Day",
+      "item": "https://wethem.xyz/portfolio#p-pizza-day"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "The group photo, and the real conversations that started after it",
+      "item": "https://wethem.xyz/watch/the-group-photo-and-what-came-after"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place], who[data-pf-who]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2026-05-23" data-pf-vid="SA_ZnjyI3Kg" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;18:11&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="Philadelphia" data-pf-country="United States" data-pf-project="Bitcoin Pizza Day" data-pf-who="Maceo">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-pizza-day">Bitcoin Pizza Day</a></li>
+            <li aria-current="page">The group photo, and the real conversations that started after it</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">The group photo, and the real conversations that started after it.</h1>
+
+    <p class="wt-byline">Reported by <strong><a href="../people/maceo.html">Maceo</a></strong> &middot; Philadelphia &middot; 18 min</p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="SA_ZnjyI3Kg" live postersrcset="../stills/SA_ZnjyI3Kg-320.jpg 320w, ../stills/SA_ZnjyI3Kg-480.jpg 480w, ../stills/SA_ZnjyI3Kg-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/SA_ZnjyI3Kg?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="The group photo, and the real conversations that started after it, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+
+    <div class="wt-prose">
+            <p>Is Bitcoin just Wall Street now? Asked at the Bitcoin Pizza Day party in Philadelphia, Jake says it is: &ldquo;That&rsquo;s debatable. Bitcoin is just part of Wall Street at this point.&rdquo; If everything collapses, he says, it gets wrecked exactly as much as the thing it was supposed to be an alternative to.</p>
+            <p>He first heard of Bitcoin in the Silk Road days: &ldquo;This is for drugs and terrorists. This is not going to be a valuable thing anyone&rsquo;s going to care about beyond that.&rdquo; Bitcoin or pizza boxes? &ldquo;Bitcoin has plateaued. The pizza boxes are nothing right now. We&rsquo;re at the bottom.&rdquo;</p>
+            <p>The man who keeps the global party running says: &ldquo;I am just facilitating it. I&rsquo;m out there changing the tyres on it. When somebody has a dispute, I am talking to them.&rdquo; His background is a web series in South Philly: &ldquo;If you want to learn how to organise people to do something, go make a film.&rdquo;</p>
+            <p>There is also a trivia giveaway nobody can win and the group photo. Philadelphia, May 2026.</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../places.html#philadelphia">Everything filmed in Philadelphia</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="teaching-two-students-to-be-reporters-at-a-pizza-party.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/EwYnZ1y9cqM-640.jpg" srcset="../stills/EwYnZ1y9cqM-320.jpg 320w, ../stills/EwYnZ1y9cqM-480.jpg 480w, ../stills/EwYnZ1y9cqM-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>24:12</span></span><span>Benny and Estabon, Temple musicians turned street reporters for the day.</span></a>
+        <a class="wt-rail-card" href="crypto-mondays-philadelphia-and-crypto-taxes.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/p-4ojzGe300-640.jpg" srcset="../stills/p-4ojzGe300-320.jpg 320w, ../stills/p-4ojzGe300-480.jpg 480w, ../stills/p-4ojzGe300-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>2:23</span></span><span>Sean, on the Crypto Mondays community he helps run in Philly.</span></a>
+        <a class="wt-rail-card" href="how-pizza-dao-started-on-clubhouse.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/v_yspgq6KvY-640.jpg" srcset="../stills/v_yspgq6KvY-320.jpg 320w, ../stills/v_yspgq6KvY-480.jpg 480w, ../stills/v_yspgq6KvY-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>2:34</span></span><span>Saucy Saucier, the full conversation.</span></a>
+        <a class="wt-rail-card" href="why-a-job-stopped-adding-up-germantown.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/Cyv1UwE_K3w-640.jpg" srcset="../stills/Cyv1UwE_K3w-320.jpg 320w, ../stills/Cyv1UwE_K3w-480.jpg 480w, ../stills/Cyv1UwE_K3w-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>21:24</span></span><span>“The numbers don’t add up to work for nobody.” Mr. P on Haines Street.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c110"><a class="wt-t" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=110s" target="_blank" rel="noopener" data-pagefind-ignore>1:50</a><span class="wt-s">Getting the last boxes down the stairs</span></li>
+                <li class="wt-line" id="c267"><a class="wt-t" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=267s" target="_blank" rel="noopener" data-pagefind-ignore>4:27</a><span class="wt-s">The Bitcoin Pizza Day quiz</span></li>
+                <li class="wt-line" id="c312"><a class="wt-t" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=312s" target="_blank" rel="noopener" data-pagefind-ignore>5:12</a><span class="wt-s">Nobody knows the dog’s actual name</span></li>
+                <li class="wt-line" id="c441"><a class="wt-t" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=441s" target="_blank" rel="noopener" data-pagefind-ignore>7:21</a><span class="wt-s">The group photo</span></li>
+                <li class="wt-line" id="c567"><a class="wt-t" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=567s" target="_blank" rel="noopener" data-pagefind-ignore>9:27</a><span class="wt-s">Locked out of Clubhouse for not having an iPhone</span></li>
+                <li class="wt-line" id="c637"><a class="wt-t" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=637s" target="_blank" rel="noopener" data-pagefind-ignore>10:37</a><span class="wt-s">A roommate up sixty thousand on Doodles</span></li>
+                <li class="wt-line" id="c669"><a class="wt-t" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=669s" target="_blank" rel="noopener" data-pagefind-ignore>11:09</a><span class="wt-s">Hearing about Bitcoin in the Silk Road days</span></li>
+                <li class="wt-line" id="c717"><a class="wt-t" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=717s" target="_blank" rel="noopener" data-pagefind-ignore>11:57</a><span class="wt-s">“Bitcoin is just part of Wall Street at this point”</span></li>
+                <li class="wt-line" id="c765"><a class="wt-t" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=765s" target="_blank" rel="noopener" data-pagefind-ignore>12:45</a><span class="wt-s">Bitcoin or pizza boxes?</span></li>
+                <li class="wt-line" id="c926"><a class="wt-t" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=926s" target="_blank" rel="noopener" data-pagefind-ignore>15:26</a><span class="wt-s">Why this reaches people a conference does not</span></li>
+                <li class="wt-line" id="c961"><a class="wt-t" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=961s" target="_blank" rel="noopener" data-pagefind-ignore>16:01</a><span class="wt-s">“I am just facilitating it”</span></li>
+                <li class="wt-line" id="c1022"><a class="wt-t" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=1022s" target="_blank" rel="noopener" data-pagefind-ignore>17:02</a><span class="wt-s">From a South Philly web series to a global party</span></li>
+                <li class="wt-line" id="c1067"><a class="wt-t" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=1067s" target="_blank" rel="noopener" data-pagefind-ignore>17:47</a><span class="wt-s">“Go make a film”</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Transcribed from the original audio and corrected for names. Speaker letters mark turns, not names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Enjoy that pizza. Her leaving with a box of pepperoni did kind of hurt me. I was going to eat another piece or two of that one. Yeah. Alright, let&rsquo;s go. It&rsquo;s okay. Take your time. Yeah, you&rsquo;re doing great. Carol&rsquo;s on a roll. They&rsquo;re exempt. They&rsquo;re exempt. And you know. Hello little ladies. How back? How back. I think that&rsquo;s the way to do it. You&rsquo;re welcome to use me as a steady if you&rsquo;d like to. Okay. I said you&rsquo;re welcome to use me as a steady if you&rsquo;d like to. Hello. We&rsquo;re gonna have back. Everybody home This If you go out and get it in the air Let&rsquo;s go outside Let&rsquo;s go outside Yes, I hope you can try this Alright, let&rsquo;s go outside Let&rsquo;s go outside Teamwork makes the dream work We just put this back outside.</p>
+            <p id="s0-2"><a class="wt-at" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah. Okay. All right. Let&rsquo;s uh, we gotta take this outside. Somebody help. All right, Justin. Get in there. Get in there. Get the top. Wow. Come on. Okay. All right. Okay. All right. Can you take the rest? It&rsquo;s teamwork. It&rsquo;s teamwork. That&rsquo;s a risky business, sir. It&rsquo;s air time. Go ahead. Yeah, go ahead. Go ahead. Sorry, we need the bottom. Jeffrey, you guys? I can&rsquo;t see it. Barman, don&rsquo;t let me fall down. Can you take this? Don&rsquo;t let me fall down the stairs. That&rsquo;s right. Help her out. You got steps. Aw, look at that. They&rsquo;re so nice. I think we all go on that side, we take it from you.</p>
+            <p id="s0-3"><a class="wt-at" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>What&rsquo;s up man? What&rsquo;s going on? Happy pizza day. Yeah, happy pizza day to you too. How&rsquo;s your pizza day been? Great. I had a lot of pizza. Okay. I&rsquo;ve been doing a good amount of videos. I didn&rsquo;t get the pizza that I wanted. But, you know, it&rsquo;s been a good one So, my brother says My brother knows him, his wine doesn&rsquo;t suit He has his wine doesn&rsquo;t suit For Sam&rsquo;s own So, back in the day, he used to be a What&rsquo;s up, man? Good to see you It used to be Hello, hello This looks like an exit to me We&rsquo;re outside You&rsquo;re going to lock us all out?</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0-4"><a class="wt-at" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>The Trojan horse Oh, let&rsquo;s go. All right, Maria&rsquo;s our photographer. Okay, pass out those signs. While we&rsquo;re passing out the signs and getting ready, you know it&rsquo;s Bitcoin Pizzaday. Everyone knows that story, right? Put your hand up if you don&rsquo;t know Bitcoin Pizzaday&rsquo;s story. Kinda know? Okay, it&rsquo;s like a billion dollars today for two pizzas. Pilot John&rsquo;s. We threw parties in 400 cities today across like 100 countries. There was a 24-hour live stream. I have a couple things I want to give away Okay, who knows the actual name of the dog That is in the meme The actual name That&rsquo;s the breed, what&rsquo;s the name?</p>
+            <p id="s0-5"><a class="wt-at" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>It&rsquo;s the breed, what&rsquo;s the name of the dog? Shibuki No, nobody knows. Nobody knows. Nobody knows. Nobody knows. We called it. All right. Hurry up. You&rsquo;re losing everyone. You&rsquo;re losing everyone. Okay. Who said Chiba first? All right. We&rsquo;re not going to do the throws. Okay. Put it on top of the top. We should put it on top of the top. We should put it on top of the top. This one goes to, okay, what is the guy&rsquo;s name who bought the two pizzas? Laszlo had a chance What is the guy&rsquo;s name who Laszlo gave the ten... Okay, okay, what kind of pizzas did he get?</p>
+            <p id="s0-6"><a class="wt-at" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Papa John&rsquo;s! Domino&rsquo;s. Okay, all right, we&rsquo;ll take the Papa John&rsquo;s. I have a couple more prizes. Oh, a man of many prizes. This lighting is so horrid. Wait, what do we come out in the dark for? We should go like 10 feet that way. What&rsquo;s the song of this pin? We can&rsquo;t even see it. Your lighting is terrible. Nyon cat. It&rsquo;s a rainbow cat. How&rsquo;s the song, how&rsquo;s the song go? How&rsquo;s the song, how&rsquo;s the song go? Okay, I think you got it. I heard that. Okay, okay. It&rsquo;s na-na-na-na-na-na-na-na-na-na-na-na-na-na. You know? Okay. I think they&rsquo;re just, it&rsquo;s okay. All right, I have one more of those.</p>
+            <p id="s0-7"><a class="wt-at" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I&rsquo;ll let you live. Okay, what is the name of the guy we can&rsquo;t see that in cat? Oh It is Chris actually Nyan cat All right all right we say cheese all right we don&rsquo;t say happy pizza day no we say cheese oh and let&rsquo;s do a video we&rsquo;re gonna say stand with crypto oh let&rsquo;s go birds i like that let&rsquo;s go can we say happy pizza day can we say happy pizza day That&rsquo;s right, that&rsquo;s right, that&rsquo;s right Let&rsquo;s go, one more time Three, two, one Thank you I like that, hype them up, I like that Call them out, you can&rsquo;t live tonight Staying with crypto But you know, I respect that you want to do the sponsor justice I can&rsquo;t, I can&rsquo;t, I can&rsquo;t fault you It&rsquo;s like, would not even go one pizza day?</p>
+            <p id="s0-8"><a class="wt-at" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I said, not on my watch I like that, we&rsquo;re doing my YouTube justice We&rsquo;re doing my YouTube justice for sure It&rsquo;s good Thank you I feel pretty excited Sorry Your dog&rsquo;s cute Thanks man So how&rsquo;s your pizza night turned out? Pizza day? It&rsquo;s good It&rsquo;s one of the better pizza days that&rsquo;s happened here I think Hell yeah, hell yeah, hell yeah Anyone tell us how long you&rsquo;ve been involved with the pizza day? Anyone give us your lore? Yeah, I think it&rsquo;s sort of in Clubhouse, right? No, I didn&rsquo;t have an iPhone So I could not be in that clubhouse The early days of exclusion Yeah, so I&rsquo;ve known Snacks a few years before Pizza <a class="wt-gloss" href="../glossary.html#dao">DAO</a> That&rsquo;s cool So we were talking about crypto and NFTs and like all the stuff before this whole manifested itself But it was like the day after he was just like, yo, we got this thing called Pizza DAO, join the Discord I like that So I was in the Discord within like a few days of it manifesting itself in clubhouse I mean, but there would be no Snacks as we know them today if it weren&rsquo;t for you, so you&rsquo;re not a part of Pizza DAO&rsquo;s founding per se in that sense, but you&rsquo;re like a part of Snacks&rsquo; crypto origin story Yeah, you could say that, yeah, that&rsquo;s pretty cool I like that, I got into crypto They really delved into the meta of what you could do with some of this stuff Do you have any other early day co-conspirators who were trying to understand the design space and crypto who you were looking at it with, or was it just you two?</p>
+            <p id="s0-9"><a class="wt-at" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>There is, I think, like, two other people involved Are they still on Pizza DAO? Maybe, that&rsquo;s a good question, I don&rsquo;t know That&rsquo;s okay, I was just asking You know, I got into crypto, my college roommate, he was, like, super into it Like, he&rsquo;d been working and, like, banking before, the summer before And then he was up, like, 60k on doodles And he just, like, I just chased him to whatever alpha chats he was in Let me, like, nouns down and stuff like that, and shark down And then I found out about Pizza DAO after ETH Denver So, you know, but he&rsquo;s, like, one of my best friends and one of the first people I invited to my discord and stuff like that.</p>
+            <p id="s0-10"><a class="wt-at" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>So I feel like if we don&rsquo;t have people to talk to about crypto, you know, then we never get our big ideas. I actually heard about crypto during Silk Road days. During what days? Silk Road days. You know, Ross Ulbricht. Yeah, yeah, absolutely. Yep. Friends were using it, right? Yeah, yeah, yeah, I get that. For the original use case. But I never, ever would have predicted like Bitcoin to have any value. It&rsquo;s this thing you can monet that&rsquo;s kind of cool. But it was like in-game currency to you, right? No, it&rsquo;s just for drugs and terrorists. And it&rsquo;s like, no one&rsquo;s ever going to like, this is not going to be like a valuable thing anyone&rsquo;s going to like care about beyond that.</p>
+            <p id="s0-11"><a class="wt-at" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, yeah. The fight against fiat wasn&rsquo;t clear to you yet? No, not really. No one would ever pitch it if anyone was just like, yo, we need to get drugs. How are we going to get, well, we need this thing called Bitcoin, all right? That&rsquo;s great. That was, you know. But now Bitcoin is the fight against fiat, yeah? That&rsquo;s debatable. Oh, okay, okay. Hit us with your take. Can we switch into the light? I mean Bitcoin is just part of Wall Street at this point Like Michael said You have I mean like Wall Street collapses They have like So much of a Bitcoin supply So much of it is owned by the US government And Wall Street that Like it will survive probably But like it will get wrecked It will get wrecked every bit as much As like Wall Street will get wrecked if like everything collapses.</p>
+            <p id="s0-12"><a class="wt-at" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>What do you think about Michael? I don&rsquo;t know that much about him. I&rsquo;ve heard his pitch. It&rsquo;s a good pitch. Better than Pizza Dolls? Should we buy BTC or pizza boxes? Ooh, um, you need some, I don&rsquo;t know, like pizza backed box? I don&rsquo;t know. I like that. I like that. I like the idea of backing the pizza boxes as to start something new. I like that. Whoo, this guy&rsquo;s pitching hot takes Okay, I will say this Bitcoin has plateaued, the pizza boxes are like nothing right now We&rsquo;re at the bottom, we&rsquo;re at the bottom of pizza boxes There&rsquo;s a lot of opportunity I like that There&rsquo;s more risk, more opportunity I like that, I like that We&rsquo;re gonna go run on both snacks now What&rsquo;s up sir?</p>
+            <p id="s0-13"><a class="wt-at" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Did you answer the RSVP with your preferences? No, I didn&rsquo;t I don&rsquo;t know, I didn&rsquo;t order the pizza, and he might have liked that She neither The AI wasn&rsquo;t quite ready to order the pizza this year, next year it will be It literally will order the pizza, it&rsquo;s close now, it just gets hung up on because it&rsquo;s an AI and they&rsquo;re like, uh, no I&rsquo;m really excited to be a mom, so as a person who raised a snack, what was it like? What was it like? What was it like? It was a challenge It was a challenge not lying, it was a challenge. Let the world know.</p>
+            <p id="s0-14"><a class="wt-at" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>It&rsquo;s still a challenge. What was your developmental philosophy? Developmental? That&rsquo;s a good question. Will. There was no development involved. It was like, we didn&rsquo;t have a lot of choice. He was the agency. He took agency, right? Sam Wade 11-5. Let&rsquo;s start that. Sandy&rsquo;s right here. On arrival. Just start that. What does that do to a person, right? Yikes, that&rsquo;s a lot Well now he&rsquo;s out taking on the world I was pigeon-toed He&rsquo;s a wonderful He&rsquo;s my feet wearing the wrong feet So I had to wear my feet, my shoes in the wrong feet So I was talking to Jake And we were talking about Bitcoin being owned by Wall Street And I said, I got that So now we have foot on Bitcoin I said, so we&rsquo;re taking Bitcoin or pizza boxes And he said, we landed on it We&rsquo;re at the bottom for pizza boxes The second day, Sam was in the basket I was like, wait, my son&rsquo;s brilliant Yeah, you&rsquo;re welcome So yeah, Pizza Box or Bitcoin?</p>
+            <p id="s0-15"><a class="wt-at" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Like Pizza Box Like am I buying pizza or keeping my Bitcoin? Oh my god, that&rsquo;s that baby Oh I don&rsquo;t know right now Like the upside on the I don&rsquo;t know dude I&rsquo;m not a fan I have a lot of them I believe in it I bought a lot of them I&rsquo;m not going to sell them either I&rsquo;m going to give them to my friends I like that None of the people If you could see, like, I look at what, like, Pizza DAO is kind of like a movement, like, people who are caring about community. I think we don&rsquo;t have a lot of, like, crypto community facing events that really happen.</p>
+            <p id="s0-16"><a class="wt-at" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Like I said, it&rsquo;s going to be a holiday. I feel like people that show up, I feel like when this is a conference, we don&rsquo;t really show up. And I know, I&rsquo;ve met some people on <a class="wt-gloss" href="../glossary.html#bitcoin-pizza-day">Bitcoin Pizza Day</a>, but I&rsquo;ve never met at conferences. And I think that&rsquo;s, I think that&rsquo;s a really cool touch point for people. Like, there&rsquo;s Crypto Mondays, but I think this is bigger than Crypto Mondays. Absolutely, obviously, right? Yeah. And so I&rsquo;m curious for you, like, how do you see yourself as someone who&rsquo;s been building, like, a movement, an international community opportunity for crypto? How do I see myself? Yeah, you&rsquo;re the, you&rsquo;re the, you&rsquo;re the, you&rsquo;re the clearing.</p>
+            <p id="s0-17"><a class="wt-at" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>This is Gargi. I am just, I&rsquo;m just facilitating it. I am, I&rsquo;m out there changing the tires on it. I&rsquo;m maintaining it. I am, when somebody has a dispute, I am talking to them. I&rsquo;m helping them to communicate. When someone loses a venue, I&rsquo;m helping them to brainstorm. When we need new tech, I&rsquo;m figuring it out. It&rsquo;s fun to have a mission and we have a very clear mission and that&rsquo;s to throw a global pizza party. It&rsquo;s relatively simple but it&rsquo;s also complex and there are a lot of moving parts and you can really make it as simple or as complex as you want. and we are gradually becoming more complex which is fun and there&rsquo;s yeah there&rsquo;s a lot to do even with something as simple as this so what&rsquo;s the learning curve been like for you from like discord moderator to global pizza party facilitator it&rsquo;s like uh it&rsquo;s like not it&rsquo;s not so different because I was already I was already making making a web series yeah yeah for years in South Philly.</p>
+            <p id="s0-18"><a class="wt-at" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>With South Philly now. And a lot of the skills when you are an organizer or a producer are kind of the same. And it&rsquo;s about communication with people, it&rsquo;s about being organized, knowing when you have to know the deadlines, like you have to know all of the reliances of the component parts, you know, so that you can hit the deadlines and everything winds up at the end. It&rsquo;s like three minutes to get out of here Alright, alright, I should go see how I can be helpful I think it&rsquo;s just about being a producer Being a producer, like if you want to learn how to organize people to do something, go make a film And that was your background already?</p>
+            <p id="s0-19"><a class="wt-at" href="https://www.youtube.com/watch?v=SA_ZnjyI3Kg&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah So, okay, okay, okay Thank you for your time Let us hit us with a booyah and a happy pizza day Booyah, happy pizza day Let&rsquo;s go</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+<div id="after-transcript" tabindex="-1"><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from Bitcoin Pizza Day.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-pizza-day">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="how-i-got-into-crypto-philadelphia.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/tbCuWfY5ImE-640.jpg" srcset="../stills/tbCuWfY5ImE-320.jpg 320w, ../stills/tbCuWfY5ImE-480.jpg 480w, ../stills/tbCuWfY5ImE-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>3:01</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Bitcoin Pizza Day · Philadelphia · 3 min</span>
+                    <h3 class="report-title">How a roommate on a whitelist led to DAOs.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="pizza-day-from-islamabad-hamza-khan-pakistan.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/YAE30DMN1UI-640.jpg" srcset="../stills/YAE30DMN1UI-320.jpg 320w, ../stills/YAE30DMN1UI-480.jpg 480w, ../stills/YAE30DMN1UI-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>0:54</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Bitcoin Pizza Day · Islamabad · 1 min</span>
+                    <h3 class="report-title">Pizza Day from Islamabad: Hamza Khan.</h3>
+                    <p class="report-byline">By <strong>Hamza Khan</strong></p>
+                </div>
+            </a>
+            <a href="kafani-asks-lagos-four-questions-about-crypto-and-community.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/8J43O5f-EJ4-640.jpg" srcset="../stills/8J43O5f-EJ4-320.jpg 320w, ../stills/8J43O5f-EJ4-480.jpg 480w, ../stills/8J43O5f-EJ4-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>52:08</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Bitcoin Pizza Day · Lagos · 52 min</span>
+                    <h3 class="report-title">Kafani asks Lagos four questions about crypto and community.</h3>
+                    <p class="report-byline">By <strong>Kafani</strong></p>
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../places.html#philadelphia">Everything filmed in Philadelphia</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

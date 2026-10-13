@@ -1,0 +1,958 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Germantown, May 2026, the question of the week: what do you think about social anxiety?">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/social-anxiety-youth-suicide-and-the-1-percent-bobby-germantown-philadelphia">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="Social Anxiety, Youth Suicide and the 1%: Bobby | Philly">
+    <meta property="og:description" content="Germantown, May 2026, the question of the week: what do you think about social anxiety?">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/social-anxiety-youth-suicide-and-the-1-percent-bobby-germantown-philadelphia.jpg?v=d3c2f814f8">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Social anxiety, youth suicide and the 1%: Bobby">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/social-anxiety-youth-suicide-and-the-1-percent-bobby-germantown-philadelphia.jpg?v=d3c2f814f8">
+    <meta property="og:url" content="https://wethem.xyz/watch/social-anxiety-youth-suicide-and-the-1-percent-bobby-germantown-philadelphia">
+    <title>Social Anxiety, Youth Suicide and the 1%: Bobby | Philly &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/social-anxiety-youth-suicide-and-the-1-percent-bobby-germantown-philadelphia#video",
+  "name": "Social Anxiety, Youth Suicide and the 1%: Bobby | Philly",
+  "description": "Germantown, May 2026, the question of the week: what do you think about social anxiety? Bobby is 59, from North Philadelphia, and chose to stay off camera, so the picture is Maceo walking while the conversation runs. His first answer goes straight to the youth: \"it also plays a part in the suicide rate of the younger folks today,\" the anxiety of \"wanting to be accepted by different people,\" and \"no one wants to be themselves and happy with who they are.\" What can a community do? \"It's real hard because you can't monitor what the children watch,\" and the young \"don't feel comfortable talking about certain things with anyone, let alone adults.\" What he would like more of: \"The old conscious rappers.\" On school: \"The school system was never for us,\" and \"we have to create our own if we can, but we won't come together as a culture or a race to help each other.\" Asked how he describes himself: \"I'm gonna say I'm of African descent,\" born in America, and he has never done the DNA test, because \"they kidnap us from our country, then we pay them for them to tell us where we're originally from.\" His question for the city, when Maceo asks for one: \"Why don't we get along? Get along? Young against young, young against old.\" Every generation says the same thing to its parents, \"But We All Was The Same Age At One Time.\" He remembers gang lines at Germantown Avenue and Shelton, and asks, \"Why are we still living like that today?\" His answer is the 1%: \"If they're controlling 99% of the population, why are we still allowing it? One, they keep everybody divided. Race, age, religion, wealth, geographical area, culture.\" Two books, as he names them: The Economic Hitman and The New Jim Crow. The last six minutes turn around. Maceo tells him crypto is \"kind of like that movement re-embodied,\" and Bobby, who has family in it, asks the right question: \"Can somebody just steal it and you have no knowledge of where it went?\" Maceo's answer is the no-back-door argument; Bobby's is \"I can't really speak on it. That's something I had to learn about.\" On AI Bobby sees the jobs going and the youth learning \"things they shouldn't know\"; Maceo sees businesses. Bobby's message for people around the world: \"Wake up Wake up to everything around you And always be aware of your surroundings.\" Names as given; Bobby's surname was not asked. The transcript below is from the original audio.",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/fhGghXrP0Ww/maxresdefault.jpg"
+  ],
+  "uploadDate": "2026-05-07T00:49:15Z",
+  "embedUrl": "https://www.youtube.com/embed/fhGghXrP0Ww",
+  "url": "https://wethem.xyz/watch/social-anxiety-youth-suicide-and-the-1-percent-bobby-germantown-philadelphia",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT16M5S",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "The question of the week: social anxiety",
+      "startOffset": 0,
+      "url": "https://wethem.xyz/watch/social-anxiety-youth-suicide-and-the-1-percent-bobby-germantown-philadelphia?t=0",
+      "endOffset": 39
+    },
+    {
+      "@type": "Clip",
+      "name": "Social media and the suicide rate",
+      "startOffset": 39,
+      "url": "https://wethem.xyz/watch/social-anxiety-youth-suicide-and-the-1-percent-bobby-germantown-philadelphia?t=39",
+      "endOffset": 87
+    },
+    {
+      "@type": "Clip",
+      "name": "What can a community do?",
+      "startOffset": 87,
+      "url": "https://wethem.xyz/watch/social-anxiety-youth-suicide-and-the-1-percent-bobby-germantown-philadelphia?t=87",
+      "endOffset": 127
+    },
+    {
+      "@type": "Clip",
+      "name": "Why he wants the old conscious rap back",
+      "startOffset": 127,
+      "url": "https://wethem.xyz/watch/social-anxiety-youth-suicide-and-the-1-percent-bobby-germantown-philadelphia?t=127",
+      "endOffset": 163
+    },
+    {
+      "@type": "Clip",
+      "name": "Was the school system ever for us?",
+      "startOffset": 163,
+      "url": "https://wethem.xyz/watch/social-anxiety-youth-suicide-and-the-1-percent-bobby-germantown-philadelphia?t=163",
+      "endOffset": 204
+    },
+    {
+      "@type": "Clip",
+      "name": "Of African descent, born in America",
+      "startOffset": 204,
+      "url": "https://wethem.xyz/watch/social-anxiety-youth-suicide-and-the-1-percent-bobby-germantown-philadelphia?t=204",
+      "endOffset": 272
+    },
+    {
+      "@type": "Clip",
+      "name": "His question for the city: why can't we get along?",
+      "startOffset": 272,
+      "url": "https://wethem.xyz/watch/social-anxiety-youth-suicide-and-the-1-percent-bobby-germantown-philadelphia?t=272",
+      "endOffset": 380
+    },
+    {
+      "@type": "Clip",
+      "name": "How the 1% keeps everybody divided",
+      "startOffset": 380,
+      "url": "https://wethem.xyz/watch/social-anxiety-youth-suicide-and-the-1-percent-bobby-germantown-philadelphia?t=380",
+      "endOffset": 456
+    },
+    {
+      "@type": "Clip",
+      "name": "Distraction, and who gets prosecuted",
+      "startOffset": 456,
+      "url": "https://wethem.xyz/watch/social-anxiety-youth-suicide-and-the-1-percent-bobby-germantown-philadelphia?t=456",
+      "endOffset": 526
+    },
+    {
+      "@type": "Clip",
+      "name": "The Economic Hitman and The New Jim Crow",
+      "startOffset": 526,
+      "url": "https://wethem.xyz/watch/social-anxiety-youth-suicide-and-the-1-percent-bobby-germantown-philadelphia?t=526",
+      "endOffset": 565
+    },
+    {
+      "@type": "Clip",
+      "name": "Is crypto Occupy Wall Street re-embodied?",
+      "startOffset": 565,
+      "url": "https://wethem.xyz/watch/social-anxiety-youth-suicide-and-the-1-percent-bobby-germantown-philadelphia?t=565",
+      "endOffset": 621
+    },
+    {
+      "@type": "Clip",
+      "name": "Can they take your Bitcoin?",
+      "startOffset": 621,
+      "url": "https://wethem.xyz/watch/social-anxiety-youth-suicide-and-the-1-percent-bobby-germantown-philadelphia?t=621",
+      "endOffset": 727
+    },
+    {
+      "@type": "Clip",
+      "name": "Is AI taking jobs or making businesses?",
+      "startOffset": 727,
+      "url": "https://wethem.xyz/watch/social-anxiety-youth-suicide-and-the-1-percent-bobby-germantown-philadelphia?t=727",
+      "endOffset": 935
+    },
+    {
+      "@type": "Clip",
+      "name": "Wake up",
+      "startOffset": 935,
+      "url": "https://wethem.xyz/watch/social-anxiety-youth-suicide-and-the-1-percent-bobby-germantown-philadelphia?t=935",
+      "endOffset": 965
+    }
+  ],
+  "creator": {
+    "@type": "Person",
+    "name": "Maceo",
+    "url": "https://wethem.xyz/people/maceo"
+  },
+  "transcript": "All right. What's up, everybody? I'm out here in Philly, in Germantown specifically, right where I'm from, and I'm doing my questions for this week. So I'm with We Them Media, as you know, and this week's question is, what do you think about social anxiety? And I'm here with, what's your name? Bobby. I'm here with Mr. Bobby. And how are you doing today?\nI'm blessed. I have no complaints at all.\nOkay. You're from here in Germantown?\nNo, from North Philadelphia.\nOkay. And how old are you? 59. All right. Okay, so this week's question is, what do you think about social anxiety? What comes to mind? Ah,\na whole lot, but it also plays a part in the suicide rate of the younger folks today. You know, the anxiety they go through with social media wanting to be accepted by different people is saddening that no one wants to be themselves and happy with who they are. So the anxiety that causes in our youth is staggering right now because the suicide rate of most of our youth is at an all-time high. Why is that? Social media created a big boost in this suicide attempt and people with suicide and anxiety due to suicide attempts and everything.\nYeah, yeah, yeah. Put an end to it.\nAnything else?\nI did that as a kid. I tried to do that. So I definitely hear that. I'm curious, like, what are things that you think we can do to address that constructively, like, as a community?\nIt's real hard because you can't monitor what the children watch because you're not around them 24-7.\nYeah, absolutely.\nNot only that, we don't know what they're going through because they don't feel comfortable talking about certain things with anyone, let alone adults. They don't even like to talk about it amongst their peers You know, they have a set few people that they talk about So that's hard to address I can't really say myself But the youth can talk about it Tell who they can talk to about it And why they feel that way\nDo you feel like there's a kind of content you'd like to see more of?\nYeah, really The old raps The old conscious rappers You know, that's when rap was wrapped Now it's all about gangster rap, money bees, and all kind of other stuff, violence. They took away the consciousness and the industry did this, you know, and they're the same ones that own the prisons. That's the crazy part, but people still don't want to look at it for what it is. They want us where we are today.\nHow do you think the school system plays into that?\nThe school system was never for us, you know, I'm not racist, but it wasn't for us, they didn't even consider us a whole, matter of fact, they didn't consider us people, they considered us property, so you know our schools, we weren't even allowed to have books back then, and then when we got books, they were hand-me-down old books, so we already know the system's not for us, we have to create our own if we can, but we won't come together as a culture or a race to help each other.\nand you're African-American or you're like Caribbean or something like that I'm I'm gonna\nsay I'm of African descent okay I am African-American but they don't consider us American they consider us like they do right now with the immigrants even though everyone here is an immigrant other than the Native Americans yeah yeah\nbut they alienate you from popular culture right you're like other we're other yeah\nso I'm of African descent but I was born in America\nOkay, well I'm curious, how do you think about that for yourself? Do you know where your family's from, what country, stuff like that?\nI never did the research because I see people doing, how is this, they kidnap us from our country, then we pay them for them to tell us where we're originally from\nNo, I tell people, you know Right, that's accurate Exactly, my grandma bought it for me in high school, she said, yeah, I want to see it, so I'm Cameroonian a lot, I'm like, okay, that's cool But then it's like, I have no way to test that\nWe going by them now\nI paid $100 to be like, dang Isn't that something?\nWe still don't know if it's accurate\nThey just sold me something It's like a gamertag\nYou darn it if you do, you darn it if you don't\nThat's what I'm saying Okay, and so I'm curious, do you have any questions for the community yourself? Things that you'd be interested in seeing me ask As I go around in the summer Talk to people in Philly and Germantown\nWhy don't we get along?\nGet along?\nYoung against young, young against old Old against old, old against young. Why can't we get along? What is it that differentiates each age group that we can't get along? If we could figure that out, then maybe we could stop some of the nonsense that's going on.\nThat's interesting. So you think we got to start with like intergenerational communication and recognition?\nYeah, because everybody has the same thing, each culture. I mean, each age group. We told our parents, you don't You Don't Understand That's What Everybody You Don't Understand But We All Was The Same Age At One Time\nYeah Yeah\nEven Though Time Changed We All Had\nTime Is Always Changing So We're All Different\nBut We All Had To Go Through Different Things Even Our My Ancestors With The Slavery It's A Different Form Of Slavery Today You Know It's Still Slavery But The Younger People\nIt's A Different Form Of Captivity\nRight Right And Then You Have The Drug Thing or you don't understand, we get high because of this. They got high in my area. They got high in my parents' area and my grandparents' area. What do you mean we don't understand? You know what I mean? Fighting in the school and in the street. There was gang war in my days. You couldn't even go across Germantown Avenue on Shelton Ave without getting to a fight because now you're in another area. Like schools, if you go to another school in another school district, where you from? Oh, he came from such and such school, and then there's a beef, you know what I'm saying?\nWhat school do you want your neighborhood you from? Why are we still living like that today? Other cultures and other races are not fighting over the stuff we're fighting over.\nYeah, and how do we even become, like, tribal in that way, with those things? But why do those become what we identify with? That's the question I was trying to get to.\nIt goes back a long time by the powers that be, the wealthy. When that, um, what was it called? When they were protesting in Manhattan about the financial industry.\nOccupy Wall Street?\nExactly. When I read about that, when I read about that and saw that kicked off, I said, wow, now people are going to wake up. Because they showed that it's only 1% that's making all the wealth. 1%. That means 99% of people are under their control. If they're controlling 99% of the population, why are we still allowing it? One, they keep everybody divided. Race, age, religion, wealth, geographical area, culture. They keep us divided. Religion, so we're always going at each other, going at something, and don't focus on them.\nWe can't see them, we're too busy, we're too busy caught up, we can't even see our parents\nThey always throw something up at us so we don't focus Trump for one, look at what Trump's doing He always throw something at us to distract you from something over here What\nthey call it? Magic Files, wars,\nthey got who, you know, Megan Thee Stallion Know what I mean? To take off of what Trump and his administration and all these wealthy people were doing All the wealthy people, this didn't just start\nYeah, yeah, of course, they're always already getting away with something\nYou familiar with Hugh Hefner and the Playboy Mansion?\nYeah, for sure\nThey had underage females there years ago But Hugh Hefner didn't cross the people with the powers that be Yeah R. Kelly did And so did P. Diddy You're going after people that really got control over everything you do\nYeah People in\nwhat they call Black Rock What is it? Black something But they're the ones selling military equipment around the world\nYeah, man, yeah, right, right\nAround the world A lot of\npeople protest in the same country\nI got a good book for you to read\nOkay, hit me with it\nIt's two One is The Economic Hitman And the other is The New Jim Crow I think it's by Cheryl Stern But her name is Cheryl Because there's a bunch of books written on The New Jim Crow But her name is Cheryl I think Stern Cheryl is definitely a name\nOkay, no, it's cool\nRead that book, bro\nOkay, thank you\nAnd The Economic Hitman\nYou heard that? He's talking to all of us.\nTwo real good books to read.\nI'm here to learn it all. I've been doing stuff in crypto the last couple of years, like I was saying. It's really interesting you mentioned the whole 1% conversation. For me, I was probably in sixth grade. I don't know what they're talking about, people on Wall Street. That didn't mean anything to me. But for you, you're saying people learned about the 1%. People became aware of a 1%.\nBut you see what happened with that movement? They shut it down so quickly You never hear about that no more But you hear about all other movements\nWell, that's what I was going to say I feel like crypto is kind of like that movement re-embodied It's like people are trying to design new kinds of money Because they know the old kinds of money already are controlled by people We don't even know who they are\nSee, but with the crypto I don't know nothing about the crypto So I can't speak on it I have family members involved in it But I haven't really learned about it\nThat's cool, that's cool Most people I talk to don't know about it I'm like a crazy nerdy guy who knows a lot about it\nBut that's a whole new thing You're saying that who's in control of it?\nYeah, well, exactly.\nCan somebody just steal it and you have no knowledge of where it went? No. Because you know the government has a supercomputer.\nWell, not necessarily, no, but that's true. I don't know about the supercomputer part, but to go back to the, like, do we know who controls it?\nRight? Like\nI would say, like Bitcoin, we know that people can control the price, but they can't ever go in your wallet and actually take your Bitcoin.\nNow, why can't they? If people can hack into the Pentagon's computer\nYeah, but it's because it's a system that's designed to be unexploitable. That's kind of the premise. Nobody owns it and so there's no person to actually hack. They can't hack me as the owner of Bitcoin to get all the Bitcoin stuff. But the Pentagon, there's a lot of liabilities, a lot of people. And the way it's designed is it's a computer software that runs across all the computers all at once\nSo there's no way human, so there's no way humanly possible for somebody to steal my Bitcoin\nRight now, right now they could hack into your computer and then they could get it through your computer But they couldn't get, well just like through your email, like you did like you did something like that But like they wouldn't be able to necessarily go in and like find it on the internet somewhere They're going to have to go through you\nDark web, there's no back door to it\nThat's like the premise, like people have the belief that this is the first currency that's never had a back door That's what Bitcoin is But because rich people could have still got it to you before you, they could buy it and sell it and it'd go up and down and then you're like, you know, but then they just keep buying more because they believe still, you know, it's the one with the no bag door.\nSee, I can't really speak on it. That's something I had to learn about that. I've never wanted to go that route because I don't know anything about it right now.\nYeah, well, I'm trying to educate people. I'm trying to learn, but I'm trying to teach people too. So I'm a Trojan horse. I got you.\nI got you. Because I have a family who's been doing it for years and they've been making money from it.\nThat's cool\nAnd they'd be trying to tell me, but you know how I'm used to old ways, you know what I mean?\nI mean, you can let them explain it, right? You'll probably see the world, and the world's changing, right?\nYeah, and I gotta take the time to do it, and I have a whole lot on my plate right now, so\nDo you use AI at all? No I feel like AI has made learning about anything like 100 times, 80 times easier Because like Google, you have to go through and find the information But now some of them, some of the AI, like Google AI, it'll go through and give you a summary of what all the information resources would say and tell you where it got sourced from and stuff like that. So you can get, it's like Wikipedia, but if Wikipedia were made by, like, people smarter than the people. Not to say smarter, right, but people who were always doing all the research to update it.\nI don't want to strike the Wikipedia people.\nIt's crazy because.\nBut they're out of business.\nThat's great. Open a whole new door because look at the actors. They don't need the actors no more to make any more to make a movie.\nYeah, but I think the bigger thing is, like, all the businesses that aren't using AI are going to be, like, way less productive.\nBut look at the ones that's using it. All the jobs are getting lost.\nBut I think that that opens more room for more people to run businesses. I think like there's communities where everybody has a business, right? And people still survive. I think here we're just used to everybody working, like you're saying, in its captive system. Where we can't actually imagine that no jobs isn't a bad thing, you know? Right. But I think it's like, how do we re-envision that structure? But I think the biggest thing is we need to not understand AI. We should understand, we should know how to use it, you know? It's a disadvantage.\nHow do you feel about AI yourself, where you know it's going to be in the school system. AI is going to teach. Yeah. It's going to teach our youth.\nYeah, but it's not going to, like, we still have to connect with kids and talk to kids about stuff. Like, I think, if we, like, that's why this is important, right? Because the AI is, like, they get asked the AI anything, but the AI is not going to know what you think you need to tell them. So, they're still, they're still, it's still important for responsible adults to be around and communicating, right?\nCorrect. Correct.\nSo, that's what I think about it. But, how you doing?\nWe'll see how that's going to work out\nSo I think it's like It's coming though\nIt's definitely coming\nAnd it's here The AI has gotten like 100 times better in the last two years I built like a whole website I know it would have cost me thousands of dollars And I made it in like a couple hours in the week And it's got pages Oh thank you And yeah So I think it's like you can ask good questions You can ask to do things for you People are using it to automate emails, phone calls All different kinds of stuff in their businesses So it's like, I think the bigger question is what business have you been waiting to start that you could use AI today to start and like make more progress in a month than you ever made and you need that, then you could be one of the most successful entrepreneurs in your community\nAnd it's crazy because all you're doing with AI is piggybacking off of something that's already in existence. You just make it better. Upgrade Yeah,\nbut now we can iterate faster. You even ask the AI what's wrong with this and it'll tell you like before you have to go talk to anybody\nIsn't there something? How can we upgrade this particular? Well, you can modify it by\nAnd what do you want to optimize for? I want to optimize, like, you know, my goal this month is then I have to do this and actually able to accomplish this. You know, what things should I focus on? It'll help you with strategy, all that stuff. And it'll, it'll reference other businesses that are working. Like what's your, what's your model business, right? And it can help you figure out what are the gaps between you and them and what your systems are. So that's what I'm on. I've been reinventing the wheel a whole lot. So I don't like to ask for help. And I'm I'm like, oh, give me a schematic of the wheel and then I'm not starting in the same place anymore.\nAnd they definitely could do that for you.\nYeah. For most things, too. That's the crazy thing for most things.\nAnd the sad thing is, it's teaching our youth how to do things they shouldn't know. How to build guns, how to make weapons, how to create drugs, how to scam something.\nI mean, it can help you do whatever you want more efficiently. So the question is, what are the new things you want people to do? Yep Yeah, man You have any message for people on the internet around the world?\nWake up Wake up to everything around you And always be aware of your surroundings\nAlright, appreciate it, man See y'all next time",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Philadelphia",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "url": "https://wethem.xyz/places#philadelphia"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Philadelphia",
+    "url": "https://wethem.xyz/portfolio#p-philadelphia"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "The Engaged Citizens",
+      "url": "https://wethem.xyz/topics/engaged-citizens"
+    }
+  ],
+  "keywords": [
+    "The Engaged Citizens"
+  ],
+  "mentions": [
+    {
+      "@type": "Book",
+      "name": "Confessions of an Economic Hit Man",
+      "author": {
+        "@type": "Person",
+        "name": "John Perkins"
+      },
+      "isbn": "9781523001903",
+      "url": "https://openlibrary.org/works/OL2693772W"
+    },
+    {
+      "@type": "Book",
+      "name": "The New Jim Crow: Mass Incarceration in the Age of Colorblindness",
+      "author": {
+        "@type": "Person",
+        "name": "Michelle Alexander"
+      },
+      "isbn": "9781620975459",
+      "url": "https://www.mahoganybooks.com/9781620975459"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Philadelphia",
+      "item": "https://wethem.xyz/portfolio#p-philadelphia"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Social anxiety, youth suicide and the 1%: Bobby",
+      "item": "https://wethem.xyz/watch/social-anxiety-youth-suicide-and-the-1-percent-bobby-germantown-philadelphia"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place], who[data-pf-who]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2026-05-07" data-pf-vid="fhGghXrP0Ww" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;16:05&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="Philadelphia" data-pf-country="United States" data-pf-project="Philadelphia" data-pf-who="Maceo">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-philadelphia">Philadelphia</a></li>
+            <li aria-current="page">Social anxiety, youth suicide and the 1%: Bobby</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">Social anxiety, youth suicide and the 1%: Bobby.</h1>
+
+    <p class="wt-byline"><strong>Bobby</strong> &middot; Reported by <strong><a href="../people/maceo.html">Maceo</a></strong> &middot; Philadelphia &middot; 16 min</p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="fhGghXrP0Ww" live postersrcset="../stills/fhGghXrP0Ww-320.jpg 320w, ../stills/fhGghXrP0Ww-480.jpg 480w, ../stills/fhGghXrP0Ww-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/fhGghXrP0Ww?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="Social anxiety, youth suicide and the 1%: Bobby, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+
+    <div class="wt-prose">
+            <p>Germantown, May 2026, the question of the week: what do you think about social anxiety? Bobby is 59, from North Philadelphia, and chose to stay off camera, so the picture is Maceo walking while the conversation runs. His first answer goes straight to the youth: &ldquo;it also plays a part in the suicide rate of the younger folks today,&rdquo; the anxiety of &ldquo;wanting to be accepted by different people,&rdquo; and &ldquo;no one wants to be themselves and happy with who they are.&rdquo; What can a community do? &ldquo;It&rsquo;s real hard because you can&rsquo;t monitor what the children watch,&rdquo; and the young &ldquo;don&rsquo;t feel comfortable talking about certain things with anyone, let alone adults.&rdquo;</p>
+            <p>What he would like more of: &ldquo;The old conscious rappers.&rdquo; On school: &ldquo;The school system was never for us,&rdquo; and &ldquo;we have to create our own if we can, but we won&rsquo;t come together as a culture or a race to help each other.&rdquo; Asked how he describes himself: &ldquo;I&rsquo;m gonna say I&rsquo;m of African descent,&rdquo; born in America, and he has never done the DNA test, because &ldquo;they kidnap us from our country, then we pay them for them to tell us where we&rsquo;re originally from.&rdquo;</p>
+            <p>His question for the city, when Maceo asks for one: &ldquo;Why don&rsquo;t we get along? Get along? Young against young, young against old.&rdquo; Every generation says the same thing to its parents, &ldquo;But We All Was The Same Age At One Time.&rdquo; He remembers gang lines at Germantown Avenue and Shelton, and asks, &ldquo;Why are we still living like that today?&rdquo; His answer is the 1%: &ldquo;If they&rsquo;re controlling 99% of the population, why are we still allowing it? One, they keep everybody divided. Race, age, religion, wealth, geographical area, culture.&rdquo; Two books, as he names them: The Economic Hitman and The New Jim Crow.</p>
+            <p>The last six minutes turn around. Maceo tells him crypto is &ldquo;kind of like that movement re-embodied,&rdquo; and Bobby, who has family in it, asks the right question: &ldquo;Can somebody just steal it and you have no knowledge of where it went?&rdquo; Maceo&rsquo;s answer is the no-back-door argument; Bobby&rsquo;s is &ldquo;I can&rsquo;t really speak on it. That&rsquo;s something I had to learn about.&rdquo; On AI Bobby sees the jobs going and the youth learning &ldquo;things they shouldn&rsquo;t know&rdquo;; Maceo sees businesses. Bobby&rsquo;s message for people around the world: &ldquo;Wake up Wake up to everything around you And always be aware of your surroundings.&rdquo; Names as given; Bobby&rsquo;s surname was not asked. The transcript below is from the original audio.</p>
+            
+    </div>
+    <section class="wt-books" aria-labelledby="wt-books-h">
+        <h2 id="wt-books-h">Books mentioned.</h2>
+        <div class="pw-book wt-book">
+            <span class="pw-book-cover"><img src="../stills/books/9781523001903.jpg" alt="The cover of Confessions of an Economic Hit Man by John Perkins" width="120" height="168" loading="lazy" decoding="async"></span>
+            <div class="pw-book-body">
+                <h3 class="pw-book-t"><a href="https://openlibrary.org/works/OL2693772W">Confessions of an Economic Hit Man</a></h3>
+                <p class="pw-book-facts">John Perkins &middot; 2004</p>
+                <p class="pw-book-line">One of the two books Bobby tells Maceo to read.</p>
+                <p class="pw-book-note"><a class="wt-at" data-seek="520" href="#t=520" data-pagefind-ignore>Hear it at 8:40</a> &middot; <a href="https://openlibrary.org/works/OL2693772W">See the book</a> at Open Library</p>
+            </div>
+        </div>
+        <div class="pw-book wt-book">
+            <span class="pw-book-cover"><img src="../stills/books/9781620975459.jpg" alt="The cover of The New Jim Crow: Mass Incarceration in the Age of Colorblindness by Michelle Alexander" width="120" height="185" loading="lazy" decoding="async"></span>
+            <div class="pw-book-body">
+                <h3 class="pw-book-t"><a href="https://www.mahoganybooks.com/9781620975459">The New Jim Crow</a></h3>
+                <p class="pw-book-facts">Michelle Alexander &middot; 2010</p>
+                <p class="pw-book-line">The other book Bobby tells Maceo to read.</p>
+                <p class="pw-book-note"><a class="wt-at" data-seek="520" href="#t=520" data-pagefind-ignore>Hear it at 8:40</a> &middot; <a href="https://www.mahoganybooks.com/9781620975459">See the book</a> at MahoganyBooks</p>
+            </div>
+        </div>
+    </section>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../places.html#philadelphia">Everything filmed in Philadelphia</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="social-anxiety-on-germantown-avenue-the-pitch.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/A8q0J0adLmQ-640.jpg" srcset="../stills/A8q0J0adLmQ-320.jpg 320w, ../stills/A8q0J0adLmQ-480.jpg 480w, ../stills/A8q0J0adLmQ-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>2:15</span></span><span>Social anxiety in Philly: Germantown Avenue.</span></a>
+        <a class="wt-rail-card" href="give-mayor-parker-all-the-respect-mr-joe-germantown.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/ezoWd7ZpNMo-640.jpg" srcset="../stills/ezoWd7ZpNMo-320.jpg 320w, ../stills/ezoWd7ZpNMo-480.jpg 480w, ../stills/ezoWd7ZpNMo-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>6:06</span></span><span>Give Mayor Parker all the respect: Mr. Joe, 65.</span></a>
+        <a class="wt-rail-card" href="why-a-job-stopped-adding-up-germantown.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/Cyv1UwE_K3w-640.jpg" srcset="../stills/Cyv1UwE_K3w-320.jpg 320w, ../stills/Cyv1UwE_K3w-480.jpg 480w, ../stills/Cyv1UwE_K3w-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>21:24</span></span><span>“The numbers don’t add up to work for nobody.” Mr. P on Haines Street.</span></a>
+        <a class="wt-rail-card" href="social-anxiety-in-philly-canis-honest-answer.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/QkTCh3Wli0Y-640.jpg" srcset="../stills/QkTCh3Wli0Y-320.jpg 320w, ../stills/QkTCh3Wli0Y-480.jpg 480w, ../stills/QkTCh3Wli0Y-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>3:37</span></span><span>Social anxiety in Philly: Cani&#x27;s honest answer.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c0"><a class="wt-t" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-s">The question of the week: social anxiety</span></li>
+                <li class="wt-line" id="c39"><a class="wt-t" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=39s" target="_blank" rel="noopener" data-pagefind-ignore>0:39</a><span class="wt-s">Social media and the suicide rate</span></li>
+                <li class="wt-line" id="c87"><a class="wt-t" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=87s" target="_blank" rel="noopener" data-pagefind-ignore>1:27</a><span class="wt-s">What can a community do?</span></li>
+                <li class="wt-line" id="c127"><a class="wt-t" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=127s" target="_blank" rel="noopener" data-pagefind-ignore>2:07</a><span class="wt-s">Why he wants the old conscious rap back</span></li>
+                <li class="wt-line" id="c163"><a class="wt-t" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=163s" target="_blank" rel="noopener" data-pagefind-ignore>2:43</a><span class="wt-s">Was the school system ever for us?</span></li>
+                <li class="wt-line" id="c204"><a class="wt-t" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=204s" target="_blank" rel="noopener" data-pagefind-ignore>3:24</a><span class="wt-s">Of African descent, born in America</span></li>
+                <li class="wt-line" id="c272"><a class="wt-t" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=272s" target="_blank" rel="noopener" data-pagefind-ignore>4:32</a><span class="wt-s">His question for the city: why can&#x27;t we get along?</span></li>
+                <li class="wt-line" id="c380"><a class="wt-t" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=380s" target="_blank" rel="noopener" data-pagefind-ignore>6:20</a><span class="wt-s">How the 1% keeps everybody divided</span></li>
+                <li class="wt-line" id="c456"><a class="wt-t" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=456s" target="_blank" rel="noopener" data-pagefind-ignore>7:36</a><span class="wt-s">Distraction, and who gets prosecuted</span></li>
+                <li class="wt-line" id="c526"><a class="wt-t" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=526s" target="_blank" rel="noopener" data-pagefind-ignore>8:46</a><span class="wt-s">The Economic Hitman and The New Jim Crow</span></li>
+                <li class="wt-line" id="c565"><a class="wt-t" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=565s" target="_blank" rel="noopener" data-pagefind-ignore>9:25</a><span class="wt-s">Is crypto Occupy Wall Street re-embodied?</span></li>
+                <li class="wt-line" id="c621"><a class="wt-t" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=621s" target="_blank" rel="noopener" data-pagefind-ignore>10:21</a><span class="wt-s">Can they take your Bitcoin?</span></li>
+                <li class="wt-line" id="c727"><a class="wt-t" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=727s" target="_blank" rel="noopener" data-pagefind-ignore>12:07</a><span class="wt-s">Is AI taking jobs or making businesses?</span></li>
+                <li class="wt-line" id="c935"><a class="wt-t" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=935s" target="_blank" rel="noopener" data-pagefind-ignore>15:35</a><span class="wt-s">Wake up</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Transcribed from the original audio and corrected for names. Speaker letters mark turns, not names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>All right. What&rsquo;s up, everybody? I&rsquo;m out here in Philly, in <a class="wt-gloss" href="../glossary.html#germantown">Germantown</a> specifically, right where I&rsquo;m from, and I&rsquo;m doing my questions for this week. So I&rsquo;m with We Them Media, as you know, and this week&rsquo;s question is, what do you think about social anxiety? And I&rsquo;m here with, what&rsquo;s your name? Bobby. I&rsquo;m here with Mr. Bobby. And how are you doing today?</p>
+            <p id="s17"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=17s" target="_blank" rel="noopener" data-pagefind-ignore>0:17</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I&rsquo;m blessed. I have no complaints at all.</p>
+            <p id="s19"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=19s" target="_blank" rel="noopener" data-pagefind-ignore>0:19</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Okay. You&rsquo;re from here in Germantown?</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s21"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=21s" target="_blank" rel="noopener" data-pagefind-ignore>0:21</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>No, from North Philadelphia.</p>
+            <p id="s22"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=22s" target="_blank" rel="noopener" data-pagefind-ignore>0:22</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Okay. And how old are you? 59. All right. Okay, so this week&rsquo;s question is, what do you think about social anxiety? What comes to mind? Ah,</p>
+            <p id="s30"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=30s" target="_blank" rel="noopener" data-pagefind-ignore>0:30</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>a whole lot, but it also plays a part in the suicide rate of the younger folks today. You know, the anxiety they go through with social media wanting to be accepted by different people is saddening that no one wants to be themselves and happy with who they are. So the anxiety that causes in our youth is staggering right now because the suicide rate of most of our youth is at an all-time high. Why is that? Social media created a big boost in this suicide attempt and people with suicide and anxiety due to suicide attempts and everything.</p>
+            <p id="s71"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=71s" target="_blank" rel="noopener" data-pagefind-ignore>1:11</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, yeah, yeah. Put an end to it.</p>
+            <p id="s72"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=72s" target="_blank" rel="noopener" data-pagefind-ignore>1:12</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Anything else?</p>
+            <p id="s76"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=76s" target="_blank" rel="noopener" data-pagefind-ignore>1:16</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I did that as a kid. I tried to do that. So I definitely hear that. I&rsquo;m curious, like, what are things that you think we can do to address that constructively, like, as a community?</p>
+            <p id="s85"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=85s" target="_blank" rel="noopener" data-pagefind-ignore>1:25</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It&rsquo;s real hard because you can&rsquo;t monitor what the children watch because you&rsquo;re not around them 24-7.</p>
+            <p id="s96"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=96s" target="_blank" rel="noopener" data-pagefind-ignore>1:36</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, absolutely.</p>
+            <p id="s97"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=97s" target="_blank" rel="noopener" data-pagefind-ignore>1:37</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Not only that, we don&rsquo;t know what they&rsquo;re going through because they don&rsquo;t feel comfortable talking about certain things with anyone, let alone adults. They don&rsquo;t even like to talk about it amongst their peers You know, they have a set few people that they talk about So that&rsquo;s hard to address I can&rsquo;t really say myself But the youth can talk about it Tell who they can talk to about it And why they feel that way</p>
+            <p id="s120"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=120s" target="_blank" rel="noopener" data-pagefind-ignore>2:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Do you feel like there&rsquo;s a kind of content you&rsquo;d like to see more of?</p>
+            <p id="s125"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=125s" target="_blank" rel="noopener" data-pagefind-ignore>2:05</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, really The old raps The old conscious rappers You know, that&rsquo;s when rap was wrapped Now it&rsquo;s all about gangster rap, money bees, and all kind of other stuff, violence. They took away the consciousness and the industry did this, you know, and they&rsquo;re the same ones that own the prisons. That&rsquo;s the crazy part, but people still don&rsquo;t want to look at it for what it is. They want us where we are today.</p>
+            <p id="s161"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=161s" target="_blank" rel="noopener" data-pagefind-ignore>2:41</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>How do you think the school system plays into that?</p>
+            <p id="s165"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=165s" target="_blank" rel="noopener" data-pagefind-ignore>2:45</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>The school system was never for us, you know, I&rsquo;m not racist, but it wasn&rsquo;t for us, they didn&rsquo;t even consider us a whole, matter of fact, they didn&rsquo;t consider us people, they considered us property, so you know our schools, we weren&rsquo;t even allowed to have books back then, and then when we got books, they were hand-me-down old books, so we already know the system&rsquo;s not for us, we have to create our own if we can, but we won&rsquo;t come together as a culture or a race to help each other.</p>
+            <p id="s196"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=196s" target="_blank" rel="noopener" data-pagefind-ignore>3:16</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>and you&rsquo;re African-American or you&rsquo;re like Caribbean or something like that I&rsquo;m I&rsquo;m gonna</p>
+            <p id="s201"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=201s" target="_blank" rel="noopener" data-pagefind-ignore>3:21</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>say I&rsquo;m of African descent okay I am African-American but they don&rsquo;t consider us American they consider us like they do right now with the immigrants even though everyone here is an immigrant other than the Native Americans yeah yeah</p>
+            <p id="s217"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=217s" target="_blank" rel="noopener" data-pagefind-ignore>3:37</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>but they alienate you from popular culture right you&rsquo;re like other we&rsquo;re other yeah</p>
+            <p id="s221"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=221s" target="_blank" rel="noopener" data-pagefind-ignore>3:41</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>so I&rsquo;m of African descent but I was born in America</p>
+            <p id="s225"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=225s" target="_blank" rel="noopener" data-pagefind-ignore>3:45</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Okay, well I&rsquo;m curious, how do you think about that for yourself? Do you know where your family&rsquo;s from, what country, stuff like that?</p>
+            <p id="s232"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=232s" target="_blank" rel="noopener" data-pagefind-ignore>3:52</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I never did the research because I see people doing, how is this, they kidnap us from our country, then we pay them for them to tell us where we&rsquo;re originally from</p>
+            <p id="s242"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=242s" target="_blank" rel="noopener" data-pagefind-ignore>4:02</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>No, I tell people, you know Right, that&rsquo;s accurate Exactly, my grandma bought it for me in high school, she said, yeah, I want to see it, so I&rsquo;m Cameroonian a lot, I&rsquo;m like, okay, that&rsquo;s cool But then it&rsquo;s like, I have no way to test that</p>
+            <p id="s254"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=254s" target="_blank" rel="noopener" data-pagefind-ignore>4:14</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>We going by them now</p>
+            <p id="s256"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=256s" target="_blank" rel="noopener" data-pagefind-ignore>4:16</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I paid $100 to be like, dang Isn&rsquo;t that something?</p>
+            <p id="s259"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=259s" target="_blank" rel="noopener" data-pagefind-ignore>4:19</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>We still don&rsquo;t know if it&rsquo;s accurate</p>
+            <p id="s261"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=261s" target="_blank" rel="noopener" data-pagefind-ignore>4:21</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>They just sold me something It&rsquo;s like a gamertag</p>
+            <p id="s264"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=264s" target="_blank" rel="noopener" data-pagefind-ignore>4:24</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>You darn it if you do, you darn it if you don&rsquo;t</p>
+            <p id="s266"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=266s" target="_blank" rel="noopener" data-pagefind-ignore>4:26</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>That&rsquo;s what I&rsquo;m saying Okay, and so I&rsquo;m curious, do you have any questions for the community yourself? Things that you&rsquo;d be interested in seeing me ask As I go around in the summer Talk to people in Philly and Germantown</p>
+            <p id="s276"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=276s" target="_blank" rel="noopener" data-pagefind-ignore>4:36</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Why don&rsquo;t we get along?</p>
+            <p id="s278"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=278s" target="_blank" rel="noopener" data-pagefind-ignore>4:38</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Get along?</p>
+            <p id="s279"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=279s" target="_blank" rel="noopener" data-pagefind-ignore>4:39</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Young against young, young against old Old against old, old against young. Why can&rsquo;t we get along? What is it that differentiates each age group that we can&rsquo;t get along? If we could figure that out, then maybe we could stop some of the nonsense that&rsquo;s going on.</p>
+            <p id="s297"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=297s" target="_blank" rel="noopener" data-pagefind-ignore>4:57</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>That&rsquo;s interesting. So you think we got to start with like intergenerational communication and recognition?</p>
+            <p id="s303"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=303s" target="_blank" rel="noopener" data-pagefind-ignore>5:03</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, because everybody has the same thing, each culture. I mean, each age group. We told our parents, you don&rsquo;t You Don&rsquo;t Understand That&rsquo;s What Everybody You Don&rsquo;t Understand But We All Was The Same Age At One Time</p>
+            <p id="s318"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=318s" target="_blank" rel="noopener" data-pagefind-ignore>5:18</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah Yeah</p>
+            <p id="s319"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=319s" target="_blank" rel="noopener" data-pagefind-ignore>5:19</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Even Though Time Changed We All Had</p>
+            <p id="s321"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=321s" target="_blank" rel="noopener" data-pagefind-ignore>5:21</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Time Is Always Changing So We&rsquo;re All Different</p>
+            <p id="s323"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=323s" target="_blank" rel="noopener" data-pagefind-ignore>5:23</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>But We All Had To Go Through Different Things Even Our My Ancestors With The Slavery It&rsquo;s A Different Form Of Slavery Today You Know It&rsquo;s Still Slavery But The Younger People</p>
+            <p id="s335"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=335s" target="_blank" rel="noopener" data-pagefind-ignore>5:35</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>It&rsquo;s A Different Form Of Captivity</p>
+            <p id="s337"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=337s" target="_blank" rel="noopener" data-pagefind-ignore>5:37</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Right Right And Then You Have The Drug Thing or you don&rsquo;t understand, we get high because of this. They got high in my area. They got high in my parents&rsquo; area and my grandparents&rsquo; area. What do you mean we don&rsquo;t understand? You know what I mean? Fighting in the school and in the street. There was gang war in my days. You couldn&rsquo;t even go across Germantown Avenue on Shelton Ave without getting to a fight because now you&rsquo;re in another area. Like schools, if you go to another school in another school district, where you from? Oh, he came from such and such school, and then there&rsquo;s a beef, you know what I&rsquo;m saying?</p>
+            <p id="s372"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=372s" target="_blank" rel="noopener" data-pagefind-ignore>6:12</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>What school do you want your neighborhood you from? Why are we still living like that today? Other cultures and other races are not fighting over the stuff we&rsquo;re fighting over.</p>
+            <p id="s384"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=384s" target="_blank" rel="noopener" data-pagefind-ignore>6:24</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, and how do we even become, like, tribal in that way, with those things? But why do those become what we identify with? That&rsquo;s the question I was trying to get to.</p>
+            <p id="s392"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=392s" target="_blank" rel="noopener" data-pagefind-ignore>6:32</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It goes back a long time by the powers that be, the wealthy. When that, um, what was it called? When they were protesting in Manhattan about the financial industry.</p>
+            <p id="s408"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=408s" target="_blank" rel="noopener" data-pagefind-ignore>6:48</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Occupy Wall Street?</p>
+            <p id="s409"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=409s" target="_blank" rel="noopener" data-pagefind-ignore>6:49</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Exactly. When I read about that, when I read about that and saw that kicked off, I said, wow, now people are going to wake up. Because they showed that it&rsquo;s only 1% that&rsquo;s making all the wealth. 1%. That means 99% of people are under their control. If they&rsquo;re controlling 99% of the population, why are we still allowing it? One, they keep everybody divided. Race, age, religion, wealth, geographical area, culture. They keep us divided. Religion, so we&rsquo;re always going at each other, going at something, and don&rsquo;t focus on them.</p>
+            <p id="s454"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=454s" target="_blank" rel="noopener" data-pagefind-ignore>7:34</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>We can&rsquo;t see them, we&rsquo;re too busy, we&rsquo;re too busy caught up, we can&rsquo;t even see our parents</p>
+            <p id="s460"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=460s" target="_blank" rel="noopener" data-pagefind-ignore>7:40</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>They always throw something up at us so we don&rsquo;t focus Trump for one, look at what Trump&rsquo;s doing He always throw something at us to distract you from something over here What</p>
+            <p id="s469"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=469s" target="_blank" rel="noopener" data-pagefind-ignore>7:49</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>they call it? Magic Files, wars,</p>
+            <p id="s472"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=472s" target="_blank" rel="noopener" data-pagefind-ignore>7:52</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>they got who, you know, Megan Thee Stallion Know what I mean? To take off of what Trump and his administration and all these wealthy people were doing All the wealthy people, this didn&rsquo;t just start</p>
+            <p id="s482"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=482s" target="_blank" rel="noopener" data-pagefind-ignore>8:02</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, yeah, of course, they&rsquo;re always already getting away with something</p>
+            <p id="s485"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=485s" target="_blank" rel="noopener" data-pagefind-ignore>8:05</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>You familiar with Hugh Hefner and the Playboy Mansion?</p>
+            <p id="s487"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=487s" target="_blank" rel="noopener" data-pagefind-ignore>8:07</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, for sure</p>
+            <p id="s488"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=488s" target="_blank" rel="noopener" data-pagefind-ignore>8:08</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>They had underage females there years ago But Hugh Hefner didn&rsquo;t cross the people with the powers that be Yeah R. Kelly did And so did P. Diddy You&rsquo;re going after people that really got control over everything you do</p>
+            <p id="s504"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=504s" target="_blank" rel="noopener" data-pagefind-ignore>8:24</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah People in</p>
+            <p id="s505"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=505s" target="_blank" rel="noopener" data-pagefind-ignore>8:25</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>what they call Black Rock What is it? Black something But they&rsquo;re the ones selling military equipment around the world</p>
+            <p id="s512"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=512s" target="_blank" rel="noopener" data-pagefind-ignore>8:32</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, man, yeah, right, right</p>
+            <p id="s513"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=513s" target="_blank" rel="noopener" data-pagefind-ignore>8:33</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Around the world A lot of</p>
+            <p id="s514"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=514s" target="_blank" rel="noopener" data-pagefind-ignore>8:34</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>people protest in the same country</p>
+            <p id="s517"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=517s" target="_blank" rel="noopener" data-pagefind-ignore>8:37</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I got a good book for you to read</p>
+            <p id="s519"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=519s" target="_blank" rel="noopener" data-pagefind-ignore>8:39</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Okay, hit me with it</p>
+            <p id="s520"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=520s" target="_blank" rel="noopener" data-pagefind-ignore>8:40</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It&rsquo;s two One is The Economic Hitman And the other is The New Jim Crow I think it&rsquo;s by Cheryl Stern But her name is Cheryl Because there&rsquo;s a bunch of books written on The New Jim Crow But her name is Cheryl I think Stern Cheryl is definitely a name</p>
+            <p id="s536"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=536s" target="_blank" rel="noopener" data-pagefind-ignore>8:56</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Okay, no, it&rsquo;s cool</p>
+            <p id="s537"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=537s" target="_blank" rel="noopener" data-pagefind-ignore>8:57</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Read that book, bro</p>
+            <p id="s539"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=539s" target="_blank" rel="noopener" data-pagefind-ignore>8:59</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Okay, thank you</p>
+            <p id="s541"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=541s" target="_blank" rel="noopener" data-pagefind-ignore>9:01</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And The Economic Hitman</p>
+            <p id="s543"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=543s" target="_blank" rel="noopener" data-pagefind-ignore>9:03</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>You heard that? He&rsquo;s talking to all of us.</p>
+            <p id="s545"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=545s" target="_blank" rel="noopener" data-pagefind-ignore>9:05</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Two real good books to read.</p>
+            <p id="s549"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=549s" target="_blank" rel="noopener" data-pagefind-ignore>9:09</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I&rsquo;m here to learn it all. I&rsquo;ve been doing stuff in crypto the last couple of years, like I was saying. It&rsquo;s really interesting you mentioned the whole 1% conversation. For me, I was probably in sixth grade. I don&rsquo;t know what they&rsquo;re talking about, people on Wall Street. That didn&rsquo;t mean anything to me. But for you, you&rsquo;re saying people learned about the 1%. People became aware of a 1%.</p>
+            <p id="s572"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=572s" target="_blank" rel="noopener" data-pagefind-ignore>9:32</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>But you see what happened with that movement? They shut it down so quickly You never hear about that no more But you hear about all other movements</p>
+            <p id="s579"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=579s" target="_blank" rel="noopener" data-pagefind-ignore>9:39</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Well, that&rsquo;s what I was going to say I feel like crypto is kind of like that movement re-embodied It&rsquo;s like people are trying to design new kinds of money Because they know the old kinds of money already are controlled by people We don&rsquo;t even know who they are</p>
+            <p id="s589"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=589s" target="_blank" rel="noopener" data-pagefind-ignore>9:49</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>See, but with the crypto I don&rsquo;t know nothing about the crypto So I can&rsquo;t speak on it I have family members involved in it But I haven&rsquo;t really learned about it</p>
+            <p id="s596"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=596s" target="_blank" rel="noopener" data-pagefind-ignore>9:56</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>That&rsquo;s cool, that&rsquo;s cool Most people I talk to don&rsquo;t know about it I&rsquo;m like a crazy nerdy guy who knows a lot about it</p>
+            <p id="s601"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=601s" target="_blank" rel="noopener" data-pagefind-ignore>10:01</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>But that&rsquo;s a whole new thing You&rsquo;re saying that who&rsquo;s in control of it?</p>
+            <p id="s605"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=605s" target="_blank" rel="noopener" data-pagefind-ignore>10:05</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, well, exactly.</p>
+            <p id="s606"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=606s" target="_blank" rel="noopener" data-pagefind-ignore>10:06</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Can somebody just steal it and you have no knowledge of where it went? No. Because you know the government has a supercomputer.</p>
+            <p id="s613"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=613s" target="_blank" rel="noopener" data-pagefind-ignore>10:13</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Well, not necessarily, no, but that&rsquo;s true. I don&rsquo;t know about the supercomputer part, but to go back to the, like, do we know who controls it?</p>
+            <p id="s621"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=621s" target="_blank" rel="noopener" data-pagefind-ignore>10:21</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Right? Like</p>
+            <p id="s621-2"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=621s" target="_blank" rel="noopener" data-pagefind-ignore>10:21</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I would say, like Bitcoin, we know that people can control the price, but they can&rsquo;t ever go in your wallet and actually take your Bitcoin.</p>
+            <p id="s629"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=629s" target="_blank" rel="noopener" data-pagefind-ignore>10:29</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Now, why can&rsquo;t they? If people can hack into the Pentagon&rsquo;s computer</p>
+            <p id="s634"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=634s" target="_blank" rel="noopener" data-pagefind-ignore>10:34</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, but it&rsquo;s because it&rsquo;s a system that&rsquo;s designed to be unexploitable. That&rsquo;s kind of the premise. Nobody owns it and so there&rsquo;s no person to actually hack. They can&rsquo;t hack me as the owner of Bitcoin to get all the Bitcoin stuff. But the Pentagon, there&rsquo;s a lot of liabilities, a lot of people. And the way it&rsquo;s designed is it&rsquo;s a computer software that runs across all the computers all at once</p>
+            <p id="s655"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=655s" target="_blank" rel="noopener" data-pagefind-ignore>10:55</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So there&rsquo;s no way human, so there&rsquo;s no way humanly possible for somebody to steal my Bitcoin</p>
+            <p id="s667"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=667s" target="_blank" rel="noopener" data-pagefind-ignore>11:07</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Right now, right now they could hack into your computer and then they could get it through your computer But they couldn&rsquo;t get, well just like through your email, like you did like you did something like that But like they wouldn&rsquo;t be able to necessarily go in and like find it on the internet somewhere They&rsquo;re going to have to go through you</p>
+            <p id="s680"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=680s" target="_blank" rel="noopener" data-pagefind-ignore>11:20</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Dark web, there&rsquo;s no back door to it</p>
+            <p id="s684"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=684s" target="_blank" rel="noopener" data-pagefind-ignore>11:24</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>That&rsquo;s like the premise, like people have the belief that this is the first currency that&rsquo;s never had a back door That&rsquo;s what Bitcoin is But because rich people could have still got it to you before you, they could buy it and sell it and it&rsquo;d go up and down and then you&rsquo;re like, you know, but then they just keep buying more because they believe still, you know, it&rsquo;s the one with the no bag door.</p>
+            <p id="s700"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=700s" target="_blank" rel="noopener" data-pagefind-ignore>11:40</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>See, I can&rsquo;t really speak on it. That&rsquo;s something I had to learn about that. I&rsquo;ve never wanted to go that route because I don&rsquo;t know anything about it right now.</p>
+            <p id="s709"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=709s" target="_blank" rel="noopener" data-pagefind-ignore>11:49</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, well, I&rsquo;m trying to educate people. I&rsquo;m trying to learn, but I&rsquo;m trying to teach people too. So I&rsquo;m a Trojan horse. I got you.</p>
+            <p id="s714"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=714s" target="_blank" rel="noopener" data-pagefind-ignore>11:54</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I got you. Because I have a family who&rsquo;s been doing it for years and they&rsquo;ve been making money from it.</p>
+            <p id="s718"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=718s" target="_blank" rel="noopener" data-pagefind-ignore>11:58</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>That&rsquo;s cool</p>
+            <p id="s719"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=719s" target="_blank" rel="noopener" data-pagefind-ignore>11:59</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And they&rsquo;d be trying to tell me, but you know how I&rsquo;m used to old ways, you know what I mean?</p>
+            <p id="s723"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=723s" target="_blank" rel="noopener" data-pagefind-ignore>12:03</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I mean, you can let them explain it, right? You&rsquo;ll probably see the world, and the world&rsquo;s changing, right?</p>
+            <p id="s726"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=726s" target="_blank" rel="noopener" data-pagefind-ignore>12:06</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, and I gotta take the time to do it, and I have a whole lot on my plate right now, so</p>
+            <p id="s730"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=730s" target="_blank" rel="noopener" data-pagefind-ignore>12:10</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Do you use AI at all? No I feel like AI has made learning about anything like 100 times, 80 times easier Because like Google, you have to go through and find the information But now some of them, some of the AI, like Google AI, it&rsquo;ll go through and give you a summary of what all the information resources would say and tell you where it got sourced from and stuff like that. So you can get, it&rsquo;s like Wikipedia, but if Wikipedia were made by, like, people smarter than the people. Not to say smarter, right, but people who were always doing all the research to update it.</p>
+            <p id="s732"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=732s" target="_blank" rel="noopener" data-pagefind-ignore>12:12</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I don&rsquo;t want to strike the Wikipedia people.</p>
+            <p id="s759"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=759s" target="_blank" rel="noopener" data-pagefind-ignore>12:39</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It&rsquo;s crazy because.</p>
+            <p id="s761"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=761s" target="_blank" rel="noopener" data-pagefind-ignore>12:41</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>But they&rsquo;re out of business.</p>
+            <p id="s763"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=763s" target="_blank" rel="noopener" data-pagefind-ignore>12:43</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>That&rsquo;s great. Open a whole new door because look at the actors. They don&rsquo;t need the actors no more to make any more to make a movie.</p>
+            <p id="s771"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=771s" target="_blank" rel="noopener" data-pagefind-ignore>12:51</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, but I think the bigger thing is, like, all the businesses that aren&rsquo;t using AI are going to be, like, way less productive.</p>
+            <p id="s776"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=776s" target="_blank" rel="noopener" data-pagefind-ignore>12:56</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>But look at the ones that&rsquo;s using it. All the jobs are getting lost.</p>
+            <p id="s780"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=780s" target="_blank" rel="noopener" data-pagefind-ignore>13:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>But I think that that opens more room for more people to run businesses. I think like there&rsquo;s communities where everybody has a business, right? And people still survive. I think here we&rsquo;re just used to everybody working, like you&rsquo;re saying, in its captive system. Where we can&rsquo;t actually imagine that no jobs isn&rsquo;t a bad thing, you know? Right. But I think it&rsquo;s like, how do we re-envision that structure? But I think the biggest thing is we need to not understand AI. We should understand, we should know how to use it, you know? It&rsquo;s a disadvantage.</p>
+            <p id="s804"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=804s" target="_blank" rel="noopener" data-pagefind-ignore>13:24</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>How do you feel about AI yourself, where you know it&rsquo;s going to be in the school system. AI is going to teach. Yeah. It&rsquo;s going to teach our youth.</p>
+            <p id="s811"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=811s" target="_blank" rel="noopener" data-pagefind-ignore>13:31</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, but it&rsquo;s not going to, like, we still have to connect with kids and talk to kids about stuff. Like, I think, if we, like, that&rsquo;s why this is important, right? Because the AI is, like, they get asked the AI anything, but the AI is not going to know what you think you need to tell them. So, they&rsquo;re still, they&rsquo;re still, it&rsquo;s still important for responsible adults to be around and communicating, right?</p>
+            <p id="s827"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=827s" target="_blank" rel="noopener" data-pagefind-ignore>13:47</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Correct. Correct.</p>
+            <p id="s829"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=829s" target="_blank" rel="noopener" data-pagefind-ignore>13:49</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>So, that&rsquo;s what I think about it. But, how you doing?</p>
+            <p id="s834"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=834s" target="_blank" rel="noopener" data-pagefind-ignore>13:54</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>We&rsquo;ll see how that&rsquo;s going to work out</p>
+            <p id="s835"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=835s" target="_blank" rel="noopener" data-pagefind-ignore>13:55</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>So I think it&rsquo;s like It&rsquo;s coming though</p>
+            <p id="s840"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=840s" target="_blank" rel="noopener" data-pagefind-ignore>14:00</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It&rsquo;s definitely coming</p>
+            <p id="s841"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=841s" target="_blank" rel="noopener" data-pagefind-ignore>14:01</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And it&rsquo;s here The AI has gotten like 100 times better in the last two years I built like a whole website I know it would have cost me thousands of dollars And I made it in like a couple hours in the week And it&rsquo;s got pages Oh thank you And yeah So I think it&rsquo;s like you can ask good questions You can ask to do things for you People are using it to automate emails, phone calls All different kinds of stuff in their businesses So it&rsquo;s like, I think the bigger question is what business have you been waiting to start that you could use AI today to start and like make more progress in a month than you ever made and you need that, then you could be one of the most successful entrepreneurs in your community</p>
+            <p id="s873"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=873s" target="_blank" rel="noopener" data-pagefind-ignore>14:33</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And it&rsquo;s crazy because all you&rsquo;re doing with AI is piggybacking off of something that&rsquo;s already in existence. You just make it better. Upgrade Yeah,</p>
+            <p id="s884"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=884s" target="_blank" rel="noopener" data-pagefind-ignore>14:44</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>but now we can iterate faster. You even ask the AI what&rsquo;s wrong with this and it&rsquo;ll tell you like before you have to go talk to anybody</p>
+            <p id="s889"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=889s" target="_blank" rel="noopener" data-pagefind-ignore>14:49</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Isn&rsquo;t there something? How can we upgrade this particular? Well, you can modify it by</p>
+            <p id="s896"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=896s" target="_blank" rel="noopener" data-pagefind-ignore>14:56</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And what do you want to optimize for? I want to optimize, like, you know, my goal this month is then I have to do this and actually able to accomplish this. You know, what things should I focus on? It&rsquo;ll help you with strategy, all that stuff. And it&rsquo;ll, it&rsquo;ll reference other businesses that are working. Like what&rsquo;s your, what&rsquo;s your model business, right? And it can help you figure out what are the gaps between you and them and what your systems are. So that&rsquo;s what I&rsquo;m on. I&rsquo;ve been reinventing the wheel a whole lot. So I don&rsquo;t like to ask for help. And I&rsquo;m I&rsquo;m like, oh, give me a schematic of the wheel and then I&rsquo;m not starting in the same place anymore.</p>
+            <p id="s925"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=925s" target="_blank" rel="noopener" data-pagefind-ignore>15:25</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And they definitely could do that for you.</p>
+            <p id="s928"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=928s" target="_blank" rel="noopener" data-pagefind-ignore>15:28</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah. For most things, too. That&rsquo;s the crazy thing for most things.</p>
+            <p id="s931"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=931s" target="_blank" rel="noopener" data-pagefind-ignore>15:31</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And the sad thing is, it&rsquo;s teaching our youth how to do things they shouldn&rsquo;t know. How to build guns, how to make weapons, how to create drugs, how to scam something.</p>
+            <p id="s941"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=941s" target="_blank" rel="noopener" data-pagefind-ignore>15:41</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I mean, it can help you do whatever you want more efficiently. So the question is, what are the new things you want people to do? Yep Yeah, man You have any message for people on the internet around the world?</p>
+            <p id="s952"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=952s" target="_blank" rel="noopener" data-pagefind-ignore>15:52</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Wake up Wake up to everything around you And always be aware of your surroundings</p>
+            <p id="s958"><a class="wt-at" href="https://www.youtube.com/watch?v=fhGghXrP0Ww&amp;t=958s" target="_blank" rel="noopener" data-pagefind-ignore>15:58</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Alright, appreciate it, man See y&rsquo;all next time</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+<div id="after-transcript" tabindex="-1"><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from Philadelphia.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-philadelphia">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="why-a-job-stopped-adding-up-germantown.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/Cyv1UwE_K3w-640.jpg" srcset="../stills/Cyv1UwE_K3w-320.jpg 320w, ../stills/Cyv1UwE_K3w-480.jpg 480w, ../stills/Cyv1UwE_K3w-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>21:24</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Selected work · Philadelphia · 2026</span>
+                    <h3 class="report-title">“The numbers don’t add up to work for nobody.” Mr. P on Haines Street.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="what-we-the-people-looks-like-germantown-philadelphia.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/p3Oq_LZuOmE-640.jpg" srcset="../stills/p3Oq_LZuOmE-320.jpg 320w, ../stills/p3Oq_LZuOmE-480.jpg 480w, ../stills/p3Oq_LZuOmE-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>8:06</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Philadelphia · Germantown</span>
+                    <h3 class="report-title">Neighbors organizing music and speakers in Germantown.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="what-do-you-think-about-the-usa-germantown-philadelphia.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/2xGaR6sXFNE-640.jpg" srcset="../stills/2xGaR6sXFNE-320.jpg 320w, ../stills/2xGaR6sXFNE-480.jpg 480w, ../stills/2xGaR6sXFNE-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>5:41</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Philadelphia · Germantown</span>
+                    <h3 class="report-title">The USA, the city, and a cleared record.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../places.html#philadelphia">Everything filmed in Philadelphia</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

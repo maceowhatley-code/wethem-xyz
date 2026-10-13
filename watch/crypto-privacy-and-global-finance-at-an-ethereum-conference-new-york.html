@@ -1,0 +1,841 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="The produced piece from the ETH Global week in New York, June 2026, the one the trailer was cut from.">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/crypto-privacy-and-global-finance-at-an-ethereum-conference-new-york">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="Crypto, Privacy and Global Finance at ETHconf: Unlink | NYC">
+    <meta property="og:description" content="The produced piece from the ETH Global week in New York, June 2026, the one the trailer was cut from.">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/crypto-privacy-and-global-finance-at-an-ethereum-conference-new-york.jpg?v=2401bc0ea2">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Crypto, privacy and global finance at ETHconf: Maggie of Unlink">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/crypto-privacy-and-global-finance-at-an-ethereum-conference-new-york.jpg?v=2401bc0ea2">
+    <meta property="og:url" content="https://wethem.xyz/watch/crypto-privacy-and-global-finance-at-an-ethereum-conference-new-york">
+    <title>Crypto, Privacy and Global Finance at ETHconf: Unlink | NYC &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/crypto-privacy-and-global-finance-at-an-ethereum-conference-new-york#video",
+  "name": "Crypto, Privacy and Global Finance at ETHconf: Unlink | NYC",
+  "description": "The produced piece from the ETH Global week in New York, June 2026, the one the trailer was cut from. It opens on a voice from the floor: \"I do believe that New York fundamentally is the financial capital of the world,\" then a man at a basketball game toasting \"People that love to be decentralized\" and his late Shih Tzu. Maceo, in narration: \"Well, that's why I'm here. Let's find out.\" Then the walk in. \"New York doesn't ease you in. You step out and you're already in it.\" He grew up a couple of hours away, close enough that the city \"was never some distant idea.\" His statement of purpose is the clearest on tape: \"Over the last five years, we've been researching how cryptocurrency and decentralized technology can empower everyday people around the world,\" and the reason for the trip, to understand \"how Ethereum is working to show Wall Street it is ready to be the global settlement layer for financial systems.\" On the floor at ETHconf, Maggie, COO of Unlink, which \"builds privacy infrastructure for companies that want to use blockchains privately,\" so that money moves \"across any EVM blockchain fully privately and compliantly.\" A COO on a team of five \"takes care of everything that's not technical in the company,\" down to the swag: \"We actually ran out of t-shirts.\" Maceo brings her the question people outside asked him that morning, what is crypto? \"That's a really hard question to answer,\" she says, then answers it: it \"enables anyone in the world to participate in the global financial system,\" because the old rails are \"very clunky and very slow. and very expensive.\" For a 20-year-old, careers, and investing in tokenized assets before you are old enough for a brokerage account. For a 60-year-old, receiving money from family abroad: \"your family can essentially now send money to you instantly and also without additional fees.\" What is ETH? \"the native token on the Ethereum network\" and the ecosystem built on it. What sets its builders apart is composability, treating each piece \"as a puzzle piece or a building block.\" Her message for the builders: \"get involved,\" go to conferences, \"Just keep talking to people.\" Why New York: \"being in New York is a very symbolic way of saying\" the traditional rails worked, and now \"we're going to make that even better.\" Where Ethereum is: \"I think we're at an inflection point,\" and \"from here on out, it's going to be even more obvious that crypto is going to be the center of finance.\" She learns the sign-off on camera. The transcript below is from the original audio.",
+  "thumbnailUrl": [
+    "https://wethem.xyz/stills/WXm8AWkc37M.jpg",
+    "https://i.ytimg.com/vi/WXm8AWkc37M/maxresdefault.jpg"
+  ],
+  "uploadDate": "2026-09-03T04:04:08Z",
+  "embedUrl": "https://www.youtube.com/embed/WXm8AWkc37M",
+  "url": "https://wethem.xyz/watch/crypto-privacy-and-global-finance-at-an-ethereum-conference-new-york",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT12M31S",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "New York, the financial capital of the world",
+      "startOffset": 0,
+      "url": "https://wethem.xyz/watch/crypto-privacy-and-global-finance-at-an-ethereum-conference-new-york?t=0",
+      "endOffset": 57
+    },
+    {
+      "@type": "Clip",
+      "name": "Who are the people being decentralized?",
+      "startOffset": 57,
+      "url": "https://wethem.xyz/watch/crypto-privacy-and-global-finance-at-an-ethereum-conference-new-york?t=57",
+      "endOffset": 78
+    },
+    {
+      "@type": "Clip",
+      "name": "New York does not ease you in",
+      "startOffset": 78,
+      "url": "https://wethem.xyz/watch/crypto-privacy-and-global-finance-at-an-ethereum-conference-new-york?t=78",
+      "endOffset": 156
+    },
+    {
+      "@type": "Clip",
+      "name": "What does Unlink do? Privacy for blockchains",
+      "startOffset": 156,
+      "url": "https://wethem.xyz/watch/crypto-privacy-and-global-finance-at-an-ethereum-conference-new-york?t=156",
+      "endOffset": 226
+    },
+    {
+      "@type": "Clip",
+      "name": "What is crypto? Global finance for anyone",
+      "startOffset": 226,
+      "url": "https://wethem.xyz/watch/crypto-privacy-and-global-finance-at-an-ethereum-conference-new-york?t=226",
+      "endOffset": 281
+    },
+    {
+      "@type": "Clip",
+      "name": "If you are 20, or 60, and have never used it",
+      "startOffset": 281,
+      "url": "https://wethem.xyz/watch/crypto-privacy-and-global-finance-at-an-ethereum-conference-new-york?t=281",
+      "endOffset": 389
+    },
+    {
+      "@type": "Clip",
+      "name": "What is ETH?",
+      "startOffset": 389,
+      "url": "https://wethem.xyz/watch/crypto-privacy-and-global-finance-at-an-ethereum-conference-new-york?t=389",
+      "endOffset": 428
+    },
+    {
+      "@type": "Clip",
+      "name": "Composability: pieces that fit like a puzzle",
+      "startOffset": 428,
+      "url": "https://wethem.xyz/watch/crypto-privacy-and-global-finance-at-an-ethereum-conference-new-york?t=428",
+      "endOffset": 527
+    },
+    {
+      "@type": "Clip",
+      "name": "To builders: get involved, go to conferences",
+      "startOffset": 527,
+      "url": "https://wethem.xyz/watch/crypto-privacy-and-global-finance-at-an-ethereum-conference-new-york?t=527",
+      "endOffset": 581
+    },
+    {
+      "@type": "Clip",
+      "name": "Why New York: the financial capital of the world",
+      "startOffset": 581,
+      "url": "https://wethem.xyz/watch/crypto-privacy-and-global-finance-at-an-ethereum-conference-new-york?t=581",
+      "endOffset": 646
+    },
+    {
+      "@type": "Clip",
+      "name": "Where is Ethereum now? An inflection point",
+      "startOffset": 646,
+      "url": "https://wethem.xyz/watch/crypto-privacy-and-global-finance-at-an-ethereum-conference-new-york?t=646",
+      "endOffset": 714
+    },
+    {
+      "@type": "Clip",
+      "name": "Booyah",
+      "startOffset": 714,
+      "url": "https://wethem.xyz/watch/crypto-privacy-and-global-finance-at-an-ethereum-conference-new-york?t=714",
+      "endOffset": 751
+    }
+  ],
+  "creator": {
+    "@type": "Person",
+    "name": "Maceo",
+    "url": "https://wethem.xyz/people/maceo"
+  },
+  "transcript": "I do believe that New York fundamentally is the financial capital of the world. And as we discussed earlier, crypto enables anybody in the world to participate in the global financial economy. And so that means that a lot of crypto companies and a lot of people that are interested in building the future of finance are all based in New York. And so I think it's really, really special for a conference like this to be based in New York because it really is the convergence of people coming from all over the world to, A, like learn about what does it mean for us to build a frontier. And I think everybody who is in New York and everybody who wants to come to New York has sort of like the similar vision of basically bringing improving the system. And so I think being in New York is a very symbolic way of saying that, like, okay, you know, the traditional rails have worked very, very well, but now we're going to be back. We're going to go back to the same place that the traditional rails have sort of expanded, and we're going to make that even better.\nPeople that love to be decentralized, you know what I'm saying? And also, rest in peace, Sugar Plum.\nThat's my Shih Tzu.\nShe died about 10 years ago. Appreciate you. Yeah, you have questions, right? Like, what did he just drink? Why is he honoring his late Shih Tzu at a basketball game? Who are Are the people even being decentralized? What does that mean? Well, that's why I'm here. Let's find out. New York doesn't ease you in. You step out and you're already in it. A few million strangers, all going somewhere all at once. I grew up a couple hours away in Philly, close enough that New York was never some distant idea. It was a city you took the bus to or train to, a place I get to go and see my friends from high school and college.\nHey, what's your name?\nThat's the thing about this city. It's stacked. Bodegas under glass towers, old New York holding up the new one, and most new people have no idea what the old one even looked like. Oh, not you, sorry. This time I linked up with some friends out here in the city. People already connected, already part of what I came for, an Ethereum conference, the kind of room where we're negotiating where technology is going. But before any of that, you eat, you walk, You let the city remind you why people around the world dream of being here. And somewhere between these streets and the conference floor, that's where the story really starts. My name is Mase Wale, and I'm the founder at We Them Media. Over the last 5 years, we've been researching how cryptocurrency and decentralized technology can empower everyday people around the world. And that's why I attended the Ethereum conference in New York City a couple weeks ago, to better understand and share with you all how Ethereum is working to show Wall Street it is ready to be the global settlement layer for financial systems.\nAnd we're here to show you what it means.\nLet's go.\nAll right, sick. And so what's your name?\nMy name is Maggie, and I'm the COO at Unlink.\nOkay, so tell us about Unlink.\nSo Unlink builds privacy infrastructure for companies that want to use blockchains privately, and you can basically move money across any EVM blockchain fully privately and compliantly. So it's for companies that want to use, yeah, any EVM chain.\nOkay, and what is it to be a COO?\nUm, what it means to be a CEO -- so our team is 5 people. And there's 3 engineers, and then there's a CEO who takes care of basically everything in the company, and then there's a COO who basically takes care of everything that's not technical in the company. So everything from marketing, operations, go-to-market, partnerships, producing swag. We actually ran out of t-shirts, as you can see, and we also don't have any more caps because everybody came and took the caps. So yeah, I basically do everything that's related to like building up our community, talking to clients. marketing, operations, just everything in between that's like not related to coding and using Claude Code or anything to like build our product. That's me. So yeah.\nVery cool. And so I talked to some people obviously outside the conference earlier today and they want to know, what is crypto?\nOoh, okay. That's a really hard question to answer. What is crypto?\nIt's an expensive question.\nIt's a very expensive question. I need to think about how to answer this well. I think That first and foremost, the biggest value add of crypto, I think, is the ability for anyone anywhere in the world to get access to financial tools that they wouldn't be able to otherwise. And I do think that crypto sort of enables anyone in the world to participate in the global financial system. And whether you are in a country in Africa, whether you're in a country in Asia, whether you're from North America, Wherever you are, you can really participate and be a part of the global financial economy. Without crypto, it would be really hard for you to do that because the rails in order to do that are very clunky and very slow and very expensive. So I think that is what crypto enables people to do, is to participate in the global financial economy.\nOkay.\nAnd so what are ways that people could do that? Like, if I'm 20, I never used crypto in my life, or I'm 60, I never used crypto in my life, what would I do with crypto as a New Yorker?\nYeah. If you are a 20-year-old and you've never interacted with crypto before, I think first, like, there's ways to actually make money in crypto. So there's a lot of different companies in crypto that are actively hiring for people in marketing and sales. And so there's a lot of different ways to basically -- there's a lot of opportunities in crypto for a career and jobs where you can learn a lot of things about the frontier of like financial technology and then also be able to make money out of like building a career in this industry. And then the other way that you can interact with crypto is obviously by holding crypto.\nAnd so a lot of different assets are kind of like a store of value. And so, for instance, crypto really enables people to invest in things that you previously cannot invest in, whether it's because of like your geographic location or whether it's because of your age. If you're 20 or like even if you're younger than 20 and you want to participate in certain investments and you want to, you know, put your money where your mouth is at, then you can actually use crypto to basically buy into things that you really believe in. So now there's like this whole trend of like tokenized assets. Or just like tokenized stocks.\nAnd so, for instance, like if you are not 21 or if you're not of legal age wherever you are, maybe you can't open like an investing account. Maybe you can't open a brokerage account because there's like limitations or restrictions on how old you have to be in order to do that. But now, like as like a 16-year-old, 17-year-old, you can actually like create a crypto wallet or create a crypto account and then actually be able to invest in different tokenized assets that you believe in or invest in companies that you believe in that are basically tokenized and put on chain. If you believe in them, so that's one thing that you could do.\nAnd then as a sixty-year-old, if you want to receive money from other countries from your family, for instance, and it's like really expensive, like if your family wants to send you five thousand dollars, oh my gosh! They have to pay like an extra a thousand dollars just to send that five thousand dollars to you. As someone who's receiving money cross borders, your family can essentially now send money to you instantly and also without additional fees if you're if they're using crypto rails. So again, you can open like a crypto account and then basically send that. crypto account address to your family, who then can send you money directly from overseas instantaneously.\nSo you don't even have to wait like 3 to 5 days for that to process.\nOkay. And then what is ETH specifically?\nWhat is ETH? Okay, so ETH is -- it's spelled ETH, and ETH is basically a token. It's the native token on the Ethereum network. And so essentially, ETH is something that you can invest in. It's an asset. And it's, and it's something that you can hold if you believe in the Ethereum blockchain network and if you believe that the Ethereum blockchain network will continue to grow and scale. And then with ETH, you, you can also define ETH as like basically the Ethereum ecosystem where there's a lot of different people that are kind of like building new applications on the Ethereum blockchain. And so in order to use these applications on this blockchain, you would have to have some amount of ETH in your wallet in order to like pay for certain services for using these applications.\nOkay, very sick. And what would you say differentiates the builders in the Ethereum ecosystem from like traditional tech builders?\nOh, okay. I think for traditional tech builders, they -- so if you're in traditional tech, you have access to a lot of different tools and services that you can use to build products. But sometimes these traditional tools and products are actually not compatible with each other. And so maybe if you use like one tech tool and you want to build something, maybe that tech tool is all of a sudden not compatible with another tech tool. And so you actually have to make a trade-off between like what tools you use. Whereas if you're a builder within the Ethereum ecosystem, everything is mostly composable and compatible. So we talk about this concept of composability. And so if you're a builder on the Ethereum ecosystem and you're building applications on Ethereum, everything that you do, everything that you integrate or add into your product is actually fully composable. So you're actually able to like treat it as like a puzzle piece or like a building block of like different elements that you can, you can, you can put together in order to build something interesting. Whereas in like a traditional tech world, maybe there's some things that actually don't match with one another and then you're not able to put these things together. Yeah.\nOkay.\nAnd your message for the ecosystem or the builders?\nMy message for the builders is to get involved. If you want to be a part of crypto, if you want to learn about crypto, the best way is to just go out and meet people. And where you can do that is you can go to conferences. If you're based in New York, you should definitely check out all the conferences that are happening around New York. So we're currently at ETHConf. It's at the Javits Center from June 8th to 10th. Today is the last day, unfortunately. But if you want to learn more about Ethereum, you should go to the ETH Global Hackathon, which is happening June 12th to 14th. So this weekend. There's also a lot of other events that are happening all throughout the city all the time. And so I would just encourage anyone who's interested to actually go on Luma. Luma, there's a bunch of like side events that are in New York and all around the world and just get involved and talk to people and introduce yourself to people. Talk to people, ask them what they do, how they got into the space. And also how you can get involved. Just keep talking to people.\nIf I were going to ask you one more thing, would be why do you think it's important in this moment that this conference is in New York and that ETH Global is holding their first conference?\nWhy is it important or unique?\nWhy is this happening? Yeah, significant. Significant. Okay.\nWhy is it significant? So I do believe that New York fundamentally is the financial capital of the world. And as we discussed earlier, crypto enables anybody in the world to participate in the global financial economy. And so that means that a lot of crypto companies and a lot of people that are interested in building the future of finance are all based in New York. And so I think it's really, really special for a conference like this to be based in New York because it really is the convergence of people coming from all over the world to, A, like learn about what does it mean for us to build a frontier and be at the frontier of financial technology?\nWhat does it mean to actually go from the traditional rails that we've had in the past, the legacy systems, and how do we actually go from that to building a better system? And I think everybody who is in New York and everybody who wants to come to New York has sort of like a similar vision of basically bringing -- improving the system. And so I think being in New York is a very symbolic way of saying that, like, okay, you know, the traditional rails have worked very, very well, but now we're going to be back. We're going to go back to the same place that the traditional rails have sort of expanded and we're going to make that even better.\nSo I think New York is the best place to hold a conference like this for that reason.\nAnd so how would you describe this moment for like the ecosystem and being someone who's worked at ETH Global is here now, obviously thinking about how people can adopt this technology?\nHow do I -- sorry, what was the question?\nHow would you think about like this moment?\nHow do I think about where we're at?\nOkay. Ethereum's timeline.\nI think we're at an inflection point. I think that it's been obviously a lot of, a lot of -- it's been tumultuous over the last couple of years. And I think Ethereum has, has had its ups and downs and crypto has always had its ups and downs. And I think right now AI is obviously a really big topic of discussion. But I actually do think that crypto is at an inflection point. And I do think that from here on out, it's going to be even more obvious that crypto is going to be the center of finance. And I actually think that as we go from here until, you know, the future years from now, I think that there's going to be more and more people that want to adopt this technology simply because it's faster, it's cheaper, and it's more efficient and it's more decentralized and it's actually safer. And so I think that there's going to be a lot more companies, there's going to be a lot more institutions, there's going to be a lot more users that want to participate and come onto crypto rails. So I'm very excited actually for what's to come.\nOkay, awesome. If you say huya, it's like how we like do our like.\nSure.\nSo like three, two, one.\nBooyah!\nAnd where can where can we find you on socials? Where can we tag it?\nYou can me personally or you could do whichever you want.\nLike we're going to tag whatever you tell us.\nOh, okay. To learn more about Unlink, you can go to the website unlink.xyz and then our Twitter is unlink_xyz and then my personal Twitter is cxqmaggy.\nOkay, big.",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "New York",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "url": "https://wethem.xyz/places#new-york"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "ETH Global, New York",
+    "url": "https://wethem.xyz/portfolio#p-eth-global"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Blockchain Builders",
+      "url": "https://wethem.xyz/topics/blockchain-builders"
+    }
+  ],
+  "keywords": [
+    "Blockchain Builders",
+    "What is Ethereum?",
+    "Do you have a message for the builders?"
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ETH Global, New York",
+      "item": "https://wethem.xyz/portfolio#p-eth-global"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Crypto, privacy and global finance at ETHconf: Maggie of Unlink",
+      "item": "https://wethem.xyz/watch/crypto-privacy-and-global-finance-at-an-ethereum-conference-new-york"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place], who[data-pf-who]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2026-09-03" data-pf-vid="WXm8AWkc37M" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;12:31&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="New York" data-pf-country="United States" data-pf-project="ETH Global, New York" data-pf-who="Maceo">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-eth-global">ETH Global, New York</a></li>
+            <li aria-current="page">Crypto, privacy and global finance at ETHconf: Maggie of Unlink</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">Crypto, privacy and global finance at ETHconf: Maggie of Unlink.</h1>
+
+    <p class="wt-byline"><strong>Maggie</strong> &middot; Reported by <strong><a href="../people/maceo.html">Maceo</a></strong> &middot; New York &middot; 13 min &middot; filmed <time datetime="2026-06">June 2026</time></p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="WXm8AWkc37M" live posterurl="../stills/WXm8AWkc37M.jpg" postersrcset="../stills/WXm8AWkc37M-320.jpg 320w, ../stills/WXm8AWkc37M-480.jpg 480w, ../stills/WXm8AWkc37M-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/WXm8AWkc37M?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="Crypto, privacy and global finance at ETHconf: Maggie of Unlink, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+    <p class="wt-answers">Answers <a href="../question/what-is-ethereum.html">What is Ethereum?</a> and <a href="../question/a-message-for-the-builders.html">Do you have a message for the builders?</a> &middot; see how other cities answered &rarr;</p>
+    <div class="wt-prose">
+            <p>The produced piece from the ETH Global week in New York, June 2026, the one the trailer was cut from. It opens on a voice from the floor: &ldquo;I do believe that New York fundamentally is the financial capital of the world,&rdquo; then a man at a basketball game toasting &ldquo;People that love to be decentralized&rdquo; and his late Shih Tzu. Maceo, in narration: &ldquo;Well, that&rsquo;s why I&rsquo;m here. Let&rsquo;s find out.&rdquo;</p>
+            <p>Then the walk in. &ldquo;New York doesn&rsquo;t ease you in. You step out and you&rsquo;re already in it.&rdquo; He grew up a couple of hours away, close enough that the city &ldquo;was never some distant idea.&rdquo; His statement of purpose is the clearest on tape: &ldquo;Over the last five years, we&rsquo;ve been researching how cryptocurrency and decentralized technology can empower everyday people around the world,&rdquo; and the reason for the trip, to understand &ldquo;how Ethereum is working to show Wall Street it is ready to be the global settlement layer for financial systems.&rdquo;</p>
+            <p>On the floor at ETHconf, Maggie, COO of Unlink, which &ldquo;builds privacy infrastructure for companies that want to use blockchains privately,&rdquo; so that money moves &ldquo;across any EVM blockchain fully privately and compliantly.&rdquo; A COO on a team of five &ldquo;takes care of everything that&rsquo;s not technical in the company,&rdquo; down to the swag: &ldquo;We actually ran out of t-shirts.&rdquo;</p>
+            <p>Maceo brings her the question people outside asked him that morning, what is crypto? &ldquo;That&rsquo;s a really hard question to answer,&rdquo; she says, then answers it: it &ldquo;enables anyone in the world to participate in the global financial system,&rdquo; because the old rails are &ldquo;very clunky and very slow. and very expensive.&rdquo; For a 20-year-old, careers, and investing in tokenized assets before you are old enough for a brokerage account. For a 60-year-old, receiving money from family abroad: &ldquo;your family can essentially now send money to you instantly and also without additional fees.&rdquo; What is ETH? &ldquo;the native token on the Ethereum network&rdquo; and the ecosystem built on it. What sets its builders apart is composability, treating each piece &ldquo;as a puzzle piece or a building block.&rdquo;</p>
+            <p>Her message for the builders: &ldquo;get involved,&rdquo; go to conferences, &ldquo;Just keep talking to people.&rdquo; Why New York: &ldquo;being in New York is a very symbolic way of saying&rdquo; the traditional rails worked, and now &ldquo;we&rsquo;re going to make that even better.&rdquo; Where Ethereum is: &ldquo;I think we&rsquo;re at an inflection point,&rdquo; and &ldquo;from here on out, it&rsquo;s going to be even more obvious that crypto is going to be the center of finance.&rdquo; She learns the sign-off on camera. The transcript below is from the original audio.</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../question/what-is-ethereum.html">Every answer to “What is Ethereum?”</a></p>
+        <p class="wt-rail-link"><a href="../question/a-message-for-the-builders.html">Every answer to “Do you have a message for the builders?”</a></p>
+        <p class="wt-rail-link"><a href="../places.html#new-york">Everything filmed in New York</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="eth-global-nyc-trailer-why-we-went.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/TW1hm-EiW8I-640.jpg" srcset="../stills/TW1hm-EiW8I-320.jpg 320w, ../stills/TW1hm-EiW8I-480.jpg 480w, ../stills/TW1hm-EiW8I-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>1:53</span></span><span>Blockchain: the next foundation of finance. ETH Global NYC, the trailer.</span></a>
+        <a class="wt-rail-card" href="verifying-income-you-cannot-see-onchain-credit.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/WkCICP2Dtlw-640.jpg" srcset="../stills/WkCICP2Dtlw-320.jpg 320w, ../stills/WkCICP2Dtlw-480.jpg 480w, ../stills/WkCICP2Dtlw-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>15:52</span></span><span>Income verification, onchain lending, and neobanks.</span></a>
+        <a class="wt-rail-card" href="arikia-millikan-on-licensing-journalism-peer-to-peer.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/yGDz77IGjBw-640.jpg" srcset="../stills/yGDz77IGjBw-320.jpg 320w, ../stills/yGDz77IGjBw-480.jpg 480w, ../stills/yGDz77IGjBw-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>15:26</span></span><span>Arikia Millikan, on licensing journalism peer to peer.</span></a>
+        <a class="wt-rail-card" href="ethconf-you-dont-have-to-be-technical-to-start-in-crypto.html"><span class="wt-next-thumb wt-thumb"><img src="https://i.ytimg.com/vi/hXCHPWdwxeU/hqdefault.jpg" srcset="https://i.ytimg.com/vi/hXCHPWdwxeU/mqdefault.jpg 320w, https://i.ytimg.com/vi/hXCHPWdwxeU/hqdefault.jpg 480w" sizes="300px" alt="" loading="lazy" decoding="async" width="480" height="270"><span class="wt-dur"><span class="visually-hidden">Length </span>5:20</span></span><span>ETHConf: you don&#x27;t have to be technical to start in crypto.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c0"><a class="wt-t" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-s">New York, the financial capital of the world</span></li>
+                <li class="wt-line" id="c57"><a class="wt-t" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=57s" target="_blank" rel="noopener" data-pagefind-ignore>0:57</a><span class="wt-s">Who are the people being decentralized?</span></li>
+                <li class="wt-line" id="c78"><a class="wt-t" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=78s" target="_blank" rel="noopener" data-pagefind-ignore>1:18</a><span class="wt-s">New York does not ease you in</span></li>
+                <li class="wt-line" id="c156"><a class="wt-t" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=156s" target="_blank" rel="noopener" data-pagefind-ignore>2:36</a><span class="wt-s">What does Unlink do? Privacy for blockchains</span></li>
+                <li class="wt-line" id="c226"><a class="wt-t" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=226s" target="_blank" rel="noopener" data-pagefind-ignore>3:46</a><span class="wt-s">What is crypto? Global finance for anyone</span></li>
+                <li class="wt-line" id="c281"><a class="wt-t" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=281s" target="_blank" rel="noopener" data-pagefind-ignore>4:41</a><span class="wt-s">If you are 20, or 60, and have never used it</span></li>
+                <li class="wt-line" id="c389"><a class="wt-t" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=389s" target="_blank" rel="noopener" data-pagefind-ignore>6:29</a><span class="wt-s">What is ETH?</span></li>
+                <li class="wt-line" id="c428"><a class="wt-t" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=428s" target="_blank" rel="noopener" data-pagefind-ignore>7:08</a><span class="wt-s">Composability: pieces that fit like a puzzle</span></li>
+                <li class="wt-line" id="c527"><a class="wt-t" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=527s" target="_blank" rel="noopener" data-pagefind-ignore>8:47</a><span class="wt-s">To builders: get involved, go to conferences</span></li>
+                <li class="wt-line" id="c581"><a class="wt-t" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=581s" target="_blank" rel="noopener" data-pagefind-ignore>9:41</a><span class="wt-s">Why New York: the financial capital of the world</span></li>
+                <li class="wt-line" id="c646"><a class="wt-t" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=646s" target="_blank" rel="noopener" data-pagefind-ignore>10:46</a><span class="wt-s">Where is Ethereum now? An inflection point</span></li>
+                <li class="wt-line" id="c714"><a class="wt-t" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=714s" target="_blank" rel="noopener" data-pagefind-ignore>11:54</a><span class="wt-s">Booyah</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Who speaks, by their own introduction on the tape: <a href="../guests.html#g-maceo" data-pagefind-filter="person">Maceo</a> at <a class="wt-at" data-seek="132" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=132s" target="_blank" rel="noopener" data-pagefind-ignore>2:12</a>, <a href="../guests.html#g-maggie" data-pagefind-filter="person">Maggie</a> at <a class="wt-at" data-seek="158" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=158s" target="_blank" rel="noopener" data-pagefind-ignore>2:38</a>. Transcribed from the original audio and corrected for names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maggie at 2:38" data-pagefind-ignore>Maggie</span>I do believe that New York fundamentally is the financial capital of the world. And as we discussed earlier, crypto enables anybody in the world to participate in the global financial economy. And so that means that a lot of crypto companies and a lot of people that are interested in building the future of finance are all based in New York. And so I think it&rsquo;s really, really special for a conference like this to be based in New York because it really is the convergence of people coming from all over the world to, A, like learn about what does it mean for us to build a frontier. And I think everybody who is in New York and everybody who wants to come to New York has sort of like the similar vision of basically bringing improving the system. And so I think being in New York is a very symbolic way of saying that, like, okay, you know, the traditional rails have worked very, very well, but now we&rsquo;re going to be back. We&rsquo;re going to go back to the same place that the traditional rails have sort of expanded, and we&rsquo;re going to make that even better.</p>
+            <p id="s44"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=44s" target="_blank" rel="noopener" data-pagefind-ignore>0:44</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:12" data-pagefind-ignore>Maceo</span>People that love to be decentralized, you know what I&rsquo;m saying? And also, rest in peace, Sugar Plum.</p>
+            <p id="s50"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=50s" target="_blank" rel="noopener" data-pagefind-ignore>0:50</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maggie at 2:38" data-pagefind-ignore>Maggie</span>That&rsquo;s my Shih Tzu.</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s50-2"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=50s" target="_blank" rel="noopener" data-pagefind-ignore>0:50</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:12" data-pagefind-ignore>Maceo</span>She died about 10 years ago. Appreciate you. Yeah, you have questions, right? Like, what did he just drink? Why is he honoring his late Shih Tzu at a basketball game? Who are Are the people even being decentralized? What does that mean? Well, that&rsquo;s why I&rsquo;m here. Let&rsquo;s find out. New York doesn&rsquo;t ease you in. You step out and you&rsquo;re already in it. A few million strangers, all going somewhere all at once. I grew up a couple hours away in Philly, close enough that New York was never some distant idea. It was a city you took the bus to or train to, a place I get to go and see my friends from high school and college.</p>
+            <p id="s95"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=95s" target="_blank" rel="noopener" data-pagefind-ignore>1:35</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Hey, what&rsquo;s your name?</p>
+            <p id="s96"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=96s" target="_blank" rel="noopener" data-pagefind-ignore>1:36</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:12" data-pagefind-ignore>Maceo</span>That&rsquo;s the thing about this city. It&rsquo;s stacked. Bodegas under glass towers, old New York holding up the new one, and most new people have no idea what the old one even looked like. Oh, not you, sorry. This time I linked up with some friends out here in the city. People already connected, already part of what I came for, an <a class="wt-gloss" href="../glossary.html#ethereum">Ethereum</a> conference, the kind of room where we&rsquo;re negotiating where technology is going. But before any of that, you eat, you walk, You let the city remind you why people around the world dream of being here. And somewhere between these streets and the conference floor, that&rsquo;s where the story really starts. My name is Mase Wale, and I&rsquo;m the founder at We Them Media. Over the last 5 years, we&rsquo;ve been researching how cryptocurrency and decentralized technology can empower everyday people around the world. And that&rsquo;s why I attended the Ethereum conference in New York City a couple weeks ago, to better understand and share with you all how Ethereum is working to show Wall Street it is ready to be the global settlement layer for financial systems.</p>
+            <p id="s152"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=152s" target="_blank" rel="noopener" data-pagefind-ignore>2:32</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>And we&rsquo;re here to show you what it means.</p>
+            <p id="s154"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=154s" target="_blank" rel="noopener" data-pagefind-ignore>2:34</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:12" data-pagefind-ignore>Maceo</span>Let&rsquo;s go.</p>
+            <p id="s156"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=156s" target="_blank" rel="noopener" data-pagefind-ignore>2:36</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>All right, sick. And so what&rsquo;s your name?</p>
+            <p id="s158"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=158s" target="_blank" rel="noopener" data-pagefind-ignore>2:38</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maggie at 2:38" data-pagefind-ignore>Maggie</span>My name is Maggie, and I&rsquo;m the COO at Unlink.</p>
+            <p id="s161"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=161s" target="_blank" rel="noopener" data-pagefind-ignore>2:41</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Okay, so tell us about Unlink.</p>
+            <p id="s163"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=163s" target="_blank" rel="noopener" data-pagefind-ignore>2:43</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maggie at 2:38" data-pagefind-ignore>Maggie</span>So Unlink builds privacy infrastructure for companies that want to use blockchains privately, and you can basically move money across any EVM blockchain fully privately and compliantly. So it&rsquo;s for companies that want to use, yeah, any EVM chain.</p>
+            <p id="s175"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=175s" target="_blank" rel="noopener" data-pagefind-ignore>2:55</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Okay, and what is it to be a COO?</p>
+            <p id="s178"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=178s" target="_blank" rel="noopener" data-pagefind-ignore>2:58</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maggie at 2:38" data-pagefind-ignore>Maggie</span>Um, what it means to be a CEO -- so our team is 5 people. And there&rsquo;s 3 engineers, and then there&rsquo;s a CEO who takes care of basically everything in the company, and then there&rsquo;s a COO who basically takes care of everything that&rsquo;s not technical in the company. So everything from marketing, operations, go-to-market, partnerships, producing swag. We actually ran out of t-shirts, as you can see, and we also don&rsquo;t have any more caps because everybody came and took the caps. So yeah, I basically do everything that&rsquo;s related to like building up our community, talking to clients. marketing, operations, just everything in between that&rsquo;s like not related to coding and using Claude Code or anything to like build our product. That&rsquo;s me. So yeah.</p>
+            <p id="s216"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=216s" target="_blank" rel="noopener" data-pagefind-ignore>3:36</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Very cool. And so I talked to some people obviously outside the conference earlier today and they want to know, what is crypto?</p>
+            <p id="s221"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=221s" target="_blank" rel="noopener" data-pagefind-ignore>3:41</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maggie at 2:38" data-pagefind-ignore>Maggie</span>Ooh, okay. That&rsquo;s a really hard question to answer. What is crypto?</p>
+            <p id="s225"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=225s" target="_blank" rel="noopener" data-pagefind-ignore>3:45</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>It&rsquo;s an expensive question.</p>
+            <p id="s227"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=227s" target="_blank" rel="noopener" data-pagefind-ignore>3:47</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maggie at 2:38" data-pagefind-ignore>Maggie</span>It&rsquo;s a very expensive question. I need to think about how to answer this well. I think That first and foremost, the biggest value add of crypto, I think, is the ability for anyone anywhere in the world to get access to financial tools that they wouldn&rsquo;t be able to otherwise. And I do think that crypto sort of enables anyone in the world to participate in the global financial system. And whether you are in a country in Africa, whether you&rsquo;re in a country in Asia, whether you&rsquo;re from North America, Wherever you are, you can really participate and be a part of the global financial economy. Without crypto, it would be really hard for you to do that because the rails in order to do that are very clunky and very slow and very expensive. So I think that is what crypto enables people to do, is to participate in the global financial economy.</p>
+            <p id="s276"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=276s" target="_blank" rel="noopener" data-pagefind-ignore>4:36</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:12" data-pagefind-ignore>Maceo</span>Okay.</p>
+            <p id="s277"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=277s" target="_blank" rel="noopener" data-pagefind-ignore>4:37</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>And so what are ways that people could do that? Like, if I&rsquo;m 20, I never used crypto in my life, or I&rsquo;m 60, I never used crypto in my life, what would I do with crypto as a New Yorker?</p>
+            <p id="s286"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=286s" target="_blank" rel="noopener" data-pagefind-ignore>4:46</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maggie at 2:38" data-pagefind-ignore>Maggie</span>Yeah. If you are a 20-year-old and you&rsquo;ve never interacted with crypto before, I think first, like, there&rsquo;s ways to actually make money in crypto. So there&rsquo;s a lot of different companies in crypto that are actively hiring for people in marketing and sales. And so there&rsquo;s a lot of different ways to basically -- there&rsquo;s a lot of opportunities in crypto for a career and jobs where you can learn a lot of things about the frontier of like financial technology and then also be able to make money out of like building a career in this industry. And then the other way that you can interact with crypto is obviously by holding crypto.</p>
+            <p id="s286-2"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=286s" target="_blank" rel="noopener" data-pagefind-ignore>4:46</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maggie at 2:38" data-pagefind-ignore>Maggie</span>And so a lot of different assets are kind of like a store of value. And so, for instance, crypto really enables people to invest in things that you previously cannot invest in, whether it&rsquo;s because of like your geographic location or whether it&rsquo;s because of your age. If you&rsquo;re 20 or like even if you&rsquo;re younger than 20 and you want to participate in certain investments and you want to, you know, put your money where your mouth is at, then you can actually use crypto to basically buy into things that you really believe in. So now there&rsquo;s like this whole trend of like tokenized assets. Or just like tokenized stocks.</p>
+            <p id="s286-3"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=286s" target="_blank" rel="noopener" data-pagefind-ignore>4:46</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maggie at 2:38" data-pagefind-ignore>Maggie</span>And so, for instance, like if you are not 21 or if you&rsquo;re not of legal age wherever you are, maybe you can&rsquo;t open like an investing account. Maybe you can&rsquo;t open a brokerage account because there&rsquo;s like limitations or restrictions on how old you have to be in order to do that. But now, like as like a 16-year-old, 17-year-old, you can actually like create a crypto wallet or create a crypto account and then actually be able to invest in different tokenized assets that you believe in or invest in companies that you believe in that are basically tokenized and put on chain. If you believe in them, so that&rsquo;s one thing that you could do.</p>
+            <p id="s286-4"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=286s" target="_blank" rel="noopener" data-pagefind-ignore>4:46</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maggie at 2:38" data-pagefind-ignore>Maggie</span>And then as a sixty-year-old, if you want to receive money from other countries from your family, for instance, and it&rsquo;s like really expensive, like if your family wants to send you five thousand dollars, oh my gosh! They have to pay like an extra a thousand dollars just to send that five thousand dollars to you. As someone who&rsquo;s receiving money cross borders, your family can essentially now send money to you instantly and also without additional fees if you&rsquo;re if they&rsquo;re using crypto rails. So again, you can open like a crypto account and then basically send that. crypto account address to your family, who then can send you money directly from overseas instantaneously.</p>
+            <p id="s286-5"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=286s" target="_blank" rel="noopener" data-pagefind-ignore>4:46</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maggie at 2:38" data-pagefind-ignore>Maggie</span>So you don&rsquo;t even have to wait like 3 to 5 days for that to process.</p>
+            <p id="s408"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=408s" target="_blank" rel="noopener" data-pagefind-ignore>6:48</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Okay. And then what is ETH specifically?</p>
+            <p id="s411"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=411s" target="_blank" rel="noopener" data-pagefind-ignore>6:51</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maggie at 2:38" data-pagefind-ignore>Maggie</span>What is ETH? Okay, so ETH is -- it&rsquo;s spelled ETH, and ETH is basically a token. It&rsquo;s the native token on the Ethereum network. And so essentially, ETH is something that you can invest in. It&rsquo;s an asset. And it&rsquo;s, and it&rsquo;s something that you can hold if you believe in the Ethereum blockchain network and if you believe that the Ethereum blockchain network will continue to grow and scale. And then with ETH, you, you can also define ETH as like basically the Ethereum ecosystem where there&rsquo;s a lot of different people that are kind of like building new applications on the Ethereum blockchain. And so in order to use these applications on this blockchain, you would have to have some amount of ETH in your wallet in order to like pay for certain services for using these applications.</p>
+            <p id="s460"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=460s" target="_blank" rel="noopener" data-pagefind-ignore>7:40</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Okay, very sick. And what would you say differentiates the builders in the Ethereum ecosystem from like traditional tech builders?</p>
+            <p id="s466"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=466s" target="_blank" rel="noopener" data-pagefind-ignore>7:46</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maggie at 2:38" data-pagefind-ignore>Maggie</span>Oh, okay. I think for traditional tech builders, they -- so if you&rsquo;re in traditional tech, you have access to a lot of different tools and services that you can use to build products. But sometimes these traditional tools and products are actually not compatible with each other. And so maybe if you use like one tech tool and you want to build something, maybe that tech tool is all of a sudden not compatible with another tech tool. And so you actually have to make a trade-off between like what tools you use. Whereas if you&rsquo;re a builder within the Ethereum ecosystem, everything is mostly composable and compatible. So we talk about this concept of composability. And so if you&rsquo;re a builder on the Ethereum ecosystem and you&rsquo;re building applications on Ethereum, everything that you do, everything that you integrate or add into your product is actually fully composable. So you&rsquo;re actually able to like treat it as like a puzzle piece or like a building block of like different elements that you can, you can, you can put together in order to build something interesting. Whereas in like a traditional tech world, maybe there&rsquo;s some things that actually don&rsquo;t match with one another and then you&rsquo;re not able to put these things together. Yeah.</p>
+            <p id="s525"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=525s" target="_blank" rel="noopener" data-pagefind-ignore>8:45</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:12" data-pagefind-ignore>Maceo</span>Okay.</p>
+            <p id="s525-2"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=525s" target="_blank" rel="noopener" data-pagefind-ignore>8:45</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>And your message for the ecosystem or the builders?</p>
+            <p id="s527"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=527s" target="_blank" rel="noopener" data-pagefind-ignore>8:47</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maggie at 2:38" data-pagefind-ignore>Maggie</span>My message for the builders is to get involved. If you want to be a part of crypto, if you want to learn about crypto, the best way is to just go out and meet people. And where you can do that is you can go to conferences. If you&rsquo;re based in New York, you should definitely check out all the conferences that are happening around New York. So we&rsquo;re currently at ETHConf. It&rsquo;s at the Javits Center from June 8th to 10th. Today is the last day, unfortunately. But if you want to learn more about Ethereum, you should go to the ETH Global Hackathon, which is happening June 12th to 14th. So this weekend. There&rsquo;s also a lot of other events that are happening all throughout the city all the time. And so I would just encourage anyone who&rsquo;s interested to actually go on Luma. Luma, there&rsquo;s a bunch of like side events that are in New York and all around the world and just get involved and talk to people and introduce yourself to people. Talk to people, ask them what they do, how they got into the space. And also how you can get involved. Just keep talking to people.</p>
+            <p id="s575"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=575s" target="_blank" rel="noopener" data-pagefind-ignore>9:35</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>If I were going to ask you one more thing, would be why do you think it&rsquo;s important in this moment that this conference is in New York and that ETH Global is holding their first conference?</p>
+            <p id="s582"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=582s" target="_blank" rel="noopener" data-pagefind-ignore>9:42</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maggie at 2:38" data-pagefind-ignore>Maggie</span>Why is it important or unique?</p>
+            <p id="s584"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=584s" target="_blank" rel="noopener" data-pagefind-ignore>9:44</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Why is this happening? Yeah, significant. Significant. Okay.</p>
+            <p id="s587"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=587s" target="_blank" rel="noopener" data-pagefind-ignore>9:47</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maggie at 2:38" data-pagefind-ignore>Maggie</span>Why is it significant? So I do believe that New York fundamentally is the financial capital of the world. And as we discussed earlier, crypto enables anybody in the world to participate in the global financial economy. And so that means that a lot of crypto companies and a lot of people that are interested in building the future of finance are all based in New York. And so I think it&rsquo;s really, really special for a conference like this to be based in New York because it really is the convergence of people coming from all over the world to, A, like learn about what does it mean for us to build a frontier and be at the frontier of financial technology?</p>
+            <p id="s587-2"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=587s" target="_blank" rel="noopener" data-pagefind-ignore>9:47</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maggie at 2:38" data-pagefind-ignore>Maggie</span>What does it mean to actually go from the traditional rails that we&rsquo;ve had in the past, the legacy systems, and how do we actually go from that to building a better system? And I think everybody who is in New York and everybody who wants to come to New York has sort of like a similar vision of basically bringing -- improving the system. And so I think being in New York is a very symbolic way of saying that, like, okay, you know, the traditional rails have worked very, very well, but now we&rsquo;re going to be back. We&rsquo;re going to go back to the same place that the traditional rails have sort of expanded and we&rsquo;re going to make that even better.</p>
+            <p id="s587-3"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=587s" target="_blank" rel="noopener" data-pagefind-ignore>9:47</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maggie at 2:38" data-pagefind-ignore>Maggie</span>So I think New York is the best place to hold a conference like this for that reason.</p>
+            <p id="s647"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=647s" target="_blank" rel="noopener" data-pagefind-ignore>10:47</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>And so how would you describe this moment for like the ecosystem and being someone who&rsquo;s worked at ETH Global is here now, obviously thinking about how people can adopt this technology?</p>
+            <p id="s654"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=654s" target="_blank" rel="noopener" data-pagefind-ignore>10:54</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maggie at 2:38" data-pagefind-ignore>Maggie</span>How do I -- sorry, what was the question?</p>
+            <p id="s655"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=655s" target="_blank" rel="noopener" data-pagefind-ignore>10:55</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>How would you think about like this moment?</p>
+            <p id="s657"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=657s" target="_blank" rel="noopener" data-pagefind-ignore>10:57</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maggie at 2:38" data-pagefind-ignore>Maggie</span>How do I think about where we&rsquo;re at?</p>
+            <p id="s658"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=658s" target="_blank" rel="noopener" data-pagefind-ignore>10:58</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Okay. Ethereum&rsquo;s timeline.</p>
+            <p id="s659"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=659s" target="_blank" rel="noopener" data-pagefind-ignore>10:59</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maggie at 2:38" data-pagefind-ignore>Maggie</span>I think we&rsquo;re at an inflection point. I think that it&rsquo;s been obviously a lot of, a lot of -- it&rsquo;s been tumultuous over the last couple of years. And I think Ethereum has, has had its ups and downs and crypto has always had its ups and downs. And I think right now AI is obviously a really big topic of discussion. But I actually do think that crypto is at an inflection point. And I do think that from here on out, it&rsquo;s going to be even more obvious that crypto is going to be the center of finance. And I actually think that as we go from here until, you know, the future years from now, I think that there&rsquo;s going to be more and more people that want to adopt this technology simply because it&rsquo;s faster, it&rsquo;s cheaper, and it&rsquo;s more efficient and it&rsquo;s more decentralized and it&rsquo;s actually safer. And so I think that there&rsquo;s going to be a lot more companies, there&rsquo;s going to be a lot more institutions, there&rsquo;s going to be a lot more users that want to participate and come onto crypto rails. So I&rsquo;m very excited actually for what&rsquo;s to come.</p>
+            <p id="s710"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=710s" target="_blank" rel="noopener" data-pagefind-ignore>11:50</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Okay, awesome. If you say huya, it&rsquo;s like how we like do our like.</p>
+            <p id="s713"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=713s" target="_blank" rel="noopener" data-pagefind-ignore>11:53</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maggie at 2:38" data-pagefind-ignore>Maggie</span>Sure.</p>
+            <p id="s713-2"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=713s" target="_blank" rel="noopener" data-pagefind-ignore>11:53</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>So like three, two, one.</p>
+            <p id="s714"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=714s" target="_blank" rel="noopener" data-pagefind-ignore>11:54</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maggie at 2:38" data-pagefind-ignore>Maggie</span>Booyah!</p>
+            <p id="s716"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=716s" target="_blank" rel="noopener" data-pagefind-ignore>11:56</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>And where can where can we find you on socials? Where can we tag it?</p>
+            <p id="s718"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=718s" target="_blank" rel="noopener" data-pagefind-ignore>11:58</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maggie at 2:38" data-pagefind-ignore>Maggie</span>You can me personally or you could do whichever you want.</p>
+            <p id="s721"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=721s" target="_blank" rel="noopener" data-pagefind-ignore>12:01</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Like we&rsquo;re going to tag whatever you tell us.</p>
+            <p id="s722"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=722s" target="_blank" rel="noopener" data-pagefind-ignore>12:02</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maggie at 2:38" data-pagefind-ignore>Maggie</span>Oh, okay. To learn more about Unlink, you can go to the website unlink.xyz and then our Twitter is unlink_xyz and then my personal Twitter is cxqmaggy.</p>
+            <p id="s734"><a class="wt-at" href="https://www.youtube.com/watch?v=WXm8AWkc37M&amp;t=734s" target="_blank" rel="noopener" data-pagefind-ignore>12:14</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Maceo at 2:12" data-pagefind-ignore>Maceo</span>Okay, big.</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+<div id="after-transcript" tabindex="-1"><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from ETH Global in New York.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-eth-global">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="eth-global-nyc-trailer-why-we-went.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/TW1hm-EiW8I-640.jpg" srcset="../stills/TW1hm-EiW8I-320.jpg 320w, ../stills/TW1hm-EiW8I-480.jpg 480w, ../stills/TW1hm-EiW8I-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>1:53</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">New York · June 2026 · Trailer</span>
+                    <h3 class="report-title">Blockchain: the next foundation of finance. ETH Global NYC, the trailer.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="durgadas-on-coordinating-people-and-capital.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/mszXmKxwvSQ-640.jpg" srcset="../stills/mszXmKxwvSQ-320.jpg 320w, ../stills/mszXmKxwvSQ-480.jpg 480w, ../stills/mszXmKxwvSQ-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>42:18</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">New York · June 2026</span>
+                    <h3 class="report-title">Durgadas, on coordinating people and capital.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="arikia-millikan-on-licensing-journalism-peer-to-peer.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/yGDz77IGjBw-640.jpg" srcset="../stills/yGDz77IGjBw-320.jpg 320w, ../stills/yGDz77IGjBw-480.jpg 480w, ../stills/yGDz77IGjBw-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>15:26</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">New York · ETHConf 2026 · Longform</span>
+                    <h3 class="report-title">Arikia Millikan, on licensing journalism peer to peer.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../question/what-is-ethereum.html">Every answer to “What is Ethereum?”</a> &middot; <a href="../question/a-message-for-the-builders.html">Every answer to “Do you have a message for the builders?”</a> &middot; <a href="../places.html#new-york">Everything filmed in New York</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

@@ -1,0 +1,552 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Though web3 represents new technology, its underlying drivers are timeless and fundamentally human Web3 has arisen in part as a response to some of Western society’s most central p">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+
+    <link rel="canonical" href="https://wethem.xyz/onchain/essay-what-people-want-most-and-how-web3-gives-it-to-them-an-explorati">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://wethem.xyz/onchain/essay-what-people-want-most-and-how-web3-gives-it-to-them-an-explorati">
+    <meta property="og:title" content="What people want most and how web3 gives it to them: an exploration of what web3 is really about &middot; We Them Media">
+    <meta property="og:description" content="Though web3 represents new technology, its underlying drivers are timeless and fundamentally human Web3 has arisen in part as a response to some of Western society’s most central p">
+    <title>What people want most and how web3 gives it to them: an exploration of what web3 is really about &middot; We Them Media</title>
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap es-piece">
+    <p class="oc-crumb"><a href="../library.html">The library</a> &middot;
+       <span>Written onchain</span></p>
+    <h1 class="es-h1">What people want most and how web3 gives it to them: an exploration of what web3 is really about</h1>
+    <p class="oc-meta">Published 2023-09-18 &middot; 1,846 words &middot;
+       signed by <a href="https://optimistic.etherscan.io/address/0x449f29e7204747ce7d4d01829e9ab1e1f2cd9423" target="_blank" rel="noopener">the founder&#8217;s wallet</a>
+       and stored on Arweave</p>
+
+    <div class="es-body">
+        <p class="es-p"><em>Though web3 represents new technology, its underlying drivers are timeless and fundamentally human</em></p>
+        <p class="es-p">Web3 has arisen in part as a response to some of Western society’s most central problems: the lack of a sense of ownership, connection, and impact people have in their lives. Now more than ever, there’s a sentiment that we don’t have anything to show for our hard work, that we’re lonely, and don’t have ways to bring about good in the world.</p>
+        <p class="es-p">Borrowing from web3’s ethos can be a guide in providing these things that many of us are longing for today. Doing so will not only bring about positive social change, but immense economic value.</p>
+        <p class="es-p"><em><strong>Tap into “why” and people will buy</strong></em></p>
+        <p class="es-p">If there’s a golden rule of marketing, it might just be “<a href="https://www.youtube.com/watch?v=u4ZoJKF_VuA&amp;amp;vl=en" target="_blank" rel="noopener">Start with why</a>.”</p>
+        <p class="es-p">This framework, introduced and made famous by Simon Sinek, argues that people don&#x27;t buy what you do, they buy <em>why</em> you do it. For example, they buy Apple devices because the Apple brand is synonymous with unlocking innovation. They buy Nike to capture the feeling of athletic invincibility. They buy Disney to experience the magic of make-believe, and so on. They even buy from unproven upstarts because of the core idea or ethos. Effective brands deliver great products and experiences because they are in tune with their greater “why.”</p>
+        <p class="es-p">Web3, or the next generation of the internet enabled by blockchain technology, is still waiting for its Steve Jobs-announcing-the-iPhone brand moment: The moment where the mainstream understands that just like having all the world’s information in your pocket is nothing like a buying new cell phone, web3’s vision is leaps and bounds beyond its current perception of tradeable jpegs and meme tokens. This essay intends to get us closer to that moment by articulating web3’s “why” — the human promise of it that’s in high demand but short supply.</p>
+        <p class="es-p"><em><strong>People like owning their things. Web3 gives them ownership in the digital realm.</strong></em></p>
+        <p class="es-p">Most people like nice things. Having them, on the other hand, feels out of reach for many Millennials, a generation that may come to be defined by economic hardship. We all know the headlines: student debt, shifting job markets, unaffordable housing, the first generation to do worse than their parents. And of course, many outside the Millennial generation have had these experiences too.</p>
+        <p class="es-p">Younger generations’ expectations around consumption have also been distorted. The rise of fast fashion in the late 90s is emblematic of this imbalance. Thanks to changes in the global supply chain and manufacturing, we were taught to want new clothes more often, for cheap. Then YouTube and Instagram came along, radically altering our ideas of keeping up and self image. Social media wasn’t only a new mode of self-presentation. With it also came more and more sophisticated advertising, doubling the pressure to obtain. The new sharing economy, subsidized by VC, further intensified this race.</p>
+        <p class="es-p">Now that the big tech boom is slowing and Millennials are finally getting to settle down, we’re confronting the reality of what we can actually afford. We can’t hand Forever 21 items down to our grandkids. We’re a generation that’s known for spending our money on experiences over material items, but has that been due to preference, or access? After all, the majority of Millennials and Gen Z still <a href="https://web.archive.org/web/20250614205341/https://www.bankrate.com/mortgages/homeownership-remains-centerpiece-of-american-dream/" target="_blank" rel="noopener">view homeownership as a hallmark of the American dream</a> (archived copy).</p>
+        <p class="es-p">NFTs are often thought of as digital art, but they’re also a novel way of transacting that shifts purchases away from pure consumption toward ownership. The “NF” in NFT stands for non-fungible, meaning unique, so ownership is built into the fabric of the product. Their recent popularity was driven mostly by novelty and hype. But beneath that speculation was the promise that projects and brands were offering fans not mere possessions, but assets they could hold — things that could last and be handed down to loved ones instead of discarded.</p>
+        <p class="es-p">Perhaps NFTs will be proof that Millennials never shunned creating financial equity, but needed more avenues for it, especially as homes are <a href="https://www.iwillteachyoutoberich.com/renting-is-not-a-waste/" target="_blank" rel="noopener">increasingly questioned as a safe mainstream investment</a>. Web3 promises that anyone can own a piece of the internet. Why wouldn’t consumers want a financial stake in something that so clearly generates value and pervades our daily lives?</p>
+        <p class="es-p"><em><strong>Being connected online doesn’t mean human connection. Web3 better fosters true relationship.</strong></em></p>
+        <p class="es-p">In 2017, US Surgeon General Vivek Murthy started talking about the loneliness epidemic. In his 2020 book <em><a href="https://www.vivekmurthy.com/together-book" target="_blank" rel="noopener">Together</a></em>, he points out how technology can be an isolating force. This spring, his office issued an advisory warning of the mental health risks social media poses to adolescents, echoing the story that the Wall Street Journal broke in 2021 about <a href="https://www.wsj.com/articles/how-instagram-is-hurting-teen-girls-11632940937" target="_blank" rel="noopener">Instagram’s harmful effects on teenage girls</a>. Most of the reasons social media is detrimental more or less stem from how we now relate to each other because of it, or rather don’t.</p>
+        <p class="es-p">Social media’s negative effects also extend to adults, as we all know. For many, the benefits of more connection haven’t outweighed the addictive costs of FOMO, highlight reel influencer culture, thinkboi engagement farming, fake news, negativity bias, or polarization. It’s now almost ubiquitous to define quality time as “no phones.”</p>
+        <p class="es-p">The platforms haven’t just changed how we relate to each other. It’s changed how we relate to art and creativity too. The term “creator” was originally marketed by YouTube, and then an entire creator economy sprang up to help them make their living. But the results have fallen flat, both for <a href="https://explorewhatworks.com/rethinking-creator-economy-gina-bianchini/" target="_blank" rel="noopener">creators</a> and <a href="https://www.insidehook.com/article/books/why-all-books-suddenly-look-same" target="_blank" rel="noopener">fans</a> — it’s turned out that only those with mass audiences can be creators full time. Algorithms have reduced art’s content down to mere genre, and its success to number of streams. The internet may connect niche creators to new audiences, but any meaningful content monetization still demands scale, if not drastically more. That’s why all music has begun to sound the same, the box office is dominated by franchises and remakes, and we don’t see many fresh faces anymore — it just doesn’t pay to create for the long tail.</p>
+        <p class="es-p">Countless formal and informal online communities have spun up in web3. The space is impossible to make sense of in isolation, which arguably makes community a web3 primitive in its own right. Whether explicitly geared toward social or creative ends or not, these community models, and their “vibes,” offer a truly viable antidote to the simultaneously dilutive and escalatory social dynamics of web2 social media. Said in English, web3 offers hope that online interactions can be non-competitive and genuine.</p>
+        <p class="es-p">Like the online social and content platforms we know, these spaces are accessible at any time and from any place for their members. But rather than being defined by the use of technology, they represent an active choice to come together. As such, they’re smaller in and based on common interests, not algorithms. They’re often further curated with vetting, moderation, and financial buy-in for membership. This intentionality and investment results in more authentic sharing, conversation, and connection. And for creators, these collectives provide a new level of support, engagement, collaboration, and ready financial backing.</p>
+        <p class="es-p">Brands that make the mistake of continuing to define community by purchase behavior or platform into the future will be left behind by those that take a page out of the book of web3 community — whether they leverage web3 technology or not. The fact that so many strong communities have formed around a concept that’s so theoretical and volatile says more about the glaring need for purpose-based connection than web3 itself.</p>
+        <p class="es-p"><em><strong>People want to make a difference. Web3 makes for less powerlessness.</strong></em></p>
+        <p class="es-p">There is a widespread belief that politics — and the issues that we expect to be governed — have gone off the rails. If the state of government and politics is indeed in decline, there’s no denying that it’s in part because of decreasing participation. The economic challenges outlined above, in addition to the redrawing of social life away from local geography, play their roles in this phenomenon. But looking closer, we must acknowledge the fact that politics has become its own category of content, on the plane of comedy or sports.</p>
+        <p class="es-p">For many, politics is now a passive hobby, something people read, think, and talk about instead of actively participate in, whether in person, on paper, or onchain. Whether the 24-hour news cycle and accompanying online peanut gallery are a result or a driver of politics as pastime is irrelevant. The flywheel of engaging in politics as a spectator, politics deteriorating because of it, and then the political spectacle becoming more salient as entertainment, has been spun.</p>
+        <p class="es-p">How do we reconcile our newfound, hyperconnected political consciousness with the smaller frames that make change manageable? The idea that people, users, and recipients know better about their problems and how to solve them is a core tenet of blockchain, called “decentralization.” It’s the same idea that’s behind the direct cash transfer nonprofit GiveDirectly and universal basic income. This type of grassroots action doesn’t just offer dignity, but powerful results, as proven by the small donations that powered the 2020 Bernie Sanders campaign and the commonality of GoFundMe as political response. But the reality remains that institutions are more resourced than most individuals.</p>
+        <p class="es-p">The get rich quick ethos is certainly part of crypto, but there exists an equally vibrant part of the industry called ReFi, short for “<a href="https://blog.toucan.earth/what-is-refi-regenerative-finance/#:~:text=ReFi%20is%20regenerative%20finance%3B%20an,and%20cultural%20capital%20as%20well." target="_blank" rel="noopener">regenerative finance</a>.” The idea that commerce can be a tool for good is not new; web3 ReFi efforts and technology are unlocking new and richer ways for us to exchange value and commit to our ideals.</p>
+        <p class="es-p">An example of one of these ReFi innovations is <a href="https://web.archive.org/web/20260609021943/https://grants.gitcoin.co/" target="_blank" rel="noopener">Gitcoin Grants</a> (archived copy), a quarterly fundraising initiative that pioneered the use of “quadratic funding.” Quadratic funding <a href="https://web.archive.org/web/20251016214656/https://scholar.harvard.edu/files/hitzig/files/buterin_hitzig_weyl_draft.pdf" target="_blank" rel="noopener">marries crowdfunding with donor matching</a> (archived copy): individuals make contributions which are then matched, but based on the number of individual contributions to a cause, not total contribution amount. The result is a democratic distribution of funds rather than one that’s dictated by the “most generous” individuals.</p>
+        <p class="es-p">From when it began in 2019 to 2022, Gitcoin Grants funding grew 3000%. Comparatively speaking, Gitcoin Grants is very much still getting its start. Its rapid growth and go-to status in web3, however, is evidence for the popularity of solutions that give citizens the elevated impact of the internet, the simplicity of voting, and the tangible participation of local action.</p>
+        <p class="es-p"><em><strong>Web3’s next wave: ownership, connection, and impact</strong></em></p>
+        <p class="es-p">Brian Chesky, CEO of Airbnb recently said, &quot;I don&#x27;t ask people what they want, I look at what they value after we give them things.” We’ve now had the internet and the greater connectivity that comes with it for several decades. Our horizons have certainly been broadened, but under its faster-changing tides we’ve been left wanting: to own things that last, to feel heard and seen, and to have agency over positive change — now more than ever.</p>
+        <p class="es-p">Those are the values the greater web3 ecosystem is building for, valuable ones indeed. Brands who embrace web3’s human side instead of focusing on the ups and downs of the technology itself will be lucratively rewarded for understanding what people truly value.</p>
+    </div>
+
+    <p class="oc-do">
+        <button class="collect" type="button" hidden
+                data-chain="10" data-collection="0x449f29e7204747ce7d4d01829e9ab1e1f2cd9423"
+                data-minter="0x3678862f04290E565cCA2EF163BAeb92Bb76790C" data-token="1"
+                data-fee="777000000000000" data-path="collection"
+                data-name="What people want most and how web3 gives it to them: an exploration of what web3 is really about &middot; We Them Media">Collect it</button>
+        <a class="oc-a" href="https://optimistic.etherscan.io/address/0x449f29e7204747ce7d4d01829e9ab1e1f2cd9423" target="_blank" rel="noopener">Look it up onchain <span aria-hidden="true">&rarr;</span></a>
+    </p>
+
+    <p class="oc-note">This was never published on this website. It was written
+    and put on Arweave as a Mirror article, signed by the wallet that runs this
+    project, and it has been readable there ever since without anybody paying
+    to host it. The date above is the timestamp inside the document itself,
+    not something worked out afterwards. Nothing has been edited.</p>
+</article>
+
+<div class="wrap wtm-share"></div>
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+
+<aside aria-label="Newsletter"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" class="wtm-newsletter-pill" aria-label="The We Them Weekly, once a week by email: what went up and what we are asking next">The We Them Weekly, once a week by email <span class="wtm-newsletter-pill-arrow">&rarr;</span></a></aside>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+
+<script src="../collect.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js', '../newsletter-pill.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>
+

@@ -1,0 +1,870 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Five minutes at First Friday in Denver, at a gallery on the art walk, with a painter working live in the middle of the room.">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/live-painting-cherry-blossoms-and-first-friday-denver">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="Live Painting and Cherry Blossoms at First Friday | Denver">
+    <meta property="og:description" content="Five minutes at First Friday in Denver, at a gallery on the art walk, with a painter working live in the middle of the room.">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/live-painting-cherry-blossoms-and-first-friday-denver.jpg?v=4496242a47">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="A live painter on cherry blossoms and what made her smile">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/live-painting-cherry-blossoms-and-first-friday-denver.jpg?v=4496242a47">
+    <meta property="og:url" content="https://wethem.xyz/watch/live-painting-cherry-blossoms-and-first-friday-denver">
+    <title>Live Painting and Cherry Blossoms at First Friday | Denver &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/live-painting-cherry-blossoms-and-first-friday-denver#video",
+  "name": "Live Painting and Cherry Blossoms at First Friday | Denver",
+  "description": "Five minutes at First Friday in Denver, at a gallery on the art walk, with a painter working live in the middle of the room. It is a question of the week piece: the interviewer explains the series, the hundred dollars for people who take part, and that answers have come in from Nigeria, Uganda, Kenya and India, then asks Ryan where she is from. Not from here, it turns out. \"I'm from Illinois. Moved here about 3 years ago and just got new creative flu moving out here and painting ever since.\" On First Friday itself: \"Oh man, there's so many things about First Friday. So many artists. We've got a lot of music out here. The people are so great. So much fun energy.\" What she returns to is other people: \"Every time I talk to new people, I feel creative.\" She is the only person painting in a room full of hung work, which surprises her as much as anybody. \"I'm very shocked, honestly. There's usually a couple other people here as well.\" How she got the spot is unglamorous and she says so plainly: \"my boyfriend works here\". The painting itself gets the closest description on the tape. \"this is an acrylic painting. I've been super inspired by cherry blossoms lately\", she says, and \"I'm a huge fan of marbles and bubbles\". The title carries the idea. \"this piece is called reflection. It's kind of embodying the reflection of both the artworks and how the cherry blossoms aren't around for too long, but they're still just as beautiful at all times.\" Asked who influences her, she name drops without hesitation and recommends everyone in the room: \"Morgan Mandala is definitely one of my biggest inspirations.\" The weekly question is what made her smile, and the answer is the night she is in. \"being here tonight with everybody. I feel like I had kind of a rough week at work and coming here and just kind of letting that all go, losing myself in the painting and getting to share with everybody, kind of talk to new people just brings warmth to my heart.\" On the state of the world she is short: \"It's crazy out there. Um, from the weather to just the news, it's all insane\", and a room like this is where she sets it down. Her own question for the world is about fuel. \"What motivates you? What keeps you going? What makes you want to wake up and get out of bed?\" To anyone under twelve: \"Be as creative as you can and enjoy your year while you can.\" She misses being a kid, she says, and goes back to the canvas.",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/GXm069hI6Jo/maxresdefault.jpg"
+  ],
+  "uploadDate": "2026-04-17T22:13:24Z",
+  "embedUrl": "https://www.youtube.com/embed/GXm069hI6Jo",
+  "url": "https://wethem.xyz/watch/live-painting-cherry-blossoms-and-first-friday-denver",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT5M2S",
+  "inLanguage": "en-US",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "Introductions, and the weekly question",
+      "startOffset": 0,
+      "url": "https://wethem.xyz/watch/live-painting-cherry-blossoms-and-first-friday-denver?t=0",
+      "endOffset": 37
+    },
+    {
+      "@type": "Clip",
+      "name": "From Illinois to Denver three years ago",
+      "startOffset": 37,
+      "url": "https://wethem.xyz/watch/live-painting-cherry-blossoms-and-first-friday-denver?t=37",
+      "endOffset": 52
+    },
+    {
+      "@type": "Clip",
+      "name": "What is First Friday? Artists, music, people",
+      "startOffset": 52,
+      "url": "https://wethem.xyz/watch/live-painting-cherry-blossoms-and-first-friday-denver?t=52",
+      "endOffset": 77
+    },
+    {
+      "@type": "Clip",
+      "name": "The only live artist in the room",
+      "startOffset": 77,
+      "url": "https://wethem.xyz/watch/live-painting-cherry-blossoms-and-first-friday-denver?t=77",
+      "endOffset": 111
+    },
+    {
+      "@type": "Clip",
+      "name": "Acrylic, cherry blossoms and a piece called reflection",
+      "startOffset": 111,
+      "url": "https://wethem.xyz/watch/live-painting-cherry-blossoms-and-first-friday-denver?t=111",
+      "endOffset": 146
+    },
+    {
+      "@type": "Clip",
+      "name": "Painters she looks up to",
+      "startOffset": 146,
+      "url": "https://wethem.xyz/watch/live-painting-cherry-blossoms-and-first-friday-denver?t=146",
+      "endOffset": 203
+    },
+    {
+      "@type": "Clip",
+      "name": "What made her smile, and the climate of the world",
+      "startOffset": 203,
+      "url": "https://wethem.xyz/watch/live-painting-cherry-blossoms-and-first-friday-denver?t=203",
+      "endOffset": 249
+    },
+    {
+      "@type": "Clip",
+      "name": "One question for the world, and a word for kids",
+      "startOffset": 249,
+      "url": "https://wethem.xyz/watch/live-painting-cherry-blossoms-and-first-friday-denver?t=249",
+      "endOffset": 302
+    }
+  ],
+  "creator": {
+    "@type": "Person",
+    "name": "Maceo",
+    "url": "https://wethem.xyz/people/maceo"
+  },
+  "transcript": "Oh yeah. What's your name? Ryan. Ryan, it's nice to meet you. I'm Moa. Nice to meet you, too. Um I I have a platform on YouTube called Wita Media.\nOkay. Um and right now we're doing like a a weekly series where we go out and ask different people our weekly questions and we're giving out 100 bucks of people who participate and we pick our favorite submission. We've had people participate from Nigeria, Uganda, Kenya, and India so far outside the US. And I'm trying to encourage all of you who are doing these videos to do kind of profiles from people you interview too. Yeah.\nUm, and so I'd love to hear your answer to this week's question, but first love to know, you know, you're a painter, you're an artist, you're here from, are you from here in Denver?\nI am originally. I'm from Illinois. Moved here about 3 years ago and just got new creative flu moving out here and painting ever since. Okay. And we're at First Friday. What can you tell us about First Friday in Denver, Colorado?\nOh man, there's so many things about First Friday. So many artists. We've got a lot of music out here. The people are so great. So much fun energy. Um I just I just love being out here. Every time I talk to new people, I feel creative. Um just a bunch of inspiration.\nOkay. And what's the name of this gallery? Like where are we? We're in the Art Gallery here on Stand. Okay. And how did you end up painting here? Like how did I come to find you? He's the only live artist in this whole room.\nYeah, I know. I know. I'm very shocked, honestly. There's usually a couple other people here as well. Um, my boyfriend works here, so with that.\nSo, you get the end. Yep. Exactly. Very big opportunity to come in and paint and share my work with everybody. Okay. Is this your boyfriend over here?\nIt is. Yeah. Okay. Well, I'm going to ask him some questions about the place then cuz I have no idea where I am. Yeah. Yeah.\nBut tell us about your painting practice. Yeah. So, this is an acrylic painting. I've been super inspired by cherry blossoms lately. So, I've been kind of putting those in there. Um, I'm a huge fan of marbles and bubbles. So, I've tried to incorporate that in there as well. Um, this piece is called reflection. It's kind of embodying the reflection of both the artworks and how the cherry blossoms aren't around for too long, but they're still just as beautiful at all times.\nOkay, sick. And do you have any favorite painters? Do you like like who influences you? Like why are you painting? It's a very very good question. Morgan Mandala is definitely one of my biggest inspirations. Definitely should check her out if you haven't. Um, she's got a lot of good nature pieces. Definitely what she focuses on. Um, Stephven Cruz is also a really good one that I look up to. Uh, loaded question. I look up to pretty much everybody in this galler.\nI mean, you can name drop as many people as you want. Like, it's okay. You're the first painter I feel like I've had on my YouTube now. So, in real time, too. So,\num, definitely. Yeah. Blake Foster, Mandala, uh, Brandon Roberts, just a big group of them out there. Anybody from the theater collective, I recommend 100%. Definitely everybody I look up to.\nOkay, sick. And this week's question is, what's something that made you smile this week? Uh, being here tonight with everybody. I feel like I had kind of a rough week at work and coming here and just kind of letting that all go, losing myself in the painting and getting to share with everybody, kind of talk to new people just brings warmth to my heart. Let you know that there are people.\nHow are you feeling about the overall climate of the world right now? Well, it's crazy. It's crazy out there. Um, from the weather to just the news, it's all insane. But when you come into a group of people like this, you got to forget about everything. And I'm super\nsense. If you could ask people around the world one question, what would you ask them? What motivates you? What keeps you going? What makes you want to wake up and get out of bed? Something that I ask myself fairly often. And just being able to start a new day. Honestly, the opportunity is not the same. You just want to get out there.\nOh, yeah. And do you have any thoughts you would share with people under the age of 12? Be as creative as you can and enjoy your year while you can. Absolutely. There's so much nostalgia that I'm going through right now. I miss being a kid. Growing up is fine, but definitely embrace your body, man. Absolutely.\nOh, yeah. All right. Thank you.",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Denver",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "url": "https://wethem.xyz/places#denver"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Denver Unfiltered",
+    "url": "https://wethem.xyz/portfolio#p-denver"
+  },
+  "keywords": [
+    "What made you smile today?",
+    "If you could ask people around the world one question, what would you ask them?"
+  ],
+  "dateCreated": "2026-04-03"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Denver Unfiltered",
+      "item": "https://wethem.xyz/portfolio#p-denver"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "A live painter on cherry blossoms and what made her smile",
+      "item": "https://wethem.xyz/watch/live-painting-cherry-blossoms-and-first-friday-denver"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place], who[data-pf-who]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2026-04-17" data-pf-vid="GXm069hI6Jo" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;5:02&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="Denver" data-pf-country="United States" data-pf-project="Denver Unfiltered" data-pf-who="Maceo">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-denver">Denver Unfiltered</a></li>
+            <li aria-current="page">A live painter on cherry blossoms and what made her smile</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">A live painter on cherry blossoms and what made her smile.</h1>
+
+    <p class="wt-byline"><strong>Ryan</strong> &middot; Reported by <strong><a href="../people/maceo.html">Maceo</a></strong> &middot; Denver &middot; 5 min &middot; filmed <time datetime="2026-04-03">3 April 2026</time></p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="GXm069hI6Jo" live postersrcset="../stills/GXm069hI6Jo-320.jpg 320w, ../stills/GXm069hI6Jo-480.jpg 480w, ../stills/GXm069hI6Jo-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/GXm069hI6Jo?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="A live painter on cherry blossoms and what made her smile, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+    <p class="wt-answers">Answers <a href="../question/what-made-you-smile-today.html">What made you smile today?</a> and <a href="../question/what-would-you-ask-the-world.html">If you could ask people around the world one question, what would you ask them?</a> &middot; see how other cities answered &rarr;</p>
+    <div class="wt-prose">
+            <p>Five minutes at First Friday in Denver, at a gallery on the art walk, with a painter
+working live in the middle of the room. It is a question of the week piece: the interviewer explains
+the series, the hundred dollars for people who take part, and that answers have come in from
+Nigeria, Uganda, Kenya and India, then asks Ryan where she is from. Not from here, it turns out. &ldquo;I&rsquo;m
+from Illinois. Moved here about 3 years
+ago and just got new creative flu moving out here and painting ever since.&rdquo; On First Friday itself: &ldquo;Oh man, there&rsquo;s so many things about First
+Friday. So many artists. We&rsquo;ve got a lot of music out here. The people are so great. So much fun
+energy.&rdquo; What she returns to is other people: &ldquo;Every time I talk to new people, I feel creative.&rdquo;</p>
+            <p>She is the only person painting in a room full of hung work, which surprises her as much as anybody.
+&ldquo;I&rsquo;m very shocked, honestly. There&rsquo;s usually a couple other people here as well.&rdquo; How she got the
+spot is unglamorous and she says so plainly: &ldquo;my boyfriend works here&rdquo;.</p>
+            <p>The painting itself gets the closest description on the tape. &ldquo;this is an acrylic painting. I&rsquo;ve
+been super inspired by cherry blossoms lately&rdquo;, she says, and &ldquo;I&rsquo;m a huge fan of marbles and
+bubbles&rdquo;. The title carries the idea. &ldquo;this piece is called reflection. It&rsquo;s kind of embodying the
+reflection of both the artworks and how the cherry blossoms aren&rsquo;t around for too long, but they&rsquo;re
+still just as beautiful at all times.&rdquo; Asked who influences her, she name drops without hesitation
+and recommends everyone in the room: &ldquo;Morgan Mandala is definitely one of my biggest inspirations.&rdquo;</p>
+            <p>The weekly question is what made her smile, and the answer is the night she is in. &ldquo;being
+here tonight with everybody. I feel like I had kind of a rough week at work and coming here and just
+kind of letting that all go, losing myself in the painting and getting to share with everybody, kind
+of talk to new people just brings warmth to my heart.&rdquo; On the state of the world she is short: &ldquo;It&rsquo;s
+crazy out there. Um, from the weather to just the news, it&rsquo;s all insane&rdquo;, and a room like this is
+where she sets it down.</p>
+            <p>Her own question for the world is about fuel. &ldquo;What motivates you? What keeps you going?
+What makes you want to wake up and get out of bed?&rdquo; To anyone under twelve: &ldquo;Be as creative as you
+can and enjoy your year while you can.&rdquo; She misses being a kid, she says, and goes back to the
+canvas.</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../question/what-made-you-smile-today.html">Every answer to “What made you smile today?”</a></p>
+        <p class="wt-rail-link"><a href="../question/what-would-you-ask-the-world.html">Every answer to “If you could ask people around the world one question, what would you ask them?”</a></p>
+        <p class="wt-rail-link"><a href="../places.html#denver">Everything filmed in Denver</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="black-art-self-care-and-a-stage-one-drought-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/_sm7iv2UFd0-640.jpg" srcset="../stills/_sm7iv2UFd0-320.jpg 320w, ../stills/_sm7iv2UFd0-480.jpg 480w, ../stills/_sm7iv2UFd0-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>3:39</span></span><span>Black art, self care and the water in Colorado.</span></a>
+        <a class="wt-rail-card" href="friends-family-and-what-made-us-smile-this-week-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/JcWXoB_EYP8-640.jpg" srcset="../stills/JcWXoB_EYP8-320.jpg 320w, ../stills/JcWXoB_EYP8-480.jpg 480w, ../stills/JcWXoB_EYP8-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>5:28</span></span><span>Three friends on Denver, and what made them smile.</span></a>
+        <a class="wt-rail-card" href="what-made-you-smile-today-exploring-denver-from-wyoming.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/kz9_bbpmBJM-640.jpg" srcset="../stills/kz9_bbpmBJM-320.jpg 320w, ../stills/kz9_bbpmBJM-480.jpg 480w, ../stills/kz9_bbpmBJM-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>1:32</span></span><span>What made you smile today? Exploring Denver from Wyoming.</span></a>
+        <a class="wt-rail-card" href="a-dj-on-channel-5-street-journalism-and-the-loop-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/sT3XcZaHaV4-640.jpg" srcset="../stills/sT3XcZaHaV4-320.jpg 320w, ../stills/sT3XcZaHaV4-480.jpg 480w, ../stills/sT3XcZaHaV4-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>6:51</span></span><span>A DJ on Channel 5, street work and the loop.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap clip-sec" aria-labelledby="clips-here-h" data-pagefind-ignore="all">
+        <h2 class="clip-sec-h" id="clips-here-h">Shorts from this piece</h2>
+        <ul class="clip-row">
+            <li><a class="clip-card" href="../clips.html#b6-005"><span class="clip-card-pic"><img class="clip-img" src="../stills/clips/b6-005-360.jpg" srcset="../stills/clips/b6-005-360.jpg 360w, ../stills/clips/b6-005-720.jpg 720w" sizes="(min-width: 721px) 168px, 144px" width="360" height="640" alt="" loading="lazy" decoding="async"></span><span class="clip-card-t">A Painter on Cherry Blossoms and Impermanence</span><span class="clip-card-p">Denver</span></a><a class="clip-card-yt" href="https://www.youtube.com/shorts/Vs4hgYNP7qY">On YouTube &rarr;</a></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c0"><a class="wt-t" href="https://www.youtube.com/watch?v=GXm069hI6Jo&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-s">Introductions, and the weekly question</span></li>
+                <li class="wt-line" id="c37"><a class="wt-t" href="https://www.youtube.com/watch?v=GXm069hI6Jo&amp;t=37s" target="_blank" rel="noopener" data-pagefind-ignore>0:37</a><span class="wt-s">From Illinois to Denver three years ago</span></li>
+                <li class="wt-line" id="c52"><a class="wt-t" href="https://www.youtube.com/watch?v=GXm069hI6Jo&amp;t=52s" target="_blank" rel="noopener" data-pagefind-ignore>0:52</a><span class="wt-s">What is First Friday? Artists, music, people</span></li>
+                <li class="wt-line" id="c77"><a class="wt-t" href="https://www.youtube.com/watch?v=GXm069hI6Jo&amp;t=77s" target="_blank" rel="noopener" data-pagefind-ignore>1:17</a><span class="wt-s">The only live artist in the room</span></li>
+                <li class="wt-line" id="c111"><a class="wt-t" href="https://www.youtube.com/watch?v=GXm069hI6Jo&amp;t=111s" target="_blank" rel="noopener" data-pagefind-ignore>1:51</a><span class="wt-s">Acrylic, cherry blossoms and a piece called reflection</span></li>
+                <li class="wt-line" id="c146"><a class="wt-t" href="https://www.youtube.com/watch?v=GXm069hI6Jo&amp;t=146s" target="_blank" rel="noopener" data-pagefind-ignore>2:26</a><span class="wt-s">Painters she looks up to</span></li>
+                <li class="wt-line" id="c203"><a class="wt-t" href="https://www.youtube.com/watch?v=GXm069hI6Jo&amp;t=203s" target="_blank" rel="noopener" data-pagefind-ignore>3:23</a><span class="wt-s">What made her smile, and the climate of the world</span></li>
+                <li class="wt-line" id="c249"><a class="wt-t" href="https://www.youtube.com/watch?v=GXm069hI6Jo&amp;t=249s" target="_blank" rel="noopener" data-pagefind-ignore>4:09</a><span class="wt-s">One question for the world, and a word for kids</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Who speaks, by their own introduction on the tape: <a href="../guests.html#g-moa">Moa</a> at <a class="wt-at" data-seek="5" href="https://www.youtube.com/watch?v=GXm069hI6Jo&amp;t=5s" target="_blank" rel="noopener" data-pagefind-ignore>0:05</a>. Where YouTube masked a word it shows as [bleeped]. Speaker letters mark turns, not names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s1"><a class="wt-at" href="https://www.youtube.com/watch?v=GXm069hI6Jo&amp;t=1s" target="_blank" rel="noopener" data-pagefind-ignore>0:01</a>Oh yeah. What&rsquo;s your name? Ryan. Ryan, it&rsquo;s nice to meet you. I&rsquo;m Moa. Nice to meet you, too. Um I I have a platform on YouTube called Wita Media.</p>
+            <p id="s9"><a class="wt-at" href="https://www.youtube.com/watch?v=GXm069hI6Jo&amp;t=9s" target="_blank" rel="noopener" data-pagefind-ignore>0:09</a>Okay. Um and right now we&rsquo;re doing like a a weekly series where we go out and ask different people our weekly questions and we&rsquo;re giving out 100 bucks of people who participate and we pick our favorite submission. We&rsquo;ve had people participate from Nigeria, Uganda, Kenya, and India so far outside the US. And I&rsquo;m trying to encourage all of you who are doing these videos to do kind of profiles from people you interview too. Yeah.</p>
+            <p id="s30"><a class="wt-at" href="https://www.youtube.com/watch?v=GXm069hI6Jo&amp;t=30s" target="_blank" rel="noopener" data-pagefind-ignore>0:30</a>Um, and so I&rsquo;d love to hear your answer to this week&rsquo;s question, but first love to know, you know, you&rsquo;re a painter, you&rsquo;re an artist, you&rsquo;re here from, are you from here in Denver?</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s37"><a class="wt-at" href="https://www.youtube.com/watch?v=GXm069hI6Jo&amp;t=37s" target="_blank" rel="noopener" data-pagefind-ignore>0:37</a>I am originally. I&rsquo;m from Illinois. Moved here about 3 years ago and just got new creative flu moving out here and painting ever since. Okay. And we&rsquo;re at First Friday. What can you tell us about First Friday in Denver, Colorado?</p>
+            <p id="s52"><a class="wt-at" href="https://www.youtube.com/watch?v=GXm069hI6Jo&amp;t=52s" target="_blank" rel="noopener" data-pagefind-ignore>0:52</a>Oh man, there&rsquo;s so many things about First Friday. So many artists. We&rsquo;ve got a lot of music out here. The people are so great. So much fun energy. Um I just I just love being out here. Every time I talk to new people, I feel creative. Um just a bunch of inspiration.</p>
+            <p id="s77"><a class="wt-at" href="https://www.youtube.com/watch?v=GXm069hI6Jo&amp;t=77s" target="_blank" rel="noopener" data-pagefind-ignore>1:17</a>Okay. And what&rsquo;s the name of this gallery? Like where are we? We&rsquo;re in the Art Gallery here on Stand. Okay. And how did you end up painting here? Like how did I come to find you? He&rsquo;s the only live artist in this whole room.</p>
+            <p id="s88"><a class="wt-at" href="https://www.youtube.com/watch?v=GXm069hI6Jo&amp;t=88s" target="_blank" rel="noopener" data-pagefind-ignore>1:28</a>Yeah, I know. I know. I&rsquo;m very shocked, honestly. There&rsquo;s usually a couple other people here as well. Um, my boyfriend works here, so with that.</p>
+            <p id="s97"><a class="wt-at" href="https://www.youtube.com/watch?v=GXm069hI6Jo&amp;t=97s" target="_blank" rel="noopener" data-pagefind-ignore>1:37</a>So, you get the end. Yep. Exactly. Very big opportunity to come in and paint and share my work with everybody. Okay. Is this your boyfriend over here?</p>
+            <p id="s106"><a class="wt-at" href="https://www.youtube.com/watch?v=GXm069hI6Jo&amp;t=106s" target="_blank" rel="noopener" data-pagefind-ignore>1:46</a>It is. Yeah. Okay. Well, I&rsquo;m going to ask him some questions about the place then cuz I have no idea where I am. Yeah. Yeah.</p>
+            <p id="s111"><a class="wt-at" href="https://www.youtube.com/watch?v=GXm069hI6Jo&amp;t=111s" target="_blank" rel="noopener" data-pagefind-ignore>1:51</a>But tell us about your painting practice. Yeah. So, this is an acrylic painting. I&rsquo;ve been super inspired by cherry blossoms lately. So, I&rsquo;ve been kind of putting those in there. Um, I&rsquo;m a huge fan of marbles and bubbles. So, I&rsquo;ve tried to incorporate that in there as well. Um, this piece is called reflection. It&rsquo;s kind of embodying the reflection of both the artworks and how the cherry blossoms aren&rsquo;t around for too long, but they&rsquo;re still just as beautiful at all times.</p>
+            <p id="s146"><a class="wt-at" href="https://www.youtube.com/watch?v=GXm069hI6Jo&amp;t=146s" target="_blank" rel="noopener" data-pagefind-ignore>2:26</a>Okay, sick. And do you have any favorite painters? Do you like like who influences you? Like why are you painting? It&rsquo;s a very very good question. Morgan Mandala is definitely one of my biggest inspirations. Definitely should check her out if you haven&rsquo;t. Um, she&rsquo;s got a lot of good nature pieces. Definitely what she focuses on. Um, Stephven Cruz is also a really good one that I look up to. Uh, loaded question. I look up to pretty much everybody in this galler.</p>
+            <p id="s177"><a class="wt-at" href="https://www.youtube.com/watch?v=GXm069hI6Jo&amp;t=177s" target="_blank" rel="noopener" data-pagefind-ignore>2:57</a>I mean, you can name drop as many people as you want. Like, it&rsquo;s okay. You&rsquo;re the first painter I feel like I&rsquo;ve had on my YouTube now. So, in real time, too. So,</p>
+            <p id="s185"><a class="wt-at" href="https://www.youtube.com/watch?v=GXm069hI6Jo&amp;t=185s" target="_blank" rel="noopener" data-pagefind-ignore>3:05</a>um, definitely. Yeah. Blake Foster, Mandala, uh, Brandon Roberts, just a big group of them out there. Anybody from the theater collective, I recommend 100%. Definitely everybody I look up to.</p>
+            <p id="s203"><a class="wt-at" href="https://www.youtube.com/watch?v=GXm069hI6Jo&amp;t=203s" target="_blank" rel="noopener" data-pagefind-ignore>3:23</a>Okay, sick. And this week&rsquo;s question is, what&rsquo;s something that made you smile this week? Uh, being here tonight with everybody. I feel like I had kind of a rough week at work and coming here and just kind of letting that all go, losing myself in the painting and getting to share with everybody, kind of talk to new people just brings warmth to my heart. Let you know that there are people.</p>
+            <p id="s230"><a class="wt-at" href="https://www.youtube.com/watch?v=GXm069hI6Jo&amp;t=230s" target="_blank" rel="noopener" data-pagefind-ignore>3:50</a>How are you feeling about the overall climate of the world right now? Well, it&rsquo;s crazy. It&rsquo;s crazy out there. Um, from the weather to just the news, it&rsquo;s all insane. But when you come into a group of people like this, you got to forget about everything. And I&rsquo;m super</p>
+            <p id="s249"><a class="wt-at" href="https://www.youtube.com/watch?v=GXm069hI6Jo&amp;t=249s" target="_blank" rel="noopener" data-pagefind-ignore>4:09</a>sense. If you could ask people around the world one question, what would you ask them? What motivates you? What keeps you going? What makes you want to wake up and get out of bed? Something that I ask myself fairly often. And just being able to start a new day. Honestly, the opportunity is not the same. You just want to get out there.</p>
+            <p id="s274"><a class="wt-at" href="https://www.youtube.com/watch?v=GXm069hI6Jo&amp;t=274s" target="_blank" rel="noopener" data-pagefind-ignore>4:34</a>Oh, yeah. And do you have any thoughts you would share with people under the age of 12? Be as creative as you can and enjoy your year while you can. Absolutely. There&rsquo;s so much nostalgia that I&rsquo;m going through right now. I miss being a kid. Growing up is fine, but definitely embrace your body, man. Absolutely.</p>
+            <p id="s298"><a class="wt-at" href="https://www.youtube.com/watch?v=GXm069hI6Jo&amp;t=298s" target="_blank" rel="noopener" data-pagefind-ignore>4:58</a>Oh, yeah. All right. Thank you.</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+
+    <section id="after-transcript" tabindex="-1" class="wrap wt-more" aria-label="Filmed the same day">
+        <div class="country-head">
+            <h2 class="country-name">Filmed the same day.</h2>
+            <span class="country-meta">3 April 2026</span>
+        </div>
+        <ul class="rel-list">
+            <li class="rel-item">
+                <a class="rel-link" href="../archive/john-denver-photographer-on-15-years-the-denver-gallery-of-fine-art-th.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/Uj43c-WzQp8/mqdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">John · Denver Photographer on 15 Years, the Denver Gallery of Fine Art &amp; the 6 O&#x27;Clock News</span>
+                        <span class="rel-why">9.37pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Transcript</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="../archive/first-friday-interlude-light-spinner-in-a-costume-just-vibing-denver-c.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/64uFMiumNkw/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">First Friday Interlude · Light Spinner in a Costume Just Vibing | Denver CO Apr 2026</span>
+                        <span class="rel-why">9.56pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Transcript</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="black-art-self-care-and-a-stage-one-drought-denver.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/_sm7iv2UFd0/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">Black Art, Self Care and a Stage One Drought | Denver</span>
+                        <span class="rel-why">10.05pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="a-dj-on-channel-5-street-journalism-and-the-loop-denver.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/sT3XcZaHaV4/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">First Friday DJ Talks Channel 5, Street Journalism &amp; Music</span>
+                        <span class="rel-why">10.13pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="../archive/teacher-climbed-castleton-tower-on-spring-break-yan-got-a-style-compli.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/qwtgEOo_QxE/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">Teacher Climbed Castleton Tower on Spring Break &amp; Yan Got a Style Compliment | Denver First Friday</span>
+                        <span class="rel-why">10.21pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Transcript</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="let-the-camera-be-the-reason-first-friday-on-santa-fe-denver.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/sPrKbU119yA/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">Let the Camera Be the Reason: First Friday | Denver</span>
+                        <span class="rel-why">10.26pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+<div><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from Denver Unfiltered.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-denver">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="a-first-interview-and-advice-back-to-newark-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/UkX8veGIl58-640.jpg" srcset="../stills/UkX8veGIl58-320.jpg 320w, ../stills/UkX8veGIl58-480.jpg 480w, ../stills/UkX8veGIl58-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:15</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · ETH Denver 2024</span>
+                    <h3 class="report-title">A first interview, and advice back to Newark.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="building-a-dao-and-making-governance-a-game-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/qcTocIWf34U-640.jpg" srcset="../stills/qcTocIWf34U-320.jpg 320w, ../stills/qcTocIWf34U-480.jpg 480w, ../stills/qcTocIWf34U-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:45</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">A content coin, and making governance a game.</h3>
+                    
+                </div>
+            </a>
+            <a href="from-america-to-denver-what-brought-you-here-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/DdXcCfCc26E-640.jpg" srcset="../stills/DdXcCfCc26E-320.jpg 320w, ../stills/DdXcCfCc26E-480.jpg 480w, ../stills/DdXcCfCc26E-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:21</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · Street</span>
+                    <h3 class="report-title">A borrowed camera, and Denver block by block.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../question/what-made-you-smile-today.html">Every answer to “What made you smile today?”</a> &middot; <a href="../question/what-would-you-ask-the-world.html">Every answer to “If you could ask people around the world one question, what would you ask them?”</a> &middot; <a href="../places.html#denver">Everything filmed in Denver</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

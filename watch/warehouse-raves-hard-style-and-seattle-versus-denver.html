@@ -1,0 +1,869 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Why did a Seattle raver move to Denver, and what does the scene here not have?">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/warehouse-raves-hard-style-and-seattle-versus-denver">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="Warehouse Raves, Hard Style, Seattle vs Denver: Bam Bam">
+    <meta property="og:description" content="Why did a Seattle raver move to Denver, and what does the scene here not have?">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/warehouse-raves-hard-style-and-seattle-versus-denver.jpg?v=b2b2815daf">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Bam Bam’s first impressions of the Mile High City">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/warehouse-raves-hard-style-and-seattle-versus-denver.jpg?v=b2b2815daf">
+    <meta property="og:url" content="https://wethem.xyz/watch/warehouse-raves-hard-style-and-seattle-versus-denver">
+    <title>Warehouse Raves, Hard Style, Seattle vs Denver: Bam Bam &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/warehouse-raves-hard-style-and-seattle-versus-denver#video",
+  "name": "Warehouse Raves, Hard Style, Seattle vs Denver: Bam Bam",
+  "description": "Why did a Seattle raver move to Denver, and what does the scene here not have? Bam Bam says he stays for the people, and for the underground: phoneless warehouse parties, \"out in the middle of nowhere, like under a bridge, in the sewers,\" until five or six in the morning. What he wants is hard style: \"It's more of a European thing. Netherlands, Berlin, Amsterdam.\" Denver is dubstep and bass, and he finds the screechy end of it grating. He makes beats himself and names Griselda, Wu-Tang, MF DOOM and Westside Gunn. Seattle against Denver: \"Everyone in Seattle, the vibe is just like, stay away from me, I don't want to talk to you. But Denver, most people are just chill.\" He gives Washington the win on moss and big trees. His message for anybody under eight: \"only go to college if you really need to. If you don't need a degree to do what you want to do, then don't do it. Just do what you want.\" Language is unfiltered; the transcript is bleeped where the captions were.",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/UrpIMyx4nF8/maxresdefault.jpg"
+  ],
+  "uploadDate": "2026-03-04T07:34:41Z",
+  "embedUrl": "https://www.youtube.com/embed/UrpIMyx4nF8",
+  "url": "https://wethem.xyz/watch/warehouse-raves-hard-style-and-seattle-versus-denver",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT7M40S",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "Bam Bam, and what keeps him in Denver",
+      "startOffset": 0,
+      "url": "https://wethem.xyz/watch/warehouse-raves-hard-style-and-seattle-versus-denver?t=0",
+      "endOffset": 27
+    },
+    {
+      "@type": "Clip",
+      "name": "Phoneless warehouse raves until six in the morning",
+      "startOffset": 27,
+      "url": "https://wethem.xyz/watch/warehouse-raves-hard-style-and-seattle-versus-denver?t=27",
+      "endOffset": 60
+    },
+    {
+      "@type": "Clip",
+      "name": "His one request for ravers: put on deodorant",
+      "startOffset": 60,
+      "url": "https://wethem.xyz/watch/warehouse-raves-hard-style-and-seattle-versus-denver?t=60",
+      "endOffset": 89
+    },
+    {
+      "@type": "Clip",
+      "name": "Making beats: Griselda, Wu-Tang, MF DOOM",
+      "startOffset": 89,
+      "url": "https://wethem.xyz/watch/warehouse-raves-hard-style-and-seattle-versus-denver?t=89",
+      "endOffset": 131
+    },
+    {
+      "@type": "Clip",
+      "name": "Why doesn't Denver have a hard style scene?",
+      "startOffset": 131,
+      "url": "https://wethem.xyz/watch/warehouse-raves-hard-style-and-seattle-versus-denver?t=131",
+      "endOffset": 157
+    },
+    {
+      "@type": "Clip",
+      "name": "What Denver's rave scene plays: dubstep and bass",
+      "startOffset": 157,
+      "url": "https://wethem.xyz/watch/warehouse-raves-hard-style-and-seattle-versus-denver?t=157",
+      "endOffset": 193
+    },
+    {
+      "@type": "Clip",
+      "name": "Hard style artists to know",
+      "startOffset": 193,
+      "url": "https://wethem.xyz/watch/warehouse-raves-hard-style-and-seattle-versus-denver?t=193",
+      "endOffset": 220
+    },
+    {
+      "@type": "Clip",
+      "name": "Where did hard style come from?",
+      "startOffset": 220,
+      "url": "https://wethem.xyz/watch/warehouse-raves-hard-style-and-seattle-versus-denver?t=220",
+      "endOffset": 303
+    },
+    {
+      "@type": "Clip",
+      "name": "Seattle vs Denver: are people friendlier here?",
+      "startOffset": 303,
+      "url": "https://wethem.xyz/watch/warehouse-raves-hard-style-and-seattle-versus-denver?t=303",
+      "endOffset": 345
+    },
+    {
+      "@type": "Clip",
+      "name": "Sunshine, fire season, and a city in a desert",
+      "startOffset": 345,
+      "url": "https://wethem.xyz/watch/warehouse-raves-hard-style-and-seattle-versus-denver?t=345",
+      "endOffset": 404
+    },
+    {
+      "@type": "Clip",
+      "name": "His advice for kids: college only if you need it",
+      "startOffset": 404,
+      "url": "https://wethem.xyz/watch/warehouse-raves-hard-style-and-seattle-versus-denver?t=404",
+      "endOffset": 460
+    }
+  ],
+  "creator": {
+    "@type": "Person",
+    "name": "Maceo",
+    "url": "https://wethem.xyz/people/maceo"
+  },
+  "transcript": "For the vibes, little kid. Always. Okay. And so, Bam Bam, yeah. Yes, sir. Can you tell people your name?\nMy name's Bam Bam. I'm from around here-ish, yeah.\nOh, yeah. What's your favorite thing about Denver?\nThe people, for sure. I haven't been a super big fan of, like, the scene here, except for, like, the underground music, but the people, yeah, that's what makes me stay.\nOkay, so what would you say about the underground music scene here?\nThey got, they throw dumb like warehouse raves, like, I don't know, certain lit or like phone lists, like they'll just send you to like these warehouses out in the middle of nowhere, like under a bridge in the sewers, throw insane raves until like five, six in the morning. Love that shit. They don't got that like in Washington where I'm actually from. A lot of stinky motherfuckers. I mean, I love the music. The people are awesome, too, but some of them just need to take a shower more often, dude. I'm not even going to front. Like, we're all in a warehouse together. Like, put on some Old Spice, please, for the love of God.\nI hear it. I hear it.\nBut, and so do you make music?\nI dabble.\nOkay. What kind of stuff do you make?\nThe shit, usually like very like old school New York-ish hip-hop beats or like like, you know, Griselda. I mean, you know Wu-Tang. Yeah. That's a lot of my inspiration or like MF Doom, Westside Gunn. Love those motherfuckers. So that's usually what I try to emanate.\nOkay, and how did you get into hip-hop?\nJust friends. Friends got music, studios. I just come in. Sometimes I try to throw a bar in there, but I think I need to stick to the techie side. I'm not too lyrical.\nYeah, that's fair. I thought you were going to say that the raves aren't like hip-hop raves, no?\nWell, I mean, sometimes they can be, but not usually. I'm not super into the super wubby shit. I love hardstyle. That's my shit.\nIs that a big thing here in Denver?\nNot surprisingly. Surprisingly not. I wish it was. It's more of like a European, like, Netherlands, Berlin, Amsterdam.\nSo how is there a scene here in Denver?\nVery scarce. I mean, the scene here is more like wubby, dubstep, bass shit. I like a lot of the bass shit, but I don't know, dude. Dubstep just grinds my gears.\nYou don't like dubstep? Dubstep's no good?\nI don't like the screechy whiny shit I like the you know the wubby lubby I mean it depends I don't know it's a weird it's all this it's not all the same they're very nuanced I don't know but I fuck with the I fuck with the harder hitting shit\nokay who are like some names we should know in hardstyle like\noh hards\nfor the people who don't know crude intentions oh yeah I like that face this way it's more like\nyeah yeah yeah yeah crude intentions the purge Mutilator, oh my god, I fucking love that motherfucker Who else? CrowdX Little Texas, Sub-Zero Project Those are some of my names, yeah\nIf you could speak to the peak of this genre of music When was it and how did it happen? SoundCloud music is like, if that's a framework I don't know if you know how SoundCloud came to work But it's like a scene developed, it proliferated And now here we are\nI think it definitely started in, like, the Netherlands, like, or, um, I don't know, Berlin, Amsterdam, they all got, like, that very, like, deep techno house, I think is, it's, like, hard, I can't remember what it's called\nIt's okay\nBut they got this, um, their techno there is very, like, deep in hits, and I think it just kind of evolved from that, maybe, I don't know, early, like, late 90s, or to, like, Russia, too, I think Oh yeah, they fucking love it over there. That's when they got the guys in the tracksuits fucking\nOh yeah?\nI can't, I know, I can't hit that shit, I can't hit that shit But no, yeah, that's where it originated. I'm glad it fucking found its way out here But not enough. There's not really any hardstyle raves out here\nOkay, where's like the most prominent, what are you gonna say?\nOh, I'm saying there is one coming up. I think it's at the, I think it's at Vinyl actually\nAnd what day is that?\nShit, I don't know man, I'd have to check\nOkay, maybe you'll let me know\nI'll let you know, yeah, let me get your digits Oh, yeah, dude No, they're sick, dude Oh, they're so much fun It's like the exact kind of music I want when I'm at like a club or like at a show Hell\nyeah Hell yeah What's it called? You say you came out here from Seattle What's like the biggest difference you see between here and like outside the music scene, right? Like at the people level, how people talk to each other, how they interact The culture, I guess, you know?\nThe people here are like completely the opposite That's it, like everyone in Seattle is, not everyone, there's cool people there, but the vibe is just like, stay away from me, I don't want to talk to you. Like if you do this in Seattle, you'll get like fucking nobody. But Denver, I feel like most people are just chill, like they're down to, it might be the weather too. It's always gray there, everyone's sad all the time.\nYeah, I heard that.\nBut I don't know, people here just smoke a lot more weed and chill out. We got sunshine all the time. Way too much recently, too. Our fire season's going to be fucked up. But yeah, dude, just the people.\nShout out to the water.\nYou what?\nShout out to the water.\nShout out water, man. Hey, dude, we need some more of that. I think it's probably going to snow soon, hopefully. But yeah, the people and the weather is probably the two biggest Just like opposite differences. Although, Washington is way more beautiful. The trees, the fucking, I love moss. The woods, big ass trees too. Because all these were planted. We don't got, like, we're in a desert technically.\nYeah. Isn't that crazy? We're in a fucking desert.\nYeah. Elevated desert, dude, it's fucking wild.\nThey make you think it's not a desert. No, it is. But\nit explains a lot. It's literally classified as an elevated desert. But, um, yeah, weathering the people, man. But I'm glad I'm out here, you know, it's been fun, it's a vibe Oh yeah,\nmy last question is, what's a message you have for the people under 8?\nUnder 8? Stay in school until you graduate high school And then after that, only go to college if you really need to Because otherwise, you'll just be in a world of hurt If you don't need a degree to do what you want to do, then don't do it Just do what you want No, no,\noh my god\nNo, I just, uh, I make it happen It's\nall we can do, right? It's\nall we can do, try my best out here\nOh yeah, man, well I appreciate it\nNo, I appreciate you, bro What was your name again? Maceo Maceo, hey Bam Bam\nSo my page is called We Them Media And I've been having people say Booyah Booyah? Yeah, so you can say it with me at the end of 3, 2, 1 Ready? 3, 2, 1 Booyah!",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Denver",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "url": "https://wethem.xyz/places#denver"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Denver Unfiltered",
+    "url": "https://wethem.xyz/portfolio#p-denver"
+  },
+  "keywords": [
+    "What would you say to someone under ten?"
+  ],
+  "dateCreated": "2026-03-03"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Denver Unfiltered",
+      "item": "https://wethem.xyz/portfolio#p-denver"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Bam Bam’s first impressions of the Mile High City",
+      "item": "https://wethem.xyz/watch/warehouse-raves-hard-style-and-seattle-versus-denver"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place], who[data-pf-who]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2026-03-04" data-pf-vid="UrpIMyx4nF8" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;7:40&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="Denver" data-pf-country="United States" data-pf-project="Denver Unfiltered" data-pf-who="Maceo">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-denver">Denver Unfiltered</a></li>
+            <li aria-current="page">Bam Bam’s first impressions of the Mile High City</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">Bam Bam’s first impressions of the Mile High City.</h1>
+
+    <p class="wt-byline"><strong>Bam Bam</strong> &middot; Reported by <strong><a href="../people/maceo.html">Maceo</a></strong> &middot; Denver &middot; 8 min &middot; filmed <time datetime="2026-03-03">3 March 2026</time></p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="UrpIMyx4nF8" live postersrcset="../stills/UrpIMyx4nF8-320.jpg 320w, ../stills/UrpIMyx4nF8-480.jpg 480w, ../stills/UrpIMyx4nF8-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/UrpIMyx4nF8?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="Bam Bam’s first impressions of the Mile High City, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+    <p class="wt-answers">Answers <a href="../question/what-would-you-say-to-someone-under-ten.html">What would you say to someone under ten?</a> &middot; see how other cities answered &rarr;</p>
+    <div class="wt-prose">
+            <p>Why did a Seattle raver move to Denver, and what does the scene here not have? Bam Bam says he stays for the people, and for the underground: phoneless warehouse parties, &ldquo;out in the middle of nowhere, like under a bridge, in the sewers,&rdquo; until five or six in the morning.</p>
+            <p>What he wants is hard style: &ldquo;It&rsquo;s more of a European thing. Netherlands, Berlin, Amsterdam.&rdquo; Denver is dubstep and bass, and he finds the screechy end of it grating. He makes beats himself and names Griselda, Wu-Tang, MF DOOM and Westside Gunn.</p>
+            <p>Seattle against Denver: &ldquo;Everyone in Seattle, the vibe is just like, stay away from me, I don&rsquo;t want to talk to you. But Denver, most people are just chill.&rdquo; He gives Washington the win on moss and big trees.</p>
+            <p>His message for anybody under eight: &ldquo;only go to college if you really need to. If you don&rsquo;t need a degree to do what you want to do, then don&rsquo;t do it. Just do what you want.&rdquo; Language is unfiltered; the transcript is bleeped where the captions were.</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../question/what-would-you-say-to-someone-under-ten.html">Every answer to “What would you say to someone under ten?”</a></p>
+        <p class="wt-rail-link"><a href="../places.html#denver">Everything filmed in Denver</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="the-music-scene-from-two-people-who-go-to-the-shows-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/eRm1k0aBa8s-640.jpg" srcset="../stills/eRm1k0aBa8s-320.jpg 320w, ../stills/eRm1k0aBa8s-480.jpg 480w, ../stills/eRm1k0aBa8s-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>11:17</span></span><span>Two locals on Red Rocks, bass and the shows every night.</span></a>
+        <a class="wt-rail-card" href="rexii-dubz-on-the-record-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/zb_zN46MEpM-640.jpg" srcset="../stills/zb_zN46MEpM-320.jpg 320w, ../stills/zb_zN46MEpM-480.jpg 480w, ../stills/zb_zN46MEpM-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>6:21</span></span><span>A dubstep DJ on her roots and a new tape.</span></a>
+        <a class="wt-rail-card" href="bass-bingo-to-cervantes-a-dj-in-the-bass-capital-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/ciBovqpaFH4-640.jpg" srcset="../stills/ciBovqpaFH4-320.jpg 320w, ../stills/ciBovqpaFH4-480.jpg 480w, ../stills/ciBovqpaFH4-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>1:30</span></span><span>Bass Bingo to Cervantes: a DJ in the bass capital.</span></a>
+        <a class="wt-rail-card" href="post-miguel-concert-on-the-city-the-show-and-ai-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/hlq0Z7z1XE0-640.jpg" srcset="../stills/hlq0Z7z1XE0-320.jpg 320w, ../stills/hlq0Z7z1XE0-480.jpg 480w, ../stills/hlq0Z7z1XE0-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>3:05</span></span><span>Two high school seniors after a Miguel show.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c0"><a class="wt-t" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-s">Bam Bam, and what keeps him in Denver</span></li>
+                <li class="wt-line" id="c27"><a class="wt-t" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=27s" target="_blank" rel="noopener" data-pagefind-ignore>0:27</a><span class="wt-s">Phoneless warehouse raves until six in the morning</span></li>
+                <li class="wt-line" id="c60"><a class="wt-t" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=60s" target="_blank" rel="noopener" data-pagefind-ignore>1:00</a><span class="wt-s">His one request for ravers: put on deodorant</span></li>
+                <li class="wt-line" id="c89"><a class="wt-t" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=89s" target="_blank" rel="noopener" data-pagefind-ignore>1:29</a><span class="wt-s">Making beats: Griselda, Wu-Tang, MF DOOM</span></li>
+                <li class="wt-line" id="c131"><a class="wt-t" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=131s" target="_blank" rel="noopener" data-pagefind-ignore>2:11</a><span class="wt-s">Why doesn&#x27;t Denver have a hard style scene?</span></li>
+                <li class="wt-line" id="c157"><a class="wt-t" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=157s" target="_blank" rel="noopener" data-pagefind-ignore>2:37</a><span class="wt-s">What Denver&#x27;s rave scene plays: dubstep and bass</span></li>
+                <li class="wt-line" id="c193"><a class="wt-t" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=193s" target="_blank" rel="noopener" data-pagefind-ignore>3:13</a><span class="wt-s">Hard style artists to know</span></li>
+                <li class="wt-line" id="c220"><a class="wt-t" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=220s" target="_blank" rel="noopener" data-pagefind-ignore>3:40</a><span class="wt-s">Where did hard style come from?</span></li>
+                <li class="wt-line" id="c303"><a class="wt-t" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=303s" target="_blank" rel="noopener" data-pagefind-ignore>5:03</a><span class="wt-s">Seattle vs Denver: are people friendlier here?</span></li>
+                <li class="wt-line" id="c345"><a class="wt-t" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=345s" target="_blank" rel="noopener" data-pagefind-ignore>5:45</a><span class="wt-s">Sunshine, fire season, and a city in a desert</span></li>
+                <li class="wt-line" id="c404"><a class="wt-t" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=404s" target="_blank" rel="noopener" data-pagefind-ignore>6:44</a><span class="wt-s">His advice for kids: college only if you need it</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Who speaks, by their own introduction on the tape: <a href="../guests.html#g-bam" data-pagefind-filter="person">Bam</a> at <a class="wt-at" data-seek="12" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=12s" target="_blank" rel="noopener" data-pagefind-ignore>0:12</a>. Transcribed from the original audio and corrected for names. Speaker letters mark turns, not names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>For the vibes, little kid. Always. Okay. And so, Bam Bam, yeah. Yes, sir. Can you tell people your name?</p>
+            <p id="s11"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=11s" target="_blank" rel="noopener" data-pagefind-ignore>0:11</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Bam at 0:12" data-pagefind-ignore>Bam</span>My name&rsquo;s Bam Bam. I&rsquo;m from around here-ish, yeah.</p>
+            <p id="s15"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=15s" target="_blank" rel="noopener" data-pagefind-ignore>0:15</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Oh, yeah. What&rsquo;s your favorite thing about Denver?</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s17"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=17s" target="_blank" rel="noopener" data-pagefind-ignore>0:17</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Bam at 0:12" data-pagefind-ignore>Bam</span>The people, for sure. I haven&rsquo;t been a super big fan of, like, the scene here, except for, like, the underground music, but the people, yeah, that&rsquo;s what makes me stay.</p>
+            <p id="s27"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=27s" target="_blank" rel="noopener" data-pagefind-ignore>0:27</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Okay, so what would you say about the underground music scene here?</p>
+            <p id="s29"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=29s" target="_blank" rel="noopener" data-pagefind-ignore>0:29</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Bam at 0:12" data-pagefind-ignore>Bam</span>They got, they throw dumb like warehouse raves, like, I don&rsquo;t know, certain lit or like phone lists, like they&rsquo;ll just send you to like these warehouses out in the middle of nowhere, like under a bridge in the sewers, throw insane raves until like five, six in the morning. Love that shit. They don&rsquo;t got that like in Washington where I&rsquo;m actually from. A lot of stinky motherfuckers. I mean, I love the music. The people are awesome, too, but some of them just need to take a shower more often, dude. I&rsquo;m not even going to front. Like, we&rsquo;re all in a warehouse together. Like, put on some Old Spice, please, for the love of God.</p>
+            <p id="s66"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=66s" target="_blank" rel="noopener" data-pagefind-ignore>1:06</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Bam at 0:12" data-pagefind-ignore>Bam</span>I hear it. I hear it.</p>
+            <p id="s88"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=88s" target="_blank" rel="noopener" data-pagefind-ignore>1:28</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>But, and so do you make music?</p>
+            <p id="s89"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=89s" target="_blank" rel="noopener" data-pagefind-ignore>1:29</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Bam at 0:12" data-pagefind-ignore>Bam</span>I dabble.</p>
+            <p id="s91"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=91s" target="_blank" rel="noopener" data-pagefind-ignore>1:31</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Okay. What kind of stuff do you make?</p>
+            <p id="s93"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=93s" target="_blank" rel="noopener" data-pagefind-ignore>1:33</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Bam at 0:12" data-pagefind-ignore>Bam</span>The shit, usually like very like old school New York-ish hip-hop beats or like like, you know, Griselda. I mean, you know Wu-Tang. Yeah. That&rsquo;s a lot of my inspiration or like MF Doom, Westside Gunn. Love those motherfuckers. So that&rsquo;s usually what I try to emanate.</p>
+            <p id="s114"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=114s" target="_blank" rel="noopener" data-pagefind-ignore>1:54</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Okay, and how did you get into hip-hop?</p>
+            <p id="s117"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=117s" target="_blank" rel="noopener" data-pagefind-ignore>1:57</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Bam at 0:12" data-pagefind-ignore>Bam</span>Just friends. Friends got music, studios. I just come in. Sometimes I try to throw a bar in there, but I think I need to stick to the techie side. I&rsquo;m not too lyrical.</p>
+            <p id="s131"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=131s" target="_blank" rel="noopener" data-pagefind-ignore>2:11</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, that&rsquo;s fair. I thought you were going to say that the raves aren&rsquo;t like hip-hop raves, no?</p>
+            <p id="s135"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=135s" target="_blank" rel="noopener" data-pagefind-ignore>2:15</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Bam at 0:12" data-pagefind-ignore>Bam</span>Well, I mean, sometimes they can be, but not usually. I&rsquo;m not super into the super wubby shit. I love hardstyle. That&rsquo;s my shit.</p>
+            <p id="s147"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=147s" target="_blank" rel="noopener" data-pagefind-ignore>2:27</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Is that a big thing here in Denver?</p>
+            <p id="s148"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=148s" target="_blank" rel="noopener" data-pagefind-ignore>2:28</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Bam at 0:12" data-pagefind-ignore>Bam</span>Not surprisingly. Surprisingly not. I wish it was. It&rsquo;s more of like a European, like, Netherlands, Berlin, Amsterdam.</p>
+            <p id="s156"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=156s" target="_blank" rel="noopener" data-pagefind-ignore>2:36</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>So how is there a scene here in Denver?</p>
+            <p id="s159"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=159s" target="_blank" rel="noopener" data-pagefind-ignore>2:39</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Bam at 0:12" data-pagefind-ignore>Bam</span>Very scarce. I mean, the scene here is more like wubby, dubstep, bass shit. I like a lot of the bass shit, but I don&rsquo;t know, dude. Dubstep just grinds my gears.</p>
+            <p id="s174"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=174s" target="_blank" rel="noopener" data-pagefind-ignore>2:54</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>You don&rsquo;t like dubstep? Dubstep&rsquo;s no good?</p>
+            <p id="s175"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=175s" target="_blank" rel="noopener" data-pagefind-ignore>2:55</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Bam at 0:12" data-pagefind-ignore>Bam</span>I don&rsquo;t like the screechy whiny shit I like the you know the wubby lubby I mean it depends I don&rsquo;t know it&rsquo;s a weird it&rsquo;s all this it&rsquo;s not all the same they&rsquo;re very nuanced I don&rsquo;t know but I fuck with the I fuck with the harder hitting shit</p>
+            <p id="s192"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=192s" target="_blank" rel="noopener" data-pagefind-ignore>3:12</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>okay who are like some names we should know in hardstyle like</p>
+            <p id="s195"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=195s" target="_blank" rel="noopener" data-pagefind-ignore>3:15</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Bam at 0:12" data-pagefind-ignore>Bam</span>oh hards</p>
+            <p id="s198"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=198s" target="_blank" rel="noopener" data-pagefind-ignore>3:18</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>for the people who don&rsquo;t know crude intentions oh yeah I like that face this way it&rsquo;s more like</p>
+            <p id="s202"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=202s" target="_blank" rel="noopener" data-pagefind-ignore>3:22</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Bam at 0:12" data-pagefind-ignore>Bam</span>yeah yeah yeah yeah crude intentions the purge Mutilator, oh my god, I fucking love that motherfucker Who else? CrowdX Little Texas, Sub-Zero Project Those are some of my names, yeah</p>
+            <p id="s219"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=219s" target="_blank" rel="noopener" data-pagefind-ignore>3:39</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>If you could speak to the peak of this genre of music When was it and how did it happen? SoundCloud music is like, if that&rsquo;s a framework I don&rsquo;t know if you know how SoundCloud came to work But it&rsquo;s like a scene developed, it proliferated And now here we are</p>
+            <p id="s235"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=235s" target="_blank" rel="noopener" data-pagefind-ignore>3:55</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Bam at 0:12" data-pagefind-ignore>Bam</span>I think it definitely started in, like, the Netherlands, like, or, um, I don&rsquo;t know, Berlin, Amsterdam, they all got, like, that very, like, deep techno house, I think is, it&rsquo;s, like, hard, I can&rsquo;t remember what it&rsquo;s called</p>
+            <p id="s252"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=252s" target="_blank" rel="noopener" data-pagefind-ignore>4:12</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>It&rsquo;s okay</p>
+            <p id="s252-2"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=252s" target="_blank" rel="noopener" data-pagefind-ignore>4:12</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Bam at 0:12" data-pagefind-ignore>Bam</span>But they got this, um, their techno there is very, like, deep in hits, and I think it just kind of evolved from that, maybe, I don&rsquo;t know, early, like, late 90s, or to, like, Russia, too, I think Oh yeah, they fucking love it over there. That&rsquo;s when they got the guys in the tracksuits fucking</p>
+            <p id="s272"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=272s" target="_blank" rel="noopener" data-pagefind-ignore>4:32</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Oh yeah?</p>
+            <p id="s272-2"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=272s" target="_blank" rel="noopener" data-pagefind-ignore>4:32</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Bam at 0:12" data-pagefind-ignore>Bam</span>I can&rsquo;t, I know, I can&rsquo;t hit that shit, I can&rsquo;t hit that shit But no, yeah, that&rsquo;s where it originated. I&rsquo;m glad it fucking found its way out here But not enough. There&rsquo;s not really any hardstyle raves out here</p>
+            <p id="s283"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=283s" target="_blank" rel="noopener" data-pagefind-ignore>4:43</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Okay, where&rsquo;s like the most prominent, what are you gonna say?</p>
+            <p id="s285"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=285s" target="_blank" rel="noopener" data-pagefind-ignore>4:45</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Bam at 0:12" data-pagefind-ignore>Bam</span>Oh, I&rsquo;m saying there is one coming up. I think it&rsquo;s at the, I think it&rsquo;s at Vinyl actually</p>
+            <p id="s292"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=292s" target="_blank" rel="noopener" data-pagefind-ignore>4:52</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And what day is that?</p>
+            <p id="s293"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=293s" target="_blank" rel="noopener" data-pagefind-ignore>4:53</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Bam at 0:12" data-pagefind-ignore>Bam</span>Shit, I don&rsquo;t know man, I&rsquo;d have to check</p>
+            <p id="s296"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=296s" target="_blank" rel="noopener" data-pagefind-ignore>4:56</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Okay, maybe you&rsquo;ll let me know</p>
+            <p id="s297"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=297s" target="_blank" rel="noopener" data-pagefind-ignore>4:57</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Bam at 0:12" data-pagefind-ignore>Bam</span>I&rsquo;ll let you know, yeah, let me get your digits Oh, yeah, dude No, they&rsquo;re sick, dude Oh, they&rsquo;re so much fun It&rsquo;s like the exact kind of music I want when I&rsquo;m at like a club or like at a show Hell</p>
+            <p id="s308"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=308s" target="_blank" rel="noopener" data-pagefind-ignore>5:08</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>yeah Hell yeah What&rsquo;s it called? You say you came out here from Seattle What&rsquo;s like the biggest difference you see between here and like outside the music scene, right? Like at the people level, how people talk to each other, how they interact The culture, I guess, you know?</p>
+            <p id="s322"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=322s" target="_blank" rel="noopener" data-pagefind-ignore>5:22</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Bam at 0:12" data-pagefind-ignore>Bam</span>The people here are like completely the opposite That&rsquo;s it, like everyone in Seattle is, not everyone, there&rsquo;s cool people there, but the vibe is just like, stay away from me, I don&rsquo;t want to talk to you. Like if you do this in Seattle, you&rsquo;ll get like fucking nobody. But Denver, I feel like most people are just chill, like they&rsquo;re down to, it might be the weather too. It&rsquo;s always gray there, everyone&rsquo;s sad all the time.</p>
+            <p id="s345"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=345s" target="_blank" rel="noopener" data-pagefind-ignore>5:45</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, I heard that.</p>
+            <p id="s346"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=346s" target="_blank" rel="noopener" data-pagefind-ignore>5:46</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Bam at 0:12" data-pagefind-ignore>Bam</span>But I don&rsquo;t know, people here just smoke a lot more weed and chill out. We got sunshine all the time. Way too much recently, too. Our fire season&rsquo;s going to be fucked up. But yeah, dude, just the people.</p>
+            <p id="s359"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=359s" target="_blank" rel="noopener" data-pagefind-ignore>5:59</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Shout out to the water.</p>
+            <p id="s361"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=361s" target="_blank" rel="noopener" data-pagefind-ignore>6:01</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Bam at 0:12" data-pagefind-ignore>Bam</span>You what?</p>
+            <p id="s361-2"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=361s" target="_blank" rel="noopener" data-pagefind-ignore>6:01</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Shout out to the water.</p>
+            <p id="s362"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=362s" target="_blank" rel="noopener" data-pagefind-ignore>6:02</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Bam at 0:12" data-pagefind-ignore>Bam</span>Shout out water, man. Hey, dude, we need some more of that. I think it&rsquo;s probably going to snow soon, hopefully. But yeah, the people and the weather is probably the two biggest Just like opposite differences. Although, Washington is way more beautiful. The trees, the fucking, I love moss. The woods, big ass trees too. Because all these were planted. We don&rsquo;t got, like, we&rsquo;re in a desert technically.</p>
+            <p id="s387"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=387s" target="_blank" rel="noopener" data-pagefind-ignore>6:27</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah. Isn&rsquo;t that crazy? We&rsquo;re in a fucking desert.</p>
+            <p id="s389"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=389s" target="_blank" rel="noopener" data-pagefind-ignore>6:29</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Bam at 0:12" data-pagefind-ignore>Bam</span>Yeah. Elevated desert, dude, it&rsquo;s fucking wild.</p>
+            <p id="s391"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=391s" target="_blank" rel="noopener" data-pagefind-ignore>6:31</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>They make you think it&rsquo;s not a desert. No, it is. But</p>
+            <p id="s394"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=394s" target="_blank" rel="noopener" data-pagefind-ignore>6:34</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Bam at 0:12" data-pagefind-ignore>Bam</span>it explains a lot. It&rsquo;s literally classified as an elevated desert. But, um, yeah, weathering the people, man. But I&rsquo;m glad I&rsquo;m out here, you know, it&rsquo;s been fun, it&rsquo;s a vibe Oh yeah,</p>
+            <p id="s405"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=405s" target="_blank" rel="noopener" data-pagefind-ignore>6:45</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>my last question is, what&rsquo;s a message you have for the people under 8?</p>
+            <p id="s408"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=408s" target="_blank" rel="noopener" data-pagefind-ignore>6:48</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Bam at 0:12" data-pagefind-ignore>Bam</span>Under 8? Stay in school until you graduate high school And then after that, only go to college if you really need to Because otherwise, you&rsquo;ll just be in a world of hurt If you don&rsquo;t need a degree to do what you want to do, then don&rsquo;t do it Just do what you want No, no,</p>
+            <p id="s436"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=436s" target="_blank" rel="noopener" data-pagefind-ignore>7:16</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>oh my god</p>
+            <p id="s437"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=437s" target="_blank" rel="noopener" data-pagefind-ignore>7:17</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Bam at 0:12" data-pagefind-ignore>Bam</span>No, I just, uh, I make it happen It&rsquo;s</p>
+            <p id="s439"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=439s" target="_blank" rel="noopener" data-pagefind-ignore>7:19</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>all we can do, right? It&rsquo;s</p>
+            <p id="s441"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=441s" target="_blank" rel="noopener" data-pagefind-ignore>7:21</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Bam at 0:12" data-pagefind-ignore>Bam</span>all we can do, try my best out here</p>
+            <p id="s442"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=442s" target="_blank" rel="noopener" data-pagefind-ignore>7:22</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Oh yeah, man, well I appreciate it</p>
+            <p id="s444"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=444s" target="_blank" rel="noopener" data-pagefind-ignore>7:24</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Bam at 0:12" data-pagefind-ignore>Bam</span>No, I appreciate you, bro What was your name again? Maceo Maceo, hey Bam Bam</p>
+            <p id="s449"><a class="wt-at" href="https://www.youtube.com/watch?v=UrpIMyx4nF8&amp;t=449s" target="_blank" rel="noopener" data-pagefind-ignore>7:29</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>So my page is called We Them Media And I&rsquo;ve been having people say Booyah Booyah? Yeah, so you can say it with me at the end of 3, 2, 1 Ready? 3, 2, 1 Booyah!</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+
+    <section id="after-transcript" tabindex="-1" class="wrap wt-more" aria-label="Filmed the same day">
+        <div class="country-head">
+            <h2 class="country-name">Filmed the same day.</h2>
+            <span class="country-meta">3 March 2026</span>
+        </div>
+        <ul class="rel-list">
+            <li class="rel-item">
+                <a class="rel-link" href="from-america-to-denver-what-brought-you-here-denver.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/DdXcCfCc26E/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">A Flight Attendant&#x27;s Denver, Block by Block | Denver POV</span>
+                        <span class="rel-why">10.04pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="the-music-scene-from-two-people-who-go-to-the-shows-denver.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/eRm1k0aBa8s/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">Bass, Red Rocks and 52 Shows in a Year | Denver</span>
+                        <span class="rel-why">10.13pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="from-850-rent-to-a-pot-real-estate-bubble-james-denver.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/BGwGYtKnEok/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">From $850 Rent to a Pot Real Estate Bubble | Denver</span>
+                        <span class="rel-why">10.31pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+<div><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from Denver Unfiltered.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-denver">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="a-first-interview-and-advice-back-to-newark-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/UkX8veGIl58-640.jpg" srcset="../stills/UkX8veGIl58-320.jpg 320w, ../stills/UkX8veGIl58-480.jpg 480w, ../stills/UkX8veGIl58-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:15</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · ETH Denver 2024</span>
+                    <h3 class="report-title">A first interview, and advice back to Newark.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="building-a-dao-and-making-governance-a-game-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/qcTocIWf34U-640.jpg" srcset="../stills/qcTocIWf34U-320.jpg 320w, ../stills/qcTocIWf34U-480.jpg 480w, ../stills/qcTocIWf34U-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:45</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">A content coin, and making governance a game.</h3>
+                    
+                </div>
+            </a>
+            <a href="from-america-to-denver-what-brought-you-here-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/DdXcCfCc26E-640.jpg" srcset="../stills/DdXcCfCc26E-320.jpg 320w, ../stills/DdXcCfCc26E-480.jpg 480w, ../stills/DdXcCfCc26E-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:21</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · Street</span>
+                    <h3 class="report-title">A borrowed camera, and Denver block by block.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../question/what-would-you-say-to-someone-under-ten.html">Every answer to “What would you say to someone under ten?”</a> &middot; <a href="../places.html#denver">Everything filmed in Denver</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

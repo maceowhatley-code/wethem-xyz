@@ -1,0 +1,838 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Ten minutes at ETH Denver in 2024, in the middle of an evening party, with a Philadelphia artist and community builder who has been at the conference…">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/forbidden-fruit-culture-onchain-and-creative-wellness-denver">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="Putting Culture and Artists Onchain | ETH Denver">
+    <meta property="og:description" content="Ten minutes at ETH Denver in 2024, in the middle of an evening party, with a Philadelphia artist and community builder who has been at the conference…">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/forbidden-fruit-culture-onchain-and-creative-wellness-denver.jpg?v=b74083fa24">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="A Philly artist on culture, gas fees and Forbidden Fruit">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/forbidden-fruit-culture-onchain-and-creative-wellness-denver.jpg?v=b74083fa24">
+    <meta property="og:url" content="https://wethem.xyz/watch/forbidden-fruit-culture-onchain-and-creative-wellness-denver">
+    <title>Putting Culture and Artists Onchain | ETH Denver &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/forbidden-fruit-culture-onchain-and-creative-wellness-denver#video",
+  "name": "Putting Culture and Artists Onchain | ETH Denver",
+  "description": "Ten minutes at ETH Denver in 2024, in the middle of an evening party, with a Philadelphia artist and community builder who has been at the conference since Tuesday and has lost his voice for it. Stonez the Organic runs the Forbidden Fruit events in Philly with Ty, and most of this conversation is about what the technology owes the people making things with it. What has him excited at this particular conference is not a chain or a product. \"the thing that's exciting me the most right now is the attention to culture\", he says. \"People are really paying attention to the movers and people who are contributing more than just the tech to the space.\" His argument for why that matters is practical rather than sentimental: \"the more that we value culture, the more enticing and inclusive the space becomes.\" Pressed on whether he came into crypto expecting culture to be part of it, he says he studied culture in school and thinks it is part of everything. Without it, \"there becomes a lack of realness, a lack of authenticity\", and then the only shared reason to do anything is money. What he found instead when he arrived was \"a lack of diversity, a lack of differentiated opinions\", and he is blunt about where that leads: \"when you have an echo chamber in that type of situation, it can only be good for so long\". He came in as a collector before he came in as an artist. \"I spent a lot of my time collecting art, just getting to know people before I even started putting my own out there.\" What kept him was finding people who wanted the technology to do something, which he puts as \"liberating the world from a lot of the traumas and constructs that we just became okay with\". Forbidden Fruit predates all of it. \"We've been doing Forbidden Fruit since 2019\", he says, and the work now is to \"create a bridge for artists who are not necessarily crypto native to be introduced to the tech\". The advice section is the most useful part of the tape, and it is unglamorous. \"I would say do as much research as possible and take your time.\" Then the line worth printing on something: \"If you're an artist, don't come in this space and try to become a trader. You're not a trader.\" Learn to trade if you want to learn to trade, he says, but first \"figure out how the tech works for you\". On what he wants next from the tech, he wants the friction gone. He is watching the Superchain, which he explains as Optimism, Zora and Base working together, and what he likes about this year is that \"I don't have to log into my MetaMask or worry about a seed phrase\". Fees are not an abstraction to him: \"A gas fee being over ten dollars that could be someone's transportation\". His summary: \"Once the tech becomes manageable and digestible for everyone, then we'll be in a very good place\", though he immediately takes the word back and says what he means is inclusive. Asked for a core memory, he picks meeting online friends in person for the first time, in Atlanta, and laughs at the warning he grew up with about strangers on the internet: \"it was just really dope to see like people of color come together\". Asked what is coming next from Forbidden Fruit: \"just follow us, I can't talk about that\".",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/6rPjX_pGd6E/maxresdefault.jpg"
+  ],
+  "uploadDate": "2024-06-15T01:20:01Z",
+  "embedUrl": "https://www.youtube.com/embed/6rPjX_pGd6E",
+  "url": "https://wethem.xyz/watch/forbidden-fruit-culture-onchain-and-creative-wellness-denver",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT10M40S",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "At the conference, and how it has been",
+      "startOffset": 0,
+      "url": "https://wethem.xyz/watch/forbidden-fruit-culture-onchain-and-creative-wellness-denver?t=0",
+      "endOffset": 63
+    },
+    {
+      "@type": "Clip",
+      "name": "What excites him: the attention to culture",
+      "startOffset": 63,
+      "url": "https://wethem.xyz/watch/forbidden-fruit-culture-onchain-and-creative-wellness-denver?t=63",
+      "endOffset": 107
+    },
+    {
+      "@type": "Clip",
+      "name": "Why culture, and what an echo chamber does",
+      "startOffset": 107,
+      "url": "https://wethem.xyz/watch/forbidden-fruit-culture-onchain-and-creative-wellness-denver?t=107",
+      "endOffset": 160
+    },
+    {
+      "@type": "Clip",
+      "name": "Collecting art before putting his own out",
+      "startOffset": 160,
+      "url": "https://wethem.xyz/watch/forbidden-fruit-culture-onchain-and-creative-wellness-denver?t=160",
+      "endOffset": 229
+    },
+    {
+      "@type": "Clip",
+      "name": "Forbidden Fruit since 2019",
+      "startOffset": 229,
+      "url": "https://wethem.xyz/watch/forbidden-fruit-culture-onchain-and-creative-wellness-denver?t=229",
+      "endOffset": 268
+    },
+    {
+      "@type": "Clip",
+      "name": "Advice for artists new to Web3: take your time",
+      "startOffset": 268,
+      "url": "https://wethem.xyz/watch/forbidden-fruit-culture-onchain-and-creative-wellness-denver?t=268",
+      "endOffset": 309
+    },
+    {
+      "@type": "Clip",
+      "name": "If you are an artist, do not try to be a trader",
+      "startOffset": 309,
+      "url": "https://wethem.xyz/watch/forbidden-fruit-culture-onchain-and-creative-wellness-denver?t=309",
+      "endOffset": 342
+    },
+    {
+      "@type": "Clip",
+      "name": "What is the Superchain? Optimism, Zora and Base",
+      "startOffset": 342,
+      "url": "https://wethem.xyz/watch/forbidden-fruit-culture-onchain-and-creative-wellness-denver?t=342",
+      "endOffset": 385
+    },
+    {
+      "@type": "Clip",
+      "name": "No MetaMask, no seed phrase",
+      "startOffset": 385,
+      "url": "https://wethem.xyz/watch/forbidden-fruit-culture-onchain-and-creative-wellness-denver?t=385",
+      "endOffset": 420
+    },
+    {
+      "@type": "Clip",
+      "name": "What a ten dollar gas fee costs somebody",
+      "startOffset": 420,
+      "url": "https://wethem.xyz/watch/forbidden-fruit-culture-onchain-and-creative-wellness-denver?t=420",
+      "endOffset": 457
+    },
+    {
+      "@type": "Clip",
+      "name": "What is top of mind: putting artists on",
+      "startOffset": 457,
+      "url": "https://wethem.xyz/watch/forbidden-fruit-culture-onchain-and-creative-wellness-denver?t=457",
+      "endOffset": 494
+    },
+    {
+      "@type": "Clip",
+      "name": "A core memory, in Atlanta",
+      "startOffset": 494,
+      "url": "https://wethem.xyz/watch/forbidden-fruit-culture-onchain-and-creative-wellness-denver?t=494",
+      "endOffset": 605
+    },
+    {
+      "@type": "Clip",
+      "name": "Where to find him",
+      "startOffset": 605,
+      "url": "https://wethem.xyz/watch/forbidden-fruit-culture-onchain-and-creative-wellness-denver?t=605",
+      "endOffset": 640
+    }
+  ],
+  "creator": {
+    "@type": "Person",
+    "name": "Maceo",
+    "url": "https://wethem.xyz/people/maceo"
+  },
+  "transcript": "All right, all right. Hello, everyone. Welcome to another episode of We Them Niggas. We're here at ETH Denver, highlighting some of the black and brown people out here doing cool stuff, representing the community. Today, I'm out here with Stones. Stones is based in Philly. I connected with Stones. I guess like around this time, maybe a little bit earlier last year, through some of their open mics, some of the events they do with Forbidden Fruit, him and Ty, a super dynamic duo out here doing cool stuff. And I'm super excited to connect with you today and hear about how the conference has been, man. How's the conference been?\nThe conference has been great. Thank you for having me. Yeah, having a good time out here. Been here since Tuesday. I lost my voice. Yeah. But yeah, it's been a really good time connecting and building with people.\nAnd being at the conference, are you feeling inspired?\nYeah, for sure. I would definitely say seeing what everybody is up to and how we can bring all the tools together, especially like in everybody's expertise, has definitely had me excited and having some really good constructive conversations. I would\nhear about that. I'm curious to hear what for you right now. I know you're a creative, I know you're an artist of different mediums, and I know that you're also a community builder.\nI think that the thing that's exciting me the most right now is the attention to culture. People are really paying attention to the movers and people who are contributing more than just the tech to the space. And I think that the more that we value culture, the more enticing and inclusive the space becomes. So yeah, super excited to see more DAOs pop up, more chains, more protocols, all looking to support culture and putting artists at the forefront.\nAnd did you come into this space, like into crypto, knowing culture was a big part of crypto or thinking that it would be?\nWell, I think that culture is a big part of everything. A lot of my background, like I actually studied culture in school and all that type of stuff. So understanding that without culture, there becomes a lack of realness, a lack of authenticity, and then there ultimately becomes no real reason to work towards a common goal besides money, right? If you have the opposite of money, culture, life, things that bring us together that doesn't have to do anything with profit, we begin to come together and think about things that actually push the space forward and help everyone as a whole and not just one individual. So I realized coming into the Web3 space, there was a lack of diversity, a lack of differentiated opinions, and that when you have an echo chamber in that type of situation, it can only be good for so long, right, before it becomes toxic and poisonous, and then people look at it like, hey, I don't want to touch that thing.\nThe public perception of crypto and Web3 is trending towards that way, but I feel it's up to us right now and those and the powers that be that are recognizing that we have to do something different to change things up and get people to be excited and want to join us in this journey.\nAnd when you first got into crypto, what was like the thing that excited you that made you want to go in like with your energy, with your attention, learn about it?\nIt was just being able to connect with other creative individuals. I spent a lot of my time collecting art, just getting to know people before I even started putting my own out there. So just understanding like, who are the people here? What makes them tick? Why are they doing what they do? Was very intricate to my process and it excited me to figure out that there were people that were excited about technology, being creative and ultimately like liberating the world from a lot of the traumas and constructs that we just became okay with, you know,\nso yeah. They became naturalized. Yeah. But they might not necessarily be like serving to everybody. Very dope. Very dope. And as you kind of came into your crypto journey, were you part of any creative communities?\nYeah, there were a few. I think that like everything in this space, things come and go. I was a part of Black NFT Art, Discord.art, and then I started growing my own communities as well. We've been doing Forbidden Fruit since 2019 and we're able to build that community and bring it into Web3 and create a bridge for artists who are not necessarily crypto native to be introduced to the tech and find different ways to learn about what they think is important with the technology.\nI think that's super dope. Like being in Philadelphia, connecting with creatives there, like what kind of advice would you give to like a Philadelphia artist who doesn't really know much about Web3\nI would say do as much research as possible and take your time I feel like we are still early even though things are developing rapidly within the space but you have an opportunity to not only like change your life but change the lives of those around you so really take the information seriously and don't afraid to act on it\ndo you feel like you have fear of actual information initially I feel like coming into the space I was a bit apprehensive initially like I feel like I was watching lots of YouTube videos and feeling I know what I'm doing with my money. I don't really want to invest. Even now I'm still kind of hesitant to get into trading because I feel like I can put myself in a bad spot really easily. Even though I do find the premise of the space to be really compelling.\nI think that in that bit of doing the research and information, you have to find out what works for you. If you're an artist, don't come in this space and try to become a trader. You're not a trader. If you want to learn how to trade, take that time to discover and research and become comfortable and experiment in your capacity. But I feel like as artists, figure out how the tech works for you and then work that out before trying to extrapolate the other things within this space because there's a lot of value to gain, but you gotta figure out what works for you first.\nThat makes sense. And as a creative, what tools, like what platforms, what things are most exciting to you, like walking in 2024, as you said, the space moves so rapidly. And so what's relevant, what's practical, even like Farcaster now, that kind of changes the game on distribution for Web3 native stuff. But yeah, what is exciting to you\nand yeah I'm super excited about the Superchain and things becoming more interoperable Just Optimism? The Superchain is Optimism, Zora, and Base all working together So yeah, just excited about that and just like things becoming more frictionless The one thing about ETH Denver is I'm seeing a lot of the tech is like becoming more like usable on a day-to-day I don't have to log into my MetaMask or worry about a seed phrase or yadda yadda yadda I can download an app, get some USDC and then send it to another person and gain staking yield and all that type of stuff Once the tech becomes manageable and digestible for everyone, then we'll be in a very good place So I'm excited for that, just the technology becoming more manageable\nThat makes sense, and as you look at it becoming more manageable Like you're talking about this super chain like what what what for you like separates like the super chain from like last year as a creative like What is like a people who don't really see like the difference like people aren't like yeah.\nWell, the super change is it opens opportunity and As the space develops we have to realize that The things that we're used to spending on not everybody is used to spending all gas fees A gas fee being over ten dollars that could be someone's transportation and their their child care or Groceries or whatever have you. As we develop and build on top of these chains and using the different aspects of the technology, things become more efficient. The super chain makes things more efficient. I'm excited to see the space become, you know, like just more, I'm just, I'm losing a word right now. I keep saying manageable, that's a poor choice of word, but yeah, I'm looking forward to just become more inclusive.\nAnd I think that as we develop and use different, like things like that, gas cities become cheaper, things become more efficient, quicker, people can understand and interact with the tech better. We'll just be in a better spot.\nAnd right now, what is top of mind for you as a creative? What projects are holding your attention? I know you're always busy, always doing different things.\nTop of mind right now? Forbidden Fruit, honestly. We've been doing a lot of building with Forbidden Fruit and finding different opportunities to put artists on and give them a platform. So I'm super excited about what we've been building and the things that we're going to execute on this year\nOh yeah, and are there any things on the horizon people should know about?\nNah, nah, nah, just follow us, I can't talk about that\nOkay, okay, I like that, I like that\nSuper exciting, but yeah, just follow us, Forbidden Fruit\nForbidden Fruit, okay And then my last question really is, what's been a core memory for you on your Web3 journey as a creative, as an artist? Uh,\ncore memory. I think my first, my first blockchain experience like IRL was in Atlanta through the Umba Dimer program. And just being able to see everybody in person. Oh no, that's not, that wasn't my first, that was my second. But that was the first that I was directly involved in as an artist. And it was just really dope to see like people of color come together. Super Chief has supported it at the time. And it was just really cool. Like seeing everybody from online in person for the first time. and it's like that classic, oh, you're not supposed to talk to strangers online and meet them in person, like, just, like, laughing at that, like, as I'm on my way to New York to go, like, meet some of my coolest art friends that I've ever had.\nYeah. And I'm still, like, friends with them to this day. So that's definitely a core memory.\nI appreciate you sharing that.\nYeah, no doubt.\nWell, I really appreciate you coming here with me. Very, like, short notice, middle of the evening party vibes. You know, as I said, I've seen you in Philly, seen what you're doing with the events for Fruit. I definitely encourage everybody to keep up with with both yourself and Ty and what you two are working on because you two I think are definitely some of the creatives who are immersed in this space and who are bringing this work to Philadelphia and I'm definitely excited to see how we can collaborate more in Philadelphia and bring this tech more into Philadelphia. I've been thinking about like how can we do conferences in Philadelphia, thinking about how could we partner with like Rec Philly to help bring more creatives in as well and so I'm definitely excited to be more in conversation about how I can amplify what you guys are doing.\nYou guys are leaders in Philly, that's how I see it and I've been taking cues. I\nappreciate it, bro. Thank you, man.\nThank you.\nThanks for the interview, man. I appreciate it.\nYeah, do you want to shout out any social thing like that people should check out?\nFollow me on Twitter at AvedicStones. My Instagram is Stones The Organic, TikTok Stones The Organic, everything else. And Forbitten Fruit. You can follow me if you follow. You'll find that if you follow me. No problem.\nBooyah. So, you guys got to say booyah as well.\nBooyah. Yeah,\nso thank you, everybody, for tuning in, and we'll see you soon. Peace.",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Denver",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "url": "https://wethem.xyz/places#denver"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Denver Unfiltered",
+    "url": "https://wethem.xyz/portfolio#p-denver"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Crypto",
+      "url": "https://wethem.xyz/topics/crypto"
+    }
+  ],
+  "keywords": [
+    "Crypto"
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Denver Unfiltered",
+      "item": "https://wethem.xyz/portfolio#p-denver"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "A Philly artist on culture, gas fees and Forbidden Fruit",
+      "item": "https://wethem.xyz/watch/forbidden-fruit-culture-onchain-and-creative-wellness-denver"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place], who[data-pf-who]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2024-06-15" data-pf-vid="6rPjX_pGd6E" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;10:40&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="Denver" data-pf-country="United States" data-pf-project="Denver Unfiltered" data-pf-who="Maceo">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-denver">Denver Unfiltered</a></li>
+            <li aria-current="page">A Philly artist on culture, gas fees and Forbidden Fruit</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">A Philly artist on culture, gas fees and Forbidden Fruit.</h1>
+
+    <p class="wt-byline"><strong>Stonez the Organic</strong> &middot; Reported by <strong><a href="../people/maceo.html">Maceo</a></strong> &middot; Denver &middot; 11 min</p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="6rPjX_pGd6E" live postersrcset="../stills/6rPjX_pGd6E-320.jpg 320w, ../stills/6rPjX_pGd6E-480.jpg 480w, ../stills/6rPjX_pGd6E-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/6rPjX_pGd6E?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="A Philly artist on culture, gas fees and Forbidden Fruit, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+    <p class="wt-note wt-credit">Executive producer: C.Y. Lee</p>
+
+    <div class="wt-prose">
+            <p>Ten minutes at ETH Denver in 2024, in the middle of an evening party, with a Philadelphia artist and community builder who has been at the conference since Tuesday and has lost his voice for it. Stonez the Organic runs the Forbidden Fruit events in Philly with Ty, and most of this conversation is about what the technology owes the people making things with it.</p>
+            <p>What has him excited at this particular conference is not a chain or a product. &ldquo;the thing that&rsquo;s exciting me the most right now is the attention to culture&rdquo;, he says. &ldquo;People are really paying attention to the movers and people who are contributing more than just the tech to the space.&rdquo; His argument for why that matters is practical rather than sentimental: &ldquo;the more that we value culture, the more enticing and inclusive the space becomes.&rdquo;</p>
+            <p>Pressed on whether he came into crypto expecting culture to be part of it, he says he studied culture in school and thinks it is part of everything. Without it, &ldquo;there becomes a lack of realness, a lack of authenticity&rdquo;, and then the only shared reason to do anything is money. What he found instead when he arrived was &ldquo;a lack of diversity, a lack of differentiated opinions&rdquo;, and he is blunt about where that leads: &ldquo;when you have an echo chamber in that type of situation, it can only be good for so long&rdquo;.</p>
+            <p>He came in as a collector before he came in as an artist. &ldquo;I spent a lot of my time collecting art, just getting to know people before I even started putting my own out there.&rdquo; What kept him was finding people who wanted the technology to do something, which he puts as &ldquo;liberating the world from a lot of the traumas and constructs that we just became okay with&rdquo;.</p>
+            <p>Forbidden Fruit predates all of it. &ldquo;We&rsquo;ve been doing Forbidden Fruit since 2019&rdquo;, he says, and the work now is to &ldquo;create a bridge for artists who are not necessarily crypto native to be introduced to the tech&rdquo;.</p>
+            <p>The advice section is the most useful part of the tape, and it is unglamorous. &ldquo;I would say do as much research as possible and take your time.&rdquo; Then the line worth printing on something: &ldquo;If you&rsquo;re an artist, don&rsquo;t come in this space and try to become a trader. You&rsquo;re not a trader.&rdquo; Learn to trade if you want to learn to trade, he says, but first &ldquo;figure out how the tech works for you&rdquo;.</p>
+            <p>On what he wants next from the tech, he wants the friction gone. He is watching the Superchain, which he explains as Optimism, Zora and Base working together, and what he likes about this year is that &ldquo;I don&rsquo;t have to log into my MetaMask or worry about a seed phrase&rdquo;. Fees are not an abstraction to him: &ldquo;A gas fee being over ten dollars that could be someone&rsquo;s transportation&rdquo;. His summary: &ldquo;Once the tech becomes manageable and digestible for everyone, then we&rsquo;ll be in a very good place&rdquo;, though he immediately takes the word back and says what he means is inclusive.</p>
+            <p>Asked for a core memory, he picks meeting online friends in person for the first time, in Atlanta, and laughs at the warning he grew up with about strangers on the internet: &ldquo;it was just really dope to see like people of color come together&rdquo;. Asked what is coming next from Forbidden Fruit: &ldquo;just follow us, I can&rsquo;t talk about that&rdquo;.</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../places.html#denver">Everything filmed in Denver</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="social-tokens-community-and-url-to-irl-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/4uN9BrX2Ztg-640.jpg" srcset="../stills/4uN9BrX2Ztg-320.jpg 320w, ../stills/4uN9BrX2Ztg-480.jpg 480w, ../stills/4uN9BrX2Ztg-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>18:21</span></span><span>Social tokens, and a conference for Cape Verde.</span></a>
+        <a class="wt-rail-card" href="a-first-interview-and-advice-back-to-newark-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/UkX8veGIl58-640.jpg" srcset="../stills/UkX8veGIl58-320.jpg 320w, ../stills/UkX8veGIl58-480.jpg 480w, ../stills/UkX8veGIl58-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:15</span></span><span>A first interview, and advice back to Newark.</span></a>
+        <a class="wt-rail-card" href="the-cyber-panther-party-and-a-bail-fund-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/dMpIRN44oio-640.jpg" srcset="../stills/dMpIRN44oio-320.jpg 320w, ../stills/dMpIRN44oio-480.jpg 480w, ../stills/dMpIRN44oio-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>13:32</span></span><span>A bail fund on chain, and teaching the wallet.</span></a>
+        <a class="wt-rail-card" href="blvkhvnd-and-the-crypto-cookout-sirsu-at-eth-denver-2024.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/sSyrdlViK3Q-640.jpg" srcset="../stills/sSyrdlViK3Q-320.jpg 320w, ../stills/sSyrdlViK3Q-480.jpg 480w, ../stills/sSyrdlViK3Q-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>29:32</span></span><span>BLVKHVND and the Crypto Cookout: Sirsu.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c0"><a class="wt-t" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-s">At the conference, and how it has been</span></li>
+                <li class="wt-line" id="c63"><a class="wt-t" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=63s" target="_blank" rel="noopener" data-pagefind-ignore>1:03</a><span class="wt-s">What excites him: the attention to culture</span></li>
+                <li class="wt-line" id="c107"><a class="wt-t" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=107s" target="_blank" rel="noopener" data-pagefind-ignore>1:47</a><span class="wt-s">Why culture, and what an echo chamber does</span></li>
+                <li class="wt-line" id="c160"><a class="wt-t" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=160s" target="_blank" rel="noopener" data-pagefind-ignore>2:40</a><span class="wt-s">Collecting art before putting his own out</span></li>
+                <li class="wt-line" id="c229"><a class="wt-t" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=229s" target="_blank" rel="noopener" data-pagefind-ignore>3:49</a><span class="wt-s">Forbidden Fruit since 2019</span></li>
+                <li class="wt-line" id="c268"><a class="wt-t" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=268s" target="_blank" rel="noopener" data-pagefind-ignore>4:28</a><span class="wt-s">Advice for artists new to Web3: take your time</span></li>
+                <li class="wt-line" id="c309"><a class="wt-t" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=309s" target="_blank" rel="noopener" data-pagefind-ignore>5:09</a><span class="wt-s">If you are an artist, do not try to be a trader</span></li>
+                <li class="wt-line" id="c342"><a class="wt-t" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=342s" target="_blank" rel="noopener" data-pagefind-ignore>5:42</a><span class="wt-s">What is the Superchain? Optimism, Zora and Base</span></li>
+                <li class="wt-line" id="c385"><a class="wt-t" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=385s" target="_blank" rel="noopener" data-pagefind-ignore>6:25</a><span class="wt-s">No MetaMask, no seed phrase</span></li>
+                <li class="wt-line" id="c420"><a class="wt-t" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=420s" target="_blank" rel="noopener" data-pagefind-ignore>7:00</a><span class="wt-s">What a ten dollar gas fee costs somebody</span></li>
+                <li class="wt-line" id="c457"><a class="wt-t" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=457s" target="_blank" rel="noopener" data-pagefind-ignore>7:37</a><span class="wt-s">What is top of mind: putting artists on</span></li>
+                <li class="wt-line" id="c494"><a class="wt-t" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=494s" target="_blank" rel="noopener" data-pagefind-ignore>8:14</a><span class="wt-s">A core memory, in Atlanta</span></li>
+                <li class="wt-line" id="c605"><a class="wt-t" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=605s" target="_blank" rel="noopener" data-pagefind-ignore>10:05</a><span class="wt-s">Where to find him</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Transcribed from the original audio and corrected for names. Speaker letters mark turns, not names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>All right, all right. Hello, everyone. Welcome to another episode of We Them Niggas. We&rsquo;re here at ETH Denver, highlighting some of the black and brown people out here doing cool stuff, representing the community. Today, I&rsquo;m out here with Stones. Stones is based in Philly. I connected with Stones. I guess like around this time, maybe a little bit earlier last year, through some of their open mics, some of the events they do with Forbidden Fruit, him and Ty, a super dynamic duo out here doing cool stuff. And I&rsquo;m super excited to connect with you today and hear about how the conference has been, man. How&rsquo;s the conference been?</p>
+            <p id="s27"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=27s" target="_blank" rel="noopener" data-pagefind-ignore>0:27</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>The conference has been great. Thank you for having me. Yeah, having a good time out here. Been here since Tuesday. I lost my voice. Yeah. But yeah, it&rsquo;s been a really good time connecting and building with people.</p>
+            <p id="s36"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=36s" target="_blank" rel="noopener" data-pagefind-ignore>0:36</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And being at the conference, are you feeling inspired?</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s40"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=40s" target="_blank" rel="noopener" data-pagefind-ignore>0:40</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, for sure. I would definitely say seeing what everybody is up to and how we can bring all the tools together, especially like in everybody&rsquo;s expertise, has definitely had me excited and having some really good constructive conversations. I would</p>
+            <p id="s52"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=52s" target="_blank" rel="noopener" data-pagefind-ignore>0:52</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>hear about that. I&rsquo;m curious to hear what for you right now. I know you&rsquo;re a creative, I know you&rsquo;re an artist of different mediums, and I know that you&rsquo;re also a community builder.</p>
+            <p id="s63"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=63s" target="_blank" rel="noopener" data-pagefind-ignore>1:03</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I think that the thing that&rsquo;s exciting me the most right now is the attention to culture. People are really paying attention to the movers and people who are contributing more than just the tech to the space. And I think that the more that we value culture, the more enticing and inclusive the space becomes. So yeah, super excited to see more DAOs pop up, more chains, more protocols, all looking to support culture and putting artists at the forefront.</p>
+            <p id="s98"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=98s" target="_blank" rel="noopener" data-pagefind-ignore>1:38</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And did you come into this space, like into crypto, knowing culture was a big part of crypto or thinking that it would be?</p>
+            <p id="s103"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=103s" target="_blank" rel="noopener" data-pagefind-ignore>1:43</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Well, I think that culture is a big part of everything. A lot of my background, like I actually studied culture in school and all that type of stuff. So understanding that without culture, there becomes a lack of realness, a lack of authenticity, and then there ultimately becomes no real reason to work towards a common goal besides money, right? If you have the opposite of money, culture, life, things that bring us together that doesn&rsquo;t have to do anything with profit, we begin to come together and think about things that actually push the space forward and help everyone as a whole and not just one individual. So I realized coming into the Web3 space, there was a lack of diversity, a lack of differentiated opinions, and that when you have an echo chamber in that type of situation, it can only be good for so long, right, before it becomes toxic and poisonous, and then people look at it like, hey, I don&rsquo;t want to touch that thing.</p>
+            <p id="s103-2"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=103s" target="_blank" rel="noopener" data-pagefind-ignore>1:43</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>The public perception of crypto and Web3 is trending towards that way, but I feel it&rsquo;s up to us right now and those and the powers that be that are recognizing that we have to do something different to change things up and get people to be excited and want to join us in this journey.</p>
+            <p id="s176"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=176s" target="_blank" rel="noopener" data-pagefind-ignore>2:56</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And when you first got into crypto, what was like the thing that excited you that made you want to go in like with your energy, with your attention, learn about it?</p>
+            <p id="s183"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=183s" target="_blank" rel="noopener" data-pagefind-ignore>3:03</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It was just being able to connect with other creative individuals. I spent a lot of my time collecting art, just getting to know people before I even started putting my own out there. So just understanding like, who are the people here? What makes them tick? Why are they doing what they do? Was very intricate to my process and it excited me to figure out that there were people that were excited about technology, being creative and ultimately like liberating the world from a lot of the traumas and constructs that we just became okay with, you know,</p>
+            <p id="s217"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=217s" target="_blank" rel="noopener" data-pagefind-ignore>3:37</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>so yeah. They became naturalized. Yeah. But they might not necessarily be like serving to everybody. Very dope. Very dope. And as you kind of came into your crypto journey, were you part of any creative communities?</p>
+            <p id="s226"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=226s" target="_blank" rel="noopener" data-pagefind-ignore>3:46</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, there were a few. I think that like everything in this space, things come and go. I was a part of Black NFT Art, Discord.art, and then I started growing my own communities as well. We&rsquo;ve been doing Forbidden Fruit since 2019 and we&rsquo;re able to build that community and bring it into Web3 and create a bridge for artists who are not necessarily crypto native to be introduced to the tech and find different ways to learn about what they think is important with the technology.</p>
+            <p id="s259"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=259s" target="_blank" rel="noopener" data-pagefind-ignore>4:19</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I think that&rsquo;s super dope. Like being in Philadelphia, connecting with creatives there, like what kind of advice would you give to like a Philadelphia artist who doesn&rsquo;t really know much about Web3</p>
+            <p id="s268"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=268s" target="_blank" rel="noopener" data-pagefind-ignore>4:28</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I would say do as much research as possible and take your time I feel like we are still early even though things are developing rapidly within the space but you have an opportunity to not only like change your life but change the lives of those around you so really take the information seriously and don&rsquo;t afraid to act on it</p>
+            <p id="s289"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=289s" target="_blank" rel="noopener" data-pagefind-ignore>4:49</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>do you feel like you have fear of actual information initially I feel like coming into the space I was a bit apprehensive initially like I feel like I was watching lots of YouTube videos and feeling I know what I&rsquo;m doing with my money. I don&rsquo;t really want to invest. Even now I&rsquo;m still kind of hesitant to get into trading because I feel like I can put myself in a bad spot really easily. Even though I do find the premise of the space to be really compelling.</p>
+            <p id="s308"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=308s" target="_blank" rel="noopener" data-pagefind-ignore>5:08</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I think that in that bit of doing the research and information, you have to find out what works for you. If you&rsquo;re an artist, don&rsquo;t come in this space and try to become a trader. You&rsquo;re not a trader. If you want to learn how to trade, take that time to discover and research and become comfortable and experiment in your capacity. But I feel like as artists, figure out how the tech works for you and then work that out before trying to extrapolate the other things within this space because there&rsquo;s a lot of value to gain, but you gotta figure out what works for you first.</p>
+            <p id="s342"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=342s" target="_blank" rel="noopener" data-pagefind-ignore>5:42</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>That makes sense. And as a creative, what tools, like what platforms, what things are most exciting to you, like walking in 2024, as you said, the space moves so rapidly. And so what&rsquo;s relevant, what&rsquo;s practical, even like <a class="wt-gloss" href="../glossary.html#farcaster">Farcaster</a> now, that kind of changes the game on distribution for Web3 native stuff. But yeah, what is exciting to you</p>
+            <p id="s359"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=359s" target="_blank" rel="noopener" data-pagefind-ignore>5:59</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>and yeah I&rsquo;m super excited about the Superchain and things becoming more interoperable Just Optimism? The Superchain is Optimism, Zora, and Base all working together So yeah, just excited about that and just like things becoming more frictionless The one thing about ETH Denver is I&rsquo;m seeing a lot of the tech is like becoming more like usable on a day-to-day I don&rsquo;t have to log into my MetaMask or worry about a <a class="wt-gloss" href="../glossary.html#seed-phrase">seed phrase</a> or yadda yadda yadda I can download an app, get some USDC and then send it to another person and gain staking yield and all that type of stuff Once the tech becomes manageable and digestible for everyone, then we&rsquo;ll be in a very good place So I&rsquo;m excited for that, just the technology becoming more manageable</p>
+            <p id="s408"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=408s" target="_blank" rel="noopener" data-pagefind-ignore>6:48</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>That makes sense, and as you look at it becoming more manageable Like you&rsquo;re talking about this super chain like what what what for you like separates like the super chain from like last year as a creative like What is like a people who don&rsquo;t really see like the difference like people aren&rsquo;t like yeah.</p>
+            <p id="s423"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=423s" target="_blank" rel="noopener" data-pagefind-ignore>7:03</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Well, the super change is it opens opportunity and As the space develops we have to realize that The things that we&rsquo;re used to spending on not everybody is used to spending all gas fees A gas fee being over ten dollars that could be someone&rsquo;s transportation and their their child care or Groceries or whatever have you. As we develop and build on top of these chains and using the different aspects of the technology, things become more efficient. The super chain makes things more efficient. I&rsquo;m excited to see the space become, you know, like just more, I&rsquo;m just, I&rsquo;m losing a word right now. I keep saying manageable, that&rsquo;s a poor choice of word, but yeah, I&rsquo;m looking forward to just become more inclusive.</p>
+            <p id="s464"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=464s" target="_blank" rel="noopener" data-pagefind-ignore>7:44</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And I think that as we develop and use different, like things like that, gas cities become cheaper, things become more efficient, quicker, people can understand and interact with the tech better. We&rsquo;ll just be in a better spot.</p>
+            <p id="s477"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=477s" target="_blank" rel="noopener" data-pagefind-ignore>7:57</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And right now, what is top of mind for you as a creative? What projects are holding your attention? I know you&rsquo;re always busy, always doing different things.</p>
+            <p id="s486"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=486s" target="_blank" rel="noopener" data-pagefind-ignore>8:06</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Top of mind right now? Forbidden Fruit, honestly. We&rsquo;ve been doing a lot of building with Forbidden Fruit and finding different opportunities to put artists on and give them a platform. So I&rsquo;m super excited about what we&rsquo;ve been building and the things that we&rsquo;re going to execute on this year</p>
+            <p id="s503"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=503s" target="_blank" rel="noopener" data-pagefind-ignore>8:23</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Oh yeah, and are there any things on the horizon people should know about?</p>
+            <p id="s506"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=506s" target="_blank" rel="noopener" data-pagefind-ignore>8:26</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Nah, nah, nah, just follow us, I can&rsquo;t talk about that</p>
+            <p id="s508"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=508s" target="_blank" rel="noopener" data-pagefind-ignore>8:28</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Okay, okay, I like that, I like that</p>
+            <p id="s511"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=511s" target="_blank" rel="noopener" data-pagefind-ignore>8:31</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Super exciting, but yeah, just follow us, Forbidden Fruit</p>
+            <p id="s514"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=514s" target="_blank" rel="noopener" data-pagefind-ignore>8:34</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Forbidden Fruit, okay And then my last question really is, what&rsquo;s been a core memory for you on your Web3 journey as a creative, as an artist? Uh,</p>
+            <p id="s521"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=521s" target="_blank" rel="noopener" data-pagefind-ignore>8:41</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>core memory. I think my first, my first blockchain experience like IRL was in Atlanta through the Umba Dimer program. And just being able to see everybody in person. Oh no, that&rsquo;s not, that wasn&rsquo;t my first, that was my second. But that was the first that I was directly involved in as an artist. And it was just really dope to see like people of color come together. Super Chief has supported it at the time. And it was just really cool. Like seeing everybody from online in person for the first time. and it&rsquo;s like that classic, oh, you&rsquo;re not supposed to talk to strangers online and meet them in person, like, just, like, laughing at that, like, as I&rsquo;m on my way to New York to go, like, meet some of my coolest art friends that I&rsquo;ve ever had.</p>
+            <p id="s561"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=561s" target="_blank" rel="noopener" data-pagefind-ignore>9:21</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah. And I&rsquo;m still, like, friends with them to this day. So that&rsquo;s definitely a core memory.</p>
+            <p id="s566"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=566s" target="_blank" rel="noopener" data-pagefind-ignore>9:26</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I appreciate you sharing that.</p>
+            <p id="s567"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=567s" target="_blank" rel="noopener" data-pagefind-ignore>9:27</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, no doubt.</p>
+            <p id="s568"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=568s" target="_blank" rel="noopener" data-pagefind-ignore>9:28</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Well, I really appreciate you coming here with me. Very, like, short notice, middle of the evening party vibes. You know, as I said, I&rsquo;ve seen you in Philly, seen what you&rsquo;re doing with the events for Fruit. I definitely encourage everybody to keep up with with both yourself and Ty and what you two are working on because you two I think are definitely some of the creatives who are immersed in this space and who are bringing this work to Philadelphia and I&rsquo;m definitely excited to see how we can collaborate more in Philadelphia and bring this tech more into Philadelphia. I&rsquo;ve been thinking about like how can we do conferences in Philadelphia, thinking about how could we partner with like Rec Philly to help bring more creatives in as well and so I&rsquo;m definitely excited to be more in conversation about how I can amplify what you guys are doing.</p>
+            <p id="s603"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=603s" target="_blank" rel="noopener" data-pagefind-ignore>10:03</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>You guys are leaders in Philly, that&rsquo;s how I see it and I&rsquo;ve been taking cues. I</p>
+            <p id="s608"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=608s" target="_blank" rel="noopener" data-pagefind-ignore>10:08</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>appreciate it, bro. Thank you, man.</p>
+            <p id="s609"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=609s" target="_blank" rel="noopener" data-pagefind-ignore>10:09</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Thank you.</p>
+            <p id="s610"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=610s" target="_blank" rel="noopener" data-pagefind-ignore>10:10</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Thanks for the interview, man. I appreciate it.</p>
+            <p id="s612"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=612s" target="_blank" rel="noopener" data-pagefind-ignore>10:12</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, do you want to shout out any social thing like that people should check out?</p>
+            <p id="s614"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=614s" target="_blank" rel="noopener" data-pagefind-ignore>10:14</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Follow me on Twitter at AvedicStones. My Instagram is Stones The Organic, TikTok Stones The Organic, everything else. And Forbitten Fruit. You can follow me if you follow. You&rsquo;ll find that if you follow me. No problem.</p>
+            <p id="s627"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=627s" target="_blank" rel="noopener" data-pagefind-ignore>10:27</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Booyah. So, you guys got to say booyah as well.</p>
+            <p id="s629"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=629s" target="_blank" rel="noopener" data-pagefind-ignore>10:29</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Booyah. Yeah,</p>
+            <p id="s631"><a class="wt-at" href="https://www.youtube.com/watch?v=6rPjX_pGd6E&amp;t=631s" target="_blank" rel="noopener" data-pagefind-ignore>10:31</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>so thank you, everybody, for tuning in, and we&rsquo;ll see you soon. Peace.</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+<div id="after-transcript" tabindex="-1"><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from Denver Unfiltered.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-denver">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="a-first-interview-and-advice-back-to-newark-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/UkX8veGIl58-640.jpg" srcset="../stills/UkX8veGIl58-320.jpg 320w, ../stills/UkX8veGIl58-480.jpg 480w, ../stills/UkX8veGIl58-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:15</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · ETH Denver 2024</span>
+                    <h3 class="report-title">A first interview, and advice back to Newark.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="building-a-dao-and-making-governance-a-game-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/qcTocIWf34U-640.jpg" srcset="../stills/qcTocIWf34U-320.jpg 320w, ../stills/qcTocIWf34U-480.jpg 480w, ../stills/qcTocIWf34U-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:45</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">A content coin, and making governance a game.</h3>
+                    
+                </div>
+            </a>
+            <a href="from-america-to-denver-what-brought-you-here-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/DdXcCfCc26E-640.jpg" srcset="../stills/DdXcCfCc26E-320.jpg 320w, ../stills/DdXcCfCc26E-480.jpg 480w, ../stills/DdXcCfCc26E-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:21</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · Street</span>
+                    <h3 class="report-title">A borrowed camera, and Denver block by block.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../places.html#denver">Everything filmed in Denver</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

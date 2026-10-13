@@ -1,0 +1,901 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Thirty minutes at the DeSci Summit on the University of Colorado Denver campus, the last day of ETH Denver 2024, with the two people running it.">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/onchain-science-proof-of-knowledge-desci-world-at-eth-denver-2024">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="Onchain Science, Proof of Knowledge: DeSci World | Denver">
+    <meta property="og:description" content="Thirty minutes at the DeSci Summit on the University of Colorado Denver campus, the last day of ETH Denver 2024, with the two people running it.">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/onchain-science-proof-of-knowledge-desci-world-at-eth-denver-2024.jpg?v=058559e990">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Onchain science, proof of knowledge: DeSci World">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/onchain-science-proof-of-knowledge-desci-world-at-eth-denver-2024.jpg?v=058559e990">
+    <meta property="og:url" content="https://wethem.xyz/watch/onchain-science-proof-of-knowledge-desci-world-at-eth-denver-2024">
+    <title>Onchain Science, Proof of Knowledge: DeSci World | Denver &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/onchain-science-proof-of-knowledge-desci-world-at-eth-denver-2024#video",
+  "name": "Onchain Science, Proof of Knowledge: DeSci World | Denver",
+  "description": "Thirty minutes at the DeSci Summit on the University of Colorado Denver campus, the last day of ETH Denver 2024, with the two people running it. Maceo got there by chance: \"somebody talked to my girlfriend, was like, oh, you're in clinical research? You gotta come.\" Dr. Jelani Clarke and Josh Bates of DeSci World explain what they built. The summit \"has been being planned since, I think, October,\" as \"a democratic organization\" that delegates to the community, \"which is both sometimes great and other times not so great.\" Five days of events, and at the same time a hacker house where \"Jelani, myself, and 22 other people have actually been hacking\" on \"what we're calling the interoperable DeSci stack.\" How each got here. Josh: \"I was living in China for a number of years and I wanted to send some money home to my family. So I used crypto to do so,\" then full-time crypto in 2020 and DeSci World in 2021. Jelani has \"a PhD in neuroimmunology,\" worked in biotech, and left academia over \"the bureaucracy and the red tape.\" His comparison is to the music business: \"Scientists in academia predominantly operate under a 360 deal type architecture where you don't own much of what you publish.\" So he \"just looked up blockchain and DeSci, blockchain and science, and that led me down the rabbit hole.\" On money, Josh is blunt. \"People are not altruistic,\" so DeSci builds incentives around giving. He bootstrapped the project himself: \"I'm lucky enough to have made some good trades during the bull market of 2020,\" and his advice to anyone raising is to \"crowdsource from people with aligned values rather than through sort of VCs.\" Jelani lays out the pillars beyond funding: \"frameworks of ownership, data management, access, publication,\" and the 23andMe example, where you sign your genetics away and \"someone else can't go and sell it for a profit\" under the structures they are building. Is DeSci science on the blockchain? \"Josh said yes, I say no.\" It is a product of the open science movement: \"a progression of science back to its original state, where anybody who wants to participate\" can. The history: \"I was here three years ago to the day,\" in \"the DCI house,\" where people who have since raised millions first met. Then the present, \"the adoption phase,\" their podcast DeSci Rising, and the hacker house workshops, twenty of them, where \"it's like, now I'm going to share what I'm doing\" instead of pitching. Josh describes Proof of Knowledge, \"a unified data layer That allows you to create knowledge and attest to it on-chain,\" where \"When your knowledge is utilized by an LLM, you're paid for the utilization,\" and the partnership with Lemonade Social. Jelani sees two paradigms, grassroots DeSci and enterprise DeSci integrating with \"the Pfizer and the universities and the biobanks,\" and says of the second, \"that's really what's going to drive adoption.\" The year ahead: DeSci.World V2, Oxford, seven countries in Asia, \"staying in Zanzibar for an entire month, trialing proof of knowledge as a coordination framework for a network state.\" Josh's closing: \"Desai is just as much a cultural movement as it is a technological movement.\" And Jelani's, to the camera: \"we need you as much as you need us,\" whether you are a neuroimmunologist or \"a degen.\" Maceo admits it is only his second formal interview of the week. Josh: \"If this is your second interview, then We Them Media is going to be big.\" Language is unfiltered; the show intro uses its earlier name. The transcript below is from the original audio.",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/GZSciAYuhWY/maxresdefault.jpg"
+  ],
+  "uploadDate": "2024-06-21T21:46:11Z",
+  "embedUrl": "https://www.youtube.com/embed/GZSciAYuhWY",
+  "url": "https://wethem.xyz/watch/onchain-science-proof-of-knowledge-desci-world-at-eth-denver-2024",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT30M",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "Day five of the DeSci Summit",
+      "startOffset": 0,
+      "url": "https://wethem.xyz/watch/onchain-science-proof-of-knowledge-desci-world-at-eth-denver-2024?t=0",
+      "endOffset": 54
+    },
+    {
+      "@type": "Clip",
+      "name": "Planned since October, run democratically",
+      "startOffset": 54,
+      "url": "https://wethem.xyz/watch/onchain-science-proof-of-knowledge-desci-world-at-eth-denver-2024?t=54",
+      "endOffset": 91
+    },
+    {
+      "@type": "Clip",
+      "name": "What is the interoperable DeSci stack?",
+      "startOffset": 91,
+      "url": "https://wethem.xyz/watch/onchain-science-proof-of-knowledge-desci-world-at-eth-denver-2024?t=91",
+      "endOffset": 134
+    },
+    {
+      "@type": "Clip",
+      "name": "How Josh got here: sending money home from China",
+      "startOffset": 134,
+      "url": "https://wethem.xyz/watch/onchain-science-proof-of-knowledge-desci-world-at-eth-denver-2024?t=134",
+      "endOffset": 211
+    },
+    {
+      "@type": "Clip",
+      "name": "How Jelani got here: the 360 deal in academia",
+      "startOffset": 211,
+      "url": "https://wethem.xyz/watch/onchain-science-proof-of-knowledge-desci-world-at-eth-denver-2024?t=211",
+      "endOffset": 371
+    },
+    {
+      "@type": "Clip",
+      "name": "How do you fund decentralized science?",
+      "startOffset": 371,
+      "url": "https://wethem.xyz/watch/onchain-science-proof-of-knowledge-desci-world-at-eth-denver-2024?t=371",
+      "endOffset": 526
+    },
+    {
+      "@type": "Clip",
+      "name": "What are the pillars of DeSci?",
+      "startOffset": 526,
+      "url": "https://wethem.xyz/watch/onchain-science-proof-of-knowledge-desci-world-at-eth-denver-2024?t=526",
+      "endOffset": 641
+    },
+    {
+      "@type": "Clip",
+      "name": "What was the open science movement?",
+      "startOffset": 641,
+      "url": "https://wethem.xyz/watch/onchain-science-proof-of-knowledge-desci-world-at-eth-denver-2024?t=641",
+      "endOffset": 735
+    },
+    {
+      "@type": "Clip",
+      "name": "Where DeSci's early builders first met",
+      "startOffset": 735,
+      "url": "https://wethem.xyz/watch/onchain-science-proof-of-knowledge-desci-world-at-eth-denver-2024?t=735",
+      "endOffset": 844
+    },
+    {
+      "@type": "Clip",
+      "name": "Why DeSci World puts people before tech",
+      "startOffset": 844,
+      "url": "https://wethem.xyz/watch/onchain-science-proof-of-knowledge-desci-world-at-eth-denver-2024?t=844",
+      "endOffset": 971
+    },
+    {
+      "@type": "Clip",
+      "name": "Why small workshops beat conference pitches",
+      "startOffset": 971,
+      "url": "https://wethem.xyz/watch/onchain-science-proof-of-knowledge-desci-world-at-eth-denver-2024?t=971",
+      "endOffset": 1043
+    },
+    {
+      "@type": "Clip",
+      "name": "Proof of Knowledge: paid when AI uses your work",
+      "startOffset": 1043,
+      "url": "https://wethem.xyz/watch/onchain-science-proof-of-knowledge-desci-world-at-eth-denver-2024?t=1043",
+      "endOffset": 1221
+    },
+    {
+      "@type": "Clip",
+      "name": "What will drive DeSci adoption?",
+      "startOffset": 1221,
+      "url": "https://wethem.xyz/watch/onchain-science-proof-of-knowledge-desci-world-at-eth-denver-2024?t=1221",
+      "endOffset": 1366
+    },
+    {
+      "@type": "Clip",
+      "name": "The year ahead: Oxford, Asia, Zanzibar",
+      "startOffset": 1366,
+      "url": "https://wethem.xyz/watch/onchain-science-proof-of-knowledge-desci-world-at-eth-denver-2024?t=1366",
+      "endOffset": 1521
+    },
+    {
+      "@type": "Clip",
+      "name": "Why DeSci is a cultural movement too",
+      "startOffset": 1521,
+      "url": "https://wethem.xyz/watch/onchain-science-proof-of-knowledge-desci-world-at-eth-denver-2024?t=1521",
+      "endOffset": 1631
+    },
+    {
+      "@type": "Clip",
+      "name": "We need you",
+      "startOffset": 1631,
+      "url": "https://wethem.xyz/watch/onchain-science-proof-of-knowledge-desci-world-at-eth-denver-2024?t=1631",
+      "endOffset": 1696
+    },
+    {
+      "@type": "Clip",
+      "name": "Where to find them",
+      "startOffset": 1696,
+      "url": "https://wethem.xyz/watch/onchain-science-proof-of-knowledge-desci-world-at-eth-denver-2024?t=1696",
+      "endOffset": 1800
+    }
+  ],
+  "creator": {
+    "@type": "Person",
+    "name": "Maceo",
+    "url": "https://wethem.xyz/people/maceo"
+  },
+  "transcript": "Well, hello, everyone, and welcome to another episode of We Them Niggas. We're out here at ETH Denver, and we're connecting with people of color and people building in the Web3 space, trying to better understand what's important, what's pressing, and what people are caring about. And so I'm excited to have both of you here. Thank you, Jelani. Thank you, Josh. Today we were at the, you guys' event for DeSci World, the DeSci Summit. Like, very much by chance, last night, somebody talked to my girlfriend, was like, oh, you're in clinical research? You gotta come. This is gonna be the best day of your life. And I'm like, okay, like, we're gonna be there.\nAnd so here we are and I'm I mean, I've definitely learned stuff today and it's been cool to hear about what's been saying to my girlfriend, being that she's way more of a I'm not a scientist, I wouldn't say. And so that's been cool. And I'm curious to hear how the past this is day five of the summit, how the past five days been for you two and what were like the I don't know, when did you start planning this? Like, I don't even know what day this actually is for you two of the DeSci summit.\nSo the DeSci Summit has been being planned since, I think, October is when we started to kick this off. We take the approach with this particular conference to make it democratic, so a democratic organization. You do have specific leads, so myself, Shadi Eldamati, and Jonathan Starr, who are leads of their own respective projects, are kind of leading the initiative. So we put together a lot of the frameworks, we place the speakers, choose the speakers, and all that kind of stuff. But we try to delegate to the community and get community feedback throughout every step of the process, which is both sometimes great and other times not so great.\nIt can stifle a lot of progress at certain instances, but we really want to make the DeSci Summit as kind of a landmark DeSci event throughout the year, one that is really open to the community to participate in.\nYeah, we've been at the DeSci Summit for, I think, five days now. There's been five days in a row consecutively of events. This is the culmination event at the university, but there's been four before this. We're at Protocol Labs and DeSci Labs, but we at DeSci World, Jelani, myself, and 22 other people have actually been hacking at a hacker house since the 19th. Today is the 29th, so 10 days and we have four days left, three days left. And so it's been quite an experience for us. It's our first ever hacker house, you know, a massive house, 20 beds in it or 18 beds in it or whatever.\nLoads of people getting together to build what we're calling the interoperable DeSci stack Which is all the tools that are going to be utilized to make DeSci happen And to let other people in to use the DeSci ecosystem\nThat makes a lot of sense And I'd love to hear the two of you share how you got into Web3 space Or into the world of science How did you come to be here at the people at the helm of DeSci world?\nYeah, so I'm one of the sort of more DeFi-facing people in DeFi, you could say. I started my career in crypto in DeFi. I was living in China for a number of years and I wanted to send some money home to my family. So I used crypto to do so, got into the crypto world, dove headfirst in, left China, went full-time crypto in 2020 and started DeFi World in 2021 off the back of the COVID epidemic. There was some very obvious cracks in the system, some very obvious cracks in narrative control, especially around research. And so I decided that DeFi could be used for science, the funding mechanisms in particular, started DeFi World.\nAnd then about six months into that journey, put out a call to action to anyone that wanted to help build this project and build this mission. And then that's when I met Jelani.\nYeah. So, sorry, so I come from a more scientific background. So I have a PhD in neuroimmunology, worked in biotech for a few years and obviously was in academia for years before that. I started my journey in the Web3 space from an investment perspective, DeFi, going down that rabbit hole. But at the same time, I was also at a point around the COVID pandemic where I was starting to see, like, what are better ways for us to be able to do science? I decided not to pursue a career in academia as a professor or a PI because of all the loopholes and the bureaucracy and the red tape and all the challenges that exist for a scientist within that realm.\nAnd that is something that I was likening to the 360 deal, right? Scientists in academia predominantly operate under a 360 deal type architecture where you don't own much of what you publish, institutions and those who are above you own that, you don't really get a say, and you're So you're not really at liberty to pursue the science that you necessarily want to pursue. It's more you got to pay the bills. And that's really what pigeonholes your innovation. So I didn't want to operate in that. Jumped out of that when I got my PhD, worked in biotech. And that was an interesting experience. What you see is that though the problems are different, the architecture or the type of problems still exist.\nScience cannot move forward because at the end of the day, it's a bottom line that is pervasive within that realm. And that's okay. But it oftentimes limits what can be done. and it holds scientists pigeon-held. And so the ethos of Web3, the ethos of DeFi in terms of trying to find alternative ways to either complement or combat these architectures that pigeon-holed was very attractive to me. And it almost seemed like it was, I didn't understand why it hadn't percolated its way into the scientific realm. And so I think very briefly, I just looked up blockchain and DeSci, blockchain and science, and that led me down the rabbit hole to the very early stages of this movement.\nmovement, right? And I just kind of jumped ahead at first, and I left biotech, ended up leaving biotech, starting working full-time with Josh at building out DeSci World, which started off as a more social awareness dissemination platform, aggregating communities, aggregating information for people who are interested in DeSci so that they could understand what was happening in the space, and then we've since continued those in terms of organizing conferences, and we have our own conference series that we put on around the world with academic institutions, more out of the Web3 space, more for the actual scientists and science curious. And then we have since started to transition into building a technical infrastructure that also aggregates and pulls together knowledge and also the variety of different DeSci tools that have been maturing over the last two years.\nThat's incredible. And so it sounds like being a futurist, the two of you, you were like, ah, this is the natural progression, sounds like you're saying, of science. And thus, you did the Google search and made your way. And so what did it look like two and a half years ago? And who are the people that you saw getting involved in DeSci How do you even find funding? You're like, oh, I went full-time into this thing. And I know you're talking about DeFi potentially being a funding mechanism. And that's really what excites me a lot about this Web3 space is how can it be a way to finance social change?\nIt's a big thing that I'm interested in.\nYeah. So the DeFi aspects of DeSci thinking, right, there's a lot of money out there. Let's put it towards science or towards social change, for example. It is a really attractive and sort of obvious offer, but it's actually much more difficult than you'd expect. People are not altruistic and when they're making crazy money in the bull run, no one wants to sell, no one wants to give money to these organizations for social good, for science, there needs to be some kind of incentive. Unfortunately, we live in that kind of world where everybody wants something for what they have. And so using DeFi for using, let's just say using blockchain, using Web3, using decentralized sources of finance for DeSci, for social good, it really is possible.\nBut the beautiful thing is that you can create an incentive mechanism around it So that someone gets something in return for their altruism And so this is kind of the guiding ideology behind a lot of what DeSci is doing Is how can I provide a platform that gets money to scientists Gets money to the social change or to whatever we need it to go to But also provides a value to those people that provide the money And so that's kind of the guiding ethos of what a lot of us are doing Is using Web3 as an incentive mechanism to get that To answer your original question like how do you get funding to start something like this, like I'll be totally honest with you, it's difficult, right, you have two options, you either raise or you have personal funding, I'm lucky enough to have made some good trades during the bull market of 2020 that I had enough to provide for the bootstrapping of this project, like that was where all of my sales went to, was into funding DeSci World, and so\nI think it's incredible. Yeah,\nthank God, honestly, really, because I probably wouldn't have sold anything anyways, because, you know, who wants to sell? So I just did it to fund this, and it's turned into this amazing, really powerful, important thing. All you raise, and just for anyone that's looking to get funding in crypto, raising is a very difficult and soul-crushing endeavor, but you can do it. You just have to be careful who you get money from, and, like, that's a whole other conversation. But just saying that to hold on to your values, best thing you can do is to crowdsource from people with aligned values rather than through sort of VCs, et cetera.\nSo we often talk about incentives and DSCI and the financial opportunities and the financial pillars. But DSCI is actually comprised of four to five major pillars. One is funding because that is a huge source of issue in the scientific realm. But there's also frameworks of ownership, data management, access, publication, like there are different aspects that DeSci is trying to tackle in terms of making science more equitable, transparent, open, accessible to participants, whether you be a formerly trained scientist or a DeFi Degen or an artist or whomever, right? Like DeSci exists in a variety of different forms and if you attend the variety of conferences that we have, this one included, you'll see speakers talking about different publishing frameworks, like how do you display, how do you share your data in a way that it still allows you to be self-sovereign and as Josh likes to put it, allow you to actualize the desires that you want to perceive, that you want to proceed with.\nThen you do have funding. You also have how do we engage the public who are not scientists in terms of understanding that they can be a part of the scientific record of knowledge or involve themselves in and Scientific Policies, how they deal with their own data, when you go to something like 23andMe and give out your genetics and you basically sign that away. There are other alternative ways, structures like participants like we are creating where you don't have to sign it away. You can get all of the data analysis. You can find out your hereditary, your genetics, your family while still being owners of that access so that someone else can't go and sell it for a profit.\nThere are different verticals in DeSci and I think that's something that's important to acknowledge. College. And to your question about, to your comment about, you know, DeSci is basically science on the blockchain and Josh said yes, I say no. DeSci leverages techniques and tools and ethos that exist in Web3, but it is not solely Web3. And it's actually a product of an earlier movement called the open science movement. We now have the tech to allow us to secure and build out and leverage these pillars and solve device solutions. But inherently It's a, it's, it's, it's, it leverages Web3, but it's not all Web3.\nAnd so what was the premise of the open science movement?\nThe open science movement was exactly what we were talking about. It's the same ethos, right? The idea of making science more openly accessible to participants, not just for scientists themselves, but their ability to share with people who are not scientists, for scientists to be able to share better amongst themselves, for them to find ways to monetize their data in a way that is not decided by the institutions necessarily, but also as stakeholders in the decision. making. Now the problem with that is that at the end of the day, those who have the money govern the access rights. In this instance, what Web3 allows is for us to be able to crowdsource science.\nNever before were you able to crowdsource science, like early on. The original form of science back hundreds of thousands of years ago was a community-based initiative, right? You could get coalitions of individuals coming together for a certain cause. Then it got captured by institutions, operations, right? And this is where we lead to the days we have. So this is actually a progression of science back to its original state, where anybody who wants to participate, whether you be an artist who wants to graphically represent data in such a way as to make it amenable for people to understand, you want to be a creator, you want to just be a philosopher, an ideator, you want to be a policy person, you can all participate in the growing record of science.\nAnd inside this summit that you two have organized after like the past, it sounds like you said two and a half years, yeah, you've been working on this project. What do you see as like the, I guess the milestones, the lead up to where we are right now?\nYeah, great question. So the first thing is formation, right? I was here three years ago to the day at East Denver three years ago. There was a house, we call it the DeSci house. It's where what you could consider the DeSci OGs all first met. Some people here have built and launched and raised millions for their wonderful products which were ideated and first discussed in this house three years ago\nThat's so cool\nYeah, really cool I was really, really early fish there and as Jelani mentioned, I'm sort of more from the non-academic background, right? And so I was really out of my depth But just a testament to what this space is all about is that they actually welcomed and accepted me Yes, there might have been some, you know, who's this guy kind of thing but ultimately, always, right? But I was really welcomed in and really accepted. And we're still here, major players, like really major players now. And it's wonderful to see. So formation was the initial hurdle, right? Was getting people together and start thinking, this is something we can do.\nThen you have to either convince people to join or build something that they must use. And we decided to go down that road because you can convince people to join with tokens or marketing and all that kind of vaporware, but it's not sustainable. And it's certainly not what science needs. What science needs is something new that you can utilize to improve the scientific method, to improve participation. That's the sort of thing that we're most passionate about at DeSci World, is the participation, more just the culture or the mindset of science, what it means to be a scientist, what it means to do science, how science can be distributed, how you can utilize science in your everyday life without being an academic or a PhD or having certain access to resources.\nAnd so we're building these tools to show people and scientists and institutions what is out there, how their mindset can change and how it's better to change your mindset into this much more holistic view of the world. And then the next step, which is the point we're in right now, is the adoption phase. And so for anyone that is in that sort of DeFi mindset and looking for those pre-adoption things, DeSci is definitely that for the next year and a half, two years.\nI think the way that I like to say it and we like doing things so Josh and I are oftentimes doing podcasts together we have our own podcast series yeah yeah you can check it out on YouTube DeSci World YouTube DeSci World Spotify and it's it's called DeSci Rising essentially it is where we allow we're not we allow we sit down with the different projects in the space and we let them showcase what they're about we let them introduce themselves to the to the larger community and just learn about what they're doing and one of our intro statements is more than the tech more than and the funding, it is the people who are going to be using these tools that are really going to make the changes that we're hoping to see in science, right?\nAnd that's really a lot of the major pillar that we've based ourselves on. So a lot of projects at the beginning initially started with building out platforms and tooling. And I think to me, and what attracted me originally to work with Josh and DeSci World is that while that's great, you still always need to factor in the people. Then at such an early stage, a lot of projects are head down working on the tech. and we decided to just tackle that void of the people and so we built the culture, we built the community aspects, we helped usher people in, we do, like I said, the real life conferences is pretty much, we're mostly the ones who do them throughout the space, throughout the year and now that we have that collective following, we have that collective consciousness about what DeSci is, what DeSci world is, who we are, now we're going to build the tech and provide an opportunity for people to integrate with us and then by automatically integrate with with the rest of the tooling, right?\nSo aggregation and dissemination are really the lifeblood points of what DeSci World and what we're interested in doing.\nAnd inside the past five days at this summit, what have you seen be, I guess, the most exciting talks for each of you respectively?\nExciting talks, okay, I'm gonna do that thing that everybody hates and be really biased about my own projects. But at our Hacker House, we have had like, I think 20 different workshops over the past 10 days.\nOh, wow.\nSpread over four days. So there'd be four days of like-\nYou guys are doing so much. This, and then you got stuck on over there. You guys are programming, programming, programming, and programming. Yeah.\nYeah. Absolutely. Like honestly, too much. Too much is like maybe the right word actually. Yeah. But the, so the workshops that we've had at our house have been these nice intimate setting in this beautiful, large hacker house. So there's been a TV and someone presenting and there's been, you know, 10 to 20 people watching. And it's the intimacy of the moment and people starting to loosen up a little bit. and you see when someone's on stage, you know, doing a presentation at a conference, you see, okay, now I'm going to present, now I'm going to pitch. When you have someone in a more intimate setting, it's like, now I'm going to share what I'm doing, right?\nAnd it's like, you can directly interact with them, you can learn about what it is they're building, how it might work with your project. And I think those intimate settings, you can't replace them. It's very difficult to replicate unless you have like a fat ass house in the middle of Denver with loads of people there, right? And it's something that this is our first time doing it. We are absolutely going to be doing this all over the world many, many more times My favorite talk was probably from Lemonade Social I think Celine from Lemonade Social has put together a really great platform with her team And we're going to be partnering with them as well\nWhat is Lemonade Social?\nLemonade Social is, okay, so precursor We have proof of knowledge, which is a unified data layer That allows you to create knowledge and attest to it on-chain When your knowledge is utilized by an LLM, you're paid for the utilization as an LLM\nLLM being the AI chatbot you're referring to\nAny LLM, any AI chatbot, but we have our own unified chatbot, which we're calling Indrasil, the North Tree of Knowledge IGGI is going to be like a free public good where people can query it And you'll get information derived from the Ngrams, which are containing user knowledge Which they get paid every time it gets queried Anyways, it's a unified data layer, okay, that people can interface with And if you query your data, then you get paid. Yeah,\nyeah. And people pay to use it, but you said it's public good.\nSo the global chatbot is a public good, but there will be ways for people to monetize their own knowledge by wrapping them in custom GPT chatbots. So you have domain-level experts, and then that's a source of revenue for the knowledge creators themselves. And it could be knowledge on anything. I was talking to Jules here about how he could leverage his knowledge of media, and how to get people to interact with social media advice, how to get people to do marketing, sales. If that's queried, he's getting paid. Unified Data Layer, Lemonade Social is utilizing a similar technology, but without that unification of the data layer, but like sort of closed off sort of groups for events and for communities.\nAnd so you can have a data layer within a small community that sort of is, people can talk to it and make events, make NFTs, and then you can query it as a chatbot service and say, what's going on in this event? And then it will tell you who's there and what's happening. And so we've basically We built the same thing, but on a unified global layer with knowledge as the currency. And Lemonade Social is a front-end that allows you to organize yourselves around events and sort of like selling, like it's called Lemonade because the Lemonade stand. So it allows you to leverage your business, your small-medium enterprise, and power it up with this chatbot interface.\nWe're actually partnering so that we have the data that is collected from the individual So you have this global database which is fed from all of these sources and everybody's getting incentivized the more it's being used. As you eliminate\nsocial, that becomes an on-ramp of knowledge from people who are already interacting over in that piece of the internet.\nExactly. So essentially, you have an oasis where anybody can drink from, right? And what we're incentivizing now, we're incentivizing the data lake structure, but what we are partnering with is people who want to create these cups, these front ends that can sit on top of it. and you can monetize as you choose. The data lake itself is free. We incentivize the use of the data lake, but if you wanna monetize on top of that, then you get compounding opportunities with that. So that's the interesting piece for us.\nVery cool, and what about yourself? Inside the talks that have been happening, what has been like most compelling or what were you most excited about even before you got here?\nYeah, so I view the DeSci space as two different paradigms. There's the grassroots DeSci, which I think the DeSci world component and some of these more vanguard or esoteric versions of science taken. And then you have those that are institution or enterprise facing. So those that are just trying to tick the needle for enterprise. So whether it be operations, efficiency, cost saving, integrating patient groups with actual institutions like the Pfizer and the universities and the biobanks and whatnot. And I think that is what's most exciting to me because I see that as step one. So again, to make a little dichotomy or compare and contrast between DeFi and DeSci, I think DeFi and Web3 as a whole really leaned into the grassroots ground up perspective.\nI think DeSci actually counterbalances that or provides it in a different way where it's a balancing act between top down and bottom up. There's a lot of things in science that you just can't do bottom up, right? Because of, especially in the biomedical space, just because of regulations, you want to make sure people are safe, you want to make sure people's data is private. And so I am very keen on the de-sci space integrating with these traditional scientific peers in making more efficient systems that are still conscious of the stakeholders at the bottom. and so we've had examples of talks here by persons like Remedy and AminoChain and DeSci nodes that are integrating with larger institutions and I think that's really what's going to drive adoption the same way that we're seeing now DeFi adoption in the larger traditional financial space is what's actually going to allow like with the ETFs is what's making you know things more common and more adoptable more accepted across the boards and DeSci started with that so I'm really excited to see how that plays out in the long run.\nAnd I appreciate that, and I guess my last two questions are, now that this conference is wrapping up in the next three days for you two, what's on the horizon, how do you most leverage all this content you've gotten from all these conversations, dig up on your YouTube, it sounds like you two are doing lots, lots, lots, lots.\nYeah, we are. So our workshops at the house are actually on our DeSign World YouTube, so you can actually, we live stream them all so you can learn about some of the up and coming projects that aren't quite as mature as to be present at their official conference. but really these are the projects that you're going to see next year that have built themselves out and probably have evolved faster because they have the substrata that is necessary. The coming year is going to be really, really busy. We are doubling down on our conferences, on our in-person activities in the DeSci space, the integration or the maturation of the proof of work that knowledge substrate and the integration with a variety of different tooling is happening very, very quickly.\nI know Josh is going to be traveling a lot. I'm going to be traveling a lot. We both We both work with, we have DeSci World as our core, but we work with many other DeSci projects and DeFi projects. And so Josh is spearheading a lot of integration with DeFi, Harvest Finance, a variety of different tool sets. So I think this year is going to be the year of DeSci, but also the year of DeSci interoperating with traditional science, traditional finance and decentralized finance.\nYeah, a lot as you can tell is going to be happening this year and next year. So for us, we've been on a long, long journey. 2021, I started this. 2022, Jelani joined and we've been building ever since. Congrats. Yeah, honestly, thank you so much. It's been a huge journey and we have some unbelievably exciting things happening this year that it's just really puts a lump in my throat when I think about the progress, really. So just to sort of make it clear, we have DeSci.World, which is our website. It's our information aggregation site that Jelani mentioned earlier. You can find there a dashboard of over a hundred projects and what they're doing in DeSci We built that a long time ago, that was first product We have V2 of that coming out in about a month or so's time And so, like, it's gonna be so good, I can't believe it DeSci.world V2 is coming out, and then we have a global conference circuit We're going to be, I mean, I'm gonna be presenting Oxford University this month Oh,\nthat's so exciting, congrats\nI mean, to come from, not from academia like this guy In the halls of Oxford. Yeah, it's huge. It's huge. And then we're going to be doing a tour of Asia. We're going to be going to seven different countries in Asia towards the latter half of this year. We're going to be staying in Zanzibar for an entire month, trialing proof of knowledge as a coordination framework for a network state. Jelani will be in Australia. He'll also be coming to UK. We're going to be all over the world and we want everybody that's watching this to feel welcome and interested to reach out to us and say, hey, I'm going to be at this time in this What are we up to?\nAnd there might be something we're doing. And one of the things that I hope comes across in this video, and when people see other footage of both Jelani and I speaking, is we really do care about the people, the way that it feels to be involved in this thing. People like to say the word vibes. It's a good one. That's what we really care about because there's a lot of technical infrastructure in this space. And DeSci is just as much a cultural movement as it is a technological movement. And we really need to try and inspire into people the idea, the idea that a lot of these structures are completely fucked, and if we don't figure it out, especially in science and academia, very, very quickly, it's going to be a lot of issues for most people.\nAnd power structures lie in the scientific and academic institutions, and so if you want to disrupt, you have to figure it out through academia and science, because you need legitimacy, you need evidence, you need people to feel like they can trust what you're doing, and science is the way to do that.\nWell, I really appreciate you both taking time to speak with me. My day or afternoon at the summit has been very informative from the conversation around Athena DAO to the panel that you were on earlier, even to the guy talking about space. I thought it was super cool to hear people here think about how people can contribute and be part of publishing information about the stars. That's not really my role of existence. I think it's just been a super enriching day and informative and that's even like what Fournier was saying yesterday is like, yeah, I definitely want to go. It seems like it'll be educational.\nAnd I think that's definitely been my experience. And I appreciate you all creating vibes and welcoming us and yeah, helping my audience learn a little bit more about what DeSci is and why it's important. I did do like some like academic writing when I was in college. I published in like philosophy space and I'm very intrigued in how I can communicate to my professors that I worked with, you know, how this could pertain to them and the conferences they go to. And so I'm excited to share this with them. and even sitting downstairs and texting them like, when you guys go to conferences, you should let me know because like you're talking about our paper and I'm not there and I'd like to be.\nI just want to add like one last thing. So you spend enough time in DeSci, oftentimes you're biomedical, but to your point, DeSci exists across all scientific verticals. So whether you be a philosopher, a social scientist, an economist or whatever it may be, we need you in this space as much as you need this space to help you. So don't be shy, don't think that you're not qualified. You\nsay that again, right to the camera. You said we need you.\nYeah, so we need you as much as you need us, right? And so don't feel shy. It doesn't matter if you are a neuroimmunologist, again, a degen, whatever it is. We need you to help us build the bio, to help us build the tech that's actually going to help change what's important to you. And that's really what DeSci does. It allows you to explore, to innovate, to merge, to collaborate with a bunch of different people who are really interested in trying to figure out some fun shit, trying to start some new shit, and just have a really good time in doing it, and make a living in doing it too, right?\nSo that's the opportunity that we have here, and I think we want everybody here. So if you're interested, reach out to us, check out DeSci World, really reach out to anybody, reach out to the guys here, and let's create some cool stuff together.\nYeah, thank you both so much. like you have socials you want to shout out or anything like that? People can't keep up with you? DeSci World everywhere.\nYeah, you can follow DeSci World everywhere. The website is DeSci.World. You can follow me on Twitter at Jelani C3. So J-E-L-A-N-I-C-3. I'm also on LinkedIn. Josh, you can plug your stuff. DeSci\nWorld on Twitter. DeSci.World website. DeSci World on LinkedIn. I'm Joshua Bates on LinkedIn. reach out to me there. Joshua at DeSci.world is my email. My Twitter is JB87UA. Okay,\nI like it. Are you guys on Farcaster? Yes. Yes.\nSame handle, JB87UA.\nYeah. All right. Well, thank you again so much. I think this has been a wonderful afternoon. I was a bit frantic coming into this interview, but it's definitely been, like, this is only my second interview so far formally at ETH Denver, and I'm super appreciative that we decided spontaneously last night to come here. I think it's been eye-opening to get up. a picture of what Deesai is and I'm so glad I met two people who have been so instrumental in it coming to where it is and I'm excited to see what the next year takes you to and very keen to hear what Zanzibar is like, to hear what Australia is like, to hear about this year of travel and this year bringing what you two have been up to to the rest of the world.\nKudos to you and thank you.\nThank you so much. This has been really, really great. If this is your second interview, then We Them Media is going to be big.\nOh yeah. Thank you so much.",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Denver",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "url": "https://wethem.xyz/places#denver"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Denver Unfiltered",
+    "url": "https://wethem.xyz/portfolio#p-denver"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Blockchain Builders",
+      "url": "https://wethem.xyz/topics/blockchain-builders"
+    }
+  ],
+  "keywords": [
+    "Blockchain Builders"
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Denver Unfiltered",
+      "item": "https://wethem.xyz/portfolio#p-denver"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Onchain science, proof of knowledge: DeSci World",
+      "item": "https://wethem.xyz/watch/onchain-science-proof-of-knowledge-desci-world-at-eth-denver-2024"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place], who[data-pf-who]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2024-06-21" data-pf-vid="GZSciAYuhWY" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;30:00&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="Denver" data-pf-country="United States" data-pf-project="Denver Unfiltered" data-pf-who="Maceo">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-denver">Denver Unfiltered</a></li>
+            <li aria-current="page">Onchain science, proof of knowledge: DeSci World</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">Onchain science, proof of knowledge: DeSci World.</h1>
+
+    <p class="wt-byline"><strong>Jelani Clarke and Josh Bates</strong> &middot; Reported by <strong><a href="../people/maceo.html">Maceo</a></strong> &middot; Denver &middot; 30 min</p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="GZSciAYuhWY" live postersrcset="../stills/GZSciAYuhWY-320.jpg 320w, ../stills/GZSciAYuhWY-480.jpg 480w, ../stills/GZSciAYuhWY-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/GZSciAYuhWY?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="Onchain science, proof of knowledge: DeSci World, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+    <p class="wt-note wt-credit">Executive producer: C.Y. Lee</p>
+
+    <div class="wt-prose">
+            <p>Thirty minutes at the DeSci Summit on the University of Colorado Denver campus, the last day of ETH Denver 2024, with the two people running it. Maceo got there by chance: &ldquo;somebody talked to my girlfriend, was like, oh, you&rsquo;re in clinical research? You gotta come.&rdquo; Dr. Jelani Clarke and Josh Bates of DeSci World explain what they built. The summit &ldquo;has been being planned since, I think, October,&rdquo; as &ldquo;a democratic organization&rdquo; that delegates to the community, &ldquo;which is both sometimes great and other times not so great.&rdquo; Five days of events, and at the same time a hacker house where &ldquo;Jelani, myself, and 22 other people have actually been hacking&rdquo; on &ldquo;what we&rsquo;re calling the interoperable DeSci stack.&rdquo;</p>
+            <p>How each got here. Josh: &ldquo;I was living in China for a number of years and I wanted to send some money home to my family. So I used crypto to do so,&rdquo; then full-time crypto in 2020 and DeSci World in 2021. Jelani has &ldquo;a PhD in neuroimmunology,&rdquo; worked in biotech, and left academia over &ldquo;the bureaucracy and the red tape.&rdquo; His comparison is to the music business: &ldquo;Scientists in academia predominantly operate under a 360 deal type architecture where you don&rsquo;t own much of what you publish.&rdquo; So he &ldquo;just looked up blockchain and DeSci, blockchain and science, and that led me down the rabbit hole.&rdquo;</p>
+            <p>On money, Josh is blunt. &ldquo;People are not altruistic,&rdquo; so DeSci builds incentives around giving. He bootstrapped the project himself: &ldquo;I&rsquo;m lucky enough to have made some good trades during the bull market of 2020,&rdquo; and his advice to anyone raising is to &ldquo;crowdsource from people with aligned values rather than through sort of VCs.&rdquo; Jelani lays out the pillars beyond funding: &ldquo;frameworks of ownership, data management, access, publication,&rdquo; and the 23andMe example, where you sign your genetics away and &ldquo;someone else can&rsquo;t go and sell it for a profit&rdquo; under the structures they are building. Is DeSci science on the blockchain? &ldquo;Josh said yes, I say no.&rdquo; It is a product of the open science movement: &ldquo;a progression of science back to its original state, where anybody who wants to participate&rdquo; can.</p>
+            <p>The history: &ldquo;I was here three years ago to the day,&rdquo; in &ldquo;the DCI house,&rdquo; where people who have since raised millions first met. Then the present, &ldquo;the adoption phase,&rdquo; their podcast DeSci Rising, and the hacker house workshops, twenty of them, where &ldquo;it&rsquo;s like, now I&rsquo;m going to share what I&rsquo;m doing&rdquo; instead of pitching. Josh describes Proof of Knowledge, &ldquo;a unified data layer That allows you to create knowledge and attest to it on-chain,&rdquo; where &ldquo;When your knowledge is utilized by an LLM, you&rsquo;re paid for the utilization,&rdquo; and the partnership with Lemonade Social. Jelani sees two paradigms, grassroots DeSci and enterprise DeSci integrating with &ldquo;the Pfizer and the universities and the biobanks,&rdquo; and says of the second, &ldquo;that&rsquo;s really what&rsquo;s going to drive adoption.&rdquo;</p>
+            <p>The year ahead: DeSci.World V2, Oxford, seven countries in Asia, &ldquo;staying in Zanzibar for an entire month, trialing proof of knowledge as a coordination framework for a network state.&rdquo; Josh&rsquo;s closing: &ldquo;Desai is just as much a cultural movement as it is a technological movement.&rdquo; And Jelani&rsquo;s, to the camera: &ldquo;we need you as much as you need us,&rdquo; whether you are a neuroimmunologist or &ldquo;a degen.&rdquo; Maceo admits it is only his second formal interview of the week. Josh: &ldquo;If this is your second interview, then We Them Media is going to be big.&rdquo; Language is unfiltered; the show intro uses its earlier name. The transcript below is from the original audio.</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../places.html#denver">Everything filmed in Denver</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="desci-womens-health-and-funding-the-gap-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/zAIth9lIeP0-640.jpg" srcset="../stills/zAIth9lIeP0-320.jpg 320w, ../stills/zAIth9lIeP0-480.jpg 480w, ../stills/zAIth9lIeP0-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>26:42</span></span><span>DeSci, women&#x27;s health, and who gets funded.</span></a>
+        <a class="wt-rail-card" href="what-decentralized-science-means-for-health-gabrielle-at-eth-denver-2024.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/19agkxpJH6Q-640.jpg" srcset="../stills/19agkxpJH6Q-320.jpg 320w, ../stills/19agkxpJH6Q-480.jpg 480w, ../stills/19agkxpJH6Q-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>6:41</span></span><span>What decentralized science means for health: Gabrielle at ETH Denver 2024.</span></a>
+        <a class="wt-rail-card" href="social-tokens-community-and-url-to-irl-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/4uN9BrX2Ztg-640.jpg" srcset="../stills/4uN9BrX2Ztg-320.jpg 320w, ../stills/4uN9BrX2Ztg-480.jpg 480w, ../stills/4uN9BrX2Ztg-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>18:21</span></span><span>Social tokens, and a conference for Cape Verde.</span></a>
+        <a class="wt-rail-card" href="crypto-in-the-caribbean-and-who-gets-access-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/WNslAJEdYYc-640.jpg" srcset="../stills/WNslAJEdYYc-320.jpg 320w, ../stills/WNslAJEdYYc-480.jpg 480w, ../stills/WNslAJEdYYc-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>11:27</span></span><span>Access, the Caribbean, and a conference at home.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c0"><a class="wt-t" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-s">Day five of the DeSci Summit</span></li>
+                <li class="wt-line" id="c54"><a class="wt-t" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=54s" target="_blank" rel="noopener" data-pagefind-ignore>0:54</a><span class="wt-s">Planned since October, run democratically</span></li>
+                <li class="wt-line" id="c91"><a class="wt-t" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=91s" target="_blank" rel="noopener" data-pagefind-ignore>1:31</a><span class="wt-s">What is the interoperable DeSci stack?</span></li>
+                <li class="wt-line" id="c134"><a class="wt-t" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=134s" target="_blank" rel="noopener" data-pagefind-ignore>2:14</a><span class="wt-s">How Josh got here: sending money home from China</span></li>
+                <li class="wt-line" id="c211"><a class="wt-t" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=211s" target="_blank" rel="noopener" data-pagefind-ignore>3:31</a><span class="wt-s">How Jelani got here: the 360 deal in academia</span></li>
+                <li class="wt-line" id="c371"><a class="wt-t" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=371s" target="_blank" rel="noopener" data-pagefind-ignore>6:11</a><span class="wt-s">How do you fund decentralized science?</span></li>
+                <li class="wt-line" id="c526"><a class="wt-t" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=526s" target="_blank" rel="noopener" data-pagefind-ignore>8:46</a><span class="wt-s">What are the pillars of DeSci?</span></li>
+                <li class="wt-line" id="c641"><a class="wt-t" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=641s" target="_blank" rel="noopener" data-pagefind-ignore>10:41</a><span class="wt-s">What was the open science movement?</span></li>
+                <li class="wt-line" id="c735"><a class="wt-t" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=735s" target="_blank" rel="noopener" data-pagefind-ignore>12:15</a><span class="wt-s">Where DeSci&#x27;s early builders first met</span></li>
+                <li class="wt-line" id="c844"><a class="wt-t" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=844s" target="_blank" rel="noopener" data-pagefind-ignore>14:04</a><span class="wt-s">Why DeSci World puts people before tech</span></li>
+                <li class="wt-line" id="c971"><a class="wt-t" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=971s" target="_blank" rel="noopener" data-pagefind-ignore>16:11</a><span class="wt-s">Why small workshops beat conference pitches</span></li>
+                <li class="wt-line" id="c1043"><a class="wt-t" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1043s" target="_blank" rel="noopener" data-pagefind-ignore>17:23</a><span class="wt-s">Proof of Knowledge: paid when AI uses your work</span></li>
+                <li class="wt-line" id="c1221"><a class="wt-t" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1221s" target="_blank" rel="noopener" data-pagefind-ignore>20:21</a><span class="wt-s">What will drive DeSci adoption?</span></li>
+                <li class="wt-line" id="c1366"><a class="wt-t" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1366s" target="_blank" rel="noopener" data-pagefind-ignore>22:46</a><span class="wt-s">The year ahead: Oxford, Asia, Zanzibar</span></li>
+                <li class="wt-line" id="c1521"><a class="wt-t" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1521s" target="_blank" rel="noopener" data-pagefind-ignore>25:21</a><span class="wt-s">Why DeSci is a cultural movement too</span></li>
+                <li class="wt-line" id="c1631"><a class="wt-t" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1631s" target="_blank" rel="noopener" data-pagefind-ignore>27:11</a><span class="wt-s">We need you</span></li>
+                <li class="wt-line" id="c1696"><a class="wt-t" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1696s" target="_blank" rel="noopener" data-pagefind-ignore>28:16</a><span class="wt-s">Where to find them</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Transcribed from the original audio and corrected for names. Speaker letters mark turns, not names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Well, hello, everyone, and welcome to another episode of We Them Niggas. We&rsquo;re out here at ETH Denver, and we&rsquo;re connecting with people of color and people building in the Web3 space, trying to better understand what&rsquo;s important, what&rsquo;s pressing, and what people are caring about. And so I&rsquo;m excited to have both of you here. Thank you, Jelani. Thank you, Josh. Today we were at the, you guys&rsquo; event for DeSci World, the DeSci Summit. Like, very much by chance, last night, somebody talked to my girlfriend, was like, oh, you&rsquo;re in clinical research? You gotta come. This is gonna be the best day of your life. And I&rsquo;m like, okay, like, we&rsquo;re gonna be there.</p>
+            <p id="s0-2"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And so here we are and I&rsquo;m I mean, I&rsquo;ve definitely learned stuff today and it&rsquo;s been cool to hear about what&rsquo;s been saying to my girlfriend, being that she&rsquo;s way more of a I&rsquo;m not a scientist, I wouldn&rsquo;t say. And so that&rsquo;s been cool. And I&rsquo;m curious to hear how the past this is day five of the summit, how the past five days been for you two and what were like the I don&rsquo;t know, when did you start planning this? Like, I don&rsquo;t even know what day this actually is for you two of the DeSci summit.</p>
+            <p id="s53"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=53s" target="_blank" rel="noopener" data-pagefind-ignore>0:53</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So the DeSci Summit has been being planned since, I think, October is when we started to kick this off. We take the approach with this particular conference to make it democratic, so a democratic organization. You do have specific leads, so myself, Shadi Eldamati, and Jonathan Starr, who are leads of their own respective projects, are kind of leading the initiative. So we put together a lot of the frameworks, we place the speakers, choose the speakers, and all that kind of stuff. But we try to delegate to the community and get community feedback throughout every step of the process, which is both sometimes great and other times not so great.</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s53-2"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=53s" target="_blank" rel="noopener" data-pagefind-ignore>0:53</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It can stifle a lot of progress at certain instances, but we really want to make the DeSci Summit as kind of a landmark DeSci event throughout the year, one that is really open to the community to participate in.</p>
+            <p id="s101"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=101s" target="_blank" rel="noopener" data-pagefind-ignore>1:41</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Yeah, we&rsquo;ve been at the DeSci Summit for, I think, five days now. There&rsquo;s been five days in a row consecutively of events. This is the culmination event at the university, but there&rsquo;s been four before this. We&rsquo;re at Protocol Labs and DeSci Labs, but we at DeSci World, Jelani, myself, and 22 other people have actually been hacking at a hacker house since the 19th. Today is the 29th, so 10 days and we have four days left, three days left. And so it&rsquo;s been quite an experience for us. It&rsquo;s our first ever hacker house, you know, a massive house, 20 beds in it or 18 beds in it or whatever.</p>
+            <p id="s101-2"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=101s" target="_blank" rel="noopener" data-pagefind-ignore>1:41</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Loads of people getting together to build what we&rsquo;re calling the interoperable DeSci stack Which is all the tools that are going to be utilized to make DeSci happen And to let other people in to use the DeSci ecosystem</p>
+            <p id="s147"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=147s" target="_blank" rel="noopener" data-pagefind-ignore>2:27</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>That makes a lot of sense And I&rsquo;d love to hear the two of you share how you got into Web3 space Or into the world of science How did you come to be here at the people at the helm of DeSci world?</p>
+            <p id="s158"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=158s" target="_blank" rel="noopener" data-pagefind-ignore>2:38</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Yeah, so I&rsquo;m one of the sort of more DeFi-facing people in DeFi, you could say. I started my career in crypto in DeFi. I was living in China for a number of years and I wanted to send some money home to my family. So I used crypto to do so, got into the crypto world, dove headfirst in, left China, went full-time crypto in 2020 and started DeFi World in 2021 off the back of the COVID epidemic. There was some very obvious cracks in the system, some very obvious cracks in narrative control, especially around research. And so I decided that DeFi could be used for science, the funding mechanisms in particular, started DeFi World.</p>
+            <p id="s198"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=198s" target="_blank" rel="noopener" data-pagefind-ignore>3:18</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>And then about six months into that journey, put out a call to action to anyone that wanted to help build this project and build this mission. And then that&rsquo;s when I met Jelani.</p>
+            <p id="s209"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=209s" target="_blank" rel="noopener" data-pagefind-ignore>3:29</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah. So, sorry, so I come from a more scientific background. So I have a PhD in neuroimmunology, worked in biotech for a few years and obviously was in academia for years before that. I started my journey in the Web3 space from an investment perspective, DeFi, going down that rabbit hole. But at the same time, I was also at a point around the COVID pandemic where I was starting to see, like, what are better ways for us to be able to do science? I decided not to pursue a career in academia as a professor or a PI because of all the loopholes and the bureaucracy and the red tape and all the challenges that exist for a scientist within that realm.</p>
+            <p id="s209-2"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=209s" target="_blank" rel="noopener" data-pagefind-ignore>3:29</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And that is something that I was likening to the 360 deal, right? Scientists in academia predominantly operate under a 360 deal type architecture where you don&rsquo;t own much of what you publish, institutions and those who are above you own that, you don&rsquo;t really get a say, and you&rsquo;re So you&rsquo;re not really at liberty to pursue the science that you necessarily want to pursue. It&rsquo;s more you got to pay the bills. And that&rsquo;s really what pigeonholes your innovation. So I didn&rsquo;t want to operate in that. Jumped out of that when I got my PhD, worked in biotech. And that was an interesting experience. What you see is that though the problems are different, the architecture or the type of problems still exist.</p>
+            <p id="s209-3"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=209s" target="_blank" rel="noopener" data-pagefind-ignore>3:29</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Science cannot move forward because at the end of the day, it&rsquo;s a bottom line that is pervasive within that realm. And that&rsquo;s okay. But it oftentimes limits what can be done. and it holds scientists pigeon-held. And so the ethos of Web3, the ethos of DeFi in terms of trying to find alternative ways to either complement or combat these architectures that pigeon-holed was very attractive to me. And it almost seemed like it was, I didn&rsquo;t understand why it hadn&rsquo;t percolated its way into the scientific realm. And so I think very briefly, I just looked up blockchain and DeSci, blockchain and science, and that led me down the rabbit hole to the very early stages of this movement.</p>
+            <p id="s209-4"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=209s" target="_blank" rel="noopener" data-pagefind-ignore>3:29</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>movement, right? And I just kind of jumped ahead at first, and I left biotech, ended up leaving biotech, starting working full-time with Josh at building out DeSci World, which started off as a more social awareness dissemination platform, aggregating communities, aggregating information for people who are interested in DeSci so that they could understand what was happening in the space, and then we&rsquo;ve since continued those in terms of organizing conferences, and we have our own conference series that we put on around the world with academic institutions, more out of the Web3 space, more for the actual scientists and science curious. And then we have since started to transition into building a technical infrastructure that also aggregates and pulls together knowledge and also the variety of different DeSci tools that have been maturing over the last two years.</p>
+            <p id="s368"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=368s" target="_blank" rel="noopener" data-pagefind-ignore>6:08</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>That&rsquo;s incredible. And so it sounds like being a futurist, the two of you, you were like, ah, this is the natural progression, sounds like you&rsquo;re saying, of science. And thus, you did the Google search and made your way. And so what did it look like two and a half years ago? And who are the people that you saw getting involved in DeSci How do you even find funding? You&rsquo;re like, oh, I went full-time into this thing. And I know you&rsquo;re talking about DeFi potentially being a funding mechanism. And that&rsquo;s really what excites me a lot about this Web3 space is how can it be a way to finance social change?</p>
+            <p id="s368-2"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=368s" target="_blank" rel="noopener" data-pagefind-ignore>6:08</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>It&rsquo;s a big thing that I&rsquo;m interested in.</p>
+            <p id="s397"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=397s" target="_blank" rel="noopener" data-pagefind-ignore>6:37</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Yeah. So the DeFi aspects of DeSci thinking, right, there&rsquo;s a lot of money out there. Let&rsquo;s put it towards science or towards social change, for example. It is a really attractive and sort of obvious offer, but it&rsquo;s actually much more difficult than you&rsquo;d expect. People are not altruistic and when they&rsquo;re making crazy money in the bull run, no one wants to sell, no one wants to give money to these organizations for social good, for science, there needs to be some kind of incentive. Unfortunately, we live in that kind of world where everybody wants something for what they have. And so using DeFi for using, let&rsquo;s just say using blockchain, using Web3, using decentralized sources of finance for DeSci, for social good, it really is possible.</p>
+            <p id="s397-2"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=397s" target="_blank" rel="noopener" data-pagefind-ignore>6:37</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>But the beautiful thing is that you can create an incentive mechanism around it So that someone gets something in return for their altruism And so this is kind of the guiding ideology behind a lot of what DeSci is doing Is how can I provide a platform that gets money to scientists Gets money to the social change or to whatever we need it to go to But also provides a value to those people that provide the money And so that&rsquo;s kind of the guiding ethos of what a lot of us are doing Is using Web3 as an incentive mechanism to get that To answer your original question like how do you get funding to start something like this, like I&rsquo;ll be totally honest with you, it&rsquo;s difficult, right, you have two options, you either raise or you have personal funding, I&rsquo;m lucky enough to have made some good trades during the bull market of 2020 that I had enough to provide for the bootstrapping of this project, like that was where all of my sales went to, was into funding DeSci World, and so</p>
+            <p id="s490"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=490s" target="_blank" rel="noopener" data-pagefind-ignore>8:10</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I think it&rsquo;s incredible. Yeah,</p>
+            <p id="s491"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=491s" target="_blank" rel="noopener" data-pagefind-ignore>8:11</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>thank God, honestly, really, because I probably wouldn&rsquo;t have sold anything anyways, because, you know, who wants to sell? So I just did it to fund this, and it&rsquo;s turned into this amazing, really powerful, important thing. All you raise, and just for anyone that&rsquo;s looking to get funding in crypto, raising is a very difficult and soul-crushing endeavor, but you can do it. You just have to be careful who you get money from, and, like, that&rsquo;s a whole other conversation. But just saying that to hold on to your values, best thing you can do is to crowdsource from people with aligned values rather than through sort of VCs, et cetera.</p>
+            <p id="s523"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=523s" target="_blank" rel="noopener" data-pagefind-ignore>8:43</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So we often talk about incentives and DSCI and the financial opportunities and the financial pillars. But DSCI is actually comprised of four to five major pillars. One is funding because that is a huge source of issue in the scientific realm. But there&rsquo;s also frameworks of ownership, data management, access, publication, like there are different aspects that DeSci is trying to tackle in terms of making science more equitable, transparent, open, accessible to participants, whether you be a formerly trained scientist or a DeFi Degen or an artist or whomever, right? Like DeSci exists in a variety of different forms and if you attend the variety of conferences that we have, this one included, you&rsquo;ll see speakers talking about different publishing frameworks, like how do you display, how do you share your data in a way that it still allows you to be self-sovereign and as Josh likes to put it, allow you to actualize the desires that you want to perceive, that you want to proceed with.</p>
+            <p id="s523-2"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=523s" target="_blank" rel="noopener" data-pagefind-ignore>8:43</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Then you do have funding. You also have how do we engage the public who are not scientists in terms of understanding that they can be a part of the scientific record of knowledge or involve themselves in and Scientific Policies, how they deal with their own data, when you go to something like 23andMe and give out your genetics and you basically sign that away. There are other alternative ways, structures like participants like we are creating where you don&rsquo;t have to sign it away. You can get all of the data analysis. You can find out your hereditary, your genetics, your family while still being owners of that access so that someone else can&rsquo;t go and sell it for a profit.</p>
+            <p id="s523-3"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=523s" target="_blank" rel="noopener" data-pagefind-ignore>8:43</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>There are different verticals in DeSci and I think that&rsquo;s something that&rsquo;s important to acknowledge. College. And to your question about, to your comment about, you know, DeSci is basically science on the blockchain and Josh said yes, I say no. DeSci leverages techniques and tools and ethos that exist in Web3, but it is not solely Web3. And it&rsquo;s actually a product of an earlier movement called the open science movement. We now have the tech to allow us to secure and build out and leverage these pillars and solve device solutions. But inherently It&rsquo;s a, it&rsquo;s, it&rsquo;s, it&rsquo;s, it leverages Web3, but it&rsquo;s not all Web3.</p>
+            <p id="s656"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=656s" target="_blank" rel="noopener" data-pagefind-ignore>10:56</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And so what was the premise of the open science movement?</p>
+            <p id="s658"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=658s" target="_blank" rel="noopener" data-pagefind-ignore>10:58</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>The open science movement was exactly what we were talking about. It&rsquo;s the same ethos, right? The idea of making science more openly accessible to participants, not just for scientists themselves, but their ability to share with people who are not scientists, for scientists to be able to share better amongst themselves, for them to find ways to monetize their data in a way that is not decided by the institutions necessarily, but also as stakeholders in the decision. making. Now the problem with that is that at the end of the day, those who have the money govern the access rights. In this instance, what Web3 allows is for us to be able to crowdsource science.</p>
+            <p id="s658-2"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=658s" target="_blank" rel="noopener" data-pagefind-ignore>10:58</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Never before were you able to crowdsource science, like early on. The original form of science back hundreds of thousands of years ago was a community-based initiative, right? You could get coalitions of individuals coming together for a certain cause. Then it got captured by institutions, operations, right? And this is where we lead to the days we have. So this is actually a progression of science back to its original state, where anybody who wants to participate, whether you be an artist who wants to graphically represent data in such a way as to make it amenable for people to understand, you want to be a creator, you want to just be a philosopher, an ideator, you want to be a policy person, you can all participate in the growing record of science.</p>
+            <p id="s732"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=732s" target="_blank" rel="noopener" data-pagefind-ignore>12:12</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And inside this summit that you two have organized after like the past, it sounds like you said two and a half years, yeah, you&rsquo;ve been working on this project. What do you see as like the, I guess the milestones, the lead up to where we are right now?</p>
+            <p id="s746"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=746s" target="_blank" rel="noopener" data-pagefind-ignore>12:26</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Yeah, great question. So the first thing is formation, right? I was here three years ago to the day at East Denver three years ago. There was a house, we call it the DeSci house. It&rsquo;s where what you could consider the DeSci OGs all first met. Some people here have built and launched and raised millions for their wonderful products which were ideated and first discussed in this house three years ago</p>
+            <p id="s768"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=768s" target="_blank" rel="noopener" data-pagefind-ignore>12:48</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>That&rsquo;s so cool</p>
+            <p id="s768-2"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=768s" target="_blank" rel="noopener" data-pagefind-ignore>12:48</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Yeah, really cool I was really, really early fish there and as Jelani mentioned, I&rsquo;m sort of more from the non-academic background, right? And so I was really out of my depth But just a testament to what this space is all about is that they actually welcomed and accepted me Yes, there might have been some, you know, who&rsquo;s this guy kind of thing but ultimately, always, right? But I was really welcomed in and really accepted. And we&rsquo;re still here, major players, like really major players now. And it&rsquo;s wonderful to see. So formation was the initial hurdle, right? Was getting people together and start thinking, this is something we can do.</p>
+            <p id="s790"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=790s" target="_blank" rel="noopener" data-pagefind-ignore>13:10</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Then you have to either convince people to join or build something that they must use. And we decided to go down that road because you can convince people to join with tokens or marketing and all that kind of vaporware, but it&rsquo;s not sustainable. And it&rsquo;s certainly not what science needs. What science needs is something new that you can utilize to improve the scientific method, to improve participation. That&rsquo;s the sort of thing that we&rsquo;re most passionate about at DeSci World, is the participation, more just the culture or the mindset of science, what it means to be a scientist, what it means to do science, how science can be distributed, how you can utilize science in your everyday life without being an academic or a PhD or having certain access to resources.</p>
+            <p id="s790-2"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=790s" target="_blank" rel="noopener" data-pagefind-ignore>13:10</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>And so we&rsquo;re building these tools to show people and scientists and institutions what is out there, how their mindset can change and how it&rsquo;s better to change your mindset into this much more holistic view of the world. And then the next step, which is the point we&rsquo;re in right now, is the adoption phase. And so for anyone that is in that sort of DeFi mindset and looking for those pre-adoption things, DeSci is definitely that for the next year and a half, two years.</p>
+            <p id="s871"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=871s" target="_blank" rel="noopener" data-pagefind-ignore>14:31</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I think the way that I like to say it and we like doing things so Josh and I are oftentimes doing podcasts together we have our own podcast series yeah yeah you can check it out on YouTube DeSci World YouTube DeSci World Spotify and it&rsquo;s it&rsquo;s called DeSci Rising essentially it is where we allow we&rsquo;re not we allow we sit down with the different projects in the space and we let them showcase what they&rsquo;re about we let them introduce themselves to the to the larger community and just learn about what they&rsquo;re doing and one of our intro statements is more than the tech more than and the funding, it is the people who are going to be using these tools that are really going to make the changes that we&rsquo;re hoping to see in science, right?</p>
+            <p id="s879"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=879s" target="_blank" rel="noopener" data-pagefind-ignore>14:39</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And that&rsquo;s really a lot of the major pillar that we&rsquo;ve based ourselves on. So a lot of projects at the beginning initially started with building out platforms and tooling. And I think to me, and what attracted me originally to work with Josh and DeSci World is that while that&rsquo;s great, you still always need to factor in the people. Then at such an early stage, a lot of projects are head down working on the tech. and we decided to just tackle that void of the people and so we built the culture, we built the community aspects, we helped usher people in, we do, like I said, the real life conferences is pretty much, we&rsquo;re mostly the ones who do them throughout the space, throughout the year and now that we have that collective following, we have that collective consciousness about what DeSci is, what DeSci world is, who we are, now we&rsquo;re going to build the tech and provide an opportunity for people to integrate with us and then by automatically integrate with with the rest of the tooling, right?</p>
+            <p id="s879-2"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=879s" target="_blank" rel="noopener" data-pagefind-ignore>14:39</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So aggregation and dissemination are really the lifeblood points of what DeSci World and what we&rsquo;re interested in doing.</p>
+            <p id="s967"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=967s" target="_blank" rel="noopener" data-pagefind-ignore>16:07</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And inside the past five days at this summit, what have you seen be, I guess, the most exciting talks for each of you respectively?</p>
+            <p id="s977"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=977s" target="_blank" rel="noopener" data-pagefind-ignore>16:17</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Exciting talks, okay, I&rsquo;m gonna do that thing that everybody hates and be really biased about my own projects. But at our Hacker House, we have had like, I think 20 different workshops over the past 10 days.</p>
+            <p id="s988"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=988s" target="_blank" rel="noopener" data-pagefind-ignore>16:28</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Oh, wow.</p>
+            <p id="s989"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=989s" target="_blank" rel="noopener" data-pagefind-ignore>16:29</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Spread over four days. So there&rsquo;d be four days of like-</p>
+            <p id="s991"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=991s" target="_blank" rel="noopener" data-pagefind-ignore>16:31</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>You guys are doing so much. This, and then you got stuck on over there. You guys are programming, programming, programming, and programming. Yeah.</p>
+            <p id="s996"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=996s" target="_blank" rel="noopener" data-pagefind-ignore>16:36</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Yeah. Absolutely. Like honestly, too much. Too much is like maybe the right word actually. Yeah. But the, so the workshops that we&rsquo;ve had at our house have been these nice intimate setting in this beautiful, large hacker house. So there&rsquo;s been a TV and someone presenting and there&rsquo;s been, you know, 10 to 20 people watching. And it&rsquo;s the intimacy of the moment and people starting to loosen up a little bit. and you see when someone&rsquo;s on stage, you know, doing a presentation at a conference, you see, okay, now I&rsquo;m going to present, now I&rsquo;m going to pitch. When you have someone in a more intimate setting, it&rsquo;s like, now I&rsquo;m going to share what I&rsquo;m doing, right?</p>
+            <p id="s996-2"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=996s" target="_blank" rel="noopener" data-pagefind-ignore>16:36</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>And it&rsquo;s like, you can directly interact with them, you can learn about what it is they&rsquo;re building, how it might work with your project. And I think those intimate settings, you can&rsquo;t replace them. It&rsquo;s very difficult to replicate unless you have like a fat ass house in the middle of Denver with loads of people there, right? And it&rsquo;s something that this is our first time doing it. We are absolutely going to be doing this all over the world many, many more times My favorite talk was probably from Lemonade Social I think Celine from Lemonade Social has put together a really great platform with her team And we&rsquo;re going to be partnering with them as well</p>
+            <p id="s1063"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1063s" target="_blank" rel="noopener" data-pagefind-ignore>17:43</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>What is Lemonade Social?</p>
+            <p id="s1064"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1064s" target="_blank" rel="noopener" data-pagefind-ignore>17:44</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Lemonade Social is, okay, so precursor We have proof of knowledge, which is a unified data layer That allows you to create knowledge and attest to it on-chain When your knowledge is utilized by an LLM, you&rsquo;re paid for the utilization as an LLM</p>
+            <p id="s1079"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1079s" target="_blank" rel="noopener" data-pagefind-ignore>17:59</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>LLM being the AI chatbot you&rsquo;re referring to</p>
+            <p id="s1081"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1081s" target="_blank" rel="noopener" data-pagefind-ignore>18:01</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Any LLM, any AI chatbot, but we have our own unified chatbot, which we&rsquo;re calling Indrasil, the North Tree of Knowledge IGGI is going to be like a free public good where people can query it And you&rsquo;ll get information derived from the Ngrams, which are containing user knowledge Which they get paid every time it gets queried Anyways, it&rsquo;s a unified data layer, okay, that people can interface with And if you query your data, then you get paid. Yeah,</p>
+            <p id="s1104"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1104s" target="_blank" rel="noopener" data-pagefind-ignore>18:24</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>yeah. And people pay to use it, but you said it&rsquo;s public good.</p>
+            <p id="s1107"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1107s" target="_blank" rel="noopener" data-pagefind-ignore>18:27</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>So the global chatbot is a public good, but there will be ways for people to monetize their own knowledge by wrapping them in custom GPT chatbots. So you have domain-level experts, and then that&rsquo;s a source of revenue for the knowledge creators themselves. And it could be knowledge on anything. I was talking to Jules here about how he could leverage his knowledge of media, and how to get people to interact with social media advice, how to get people to do marketing, sales. If that&rsquo;s queried, he&rsquo;s getting paid. Unified Data Layer, Lemonade Social is utilizing a similar technology, but without that unification of the data layer, but like sort of closed off sort of groups for events and for communities.</p>
+            <p id="s1107-2"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1107s" target="_blank" rel="noopener" data-pagefind-ignore>18:27</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>And so you can have a data layer within a small community that sort of is, people can talk to it and make events, make NFTs, and then you can query it as a chatbot service and say, what&rsquo;s going on in this event? And then it will tell you who&rsquo;s there and what&rsquo;s happening. And so we&rsquo;ve basically We built the same thing, but on a unified global layer with knowledge as the currency. And Lemonade Social is a front-end that allows you to organize yourselves around events and sort of like selling, like it&rsquo;s called Lemonade because the Lemonade stand. So it allows you to leverage your business, your small-medium enterprise, and power it up with this chatbot interface.</p>
+            <p id="s1107-3"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1107s" target="_blank" rel="noopener" data-pagefind-ignore>18:27</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>We&rsquo;re actually partnering so that we have the data that is collected from the individual So you have this global database which is fed from all of these sources and everybody&rsquo;s getting incentivized the more it&rsquo;s being used. As you eliminate</p>
+            <p id="s1195"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1195s" target="_blank" rel="noopener" data-pagefind-ignore>19:55</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>social, that becomes an on-ramp of knowledge from people who are already interacting over in that piece of the internet.</p>
+            <p id="s1201"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1201s" target="_blank" rel="noopener" data-pagefind-ignore>20:01</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Exactly. So essentially, you have an oasis where anybody can drink from, right? And what we&rsquo;re incentivizing now, we&rsquo;re incentivizing the data lake structure, but what we are partnering with is people who want to create these cups, these front ends that can sit on top of it. and you can monetize as you choose. The data lake itself is free. We incentivize the use of the data lake, but if you wanna monetize on top of that, then you get compounding opportunities with that. So that&rsquo;s the interesting piece for us.</p>
+            <p id="s1228"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1228s" target="_blank" rel="noopener" data-pagefind-ignore>20:28</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Very cool, and what about yourself? Inside the talks that have been happening, what has been like most compelling or what were you most excited about even before you got here?</p>
+            <p id="s1235"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1235s" target="_blank" rel="noopener" data-pagefind-ignore>20:35</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, so I view the DeSci space as two different paradigms. There&rsquo;s the grassroots DeSci, which I think the DeSci world component and some of these more vanguard or esoteric versions of science taken. And then you have those that are institution or enterprise facing. So those that are just trying to tick the needle for enterprise. So whether it be operations, efficiency, cost saving, integrating patient groups with actual institutions like the Pfizer and the universities and the biobanks and whatnot. And I think that is what&rsquo;s most exciting to me because I see that as step one. So again, to make a little dichotomy or compare and contrast between DeFi and DeSci, I think DeFi and Web3 as a whole really leaned into the grassroots ground up perspective.</p>
+            <p id="s1235-2"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1235s" target="_blank" rel="noopener" data-pagefind-ignore>20:35</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I think DeSci actually counterbalances that or provides it in a different way where it&rsquo;s a balancing act between top down and bottom up. There&rsquo;s a lot of things in science that you just can&rsquo;t do bottom up, right? Because of, especially in the biomedical space, just because of regulations, you want to make sure people are safe, you want to make sure people&rsquo;s data is private. And so I am very keen on the de-sci space integrating with these traditional scientific peers in making more efficient systems that are still conscious of the stakeholders at the bottom. and so we&rsquo;ve had examples of talks here by persons like Remedy and AminoChain and DeSci nodes that are integrating with larger institutions and I think that&rsquo;s really what&rsquo;s going to drive adoption the same way that we&rsquo;re seeing now DeFi adoption in the larger traditional financial space is what&rsquo;s actually going to allow like with the ETFs is what&rsquo;s making you know things more common and more adoptable more accepted across the boards and DeSci started with that so I&rsquo;m really excited to see how that plays out in the long run.</p>
+            <p id="s1348"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1348s" target="_blank" rel="noopener" data-pagefind-ignore>22:28</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And I appreciate that, and I guess my last two questions are, now that this conference is wrapping up in the next three days for you two, what&rsquo;s on the horizon, how do you most leverage all this content you&rsquo;ve gotten from all these conversations, dig up on your YouTube, it sounds like you two are doing lots, lots, lots, lots.</p>
+            <p id="s1366"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1366s" target="_blank" rel="noopener" data-pagefind-ignore>22:46</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, we are. So our workshops at the house are actually on our DeSign World YouTube, so you can actually, we live stream them all so you can learn about some of the up and coming projects that aren&rsquo;t quite as mature as to be present at their official conference. but really these are the projects that you&rsquo;re going to see next year that have built themselves out and probably have evolved faster because they have the substrata that is necessary. The coming year is going to be really, really busy. We are doubling down on our conferences, on our in-person activities in the DeSci space, the integration or the maturation of the proof of work that knowledge substrate and the integration with a variety of different tooling is happening very, very quickly.</p>
+            <p id="s1366-2"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1366s" target="_blank" rel="noopener" data-pagefind-ignore>22:46</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I know Josh is going to be traveling a lot. I&rsquo;m going to be traveling a lot. We both We both work with, we have DeSci World as our core, but we work with many other DeSci projects and DeFi projects. And so Josh is spearheading a lot of integration with DeFi, Harvest Finance, a variety of different tool sets. So I think this year is going to be the year of DeSci, but also the year of DeSci interoperating with traditional science, traditional finance and decentralized finance.</p>
+            <p id="s1430"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1430s" target="_blank" rel="noopener" data-pagefind-ignore>23:50</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Yeah, a lot as you can tell is going to be happening this year and next year. So for us, we&rsquo;ve been on a long, long journey. 2021, I started this. 2022, Jelani joined and we&rsquo;ve been building ever since. Congrats. Yeah, honestly, thank you so much. It&rsquo;s been a huge journey and we have some unbelievably exciting things happening this year that it&rsquo;s just really puts a lump in my throat when I think about the progress, really. So just to sort of make it clear, we have DeSci.World, which is our website. It&rsquo;s our information aggregation site that Jelani mentioned earlier. You can find there a dashboard of over a hundred projects and what they&rsquo;re doing in DeSci We built that a long time ago, that was first product We have V2 of that coming out in about a month or so&rsquo;s time And so, like, it&rsquo;s gonna be so good, I can&rsquo;t believe it DeSci.world V2 is coming out, and then we have a global conference circuit We&rsquo;re going to be, I mean, I&rsquo;m gonna be presenting Oxford University this month Oh,</p>
+            <p id="s1485"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1485s" target="_blank" rel="noopener" data-pagefind-ignore>24:45</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>that&rsquo;s so exciting, congrats</p>
+            <p id="s1487"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1487s" target="_blank" rel="noopener" data-pagefind-ignore>24:47</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>I mean, to come from, not from academia like this guy In the halls of Oxford. Yeah, it&rsquo;s huge. It&rsquo;s huge. And then we&rsquo;re going to be doing a tour of Asia. We&rsquo;re going to be going to seven different countries in Asia towards the latter half of this year. We&rsquo;re going to be staying in Zanzibar for an entire month, trialing proof of knowledge as a coordination framework for a network state. Jelani will be in Australia. He&rsquo;ll also be coming to UK. We&rsquo;re going to be all over the world and we want everybody that&rsquo;s watching this to feel welcome and interested to reach out to us and say, hey, I&rsquo;m going to be at this time in this What are we up to?</p>
+            <p id="s1509"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1509s" target="_blank" rel="noopener" data-pagefind-ignore>25:09</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>And there might be something we&rsquo;re doing. And one of the things that I hope comes across in this video, and when people see other footage of both Jelani and I speaking, is we really do care about the people, the way that it feels to be involved in this thing. People like to say the word vibes. It&rsquo;s a good one. That&rsquo;s what we really care about because there&rsquo;s a lot of technical infrastructure in this space. And DeSci is just as much a cultural movement as it is a technological movement. And we really need to try and inspire into people the idea, the idea that a lot of these structures are completely fucked, and if we don&rsquo;t figure it out, especially in science and academia, very, very quickly, it&rsquo;s going to be a lot of issues for most people.</p>
+            <p id="s1509-2"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1509s" target="_blank" rel="noopener" data-pagefind-ignore>25:09</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>And power structures lie in the scientific and academic institutions, and so if you want to disrupt, you have to figure it out through academia and science, because you need legitimacy, you need evidence, you need people to feel like they can trust what you&rsquo;re doing, and science is the way to do that.</p>
+            <p id="s1578"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1578s" target="_blank" rel="noopener" data-pagefind-ignore>26:18</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Well, I really appreciate you both taking time to speak with me. My day or afternoon at the summit has been very informative from the conversation around Athena <a class="wt-gloss" href="../glossary.html#dao">DAO</a> to the panel that you were on earlier, even to the guy talking about space. I thought it was super cool to hear people here think about how people can contribute and be part of publishing information about the stars. That&rsquo;s not really my role of existence. I think it&rsquo;s just been a super enriching day and informative and that&rsquo;s even like what Fournier was saying yesterday is like, yeah, I definitely want to go. It seems like it&rsquo;ll be educational.</p>
+            <p id="s1578-2"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1578s" target="_blank" rel="noopener" data-pagefind-ignore>26:18</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And I think that&rsquo;s definitely been my experience. And I appreciate you all creating vibes and welcoming us and yeah, helping my audience learn a little bit more about what DeSci is and why it&rsquo;s important. I did do like some like academic writing when I was in college. I published in like philosophy space and I&rsquo;m very intrigued in how I can communicate to my professors that I worked with, you know, how this could pertain to them and the conferences they go to. And so I&rsquo;m excited to share this with them. and even sitting downstairs and texting them like, when you guys go to conferences, you should let me know because like you&rsquo;re talking about our paper and I&rsquo;m not there and I&rsquo;d like to be.</p>
+            <p id="s1639"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1639s" target="_blank" rel="noopener" data-pagefind-ignore>27:19</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I just want to add like one last thing. So you spend enough time in DeSci, oftentimes you&rsquo;re biomedical, but to your point, DeSci exists across all scientific verticals. So whether you be a philosopher, a social scientist, an economist or whatever it may be, we need you in this space as much as you need this space to help you. So don&rsquo;t be shy, don&rsquo;t think that you&rsquo;re not qualified. You</p>
+            <p id="s1661"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1661s" target="_blank" rel="noopener" data-pagefind-ignore>27:41</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>say that again, right to the camera. You said we need you.</p>
+            <p id="s1666"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1666s" target="_blank" rel="noopener" data-pagefind-ignore>27:46</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, so we need you as much as you need us, right? And so don&rsquo;t feel shy. It doesn&rsquo;t matter if you are a neuroimmunologist, again, a degen, whatever it is. We need you to help us build the bio, to help us build the tech that&rsquo;s actually going to help change what&rsquo;s important to you. And that&rsquo;s really what DeSci does. It allows you to explore, to innovate, to merge, to collaborate with a bunch of different people who are really interested in trying to figure out some fun shit, trying to start some new shit, and just have a really good time in doing it, and make a living in doing it too, right?</p>
+            <p id="s1666-2"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1666s" target="_blank" rel="noopener" data-pagefind-ignore>27:46</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So that&rsquo;s the opportunity that we have here, and I think we want everybody here. So if you&rsquo;re interested, reach out to us, check out DeSci World, really reach out to anybody, reach out to the guys here, and let&rsquo;s create some cool stuff together.</p>
+            <p id="s1708"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1708s" target="_blank" rel="noopener" data-pagefind-ignore>28:28</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, thank you both so much. like you have socials you want to shout out or anything like that? People can&rsquo;t keep up with you? DeSci World everywhere.</p>
+            <p id="s1714"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1714s" target="_blank" rel="noopener" data-pagefind-ignore>28:34</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, you can follow DeSci World everywhere. The website is DeSci.World. You can follow me on Twitter at Jelani C3. So J-E-L-A-N-I-C-3. I&rsquo;m also on LinkedIn. Josh, you can plug your stuff. DeSci</p>
+            <p id="s1728"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1728s" target="_blank" rel="noopener" data-pagefind-ignore>28:48</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>World on Twitter. DeSci.World website. DeSci World on LinkedIn. I&rsquo;m Joshua Bates on LinkedIn. reach out to me there. Joshua at DeSci.world is my email. My Twitter is JB87UA. Okay,</p>
+            <p id="s1744"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1744s" target="_blank" rel="noopener" data-pagefind-ignore>29:04</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I like it. Are you guys on <a class="wt-gloss" href="../glossary.html#farcaster">Farcaster</a>? Yes. Yes.</p>
+            <p id="s1748"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1748s" target="_blank" rel="noopener" data-pagefind-ignore>29:08</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Same handle, JB87UA.</p>
+            <p id="s1750"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1750s" target="_blank" rel="noopener" data-pagefind-ignore>29:10</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah. All right. Well, thank you again so much. I think this has been a wonderful afternoon. I was a bit frantic coming into this interview, but it&rsquo;s definitely been, like, this is only my second interview so far formally at ETH Denver, and I&rsquo;m super appreciative that we decided spontaneously last night to come here. I think it&rsquo;s been eye-opening to get up. a picture of what Deesai is and I&rsquo;m so glad I met two people who have been so instrumental in it coming to where it is and I&rsquo;m excited to see what the next year takes you to and very keen to hear what Zanzibar is like, to hear what Australia is like, to hear about this year of travel and this year bringing what you two have been up to to the rest of the world.</p>
+            <p id="s1750-2"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1750s" target="_blank" rel="noopener" data-pagefind-ignore>29:10</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Kudos to you and thank you.</p>
+            <p id="s1784"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1784s" target="_blank" rel="noopener" data-pagefind-ignore>29:44</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Thank you so much. This has been really, really great. If this is your second interview, then We Them Media is going to be big.</p>
+            <p id="s1789"><a class="wt-at" href="https://www.youtube.com/watch?v=GZSciAYuhWY&amp;t=1789s" target="_blank" rel="noopener" data-pagefind-ignore>29:49</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Oh yeah. Thank you so much.</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+<div id="after-transcript" tabindex="-1"><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from Denver Unfiltered.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-denver">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="a-first-interview-and-advice-back-to-newark-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/UkX8veGIl58-640.jpg" srcset="../stills/UkX8veGIl58-320.jpg 320w, ../stills/UkX8veGIl58-480.jpg 480w, ../stills/UkX8veGIl58-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:15</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · ETH Denver 2024</span>
+                    <h3 class="report-title">A first interview, and advice back to Newark.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="building-a-dao-and-making-governance-a-game-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/qcTocIWf34U-640.jpg" srcset="../stills/qcTocIWf34U-320.jpg 320w, ../stills/qcTocIWf34U-480.jpg 480w, ../stills/qcTocIWf34U-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:45</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">A content coin, and making governance a game.</h3>
+                    
+                </div>
+            </a>
+            <a href="from-america-to-denver-what-brought-you-here-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/DdXcCfCc26E-640.jpg" srcset="../stills/DdXcCfCc26E-320.jpg 320w, ../stills/DdXcCfCc26E-480.jpg 480w, ../stills/DdXcCfCc26E-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:21</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · Street</span>
+                    <h3 class="report-title">A borrowed camera, and Denver block by block.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../places.html#denver">Everything filmed in Denver</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

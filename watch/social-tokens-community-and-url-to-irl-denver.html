@@ -1,0 +1,855 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Eighteen minutes at ETH Denver 2024 with the founder of Forefront, filmed as part of the We Them Media run documenting people of color in Web3.">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/social-tokens-community-and-url-to-irl-denver">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="Social Tokens, Community and URL to IRL | ETH Denver">
+    <meta property="og:description" content="Eighteen minutes at ETH Denver 2024 with the founder of Forefront, filmed as part of the We Them Media run documenting people of color in Web3.">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/social-tokens-community-and-url-to-irl-denver.jpg?v=da28ed4e87">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Social tokens, and a conference for Cape Verde">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/social-tokens-community-and-url-to-irl-denver.jpg?v=da28ed4e87">
+    <meta property="og:url" content="https://wethem.xyz/watch/social-tokens-community-and-url-to-irl-denver">
+    <title>Social Tokens, Community and URL to IRL | ETH Denver &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/social-tokens-community-and-url-to-irl-denver#video",
+  "name": "Social Tokens, Community and URL to IRL | ETH Denver",
+  "description": "Eighteen minutes at ETH Denver 2024 with the founder of Forefront, filmed as part of the We Them Media run documenting people of color in Web3. The subject is Carlos Gomes, and this is the first crypto conference he has ever attended. He introduces himself plainly: \"my name is Carlos. I'm from Cape Verde Islands, currently based in New York.\" Forefront he describes as an on-chain product studio, doing experiments in media and social graph. The best part of the week, he says, has nothing to do with panels. He has been in the space long enough that \"most of my friends are actually like online friends\", people he works with every day and had never stood next to. Meeting them is why he came. From there the conversation is community, and he argues it as internet history rather than crypto marketing. \"communities are keys to internet for a very long time\", he says, pointing at Reddit and Facebook. What Web3 adds, in his telling, is that the group can hold a financial upside together as well as a group chat. Infrastructure has to work first, but \"I think culture and community are arguably one of the most important, it's like what brings soul to everything we're doing\". The middle of the tape is a first-hand history of social tokens, which he was early to. \"I've always been a creator. I build stuff that I want to see in the world\", he says, and the problem he had was getting people to try the products and report back, so \"I wanted to find a way that I could incentivize people to give me feedback\". Then: \"I came across a platform called Roll.\" They let you mint a creator token. \"I was immediately hooked.\" He and others doing the same thing formed a group to work out a standard, Seed Club, which he calls an early incubator, the Web3 Y Combinator for what is now consumer crypto. He is candid about what has not worked. \"We always struggle with distribution\", he says of Forefront, which is why he is building on Farcaster now. Asked what is compelling about the space beyond consumerism, he goes to ownership. \"we all know the issues with social media in terms of ownership of the value that you create\", and the case he keeps returning to is the creator who built an audience on a platform that can delete it: \"Instagram, they have all the power to take that away\". What crypto should give people, he says, is tools to \"own their graph, incentivize their community, distribute ownership of the value the community creates for them\". The last stretch is home. \"I come from a small nation, right? And we don't have a crypto presence yet\", which is why building often \"feels very like I'm on my own\". His answer is a conference: \"It's called ETH Cape Verde. I want to organize a conference of Ethereum conference in Cape Verde.\" He says he is working with the Cape Verde government digital economy department, and that the point is developers building solutions that work there. The reason this is his first conference at all is a visa: he lived in China for years and could not easily reach the countries where the conversations were happening. \"it is time for us to decentralize that access to conversation.\" On DAOs, he takes the old insult and keeps it. People said \"DAOs are basically running on vibes\" as a criticism. He thinks vibes are half of it, and the other half is to \"build something people want\".",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/4uN9BrX2Ztg/maxresdefault.jpg"
+  ],
+  "uploadDate": "2024-06-21T21:34:01Z",
+  "embedUrl": "https://www.youtube.com/embed/4uN9BrX2Ztg",
+  "url": "https://wethem.xyz/watch/social-tokens-community-and-url-to-irl-denver",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT18M21S",
+  "inLanguage": "en-US",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "Cape Verde, New York, and a company called Forefront",
+      "startOffset": 0,
+      "url": "https://wethem.xyz/watch/social-tokens-community-and-url-to-irl-denver?t=0",
+      "endOffset": 39
+    },
+    {
+      "@type": "Clip",
+      "name": "Why he came: meeting his online friends",
+      "startOffset": 39,
+      "url": "https://wethem.xyz/watch/social-tokens-community-and-url-to-irl-denver?t=39",
+      "endOffset": 81
+    },
+    {
+      "@type": "Clip",
+      "name": "Why community is the point",
+      "startOffset": 81,
+      "url": "https://wethem.xyz/watch/social-tokens-community-and-url-to-irl-denver?t=81",
+      "endOffset": 225
+    },
+    {
+      "@type": "Clip",
+      "name": "Which communities shaped his Web3 journey?",
+      "startOffset": 225,
+      "url": "https://wethem.xyz/watch/social-tokens-community-and-url-to-irl-denver?t=225",
+      "endOffset": 266
+    },
+    {
+      "@type": "Clip",
+      "name": "What is a social token?",
+      "startOffset": 266,
+      "url": "https://wethem.xyz/watch/social-tokens-community-and-url-to-irl-denver?t=266",
+      "endOffset": 301
+    },
+    {
+      "@type": "Clip",
+      "name": "How a creator token can reward your users",
+      "startOffset": 301,
+      "url": "https://wethem.xyz/watch/social-tokens-community-and-url-to-irl-denver?t=301",
+      "endOffset": 369
+    },
+    {
+      "@type": "Clip",
+      "name": "Seed Club, the Web3 Y Combinator",
+      "startOffset": 369,
+      "url": "https://wethem.xyz/watch/social-tokens-community-and-url-to-irl-denver?t=369",
+      "endOffset": 428
+    },
+    {
+      "@type": "Clip",
+      "name": "Forefront.Market: social token writing from 2019",
+      "startOffset": 428,
+      "url": "https://wethem.xyz/watch/social-tokens-community-and-url-to-irl-denver?t=428",
+      "endOffset": 468
+    },
+    {
+      "@type": "Clip",
+      "name": "Why Forefront is building on Farcaster",
+      "startOffset": 468,
+      "url": "https://wethem.xyz/watch/social-tokens-community-and-url-to-irl-denver?t=468",
+      "endOffset": 551
+    },
+    {
+      "@type": "Clip",
+      "name": "Why creators should own their social graph",
+      "startOffset": 551,
+      "url": "https://wethem.xyz/watch/social-tokens-community-and-url-to-irl-denver?t=551",
+      "endOffset": 731
+    },
+    {
+      "@type": "Clip",
+      "name": "What is it like building from a small nation?",
+      "startOffset": 731,
+      "url": "https://wethem.xyz/watch/social-tokens-community-and-url-to-irl-denver?t=731",
+      "endOffset": 767
+    },
+    {
+      "@type": "Clip",
+      "name": "Why he wants an Ethereum conference in Cape Verde",
+      "startOffset": 767,
+      "url": "https://wethem.xyz/watch/social-tokens-community-and-url-to-irl-denver?t=767",
+      "endOffset": 849
+    },
+    {
+      "@type": "Clip",
+      "name": "Why he talks crypto with high school students",
+      "startOffset": 849,
+      "url": "https://wethem.xyz/watch/social-tokens-community-and-url-to-irl-denver?t=849",
+      "endOffset": 955
+    },
+    {
+      "@type": "Clip",
+      "name": "Do DAOs just run on vibes?",
+      "startOffset": 955,
+      "url": "https://wethem.xyz/watch/social-tokens-community-and-url-to-irl-denver?t=955",
+      "endOffset": 1101
+    }
+  ],
+  "creator": {
+    "@type": "Person",
+    "name": "Maceo",
+    "url": "https://wethem.xyz/people/maceo"
+  },
+  "transcript": "Booyah. Hello everybody and welcome to another episode of We Them Niggas. Today we're out here at ETH Denver, 2024, the year of the Buffacorn or something like that. And we're here with Carlos. Carlos, an OG DAO fanatic is the description he just gave to me. You want to introduce yourself, Carlos?\nYeah, so my name is Carlos. I'm from Cape Verde Islands, currently based in New York. I'm a founder of a company called Forefront. I see ourselves as a product, on-chain product studio. So we do a lot of experimenting in media and social graph into like the world of on-chain world.\nYeah. Very cool. And this is your first crypto conference, you said to me? Your first conference?\nYeah, yeah. Ever.\nEver. And how's the conference been? How's the vibe been?\nYeah, so it's very interesting because I've been in space for a while and one, it's weird because like most of my friends are actually like online friends, like people that I work with every day, people that I've come across in my journey and I made a mission so like I make it to a crypto conference so I can meet most of those friends and just the bond that just meeting them in real life that we have is just for me is the best part of it. Yeah, and that's like individual people, like person, people that I talk to every day, but also communities, right? So, yeah, it's been amazing.\nLike, yeah.\nI'm happy to hear that. And when you look at, I know you were talking a little before the interview about how community is so important to you. How do you see like community and crypto being related? I feel like for a lot of people, they think of crypto or this technology. It's like, oh, this is money stuff. Like, is that the Bitcoin or the Dogecoin? Like, I feel like they don't really have like, they don't see meaningful social relationships being formed around this technology.\nYeah, so communities are keys to internet for a very long time. You look at Reddit, you look at Facebook, you look at all social medias. Being able to be part of a group that share the same vision as you has been always something very important people find dearly. And now we have Web3, right? That can sort of like create a better and a safer way for us to connect online, right? There is a world where like social and financially sort of like merging with crypto So people are not only there sort of like, you know, jamming and making friends and doing awesome things, you know, together They also can be part of like a potential upside, right?\nThey can contribute sort of like, you know, collect things online as a group They can sort of like, you know, change the world like in a way that they see fit using like crypto rails in terms of like the financial rails as well And, you know, in a world where like attention is pretty much everything, right? Just building meaningful connection, it's what matters at the end of the day, at least for me Obviously, this isn't possible without having proper infrastructure for crypto to sort of flourish for adoption But I think culture and community are arguably one of the most important, it's like what brings soul to everything we're doing\nYeah, I feel like, I would absolutely agree, I feel like my getting into the space was entirely like, I feel like it was way more fluid because I was in a Web3 community like whether my roommate got me in a shark down at one point and they just being in the discord middle to ask questions was helpful and then going to water and music which i shared with you earlier about i feel like being in space where people are already in the know and kind of happy to you i feel there's a culture almost of teaching as you go in crypto yep and i think it's like like finding communities where that culture can contribute to me and where i can contribute as well i think it's really uh made a huge difference for me and getting to where i am even like being here doing this yeah shout out to fwb for people you know supporting the project and giving us money to be out here yeah\nshout out fwb like it's an og\nYeah, and I'm really curious to hear about what communities were core in your Web3 journey so far and what do you feel like you take from those communities into how you approach looking at what the future of the space should look like and can look like Yeah,\nI think crypto is very new and it's a weird place, there's a lot of buzzwords going around, but I think the core of it is just people that are truly excited about the innovation that this technology can bring And for me specifically, the early days of social tokens was like, you know, one of the most interesting, you know, part of my journey, right?\nSo describe the early days of social tokens, like for people that don't know what that is or like what that looks like, what is a social token?\nYeah, right. So social tokens are like type of creator tokens or like, you know, some sort of like utility token that you can sort of like use to enable some sort of interaction with your friends or people that, you know, community you're part of. So for me specifically, I've always been a creator. I build stuff that I want to see in the world. I do a lot of experiments. And I wanted to find a way that I could incentivize people to give me feedback and even use the product I was building. So I came across a platform called Roll. They had this idea of you could mint a creator token.\nI was immediately hooked. I wanted to have my own social tokens and just give it out to people that use the product. Like the most like I ship something and you use it you get rewarded for using the product That was just me sort of like diving into the space trying to understand uh and then I sort of like met other people that were doing the same thing right so like Brian Flynn from Rabbit Hole he had his own social tokens around writing he is sort of like articulating you know trends and predictions that he sees and he wanted to sort of like experiment that end as Alex Masmesh from Showtime, now Dracula had his own show token as well.\nSo we came together to form a group called Seed Club to sort of like figure out like what's the best standard and way to sort of like experiment with this new technology, this new sort of like idea, right? And that by far was one of the most interesting experiments because it was just very fun. It was very like, you know, going to the blind and see what works, what doesn't work. And, you know, those people end up, you know, Everyone, one of us end up building their own vision of the future, which is the most exciting part. Yeah,\nthat's cool. And so like, like, so how involved are you now in SeedClub? And like, for people who don't know even what SeedClub is, what is SeedClub?\nYeah, well SeedClub came up with this idea of like, what's the best way to sort of like, launch social token, to sort of like, build utility around it and figure out what's the best way to do it. Standard. So it sort of emerged as an early incubator, right? So we see what we used to call like Web3Y Combinator, so it was an early incubator for experiments around that, which is now like social crypto, which is like consumer crypto, so I was early involved in that, then sort of like moved into other experiments as well, but yeah, so like I think if you are in consumer crypto, if you're interested in Web3Social, you should definitely check like CityClub, they're incubating a lot of interesting products, products.\nAnd then I went up funding the company called Forefront as well that we sort of like really if you go to our website, Forefront.Market, you can see like what I call like archive of like sort of like exploration, right? So you have articles written by like, you know, Cooper Tupper, for example, you know, early adopters of technology about like what the future would It looked like for social tokens. And this was back in 2019. So did my own experiment on that end as well. But yeah, yes, it's been fun.\nAnd what's top of mind right now for Forefront? Like what is like the 2024 look like for you? What's your focus?\nYeah, yeah, I think like, probably like, yeah, just being honest with where the space is today. I think how we evolved as a brand, how we sort of like explore it, literally the forefront of this new innovation. We always struggle with distribution I think that was one of the biggest problems with Forefront We wanted to ship products But we got as much feedback as possible They had some sort of loop into that as well And I'm excited to explore this idea of just building products on top of social And that social is, I'm extremely excited about Farcaster Because it provides a distribution platform that we've never had before to experiment with But, you know, probably the most interesting thing about Farcast is really social graph.\nHow can you build on top of what's happening there without sort of like, you know, building your own distribution channel, right? And then, you know, eventually sort of like making meaningful, you know, connection between internet friends and building clients and protocols and product that actually, you know, is useful. people are using them and it's sort of like fixing some of the real-life problems I would say.\nHow do you think about social impact in this space? How does it pertain to our politics, how does it pertain to the quality of life? I guess outside of consumer crypto, outside of our consumerism, what do you think is compelling about this space for you personally?\nYeah, right. So we all know the issues with social media in terms of ownership of the value that you create. So I always believe in that future that you should be rewarded for, you know, for what you put in the world. The energy you put back in the world, it should come back to you eventually. So, I mean, a common issue is like, you know, on Instagram, on TikTok, you have people, you know, but for some reason for their own policy getting banned. They built, they built sort of like their distribution graph there. They built a community there and then like just You know, for some reason, Instagram, they have all the power to take that away, right?\nSo I'm excited about like crypto providing new sets of tools, allows those creators to sort of like own their graph, incentivize their community, distribute ownership of the value the community creates for them. Yeah, I think that's definitely a different, a better world where, yeah, we sort of like retain the value we create in the world. and I think crypto provides a tool to do that and we're so early obviously, a lot to figure out, it's not perfect, but yeah, that's one part of just being in a journey is very fulfilling as well, just innovating at the forefront of what's happening. Yeah, it's the name, Forefront.\nYeah, yeah, I keep going back. Yeah, well, yeah, that's the goal for sure.\nYeah, and I think it's important, you know, because even as I look at this project, We Them Media, like I feel like something I recognize that in the US, I don't really see like black owned media companies. Of course Focused on politics or just like quality of life and the concerns and interests and so I feel like when it comes to things like the presidential election you see like like people are talking to us but they're not like talking to us like about our existing concerns and interests. And so I'm really interested in like using this platform as a way to like explore what those things are and how Web3 can pertain to them.\nAnd really not just that you know but really looking going back out of Web3 into like the social world work you know social social work world. You Know How Do Nonprofits Pertain To Us Even Looking At Like GetCoin Like This Whole Public Decentralized Conversation Yes I Think All That Stuff Super Exciting To Me And Ideally We're Also On The Forefront So I'm Excited To Have Done This Interview With You And Look Forward To Having You Back To Time In The Future\nYeah For Sure For Sure And I Appreciate Like The Time Obviously And It's Amazing To Have Like You Know People With Conviction And Actually Doing The Work And Yeah Like I'm Very Bullish and what you're doing, obviously, and if there is any way that I can help along the journey as well. Because in the end of the day, it's just about the journey, right?\nYeah, yeah.\nIt's learn as much as you can and figure out things together as a community. I think it's extremely important. And I feel it very, very much because I come from a small nation, right? And we don't have a crypto presence yet. So most of the time when I'm building something new, it feels very like I'm on my own, so to speak, right? But I'm happy to see like more people get involved and people like you know from nations are not you know you know developed that have access all to finance and things like that so yeah I appreciate the time obviously and we should bet best of luck with your adventure\nI appreciate that and I guess a question I wanted to ask was in this vein of you talking about Cape Verde like how do you see yourself getting back to Cape Verde or looking at like like trying to bring people into this space or increase awareness like what does that look like for you?\nYeah, so I actually have a plan, a project that I'm working right now. It's called ETH Cape Verde. I want to organize a conference of Ethereum conference in Cape Verde. Yeah, so that's the idea. And I think the best way that... Alpha. Yeah, that's Alpha right there. We do have a Twitter account, so you want to check it out. So I'm working with Cape Verde government, digital economy department to sort of like bring Ethereum there. And the way we're thinking about it is just get exposure to, you know, the developer ecosystem, right? So we want more developers to play with this technology, to build solutions for us, that works for us, right?\nAnd the way to do it is just bring the conversation there. And I'm excited about Cape Verde because geographically we're very well positioned. You know, it's funny because like the reason why this is my first time in a crypto conference is because I used to live in China for a very long time. There Was Always An Issue With Getting The Visa To Go To Countries Where Conversations Were Happening About Crypto And I Feel Like It Is Time For Us To Decentralize That Access To Conversation And This Is The Goal Just Bring Conference And Open The Doors For More Community To Get Involved So That's One Project I'm Excited About That Involves Directly With Crypto In Cape Verde Just Solutions Around That Oh,\nI got that. You're saying you want to do a conference there. I think that's brilliant. I agree. I went to Oasis on-chain last month in Nassau in January. I thought that was super dope to see local people. They were thinking about technology and I realized I'm part of their crypto journey now. I'm just kind of here on my own journey. I think it's cool to see how things overlap. I'm just looking forward to your conference. I'll definitely be there.\nYeah, no, it's interesting because so I was in Cape Verde for a while now, like after moving to China for four or five months or so. And most of my conversations actually are with high school students about crypto. And I think like, you know, the way crypto exposed me to other adjacent areas is something that I find fascinating, right? So I start thinking about privacy, about finance, about what is really money, and all this, you know, cryptology, all these sort of things that make crypto what it is today. So, yeah, trying to bring conversations to young people as well, I think is extremely important. And it's a work as well that I'm excited to do back home, even though I don't live there, you know, there is a platform that I can make sure it's reaching to those communities.\nYeah, and I think, you know, young people, they're trying to figure out what their whole lives is going to look like, you know, you have to make money, you have to get a job, like, where do I want to work? And I think, like you were saying, community, I think, is such a core component in Web3, and I feel like in so many work environments, that's not the case. Like, you know, how you actually feel is like, like, not the most significant thing. Yeah, yeah. I feel like, like, Web3 is more vibe-centric, and like, when I say that, I feel like it's more like, there is a sentiment that like, the sentiments matter.\nYeah, yeah, yeah. We had the saying in DAO for a very long time, where it's like, 2021 was, was the year of a DAO, like, we all I always picture a feature where like everything is a DAO right and then we had a problem like people you say like you know DAOs are basically running on vibes right and it was such a negative thing to say it's like but I think there's a word now where we do have like technology to onboard the next you know set of users web3 right and I think I think vibes 50% of it right it's like build something people want right it's useful product that solves real life a specific set of problems, but also incorporate the culture, the community, the vibes, and without that it's just technology sort of solution.\nAnyone can build that, right? So how do we think about, and diversity is extremely important when you try to see that future, right? Yeah, yeah, yeah, so we need everything that, you know, sort of like different perspective to make it a place that it's feel more like welcome, but also it's not biased towards specific things, right? So yeah, I'm excited. Definitely community, definitely culture, but also I think it's important to build great products too.\nYeah, I absolutely agree. Well, once again, I really appreciate you joining us, bringing your expertise to my team, bringing your stories to our community. And yeah, I hope you have a wonderful rest in Denver. If you have any final words, you want to shout out like soul swing, like that, you're welcome to shout out anything you'd like to the audience.\nYeah, yeah, so yeah, so I'm very active on Farcaster. I ship a lot of products there. If any of you that sort of like watching this, if you're interested in sort of experimenting with some of the ideas that we're sort of shipping, but if you sort of like, yeah, it's okay, right? Yeah, yeah, yeah. So yeah, just hit me up on Farcaster at Carlos. Happy to chat there and just connect and yeah, build amazing things going forward.\nYeah. Well, yeah, definitely reach out. I feel like having conversations with whatever you're trying to do forward, so reach out to us, reach out to him, reach out to everybody who's on your mind, and if people get back to you, then you have a conversation to be had. Thanks for tuning into this content. We're here doing this project at ETH Denver, holly people of color, black people when we can. We're just trying to bring people into the conversation, so thanks for tuning in, and hope to see you on the Discord or online soon.\nYeah, shout out We Them Media. Shout out We Them Media. Peace. Awesome.",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Denver",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "url": "https://wethem.xyz/places#denver"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Denver Unfiltered",
+    "url": "https://wethem.xyz/portfolio#p-denver"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Web3 Governance",
+      "url": "https://wethem.xyz/topics/web3-governance"
+    },
+    {
+      "@type": "Thing",
+      "name": "Crypto",
+      "url": "https://wethem.xyz/topics/crypto"
+    }
+  ],
+  "keywords": [
+    "Web3 Governance",
+    "Crypto"
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Denver Unfiltered",
+      "item": "https://wethem.xyz/portfolio#p-denver"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Social tokens, and a conference for Cape Verde",
+      "item": "https://wethem.xyz/watch/social-tokens-community-and-url-to-irl-denver"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place], who[data-pf-who]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2024-06-21" data-pf-vid="4uN9BrX2Ztg" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;18:21&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="Denver" data-pf-country="United States" data-pf-project="Denver Unfiltered" data-pf-who="Maceo">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-denver">Denver Unfiltered</a></li>
+            <li aria-current="page">Social tokens, and a conference for Cape Verde</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">Social tokens, and a conference for Cape Verde.</h1>
+
+    <p class="wt-byline"><strong>Carlos Gomes</strong> &middot; Reported by <strong><a href="../people/maceo.html">Maceo</a></strong> &middot; Denver &middot; 18 min</p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="4uN9BrX2Ztg" live postersrcset="../stills/4uN9BrX2Ztg-320.jpg 320w, ../stills/4uN9BrX2Ztg-480.jpg 480w, ../stills/4uN9BrX2Ztg-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/4uN9BrX2Ztg?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="Social tokens, and a conference for Cape Verde, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+    <p class="wt-note wt-credit">Executive producer: C.Y. Lee</p>
+
+    <div class="wt-prose">
+            <p>Eighteen minutes at ETH Denver 2024 with the founder of Forefront, filmed as part of the We Them Media run documenting people of color in Web3. The subject is Carlos Gomes, and this is the first crypto conference he has ever attended.</p>
+            <p>He introduces himself plainly: &ldquo;my name is Carlos. I&rsquo;m from Cape Verde Islands, currently based in New York.&rdquo; Forefront he describes as an on-chain product studio, doing experiments in media and social graph.</p>
+            <p>The best part of the week, he says, has nothing to do with panels. He has been in the space long enough that &ldquo;most of my friends are actually like online friends&rdquo;, people he works with every day and had never stood next to. Meeting them is why he came.</p>
+            <p>From there the conversation is community, and he argues it as internet history rather than crypto marketing. &ldquo;communities are keys to internet for a very long time&rdquo;, he says, pointing at Reddit and Facebook. What Web3 adds, in his telling, is that the group can hold a financial upside together as well as a group chat. Infrastructure has to work first, but &ldquo;I think culture and community are arguably one of the most important, it&rsquo;s like what brings soul to everything we&rsquo;re doing&rdquo;.</p>
+            <p>The middle of the tape is a first-hand history of social tokens, which he was early to. &ldquo;I&rsquo;ve always been a creator. I build stuff that I want to see in the world&rdquo;, he says, and the problem he had was getting people to try the products and report back, so &ldquo;I wanted to find a way that I could incentivize people to give me feedback&rdquo;. Then: &ldquo;I came across a platform called Roll.&rdquo; They let you mint a creator token. &ldquo;I was immediately hooked.&rdquo; He and others doing the same thing formed a group to work out a standard, Seed Club, which he calls an early incubator, the Web3 Y Combinator for what is now consumer crypto.</p>
+            <p>He is candid about what has not worked. &ldquo;We always struggle with distribution&rdquo;, he says of Forefront, which is why he is building on Farcaster now.</p>
+            <p>Asked what is compelling about the space beyond consumerism, he goes to ownership. &ldquo;we all know the issues with social media in terms of ownership of the value that you create&rdquo;, and the case he keeps returning to is the creator who built an audience on a platform that can delete it: &ldquo;Instagram, they have all the power to take that away&rdquo;. What crypto should give people, he says, is tools to &ldquo;own their graph, incentivize their community, distribute ownership of the value the community creates for them&rdquo;.</p>
+            <p>The last stretch is home. &ldquo;I come from a small nation, right? And we don&rsquo;t have a crypto presence yet&rdquo;, which is why building often &ldquo;feels very like I&rsquo;m on my own&rdquo;. His answer is a conference: &ldquo;It&rsquo;s called ETH Cape Verde. I want to organize a conference of Ethereum conference in Cape Verde.&rdquo; He says he is working with the Cape Verde government digital economy department, and that the point is developers building solutions that work there. The reason this is his first conference at all is a visa: he lived in China for years and could not easily reach the countries where the conversations were happening. &ldquo;it is time for us to decentralize that access to conversation.&rdquo;</p>
+            <p>On DAOs, he takes the old insult and keeps it. People said &ldquo;DAOs are basically running on vibes&rdquo; as a criticism. He thinks vibes are half of it, and the other half is to &ldquo;build something people want&rdquo;.</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../places.html#denver">Everything filmed in Denver</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="crypto-in-the-caribbean-and-who-gets-access-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/WNslAJEdYYc-640.jpg" srcset="../stills/WNslAJEdYYc-320.jpg 320w, ../stills/WNslAJEdYYc-480.jpg 480w, ../stills/WNslAJEdYYc-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>11:27</span></span><span>Access, the Caribbean, and a conference at home.</span></a>
+        <a class="wt-rail-card" href="forbidden-fruit-culture-onchain-and-creative-wellness-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/6rPjX_pGd6E-640.jpg" srcset="../stills/6rPjX_pGd6E-320.jpg 320w, ../stills/6rPjX_pGd6E-480.jpg 480w, ../stills/6rPjX_pGd6E-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:40</span></span><span>A Philly artist on culture, gas fees and Forbidden Fruit.</span></a>
+        <a class="wt-rail-card" href="real-estate-to-web3-and-40-acres-dao-big-trav-at-eth-denver-2024.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/Nc_zdA2VNUk-640.jpg" srcset="../stills/Nc_zdA2VNUk-320.jpg 320w, ../stills/Nc_zdA2VNUk-480.jpg 480w, ../stills/Nc_zdA2VNUk-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:53</span></span><span>Real estate to Web3, and 40 Acres DAO: Big Trav.</span></a>
+        <a class="wt-rail-card" href="blvkhvnd-and-the-crypto-cookout-sirsu-at-eth-denver-2024.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/sSyrdlViK3Q-640.jpg" srcset="../stills/sSyrdlViK3Q-320.jpg 320w, ../stills/sSyrdlViK3Q-480.jpg 480w, ../stills/sSyrdlViK3Q-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>29:32</span></span><span>BLVKHVND and the Crypto Cookout: Sirsu.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c0"><a class="wt-t" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-s">Cape Verde, New York, and a company called Forefront</span></li>
+                <li class="wt-line" id="c39"><a class="wt-t" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=39s" target="_blank" rel="noopener" data-pagefind-ignore>0:39</a><span class="wt-s">Why he came: meeting his online friends</span></li>
+                <li class="wt-line" id="c81"><a class="wt-t" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=81s" target="_blank" rel="noopener" data-pagefind-ignore>1:21</a><span class="wt-s">Why community is the point</span></li>
+                <li class="wt-line" id="c225"><a class="wt-t" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=225s" target="_blank" rel="noopener" data-pagefind-ignore>3:45</a><span class="wt-s">Which communities shaped his Web3 journey?</span></li>
+                <li class="wt-line" id="c266"><a class="wt-t" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=266s" target="_blank" rel="noopener" data-pagefind-ignore>4:26</a><span class="wt-s">What is a social token?</span></li>
+                <li class="wt-line" id="c301"><a class="wt-t" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=301s" target="_blank" rel="noopener" data-pagefind-ignore>5:01</a><span class="wt-s">How a creator token can reward your users</span></li>
+                <li class="wt-line" id="c369"><a class="wt-t" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=369s" target="_blank" rel="noopener" data-pagefind-ignore>6:09</a><span class="wt-s">Seed Club, the Web3 Y Combinator</span></li>
+                <li class="wt-line" id="c428"><a class="wt-t" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=428s" target="_blank" rel="noopener" data-pagefind-ignore>7:08</a><span class="wt-s">Forefront.Market: social token writing from 2019</span></li>
+                <li class="wt-line" id="c468"><a class="wt-t" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=468s" target="_blank" rel="noopener" data-pagefind-ignore>7:48</a><span class="wt-s">Why Forefront is building on Farcaster</span></li>
+                <li class="wt-line" id="c551"><a class="wt-t" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=551s" target="_blank" rel="noopener" data-pagefind-ignore>9:11</a><span class="wt-s">Why creators should own their social graph</span></li>
+                <li class="wt-line" id="c731"><a class="wt-t" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=731s" target="_blank" rel="noopener" data-pagefind-ignore>12:11</a><span class="wt-s">What is it like building from a small nation?</span></li>
+                <li class="wt-line" id="c767"><a class="wt-t" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=767s" target="_blank" rel="noopener" data-pagefind-ignore>12:47</a><span class="wt-s">Why he wants an Ethereum conference in Cape Verde</span></li>
+                <li class="wt-line" id="c849"><a class="wt-t" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=849s" target="_blank" rel="noopener" data-pagefind-ignore>14:09</a><span class="wt-s">Why he talks crypto with high school students</span></li>
+                <li class="wt-line" id="c955"><a class="wt-t" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=955s" target="_blank" rel="noopener" data-pagefind-ignore>15:55</a><span class="wt-s">Do DAOs just run on vibes?</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Who speaks, by their own introduction on the tape: <a href="../guests.html#g-carlos" data-pagefind-filter="person">Carlos</a> at <a class="wt-at" data-seek="16" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=16s" target="_blank" rel="noopener" data-pagefind-ignore>0:16</a>. Transcribed from the original audio and corrected for names. Speaker letters mark turns, not names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s1"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=1s" target="_blank" rel="noopener" data-pagefind-ignore>0:01</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Booyah. Hello everybody and welcome to another episode of We Them Niggas. Today we&rsquo;re out here at ETH Denver, 2024, the year of the Buffacorn or something like that. And we&rsquo;re here with Carlos. Carlos, an OG <a class="wt-gloss" href="../glossary.html#dao">DAO</a> fanatic is the description he just gave to me. You want to introduce yourself, Carlos?</p>
+            <p id="s16"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=16s" target="_blank" rel="noopener" data-pagefind-ignore>0:16</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Carlos at 0:16" data-pagefind-ignore>Carlos</span>Yeah, so my name is Carlos. I&rsquo;m from Cape Verde Islands, currently based in New York. I&rsquo;m a founder of a company called Forefront. I see ourselves as a product, on-chain product studio. So we do a lot of experimenting in media and social graph into like the world of on-chain world.</p>
+            <p id="s34"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=34s" target="_blank" rel="noopener" data-pagefind-ignore>0:34</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah. Very cool. And this is your first crypto conference, you said to me? Your first conference?</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s39"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=39s" target="_blank" rel="noopener" data-pagefind-ignore>0:39</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Carlos at 0:16" data-pagefind-ignore>Carlos</span>Yeah, yeah. Ever.</p>
+            <p id="s41"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=41s" target="_blank" rel="noopener" data-pagefind-ignore>0:41</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Ever. And how&rsquo;s the conference been? How&rsquo;s the vibe been?</p>
+            <p id="s43"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=43s" target="_blank" rel="noopener" data-pagefind-ignore>0:43</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Carlos at 0:16" data-pagefind-ignore>Carlos</span>Yeah, so it&rsquo;s very interesting because I&rsquo;ve been in space for a while and one, it&rsquo;s weird because like most of my friends are actually like online friends, like people that I work with every day, people that I&rsquo;ve come across in my journey and I made a mission so like I make it to a crypto conference so I can meet most of those friends and just the bond that just meeting them in real life that we have is just for me is the best part of it. Yeah, and that&rsquo;s like individual people, like person, people that I talk to every day, but also communities, right? So, yeah, it&rsquo;s been amazing.</p>
+            <p id="s73"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=73s" target="_blank" rel="noopener" data-pagefind-ignore>1:13</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Carlos at 0:16" data-pagefind-ignore>Carlos</span>Like, yeah.</p>
+            <p id="s81"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=81s" target="_blank" rel="noopener" data-pagefind-ignore>1:21</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I&rsquo;m happy to hear that. And when you look at, I know you were talking a little before the interview about how community is so important to you. How do you see like community and crypto being related? I feel like for a lot of people, they think of crypto or this technology. It&rsquo;s like, oh, this is money stuff. Like, is that the Bitcoin or the Dogecoin? Like, I feel like they don&rsquo;t really have like, they don&rsquo;t see meaningful social relationships being formed around this technology.</p>
+            <p id="s100"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=100s" target="_blank" rel="noopener" data-pagefind-ignore>1:40</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Carlos at 0:16" data-pagefind-ignore>Carlos</span>Yeah, so communities are keys to internet for a very long time. You look at Reddit, you look at Facebook, you look at all social medias. Being able to be part of a group that share the same vision as you has been always something very important people find dearly. And now we have Web3, right? That can sort of like create a better and a safer way for us to connect online, right? There is a world where like social and financially sort of like merging with crypto So people are not only there sort of like, you know, jamming and making friends and doing awesome things, you know, together They also can be part of like a potential upside, right?</p>
+            <p id="s100-2"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=100s" target="_blank" rel="noopener" data-pagefind-ignore>1:40</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Carlos at 0:16" data-pagefind-ignore>Carlos</span>They can contribute sort of like, you know, collect things online as a group They can sort of like, you know, change the world like in a way that they see fit using like crypto rails in terms of like the financial rails as well And, you know, in a world where like attention is pretty much everything, right? Just building meaningful connection, it&rsquo;s what matters at the end of the day, at least for me Obviously, this isn&rsquo;t possible without having proper infrastructure for crypto to sort of flourish for adoption But I think culture and community are arguably one of the most important, it&rsquo;s like what brings soul to everything we&rsquo;re doing</p>
+            <p id="s187"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=187s" target="_blank" rel="noopener" data-pagefind-ignore>3:07</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, I feel like, I would absolutely agree, I feel like my getting into the space was entirely like, I feel like it was way more fluid because I was in a Web3 community like whether my roommate got me in a shark down at one point and they just being in the discord middle to ask questions was helpful and then going to water and music which i shared with you earlier about i feel like being in space where people are already in the know and kind of happy to you i feel there&rsquo;s a culture almost of teaching as you go in crypto yep and i think it&rsquo;s like like finding communities where that culture can contribute to me and where i can contribute as well i think it&rsquo;s really uh made a huge difference for me and getting to where i am even like being here doing this yeah shout out to fwb for people you know supporting the project and giving us money to be out here yeah</p>
+            <p id="s223"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=223s" target="_blank" rel="noopener" data-pagefind-ignore>3:43</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Carlos at 0:16" data-pagefind-ignore>Carlos</span>shout out fwb like it&rsquo;s an og</p>
+            <p id="s227"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=227s" target="_blank" rel="noopener" data-pagefind-ignore>3:47</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, and I&rsquo;m really curious to hear about what communities were core in your Web3 journey so far and what do you feel like you take from those communities into how you approach looking at what the future of the space should look like and can look like Yeah,</p>
+            <p id="s239"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=239s" target="_blank" rel="noopener" data-pagefind-ignore>3:59</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Carlos at 0:16" data-pagefind-ignore>Carlos</span>I think crypto is very new and it&rsquo;s a weird place, there&rsquo;s a lot of buzzwords going around, but I think the core of it is just people that are truly excited about the innovation that this technology can bring And for me specifically, the early days of social tokens was like, you know, one of the most interesting, you know, part of my journey, right?</p>
+            <p id="s265"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=265s" target="_blank" rel="noopener" data-pagefind-ignore>4:25</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>So describe the early days of social tokens, like for people that don&rsquo;t know what that is or like what that looks like, what is a social token?</p>
+            <p id="s271"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=271s" target="_blank" rel="noopener" data-pagefind-ignore>4:31</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Carlos at 0:16" data-pagefind-ignore>Carlos</span>Yeah, right. So social tokens are like type of creator tokens or like, you know, some sort of like utility token that you can sort of like use to enable some sort of interaction with your friends or people that, you know, community you&rsquo;re part of. So for me specifically, I&rsquo;ve always been a creator. I build stuff that I want to see in the world. I do a lot of experiments. And I wanted to find a way that I could incentivize people to give me feedback and even use the product I was building. So I came across a platform called Roll. They had this idea of you could mint a creator token.</p>
+            <p id="s271-2"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=271s" target="_blank" rel="noopener" data-pagefind-ignore>4:31</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Carlos at 0:16" data-pagefind-ignore>Carlos</span>I was immediately hooked. I wanted to have my own social tokens and just give it out to people that use the product. Like the most like I ship something and you use it you get rewarded for using the product That was just me sort of like diving into the space trying to understand uh and then I sort of like met other people that were doing the same thing right so like Brian Flynn from Rabbit Hole he had his own social tokens around writing he is sort of like articulating you know trends and predictions that he sees and he wanted to sort of like experiment that end as Alex Masmesh from Showtime, now Dracula had his own show token as well.</p>
+            <p id="s271-3"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=271s" target="_blank" rel="noopener" data-pagefind-ignore>4:31</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Carlos at 0:16" data-pagefind-ignore>Carlos</span>So we came together to form a group called Seed Club to sort of like figure out like what&rsquo;s the best standard and way to sort of like experiment with this new technology, this new sort of like idea, right? And that by far was one of the most interesting experiments because it was just very fun. It was very like, you know, going to the blind and see what works, what doesn&rsquo;t work. And, you know, those people end up, you know, Everyone, one of us end up building their own vision of the future, which is the most exciting part. Yeah,</p>
+            <p id="s374"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=374s" target="_blank" rel="noopener" data-pagefind-ignore>6:14</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>that&rsquo;s cool. And so like, like, so how involved are you now in SeedClub? And like, for people who don&rsquo;t know even what SeedClub is, what is SeedClub?</p>
+            <p id="s381"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=381s" target="_blank" rel="noopener" data-pagefind-ignore>6:21</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Carlos at 0:16" data-pagefind-ignore>Carlos</span>Yeah, well SeedClub came up with this idea of like, what&rsquo;s the best way to sort of like, launch social token, to sort of like, build utility around it and figure out what&rsquo;s the best way to do it. Standard. So it sort of emerged as an early incubator, right? So we see what we used to call like Web3Y Combinator, so it was an early incubator for experiments around that, which is now like social crypto, which is like consumer crypto, so I was early involved in that, then sort of like moved into other experiments as well, but yeah, so like I think if you are in consumer crypto, if you&rsquo;re interested in Web3Social, you should definitely check like CityClub, they&rsquo;re incubating a lot of interesting products, products.</p>
+            <p id="s381-2"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=381s" target="_blank" rel="noopener" data-pagefind-ignore>6:21</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Carlos at 0:16" data-pagefind-ignore>Carlos</span>And then I went up funding the company called Forefront as well that we sort of like really if you go to our website, Forefront.Market, you can see like what I call like archive of like sort of like exploration, right? So you have articles written by like, you know, Cooper Tupper, for example, you know, early adopters of technology about like what the future would It looked like for social tokens. And this was back in 2019. So did my own experiment on that end as well. But yeah, yes, it&rsquo;s been fun.</p>
+            <p id="s461"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=461s" target="_blank" rel="noopener" data-pagefind-ignore>7:41</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And what&rsquo;s top of mind right now for Forefront? Like what is like the 2024 look like for you? What&rsquo;s your focus?</p>
+            <p id="s468"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=468s" target="_blank" rel="noopener" data-pagefind-ignore>7:48</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Carlos at 0:16" data-pagefind-ignore>Carlos</span>Yeah, yeah, I think like, probably like, yeah, just being honest with where the space is today. I think how we evolved as a brand, how we sort of like explore it, literally the forefront of this new innovation. We always struggle with distribution I think that was one of the biggest problems with Forefront We wanted to ship products But we got as much feedback as possible They had some sort of loop into that as well And I&rsquo;m excited to explore this idea of just building products on top of social And that social is, I&rsquo;m extremely excited about <a class="wt-gloss" href="../glossary.html#farcaster">Farcaster</a> Because it provides a distribution platform that we&rsquo;ve never had before to experiment with But, you know, probably the most interesting thing about Farcast is really social graph.</p>
+            <p id="s503"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=503s" target="_blank" rel="noopener" data-pagefind-ignore>8:23</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Carlos at 0:16" data-pagefind-ignore>Carlos</span>How can you build on top of what&rsquo;s happening there without sort of like, you know, building your own distribution channel, right? And then, you know, eventually sort of like making meaningful, you know, connection between internet friends and building clients and protocols and product that actually, you know, is useful. people are using them and it&rsquo;s sort of like fixing some of the real-life problems I would say.</p>
+            <p id="s543"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=543s" target="_blank" rel="noopener" data-pagefind-ignore>9:03</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>How do you think about social impact in this space? How does it pertain to our politics, how does it pertain to the quality of life? I guess outside of consumer crypto, outside of our consumerism, what do you think is compelling about this space for you personally?</p>
+            <p id="s557"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=557s" target="_blank" rel="noopener" data-pagefind-ignore>9:17</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Carlos at 0:16" data-pagefind-ignore>Carlos</span>Yeah, right. So we all know the issues with social media in terms of ownership of the value that you create. So I always believe in that future that you should be rewarded for, you know, for what you put in the world. The energy you put back in the world, it should come back to you eventually. So, I mean, a common issue is like, you know, on Instagram, on TikTok, you have people, you know, but for some reason for their own policy getting banned. They built, they built sort of like their distribution graph there. They built a community there and then like just You know, for some reason, Instagram, they have all the power to take that away, right?</p>
+            <p id="s602"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=602s" target="_blank" rel="noopener" data-pagefind-ignore>10:02</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Carlos at 0:16" data-pagefind-ignore>Carlos</span>So I&rsquo;m excited about like crypto providing new sets of tools, allows those creators to sort of like own their graph, incentivize their community, distribute ownership of the value the community creates for them. Yeah, I think that&rsquo;s definitely a different, a better world where, yeah, we sort of like retain the value we create in the world. and I think crypto provides a tool to do that and we&rsquo;re so early obviously, a lot to figure out, it&rsquo;s not perfect, but yeah, that&rsquo;s one part of just being in a journey is very fulfilling as well, just innovating at the forefront of what&rsquo;s happening. Yeah, it&rsquo;s the name, Forefront.</p>
+            <p id="s602-2"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=602s" target="_blank" rel="noopener" data-pagefind-ignore>10:02</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Carlos at 0:16" data-pagefind-ignore>Carlos</span>Yeah, yeah, I keep going back. Yeah, well, yeah, that&rsquo;s the goal for sure.</p>
+            <p id="s648"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=648s" target="_blank" rel="noopener" data-pagefind-ignore>10:48</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, and I think it&rsquo;s important, you know, because even as I look at this project, We Them Media, like I feel like something I recognize that in the US, I don&rsquo;t really see like black owned media companies. Of course Focused on politics or just like quality of life and the concerns and interests and so I feel like when it comes to things like the presidential election you see like like people are talking to us but they&rsquo;re not like talking to us like about our existing concerns and interests. And so I&rsquo;m really interested in like using this platform as a way to like explore what those things are and how Web3 can pertain to them.</p>
+            <p id="s648-2"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=648s" target="_blank" rel="noopener" data-pagefind-ignore>10:48</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And really not just that you know but really looking going back out of Web3 into like the social world work you know social social work world. You Know How Do Nonprofits Pertain To Us Even Looking At Like GetCoin Like This Whole Public Decentralized Conversation Yes I Think All That Stuff Super Exciting To Me And Ideally We&rsquo;re Also On The Forefront So I&rsquo;m Excited To Have Done This Interview With You And Look Forward To Having You Back To Time In The Future</p>
+            <p id="s695"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=695s" target="_blank" rel="noopener" data-pagefind-ignore>11:35</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Carlos at 0:16" data-pagefind-ignore>Carlos</span>Yeah For Sure For Sure And I Appreciate Like The Time Obviously And It&rsquo;s Amazing To Have Like You Know People With Conviction And Actually Doing The Work And Yeah Like I&rsquo;m Very Bullish and what you&rsquo;re doing, obviously, and if there is any way that I can help along the journey as well. Because in the end of the day, it&rsquo;s just about the journey, right?</p>
+            <p id="s717"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=717s" target="_blank" rel="noopener" data-pagefind-ignore>11:57</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, yeah.</p>
+            <p id="s717-2"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=717s" target="_blank" rel="noopener" data-pagefind-ignore>11:57</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Carlos at 0:16" data-pagefind-ignore>Carlos</span>It&rsquo;s learn as much as you can and figure out things together as a community. I think it&rsquo;s extremely important. And I feel it very, very much because I come from a small nation, right? And we don&rsquo;t have a crypto presence yet. So most of the time when I&rsquo;m building something new, it feels very like I&rsquo;m on my own, so to speak, right? But I&rsquo;m happy to see like more people get involved and people like you know from nations are not you know you know developed that have access all to finance and things like that so yeah I appreciate the time obviously and we should bet best of luck with your adventure</p>
+            <p id="s755"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=755s" target="_blank" rel="noopener" data-pagefind-ignore>12:35</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I appreciate that and I guess a question I wanted to ask was in this vein of you talking about Cape Verde like how do you see yourself getting back to Cape Verde or looking at like like trying to bring people into this space or increase awareness like what does that look like for you?</p>
+            <p id="s767"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=767s" target="_blank" rel="noopener" data-pagefind-ignore>12:47</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Carlos at 0:16" data-pagefind-ignore>Carlos</span>Yeah, so I actually have a plan, a project that I&rsquo;m working right now. It&rsquo;s called ETH Cape Verde. I want to organize a conference of <a class="wt-gloss" href="../glossary.html#ethereum">Ethereum</a> conference in Cape Verde. Yeah, so that&rsquo;s the idea. And I think the best way that... Alpha. Yeah, that&rsquo;s Alpha right there. We do have a Twitter account, so you want to check it out. So I&rsquo;m working with Cape Verde government, digital economy department to sort of like bring Ethereum there. And the way we&rsquo;re thinking about it is just get exposure to, you know, the developer ecosystem, right? So we want more developers to play with this technology, to build solutions for us, that works for us, right?</p>
+            <p id="s767-2"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=767s" target="_blank" rel="noopener" data-pagefind-ignore>12:47</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Carlos at 0:16" data-pagefind-ignore>Carlos</span>And the way to do it is just bring the conversation there. And I&rsquo;m excited about Cape Verde because geographically we&rsquo;re very well positioned. You know, it&rsquo;s funny because like the reason why this is my first time in a crypto conference is because I used to live in China for a very long time. There Was Always An Issue With Getting The Visa To Go To Countries Where Conversations Were Happening About Crypto And I Feel Like It Is Time For Us To Decentralize That Access To Conversation And This Is The Goal Just Bring Conference And Open The Doors For More Community To Get Involved So That&rsquo;s One Project I&rsquo;m Excited About That Involves Directly With Crypto In Cape Verde Just Solutions Around That Oh,</p>
+            <p id="s849"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=849s" target="_blank" rel="noopener" data-pagefind-ignore>14:09</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I got that. You&rsquo;re saying you want to do a conference there. I think that&rsquo;s brilliant. I agree. I went to Oasis on-chain last month in Nassau in January. I thought that was super dope to see local people. They were thinking about technology and I realized I&rsquo;m part of their crypto journey now. I&rsquo;m just kind of here on my own journey. I think it&rsquo;s cool to see how things overlap. I&rsquo;m just looking forward to your conference. I&rsquo;ll definitely be there.</p>
+            <p id="s872"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=872s" target="_blank" rel="noopener" data-pagefind-ignore>14:32</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Carlos at 0:16" data-pagefind-ignore>Carlos</span>Yeah, no, it&rsquo;s interesting because so I was in Cape Verde for a while now, like after moving to China for four or five months or so. And most of my conversations actually are with high school students about crypto. And I think like, you know, the way crypto exposed me to other adjacent areas is something that I find fascinating, right? So I start thinking about privacy, about finance, about what is really money, and all this, you know, cryptology, all these sort of things that make crypto what it is today. So, yeah, trying to bring conversations to young people as well, I think is extremely important. And it&rsquo;s a work as well that I&rsquo;m excited to do back home, even though I don&rsquo;t live there, you know, there is a platform that I can make sure it&rsquo;s reaching to those communities.</p>
+            <p id="s925"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=925s" target="_blank" rel="noopener" data-pagefind-ignore>15:25</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, and I think, you know, young people, they&rsquo;re trying to figure out what their whole lives is going to look like, you know, you have to make money, you have to get a job, like, where do I want to work? And I think, like you were saying, community, I think, is such a core component in Web3, and I feel like in so many work environments, that&rsquo;s not the case. Like, you know, how you actually feel is like, like, not the most significant thing. Yeah, yeah. I feel like, like, Web3 is more vibe-centric, and like, when I say that, I feel like it&rsquo;s more like, there is a sentiment that like, the sentiments matter.</p>
+            <p id="s946"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=946s" target="_blank" rel="noopener" data-pagefind-ignore>15:46</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Carlos at 0:16" data-pagefind-ignore>Carlos</span>Yeah, yeah, yeah. We had the saying in DAO for a very long time, where it&rsquo;s like, 2021 was, was the year of a DAO, like, we all I always picture a feature where like everything is a DAO right and then we had a problem like people you say like you know DAOs are basically running on vibes right and it was such a negative thing to say it&rsquo;s like but I think there&rsquo;s a word now where we do have like technology to onboard the next you know set of users web3 right and I think I think vibes 50% of it right it&rsquo;s like build something people want right it&rsquo;s useful product that solves real life a specific set of problems, but also incorporate the culture, the community, the vibes, and without that it&rsquo;s just technology sort of solution.</p>
+            <p id="s946-2"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=946s" target="_blank" rel="noopener" data-pagefind-ignore>15:46</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Carlos at 0:16" data-pagefind-ignore>Carlos</span>Anyone can build that, right? So how do we think about, and diversity is extremely important when you try to see that future, right? Yeah, yeah, yeah, so we need everything that, you know, sort of like different perspective to make it a place that it&rsquo;s feel more like welcome, but also it&rsquo;s not biased towards specific things, right? So yeah, I&rsquo;m excited. Definitely community, definitely culture, but also I think it&rsquo;s important to build great products too.</p>
+            <p id="s1023"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=1023s" target="_blank" rel="noopener" data-pagefind-ignore>17:03</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, I absolutely agree. Well, once again, I really appreciate you joining us, bringing your expertise to my team, bringing your stories to our community. And yeah, I hope you have a wonderful rest in Denver. If you have any final words, you want to shout out like soul swing, like that, you&rsquo;re welcome to shout out anything you&rsquo;d like to the audience.</p>
+            <p id="s1038"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=1038s" target="_blank" rel="noopener" data-pagefind-ignore>17:18</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Carlos at 0:16" data-pagefind-ignore>Carlos</span>Yeah, yeah, so yeah, so I&rsquo;m very active on Farcaster. I ship a lot of products there. If any of you that sort of like watching this, if you&rsquo;re interested in sort of experimenting with some of the ideas that we&rsquo;re sort of shipping, but if you sort of like, yeah, it&rsquo;s okay, right? Yeah, yeah, yeah. So yeah, just hit me up on Farcaster at Carlos. Happy to chat there and just connect and yeah, build amazing things going forward.</p>
+            <p id="s1066"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=1066s" target="_blank" rel="noopener" data-pagefind-ignore>17:46</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah. Well, yeah, definitely reach out. I feel like having conversations with whatever you&rsquo;re trying to do forward, so reach out to us, reach out to him, reach out to everybody who&rsquo;s on your mind, and if people get back to you, then you have a conversation to be had. Thanks for tuning into this content. We&rsquo;re here doing this project at ETH Denver, holly people of color, black people when we can. We&rsquo;re just trying to bring people into the conversation, so thanks for tuning in, and hope to see you on the Discord or online soon.</p>
+            <p id="s1090"><a class="wt-at" href="https://www.youtube.com/watch?v=4uN9BrX2Ztg&amp;t=1090s" target="_blank" rel="noopener" data-pagefind-ignore>18:10</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name Carlos at 0:16" data-pagefind-ignore>Carlos</span>Yeah, shout out We Them Media. Shout out We Them Media. Peace. Awesome.</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+<div id="after-transcript" tabindex="-1"><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from Denver Unfiltered.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-denver">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="a-first-interview-and-advice-back-to-newark-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/UkX8veGIl58-640.jpg" srcset="../stills/UkX8veGIl58-320.jpg 320w, ../stills/UkX8veGIl58-480.jpg 480w, ../stills/UkX8veGIl58-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:15</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · ETH Denver 2024</span>
+                    <h3 class="report-title">A first interview, and advice back to Newark.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="building-a-dao-and-making-governance-a-game-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/qcTocIWf34U-640.jpg" srcset="../stills/qcTocIWf34U-320.jpg 320w, ../stills/qcTocIWf34U-480.jpg 480w, ../stills/qcTocIWf34U-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:45</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">A content coin, and making governance a game.</h3>
+                    
+                </div>
+            </a>
+            <a href="from-america-to-denver-what-brought-you-here-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/DdXcCfCc26E-640.jpg" srcset="../stills/DdXcCfCc26E-320.jpg 320w, ../stills/DdXcCfCc26E-480.jpg 480w, ../stills/DdXcCfCc26E-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:21</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · Street</span>
+                    <h3 class="report-title">A borrowed camera, and Denver block by block.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../places.html#denver">Everything filmed in Denver</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

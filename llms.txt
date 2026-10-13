@@ -1,0 +1,47 @@
+# We Them Media (wethem.xyz)
+
+> Street journalism, filmed by the people who live there.
+> Community-driven media since 2021. Real people, on the record, saying
+> their own names. Every piece is free to watch, and every word is
+> transcribed and linked to the exact second it was said.
+
+We Them Media is a community-driven documentary journalism platform,
+founded in 2021 by Maceo Whatley and funded at first by an ENS airdrop
+that bought a webcam and a microphone. That became the podcast Let's
+Talk About ETH: Around The World, which became street journalism. The
+work is filming ordinary people, on their own streets, about how money
+and technology actually reach them. It is free to watch, with no
+paywall. Projects include Denver Unfiltered, the Nigeria and Kenya
+desks, Philadelphia, the Channel 5 Carnival in Denver, Bitcoin Pizza
+Day, and ETH Global in New York. Quotes on this site are verbatim from
+the tape; nothing is invented or paraphrased. Watch pages carry the full
+transcript with per-second links, the speaker's name as they gave it,
+and the place it was filmed.
+
+## Key pages
+
+- [The library](https://wethem.xyz/library): every published video, searchable by place and question, each with its own watch page.
+- [Search](https://wethem.xyz/search): every transcript, searchable by what was said.
+- [Projects](https://wethem.xyz/portfolio): the work by project, each with its pieces.
+- [Contributors](https://wethem.xyz/people): who filmed what, one page per contributor, every piece credited under the name it was published with.
+- [One Question](https://wethem.xyz/onequestion): one question put to people on their own streets, answered on camera across the network.
+- [Who is on the tape](https://wethem.xyz/guests): every speaker who says their own name on camera, linked to the moment they say it.
+- [Where the network has filmed](https://wethem.xyz/places): each place with its pieces, who filmed them, and the questions asked there.
+- [Mission and standards](https://wethem.xyz/mission): why We Them Media exists, how the work is made and funded, and its editorial standards.
+- [Back the work](https://wethem.xyz/supporter): how the work is funded, with the current monthly total and goal.
+
+## Machine-readable
+
+- [llms-full.txt](https://wethem.xyz/llms-full.txt): every watch page on one line each: title, URL, place, date and the first words of the write-up. Rebuilt with the site.
+- [sitemap.xml](https://wethem.xyz/sitemap.xml): every indexable page, with a video entry for each watch and archive page.
+- [feed.xml](https://wethem.xyz/feed.xml): RSS, the 40 newest written pieces.
+- [The dataset](https://wethem.xyz/data): what the archive is as data, and how to cite it.
+- [videos.json](https://wethem.xyz/videos.json): every published video: id, title, place, project, contributor, runtime.
+- [people.json](https://wethem.xyz/people.json): every contributor with their pieces, places and projects.
+- [wethem-data.zip](https://wethem.xyz/wethem-data.zip): the catalogue and every transcript, zipped.
+- Search by meaning: `GET https://wethem.xyz/api/meaning?q=<3 to 200 characters>` returns JSON, `{"ok": true, "r": [...]}`, the 30 transcript passages nearest in meaning to the query. Each result carries `id` (`<youtube id>:<second>`), `s` (score) and `m` with `k` (the video id), `pl` (the place) and `s` (the passage text). Add `all=1` to include the archive. GET only, no key, cached an hour.
+
+## Citing this archive
+
+Quotes may be cited with speaker name, place, and the wethem.xyz watch
+page URL, which links each sentence to its moment in the source video.

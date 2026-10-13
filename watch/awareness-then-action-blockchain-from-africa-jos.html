@@ -1,0 +1,831 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Where is blockchain in Africa now?">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/awareness-then-action-blockchain-from-africa-jos">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="Awareness, Then Action: Blockchain From Africa | Jos">
+    <meta property="og:description" content="Where is blockchain in Africa now?">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/awareness-then-action-blockchain-from-africa-jos.jpg?v=926ba6609f">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Awareness, action, and what is missing between builders">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/awareness-then-action-blockchain-from-africa-jos.jpg?v=926ba6609f">
+    <meta property="og:url" content="https://wethem.xyz/watch/awareness-then-action-blockchain-from-africa-jos">
+    <title>Awareness, Then Action: Blockchain From Africa | Jos &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/awareness-then-action-blockchain-from-africa-jos#video",
+  "name": "Awareness, Then Action: Blockchain From Africa | Jos",
+  "description": "Where is blockchain in Africa now? PK Stevens, head of operations and co-founder of IHQ, answers at ProdFest in Jos, Plateau State, straight off stage from a talk on blockchain and Africa's digital future. \"We're unlocking innovation through technology, infrastructure, and community.\" Maceo quotes a line from the company's CTO the day before: not build for Africa but build from Africa. PK puts a structure under it: \"we're still in kind of the awareness phase.\" The shift he wants is \"we're coming out of this phase of crypto is blockchain to blockchain is a platform.\" His method is a room: he ran what he says was the first pop-up city across Africa, in Ghana, and another this year in Kenya. \"get people in a space for a while and then change how they think about blockchain technology.\" He opened his talk on belief: \"we don't talk enough about people that believe in Africa and then can use the technology.\" Nine minutes.",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/97S0g1GHphM/maxresdefault.jpg"
+  ],
+  "uploadDate": "2025-09-09T14:00:06Z",
+  "embedUrl": "https://www.youtube.com/embed/97S0g1GHphM",
+  "url": "https://wethem.xyz/watch/awareness-then-action-blockchain-from-africa-jos",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT9M24S",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "Live at ProdFest",
+      "startOffset": 0,
+      "url": "https://wethem.xyz/watch/awareness-then-action-blockchain-from-africa-jos?t=0",
+      "endOffset": 12
+    },
+    {
+      "@type": "Clip",
+      "name": "Backing projects struggling to come up in Africa",
+      "startOffset": 12,
+      "url": "https://wethem.xyz/watch/awareness-then-action-blockchain-from-africa-jos?t=12",
+      "endOffset": 43
+    },
+    {
+      "@type": "Clip",
+      "name": "His talk: blockchain in Africa's digital future",
+      "startOffset": 43,
+      "url": "https://wethem.xyz/watch/awareness-then-action-blockchain-from-africa-jos?t=43",
+      "endOffset": 67
+    },
+    {
+      "@type": "Clip",
+      "name": "Build from Africa, not for Africa",
+      "startOffset": 67,
+      "url": "https://wethem.xyz/watch/awareness-then-action-blockchain-from-africa-jos?t=67",
+      "endOffset": 129
+    },
+    {
+      "@type": "Clip",
+      "name": "Where Africa is now: the awareness phase",
+      "startOffset": 129,
+      "url": "https://wethem.xyz/watch/awareness-then-action-blockchain-from-africa-jos?t=129",
+      "endOffset": 141
+    },
+    {
+      "@type": "Clip",
+      "name": "Pop-up cities: change how people see blockchain",
+      "startOffset": 141,
+      "url": "https://wethem.xyz/watch/awareness-then-action-blockchain-from-africa-jos?t=141",
+      "endOffset": 168
+    },
+    {
+      "@type": "Clip",
+      "name": "Starting a talk with belief",
+      "startOffset": 168,
+      "url": "https://wethem.xyz/watch/awareness-then-action-blockchain-from-africa-jos?t=168",
+      "endOffset": 306
+    },
+    {
+      "@type": "Clip",
+      "name": "How to build: community, hackathons, incubation",
+      "startOffset": 306,
+      "url": "https://wethem.xyz/watch/awareness-then-action-blockchain-from-africa-jos?t=306",
+      "endOffset": 337
+    },
+    {
+      "@type": "Clip",
+      "name": "Two physical hubs, and the missing shared purpose",
+      "startOffset": 337,
+      "url": "https://wethem.xyz/watch/awareness-then-action-blockchain-from-africa-jos?t=337",
+      "endOffset": 414
+    },
+    {
+      "@type": "Clip",
+      "name": "About eight founders, and the next cohort",
+      "startOffset": 414,
+      "url": "https://wethem.xyz/watch/awareness-then-action-blockchain-from-africa-jos?t=414",
+      "endOffset": 469
+    },
+    {
+      "@type": "Clip",
+      "name": "Not enough attention on the creator economy",
+      "startOffset": 469,
+      "url": "https://wethem.xyz/watch/awareness-then-action-blockchain-from-africa-jos?t=469",
+      "endOffset": 501
+    },
+    {
+      "@type": "Clip",
+      "name": "Bringing the talent side and the builder side together",
+      "startOffset": 501,
+      "url": "https://wethem.xyz/watch/awareness-then-action-blockchain-from-africa-jos?t=501",
+      "endOffset": 534
+    },
+    {
+      "@type": "Clip",
+      "name": "Spelling it for the camera",
+      "startOffset": 534,
+      "url": "https://wethem.xyz/watch/awareness-then-action-blockchain-from-africa-jos?t=534",
+      "endOffset": 564
+    }
+  ],
+  "creator": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "transcript": "Guys, what's up? How you doing? It's your boy Super here and I'm with PK and we're live at ProFest. Nice. Ah, I like how you're in sync so far.\nYeah. So, I'm PK. I work as head of operations and co-founder of IHQ. We're unlocking innovation through technology, infrastructure, and community. It's great to be here.\nWow. Amazing. Basically, let me put it in simple terms for you guys. IHQ has been supporting projects that have been struggling to come up in Africa.\nYeah. Yeah. Yeah. That that's part of it. But yeah, really captures a good part of it. But\nagain, nice to meet you again. I got to I had the pleasure of um getting to um interview uh your CTO. Can you call me again?\nSo Dennis Okono, CTO and co-founder of\nthat name. I told him that name my bro. But honestly, I enjoyed the team and it's a pleasure to actually have you here at just and with that being said, please can you share your topic to the camera so they aware of what to ask? Uh,\nwhat topic exactly?\nThe one you spoke about like on stage.\nOh, so I talk about the role of blockchain in Nigeria's dig in Africa's digital future.\nNow, this is the reason why I told you to ask because of what I found amazing. He said something there. He didn't say build for Africa. He said build from Africa. So that one is very highlighted and I really have been like my friends and I we always advocate for the idea of trying to actually build from here and build and understanding that the issues and the um the struggles the challenges we face is the best way to know kind of real solution you can provide and with that being said like with um something that profess the convenor of prophet he said something about he said wants to merge technical and nontechnical um personnels and individuals and that was the aim of it and even where I media Our whole goal is to be able to create a hub and a space where developers and creatives can come together to actually give great products not because of his web 3 but because of it useful.\nAnd with that being said like what exactly now with this kind of initiative coming up and initiative coming all around like we have what is actually now is expectations that we can say we're going to be seeing in next few months and next few years to come.\nI think that's a great question. The thing that we're doing now is we're still in kind of the awareness phase which is like we're coming out of this phase of crypto is blockchain to blockchain is a platform. Exactly. And so now what we're doing is and if you see the focus of the conferences from Ethanu we've done a couple of pop-up cities. So interestingly so Kevin attended Muakra which happened in Ghana and that kind of spurred him to see what pop-up cities are. So we we actually run the first pop-up city across Africa that happened in Makra. We had one this year in Kenya called to afraid.\nOur goal with that is to you know get people in a space for a while and then change how they think about blockchain technology.\nAmazing. Amazing.\nSo blockchain technology is not just seen as the cryptocurrency aspect but from the community how it's providing a platform for people to actually build solutions and then changing their mindset. I started my talk today about belief because I think every time we talk about technology but we don't talk enough about people that believe in Africa and then can use the technology.\nAmazing. Wow. Wow. Wow. Wow. Wow. I'm I like I'm blown away because like what you're saying is actually the truth because there are times I actually do tell my friends some my friends in Kenya and I said Africa is not ready for governance. Not because of we don't deserve it or we can't have it but because of we don't have the mental infra to actually manage it and that's where we're trying to and that's why I'm happy about the new internet I'm happy about like like the new web web three because I feel like everything right now is even for now it's like what is it awareness it's an experiment but it's for me it's like what my friend Jenn say is towards the idea of being able to actually test what works so it's even towards the idea of governance being able to test how what kind of governance system can be created that can actually transparent, efficient, and reliable for the daily man and average man out there.\nSo, I'm excited to for the fact that I'm seeing key players like you actually being advocates and understanding the the the initiative, the the the scope of these things cuz it means that it's actually a future where we can be happy to see our I don't call them Gen Z, Gen X. Yeah. Build on the facility and the structures that we're trying to put in place. And I'm excited about it. Yeah. with the media. Our whole goal is to um tell um African stories like um tell tell sorry African builders like narate like tell the untold our whole idea is to be the voice of the voiceless where we're able to alllight builders whether creatives or developers non technical yes they're trying to do they're trying to create products like I said not for Africa but from Africa and our goal is with that preserving being able to tell the stories and even tell the cultural aspect of it and tell the stories of the four our forefathers the history that we were not told, we'll be able to actually work towards where we can make better choices that can actually take us forward and 100% web 3 is actually where I feel like Africa can actually control back his narrative.\nSo, I'm excited and I'm thankful for the fact that you actually, you know, you're so tired, but you still have to just be able to accommodate\nhappy to always and I think just to add, we've gotten to that stage where we can take our decisions and that's what you know, like I said in in the awareness, we're also talking about taking action. So, from making this awareness, we're telling builders, this is the time to start experimenting. M so that's why for us at II you think about it from a framework perspective which is you build a community you have hackathons that become grounds for experimentation and you run an incubation program right so the incubation program is where these ideas are refined but these communities they kind of exist better if they are physical hubs so we have two physical hubs in Ghana and Kenya and then we're also using pop-up cities as a mode to create people to spend longer time together I think one thing that is missing is we don't have a shared purpose if we did building is much easier amazing and like I believing in Africa.\nI will keep hinging on that because that is like the major thing that keeps coming to mind. If we all believe we're going to make it\njust making see I'm amazed by what you're saying because we've also spoken about the idea of like this division that that happens not just even between national like between nationalities where Kenyans Ghanaians Africans Nigerians we're fighting each other which is not what should be happening. Yeah. I I I do understand the idea of how Nigerians are like probably the one taking up like we with the power of course with the power we know with the power but I think again it's for the fact that we're at least in the forefront we should actually try and start creating platforms and we should start addressing this specific thing because at the end of the day just every Nigerian out there just trying to just get a better life but also for God putting us in that kind of position we should be able to actually not just look at time like like we should be able to um address it because that's the only way we're going to have a better, a bigger, and a reformed Africa that is for us and our childrens to come.\nSo, I'm excited. Oh my god, you've said so much already and I'm I can't wait to I'm now bullish about more and more. I already spoke to I was already bullish now. It's like yeah, that's gone 10x through the roof. It's 10x.\nSo, we have an incubation program cohort just launched. Um currently as I speak to you in Ghana we're having about eight founders who have gone through three and a half months and they're being going through a twoe you know physical summit and so we have another cohort coming up applications are on till 5th of September happy to give you the link we just want as many people because we want to start\ntechnical people again\nno no so the incubation program is a technology component right because that's what we believe is going to give us exponential you know reach out to more people um but even for the nontechnical community like I just spoke to your friend who is doing creatives were also thinking of ways how do we support\nI spoke to Mr. about this I think about our creators boot camp actually we are working towards because we actually start saying like this is actually what we are advocating for we are saying that there are not there's not enough attention on the creator economy which is what is needed for mass adoption\nof course because you guys tell the stories\nexactly storytelling is the best you guys tell the story from from time to writing things on the walls so the idea now is like we're trying to create that kind of this kind of initiative where we feel like okay there's no place where creators can come in and if to come in we're seeing where It's quite difficult for a lot of creators to even get involved because it's either you already have some kind of network or this to even be able to get involved and that should not be well\ninterestingly so I've been having some conversation this a bit of alpha we haven't thought through the entire process has built both sides we build a talent side or built a builder pipeline we're thinking of how better we can bring them together and the creators kind of fall into most of the time then\nI'm sure that we media is actually a community that can actually help because then say that we can we actually did discuss about how we could collaborate and how\nSo happy to have those conversations. I mean, we're here for Africa. We are here any day, any catch. We're here to build for Africa.\nI'm from Africa.\nThank you so much for having me. H\nYeah. So, we go to something here. We're going to spell.\nB O U Y.\nNo, you're going to say the camera. I'm going to spell it. So, it's spell.\nB O U Y A.\nB O U Y A. Your name is correct when the video comes out. Yeah. Yeah. But now, the camera.\nMy name is PK. I work as co-founder and CEO of RHQ. We are driving um innovation across the Afghan continent through technology, infrastructure, and community. We're live here at ProFest in just plat state with We Them Media. Booyah.",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Jos",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "Nigeria"
+    },
+    "url": "https://wethem.xyz/places#jos"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Nigeria",
+    "url": "https://wethem.xyz/portfolio#p-nigeria"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Pan-African Web3",
+      "url": "https://wethem.xyz/topics/pan-african-web3"
+    }
+  ],
+  "keywords": [
+    "Pan-African Web3"
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Nigeria",
+      "item": "https://wethem.xyz/portfolio#p-nigeria"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Awareness, action, and what is missing between builders",
+      "item": "https://wethem.xyz/watch/awareness-then-action-blockchain-from-africa-jos"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2025-09-09" data-pf-vid="97S0g1GHphM" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;9:24&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="Jos" data-pf-country="Nigeria" data-pf-project="Nigeria">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-nigeria">Nigeria</a></li>
+            <li aria-current="page">Awareness, action, and what is missing between builders</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">Awareness, action, and what is missing between builders.</h1>
+
+    <p class="wt-byline"><strong>PK Stevens</strong> &middot; Jos &middot; 9 min</p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="97S0g1GHphM" live postersrcset="../stills/97S0g1GHphM-320.jpg 320w, ../stills/97S0g1GHphM-480.jpg 480w, ../stills/97S0g1GHphM-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/97S0g1GHphM?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="Awareness, action, and what is missing between builders, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+    <p class="wt-note wt-credit">Executive producer: C.Y. Lee</p>
+
+    <div class="wt-prose">
+            <p>Where is blockchain in Africa now? PK Stevens, head of operations and co-founder of IHQ, answers at ProdFest in Jos, Plateau State, straight off stage from a talk on blockchain and Africa&rsquo;s digital future. &ldquo;We&rsquo;re unlocking innovation through technology, infrastructure, and community.&rdquo;</p>
+            <p>Maceo quotes a line from the company&rsquo;s CTO the day before: not build for Africa but build from Africa. PK puts a structure under it: &ldquo;we&rsquo;re still in kind of the awareness phase.&rdquo; The shift he wants is &ldquo;we&rsquo;re coming out of this phase of crypto is blockchain to blockchain is a platform.&rdquo; His method is a room: he ran what he says was the first pop-up city across Africa, in Ghana, and another this year in Kenya. &ldquo;get people in a space for a while and then change how they think about blockchain technology.&rdquo;</p>
+            <p>He opened his talk on belief: &ldquo;we don&rsquo;t talk enough about people that believe in Africa and then can use the technology.&rdquo; Nine minutes.</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../places.html#jos">Everything filmed in Jos</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="why-we-built-a-product-focused-conference-jos.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/qVnPgam8iys-640.jpg" srcset="../stills/qVnPgam8iys-320.jpg 320w, ../stills/qVnPgam8iys-480.jpg 480w, ../stills/qVnPgam8iys-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>13:30</span></span><span>Why a first edition conference was built around products.</span></a>
+        <a class="wt-rail-card" href="the-creative-lead-on-branding-a-product-festival-jos.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/xW1u7yZzp-M-640.jpg" srcset="../stills/xW1u7yZzp-M-320.jpg 320w, ../stills/xW1u7yZzp-M-480.jpg 480w, ../stills/xW1u7yZzp-M-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>12:07</span></span><span>The creative lead on branding, jargon and AI.</span></a>
+        <a class="wt-rail-card" href="third-place-at-a-hackathon-with-a-team-of-two-jos.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/O4xF5Z_8BDU-640.jpg" srcset="../stills/O4xF5Z_8BDU-320.jpg 320w, ../stills/O4xF5Z_8BDU-480.jpg 480w, ../stills/O4xF5Z_8BDU-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>6:17</span></span><span>A designer turned builder on winning with two people.</span></a>
+        <a class="wt-rail-card" href="social-tokens-community-and-url-to-irl-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/4uN9BrX2Ztg-640.jpg" srcset="../stills/4uN9BrX2Ztg-320.jpg 320w, ../stills/4uN9BrX2Ztg-480.jpg 480w, ../stills/4uN9BrX2Ztg-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>18:21</span></span><span>Social tokens, and a conference for Cape Verde.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c0"><a class="wt-t" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-s">Live at ProdFest</span></li>
+                <li class="wt-line" id="c12"><a class="wt-t" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=12s" target="_blank" rel="noopener" data-pagefind-ignore>0:12</a><span class="wt-s">Backing projects struggling to come up in Africa</span></li>
+                <li class="wt-line" id="c43"><a class="wt-t" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=43s" target="_blank" rel="noopener" data-pagefind-ignore>0:43</a><span class="wt-s">His talk: blockchain in Africa&#x27;s digital future</span></li>
+                <li class="wt-line" id="c67"><a class="wt-t" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=67s" target="_blank" rel="noopener" data-pagefind-ignore>1:07</a><span class="wt-s">Build from Africa, not for Africa</span></li>
+                <li class="wt-line" id="c129"><a class="wt-t" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=129s" target="_blank" rel="noopener" data-pagefind-ignore>2:09</a><span class="wt-s">Where Africa is now: the awareness phase</span></li>
+                <li class="wt-line" id="c141"><a class="wt-t" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=141s" target="_blank" rel="noopener" data-pagefind-ignore>2:21</a><span class="wt-s">Pop-up cities: change how people see blockchain</span></li>
+                <li class="wt-line" id="c168"><a class="wt-t" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=168s" target="_blank" rel="noopener" data-pagefind-ignore>2:48</a><span class="wt-s">Starting a talk with belief</span></li>
+                <li class="wt-line" id="c306"><a class="wt-t" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=306s" target="_blank" rel="noopener" data-pagefind-ignore>5:06</a><span class="wt-s">How to build: community, hackathons, incubation</span></li>
+                <li class="wt-line" id="c337"><a class="wt-t" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=337s" target="_blank" rel="noopener" data-pagefind-ignore>5:37</a><span class="wt-s">Two physical hubs, and the missing shared purpose</span></li>
+                <li class="wt-line" id="c414"><a class="wt-t" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=414s" target="_blank" rel="noopener" data-pagefind-ignore>6:54</a><span class="wt-s">About eight founders, and the next cohort</span></li>
+                <li class="wt-line" id="c469"><a class="wt-t" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=469s" target="_blank" rel="noopener" data-pagefind-ignore>7:49</a><span class="wt-s">Not enough attention on the creator economy</span></li>
+                <li class="wt-line" id="c501"><a class="wt-t" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=501s" target="_blank" rel="noopener" data-pagefind-ignore>8:21</a><span class="wt-s">Bringing the talent side and the builder side together</span></li>
+                <li class="wt-line" id="c534"><a class="wt-t" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=534s" target="_blank" rel="noopener" data-pagefind-ignore>8:54</a><span class="wt-s">Spelling it for the camera</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Who speaks, by their own introduction on the tape: <a href="../guests.html#g-pk" data-pagefind-filter="person">PK</a> at <a class="wt-at" data-seek="12" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=12s" target="_blank" rel="noopener" data-pagefind-ignore>0:12</a>. Transcribed from the original audio and corrected for names. Speaker letters mark turns, not names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Guys, what&rsquo;s up? How you doing? It&rsquo;s your boy Super here and I&rsquo;m with PK and we&rsquo;re live at ProFest. Nice. Ah, I like how you&rsquo;re in sync so far.</p>
+            <p id="s11"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=11s" target="_blank" rel="noopener" data-pagefind-ignore>0:11</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name PK at 0:12" data-pagefind-ignore>PK</span>Yeah. So, I&rsquo;m PK. I work as head of operations and co-founder of IHQ. We&rsquo;re unlocking innovation through technology, infrastructure, and community. It&rsquo;s great to be here.</p>
+            <p id="s21"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=21s" target="_blank" rel="noopener" data-pagefind-ignore>0:21</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Wow. Amazing. Basically, let me put it in simple terms for you guys. IHQ has been supporting projects that have been struggling to come up in Africa.</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s31"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=31s" target="_blank" rel="noopener" data-pagefind-ignore>0:31</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name PK at 0:12" data-pagefind-ignore>PK</span>Yeah. Yeah. Yeah. That that&rsquo;s part of it. But yeah, really captures a good part of it. But</p>
+            <p id="s36"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=36s" target="_blank" rel="noopener" data-pagefind-ignore>0:36</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>again, nice to meet you again. I got to I had the pleasure of um getting to um interview uh your CTO. Can you call me again?</p>
+            <p id="s43"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=43s" target="_blank" rel="noopener" data-pagefind-ignore>0:43</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name PK at 0:12" data-pagefind-ignore>PK</span>So Dennis Okono, CTO and co-founder of</p>
+            <p id="s45"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=45s" target="_blank" rel="noopener" data-pagefind-ignore>0:45</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>that name. I told him that name my bro. But honestly, I enjoyed the team and it&rsquo;s a pleasure to actually have you here at just and with that being said, please can you share your topic to the camera so they aware of what to ask? Uh,</p>
+            <p id="s58"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=58s" target="_blank" rel="noopener" data-pagefind-ignore>0:58</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name PK at 0:12" data-pagefind-ignore>PK</span>what topic exactly?</p>
+            <p id="s61"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=61s" target="_blank" rel="noopener" data-pagefind-ignore>1:01</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>The one you spoke about like on stage.</p>
+            <p id="s63"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=63s" target="_blank" rel="noopener" data-pagefind-ignore>1:03</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name PK at 0:12" data-pagefind-ignore>PK</span>Oh, so I talk about the role of blockchain in Nigeria&rsquo;s dig in Africa&rsquo;s digital future.</p>
+            <p id="s67"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=67s" target="_blank" rel="noopener" data-pagefind-ignore>1:07</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Now, this is the reason why I told you to ask because of what I found amazing. He said something there. He didn&rsquo;t say build for Africa. He said build from Africa. So that one is very highlighted and I really have been like my friends and I we always advocate for the idea of trying to actually build from here and build and understanding that the issues and the um the struggles the challenges we face is the best way to know kind of real solution you can provide and with that being said like with um something that profess the convenor of prophet he said something about he said wants to merge technical and nontechnical um personnels and individuals and that was the aim of it and even where I media Our whole goal is to be able to create a hub and a space where developers and creatives can come together to actually give great products not because of his web 3 but because of it useful.</p>
+            <p id="s67-2"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=67s" target="_blank" rel="noopener" data-pagefind-ignore>1:07</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And with that being said like what exactly now with this kind of initiative coming up and initiative coming all around like we have what is actually now is expectations that we can say we&rsquo;re going to be seeing in next few months and next few years to come.</p>
+            <p id="s129"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=129s" target="_blank" rel="noopener" data-pagefind-ignore>2:09</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name PK at 0:12" data-pagefind-ignore>PK</span>I think that&rsquo;s a great question. The thing that we&rsquo;re doing now is we&rsquo;re still in kind of the awareness phase which is like we&rsquo;re coming out of this phase of crypto is blockchain to blockchain is a platform. Exactly. And so now what we&rsquo;re doing is and if you see the focus of the conferences from Ethanu we&rsquo;ve done a couple of pop-up cities. So interestingly so Kevin attended Muakra which happened in Ghana and that kind of spurred him to see what pop-up cities are. So we we actually run the first pop-up city across Africa that happened in Makra. We had one this year in Kenya called to afraid.</p>
+            <p id="s152"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=152s" target="_blank" rel="noopener" data-pagefind-ignore>2:32</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name PK at 0:12" data-pagefind-ignore>PK</span>Our goal with that is to you know get people in a space for a while and then change how they think about blockchain technology.</p>
+            <p id="s167"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=167s" target="_blank" rel="noopener" data-pagefind-ignore>2:47</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Amazing. Amazing.</p>
+            <p id="s169"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=169s" target="_blank" rel="noopener" data-pagefind-ignore>2:49</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name PK at 0:12" data-pagefind-ignore>PK</span>So blockchain technology is not just seen as the cryptocurrency aspect but from the community how it&rsquo;s providing a platform for people to actually build solutions and then changing their mindset. I started my talk today about belief because I think every time we talk about technology but we don&rsquo;t talk enough about people that believe in Africa and then can use the technology.</p>
+            <p id="s188"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=188s" target="_blank" rel="noopener" data-pagefind-ignore>3:08</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Amazing. Wow. Wow. Wow. Wow. Wow. I&rsquo;m I like I&rsquo;m blown away because like what you&rsquo;re saying is actually the truth because there are times I actually do tell my friends some my friends in Kenya and I said Africa is not ready for governance. Not because of we don&rsquo;t deserve it or we can&rsquo;t have it but because of we don&rsquo;t have the mental infra to actually manage it and that&rsquo;s where we&rsquo;re trying to and that&rsquo;s why I&rsquo;m happy about the new internet I&rsquo;m happy about like like the new web web three because I feel like everything right now is even for now it&rsquo;s like what is it awareness it&rsquo;s an experiment but it&rsquo;s for me it&rsquo;s like what my friend Jenn say is towards the idea of being able to actually test what works so it&rsquo;s even towards the idea of governance being able to test how what kind of governance system can be created that can actually transparent, efficient, and reliable for the daily man and average man out there.</p>
+            <p id="s237"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=237s" target="_blank" rel="noopener" data-pagefind-ignore>3:57</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>So, I&rsquo;m excited to for the fact that I&rsquo;m seeing key players like you actually being advocates and understanding the the the initiative, the the the scope of these things cuz it means that it&rsquo;s actually a future where we can be happy to see our I don&rsquo;t call them Gen Z, Gen X. Yeah. Build on the facility and the structures that we&rsquo;re trying to put in place. And I&rsquo;m excited about it. Yeah. with the media. Our whole goal is to um tell um African stories like um tell tell sorry African builders like narate like tell the untold our whole idea is to be the voice of the voiceless where we&rsquo;re able to alllight builders whether creatives or developers non technical yes they&rsquo;re trying to do they&rsquo;re trying to create products like I said not for Africa but from Africa and our goal is with that preserving being able to tell the stories and even tell the cultural aspect of it and tell the stories of the four our forefathers the history that we were not told, we&rsquo;ll be able to actually work towards where we can make better choices that can actually take us forward and 100% web 3 is actually where I feel like Africa can actually control back his narrative.</p>
+            <p id="s237-2"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=237s" target="_blank" rel="noopener" data-pagefind-ignore>3:57</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>So, I&rsquo;m excited and I&rsquo;m thankful for the fact that you actually, you know, you&rsquo;re so tired, but you still have to just be able to accommodate</p>
+            <p id="s306"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=306s" target="_blank" rel="noopener" data-pagefind-ignore>5:06</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name PK at 0:12" data-pagefind-ignore>PK</span>happy to always and I think just to add, we&rsquo;ve gotten to that stage where we can take our decisions and that&rsquo;s what you know, like I said in in the awareness, we&rsquo;re also talking about taking action. So, from making this awareness, we&rsquo;re telling builders, this is the time to start experimenting. M so that&rsquo;s why for us at II you think about it from a framework perspective which is you build a community you have hackathons that become grounds for experimentation and you run an incubation program right so the incubation program is where these ideas are refined but these communities they kind of exist better if they are physical hubs so we have two physical hubs in Ghana and Kenya and then we&rsquo;re also using pop-up cities as a mode to create people to spend longer time together I think one thing that is missing is we don&rsquo;t have a shared purpose if we did building is much easier amazing and like I believing in Africa.</p>
+            <p id="s352"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=352s" target="_blank" rel="noopener" data-pagefind-ignore>5:52</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name PK at 0:12" data-pagefind-ignore>PK</span>I will keep hinging on that because that is like the major thing that keeps coming to mind. If we all believe we&rsquo;re going to make it</p>
+            <p id="s360"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=360s" target="_blank" rel="noopener" data-pagefind-ignore>6:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>just making see I&rsquo;m amazed by what you&rsquo;re saying because we&rsquo;ve also spoken about the idea of like this division that that happens not just even between national like between nationalities where Kenyans Ghanaians Africans Nigerians we&rsquo;re fighting each other which is not what should be happening. Yeah. I I I do understand the idea of how Nigerians are like probably the one taking up like we with the power of course with the power we know with the power but I think again it&rsquo;s for the fact that we&rsquo;re at least in the forefront we should actually try and start creating platforms and we should start addressing this specific thing because at the end of the day just every Nigerian out there just trying to just get a better life but also for God putting us in that kind of position we should be able to actually not just look at time like like we should be able to um address it because that&rsquo;s the only way we&rsquo;re going to have a better, a bigger, and a reformed Africa that is for us and our childrens to come.</p>
+            <p id="s385"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=385s" target="_blank" rel="noopener" data-pagefind-ignore>6:25</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>So, I&rsquo;m excited. Oh my god, you&rsquo;ve said so much already and I&rsquo;m I can&rsquo;t wait to I&rsquo;m now bullish about more and more. I already spoke to I was already bullish now. It&rsquo;s like yeah, that&rsquo;s gone 10x through the roof. It&rsquo;s 10x.</p>
+            <p id="s425"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=425s" target="_blank" rel="noopener" data-pagefind-ignore>7:05</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name PK at 0:12" data-pagefind-ignore>PK</span>So, we have an incubation program cohort just launched. Um currently as I speak to you in Ghana we&rsquo;re having about eight founders who have gone through three and a half months and they&rsquo;re being going through a twoe you know physical summit and so we have another cohort coming up applications are on till 5th of September happy to give you the link we just want as many people because we want to start</p>
+            <p id="s444"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=444s" target="_blank" rel="noopener" data-pagefind-ignore>7:24</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>technical people again</p>
+            <p id="s446"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=446s" target="_blank" rel="noopener" data-pagefind-ignore>7:26</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name PK at 0:12" data-pagefind-ignore>PK</span>no no so the incubation program is a technology component right because that&rsquo;s what we believe is going to give us exponential you know reach out to more people um but even for the nontechnical community like I just spoke to your friend who is doing creatives were also thinking of ways how do we support</p>
+            <p id="s461"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=461s" target="_blank" rel="noopener" data-pagefind-ignore>7:41</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I spoke to Mr. about this I think about our creators boot camp actually we are working towards because we actually start saying like this is actually what we are advocating for we are saying that there are not there&rsquo;s not enough attention on the creator economy which is what is needed for mass adoption</p>
+            <p id="s475"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=475s" target="_blank" rel="noopener" data-pagefind-ignore>7:55</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name PK at 0:12" data-pagefind-ignore>PK</span>of course because you guys tell the stories</p>
+            <p id="s477"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=477s" target="_blank" rel="noopener" data-pagefind-ignore>7:57</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>exactly storytelling is the best you guys tell the story from from time to writing things on the walls so the idea now is like we&rsquo;re trying to create that kind of this kind of initiative where we feel like okay there&rsquo;s no place where creators can come in and if to come in we&rsquo;re seeing where It&rsquo;s quite difficult for a lot of creators to even get involved because it&rsquo;s either you already have some kind of network or this to even be able to get involved and that should not be well</p>
+            <p id="s500"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=500s" target="_blank" rel="noopener" data-pagefind-ignore>8:20</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name PK at 0:12" data-pagefind-ignore>PK</span>interestingly so I&rsquo;ve been having some conversation this a bit of alpha we haven&rsquo;t thought through the entire process has built both sides we build a talent side or built a builder pipeline we&rsquo;re thinking of how better we can bring them together and the creators kind of fall into most of the time then</p>
+            <p id="s513"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=513s" target="_blank" rel="noopener" data-pagefind-ignore>8:33</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I&rsquo;m sure that we media is actually a community that can actually help because then say that we can we actually did discuss about how we could collaborate and how</p>
+            <p id="s521"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=521s" target="_blank" rel="noopener" data-pagefind-ignore>8:41</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name PK at 0:12" data-pagefind-ignore>PK</span>So happy to have those conversations. I mean, we&rsquo;re here for Africa. We are here any day, any catch. We&rsquo;re here to build for Africa.</p>
+            <p id="s527"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=527s" target="_blank" rel="noopener" data-pagefind-ignore>8:47</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I&rsquo;m from Africa.</p>
+            <p id="s528"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=528s" target="_blank" rel="noopener" data-pagefind-ignore>8:48</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name PK at 0:12" data-pagefind-ignore>PK</span>Thank you so much for having me. H</p>
+            <p id="s529"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=529s" target="_blank" rel="noopener" data-pagefind-ignore>8:49</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah. So, we go to something here. We&rsquo;re going to spell.</p>
+            <p id="s532"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=532s" target="_blank" rel="noopener" data-pagefind-ignore>8:52</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name PK at 0:12" data-pagefind-ignore>PK</span>B O U Y.</p>
+            <p id="s534"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=534s" target="_blank" rel="noopener" data-pagefind-ignore>8:54</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>No, you&rsquo;re going to say the camera. I&rsquo;m going to spell it. So, it&rsquo;s spell.</p>
+            <p id="s537"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=537s" target="_blank" rel="noopener" data-pagefind-ignore>8:57</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name PK at 0:12" data-pagefind-ignore>PK</span>B O U Y A.</p>
+            <p id="s538"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=538s" target="_blank" rel="noopener" data-pagefind-ignore>8:58</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>B O U Y A. Your name is correct when the video comes out. Yeah. Yeah. But now, the camera.</p>
+            <p id="s545"><a class="wt-at" href="https://www.youtube.com/watch?v=97S0g1GHphM&amp;t=545s" target="_blank" rel="noopener" data-pagefind-ignore>9:05</a><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model; gives the name PK at 0:12" data-pagefind-ignore>PK</span>My name is PK. I work as co-founder and CEO of RHQ. We are driving um innovation across the Afghan continent through technology, infrastructure, and community. We&rsquo;re live here at ProFest in just plat state with We Them Media. Booyah.</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+<div id="after-transcript" tabindex="-1"><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from Nigeria.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-nigeria">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="showing-them-the-lights-web3bridge-cohort-12-episode-3-lagos.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/oEfR3iIYbBg-640.jpg" srcset="../stills/oEfR3iIYbBg-320.jpg 320w, ../stills/oEfR3iIYbBg-480.jpg 480w, ../stills/oEfR3iIYbBg-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>8:24</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Ikorodu, Lagos · Web3Bridge Cohort 12</span>
+                    <h3 class="report-title">A front-end developer who wanted to build, not consume.</h3>
+                    
+                </div>
+            </a>
+            <a href="deeper-than-defi-web3bridge-cohort-12-episode-7-lagos.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/oQAxFeYXloc-640.jpg" srcset="../stills/oQAxFeYXloc-320.jpg 320w, ../stills/oQAxFeYXloc-480.jpg 480w, ../stills/oQAxFeYXloc-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:44</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Ikorodu, Lagos · Web3Bridge Cohort 12</span>
+                    <h3 class="report-title">A developer on what smart contracts are for.</h3>
+                    
+                </div>
+            </a>
+            <a href="a-life-through-his-generation-abuja.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="https://i.ytimg.com/vi/Avxp4F3o5TQ/hqdefault.jpg" srcset="https://i.ytimg.com/vi/Avxp4F3o5TQ/mqdefault.jpg 320w, https://i.ytimg.com/vi/Avxp4F3o5TQ/hqdefault.jpg 480w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="480" height="270"><span class="wt-dur"><span class="visually-hidden">Length </span>8:55</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Abuja · Street</span>
+                    <h3 class="report-title">A life told from poverty to laying block.</h3>
+                    
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../places.html#jos">Everything filmed in Jos</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

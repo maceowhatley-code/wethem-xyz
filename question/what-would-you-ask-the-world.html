@@ -1,0 +1,1178 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="If you could ask people around the world one question, what would you ask them? Answered in Denver, Lagos, New York and Philadelphia. 32 answers, each a verified quote, with a link to the moment.">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/question/what-would-you-ask-the-world">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="If you could ask people around the world one question, what would you ask them?">
+    <meta property="og:description" content="If you could ask people around the world one question, what would you ask them? Answered in Denver, Lagos, New York and Philadelphia. 32 answers, each a verified quote, with a link to the moment.">
+    <meta property="og:image" content="https://wethem.xyz/og/question/what-would-you-ask-the-world.jpg?v=68ee984373">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="If you could ask people around the world one question, what would you ask them?">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/question/what-would-you-ask-the-world.jpg?v=68ee984373">
+    <meta property="og:url" content="https://wethem.xyz/question/what-would-you-ask-the-world">
+    <title>If you could ask people around the world one question, what would you ask them &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://wethem.xyz/question/what-would-you-ask-the-world",
+  "url": "https://wethem.xyz/question/what-would-you-ask-the-world",
+  "name": "If you could ask people around the world one question, what would you ask them?",
+  "description": "If you could ask people around the world one question, what would you ask them? Answered in Denver, Lagos, New York and Philadelphia. 32 answers, each a verified quote, with a link to the moment.",
+  "dateModified": "2026-09-22",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "mainEntity": {
+    "@type": "Question",
+    "name": "If you could ask people around the world one question, what would you ask them?",
+    "text": "If you could ask people around the world one question, what would you ask them?",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://wethem.xyz/#organization",
+      "name": "We Them Media",
+      "url": "https://wethem.xyz"
+    },
+    "answerCount": 32,
+    "suggestedAnswer": [
+      {
+        "@type": "Answer",
+        "text": "What do you love about life?",
+        "abstract": "What do you love about life?",
+        "url": "https://wethem.xyz/watch/bring-our-people-home-denver#t=100",
+        "isBasedOn": "https://wethem.xyz/watch/bring-our-people-home-denver",
+        "datePublished": "2026-03-28"
+      },
+      {
+        "@type": "Answer",
+        "text": "Why aren't we doing better as a species?",
+        "abstract": "Why aren't we doing better as a species?",
+        "url": "https://wethem.xyz/watch/channel-5-fans-on-what-andrew-callaghan-does-right#t=360",
+        "isBasedOn": "https://wethem.xyz/watch/channel-5-fans-on-what-andrew-callaghan-does-right",
+        "author": {
+          "@type": "Person",
+          "name": "Casey"
+        },
+        "datePublished": "2026-07-20"
+      },
+      {
+        "@type": "Answer",
+        "text": "What would you really be giving up if you led with love instead of fear?",
+        "abstract": "What would you be giving up if you led with love instead of fear?",
+        "url": "https://wethem.xyz/watch/pundits-versus-ground-reporting-channel-5-queue#t=288",
+        "isBasedOn": "https://wethem.xyz/watch/pundits-versus-ground-reporting-channel-5-queue",
+        "author": {
+          "@type": "Person",
+          "name": "Calvin"
+        },
+        "datePublished": "2026-07-22"
+      },
+      {
+        "@type": "Answer",
+        "text": "Why aren't you more neighborly? Why aren't more people talking to their neighbors and creating more of a community?",
+        "abstract": "Why aren't you more neighborly?",
+        "url": "https://wethem.xyz/watch/thirty-years-of-a-local-head-shop-and-why-community#t=442",
+        "isBasedOn": "https://wethem.xyz/watch/thirty-years-of-a-local-head-shop-and-why-community",
+        "author": {
+          "@type": "Person",
+          "name": "Frank"
+        },
+        "datePublished": "2026-03-29"
+      },
+      {
+        "@type": "Answer",
+        "text": "what's the most like transformative moment in your life?",
+        "abstract": "What was the most transformative moment in your life?",
+        "url": "https://wethem.xyz/watch/education-inequality-and-harm-reduction-denver#t=303",
+        "isBasedOn": "https://wethem.xyz/watch/education-inequality-and-harm-reduction-denver",
+        "author": {
+          "@type": "Person",
+          "name": "Edward"
+        },
+        "datePublished": "2026-03-28"
+      },
+      {
+        "@type": "Answer",
+        "text": "favorite place you've ever been?",
+        "abstract": "What is the favourite place you have ever been?",
+        "url": "https://wethem.xyz/watch/education-inequality-and-harm-reduction-denver#t=389",
+        "isBasedOn": "https://wethem.xyz/watch/education-inequality-and-harm-reduction-denver",
+        "author": {
+          "@type": "Person",
+          "name": "Edward"
+        },
+        "datePublished": "2026-03-28"
+      },
+      {
+        "@type": "Answer",
+        "text": "if you had unlimited resources, what would you create?",
+        "abstract": "If you had unlimited resources, what would you create?",
+        "url": "https://wethem.xyz/watch/channel-5-fans-on-what-andrew-callaghan-does-right#t=207",
+        "isBasedOn": "https://wethem.xyz/watch/channel-5-fans-on-what-andrew-callaghan-does-right",
+        "author": {
+          "@type": "Person",
+          "name": "Priscilla"
+        },
+        "datePublished": "2026-07-20"
+      },
+      {
+        "@type": "Answer",
+        "text": "What's your dream?",
+        "abstract": "What is your dream?",
+        "url": "https://wethem.xyz/watch/channel-5-fans-on-what-andrew-callaghan-does-right#t=665",
+        "isBasedOn": "https://wethem.xyz/watch/channel-5-fans-on-what-andrew-callaghan-does-right",
+        "datePublished": "2026-07-20"
+      },
+      {
+        "@type": "Answer",
+        "text": "What makes you happy?",
+        "abstract": "What makes you happy?",
+        "url": "https://wethem.xyz/watch/channel-5-fans-on-what-andrew-callaghan-does-right#t=683",
+        "isBasedOn": "https://wethem.xyz/watch/channel-5-fans-on-what-andrew-callaghan-does-right",
+        "datePublished": "2026-07-20"
+      },
+      {
+        "@type": "Answer",
+        "text": "Why is it so hard out here to make money and keep it?",
+        "abstract": "Why is it so hard to make money and keep it?",
+        "url": "https://wethem.xyz/watch/channel-5-fans-on-what-andrew-callaghan-does-right#t=822",
+        "isBasedOn": "https://wethem.xyz/watch/channel-5-fans-on-what-andrew-callaghan-does-right",
+        "datePublished": "2026-07-20"
+      },
+      {
+        "@type": "Answer",
+        "text": "I think it's interesting to get different people's perspective on what they think of Americans right now.",
+        "abstract": "What do people think of Americans right now?",
+        "url": "https://wethem.xyz/watch/pundits-versus-ground-reporting-channel-5-queue#t=572",
+        "isBasedOn": "https://wethem.xyz/watch/pundits-versus-ground-reporting-channel-5-queue",
+        "datePublished": "2026-07-22"
+      },
+      {
+        "@type": "Answer",
+        "text": "Do they hate us?",
+        "abstract": "Do they hate us?",
+        "url": "https://wethem.xyz/watch/pundits-versus-ground-reporting-channel-5-queue#t=1154",
+        "isBasedOn": "https://wethem.xyz/watch/pundits-versus-ground-reporting-channel-5-queue",
+        "datePublished": "2026-07-22"
+      },
+      {
+        "@type": "Answer",
+        "text": "I guess I would ask them if they like pizza or sandwiches more.",
+        "abstract": "Pizza or sandwiches?",
+        "url": "https://wethem.xyz/watch/pundits-versus-ground-reporting-channel-5-queue#t=801",
+        "isBasedOn": "https://wethem.xyz/watch/pundits-versus-ground-reporting-channel-5-queue",
+        "author": {
+          "@type": "Person",
+          "name": "Liam"
+        },
+        "datePublished": "2026-07-22"
+      },
+      {
+        "@type": "Answer",
+        "text": "what are we doing about … passport holders from underdeveloped paying high amount of money apply for visas",
+        "abstract": "What are we doing about visa inequality?",
+        "url": "https://wethem.xyz/watch/kafani-asks-lagos-four-questions-about-crypto-and-community#t=256",
+        "isBasedOn": "https://wethem.xyz/watch/kafani-asks-lagos-four-questions-about-crypto-and-community",
+        "datePublished": "2026-06-03"
+      },
+      {
+        "@type": "Answer",
+        "text": "how are they coping with their anxiety",
+        "abstract": "How are you coping with your anxiety?",
+        "url": "https://wethem.xyz/watch/social-anxiety-nigeria-student-interview#t=510",
+        "isBasedOn": "https://wethem.xyz/watch/social-anxiety-nigeria-student-interview",
+        "datePublished": "2026-05-09"
+      },
+      {
+        "@type": "Answer",
+        "text": "Are you living a life for yourself or are you living it for other people? You gotta ask yourself that",
+        "abstract": "Are you living for yourself or for other people?",
+        "url": "https://wethem.xyz/watch/grief-journalism-and-getting-on-stage-at-channel-5#t=317",
+        "isBasedOn": "https://wethem.xyz/watch/grief-journalism-and-getting-on-stage-at-channel-5",
+        "author": {
+          "@type": "Person",
+          "name": "David"
+        },
+        "datePublished": "2026-07-19"
+      },
+      {
+        "@type": "Answer",
+        "text": "What keeps them going? Shit's dark I want to know what keeps people going, you know what I mean?",
+        "abstract": "What keeps people going?",
+        "url": "https://wethem.xyz/watch/an-irish-fan-and-an-aspiring-journalist-in-the-channel-5-line#t=186",
+        "isBasedOn": "https://wethem.xyz/watch/an-irish-fan-and-an-aspiring-journalist-in-the-channel-5-line",
+        "author": {
+          "@type": "Person",
+          "name": "Britt"
+        },
+        "datePublished": "2026-07-17"
+      },
+      {
+        "@type": "Answer",
+        "text": "Are we really going to settle for the program that we're being fed",
+        "abstract": "Are we going to settle for the programme we are being fed?",
+        "url": "https://wethem.xyz/watch/an-irish-fan-and-an-aspiring-journalist-in-the-channel-5-line#t=123",
+        "isBasedOn": "https://wethem.xyz/watch/an-irish-fan-and-an-aspiring-journalist-in-the-channel-5-line",
+        "author": {
+          "@type": "Person",
+          "name": "Aiden"
+        },
+        "datePublished": "2026-07-17"
+      },
+      {
+        "@type": "Answer",
+        "text": "why do we treat our homeless like they're filth, why do we treat each other like we hate each other, why don't we just love each other",
+        "abstract": "Why don't we just love each other?",
+        "url": "https://wethem.xyz/watch/a-hitchhiker-on-a-spiritual-mission-outside-channel-5#t=370",
+        "isBasedOn": "https://wethem.xyz/watch/a-hitchhiker-on-a-spiritual-mission-outside-channel-5",
+        "author": {
+          "@type": "Person",
+          "name": "Alex"
+        },
+        "datePublished": "2026-07-17"
+      },
+      {
+        "@type": "Answer",
+        "text": "If I'm going to ask something around the world, which is the best country to live?",
+        "abstract": "Which is the best country to live in?",
+        "url": "https://wethem.xyz/watch/a-venezuelan-air-force-vet-on-f-16s-and-loving-your-work#t=80",
+        "isBasedOn": "https://wethem.xyz/watch/a-venezuelan-air-force-vet-on-f-16s-and-loving-your-work",
+        "author": {
+          "@type": "Person",
+          "name": "Elios"
+        },
+        "datePublished": "2026-04-01"
+      },
+      {
+        "@type": "Answer",
+        "text": "Why aren't you doing what makes you happy?",
+        "abstract": "Why aren't you doing what makes you happy?",
+        "url": "https://wethem.xyz/watch/do-we-have-free-will-a-debate-outside-channel-5#t=165",
+        "isBasedOn": "https://wethem.xyz/watch/do-we-have-free-will-a-debate-outside-channel-5",
+        "datePublished": "2026-07-17"
+      },
+      {
+        "@type": "Answer",
+        "text": "As an educator and mother, I am baffled that people put more time, energy, money, and love into animals than in human beings. Why do you think that is?",
+        "abstract": "Why do people put more love into animals than into people?",
+        "url": "https://wethem.xyz/watch/whats-your-most-controversial-opinion-times-square#t=1172",
+        "isBasedOn": "https://wethem.xyz/watch/whats-your-most-controversial-opinion-times-square",
+        "datePublished": "2026-06-11"
+      },
+      {
+        "@type": "Answer",
+        "text": "just like how you can make somebody's day a little better, maybe.",
+        "abstract": "How you can make somebody's day a little better.",
+        "url": "https://wethem.xyz/watch/what-made-you-smile-today-a-bookcase-and-lovecraft-denver#t=89",
+        "isBasedOn": "https://wethem.xyz/watch/what-made-you-smile-today-a-bookcase-and-lovecraft-denver",
+        "datePublished": "2026-03-31"
+      },
+      {
+        "@type": "Answer",
+        "text": "what keeps them going? Like, what's their drive, I guess, would be?",
+        "abstract": "What keeps them going.",
+        "url": "https://wethem.xyz/watch/what-made-you-smile-today-exploring-denver-from-wyoming#t=80",
+        "isBasedOn": "https://wethem.xyz/watch/what-made-you-smile-today-exploring-denver-from-wyoming",
+        "author": {
+          "@type": "Person",
+          "name": "Yoel Marino"
+        },
+        "datePublished": "2026-03-31"
+      },
+      {
+        "@type": "Answer",
+        "text": "What do you aspire to be? Like, what do you really want to get out of life?",
+        "abstract": "What do you aspire to be?",
+        "url": "https://wethem.xyz/watch/the-draft-prices-and-the-united-states-three-young-men-philadelphia#t=153",
+        "isBasedOn": "https://wethem.xyz/watch/the-draft-prices-and-the-united-states-three-young-men-philadelphia",
+        "datePublished": "2026-04-15"
+      },
+      {
+        "@type": "Answer",
+        "text": "what are your values truly? Who are you trying to grow to be? And what type of feeling are you trying to leave in the world",
+        "abstract": "What are your values, truly?",
+        "url": "https://wethem.xyz/watch/politics-divides-us-in-two-most-important-global-issue-purple-haze-denver#t=87",
+        "isBasedOn": "https://wethem.xyz/watch/politics-divides-us-in-two-most-important-global-issue-purple-haze-denver",
+        "datePublished": "2026-04-03"
+      },
+      {
+        "@type": "Answer",
+        "text": "how hot is too hot? Like, every country has a different level of like, what's their hot level in their food.",
+        "abstract": "How hot is too hot? Every country rates its food differently.",
+        "url": "https://wethem.xyz/watch/what-made-you-smile-dogs-at-cheesman-park-denver#t=107",
+        "isBasedOn": "https://wethem.xyz/watch/what-made-you-smile-dogs-at-cheesman-park-denver",
+        "datePublished": "2026-03-31"
+      },
+      {
+        "@type": "Answer",
+        "text": "¿Por qué las guerras?",
+        "abstract": "¿Por qué las guerras?",
+        "url": "https://wethem.xyz/watch/oscar-de-guatemala-en-denver-salud-trabajo-y-la-cultura#t=122",
+        "isBasedOn": "https://wethem.xyz/watch/oscar-de-guatemala-en-denver-salud-trabajo-y-la-cultura",
+        "datePublished": "2026-04-03"
+      },
+      {
+        "@type": "Answer",
+        "text": "why do you treat others the way you do why do you be the way you are",
+        "abstract": "He would ask people for their why.",
+        "url": "https://wethem.xyz/watch/racism-or-southern-hospitality-two-brothers-from-texas-denver#t=607",
+        "isBasedOn": "https://wethem.xyz/watch/racism-or-southern-hospitality-two-brothers-from-texas-denver",
+        "datePublished": "2026-03-27"
+      },
+      {
+        "@type": "Answer",
+        "text": "What motivates you? What keeps you going? What makes you want to wake up and get out of bed?",
+        "abstract": "What gets you out of bed.",
+        "url": "https://wethem.xyz/watch/live-painting-cherry-blossoms-and-first-friday-denver#t=252",
+        "isBasedOn": "https://wethem.xyz/watch/live-painting-cherry-blossoms-and-first-friday-denver",
+        "author": {
+          "@type": "Person",
+          "name": "Ryan"
+        },
+        "datePublished": "2026-04-17"
+      },
+      {
+        "@type": "Answer",
+        "text": "What are we doing, man?",
+        "abstract": "Five words.",
+        "url": "https://wethem.xyz/watch/a-dj-on-channel-5-street-journalism-and-the-loop-denver#t=399",
+        "isBasedOn": "https://wethem.xyz/watch/a-dj-on-channel-5-street-journalism-and-the-loop-denver",
+        "author": {
+          "@type": "Person",
+          "name": "Kevin"
+        },
+        "datePublished": "2026-04-17"
+      },
+      {
+        "@type": "Answer",
+        "text": "What exactly is Wang Chung-ing? Are we doing it now? Does it really feel that good?",
+        "abstract": "He would like the world to settle Wang Chung.",
+        "url": "https://wethem.xyz/watch/never-been-ashamed-to-cry-denver#t=1419",
+        "isBasedOn": "https://wethem.xyz/watch/never-been-ashamed-to-cry-denver",
+        "author": {
+          "@type": "Person",
+          "name": "Eric"
+        },
+        "datePublished": "2026-03-29"
+      }
+    ]
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "One Question",
+      "item": "https://wethem.xyz/onequestion"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "If you could ask people around the world one question, what would you ask them?",
+      "item": "https://wethem.xyz/question/what-would-you-ask-the-world"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" aria-current="true" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html" aria-current="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece qa-page" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k]" data-pagefind-filter="kind[data-pf-kind]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="question" data-pf-date="2026-07-22" data-pf-vid="WjOTWRTM2Gk" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;1:47&quot;,&quot;s&quot;:1,&quot;w&quot;:640}">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../onequestion.html">One Question</a></li>
+            <li aria-current="page">If you could ask people around the world one question, what would you ask them?</li>
+        </ol>
+    </nav>
+
+    <p class="wt-byline">One question &middot; 32 answers &middot; Denver, Lagos, New York, Philadelphia</p>
+    <h1 class="wt-title">If you could ask people around the world one question, what would you ask them?</h1>
+
+    <div class="q-faces">
+        <a class="wt-thumb" href="../watch/bring-our-people-home-denver.html#t=100" title="On the street in Denver"><img src="../stills/WjOTWRTM2Gk-640.jpg" srcset="../stills/WjOTWRTM2Gk-320.jpg 320w, ../stills/WjOTWRTM2Gk-480.jpg 480w, ../stills/WjOTWRTM2Gk-640.jpg 640w" sizes="(max-width: 640px) calc(50vw - 36px), (max-width: 1280px) calc(25vw - 22px), 298px" alt="On the street in Denver" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>1:47</span></a>
+        <a class="wt-thumb" href="../watch/channel-5-fans-on-what-andrew-callaghan-does-right.html#t=360" title="Casey, a Channel 5 fan"><img src="../stills/CgFdClu5uow-640.jpg" srcset="../stills/CgFdClu5uow-320.jpg 320w, ../stills/CgFdClu5uow-480.jpg 480w, ../stills/CgFdClu5uow-640.jpg 640w" sizes="(max-width: 640px) calc(50vw - 36px), (max-width: 1280px) calc(25vw - 22px), 298px" alt="Casey, a Channel 5 fan" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>16:28</span></a>
+        <a class="wt-thumb" href="../watch/pundits-versus-ground-reporting-channel-5-queue.html#t=288" title="Calvin, in the queue for Channel 5"><img src="../stills/b-adB_nX8ak-640.jpg" srcset="../stills/b-adB_nX8ak-320.jpg 320w, ../stills/b-adB_nX8ak-480.jpg 480w, ../stills/b-adB_nX8ak-640.jpg 640w" sizes="(max-width: 640px) calc(50vw - 36px), (max-width: 1280px) calc(25vw - 22px), 298px" alt="Calvin, in the queue for Channel 5" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>20:14</span></a>
+        <a class="wt-thumb" href="../watch/thirty-years-of-a-local-head-shop-and-why-community.html#t=442" title="Frank, at Purple Haze"><img src="../stills/PCLjSkqhm5I-640.jpg" srcset="../stills/PCLjSkqhm5I-320.jpg 320w, ../stills/PCLjSkqhm5I-480.jpg 480w, ../stills/PCLjSkqhm5I-640.jpg 640w" sizes="(max-width: 640px) calc(50vw - 36px), (max-width: 1280px) calc(25vw - 22px), 298px" alt="Frank, at Purple Haze" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>8:11</span></a>
+    </div>
+
+    <div class="wt-prose">
+            <p>This is the question the whole programme is built on. It has been put, on camera, to people in Denver, Lagos, New York and Philadelphia, and each of these is what one person said when asked what they wanted to know from everybody else.</p>
+            <p>They are the bank the weekly question is drawn from. A question collected on a street in Lagos can be put to somebody in Philadelphia with the Lagos answer already sitting next to it, and every one below is credited to the person who asked it, with a link to the moment they did. Two answers that were jokes rather than questions are left on the tape; everything anybody sincerely asked is here.</p>
+            
+    </div>
+    <p class="pl-q" data-pagefind-ignore><span class="mono">Browse the archive</span> <a href="../portfolio.html">Projects</a> &middot; <a href="../places.html">Where we filmed</a> &middot; <a href="../topics/index.html">Topics</a> &middot; <a href="../people.html">Contributors</a> &middot; <a href="../onequestion.html">One question</a> &middot; <a href="../library.html">The library</a></p>
+
+    <section class="qa-answers" aria-label="Answers">
+        <h2>Who answered, and what did they say?</h2>
+        <p class="wt-note" data-pagefind-ignore>These are the speakers&rsquo; own words, as they said them. We have not checked their claims.</p>
+        <ol class="qa-list">
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/bring-our-people-home-denver.html" aria-label="Watch: “Bring our people home”: on focusing overseas instead of here."><img src="../stills/WjOTWRTM2Gk-640.jpg" srcset="../stills/WjOTWRTM2Gk-320.jpg 320w, ../stills/WjOTWRTM2Gk-480.jpg 480w, ../stills/WjOTWRTM2Gk-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>1:47</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">What do you love about life?</p>
+                    <blockquote class="qa-quote">&ldquo;What do you love about life?&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>On the street in Denver</strong> &middot; <a href="../watch/bring-our-people-home-denver.html">The full piece &rarr;</a> &middot; <a href="../watch/bring-our-people-home-denver.html#t=100">at 1:40</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/channel-5-fans-on-what-andrew-callaghan-does-right.html" aria-label="Watch: Channel 5 fans on what makes Andrew Callaghan work."><img src="../stills/CgFdClu5uow-640.jpg" srcset="../stills/CgFdClu5uow-320.jpg 320w, ../stills/CgFdClu5uow-480.jpg 480w, ../stills/CgFdClu5uow-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>16:28</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Why aren&rsquo;t we doing better as a species?</p>
+                    <blockquote class="qa-quote">&ldquo;Why aren&rsquo;t we doing better as a species?&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>Casey, a Channel 5 fan</strong> &middot; Denver &middot; <a href="../watch/channel-5-fans-on-what-andrew-callaghan-does-right.html">The full piece &rarr;</a> &middot; <a href="../watch/channel-5-fans-on-what-andrew-callaghan-does-right.html#t=360">at 6:00</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/pundits-versus-ground-reporting-channel-5-queue.html" aria-label="Watch: Channel 5 fans on pundits and ground reporting."><img src="../stills/b-adB_nX8ak-640.jpg" srcset="../stills/b-adB_nX8ak-320.jpg 320w, ../stills/b-adB_nX8ak-480.jpg 480w, ../stills/b-adB_nX8ak-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>20:14</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">What would you be giving up if you led with love instead of fear?</p>
+                    <blockquote class="qa-quote">&ldquo;What would you really be giving up if you led with love instead of fear?&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>Calvin, in the queue for Channel 5</strong> &middot; Denver &middot; <a href="../watch/pundits-versus-ground-reporting-channel-5-queue.html">The full piece &rarr;</a> &middot; <a href="../watch/pundits-versus-ground-reporting-channel-5-queue.html#t=288">at 4:48</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/thirty-years-of-a-local-head-shop-and-why-community.html" aria-label="Watch: Frank on thirty years at Purple Haze and the art of glass."><img src="../stills/PCLjSkqhm5I-640.jpg" srcset="../stills/PCLjSkqhm5I-320.jpg 320w, ../stills/PCLjSkqhm5I-480.jpg 480w, ../stills/PCLjSkqhm5I-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>8:11</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Why aren&rsquo;t you more neighborly?</p>
+                    <blockquote class="qa-quote">&ldquo;Why aren&rsquo;t you more neighborly? Why aren&rsquo;t more people talking to their neighbors and creating more of a community?&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>Frank, at Purple Haze</strong> &middot; Denver &middot; <a href="../watch/thirty-years-of-a-local-head-shop-and-why-community.html">The full piece &rarr;</a> &middot; <a href="../watch/thirty-years-of-a-local-head-shop-and-why-community.html#t=442">at 7:22</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/education-inequality-and-harm-reduction-denver.html" aria-label="Watch: A sociology student on loneliness, capitalism, and what worries her most."><img src="../stills/RkdEgIlLEqw-640.jpg" srcset="../stills/RkdEgIlLEqw-320.jpg 320w, ../stills/RkdEgIlLEqw-480.jpg 480w, ../stills/RkdEgIlLEqw-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:16</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">What was the most transformative moment in your life?</p>
+                    <blockquote class="qa-quote">&ldquo;what&rsquo;s the most like transformative moment in your life?&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>Edward, a sociology student</strong> &middot; Denver &middot; <a href="../watch/education-inequality-and-harm-reduction-denver.html">The full piece &rarr;</a> &middot; <a href="../watch/education-inequality-and-harm-reduction-denver.html#t=303">at 5:03</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/education-inequality-and-harm-reduction-denver.html" aria-label="Watch: A sociology student on loneliness, capitalism, and what worries her most."><img src="../stills/RkdEgIlLEqw-640.jpg" srcset="../stills/RkdEgIlLEqw-320.jpg 320w, ../stills/RkdEgIlLEqw-480.jpg 480w, ../stills/RkdEgIlLEqw-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:16</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">What is the favourite place you have ever been?</p>
+                    <blockquote class="qa-quote">&ldquo;favorite place you&rsquo;ve ever been?&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>Edward, again</strong> &middot; Denver &middot; <a href="../watch/education-inequality-and-harm-reduction-denver.html">The full piece &rarr;</a> &middot; <a href="../watch/education-inequality-and-harm-reduction-denver.html#t=389">at 6:29</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/channel-5-fans-on-what-andrew-callaghan-does-right.html" aria-label="Watch: Channel 5 fans on what makes Andrew Callaghan work."><img src="../stills/CgFdClu5uow-640.jpg" srcset="../stills/CgFdClu5uow-320.jpg 320w, ../stills/CgFdClu5uow-480.jpg 480w, ../stills/CgFdClu5uow-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>16:28</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">If you had unlimited resources, what would you create?</p>
+                    <blockquote class="qa-quote">&ldquo;if you had unlimited resources, what would you create?&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>Priscilla, a fifth-generation Texan</strong> &middot; Denver &middot; <a href="../watch/channel-5-fans-on-what-andrew-callaghan-does-right.html">The full piece &rarr;</a> &middot; <a href="../watch/channel-5-fans-on-what-andrew-callaghan-does-right.html#t=207">at 3:27</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/channel-5-fans-on-what-andrew-callaghan-does-right.html" aria-label="Watch: Channel 5 fans on what makes Andrew Callaghan work."><img src="../stills/CgFdClu5uow-640.jpg" srcset="../stills/CgFdClu5uow-320.jpg 320w, ../stills/CgFdClu5uow-480.jpg 480w, ../stills/CgFdClu5uow-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>16:28</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">What is your dream?</p>
+                    <blockquote class="qa-quote">&ldquo;What&rsquo;s your dream?&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>Outside the Channel 5 show</strong> &middot; Denver &middot; <a href="../watch/channel-5-fans-on-what-andrew-callaghan-does-right.html">The full piece &rarr;</a> &middot; <a href="../watch/channel-5-fans-on-what-andrew-callaghan-does-right.html#t=665">at 11:05</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/channel-5-fans-on-what-andrew-callaghan-does-right.html" aria-label="Watch: Channel 5 fans on what makes Andrew Callaghan work."><img src="../stills/CgFdClu5uow-640.jpg" srcset="../stills/CgFdClu5uow-320.jpg 320w, ../stills/CgFdClu5uow-480.jpg 480w, ../stills/CgFdClu5uow-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>16:28</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">What makes you happy?</p>
+                    <blockquote class="qa-quote">&ldquo;What makes you happy?&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>Outside the same show</strong> &middot; Denver &middot; <a href="../watch/channel-5-fans-on-what-andrew-callaghan-does-right.html">The full piece &rarr;</a> &middot; <a href="../watch/channel-5-fans-on-what-andrew-callaghan-does-right.html#t=683">at 11:23</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/channel-5-fans-on-what-andrew-callaghan-does-right.html" aria-label="Watch: Channel 5 fans on what makes Andrew Callaghan work."><img src="../stills/CgFdClu5uow-640.jpg" srcset="../stills/CgFdClu5uow-320.jpg 320w, ../stills/CgFdClu5uow-480.jpg 480w, ../stills/CgFdClu5uow-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>16:28</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Why is it so hard to make money and keep it?</p>
+                    <blockquote class="qa-quote">&ldquo;Why is it so hard out here to make money and keep it?&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>Outside the same show</strong> &middot; Denver &middot; <a href="../watch/channel-5-fans-on-what-andrew-callaghan-does-right.html">The full piece &rarr;</a> &middot; <a href="../watch/channel-5-fans-on-what-andrew-callaghan-does-right.html#t=822">at 13:42</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/pundits-versus-ground-reporting-channel-5-queue.html" aria-label="Watch: Channel 5 fans on pundits and ground reporting."><img src="../stills/b-adB_nX8ak-640.jpg" srcset="../stills/b-adB_nX8ak-320.jpg 320w, ../stills/b-adB_nX8ak-480.jpg 480w, ../stills/b-adB_nX8ak-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>20:14</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">What do people think of Americans right now?</p>
+                    <blockquote class="qa-quote">&ldquo;I think it&rsquo;s interesting to get different people&rsquo;s perspective on what they think of Americans right now.&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>In the queue for Channel 5</strong> &middot; Denver &middot; <a href="../watch/pundits-versus-ground-reporting-channel-5-queue.html">The full piece &rarr;</a> &middot; <a href="../watch/pundits-versus-ground-reporting-channel-5-queue.html#t=572">at 9:32</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/pundits-versus-ground-reporting-channel-5-queue.html" aria-label="Watch: Channel 5 fans on pundits and ground reporting."><img src="../stills/b-adB_nX8ak-640.jpg" srcset="../stills/b-adB_nX8ak-320.jpg 320w, ../stills/b-adB_nX8ak-480.jpg 480w, ../stills/b-adB_nX8ak-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>20:14</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Do they hate us?</p>
+                    <blockquote class="qa-quote">&ldquo;Do they hate us?&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>In the same queue</strong> &middot; Denver &middot; <a href="../watch/pundits-versus-ground-reporting-channel-5-queue.html">The full piece &rarr;</a> &middot; <a href="../watch/pundits-versus-ground-reporting-channel-5-queue.html#t=1154">at 19:14</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/pundits-versus-ground-reporting-channel-5-queue.html" aria-label="Watch: Channel 5 fans on pundits and ground reporting."><img src="../stills/b-adB_nX8ak-640.jpg" srcset="../stills/b-adB_nX8ak-320.jpg 320w, ../stills/b-adB_nX8ak-480.jpg 480w, ../stills/b-adB_nX8ak-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>20:14</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Pizza or sandwiches?</p>
+                    <blockquote class="qa-quote">&ldquo;I guess I would ask them if they like pizza or sandwiches more.&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>Liam, in the same queue</strong> &middot; Denver &middot; <a href="../watch/pundits-versus-ground-reporting-channel-5-queue.html">The full piece &rarr;</a> &middot; <a href="../watch/pundits-versus-ground-reporting-channel-5-queue.html#t=801">at 13:21</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/kafani-asks-lagos-four-questions-about-crypto-and-community.html" aria-label="Watch: Kafani asks Lagos four questions about crypto and community."><img src="../stills/8J43O5f-EJ4-640.jpg" srcset="../stills/8J43O5f-EJ4-320.jpg 320w, ../stills/8J43O5f-EJ4-480.jpg 480w, ../stills/8J43O5f-EJ4-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>52:08</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">What are we doing about visa inequality?</p>
+                    <blockquote class="qa-quote">&ldquo;what are we doing about &hellip; passport holders from underdeveloped paying high amount of money apply for visas&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>At the Lagos pizza party</strong> &middot; <a href="../watch/kafani-asks-lagos-four-questions-about-crypto-and-community.html">The full piece &rarr;</a> &middot; <a href="../watch/kafani-asks-lagos-four-questions-about-crypto-and-community.html#t=256">at 4:16</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/social-anxiety-nigeria-student-interview.html" aria-label="Watch: Social anxiety in Nigeria."><img src="../stills/16gGcoy6sqE-640.jpg" srcset="../stills/16gGcoy6sqE-320.jpg 320w, ../stills/16gGcoy6sqE-480.jpg 480w, ../stills/16gGcoy6sqE-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>9:08</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">How are you coping with your anxiety?</p>
+                    <blockquote class="qa-quote">&ldquo;how are they coping with their anxiety&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>A student, Nigeria</strong> &middot; Lagos &middot; <a href="../watch/social-anxiety-nigeria-student-interview.html">The full piece &rarr;</a> &middot; <a href="../watch/social-anxiety-nigeria-student-interview.html#t=510">at 8:30</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/grief-journalism-and-getting-on-stage-at-channel-5.html" aria-label="Watch: Andrew Callaghan’s Carnival Tour hits Denver: fans on journalism."><img src="../stills/F5vXOAif_FQ-640.jpg" srcset="../stills/F5vXOAif_FQ-320.jpg 320w, ../stills/F5vXOAif_FQ-480.jpg 480w, ../stills/F5vXOAif_FQ-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>14:17</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Are you living for yourself or for other people?</p>
+                    <blockquote class="qa-quote">&ldquo;Are you living a life for yourself or are you living it for other people? You gotta ask yourself that&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>David, from Fargo, in the Channel 5 line</strong> &middot; Denver &middot; <a href="../watch/grief-journalism-and-getting-on-stage-at-channel-5.html">The full piece &rarr;</a> &middot; <a href="../watch/grief-journalism-and-getting-on-stage-at-channel-5.html#t=317">at 5:17</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/an-irish-fan-and-an-aspiring-journalist-in-the-channel-5-line.html" aria-label="Watch: An Irish fan and an aspiring journalist."><img src="../stills/enaFl4XPCy4-640.jpg" srcset="../stills/enaFl4XPCy4-320.jpg 320w, ../stills/enaFl4XPCy4-480.jpg 480w, ../stills/enaFl4XPCy4-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>5:42</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">What keeps people going?</p>
+                    <blockquote class="qa-quote">&ldquo;What keeps them going? Shit&rsquo;s dark I want to know what keeps people going, you know what I mean?&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>Britt, an aspiring journalist, Denver</strong> &middot; <a href="../watch/an-irish-fan-and-an-aspiring-journalist-in-the-channel-5-line.html">The full piece &rarr;</a> &middot; <a href="../watch/an-irish-fan-and-an-aspiring-journalist-in-the-channel-5-line.html#t=186">at 3:06</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/an-irish-fan-and-an-aspiring-journalist-in-the-channel-5-line.html" aria-label="Watch: An Irish fan and an aspiring journalist."><img src="../stills/enaFl4XPCy4-640.jpg" srcset="../stills/enaFl4XPCy4-320.jpg 320w, ../stills/enaFl4XPCy4-480.jpg 480w, ../stills/enaFl4XPCy4-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>5:42</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Are we going to settle for the programme we are being fed?</p>
+                    <blockquote class="qa-quote">&ldquo;Are we really going to settle for the program that we&rsquo;re being fed&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>Aiden, from Ireland, in the Channel 5 line</strong> &middot; Denver &middot; <a href="../watch/an-irish-fan-and-an-aspiring-journalist-in-the-channel-5-line.html">The full piece &rarr;</a> &middot; <a href="../watch/an-irish-fan-and-an-aspiring-journalist-in-the-channel-5-line.html#t=123">at 2:03</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/a-hitchhiker-on-a-spiritual-mission-outside-channel-5.html" aria-label="Watch: A hitchhiker on a spiritual mission."><img src="../stills/80E_4pItE_Y-640.jpg" srcset="../stills/80E_4pItE_Y-320.jpg 320w, ../stills/80E_4pItE_Y-480.jpg 480w, ../stills/80E_4pItE_Y-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:42</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Why don&rsquo;t we just love each other?</p>
+                    <blockquote class="qa-quote">&ldquo;why do we treat our homeless like they&rsquo;re filth, why do we treat each other like we hate each other, why don&rsquo;t we just love each other&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>Alex, hitchhiking through Denver</strong> &middot; <a href="../watch/a-hitchhiker-on-a-spiritual-mission-outside-channel-5.html">The full piece &rarr;</a> &middot; <a href="../watch/a-hitchhiker-on-a-spiritual-mission-outside-channel-5.html#t=370">at 6:10</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/a-venezuelan-air-force-vet-on-f-16s-and-loving-your-work.html" aria-label="Watch: A Venezuelan Air Force vet on F-16s and what still makes him smile."><img src="../stills/n6I2xv0OMQ4-640.jpg" srcset="../stills/n6I2xv0OMQ4-320.jpg 320w, ../stills/n6I2xv0OMQ4-480.jpg 480w, ../stills/n6I2xv0OMQ4-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>9:11</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Which is the best country to live in?</p>
+                    <blockquote class="qa-quote">&ldquo;If I&rsquo;m going to ask something around the world, which is the best country to live?&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>Elios, from Venezuela, in Denver</strong> &middot; <a href="../watch/a-venezuelan-air-force-vet-on-f-16s-and-loving-your-work.html">The full piece &rarr;</a> &middot; <a href="../watch/a-venezuelan-air-force-vet-on-f-16s-and-loving-your-work.html#t=80">at 1:20</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/do-we-have-free-will-a-debate-outside-channel-5.html" aria-label="Watch: Do we have free will?"><img src="../stills/pcG6qlknIOE-640.jpg" srcset="../stills/pcG6qlknIOE-320.jpg 320w, ../stills/pcG6qlknIOE-480.jpg 480w, ../stills/pcG6qlknIOE-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>2:53</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Why aren&rsquo;t you doing what makes you happy?</p>
+                    <blockquote class="qa-quote">&ldquo;Why aren&rsquo;t you doing what makes you happy?&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>A fan outside Channel 5, Denver</strong> &middot; <a href="../watch/do-we-have-free-will-a-debate-outside-channel-5.html">The full piece &rarr;</a> &middot; <a href="../watch/do-we-have-free-will-a-debate-outside-channel-5.html#t=165">at 2:45</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/whats-your-most-controversial-opinion-times-square.html" aria-label="Watch: What&#x27;s your most controversial opinion? Times Square."><img src="../stills/RGWKMCAPW3s-640.jpg" srcset="../stills/RGWKMCAPW3s-320.jpg 320w, ../stills/RGWKMCAPW3s-480.jpg 480w, ../stills/RGWKMCAPW3s-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>28:08</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Why do people put more love into animals than into people?</p>
+                    <blockquote class="qa-quote">&ldquo;As an educator and mother, I am baffled that people put more time, energy, money, and love into animals than in human beings. Why do you think that is?&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>An educator and mother, Times Square</strong> &middot; New York &middot; <a href="../watch/whats-your-most-controversial-opinion-times-square.html">The full piece &rarr;</a> &middot; <a href="../watch/whats-your-most-controversial-opinion-times-square.html#t=1172">at 19:32</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/what-made-you-smile-today-a-bookcase-and-lovecraft-denver.html" aria-label="Watch: What made you smile today? A bookcase and Lovecraft."><img src="../stills/3S93_0F7EIw-640.jpg" srcset="../stills/3S93_0F7EIw-320.jpg 320w, ../stills/3S93_0F7EIw-480.jpg 480w, ../stills/3S93_0F7EIw-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>1:35</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">How you can make somebody&rsquo;s day a little better.</p>
+                    <blockquote class="qa-quote">&ldquo;just like how you can make somebody&rsquo;s day a little better, maybe.&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>A reader in Denver</strong> &middot; <a href="../watch/what-made-you-smile-today-a-bookcase-and-lovecraft-denver.html">The full piece &rarr;</a> &middot; <a href="../watch/what-made-you-smile-today-a-bookcase-and-lovecraft-denver.html#t=89">at 1:29</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/what-made-you-smile-today-exploring-denver-from-wyoming.html" aria-label="Watch: What made you smile today? Exploring Denver from Wyoming."><img src="../stills/kz9_bbpmBJM-640.jpg" srcset="../stills/kz9_bbpmBJM-320.jpg 320w, ../stills/kz9_bbpmBJM-480.jpg 480w, ../stills/kz9_bbpmBJM-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>1:32</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">What keeps them going.</p>
+                    <blockquote class="qa-quote">&ldquo;what keeps them going? Like, what&rsquo;s their drive, I guess, would be?&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>Yoel Marino, from Casper, Wyoming</strong> &middot; Denver &middot; <a href="../watch/what-made-you-smile-today-exploring-denver-from-wyoming.html">The full piece &rarr;</a> &middot; <a href="../watch/what-made-you-smile-today-exploring-denver-from-wyoming.html#t=80">at 1:20</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/the-draft-prices-and-the-united-states-three-young-men-philadelphia.html" aria-label="Watch: The draft, prices, and the United States: three young men."><img src="../stills/AZbJO1ox_mY-640.jpg" srcset="../stills/AZbJO1ox_mY-320.jpg 320w, ../stills/AZbJO1ox_mY-480.jpg 480w, ../stills/AZbJO1ox_mY-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>2:41</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">What do you aspire to be?</p>
+                    <blockquote class="qa-quote">&ldquo;What do you aspire to be? Like, what do you really want to get out of life?&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>One of three young men in Philadelphia</strong> &middot; <a href="../watch/the-draft-prices-and-the-united-states-three-young-men-philadelphia.html">The full piece &rarr;</a> &middot; <a href="../watch/the-draft-prices-and-the-united-states-three-young-men-philadelphia.html#t=153">at 2:33</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/politics-divides-us-in-two-most-important-global-issue-purple-haze-denver.html" aria-label="Watch: Politics divides us in two: the most important global issue, at Purple Haze."><img src="../stills/aXl20fRazeM-640.jpg" srcset="../stills/aXl20fRazeM-320.jpg 320w, ../stills/aXl20fRazeM-480.jpg 480w, ../stills/aXl20fRazeM-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>3:22</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">What are your values, truly?</p>
+                    <blockquote class="qa-quote">&ldquo;what are your values truly? Who are you trying to grow to be? And what type of feeling are you trying to leave in the world&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>At Purple Haze, Denver</strong> &middot; <a href="../watch/politics-divides-us-in-two-most-important-global-issue-purple-haze-denver.html">The full piece &rarr;</a> &middot; <a href="../watch/politics-divides-us-in-two-most-important-global-issue-purple-haze-denver.html#t=87">at 1:27</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/what-made-you-smile-dogs-at-cheesman-park-denver.html" aria-label="Watch: What made you smile today? Dogs at Cheesman Park."><img src="../stills/mtO0yYgrXOs-640.jpg" srcset="../stills/mtO0yYgrXOs-320.jpg 320w, ../stills/mtO0yYgrXOs-480.jpg 480w, ../stills/mtO0yYgrXOs-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>2:20</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">How hot is too hot? Every country rates its food differently.</p>
+                    <blockquote class="qa-quote">&ldquo;how hot is too hot? Like, every country has a different level of like, what&rsquo;s their hot level in their food.&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>At Cheesman Park, Denver</strong> &middot; <a href="../watch/what-made-you-smile-dogs-at-cheesman-park-denver.html">The full piece &rarr;</a> &middot; <a href="../watch/what-made-you-smile-dogs-at-cheesman-park-denver.html#t=107">at 1:47</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/oscar-de-guatemala-en-denver-salud-trabajo-y-la-cultura.html" aria-label="Watch: Óscar de Guatemala en Denver: salud, trabajo y cultura."><img src="../stills/dl9qv2zTSeM-640.jpg" srcset="../stills/dl9qv2zTSeM-320.jpg 320w, ../stills/dl9qv2zTSeM-480.jpg 480w, ../stills/dl9qv2zTSeM-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>2:44</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">¿Por qué las guerras?</p>
+                    <blockquote class="qa-quote">&ldquo;¿Por qué las guerras?&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>Óscar, de Guatemala, en Denver</strong> &middot; <a href="../watch/oscar-de-guatemala-en-denver-salud-trabajo-y-la-cultura.html">The full piece &rarr;</a> &middot; <a href="../watch/oscar-de-guatemala-en-denver-salud-trabajo-y-la-cultura.html#t=122">at 2:02</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/racism-or-southern-hospitality-two-brothers-from-texas-denver.html" aria-label="Watch: Racism or Southern hospitality? Two brothers from Texas."><img src="../stills/hyGTGHgIBdQ-640.jpg" srcset="../stills/hyGTGHgIBdQ-320.jpg 320w, ../stills/hyGTGHgIBdQ-480.jpg 480w, ../stills/hyGTGHgIBdQ-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:40</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">He would ask people for their why.</p>
+                    <blockquote class="qa-quote">&ldquo;why do you treat others the way you do why do you be the way you are&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>One of two brothers from Texas, in Denver</strong> &middot; <a href="../watch/racism-or-southern-hospitality-two-brothers-from-texas-denver.html">The full piece &rarr;</a> &middot; <a href="../watch/racism-or-southern-hospitality-two-brothers-from-texas-denver.html#t=607">at 10:07</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/live-painting-cherry-blossoms-and-first-friday-denver.html" aria-label="Watch: A live painter on cherry blossoms and what made her smile."><img src="../stills/GXm069hI6Jo-640.jpg" srcset="../stills/GXm069hI6Jo-320.jpg 320w, ../stills/GXm069hI6Jo-480.jpg 480w, ../stills/GXm069hI6Jo-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>5:02</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">What gets you out of bed.</p>
+                    <blockquote class="qa-quote">&ldquo;What motivates you? What keeps you going? What makes you want to wake up and get out of bed?&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>Ryan, live painting at First Friday, Denver</strong> &middot; <a href="../watch/live-painting-cherry-blossoms-and-first-friday-denver.html">The full piece &rarr;</a> &middot; <a href="../watch/live-painting-cherry-blossoms-and-first-friday-denver.html#t=252">at 4:12</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/a-dj-on-channel-5-street-journalism-and-the-loop-denver.html" aria-label="Watch: A DJ on Channel 5, street work and the loop."><img src="../stills/sT3XcZaHaV4-640.jpg" srcset="../stills/sT3XcZaHaV4-320.jpg 320w, ../stills/sT3XcZaHaV4-480.jpg 480w, ../stills/sT3XcZaHaV4-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>6:51</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Five words.</p>
+                    <blockquote class="qa-quote">&ldquo;What are we doing, man?&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>Kevin, aka Carbon, at First Friday, Denver</strong> &middot; <a href="../watch/a-dj-on-channel-5-street-journalism-and-the-loop-denver.html">The full piece &rarr;</a> &middot; <a href="../watch/a-dj-on-channel-5-street-journalism-and-the-loop-denver.html#t=399">at 6:39</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="../watch/never-been-ashamed-to-cry-denver.html" aria-label="Watch: Eric, on grief, family, and the human race."><img src="../stills/yepfMr68Rao-640.jpg" srcset="../stills/yepfMr68Rao-320.jpg 320w, ../stills/yepfMr68Rao-480.jpg 480w, ../stills/yepfMr68Rao-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>24:10</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">He would like the world to settle Wang Chung.</p>
+                    <blockquote class="qa-quote">&ldquo;What exactly is Wang Chung-ing? Are we doing it now? Does it really feel that good?&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>Eric, from Shreveport, Louisiana</strong> &middot; Denver &middot; <a href="../watch/never-been-ashamed-to-cry-denver.html">The full piece &rarr;</a> &middot; <a href="../watch/never-been-ashamed-to-cry-denver.html#t=1419">at 23:39</a></p>
+                </div>
+            </li>
+        </ol>
+    </section>
+
+    <section class="qa-more" data-pagefind-ignore>
+        <h2>What else has the archive asked?</h2>
+        <ul class="qa-index">
+                <li><a href="most-important-global-issue.html">What is the most important global issue today?</a> <span class="qa-count">14</span></li>
+                <li><a href="is-the-internet-good-for-us.html">Is the internet good for us?</a> <span class="qa-count">11</span></li>
+                <li><a href="what-made-you-smile-today.html">What made you smile today?</a> <span class="qa-count">17</span></li>
+                <li><a href="what-is-ethereum.html">What is Ethereum?</a> <span class="qa-count">10</span></li>
+                <li><a href="what-do-you-think-of-the-united-states.html">What do you think of the United States?</a> <span class="qa-count">13</span></li>
+                <li><a href="how-has-your-city-changed.html">How has the place you live changed in your lifetime?</a> <span class="qa-count">8</span></li>
+                <li><a href="a-message-for-the-builders.html">Do you have a message for the builders?</a> <span class="qa-count">9</span></li>
+                <li><a href="what-would-you-say-to-someone-under-ten.html">What would you say to someone under ten?</a> <span class="qa-count">12</span></li>
+        </ul>
+        <p class="wt-note">Every answer on these pages is a quote checked against the transcript of the video it came from. To put a question to your own street, see <a href="../onequestion.html">One Question</a>. To find a word across every transcript, <a href="../search.html">search</a>.</p>
+    </section>
+</article>
+
+<div class="wrap wtm-share"></div>
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

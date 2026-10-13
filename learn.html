@@ -1,0 +1,1155 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Learn crypto from the people who use it. Not a course, and nobody here is selling anything: people on their own streets explaining what they know, in their own words.">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="wtm.css">
+    <link rel="stylesheet" href="wtm-v2.css">
+    <link rel="stylesheet" href="cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/learn">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Learn crypto">
+    <meta property="og:description" content="Learn crypto from the people who use it. Not a course, and nobody here is selling anything: people on their own streets explaining what they know, in their own words.">
+    <meta property="og:url" content="https://wethem.xyz/learn">
+    <meta property="og:image" content="https://wethem.xyz/og-learn.png?v=c570ba90b3">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Not a course. Learn crypto from the people who use it.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og-learn.png?v=c570ba90b3">
+    <meta name="twitter:image:alt" content="Not a course. Learn crypto from the people who use it.">
+    <title>Learn crypto &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Learn crypto",
+  "description": "Learn crypto from the people who use it. Not a course, and nobody here is selling anything: people on their own streets explaining what they know, in their own words.",
+  "numberOfItems": 41,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "url": "https://wethem.xyz/watch/what-is-ethereum-university-of-lagos",
+      "name": "What is Ethereum? UNILAG street interviews"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "url": "https://wethem.xyz/watch/you-can-get-paid-for-your-music-new-york",
+      "name": "An artist on music on-chain and a platform closing"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "url": "https://wethem.xyz/watch/the-tiny-phone-and-a-peer-to-peer-plugin",
+      "name": "John and an OG Pizza DAO member, shot on an iPad from the floor"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "url": "https://wethem.xyz/watch/bybit-kenya-mascot-on-getting-paid-to-dance",
+      "name": "Bybit Kenya’s dancing robot"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "url": "https://wethem.xyz/watch/coffee-farming-financed-on-chain-project-mocha",
+      "name": "Coffee on the blockchain. Project Mocha"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "url": "https://wethem.xyz/watch/why-africa-has-few-crypto-creators-chasing-mavericks",
+      "name": "Chasing Mavericks CEO on crypto creators"
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "url": "https://wethem.xyz/watch/ethconf-blockchain-en-mas-de-40-universidades-argentinas",
+      "name": "ETHConf: blockchain en más de 40 universidades argentinas"
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "url": "https://wethem.xyz/watch/racism-or-southern-hospitality-two-brothers-from-texas-denver",
+      "name": "Racism or Southern hospitality? Two brothers from Texas"
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "url": "https://wethem.xyz/watch/bitcoin-hedges-debasement-not-inflation",
+      "name": "One builder’s perspective on Bitcoin, Chainlink, and Ethereum"
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "url": "https://wethem.xyz/watch/staking-a-salary-to-cover-the-rent-ethiopia",
+      "name": "A pitch for credit that does not need a bank"
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "url": "https://wethem.xyz/watch/saving-is-burning-money-daniel-on-stablecoins-and-inflation-nigeria",
+      "name": "Saving is burning money: Daniel on stablecoins and inflation"
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "url": "https://wethem.xyz/watch/crypto-clarity-whats-happening-with-the-money-online",
+      "name": "The first lesson of a four week crypto course"
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "url": "https://wethem.xyz/watch/daniel-on-naira-inflation-crypto-activism-and-africas-future-abuja",
+      "name": "Naira inflation, crypto activism and Africa’s future: Daniel"
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "url": "https://wethem.xyz/watch/a-hundred-interviews-and-why-denver-is-insulated",
+      "name": "100 interviews before leaving Denver, and building a global network"
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "url": "https://wethem.xyz/watch/truth-discourse-and-being-called-a-gentrifier-colfax",
+      "name": "Gaming culture and street life at the arcade on Colfax"
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "url": "https://wethem.xyz/watch/know-your-rights-and-dont-get-played-denver",
+      "name": "Know your rights, and don’t get played"
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "url": "https://wethem.xyz/watch/moon-dust-erc-721-and-what-crypto-owes-the-real-world",
+      "name": "William Entriken, lead author of ERC-721"
+    },
+    {
+      "@type": "ListItem",
+      "position": 18,
+      "url": "https://wethem.xyz/watch/crypto-privacy-and-global-finance-at-an-ethereum-conference-new-york",
+      "name": "Crypto, privacy and global finance at ETHconf: Maggie of Unlink"
+    },
+    {
+      "@type": "ListItem",
+      "position": 19,
+      "url": "https://wethem.xyz/watch/blockchain-in-kenya-and-digital-ids-for-refugees-nairobi",
+      "name": "A developer building digital IDs for people without papers"
+    },
+    {
+      "@type": "ListItem",
+      "position": 20,
+      "url": "https://wethem.xyz/watch/social-tokens-community-and-url-to-irl-denver",
+      "name": "Social tokens, and a conference for Cape Verde"
+    },
+    {
+      "@type": "ListItem",
+      "position": 21,
+      "url": "https://wethem.xyz/watch/leaving-a-nine-to-five-to-build-in-blockchain",
+      "name": "Six months after quitting the nine to five"
+    },
+    {
+      "@type": "ListItem",
+      "position": 22,
+      "url": "https://wethem.xyz/watch/paying-utility-bills-with-crypto-web3bridge-cohort-12-episode-1-lagos",
+      "name": "An app that pays utility bills in crypto"
+    },
+    {
+      "@type": "ListItem",
+      "position": 23,
+      "url": "https://wethem.xyz/watch/estonia-ran-government-records-on-a-blockchain-first",
+      "name": "Estonia ran government records on a blockchain first"
+    },
+    {
+      "@type": "ListItem",
+      "position": 24,
+      "url": "https://wethem.xyz/watch/a-community-for-projects-that-never-ship-ethiopia",
+      "name": "A pitch for one place to find builders and money"
+    },
+    {
+      "@type": "ListItem",
+      "position": 25,
+      "url": "https://wethem.xyz/watch/kafani-asks-lagos-four-questions-about-crypto-and-community",
+      "name": "Kafani asks Lagos four questions about crypto and community"
+    },
+    {
+      "@type": "ListItem",
+      "position": 26,
+      "url": "https://wethem.xyz/watch/global-pizza-party-and-the-crypto-community-ibadan",
+      "name": "An artist in Ibadan on pizza day and crypto friends"
+    },
+    {
+      "@type": "ListItem",
+      "position": 27,
+      "url": "https://wethem.xyz/watch/how-pizza-dao-started-on-clubhouse",
+      "name": "Saucy Saucier, the full conversation"
+    },
+    {
+      "@type": "ListItem",
+      "position": 28,
+      "url": "https://wethem.xyz/watch/the-cyber-panther-party-and-a-bail-fund-denver",
+      "name": "A bail fund on chain, and teaching the wallet"
+    },
+    {
+      "@type": "ListItem",
+      "position": 29,
+      "url": "https://wethem.xyz/watch/the-group-photo-and-what-came-after",
+      "name": "The group photo, and the real conversations that started after it"
+    },
+    {
+      "@type": "ListItem",
+      "position": 30,
+      "url": "https://wethem.xyz/watch/the-real-free-trade-and-an-arena-on-chinatown",
+      "name": "Scarlett on crypto as the real free trade, and Philadelphia politics"
+    },
+    {
+      "@type": "ListItem",
+      "position": 31,
+      "url": "https://wethem.xyz/watch/a-dj-on-channel-5-street-journalism-and-the-loop-denver",
+      "name": "A DJ on Channel 5, street work and the loop"
+    },
+    {
+      "@type": "ListItem",
+      "position": 32,
+      "url": "https://wethem.xyz/watch/blvkhvnd-and-the-crypto-cookout-sirsu-at-eth-denver-2024",
+      "name": "BLVKHVND and the Crypto Cookout: Sirsu"
+    },
+    {
+      "@type": "ListItem",
+      "position": 33,
+      "url": "https://wethem.xyz/watch/once-you-have-a-phone-you-can-enter-web3-daniel-nigeria",
+      "name": "Once you have a phone, you can enter Web3: Daniel"
+    },
+    {
+      "@type": "ListItem",
+      "position": 34,
+      "url": "https://wethem.xyz/watch/sec-commissioner-hester-peirce-on-crypto-rules-black-blockchain-summit",
+      "name": "SEC Commissioner Hester Peirce on where crypto rules are going"
+    },
+    {
+      "@type": "ListItem",
+      "position": 35,
+      "url": "https://wethem.xyz/watch/social-anxiety-youth-suicide-and-the-1-percent-bobby-germantown-philadelphia",
+      "name": "Social anxiety, youth suicide and the 1%: Bobby"
+    },
+    {
+      "@type": "ListItem",
+      "position": 36,
+      "url": "https://wethem.xyz/watch/unlearning-a-hate-for-blockchain-ethiopia",
+      "name": "Gloria on pop-up cities and web3"
+    },
+    {
+      "@type": "ListItem",
+      "position": 37,
+      "url": "https://wethem.xyz/watch/crypto-for-people-who-cant-trust-their-bank-ethconf-nyc",
+      "name": "ETHConf: crypto for people who can't trust their bank"
+    },
+    {
+      "@type": "ListItem",
+      "position": 38,
+      "url": "https://wethem.xyz/watch/an-ethereum-builder-wants-to-run-for-office-ethconf-nyc",
+      "name": "ETHConf: an Ethereum builder on his plan to run for office"
+    },
+    {
+      "@type": "ListItem",
+      "position": 39,
+      "url": "https://wethem.xyz/watch/crypto-clarity-whats-happening-with-the-money-online",
+      "name": "What's Happening With the Money | Crypto Clarity"
+    },
+    {
+      "@type": "ListItem",
+      "position": 40,
+      "url": "https://www.youtube.com/watch?v=55tJz4lXwg8",
+      "name": "Bitcoin, Inflation and Your Money | Crypto Clarity"
+    },
+    {
+      "@type": "ListItem",
+      "position": 41,
+      "url": "https://www.youtube.com/watch?v=rBx99eLkgLs",
+      "name": "Ethereum, Wallets and Smart Contracts | Crypto Clarity"
+    }
+  ]
+}
+    </script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://wethem.xyz"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Learn crypto"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="index.html" class="brand">
+            <picture><source srcset="wtm-mark-64.webp 1x, wtm-mark-128.webp 2x" type="image/webp"><img src="wtm-mark-64.png" srcset="wtm-mark-64.png 1x, wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="portfolio.html" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="learn.html" aria-current="page" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="learn.html" aria-current="page" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Learn crypto</li>
+        </ol>
+    </nav>
+    <h1>Learn crypto from the people who use it.</h1>
+    <p class="lede">Not a course. These are people on their own streets explaining what they know, in their own words, and you can search every word of it.</p>
+    <p>Read it in any order. If one word stops you, <a href="glossary.html">the glossary</a> has sixteen of them in plain language. If one piece is not enough, the question <a href="question/what-is-ethereum.html">What is Ethereum?</a> was put to people in several cities and their answers sit side by side.</p>
+    <p class="wt-note">These are the speakers&rsquo; own words, as they said them. We have not checked their claims, and nothing here is financial advice.</p>
+    <h2>Start with the question.</h2>
+    <p class="wt-note">What is it, in plain words, from people who were asked cold.</p>
+        <ol class="qa-list">
+            <li class="qa">
+                <a class="qa-thumb" href="watch/what-is-ethereum-university-of-lagos.html" aria-label="Watch: What is Ethereum? UNILAG street interviews"><img src="stills/0ylkTXFoXGA-640.jpg" srcset="stills/0ylkTXFoXGA-320.jpg 320w, stills/0ylkTXFoXGA-480.jpg 480w, stills/0ylkTXFoXGA-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Kafani asks UNILAG students what Ethereum is and then actually teaches it: create a wallet, never share your seed phrase, you can start with a dollar, and she onboards one student live and sends him ETH.</p>
+                    <p class="qa-meta"><strong>What is Ethereum? UNILAG street interviews</strong> &middot; Lagos &middot; <a href="watch/what-is-ethereum-university-of-lagos.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/you-can-get-paid-for-your-music-new-york.html" aria-label="Watch: An artist on music on-chain and a platform closing"><img src="stills/WeoYTwWN0Wg-640.jpg" srcset="stills/WeoYTwWN0Wg-320.jpg 320w, stills/WeoYTwWN0Wg-480.jpg 480w, stills/WeoYTwWN0Wg-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Hashdrowned, a New York songwriter, explains how the on-chain music platform Nina worked (&#x27;Bandcamp on chain, like busking&#x27;), why she thinks it ran out of money, how a crypto wallet acts as the artist&#x27;s account, and...</p>
+                    <p class="qa-meta"><strong>An artist on music on-chain and a platform closing</strong> &middot; New York &middot; <a href="watch/you-can-get-paid-for-your-music-new-york.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/the-tiny-phone-and-a-peer-to-peer-plugin.html" aria-label="Watch: John and an OG Pizza DAO member, shot on an iPad from the floor"><img src="stills/uRiZBwpOP5M-640.jpg" srcset="stills/uRiZBwpOP5M-320.jpg 320w, stills/uRiZBwpOP5M-480.jpg 480w, stills/uRiZBwpOP5M-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">John walks through the specs of a tiny Android phone he uses to make browsing less addictive, then explains the peer-to-peer browser plugin he wrote and the difference between a relay server and a cloud server.</p>
+                    <p class="qa-meta"><strong>John and an OG Pizza DAO member, shot on an iPad from the floor</strong> &middot; Philadelphia &middot; <a href="watch/the-tiny-phone-and-a-peer-to-peer-plugin.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/bybit-kenya-mascot-on-getting-paid-to-dance.html" aria-label="Watch: Bybit Kenya’s dancing robot"><img src="stills/iq2RZffD-6E-640.jpg" srcset="stills/iq2RZffD-6E-320.jpg 320w, stills/iq2RZffD-6E-480.jpg 480w, stills/iq2RZffD-6E-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">A Kenyan dancer who came into crypto through content rather than trading explains how he ended up as a brand mascot, and makes the case for other creators to follow.</p>
+                    <p class="qa-meta"><strong>Bybit Kenya’s dancing robot</strong> &middot; Nairobi &middot; <a href="watch/bybit-kenya-mascot-on-getting-paid-to-dance.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/coffee-farming-financed-on-chain-project-mocha.html" aria-label="Watch: Coffee on the blockchain. Project Mocha"><img src="stills/PdxBcoAEyVo-640.jpg" srcset="stills/PdxBcoAEyVo-320.jpg 320w, stills/PdxBcoAEyVo-480.jpg 480w, stills/PdxBcoAEyVo-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">A Kenyan founder explains how blockchain financing reaches coffee farmers, and how somebody who drinks coffee becomes somebody who invests in growing it.</p>
+                    <p class="qa-meta"><strong>Coffee on the blockchain. Project Mocha</strong> &middot; Nairobi &middot; <a href="watch/coffee-farming-financed-on-chain-project-mocha.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/why-africa-has-few-crypto-creators-chasing-mavericks.html" aria-label="Watch: Chasing Mavericks CEO on crypto creators"><img src="stills/F-vrPxqAwHY-640.jpg" srcset="stills/F-vrPxqAwHY-320.jpg 320w, stills/F-vrPxqAwHY-480.jpg 480w, stills/F-vrPxqAwHY-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">The organiser of a Nairobi creator event explains the gap she built it to close: Africa has plenty of influencers in fintech and fashion and almost none in crypto.</p>
+                    <p class="qa-meta"><strong>Chasing Mavericks CEO on crypto creators</strong> &middot; Nairobi &middot; <a href="watch/why-africa-has-few-crypto-creators-chasing-mavericks.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/ethconf-blockchain-en-mas-de-40-universidades-argentinas.html" aria-label="Watch: ETHConf: blockchain en más de 40 universidades argentinas"><img src="https://i.ytimg.com/vi/vDHCpvOirrk/mqdefault.jpg" srcset="https://i.ytimg.com/vi/vDHCpvOirrk/mqdefault.jpg 320w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="320" height="180"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">An Argentine at ETHConf in New York is working to get more people across Latin America, governments and schools above all, to learn and understand blockchain.</p>
+                    <p class="qa-meta"><strong>ETHConf: blockchain en más de 40 universidades argentinas</strong> &middot; New York &middot; <a href="watch/ethconf-blockchain-en-mas-de-40-universidades-argentinas.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/racism-or-southern-hospitality-two-brothers-from-texas-denver.html" aria-label="Watch: Racism or Southern hospitality? Two brothers from Texas"><img src="stills/hyGTGHgIBdQ-640.jpg" srcset="stills/hyGTGHgIBdQ-320.jpg 320w, stills/hyGTGHgIBdQ-480.jpg 480w, stills/hyGTGHgIBdQ-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Two brothers from Texas say the world&#x27;s biggest problem is people minding others&#x27; business and division, that Southern hospitality can mask non-acceptance and racism, and one recounts being harassed at a YMCA for...</p>
+                    <p class="qa-meta"><strong>Racism or Southern hospitality? Two brothers from Texas</strong> &middot; Denver &middot; <a href="watch/racism-or-southern-hospitality-two-brothers-from-texas-denver.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+        </ol>
+    <h2>What it is for.</h2>
+    <p class="wt-note">Inflation, remittances, savings, and a bank account that is not a bank.</p>
+        <ol class="qa-list">
+            <li class="qa">
+                <a class="qa-thumb" href="watch/bitcoin-hedges-debasement-not-inflation.html" aria-label="Watch: One builder’s perspective on Bitcoin, Chainlink, and Ethereum"><img src="stills/m9Cx4VP3Ios-640.jpg" srcset="stills/m9Cx4VP3Ios-320.jpg 320w, stills/m9Cx4VP3Ios-480.jpg 480w, stills/m9Cx4VP3Ios-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">A builder walks through currency debasement versus inflation, uses the 2022 rate-hike period as counter-evidence, and explains decentralized oracles and supply-demand effects of L2s, so a listener could repeat the...</p>
+                    <p class="qa-meta"><strong>One builder’s perspective on Bitcoin, Chainlink, and Ethereum</strong> &middot; New York &middot; <a href="watch/bitcoin-hedges-debasement-not-inflation.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/staking-a-salary-to-cover-the-rent-ethiopia.html" aria-label="Watch: A pitch for credit that does not need a bank"><img src="stills/WCKSD47a2iM-640.jpg" srcset="stills/WCKSD47a2iM-320.jpg 320w, stills/WCKSD47a2iM-480.jpg 480w, stills/WCKSD47a2iM-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">A hackathon pitch for Hakiba explains how staking last month&#x27;s crypto salary could cover this month&#x27;s rent, cites sub-Saharan underbanked figures, and lays out the build plan including a smart contract and an AI...</p>
+                    <p class="qa-meta"><strong>A pitch for credit that does not need a bank</strong> &middot; Ethiopia &middot; <a href="watch/staking-a-salary-to-cover-the-rent-ethiopia.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/saving-is-burning-money-daniel-on-stablecoins-and-inflation-nigeria.html" aria-label="Watch: Saving is burning money: Daniel on stablecoins and inflation"><img src="stills/yDJjFCYtFrw-640.jpg" srcset="stills/yDJjFCYtFrw-320.jpg 320w, stills/yDJjFCYtFrw-480.jpg 480w, stills/yDJjFCYtFrw-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Daniel works the arithmetic of $200,000 in cash being worth $160,000 after inflation, explains hedging by saving and staking stablecoins, and describes the prize money and scholarships he wants to fund for students...</p>
+                    <p class="qa-meta"><strong>Saving is burning money: Daniel on stablecoins and inflation</strong> &middot; Nigeria &middot; <a href="watch/saving-is-burning-money-daniel-on-stablecoins-and-inflation-nigeria.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/crypto-clarity-whats-happening-with-the-money-online.html" aria-label="Watch: The first lesson of a four week crypto course"><img src="stills/W20VlF_HHuQ-640.jpg" srcset="stills/W20VlF_HHuQ-320.jpg 320w, stills/W20VlF_HHuQ-480.jpg 480w, stills/W20VlF_HHuQ-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">A near-hour live preview class where Maceo teaches beginners (including his own mother) dedollarization, how Federal Reserve printing erodes wages, why Bitcoin&#x27;s 21 million cap matters, what a DAO and a wallet are,...</p>
+                    <p class="qa-meta"><strong>The first lesson of a four week crypto course</strong> &middot; Online &middot; <a href="watch/crypto-clarity-whats-happening-with-the-money-online.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/daniel-on-naira-inflation-crypto-activism-and-africas-future-abuja.html" aria-label="Watch: Naira inflation, crypto activism and Africa’s future: Daniel"><img src="stills/M_-dm5jK8Yc-640.jpg" srcset="stills/M_-dm5jK8Yc-320.jpg 320w, stills/M_-dm5jK8Yc-480.jpg 480w, stills/M_-dm5jK8Yc-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Daniel in Gwagwalada explains why Nigerians cannot hold a &#x27;crypto&#x27; event openly while Kenya welcomes it, how Naira inflation eats his weekly savings, why he lost money when Coinbase left, and what he wants blockchain...</p>
+                    <p class="qa-meta"><strong>Naira inflation, crypto activism and Africa’s future: Daniel</strong> &middot; Abuja &middot; <a href="watch/daniel-on-naira-inflation-crypto-activism-and-africas-future-abuja.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/a-hundred-interviews-and-why-denver-is-insulated.html" aria-label="Watch: 100 interviews before leaving Denver, and building a global network"><img src="stills/juYSJnodVrM-640.jpg" srcset="stills/juYSJnodVrM-320.jpg 320w, stills/juYSJnodVrM-480.jpg 480w, stills/juYSJnodVrM-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Maceo explains his plan to shoot 100 unedited interviews before leaving Denver, then a Colorado couple explain the divide between urban Denver and the rural rest of the state, the water shortage, and whether the...</p>
+                    <p class="qa-meta"><strong>100 interviews before leaving Denver, and building a global network</strong> &middot; Denver &middot; <a href="watch/a-hundred-interviews-and-why-denver-is-insulated.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/truth-discourse-and-being-called-a-gentrifier-colfax.html" aria-label="Watch: Gaming culture and street life at the arcade on Colfax"><img src="stills/tZRn0IQTEp4-640.jpg" srcset="stills/tZRn0IQTEp4-320.jpg 320w, stills/tZRn0IQTEp4-480.jpg 480w, stills/tZRn0IQTEp4-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Chase and James outside an arcade on Colfax on whether the internet helps find truth, why online discourse is about scoring points, homelessness and gentrification in Denver, whether they are gentrifiers, AI&#x27;s cost,...</p>
+                    <p class="qa-meta"><strong>Gaming culture and street life at the arcade on Colfax</strong> &middot; Denver &middot; <a href="watch/truth-discourse-and-being-called-a-gentrifier-colfax.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/know-your-rights-and-dont-get-played-denver.html" aria-label="Watch: Know your rights, and don’t get played"><img src="stills/8IWlaBa-Ilw-640.jpg" srcset="stills/8IWlaBa-Ilw-320.jpg 320w, stills/8IWlaBa-Ilw-480.jpg 480w, stills/8IWlaBa-Ilw-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">A man visiting from Las Vegas talks about AI, Trump and the economy, and Maceo explains in plain terms why Bitcoin and stablecoins let you hold and send money without a bank or government freezing it.</p>
+                    <p class="qa-meta"><strong>Know your rights, and don’t get played</strong> &middot; Denver &middot; <a href="watch/know-your-rights-and-dont-get-played-denver.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+        </ol>
+    <p class="qa-meta">20 more on this. <a href="search.html?q=stablecoin">Search the transcripts &rarr;</a></p>
+    <h2>How it gets built.</h2>
+    <p class="wt-note">Developers, hackathons, DAOs and the people who write the contracts.</p>
+        <ol class="qa-list">
+            <li class="qa">
+                <a class="qa-thumb" href="watch/moon-dust-erc-721-and-what-crypto-owes-the-real-world.html" aria-label="Watch: William Entriken, lead author of ERC-721"><img src="stills/337E8mPwhW8-640.jpg" srcset="stills/337E8mPwhW8-320.jpg 320w, stills/337E8mPwhW8-480.jpg 480w, stills/337E8mPwhW8-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">The lead author of ERC-721 explains NFTs as the link between crypto and commercial things, why Argentines prefer Bitcoin to a peso that only falls, what a public good is, and his &#x27;moon dust&#x27; idea of bringing crypto&#x27;s...</p>
+                    <p class="qa-meta"><strong>William Entriken, lead author of ERC-721</strong> &middot; Philadelphia &middot; <a href="watch/moon-dust-erc-721-and-what-crypto-owes-the-real-world.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/crypto-privacy-and-global-finance-at-an-ethereum-conference-new-york.html" aria-label="Watch: Crypto, privacy and global finance at ETHconf: Maggie of Unlink"><img src="stills/WXm8AWkc37M-640.jpg" srcset="stills/WXm8AWkc37M-320.jpg 320w, stills/WXm8AWkc37M-480.jpg 480w, stills/WXm8AWkc37M-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Maggie of Unlink gives a beginner-level explainer on what crypto is, what ETH is, what composability means for Ethereum builders, and how cross-border remittances avoid a thousand-dollar fee on five thousand dollars,...</p>
+                    <p class="qa-meta"><strong>Crypto, privacy and global finance at ETHconf: Maggie of Unlink</strong> &middot; New York &middot; <a href="watch/crypto-privacy-and-global-finance-at-an-ethereum-conference-new-york.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/blockchain-in-kenya-and-digital-ids-for-refugees-nairobi.html" aria-label="Watch: A developer building digital IDs for people without papers"><img src="stills/hIS-Q0EEXPs-640.jpg" srcset="stills/hIS-Q0EEXPs-320.jpg 320w, stills/hIS-Q0EEXPs-480.jpg 480w, stills/hIS-Q0EEXPs-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">A Kenyan developer at a Nairobi hackathon explains the digital-ID app he is building for refugees and undocumented people who cannot access loans, alongside long if sometimes garbled explanations of blockchain,...</p>
+                    <p class="qa-meta"><strong>A developer building digital IDs for people without papers</strong> &middot; Nairobi &middot; <a href="watch/blockchain-in-kenya-and-digital-ids-for-refugees-nairobi.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/social-tokens-community-and-url-to-irl-denver.html" aria-label="Watch: Social tokens, and a conference for Cape Verde"><img src="stills/4uN9BrX2Ztg-640.jpg" srcset="stills/4uN9BrX2Ztg-320.jpg 320w, stills/4uN9BrX2Ztg-480.jpg 480w, stills/4uN9BrX2Ztg-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Carlos from Cape Verde explains what a social token is, how Seed Club and Forefront came out of early experiments with them, why creators should own their audience graph, and his plan for an ETH Cape Verde conference.</p>
+                    <p class="qa-meta"><strong>Social tokens, and a conference for Cape Verde</strong> &middot; Denver &middot; <a href="watch/social-tokens-community-and-url-to-irl-denver.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/leaving-a-nine-to-five-to-build-in-blockchain.html" aria-label="Watch: Six months after quitting the nine to five"><img src="stills/zQOYSV4z82U-640.jpg" srcset="stills/zQOYSV4z82U-320.jpg 320w, stills/zQOYSV4z82U-480.jpg 480w, stills/zQOYSV4z82U-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Tomás, 27, from Argentina explains his shared liquidity pool design and just-in-time liquidity injection, and ties his interest in stablecoins to years of Argentine currency collapse; a single &quot;hell yeah&quot; is the only...</p>
+                    <p class="qa-meta"><strong>Six months after quitting the nine to five</strong> &middot; Online &middot; <a href="watch/leaving-a-nine-to-five-to-build-in-blockchain.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/paying-utility-bills-with-crypto-web3bridge-cohort-12-episode-1-lagos.html" aria-label="Watch: An app that pays utility bills in crypto"><img src="https://i.ytimg.com/vi/8_KJOcZePkk/mqdefault.jpg" srcset="https://i.ytimg.com/vi/8_KJOcZePkk/mqdefault.jpg 320w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="320" height="180"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">A Web3 Bridge graduate from Anambra State describes the cohort (late nights, mentors, community) and the app his team is building, Billoq, which lets Nigerians pay utility bills directly in crypto instead of...</p>
+                    <p class="qa-meta"><strong>An app that pays utility bills in crypto</strong> &middot; Lagos &middot; <a href="watch/paying-utility-bills-with-crypto-web3bridge-cohort-12-episode-1-lagos.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/estonia-ran-government-records-on-a-blockchain-first.html" aria-label="Watch: Estonia ran government records on a blockchain first"><img src="stills/ItZXyjdym94-640.jpg" srcset="stills/ItZXyjdym94-320.jpg 320w, stills/ItZXyjdym94-480.jpg 480w, stills/ItZXyjdym94-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">An Estonian builder explains her country&#x27;s early government-run private blockchain, e-voting, e-residency and zero corporate tax, then defines Ethereum and Bitcoin against each other and pitches the Logos stack and...</p>
+                    <p class="qa-meta"><strong>Estonia ran government records on a blockchain first</strong> &middot; New York &middot; <a href="watch/estonia-ran-government-records-on-a-blockchain-first.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/a-community-for-projects-that-never-ship-ethiopia.html" aria-label="Watch: A pitch for one place to find builders and money"><img src="stills/1sYwAlbN9Ao-640.jpg" srcset="stills/1sYwAlbN9Ao-320.jpg 320w, stills/1sYwAlbN9Ao-480.jpg 480w, stills/1sYwAlbN9Ao-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">An Ethiopian founder gives a clear structured pitch, naming the five roles in his proposed community, what the AI agents would do and how the per-idea token would give investors equity, which is a real walk-through...</p>
+                    <p class="qa-meta"><strong>A pitch for one place to find builders and money</strong> &middot; Ethiopia &middot; <a href="watch/a-community-for-projects-that-never-ship-ethiopia.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+        </ol>
+    <p class="qa-meta">43 more on this. <a href="search.html?q=smart contract">Search the transcripts &rarr;</a></p>
+    <h2>What people make with it.</h2>
+    <p class="wt-note">Art, music, community tokens and a pizza party that went around the world.</p>
+        <ol class="qa-list">
+            <li class="qa">
+                <a class="qa-thumb" href="watch/kafani-asks-lagos-four-questions-about-crypto-and-community.html" aria-label="Watch: Kafani asks Lagos four questions about crypto and community"><img src="stills/8J43O5f-EJ4-640.jpg" srcset="stills/8J43O5f-EJ4-320.jpg 320w, stills/8J43O5f-EJ4-480.jpg 480w, stills/8J43O5f-EJ4-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Kafani walks around Lagos asking students about Bitcoin Pizza Day, community and what they would do with 10,000 BTC, patiently re-explaining the 2010 pizza purchase and that you do not need money to join the crypto...</p>
+                    <p class="qa-meta"><strong>Kafani asks Lagos four questions about crypto and community</strong> &middot; Lagos &middot; <a href="watch/kafani-asks-lagos-four-questions-about-crypto-and-community.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/global-pizza-party-and-the-crypto-community-ibadan.html" aria-label="Watch: An artist in Ibadan on pizza day and crypto friends"><img src="https://i.ytimg.com/vi/RhhOuVzdb6k/mqdefault.jpg" srcset="https://i.ytimg.com/vi/RhhOuVzdb6k/mqdefault.jpg 320w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="320" height="180"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">John, a painter in Ibadan, shows a work in progress and explains what Bitcoin Pizza Day commemorates, then tells how a crypto friend bought him his first ever pizza.</p>
+                    <p class="qa-meta"><strong>An artist in Ibadan on pizza day and crypto friends</strong> &middot; Ibadan &middot; <a href="watch/global-pizza-party-and-the-crypto-community-ibadan.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/how-pizza-dao-started-on-clubhouse.html" aria-label="Watch: Saucy Saucier, the full conversation"><img src="stills/v_yspgq6KvY-640.jpg" srcset="stills/v_yspgq6KvY-320.jpg 320w, stills/v_yspgq6KvY-480.jpg 480w, stills/v_yspgq6KvY-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Saucy Saucier tells how Pizza DAO started: a week off work on Clubhouse in early 2021, an art room where Snacks dreamed up selling NFTs to buy pizza, and the launch party in New York on Bitcoin Pizza Day.</p>
+                    <p class="qa-meta"><strong>Saucy Saucier, the full conversation</strong> &middot; Philadelphia &middot; <a href="watch/how-pizza-dao-started-on-clubhouse.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/the-cyber-panther-party-and-a-bail-fund-denver.html" aria-label="Watch: A bail fund on chain, and teaching the wallet"><img src="stills/dMpIRN44oio-640.jpg" srcset="stills/dMpIRN44oio-320.jpg 320w, stills/dMpIRN44oio-480.jpg 480w, stills/dMpIRN44oio-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Vince from Denver explains how the Cyber Panther Party NFT began as a fund to bail out a friend held 18 months without trial, became an on-chain bail fund for people arrested doing civil disobedience, and now...</p>
+                    <p class="qa-meta"><strong>A bail fund on chain, and teaching the wallet</strong> &middot; Denver &middot; <a href="watch/the-cyber-panther-party-and-a-bail-fund-denver.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/the-group-photo-and-what-came-after.html" aria-label="Watch: The group photo, and the real conversations that started after it"><img src="stills/SA_ZnjyI3Kg-640.jpg" srcset="stills/SA_ZnjyI3Kg-320.jpg 320w, stills/SA_ZnjyI3Kg-480.jpg 480w, stills/SA_ZnjyI3Kg-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Bitcoin Pizza Day in Philadelphia: a group photo with trivia prizes, banter about whether Bitcoin now belongs to Wall Street, and Snacks explaining what it takes to run PizzaDAO&#x27;s global pizza party, which he says is...</p>
+                    <p class="qa-meta"><strong>The group photo, and the real conversations that started after it</strong> &middot; Philadelphia &middot; <a href="watch/the-group-photo-and-what-came-after.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/the-real-free-trade-and-an-arena-on-chinatown.html" aria-label="Watch: Scarlett on crypto as the real free trade, and Philadelphia politics"><img src="stills/rb54mUD72r8-640.jpg" srcset="stills/rb54mUD72r8-320.jpg 320w, stills/rb54mUD72r8-480.jpg 480w, stills/rb54mUD72r8-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Scarlett, from China and living in Philadelphia, explains why decentralization feels like real free trade to her, what an NFT is and what it can be used for beyond art, and questions why a basketball arena needs to...</p>
+                    <p class="qa-meta"><strong>Scarlett on crypto as the real free trade, and Philadelphia politics</strong> &middot; Philadelphia &middot; <a href="watch/the-real-free-trade-and-an-arena-on-chinatown.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/a-dj-on-channel-5-street-journalism-and-the-loop-denver.html" aria-label="Watch: A DJ on Channel 5, street work and the loop"><img src="stills/sT3XcZaHaV4-640.jpg" srcset="stills/sT3XcZaHaV4-320.jpg 320w, stills/sT3XcZaHaV4-480.jpg 480w, stills/sT3XcZaHaV4-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Kevin, a DJ, explains the feedback loop trick he uses at set end and why he pays for Callaghan&#x27;s Patreon; Maceo explains how the bounty works, minting a near-free NFT, and how he made about 8K from airdrops in college.</p>
+                    <p class="qa-meta"><strong>A DJ on Channel 5, street work and the loop</strong> &middot; Denver &middot; <a href="watch/a-dj-on-channel-5-street-journalism-and-the-loop-denver.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/blvkhvnd-and-the-crypto-cookout-sirsu-at-eth-denver-2024.html" aria-label="Watch: BLVKHVND and the Crypto Cookout: Sirsu"><img src="stills/sSyrdlViK3Q-640.jpg" srcset="stills/sSyrdlViK3Q-320.jpg 320w, stills/sSyrdlViK3Q-480.jpg 480w, stills/sSyrdlViK3Q-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Sirsu tells his whole path: Bitcoin in 2011, tokenomics at a New York startup, buying artists&#x27; first NFTs to prove it works, the Twitch walkout that led to BLVKHVND, the Crypto Cookout that raised about 1.5 million,...</p>
+                    <p class="qa-meta"><strong>BLVKHVND and the Crypto Cookout: Sirsu</strong> &middot; Denver &middot; <a href="watch/blvkhvnd-and-the-crypto-cookout-sirsu-at-eth-denver-2024.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+        </ol>
+    <p class="qa-meta">10 more on this. <a href="search.html?q=nft">Search the transcripts &rarr;</a></p>
+    <h2>What can go wrong.</h2>
+    <p class="wt-note">Scams, hacks, lost keys and the regulators.</p>
+        <ol class="qa-list">
+            <li class="qa">
+                <a class="qa-thumb" href="watch/once-you-have-a-phone-you-can-enter-web3-daniel-nigeria.html" aria-label="Watch: Once you have a phone, you can enter Web3: Daniel"><img src="stills/bfg6mL4l9x8-640.jpg" srcset="stills/bfg6mL4l9x8-320.jpg 320w, stills/bfg6mL4l9x8-480.jpg 480w, stills/bfg6mL4l9x8-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Daniel explains how he onboards Nigerian youth on WhatsApp to show that internet fraud is not the only way to earn, and that with only a phone you can learn blockchain, digital marketing and remote work for Web3 brands.</p>
+                    <p class="qa-meta"><strong>Once you have a phone, you can enter Web3: Daniel</strong> &middot; Nigeria &middot; <a href="watch/once-you-have-a-phone-you-can-enter-web3-daniel-nigeria.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/sec-commissioner-hester-peirce-on-crypto-rules-black-blockchain-summit.html" aria-label="Watch: SEC Commissioner Hester Peirce on where crypto rules are going"><img src="stills/I5RC6772toY-640.jpg" srcset="stills/I5RC6772toY-320.jpg 320w, stills/I5RC6772toY-480.jpg 480w, stills/I5RC6772toY-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">SEC Commissioner Hester Peirce explains the agency&#x27;s crypto agenda: where the security/non-security line sits, what the SEC has said it does not regulate, her safe-harbor proposal for token launches, tokenized...</p>
+                    <p class="qa-meta"><strong>SEC Commissioner Hester Peirce on where crypto rules are going</strong> &middot; Washington, DC &middot; <a href="watch/sec-commissioner-hester-peirce-on-crypto-rules-black-blockchain-summit.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/social-anxiety-youth-suicide-and-the-1-percent-bobby-germantown-philadelphia.html" aria-label="Watch: Social anxiety, youth suicide and the 1%: Bobby"><img src="stills/fhGghXrP0Ww-640.jpg" srcset="stills/fhGghXrP0Ww-320.jpg 320w, stills/fhGghXrP0Ww-480.jpg 480w, stills/fhGghXrP0Ww-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Bobby, 59, from North Philadelphia, links social media anxiety to youth suicide, then explains his view of the 1 percent, Occupy Wall Street, how division keeps people distracted, and why the school system was never...</p>
+                    <p class="qa-meta"><strong>Social anxiety, youth suicide and the 1%: Bobby</strong> &middot; Philadelphia &middot; <a href="watch/social-anxiety-youth-suicide-and-the-1-percent-bobby-germantown-philadelphia.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/unlearning-a-hate-for-blockchain-ethiopia.html" aria-label="Watch: Gloria on pop-up cities and web3"><img src="stills/aFLVXj6g0Uw-640.jpg" srcset="stills/aFLVXj6g0Uw-320.jpg 320w, stills/aFLVXj6g0Uw-480.jpg 480w, stills/aFLVXj6g0Uw-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="363"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Gloria, at a pop-up city in Ethiopia, explains what a pop-up city is and how she went from believing Bitcoin was a pyramid scheme to seeing Web3 as a tool for women&#x27;s sports tech.</p>
+                    <p class="qa-meta"><strong>Gloria on pop-up cities and web3</strong> &middot; Ethiopia &middot; <a href="watch/unlearning-a-hate-for-blockchain-ethiopia.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/crypto-for-people-who-cant-trust-their-bank-ethconf-nyc.html" aria-label="Watch: ETHConf: crypto for people who can&#x27;t trust their bank"><img src="https://i.ytimg.com/vi/o5BBj121_G0/mqdefault.jpg" srcset="https://i.ytimg.com/vi/o5BBj121_G0/mqdefault.jpg 320w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="320" height="180"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">At ETHConf in Manhattan, June 2026, Maceo meets Cat McGee of the Solana Foundation, from Ireland and living in Buenos Aires, and Juanpi, who does AI consulting for Latin American companies.</p>
+                    <p class="qa-meta"><strong>ETHConf: crypto for people who can&#x27;t trust their bank</strong> &middot; New York &middot; <a href="watch/crypto-for-people-who-cant-trust-their-bank-ethconf-nyc.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="watch/an-ethereum-builder-wants-to-run-for-office-ethconf-nyc.html" aria-label="Watch: ETHConf: an Ethereum builder on his plan to run for office"><img src="https://i.ytimg.com/vi/ZeDpehpzkms/mqdefault.jpg" srcset="https://i.ytimg.com/vi/ZeDpehpzkms/mqdefault.jpg 320w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="320" height="180"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">At ETHConf in Manhattan, June 2026, an Ethereum builder of several years tells Maceo he came &quot;to feel out the ecosystem and see what folks are building.&quot; Asked what a degen is, he says &quot;Degen is like</p>
+                    <p class="qa-meta"><strong>ETHConf: an Ethereum builder on his plan to run for office</strong> &middot; New York &middot; <a href="watch/an-ethereum-builder-wants-to-run-for-office-ethconf-nyc.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+        </ol>
+    <h2>Crypto Clarity.</h2>
+    <p class="wt-note">Maceo&rsquo;s own sessions, one lesson at a time, in order.</p>
+        <ol class="qa-list">
+            <li class="qa">
+                <a class="qa-thumb" href="watch/crypto-clarity-whats-happening-with-the-money-online.html" aria-label="Watch: What&#x27;s Happening With the Money | Crypto Clarity"><img src="stills/W20VlF_HHuQ-640.jpg" srcset="stills/W20VlF_HHuQ-320.jpg 320w, stills/W20VlF_HHuQ-480.jpg 480w, stills/W20VlF_HHuQ-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">A lesson from the series, recorded live.</p>
+                    <p class="qa-meta"><strong>What&#x27;s Happening With the Money | Crypto Clarity</strong> &middot; 2025-12-15 &middot; <a href="watch/crypto-clarity-whats-happening-with-the-money-online.html">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="https://www.youtube.com/watch?v=55tJz4lXwg8" aria-label="Watch: Bitcoin, Inflation and Your Money | Crypto Clarity"><img src="https://i.ytimg.com/vi/55tJz4lXwg8/mqdefault.jpg" srcset="https://i.ytimg.com/vi/55tJz4lXwg8/mqdefault.jpg 320w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="320" height="180"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">A lesson from the series, recorded live.</p>
+                    <p class="qa-meta"><strong>Bitcoin, Inflation and Your Money | Crypto Clarity</strong> &middot; 2026-09-30 &middot; <a href="https://www.youtube.com/watch?v=55tJz4lXwg8">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+            <li class="qa">
+                <a class="qa-thumb" href="https://www.youtube.com/watch?v=rBx99eLkgLs" aria-label="Watch: Ethereum, Wallets and Smart Contracts | Crypto Clarity"><img src="https://i.ytimg.com/vi/rBx99eLkgLs/mqdefault.jpg" srcset="https://i.ytimg.com/vi/rBx99eLkgLs/mqdefault.jpg 320w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="320" height="180"></a>
+                <div class="qa-body">
+                    <p class="qa-gist">A lesson from the series, recorded live.</p>
+                    <p class="qa-meta"><strong>Ethereum, Wallets and Smart Contracts | Crypto Clarity</strong> &middot; 2026-09-30 &middot; <a href="https://www.youtube.com/watch?v=rBx99eLkgLs">Watch &rarr;</a></p>
+                </div>
+            </li>
+
+        </ol>
+    <h2>The words.</h2>
+    <p>Every term the conversations lean on, defined in plain language, with the moment somebody on tape explains it: <a href="glossary.html">the glossary &rarr;</a></p>
+</article>
+
+<div class="wrap wtm-share"></div>
+<section class="wrap ask" aria-label="Back the work">
+    <div class="ask-in">
+        <span class="ask-k">Keep this going</span>
+        <p class="ask-t"><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="onequestion.html"><span data-count="oq_count">58</span> of <span data-count="oq_goal">150</span> street interviews are in</a> for One Question, which closes Wed 4 November.</p>
+        <div class="ask-cta">
+            <a class="btn btn-primary" href="supporter.html">Back the work &rarr;</a>
+            <a class="btn btn-line" href="film.html">Film one where you live</a>
+        </div>
+    </div>
+</section>
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="where-to-start.html">Where to start</a></li>
+                    <li><a href="portfolio.html">Projects</a></li>
+                    <li><a href="learn.html">Learn crypto</a></li>
+                    <li><a href="clips.html">Clips</a></li>
+                    <li><a href="library.html">The library</a></li>
+                    <li><a href="places.html">Where we filmed</a></li>
+                    <li><a href="guests.html">Who is on the tape</a></li>
+                    <li><a href="dispatches.html">Updates</a></li>
+                    <li><a href="podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="start.html">About</a></li>
+                    <li><a href="mission.html">Mission</a></li>
+                    <li><a href="history.html">How this started</a></li>
+                    <li><a href="people.html">Contributors</a></li>
+                    <li><a href="team.html">The editor roster</a></li>
+                    <li><a href="books.html">Books from the community</a></li>
+                    <li><a href="state.html">State of the network</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="ledger.html">What we have not published</a></li>
+                    <li><a href="privacy.html">What this site keeps about you</a></li>
+                    <li><a href="privacy.html#collect">Your choices</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="supporter.html">Back the work</a></li>
+                    <li><a href="dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="onequestion.html">One Question</a></li>
+                    <li><a href="commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="lite-yt.js" defer></script>
+
+<aside aria-label="Newsletter"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" class="wtm-newsletter-pill" aria-label="The We Them Weekly, once a week by email: what went up and what we are asking next">The We Them Weekly, once a week by email <span class="wtm-newsletter-pill-arrow">&rarr;</span></a></aside>
+<script src="nav.js" defer></script>
+<script src="track.js" defer></script>
+<script data-late>(function(){function go(){['memory.js', 'share.js', 'correct.js', 'newsletter-pill.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

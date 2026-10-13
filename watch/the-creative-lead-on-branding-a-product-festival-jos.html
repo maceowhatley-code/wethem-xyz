@@ -1,0 +1,823 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Twelve minutes at ProdFest in Jos, Plateau State, with the person who made it look the way it looks.">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/the-creative-lead-on-branding-a-product-festival-jos">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="The Creative Lead on Branding a Web3 Festival | Jos">
+    <meta property="og:description" content="Twelve minutes at ProdFest in Jos, Plateau State, with the person who made it look the way it looks.">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/the-creative-lead-on-branding-a-product-festival-jos.jpg?v=cb5070070a">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="The creative lead on branding, jargon and AI">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/the-creative-lead-on-branding-a-product-festival-jos.jpg?v=cb5070070a">
+    <meta property="og:url" content="https://wethem.xyz/watch/the-creative-lead-on-branding-a-product-festival-jos">
+    <title>The Creative Lead on Branding a Web3 Festival | Jos &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/the-creative-lead-on-branding-a-product-festival-jos#video",
+  "name": "The Creative Lead on Branding a Web3 Festival | Jos",
+  "description": "Twelve minutes at ProdFest in Jos, Plateau State, with the person who made it look the way it looks. Lee the GOAT is the creative lead for the event, and he introduces himself at the end of the tape as a creative designer and motion designer. The interviewer arrives having already pressed the organizer on whether the creative side got enough room, and says so, which sets up the rest. Lee starts with what he actually did: \"I actually handled part a majority of the branding\". The brief he set himself was translation. \"the creative part for me was to simplify a majority of the web tree terms and jags and processes that you guys always use to make things very complex\". The second half of the brief was geography. The branding also had to communicate \"plateau states as a place\", because the point was to pull in \"developers that are building in their own separate silos\" and get them into a room with each other. He puts the whole design philosophy in one line: \"Developers need to understand how designers think and designers need to understand how developers think.\" On what a second edition looks like, he is measured. This was the first time hosting it, and he says \"we've learned a lot um through the branding and how the branding actually applies in real world spaces\". Next time, more of it and simpler: \"we plan to make everything more simpler next year and we plan to have way more creatives here\". He wants illustrators and musicians in the building, not just on the poster, and calls that his personal mission. The middle of the conversation is the case for the thing he is advocating, and he makes it from his own losses. He was a dancer before he came into the space. Then: \"I've tried to sell a lot of NFTs right some of them work some of them did not\", and what he took from it was the experience of using the products rather than the sales. His argument for creators is ownership and timing. \"Start earning from day one when you are pushing out content.\" He runs the list of who that covers: \"Think of a musician, think of an artist, think of an illustrator, think of a web designer, think of a social media designer\". Asked about AI, he does not take the bait either way. \"AI is kind of like a new technology like web three that is currently in existence\", and he treats it as a way to enhance a creator rather than replace one. He is specific about the limit: \"definitely AI cannot like start everything for you from finish from start to finish\", and if you test the current models you find that \"it's technically impossible or almost impossible for you to envision what is in your head\". Where it earns its place is volume. An illustrator who needs a hundred pieces can use it to make variations, and then \"you can pick because you are a human\". The reason a person still has to be there is the whole picture: \"You have the entire picture of what the end goal is supposed to look like. AI doesn't just basically mimics what it thinks you want to see.\" It closes with five quickfire questions. Photoshop for design, Photoshop again for editing, After Effects for video, X for social, Discord for web three. Mobile or camera: \"Camera is always better every time.\" No hesitation on that one.",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/xW1u7yZzp-M/maxresdefault.jpg"
+  ],
+  "uploadDate": "2025-09-08T20:18:20Z",
+  "embedUrl": "https://www.youtube.com/embed/xW1u7yZzp-M",
+  "url": "https://wethem.xyz/watch/the-creative-lead-on-branding-a-product-festival-jos",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT12M7S",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "They call you what",
+      "startOffset": 0,
+      "url": "https://wethem.xyz/watch/the-creative-lead-on-branding-a-product-festival-jos?t=0",
+      "endOffset": 56
+    },
+    {
+      "@type": "Clip",
+      "name": "He handled most of ProdFest's branding",
+      "startOffset": 56,
+      "url": "https://wethem.xyz/watch/the-creative-lead-on-branding-a-product-festival-jos?t=56",
+      "endOffset": 70
+    },
+    {
+      "@type": "Clip",
+      "name": "Branding Web3 by simplifying the jargon",
+      "startOffset": 70,
+      "url": "https://wethem.xyz/watch/the-creative-lead-on-branding-a-product-festival-jos?t=70",
+      "endOffset": 96
+    },
+    {
+      "@type": "Clip",
+      "name": "Why the branding sold Plateau State as a place",
+      "startOffset": 96,
+      "url": "https://wethem.xyz/watch/the-creative-lead-on-branding-a-product-festival-jos?t=96",
+      "endOffset": 134
+    },
+    {
+      "@type": "Clip",
+      "name": "Creatives belong in the key decisions",
+      "startOffset": 134,
+      "url": "https://wethem.xyz/watch/the-creative-lead-on-branding-a-product-festival-jos?t=134",
+      "endOffset": 210
+    },
+    {
+      "@type": "Clip",
+      "name": "First time hosting, and what changes next year",
+      "startOffset": 210,
+      "url": "https://wethem.xyz/watch/the-creative-lead-on-branding-a-product-festival-jos?t=210",
+      "endOffset": 280
+    },
+    {
+      "@type": "Clip",
+      "name": "More creatives, more designers, artists performing",
+      "startOffset": 280,
+      "url": "https://wethem.xyz/watch/the-creative-lead-on-branding-a-product-festival-jos?t=280",
+      "endOffset": 329
+    },
+    {
+      "@type": "Clip",
+      "name": "Why creators should earn from day one",
+      "startOffset": 329,
+      "url": "https://wethem.xyz/watch/the-creative-lead-on-branding-a-product-festival-jos?t=329",
+      "endOffset": 398
+    },
+    {
+      "@type": "Clip",
+      "name": "How Web3 makes creatives critical thinkers",
+      "startOffset": 398,
+      "url": "https://wethem.xyz/watch/the-creative-lead-on-branding-a-product-festival-jos?t=398",
+      "endOffset": 435
+    },
+    {
+      "@type": "Clip",
+      "name": "Will AI replace creators? No, it enhances them",
+      "startOffset": 435,
+      "url": "https://wethem.xyz/watch/the-creative-lead-on-branding-a-product-festival-jos?t=435",
+      "endOffset": 521
+    },
+    {
+      "@type": "Clip",
+      "name": "Why prompting is now a talent",
+      "startOffset": 521,
+      "url": "https://wethem.xyz/watch/the-creative-lead-on-branding-a-product-festival-jos?t=521",
+      "endOffset": 611
+    },
+    {
+      "@type": "Clip",
+      "name": "Quickfire: Photoshop, After Effects, X, Discord",
+      "startOffset": 611,
+      "url": "https://wethem.xyz/watch/the-creative-lead-on-branding-a-product-festival-jos?t=611",
+      "endOffset": 686
+    },
+    {
+      "@type": "Clip",
+      "name": "Checking every partner page",
+      "startOffset": 686,
+      "url": "https://wethem.xyz/watch/the-creative-lead-on-branding-a-product-festival-jos?t=686",
+      "endOffset": 727
+    }
+  ],
+  "creator": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "transcript": "They call you what? Lee. Lee. L E E. You're a creative. Yeah. I mean I deserve but I have to plan to start being more I try my best. Okay. But like I heard from um uh the convenor of profest. He said you're the creative lead for Profess. And um the whole idea is to be able to merge um builders and by builders I mean developers and creatives together to coexist and know bring solutions to life. So um I was very curious about how they went about the creative approach of things and I was the one adding that aspect you did hear my concerns a bit about the idea of oh\nthey could have been where like more integration of the creative side of things but I understand that it's depressed and there's more to come. So but for you now where exactly was like how exactly did you see the vision of this when you shared with you?\nYes. So um before starting this they were actually more reference project right but to explain um how the idea actually came about um because um I actually handled part a majority of the branding right\nyeah and I love I love the brand by the way. Yeah thank you very much. Um so the idea we started with was to have a a part where um development that's engineering and design works together and I think the creative part for me was to simplify a majority of the web tree terms and jags and processes that you guys always use to make things very complex right\njust communicate. Yeah. And then a part of that was also to also communicate um plateau states as a place because we are trying to bring people in because we trying to make people around us also developers that are building in their own separate silos. You understand to actually come out and meet new people and understand what is actually going on in the web space at large. Right? So a majority of that branding actually has to incorporate a majority of those things. So um basically we basic we just try to simplify everything for everyone. Developers need to understand how designers think and designers need to understand how developers think. Yeah.\nSo that no for me I'm I'm trying to I'm I'm an advocate for uh for the creative economy to actually grow um to for more infrastructures to actually be created support it you get beyond those of this bounces and other things we see you get but more about idea of us being in the key decision making of how the narrative is being built because I feel like that's why we see a lot of the web two ecosystem evolving you get you can start called the c creators tool. They even went into creating the business tools too for businesses. So it's like they even went into diversifying\num a lot more of the niche and the ecosystems. So we're looking at okay at least for at the very least now we're having what we're calling builders and under these builders we're having what we call developers and we're having creative creators creators here and how they could really create reward solutions that can really make an average man use our products because\nthat's the new web. Yeah, actually. So, with that being said, like for you now, even with this happening, how do you expect like you've learned from this, what do you how can you see yourself evolving in this space and like um how do you expect like the next Broadfest to be or what like what would what should you be expecting?\nYes. So, um as you know, um this is actually our first time um hosting this event, right? So definitely the second one we plan for it to be way more better because we've learned a lot um through the branding and how the branding actually applies in real world spaces like you can see the hall and um yeah we try to have um the majority of our hackathons also I think um I spoke with some of the team members right and we try to find ways to incorporate designers into most of these flows so designers and creative content because no matter no matter what you clothing\nthere has to be someone that going to be there has to be research. Yeah. So these are the things that Yeah. Yeah. People are going to research and put it out there and so that people will be able to use. That's where that's where actually the research part comes in where people can actually search up your product and then know how to use it because you put out stuff there. You put out content that people can actually look for and get. So um coming back to my first statement where I say um the idea is to make everything simple to bridge the gap in between these two um\nwhat I call it ecosystems right um the designers and the engineers we plan to make everything more simpler next year and we plan to have way more creatives here um I feel like that's my personal mission really right so we plan to have more designers more creators people that would help us celebrate web like we need to see NFTs around. Okay. We need to see like for like kind of like we need to see like NF we need to see like an NFT NFT like artist winning like the best NFT or something like that. We need to see artists musical artist come here to perform their products too because\nwhatever they need a product. So we need to see that happening too. when you see I don't know what's going to be like for dancers coming on chain but like\nyes histoally I was a dancer when I came into the whole critical space so there's something I can say about that right um over my time in the web three space right because I've I've tried to sell a lot of NFTs right some of them work some of them did not but the main thing here is that I've gained a lot of experience through interacting with a majority of these products like you have people that only make music and then they sell them as NFTs And for a creator, owning your content and being able to control who actually buys it and people don't just like use your stuff uselessly and\nactually gain control your IP. Yes. Yes. And for a creator that is very very important, you understand? Start earning from day one when you are pushing out content. And that's kind of what web actually help us do. It helps so many creatives actually make more. Think of a musician, think of an artist, think of an illustrator, think of a web designer, think of a social media designer, right? You create a majority of this content and if you can actually help or if you can actually put them on the blockchain, people are going to be willing to pay you a lot of money just to be able to use that. But I know at\nend of video now it's like now I feel like it it scales creatives to a level of being critical thinkers as compared to web before just all about creating music and just putting it there and telling people to go and listen to your song and all. I feel like what web 3 does now and what what the new internet is all about now is purpose. So now it's like you don't own your data what purpose does your data achieve? How does actually provide solutions? Yes, it can. Yes, because how we can evolve this data oriented world is scaling. How does that look like coming into the space too and how can\nartists integrate into leveraging uh the the inference of the next generation? Yeah. So it's okay you have to say about AI um not exactly but um what I can say is that um I feel like AI is kind of like a new technology like web three that is currently in existence right and the way I look at it is a way to enhance a creator's um creativity right so take it for example with an AI I can actually like make variations of something that I've already created definitely AI cannot like start everything for you from finish from start to finish. Obviously, like you can test the new\nmodels that are available and you'll see that um it's technically impossible or almost impossible for you to envision what is in your head, right? Unless if you are someone that had no idea from the beginning, right? But for a creative that actually hopes to create great stuff that will actually help. Putting AI and web together is a way to help um let's say an illustrator now is trying to put out NFTs, right? and you want to make like say 100 pieces of those NFTs so that people will be able to like get in scale, you only one person but AI helps you create more variations of\nthose things and then you can pick because you are a human and you have like um what I call it you can actually see what works and what does not work. You have the entire picture of what the end goal is supposed to look like. AI doesn't just basically mimics what it thinks you want to see.\nYeah. So each iterate. Yeah. Um iterations that's very important as a human being. That's going to be like one of the superpowers that you have above.\nYes. Being able to prompt like prompt is that like now that's even where the talent of prompting comes in cuz everybody can type everybody can. So it's like how do you actually communicate cuz end of day part is still the same creative the power of communication. So you can see that even in the AI world they will still need creatives because we will test these guys. We we'll do the research. We we put this to the limits. We see we stretch it and see how this product can even still evolve and they can use data that they from even creatives to even further enhance it to actually provide\nthe solutions that it needs to. So you see it's it's needed no matter where where the space is creatives bring the culture. So it's important that we start looking out for how we can actually start scaling this and building more value and for the key the VCs the patrons the whatever to start being able to support more creatives not just through just the idea of the bounties or this but the idea of even having more infra having more having more that can encourage towards this initiative but I do believe that there's actually a difference between a creative and a creative so that's important but amazingly\nI thank you so much for your time. My pleasure, man. So, you're going to do something again. Yeah. Before we actually do this thing, I want to play again with you. What was\nthat? Yeah. I'm going to ask you like quick fire questions. Five quick fire questions. Okay. Yeah. You don't you don't know what it is, but you're going to give me an answer to it.\nOkay. Yeah. Favorite designing tool? Photoshop. Favorite editing tool? Has to be Photoshop still. Editing tool? Yeah. Photo editing, design, whatever. Favorite video editing tool? Ah, video editing. Yeah, I always go with After Effects. I'm a lot more proficient with that.\nAfter effect, uh favorite uh sorry favorite social media platform? Uh has to be X. Favorite web three social media platform has platform. Uh social platform has to be Discord.\nDiscord. I would say Pakist Yeah. Um Discord actually helps build um help. Yeah. you connect more with the community there and you get firstand information because like\nYeah. Okay. Discord it is there. Uh the last question. Are you ready? Yes. Uh mobile or camera has to be camera. Camera is always better every time. Well, good man. So you're going to spell booya for me now? Like look at them like spell booya. B O Y A H Have you watched our videos before?\nNot really. But you know the media? Yeah, I know the media. I've watched our videos before. Like I've seen your I've seen your social media channel but like it's not that for a long over the time of like doing the whole design thing. I've seen you guys as one of our like partners. So I've been like I've been checking everybody that's our partners. I've checked their page.\nOh that's good. That is intentionality there. Detailing is very important as a creative that you are too to be. That's amazing. All right. Hello everyone. My name is Wii Brian. You can call me Lee. I'm a creative designer and motion designer. And I'm live at Proest with Be the Media. Booyah.",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Jos",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "Nigeria"
+    },
+    "url": "https://wethem.xyz/places#jos"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Nigeria",
+    "url": "https://wethem.xyz/portfolio#p-nigeria"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Pan-African Web3",
+      "url": "https://wethem.xyz/topics/pan-african-web3"
+    }
+  ],
+  "keywords": [
+    "Pan-African Web3"
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Nigeria",
+      "item": "https://wethem.xyz/portfolio#p-nigeria"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "The creative lead on branding, jargon and AI",
+      "item": "https://wethem.xyz/watch/the-creative-lead-on-branding-a-product-festival-jos"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2025-09-08" data-pf-vid="xW1u7yZzp-M" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;12:07&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="Jos" data-pf-country="Nigeria" data-pf-project="Nigeria">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-nigeria">Nigeria</a></li>
+            <li aria-current="page">The creative lead on branding, jargon and AI</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">The creative lead on branding, jargon and AI.</h1>
+
+    <p class="wt-byline"><strong>Lee the GOAT</strong> &middot; Jos &middot; 12 min</p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="xW1u7yZzp-M" live postersrcset="../stills/xW1u7yZzp-M-320.jpg 320w, ../stills/xW1u7yZzp-M-480.jpg 480w, ../stills/xW1u7yZzp-M-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/xW1u7yZzp-M?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="The creative lead on branding, jargon and AI, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+    <p class="wt-note wt-credit">Executive producer: C.Y. Lee</p>
+
+    <div class="wt-prose">
+            <p>Twelve minutes at ProdFest in Jos, Plateau State, with the person who made it look the way it looks. Lee the GOAT is the creative lead for the event, and he introduces himself at the end of the tape as a creative designer and motion designer. The interviewer arrives having already pressed the organizer on whether the creative side got enough room, and says so, which sets up the rest.</p>
+            <p>Lee starts with what he actually did: &ldquo;I actually handled part a majority of the branding&rdquo;. The brief he set himself was translation. &ldquo;the creative part for me was to simplify a majority of the web tree terms and jags and processes that you guys always use to make things very complex&rdquo;. The second half of the brief was geography. The branding also had to communicate &ldquo;plateau states as a place&rdquo;, because the point was to pull in &ldquo;developers that are building in their own separate silos&rdquo; and get them into a room with each other. He puts the whole design philosophy in one line: &ldquo;Developers need to understand how designers think and designers need to understand how developers think.&rdquo;</p>
+            <p>On what a second edition looks like, he is measured. This was the first time hosting it, and he says &ldquo;we&rsquo;ve learned a lot um through the branding and how the branding actually applies in real world spaces&rdquo;. Next time, more of it and simpler: &ldquo;we plan to make everything more simpler next year and we plan to have way more creatives here&rdquo;. He wants illustrators and musicians in the building, not just on the poster, and calls that his personal mission.</p>
+            <p>The middle of the conversation is the case for the thing he is advocating, and he makes it from his own losses. He was a dancer before he came into the space. Then: &ldquo;I&rsquo;ve tried to sell a lot of NFTs right some of them work some of them did not&rdquo;, and what he took from it was the experience of using the products rather than the sales. His argument for creators is ownership and timing. &ldquo;Start earning from day one when you are pushing out content.&rdquo; He runs the list of who that covers: &ldquo;Think of a musician, think of an artist, think of an illustrator, think of a web designer, think of a social media designer&rdquo;.</p>
+            <p>Asked about AI, he does not take the bait either way. &ldquo;AI is kind of like a new technology like web three that is currently in existence&rdquo;, and he treats it as a way to enhance a creator rather than replace one. He is specific about the limit: &ldquo;definitely AI cannot like start everything for you from finish from start to finish&rdquo;, and if you test the current models you find that &ldquo;it&rsquo;s technically impossible or almost impossible for you to envision what is in your head&rdquo;. Where it earns its place is volume. An illustrator who needs a hundred pieces can use it to make variations, and then &ldquo;you can pick because you are a human&rdquo;. The reason a person still has to be there is the whole picture: &ldquo;You have the entire picture of what the end goal is supposed to look like. AI doesn&rsquo;t just basically mimics what it thinks you want to see.&rdquo;</p>
+            <p>It closes with five quickfire questions. Photoshop for design, Photoshop again for editing, After Effects for video, X for social, Discord for web three. Mobile or camera: &ldquo;Camera is always better every time.&rdquo; No hesitation on that one.</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../places.html#jos">Everything filmed in Jos</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="why-we-built-a-product-focused-conference-jos.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/qVnPgam8iys-640.jpg" srcset="../stills/qVnPgam8iys-320.jpg 320w, ../stills/qVnPgam8iys-480.jpg 480w, ../stills/qVnPgam8iys-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>13:30</span></span><span>Why a first edition conference was built around products.</span></a>
+        <a class="wt-rail-card" href="awareness-then-action-blockchain-from-africa-jos.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/97S0g1GHphM-640.jpg" srcset="../stills/97S0g1GHphM-320.jpg 320w, ../stills/97S0g1GHphM-480.jpg 480w, ../stills/97S0g1GHphM-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>9:24</span></span><span>Awareness, action, and what is missing between builders.</span></a>
+        <a class="wt-rail-card" href="third-place-at-a-hackathon-with-a-team-of-two-jos.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/O4xF5Z_8BDU-640.jpg" srcset="../stills/O4xF5Z_8BDU-320.jpg 320w, ../stills/O4xF5Z_8BDU-480.jpg 480w, ../stills/O4xF5Z_8BDU-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>6:17</span></span><span>A designer turned builder on winning with two people.</span></a>
+        <a class="wt-rail-card" href="creative-alchemy-from-the-founder-anesi-life-camp-abuja.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/z_v7X8KBVLg-640.jpg" srcset="../stills/z_v7X8KBVLg-320.jpg 320w, ../stills/z_v7X8KBVLg-480.jpg 480w, ../stills/z_v7X8KBVLg-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>38:18</span></span><span>Creative Alchemy, from the founder: Ánesi at Life Camp.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c0"><a class="wt-t" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-s">They call you what</span></li>
+                <li class="wt-line" id="c56"><a class="wt-t" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=56s" target="_blank" rel="noopener" data-pagefind-ignore>0:56</a><span class="wt-s">He handled most of ProdFest&#x27;s branding</span></li>
+                <li class="wt-line" id="c70"><a class="wt-t" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=70s" target="_blank" rel="noopener" data-pagefind-ignore>1:10</a><span class="wt-s">Branding Web3 by simplifying the jargon</span></li>
+                <li class="wt-line" id="c96"><a class="wt-t" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=96s" target="_blank" rel="noopener" data-pagefind-ignore>1:36</a><span class="wt-s">Why the branding sold Plateau State as a place</span></li>
+                <li class="wt-line" id="c134"><a class="wt-t" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=134s" target="_blank" rel="noopener" data-pagefind-ignore>2:14</a><span class="wt-s">Creatives belong in the key decisions</span></li>
+                <li class="wt-line" id="c210"><a class="wt-t" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=210s" target="_blank" rel="noopener" data-pagefind-ignore>3:30</a><span class="wt-s">First time hosting, and what changes next year</span></li>
+                <li class="wt-line" id="c280"><a class="wt-t" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=280s" target="_blank" rel="noopener" data-pagefind-ignore>4:40</a><span class="wt-s">More creatives, more designers, artists performing</span></li>
+                <li class="wt-line" id="c329"><a class="wt-t" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=329s" target="_blank" rel="noopener" data-pagefind-ignore>5:29</a><span class="wt-s">Why creators should earn from day one</span></li>
+                <li class="wt-line" id="c398"><a class="wt-t" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=398s" target="_blank" rel="noopener" data-pagefind-ignore>6:38</a><span class="wt-s">How Web3 makes creatives critical thinkers</span></li>
+                <li class="wt-line" id="c435"><a class="wt-t" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=435s" target="_blank" rel="noopener" data-pagefind-ignore>7:15</a><span class="wt-s">Will AI replace creators? No, it enhances them</span></li>
+                <li class="wt-line" id="c521"><a class="wt-t" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=521s" target="_blank" rel="noopener" data-pagefind-ignore>8:41</a><span class="wt-s">Why prompting is now a talent</span></li>
+                <li class="wt-line" id="c611"><a class="wt-t" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=611s" target="_blank" rel="noopener" data-pagefind-ignore>10:11</a><span class="wt-s">Quickfire: Photoshop, After Effects, X, Discord</span></li>
+                <li class="wt-line" id="c686"><a class="wt-t" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=686s" target="_blank" rel="noopener" data-pagefind-ignore>11:26</a><span class="wt-s">Checking every partner page</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Who speaks, by their own introduction on the tape: <a href="../guests.html#g-wii-brian">Wii Brian</a> at <a class="wt-at" data-seek="713" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=713s" target="_blank" rel="noopener" data-pagefind-ignore>11:53</a>. Where YouTube masked a word it shows as [bleeped]. Speaker letters mark turns, not names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a>They call you what? Lee. Lee. L E E. You&rsquo;re a creative. Yeah. I mean I deserve but I have to plan to start being more I try my best. Okay. But like I heard from um uh the convenor of profest. He said you&rsquo;re the creative lead for Profess. And um the whole idea is to be able to merge um builders and by builders I mean developers and creatives together to coexist and know bring solutions to life. So um I was very curious about how they went about the creative approach of things and I was the one adding that aspect you did hear my concerns a bit about the idea of oh</p>
+            <p id="s44"><a class="wt-at" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=44s" target="_blank" rel="noopener" data-pagefind-ignore>0:44</a>they could have been where like more integration of the creative side of things but I understand that it&rsquo;s depressed and there&rsquo;s more to come. So but for you now where exactly was like how exactly did you see the vision of this when you shared with you?</p>
+            <p id="s56"><a class="wt-at" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=56s" target="_blank" rel="noopener" data-pagefind-ignore>0:56</a>Yes. So um before starting this they were actually more reference project right but to explain um how the idea actually came about um because um I actually handled part a majority of the branding right</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s70"><a class="wt-at" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=70s" target="_blank" rel="noopener" data-pagefind-ignore>1:10</a>yeah and I love I love the brand by the way. Yeah thank you very much. Um so the idea we started with was to have a a part where um development that&rsquo;s engineering and design works together and I think the creative part for me was to simplify a majority of the web tree terms and jags and processes that you guys always use to make things very complex right</p>
+            <p id="s96"><a class="wt-at" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=96s" target="_blank" rel="noopener" data-pagefind-ignore>1:36</a>just communicate. Yeah. And then a part of that was also to also communicate um plateau states as a place because we are trying to bring people in because we trying to make people around us also developers that are building in their own separate silos. You understand to actually come out and meet new people and understand what is actually going on in the web space at large. Right? So a majority of that branding actually has to incorporate a majority of those things. So um basically we basic we just try to simplify everything for everyone. Developers need to understand how designers think and designers need to understand how developers think. Yeah.</p>
+            <p id="s134"><a class="wt-at" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=134s" target="_blank" rel="noopener" data-pagefind-ignore>2:14</a>So that no for me I&rsquo;m I&rsquo;m trying to I&rsquo;m I&rsquo;m an advocate for uh for the creative economy to actually grow um to for more infrastructures to actually be created support it you get beyond those of this bounces and other things we see you get but more about idea of us being in the key decision making of how the narrative is being built because I feel like that&rsquo;s why we see a lot of the web two ecosystem evolving you get you can start called the c creators tool. They even went into creating the business tools too for businesses. So it&rsquo;s like they even went into diversifying</p>
+            <p id="s173"><a class="wt-at" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=173s" target="_blank" rel="noopener" data-pagefind-ignore>2:53</a>um a lot more of the niche and the ecosystems. So we&rsquo;re looking at okay at least for at the very least now we&rsquo;re having what we&rsquo;re calling builders and under these builders we&rsquo;re having what we call developers and we&rsquo;re having creative creators creators here and how they could really create reward solutions that can really make an average man use our products because</p>
+            <p id="s193"><a class="wt-at" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=193s" target="_blank" rel="noopener" data-pagefind-ignore>3:13</a>that&rsquo;s the new web. Yeah, actually. So, with that being said, like for you now, even with this happening, how do you expect like you&rsquo;ve learned from this, what do you how can you see yourself evolving in this space and like um how do you expect like the next Broadfest to be or what like what would what should you be expecting?</p>
+            <p id="s210"><a class="wt-at" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=210s" target="_blank" rel="noopener" data-pagefind-ignore>3:30</a>Yes. So, um as you know, um this is actually our first time um hosting this event, right? So definitely the second one we plan for it to be way more better because we&rsquo;ve learned a lot um through the branding and how the branding actually applies in real world spaces like you can see the hall and um yeah we try to have um the majority of our hackathons also I think um I spoke with some of the team members right and we try to find ways to incorporate designers into most of these flows so designers and creative content because no matter no matter what you clothing</p>
+            <p id="s248"><a class="wt-at" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=248s" target="_blank" rel="noopener" data-pagefind-ignore>4:08</a>there has to be someone that going to be there has to be research. Yeah. So these are the things that Yeah. Yeah. People are going to research and put it out there and so that people will be able to use. That&rsquo;s where that&rsquo;s where actually the research part comes in where people can actually search up your product and then know how to use it because you put out stuff there. You put out content that people can actually look for and get. So um coming back to my first statement where I say um the idea is to make everything simple to bridge the gap in between these two um</p>
+            <p id="s280"><a class="wt-at" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=280s" target="_blank" rel="noopener" data-pagefind-ignore>4:40</a>what I call it ecosystems right um the designers and the engineers we plan to make everything more simpler next year and we plan to have way more creatives here um I feel like that&rsquo;s my personal mission really right so we plan to have more designers more creators people that would help us celebrate web like we need to see NFTs around. Okay. We need to see like for like kind of like we need to see like NF we need to see like an NFT NFT like artist winning like the best NFT or something like that. We need to see artists musical artist come here to perform their products too because</p>
+            <p id="s322"><a class="wt-at" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=322s" target="_blank" rel="noopener" data-pagefind-ignore>5:22</a>whatever they need a product. So we need to see that happening too. when you see I don&rsquo;t know what&rsquo;s going to be like for dancers coming on chain but like</p>
+            <p id="s329"><a class="wt-at" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=329s" target="_blank" rel="noopener" data-pagefind-ignore>5:29</a>yes histoally I was a dancer when I came into the whole critical space so there&rsquo;s something I can say about that right um over my time in the web three space right because I&rsquo;ve I&rsquo;ve tried to sell a lot of NFTs right some of them work some of them did not but the main thing here is that I&rsquo;ve gained a lot of experience through interacting with a majority of these products like you have people that only make music and then they sell them as NFTs And for a creator, owning your content and being able to control who actually buys it and people don&rsquo;t just like use your stuff uselessly and</p>
+            <p id="s364"><a class="wt-at" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=364s" target="_blank" rel="noopener" data-pagefind-ignore>6:04</a>actually gain control your IP. Yes. Yes. And for a creator that is very very important, you understand? Start earning from day one when you are pushing out content. And that&rsquo;s kind of what web actually help us do. It helps so many creatives actually make more. Think of a musician, think of an artist, think of an illustrator, think of a web designer, think of a social media designer, right? You create a majority of this content and if you can actually help or if you can actually put them on the blockchain, people are going to be willing to pay you a lot of money just to be able to use that. But I know at</p>
+            <p id="s398"><a class="wt-at" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=398s" target="_blank" rel="noopener" data-pagefind-ignore>6:38</a>end of video now it&rsquo;s like now I feel like it it scales creatives to a level of being critical thinkers as compared to web before just all about creating music and just putting it there and telling people to go and listen to your song and all. I feel like what web 3 does now and what what the new internet is all about now is purpose. So now it&rsquo;s like you don&rsquo;t own your data what purpose does your data achieve? How does actually provide solutions? Yes, it can. Yes, because how we can evolve this data oriented world is scaling. How does that look like coming into the space too and how can</p>
+            <p id="s435"><a class="wt-at" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=435s" target="_blank" rel="noopener" data-pagefind-ignore>7:15</a>artists integrate into leveraging uh the the inference of the next generation? Yeah. So it&rsquo;s okay you have to say about AI um not exactly but um what I can say is that um I feel like AI is kind of like a new technology like web three that is currently in existence right and the way I look at it is a way to enhance a creator&rsquo;s um creativity right so take it for example with an AI I can actually like make variations of something that I&rsquo;ve already created definitely AI cannot like start everything for you from finish from start to finish. Obviously, like you can test the new</p>
+            <p id="s471"><a class="wt-at" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=471s" target="_blank" rel="noopener" data-pagefind-ignore>7:51</a>models that are available and you&rsquo;ll see that um it&rsquo;s technically impossible or almost impossible for you to envision what is in your head, right? Unless if you are someone that had no idea from the beginning, right? But for a creative that actually hopes to create great stuff that will actually help. Putting AI and web together is a way to help um let&rsquo;s say an illustrator now is trying to put out NFTs, right? and you want to make like say 100 pieces of those NFTs so that people will be able to like get in scale, you only one person but AI helps you create more variations of</p>
+            <p id="s502"><a class="wt-at" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=502s" target="_blank" rel="noopener" data-pagefind-ignore>8:22</a>those things and then you can pick because you are a human and you have like um what I call it you can actually see what works and what does not work. You have the entire picture of what the end goal is supposed to look like. AI doesn&rsquo;t just basically mimics what it thinks you want to see.</p>
+            <p id="s521"><a class="wt-at" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=521s" target="_blank" rel="noopener" data-pagefind-ignore>8:41</a>Yeah. So each iterate. Yeah. Um iterations that&rsquo;s very important as a human being. That&rsquo;s going to be like one of the superpowers that you have above.</p>
+            <p id="s528"><a class="wt-at" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=528s" target="_blank" rel="noopener" data-pagefind-ignore>8:48</a>Yes. Being able to prompt like prompt is that like now that&rsquo;s even where the talent of prompting comes in cuz everybody can type everybody can. So it&rsquo;s like how do you actually communicate cuz end of day part is still the same creative the power of communication. So you can see that even in the AI world they will still need creatives because we will test these guys. We we&rsquo;ll do the research. We we put this to the limits. We see we stretch it and see how this product can even still evolve and they can use data that they from even creatives to even further enhance it to actually provide</p>
+            <p id="s557"><a class="wt-at" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=557s" target="_blank" rel="noopener" data-pagefind-ignore>9:17</a>the solutions that it needs to. So you see it&rsquo;s it&rsquo;s needed no matter where where the space is creatives bring the culture. So it&rsquo;s important that we start looking out for how we can actually start scaling this and building more value and for the key the VCs the patrons the whatever to start being able to support more creatives not just through just the idea of the bounties or this but the idea of even having more infra having more having more that can encourage towards this initiative but I do believe that there&rsquo;s actually a difference between a creative and a creative so that&rsquo;s important but amazingly</p>
+            <p id="s596"><a class="wt-at" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=596s" target="_blank" rel="noopener" data-pagefind-ignore>9:56</a>I thank you so much for your time. My pleasure, man. So, you&rsquo;re going to do something again. Yeah. Before we actually do this thing, I want to play again with you. What was</p>
+            <p id="s602"><a class="wt-at" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=602s" target="_blank" rel="noopener" data-pagefind-ignore>10:02</a>that? Yeah. I&rsquo;m going to ask you like quick fire questions. Five quick fire questions. Okay. Yeah. You don&rsquo;t you don&rsquo;t know what it is, but you&rsquo;re going to give me an answer to it.</p>
+            <p id="s611"><a class="wt-at" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=611s" target="_blank" rel="noopener" data-pagefind-ignore>10:11</a>Okay. Yeah. Favorite designing tool? Photoshop. Favorite editing tool? Has to be Photoshop still. Editing tool? Yeah. Photo editing, design, whatever. Favorite video editing tool? Ah, video editing. Yeah, I always go with After Effects. I&rsquo;m a lot more proficient with that.</p>
+            <p id="s628"><a class="wt-at" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=628s" target="_blank" rel="noopener" data-pagefind-ignore>10:28</a>After effect, uh favorite uh sorry favorite social media platform? Uh has to be X. Favorite web three social media platform has platform. Uh social platform has to be Discord.</p>
+            <p id="s643"><a class="wt-at" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=643s" target="_blank" rel="noopener" data-pagefind-ignore>10:43</a>Discord. I would say Pakist Yeah. Um Discord actually helps build um help. Yeah. you connect more with the community there and you get firstand information because like</p>
+            <p id="s657"><a class="wt-at" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=657s" target="_blank" rel="noopener" data-pagefind-ignore>10:57</a>Yeah. Okay. Discord it is there. Uh the last question. Are you ready? Yes. Uh mobile or camera has to be camera. Camera is always better every time. Well, good man. So you&rsquo;re going to spell booya for me now? Like look at them like spell booya. B O Y A H Have you watched our videos before?</p>
+            <p id="s686"><a class="wt-at" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=686s" target="_blank" rel="noopener" data-pagefind-ignore>11:26</a>Not really. But you know the media? Yeah, I know the media. I&rsquo;ve watched our videos before. Like I&rsquo;ve seen your I&rsquo;ve seen your social media channel but like it&rsquo;s not that for a long over the time of like doing the whole design thing. I&rsquo;ve seen you guys as one of our like partners. So I&rsquo;ve been like I&rsquo;ve been checking everybody that&rsquo;s our partners. I&rsquo;ve checked their page.</p>
+            <p id="s704"><a class="wt-at" href="https://www.youtube.com/watch?v=xW1u7yZzp-M&amp;t=704s" target="_blank" rel="noopener" data-pagefind-ignore>11:44</a>Oh that&rsquo;s good. That is intentionality there. Detailing is very important as a creative that you are too to be. That&rsquo;s amazing. All right. Hello everyone. My name is Wii Brian. You can call me Lee. I&rsquo;m a creative designer and motion designer. And I&rsquo;m live at Proest with Be the Media. Booyah.</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+<div id="after-transcript" tabindex="-1"><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from Nigeria.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-nigeria">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="showing-them-the-lights-web3bridge-cohort-12-episode-3-lagos.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/oEfR3iIYbBg-640.jpg" srcset="../stills/oEfR3iIYbBg-320.jpg 320w, ../stills/oEfR3iIYbBg-480.jpg 480w, ../stills/oEfR3iIYbBg-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>8:24</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Ikorodu, Lagos · Web3Bridge Cohort 12</span>
+                    <h3 class="report-title">A front-end developer who wanted to build, not consume.</h3>
+                    
+                </div>
+            </a>
+            <a href="deeper-than-defi-web3bridge-cohort-12-episode-7-lagos.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/oQAxFeYXloc-640.jpg" srcset="../stills/oQAxFeYXloc-320.jpg 320w, ../stills/oQAxFeYXloc-480.jpg 480w, ../stills/oQAxFeYXloc-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:44</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Ikorodu, Lagos · Web3Bridge Cohort 12</span>
+                    <h3 class="report-title">A developer on what smart contracts are for.</h3>
+                    
+                </div>
+            </a>
+            <a href="a-life-through-his-generation-abuja.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="https://i.ytimg.com/vi/Avxp4F3o5TQ/hqdefault.jpg" srcset="https://i.ytimg.com/vi/Avxp4F3o5TQ/mqdefault.jpg 320w, https://i.ytimg.com/vi/Avxp4F3o5TQ/hqdefault.jpg 480w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="480" height="270"><span class="wt-dur"><span class="visually-hidden">Length </span>8:55</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Abuja · Street</span>
+                    <h3 class="report-title">A life told from poverty to laying block.</h3>
+                    
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../places.html#jos">Everything filmed in Jos</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

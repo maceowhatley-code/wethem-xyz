@@ -1,0 +1,593 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="What’s a no-show to a superfan? Back in high school, during the Bitcoin-for-acid-tabs era, when credit card kids shelled out funds for rare digital DragonVale eggs and future super">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+
+    <link rel="canonical" href="https://wethem.xyz/onchain/essay-frank-ocean-chatgpt-the-non-effort-eating-music-alive">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://wethem.xyz/onchain/essay-frank-ocean-chatgpt-the-non-effort-eating-music-alive">
+    <meta property="og:title" content="Frank Ocean, ChatGPT, &amp; The Non-Effort Eating Music Alive &middot; We Them Media">
+    <meta property="og:description" content="What’s a no-show to a superfan? Back in high school, during the Bitcoin-for-acid-tabs era, when credit card kids shelled out funds for rare digital DragonVale eggs and future super">
+    <title>Frank Ocean, ChatGPT, &amp; The Non-Effort Eating Music Alive &middot; We Them Media</title>
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap es-piece">
+    <p class="oc-crumb"><a href="../library.html">The library</a> &middot;
+       <span>Written onchain</span></p>
+    <h1 class="es-h1">Frank Ocean, ChatGPT, &amp; The Non-Effort Eating Music Alive</h1>
+    <p class="oc-meta">Published 2023-05-17 &middot; 4,857 words &middot;
+       signed by <a href="https://optimistic.etherscan.io/address/0xa505f054e207594423a841d6bcb3cc08d64e84fc" target="_blank" rel="noopener">the founder&#8217;s wallet</a>
+       and stored on Arweave</p>
+
+    <div class="es-body">
+        <p class="es-p">What’s a no-show to a superfan?</p>
+        <p class="es-p">Back in high school, during the Bitcoin-for-acid-tabs era, when credit card kids shelled out funds for rare digital DragonVale eggs and future superstars took their first swings on DatPiff dot com, no one could escape the tryhard allegations.</p>
+        <p class="es-p">They might strike through the snarled whisper of a desk neighbor after you dare raise a hand, or in the cafeteria, as a choir of accusations distract from the french fry robbers besieging your lunch tray. Excellence, unless seen as effortless, brought barbed wire.</p>
+        <p class="es-p">“Tryhard” has utility — a counterweight against rise &amp; grind fiends, friends who play hero ball during 2-on-2 pickup like a disgruntled cyclops, and singers who hit the vibrato like a jackhammer every other syllable (me). But the phrase, popularized by some gaming communities as an insult, evolved to target anyone striving for anything. It’s a whiff of a pattern with big ripples: the rise of self-surrender.</p>
+        <p class="es-p">Our society will <em>always</em> have safe spaces for discipline and grit (especially if you’re training with the CIA to overthrow governments or living out the bootstrap wet dreams of trust-funded monopolists), which might help explain why we’re well over a decade into the omnipresence of “chill” as a prepackaged descriptor. Something starts to feel different, though, when enough people confuse ease of use and ease of execution. The path of least resistance begins to resemble a Texas freeway at rush hour — everyone trying to get the most by doing the least. Punt mediocrity into the world, call it authentic, repeat.</p>
+        <p class="es-p">While I’m of the belief that this is <a href="https://catalog.mirror.xyz/mufwHdfPfQXAc3tCTm-1xUYhLUqTemE4RZTKKg-Om8I" target="_blank" rel="noopener">the most exciting, vibrant time</a> to love music, AI-powered attempts to replicate and replace human artistry have arrived at this broader cultural moment of nepo babies and TikTok-to-major-label pipelines. Last month, a reclusive superstar — rightly or wrongly viewed as an upholder of mainstream music quality for over a decade — returned half-baked on one of the world’s biggest stages. As Frank Ocean fielded the most relentless criticism of his career and fears of ChatGPT songwriters bloomed, the need for a temperature check arose. Enter <a href="https://beta.catalog.works/dannydwyer" target="_blank" rel="noopener">Danny Dwyer.</a></p>
+        <p class="es-p">Danny jumped on the music rollercoaster a decade ago as a precocious teenager from a working class family in Missouri. His journey since, from early SoundCloud darling to navigating major publishing deals and five-figure marketing budgets, has introduced him to the peaks and valleys of the industry. He’s pawned things off to make ends meet and produced alongside pop elites, rapidly gaining a reputation, from LA to Copenhagen, as a boundless talent and multi-instrumentalist capable of marathon sessions. He joined me for a back-and-forth discussion about, well, the state of everything. Keep scrolling for the goods, and thank you for reading. Stay safe out there.</p>
+        <img class="es-img" loading="lazy" src="https://images.mirror-media.xyz/publication-images/HTZ10GgJ1ObsNkxW3z6GD.png?height=762&amp;width=1188" alt="">
+        <p class="es-p"><strong>You manage to make music full time and moonlight as a mad scientist. What are you building now?</strong></p>
+        <p class="es-p">I’m trying to combine both practices. Right now I’m focused on making VCOs: voltage-controlled oscillators. In a modular synth, that’s what makes the noise. Everything else lets you control that noise, or send it to different places. I can buy all the parts in bulk from AliExpress… I’m hoping to make and give out 20 of them to my friends. I found a 30-minute video on YouTube that walked me through it. Most tutorials are for building circuits that are too simple or too complex. This one was therapeutic — with illustrations and plumbing analogies.</p>
+        <p class="es-p">I’d love to make a guitar pedal with a distinct clipping mechanism, designed around a batch of transistors from the USSR, the whole thing housed in marble.</p>
+        <p class="es-p"><strong>Are you soldering transistors yourself?</strong></p>
+        <p class="es-p">Yes, but first drafting on a breadboard. People used to literally take a wooden breadboard, hammer nails into it, and connect the wires with that. I’d love to revive that as a design concept, too.</p>
+        <p class="es-p"><strong>Punk engineering.</strong></p>
+        <p class="es-p">There&#x27;s art in it. I’m not a right-brained person, but I like the idea of something with a right answer, when so much of my day is rooted in music. Banging your head against the wall, to me, is the music process. It’s nice to have a thing that balances that out. It’s not as unachievable as you might think. I used to love dirt biking as a kid. When I finally got my own motorcycle a couple years ago and had to learn how to fix it up, that opened up a lot for me. Even if I could pay someone else to fix a thing, sometimes it&#x27;s worth it to buy the $5 replacement part yourself and get it right. Most people aren’t willing to do that, but if you are, there’s a power in that.</p>
+        <p class="es-p"><strong>A lot of things feel out of reach when you’re conditioned on “ease of use.” How have your efforts been received by others around you?</strong></p>
+        <p class="es-p">A lot of people act insulted when I talk about this stuff [<em>Laughs</em>]. It’s like a barrier grows between us. Asking me <em>why</em> I’d ever engage with mechanical engineering in any form. If I were to say, “I don’t paint, let me take a wine and painting class,” there’s support for that. No one’s going to say “You’re not a potter! Why are you taking a pottery class? You won’t be able to make pots well!” I’m not sure why we’re not more encouraged to blow shit up and shock ourselves. Lick a battery, then dry your tongue and lick the battery again. You’ll know what low resistance feels like. Everyone’s obsessed with utility. I’ll build a motor and someone will say, “Nice science fair project.” Meanwhile, actual electrical engineers, or motorcycle mechanics, don’t have that attitude at all. They’re not impressed, necessarily, but they’re not appalled either. They see it for what it is and comment on that.</p>
+        <p class="es-p"><strong>Would you trace this passion back to working with your dad growing up, fixing fridges in the midwest?</strong></p>
+        <p class="es-p">I think so. Growing up, electricity is this magical, magical thing, and we just accept it. I saw it as a challenge to figure that out. Even though I didn’t want to do what my dad did, being around him fixing appliances gave me a perspective I brought to music. <em>Why</em> does a vintage synth sound better than a VST? What needs to happen on the inside to make it feel warmer? Can we switch out the component that’s responsible? How did they engineer the SOMA Labs gear to get those sounds? The barriers start to break away. I like the YouTube channel ElectroBOOM a lot because he is a great entertainer and educator. I want people to watch him the way they watch <em>Friends</em>. People are pressed about turning lights off when using your heater for a minute is exponentially worse. GPT tells me someone would have to leave an LED light bulb running for 30 hours to match the power consumption of using a hairdryer for 10 minutes. Is that true? Time will tell.</p>
+        <p class="es-p"><strong>Everything’s ‘abstracted’ away. From electricity to software. A lot of people don’t want to think about the layers behind what we see, myself included sometimes, but it does put us at a disadvantage. Things become problems beyond our awareness. Take the garbage truck that we just walked past, and what its purpose is. How many of us have actually seen a landfill?</strong></p>
+        <p class="es-p">Ideally, even the things that get abstracted away should encourage digging in and be approachable. Etherscan is a layer of abstraction removed for most Ethereum users, but it’s also intimidating, and it shouldn’t be. With GPT, it seems like most users have already divorced themselves from the responsibility to understand, but I can at least ask it, “How do you know what you’re telling me? How did you arrive there?”</p>
+        <p class="es-p"><strong>You could say Frank Ocean, as an artist, abstracts himself away.</strong></p>
+        <p class="es-p">And built everything off of that abstraction. On the other end of the spectrum you have the artists breaking down every nanosecond of what they did in 15-second clips. I don’t know if that’s the answer, but I do think the artist-fan relationship is more two-sided than it’s often discussed. Artists don’t owe us shit. I don’t owe you shit as an artist. But you don’t owe me shit either. Investors don’t owe artists financial support without anything in return. Fans don’t have a sworn responsibility to show up for you forever. It’s for the artist to try and find a way to game that paradox in their favor. I don’t think Frank Ocean is winning that paradox anymore. Not right now. You have to be on top of your craft.</p>
+        <p class="es-p"><strong>Artists and their work can feel like extensions or augmentations of who we are. Do you have that relationship with technology?</strong></p>
+        <p class="es-p">I think something changed when I became interested in getting really good at talking to Google, down to the syntax, the word choices. In a way, the best part about getting the motorcycle was having an excuse to talk to Google, which is now a pretty useless tool if you don’t include “reddit” at the end of your search. This is about engaging with abstraction usefully. Before Google, I had to go get a textbook, and have 100% understanding of how a motor works, and make lots of needless errors. With Google, I might need 20% understanding to make that same motor work, because I can ask more targeted questions and receive useful answers. It turns learning on its head and I think we take that for granted.</p>
+        <img class="es-img" loading="lazy" src="https://images.mirror-media.xyz/publication-images/LhhApKcXgiGZr_y3paT4a.gif?height=1067&amp;width=600" alt="">
+        <p class="es-p"><strong>Do you feel like you’re experiencing a form of evolution?</strong></p>
+        <p class="es-p">We can use YouTube and Fusion V60 to make a 3D-printable aerodynamic drone. I’m excited for people who aren’t curious about this to get curious. You can wake up and decide you want a drone and build it by 3pm. Then there’s AI. Last night, we asked GPT to write me a circuit that would turn a few push buttons and an Arduino I had lying around into a basic midi controller that I could use with the VCO. It spits out a circuit and an arduino code. I follow it step by step but it doesn&#x27;t work so I ask why. GPT tells me I’m missing a package and gives me step-by-step directions for how to find and install it. I do it, and it works. In that moment, it becomes more efficient and useful to just ask GPT a troubleshooting question, conversationally, than any other route of problem solving. As a joke, I asked GPT to write HTML code for a bot that generates a random baseball fact. Five minutes later, I’ve stood up a functioning bot website in Replit. Just for the bit! [<em>Laughs</em>] I want to have fun and make stuff and this helps me do that.</p>
+        <p class="es-p">**High-tech meme generation. The question all this brings to mind for me might be, <em>Is this self-sufficiency?</em> A lot of the conversation around GPT has ping ponged between total denial of replacement, when it’s already happening, and total human replacement, to a degree that feels anti-human, because it assumes we have zero curiosity or remixing abilities or a desire to actually learn something. This coming from someone (me) who’s very paranoid about AI and its effects on human art.**</p>
+        <p class="es-p">I really see it the same way I see Blender as a tool to use Python. In the world, we’re already at this point where I think most of us don’t fully understand what’s happening, whether it’s how the plane works that we’re flying on, the world of finance, the election, or climate change, which probably feels unsolvable to most human beings.</p>
+        <p class="es-p"><strong>Do you see the seemingly infinite problem-solving power of a fully formed GPT tool as a way of coping or contending with life overwhelming us?</strong></p>
+        <p class="es-p">I think it gives us a shot at expanding ourselves. When I’m talking to GPT, sometimes I refer to code as the code “you” wrote, sometimes I say the code “we” wrote. Right now, it’s sort of this call and response. It won’t proactively come to me and present an idea. But it’s probably already running unprompted, drawing conclusions. Or at least getting tested to do that. That’s AGI. I think pretty soon I’ll be asking a not-bad version of Siri what I want for breakfast, and based on my fitness data, what it knows about what’s in my fridge, what it knows about the restaurants near me, and what it knows about my preferences and allergies, it’ll give me a good answer.</p>
+        <p class="es-p"><strong>Moving away from Danny Dwyer the person and toward Danny Dwyer the artist for a second — some of the architects of these tools are explicitly trying to emulate, to an indistinguishable degree, the works of human artists. What do you make of that?</strong></p>
+        <p class="es-p">I know I’m sort of alone on this, but I don’t have anxiety around that. I think great artists offer commentary on time. We mark time through music, through painting. I’m thinking of cubism and multidimensionality coming up together. Art isn’t about the lobby of the Marriott. There might be money in that, but that’s different. I think the demand for interpreters of ideas and time is only going to increase. <em>Blonde</em> marked a moment. It effectively used surrealism. It had compositions that felt brave at the time for that level of release. We don’t value that album because it sounds good in a waiting room. Then again, is making music different than making a VCO with GPT? Maybe the capital for music dries up in 10 years, but the capital for human truck drivers will too. The optimistic outcome is that it becomes easy for anyone in their garage to produce something that adds to the conversation of what the MIT grads are working on in their silos.</p>
+        <p class="es-p"><strong>There’s another through-line between Frank Ocean and GPT here — the first was abstraction. Now what comes to mind is this idea of non-effort.</strong></p>
+        <p class="es-p">Speaking solely from my own perspective, I’m inspired by people who love what they do. You meet a photographer and everyone says, “Oh, they just like to party,” or, “They use photography as an excuse to hang out with models” — and that’s often true! But sometimes you talk to them and all they care about are lenses and hyper-specific, nerdy details about their craft, which inspires you to go dig more into the nerdy details of your own thing. That’s what’s cool to me. I want to be that for others. Ariana Grande is supposed to be one of the best vocal engineers ever. She sits at the computer for hours, tracking herself, recutting, editing out breaths. I think we have a shortage of that level of effort. More broadly, we have a shortage of purpose. It’s depressing to meet someone succeeding who doesn’t care about the small details of their craft, but somehow it’s working out.</p>
+        <p class="es-p"><strong>You can’t learn from someone else’s nepotism, or luck, or failing upwards, but you can emulate their effort.</strong></p>
+        <p class="es-p">Yes. Especially in an age of mass automation. I used to think it was cooler to show up at a session, bring my presence, and let other people do the heavy lifting. I’m over that. People are picking up a guitar and posting short-form ‘content’ for a month and signing six-figure or seven-figure deals with budgets they’ll never make back. We have to protect this shit. The bar’s been lowered. I feel like Frank Ocean showed up with that my-presence-is-enough energy to do a Coachella show he had three years to prepare for. We used to have this idea, at least in 2016 when <em>Blonde</em> came out, that the more art moves and grows without you, the artist, it must be bigger than you. Maybe that still works when you put everything you have into something. But what that show felt like to me was, “I’m so great I don’t even have to try,” and that is radically disappointing and out of style. This is a time where we’re being automated out of our function as human beings. We’re in a recession of passion. Not trying doesn’t make you a ‘real’ artist.</p>
+        <p class="es-p">This isn’t to shit on someone who I’ve loved as an artist. This is to say I want to see more of us motivated and curious, and that performance felt like it was neither. What’s cool to me is seeing Skrillex subbing in as a headliner then DJing at the after-afterparty until 4am. He’s still in love with it and hungry for it. That motivates someone watching a clip of that moment to put their phone down and grab their DJ controller. Coming from a working class background, it took me a long time just to not feel guilty for not doing manual labor every day. To feel like I’m actually contributing anything of use with music. I am in LA making songs while my dad is 60 years old delivering refrigerators and my mom is cleaning houses. It sucks to see someone at Frank Ocean’s level not take what he has seriously, especially knowing he didn’t grow up with much either.</p>
+        <img class="es-img" loading="lazy" src="https://images.mirror-media.xyz/publication-images/tJgcWp4HgdoXbdUWCRTJO.gif?height=1067&amp;width=600" alt="">
+        <p class="es-p">**I think the two of us have different views here, but I see what you’re saying. I admire the path he’s taken, be it his finesse of Def Jam or his hard-earned ability to exist on his own terms. But as a fan, I agree in the sense that I see a distinction between Frank Ocean returning in 2017, post-Blonde, with “Chanel,” versus returning in 2023, post-Homer, with half of one weekend of a Coachella set to show for it. That said, we’re in a prolonged era of ‘authenticity’ as marketing, #buildinginpublic, and an ongoing wave of hunger for lofi, demo-adjacent music, from XXX before his passing to Shiloh Dynasty to RXKNephew loosies. The Coachella set sort of fits into all of that — this work in progress. Look at Frank’s <em>Endless</em> video from 2016. I think there’s a case to be made that the Frankchella fiasco was actually in line with that pattern, or philosophy.**</p>
+        <p class="es-p">Watching this shortform era take center stage in the music industry conversation really changed how I think about the &quot;transparency era&quot; that I feel <em>Blonde</em> was the cornerstone of. A lot of people I look up to in the business side of being a professional musician, they started advising artists to blur ethical lines in pursuit of a boost, or overshare, and air your dirty laundry in public. That moment was artificially inflated. Virality got handed out to different users to draw people onto the app in the early days, and last year it dried up when profit margins never caught up. At the same time, TikTok is one of the first ‘great’ AI algorithms but also acted as a mirror amplifying the primal side of human nature. You’ve got a bunch of people all over the world running up to strangers to try and embarrass them, then figuring out how to edit the video to make it even more embarrassing. But short-form content is getting old and the &quot;demo era&quot; was left ripped to shreds. Meta is losing money on it, and TikTok’s supporting longer running times on videos.</p>
+        <p class="es-p"><strong>I think that in part started because of access — talented artists without resources throwing raw music on Soundcloud — and in part started as this cultural backlash to poptimism and the Max Martin sheen. Some of it’s nihilism. Some of it might be that too many artists are infected with the idea that they, too, are startups, and must drop music rapidly and iterate like they’re releasing software. Now you’re saying there’s a backlash to the backlash.</strong></p>
+        <p class="es-p">Yes, in the sense that the same platform we’re supposed to use to ‘authentically’ preview music is the platform that has no responsibility to truth. It’s an internet problem, but it feels as bad as ever. When I see new information on socials, I’m vetting it through realities of primal human nature, and how that may contribute to the video being fed deeper into the algorithm: Is the person attractive? To who? Are people making fun of them?</p>
+        <p class="es-p"><strong>I’m sure there’s at least a few 1000 people out there who’ve seen a video suggesting GPT knows the nuclear codes. There was lots of talk about the Frankchella performance and the goings-on behind it, but do you think an anti-Frank cultural tide existed before that?</strong></p>
+        <p class="es-p">When <em>Blonde</em> came out, it was this beautiful, surrealist challenge to maximalist, Max Martin pop and <em>Avengers</em>-era blockbusters.</p>
+        <p class="es-p"><strong>Anti-assembly line cultural production — albeit with some <a href="https://pitchfork.com/news/frank-ocean-and-producer-ommas-keith-drop-blonde-lawsuits/" target="_blank" rel="noopener">settled lawsuits</a>.</strong></p>
+        <p class="es-p">Yes. But something gets lost in the unbalanced criticism of that pop craftsmanship. You look at so much of the music Frank Ocean has influenced over the last five years and it’s sloppy, meandering, nonsensical. Can’t sing? Layer four vocal stacks. Can’t write? Ramble passive aggressive esoteric lyrics. Don’t know how to do anything on beat? Take the drums out. No one wants to just make music anymore, and if you do, you feel like you can’t. I was spending six hours a day on TikTok at one point, trying to hit the quota that was recommended to me. I was dreaming in TikToks. That didn’t feel good. It didn’t sound good either. Who wants to listen to songs by someone spending six hours a day on TikTok? So I stopped that and spent 10 hours a day learning about compression, different synths, the anatomy of Human League songs. I think the ‘polymath’ moment is ending. Let’s stop with “the music’s great, but they don’t have their own clothing brand yet, so who cares.” I want to <em>feel</em> the focus of care toward music. I just didn’t get the sense that Frank Ocean really cared about music from that show.</p>
+        <p class="es-p">**Some people are good at hating — it’s a service they provide to society. I’m not one of those people, but I’ll admit I roll my eyes every time I hear “multi-hyphenate,” to your point. That said, I think the Frank show did have redeeming parts. The filmmaker and editor Brian Kinnes continued his tradition of turning found fan footage of notable Frank Ocean concerts into seamlessly mixed visuals, from start to finish — a laudable attempt at internet archiving and granting access to gated moments. But I watched that film, and a something stood out to me: the decision to prioritize ‘deep cuts’ like “Wise Man” and “Come On World, You Can’t Go!” plus jagged, stripped remakes of <em>Blonde</em> favorites like “White Ferrari” and “Solo,” felt like a nod to ride-or-die fans of his music. I’m not sure about the context here, but Frank Ocean merch wasn’t available for purchase, either. If that’s an intentional withholding, it signals that he’s not trying to fleece his audience, despite a running half-joke online that he hates his supporters. On the whole, I was disappointed by the show, but I felt the same about the response. The show at least had redeeming moments.**</p>
+        <p class="es-p">I do think he wrote himself an impossible equation — he’d have to pull off a miracle to meet the hype. But ultimately, I see Frank Ocean like I see The Chainsmokers. As a musician, in 2019, if someone’s like, “Let’s reference the Chainsmokers,” you’re thinking, “Jesus Christ.” That’s how I’ve felt the last couple years if someone brings up Frank in a session. It’s just different versions of obviousness. One might be considered more cringe than the other, but they’re both painfully obvious reference points.</p>
+        <p class="es-p">**It’s like A24 pre-<em>Moonlight</em>, give or take, versus A24 today. Back then, you might bond with someone over liking A24 movies. Now, the affinity has evolved to become, “<em>Of course</em> you like A24 movies,” but they can still produce great work. It’s just that the ability to identify with them and have it feel meaningful can start to wither. That’s if you’re our age and sort of transitioned from late teens to twenty-something with an awareness of A24. On the flip side, if you’re 12, seeing <em>Moonlight</em> for the first time this year, A24 might hit different. And in 25 years, some kid might wear an A24 hat to school and it’s cool, because the first few waves of viewers (us) grew up and moved on. It’s like wearing MTV merch from the 90s. Enough time passes and an obvious thing becomes obscure again to a new generation.**</p>
+        <p class="es-p">Everything has to have a life cycle. But some things must end. Like short-form content. Shocking, primitive content only works in short-form, and that doesn’t actually work with advertising. But shit you’re really excited about, like long(er)form educational stuff that exposes you to multiple ad impressions, or warrants a payment or subscription, that actually might prove more sustainable. Our path to UBI: everyone making 10-minute videos of whatever they’re excited about [<em>Laughs</em>]. Unless GPT becomes an even more effective educational tool. It’s already good at issuing warnings when I’m working with high-voltage, offering security checks.</p>
+        <p class="es-p">It’s not just “write me a song, GPT,” it’s about introducing it into your problem-solving patterns. That said, yesterday in a co-writing session, my collaborator wrote one stanza in a verse and he was struggling with the other one, so he asked me to do it. I plugged his stanza into GPT, explained the concept of the song, and asked it to spit something out that mirrored the first stanaza’s cadence and rhyme scheme. It was great. I copy and pasted it into our shared note. My collaborator goes, “This is genius!” He still doesn’t know GPT did it.</p>
+        <p class="es-p"><strong>Have you been dreaming about GPT?</strong></p>
+        <p class="es-p">I have been. I’ve never experienced something so helpful in my life. You start to form a relationship off that. When I was leaving the house, I forgot where I put my shoes, and the first instinct I had was to ask GPT where they were. Which is hilarious, but it tells you how deeply I’ve associated GPT with the thought, “I don’t know.” I think we should spend more time understanding it, rather than making viral videos about “2+2=3.”</p>
+        <p class="es-p"><strong>Meet the AI halfway. Especially if it hallucinates.</strong></p>
+        <p class="es-p">I tell it when it’s wrong because I like to feel like I’m helping make it better.</p>
+        <img class="es-img" loading="lazy" src="https://images.mirror-media.xyz/publication-images/yPEzwTgIniO6h_zYGQmHF.png?height=1236&amp;width=1812" alt="">
+        <p class="es-p"><strong>We’re back to talking about effort. You’re applying effort to understand this tool and use it in your process — whether it’s figuring out how to build your own VCO, or context about Human League songs, or even for music recommendations. At the same time, other artists might read this and say you’re flirting with something sacrilegious; that there’s a contradiction in wanting to protect music by people who care while fully embracing this technology, which opens up a lot of room for careless creation.</strong></p>
+        <p class="es-p">I really see it as a way to interface with knowledge, and in that way, it’s done a lot for me. I have no interest in asking what my song should sound like, but I will ask why harmonic tendencies changed in the 80s, to see if there’s something useful there for me and my practice.</p>
+        <p class="es-p"><strong>We used to have a deeper supply of vocational skills — woodworkers, mechanics. As different technological shifts happened, and political powers undercut domestic labor rights, certain specialties became endangered. While much of society (or the institutions shaping collective memory) shrugged in response, some of those trades slipped away. I wonder if, looking back, some of those forms of work that got sunset feel inevitable to us: oh, of course the car is assembled by robots. But with creativity, in this conversation, I feel there’s this sense of inevitable static — an expectation of non-change, that everything will be okay. I wonder if that’s misplaced.</strong></p>
+        <p class="es-p">What makes an artist an artist isn’t just replaced by the ability to replicate, or even rival, work. Think about why many of us don’t go see cover bands — we want the ‘real’ thing. And I think we’re still far off. The viral Drake/Weeknd AI ‘leak’ wasn’t generated by AI. It’s a filter. People are like, “I can’t believe an AI is shouting out Chubbs” [<em>Laughs</em>].</p>
+        <p class="es-p"><strong>It’s a deepfake issue.</strong></p>
+        <p class="es-p">It’s a deepfake issue. Soon we won’t be able to tell whether any leak is authentic or not. [<em>“Cayendo” by Frank Ocean starts playing through the restaurant speakers</em>.]</p>
+        <p class="es-p"><strong>It’s a funding issue too.</strong></p>
+        <p class="es-p">The music industry is not doing a good job about being responsible with their funding. It’s profit-driven, but what actually generates the most profit are the artists who we’ll care about in 50 years, who show up every day of their lives for this shit. Less and less money seems to go to acts with that talent and passion; more and more gets spent in wasteful places.</p>
+        <p class="es-p"><strong>And you’re saying that from the perspective of someone who has been funded by a major publisher, who’s made how many songs?</strong></p>
+        <p class="es-p">Over 1000. Too many. [<em>“911 / Mr. Lonely” by Tyler, the Creator starts playing through the restaurant speakers</em>.]</p>
+        <p class="es-p"><strong>I’m not sure whether to be happy or unsettled by the last few records they’ve played in here. I feel like we’re proving some stereotype right.</strong></p>
+        <p class="es-p">This is the lifecycle in action. This is the lifecycle.</p>
+        <img class="es-img" loading="lazy" src="https://images.mirror-media.xyz/publication-images/FbxTzEfXO2XaXDRSPU2Hy.png?height=1600&amp;width=1294" alt="">
+    </div>
+
+    <p class="oc-do">
+        <button class="collect" type="button" hidden
+                data-chain="10" data-collection="0xa505f054e207594423a841d6bcb3cc08d64e84fc"
+                data-minter="0x3678862f04290E565cCA2EF163BAeb92Bb76790C" data-token="1"
+                data-fee="777000000000000" data-path="collection"
+                data-name="Frank Ocean, ChatGPT, &amp; The Non-Effort Eating Music Alive &middot; We Them Media">Collect it</button>
+        <a class="oc-a" href="https://optimistic.etherscan.io/address/0xa505f054e207594423a841d6bcb3cc08d64e84fc" target="_blank" rel="noopener">Look it up onchain <span aria-hidden="true">&rarr;</span></a>
+    </p>
+
+    <p class="oc-note">This was never published on this website. It was written
+    and put on Arweave as a Mirror article, signed by the wallet that runs this
+    project, and it has been readable there ever since without anybody paying
+    to host it. The date above is the timestamp inside the document itself,
+    not something worked out afterwards. Nothing has been edited.</p>
+</article>
+
+<div class="wrap wtm-share"></div>
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+
+<aside aria-label="Newsletter"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" class="wtm-newsletter-pill" aria-label="The We Them Weekly, once a week by email: what went up and what we are asking next">The We Them Weekly, once a week by email <span class="wtm-newsletter-pill-arrow">&rarr;</span></a></aside>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+
+<script src="../collect.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js', '../newsletter-pill.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>
+

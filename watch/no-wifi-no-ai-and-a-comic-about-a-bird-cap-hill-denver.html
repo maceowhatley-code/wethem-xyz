@@ -1,0 +1,891 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="What is it like to live in Denver with no Wi-Fi and no AI?">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/no-wifi-no-ai-and-a-comic-about-a-bird-cap-hill-denver">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="No Wi-Fi, No AI, and a Comic About a Bird | Denver">
+    <meta property="og:description" content="What is it like to live in Denver with no Wi-Fi and no AI?">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/no-wifi-no-ai-and-a-comic-about-a-bird-cap-hill-denver.jpg?v=b24912793e">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="No Wi-Fi, no AI, and a comic about a bird">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/no-wifi-no-ai-and-a-comic-about-a-bird-cap-hill-denver.jpg?v=b24912793e">
+    <meta property="og:url" content="https://wethem.xyz/watch/no-wifi-no-ai-and-a-comic-about-a-bird-cap-hill-denver">
+    <title>No Wi-Fi, No AI, and a Comic About a Bird | Denver &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/no-wifi-no-ai-and-a-comic-about-a-bird-cap-hill-denver#video",
+  "name": "No Wi-Fi, No AI, and a Comic About a Bird | Denver",
+  "description": "What is it like to live in Denver with no Wi-Fi and no AI? An illustrator on Colfax moved from Los Angeles three years ago, lives on Capitol Hill and draws everything by hand. \"It's really quiet out here.\" Then: \"Like dead city, but in a great way.\" She misses the ocean. \"There's a pretty good sense of community, especially out here in Cap Hill. I know my neighbors.\" The work: \"Everything's done pen on paper.\" On RiNo, where the tech money is, rent is going up and food with it, but that is not her complaint: \"I just feel like they're really boring.\" On AI, as a hand-drawn artist, her answer is no. Asked about gentrification she declines: \"I'm probably the worst person ask about that since I just moved here recently.\" Eight minutes on Colfax.",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/TsmYwUL4N9E/maxresdefault.jpg"
+  ],
+  "uploadDate": "2026-03-10T01:27:15Z",
+  "embedUrl": "https://www.youtube.com/embed/TsmYwUL4N9E",
+  "url": "https://wethem.xyz/watch/no-wifi-no-ai-and-a-comic-about-a-bird-cap-hill-denver",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT8M19S",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "Three years from Los Angeles",
+      "startOffset": 0,
+      "url": "https://wethem.xyz/watch/no-wifi-no-ai-and-a-comic-about-a-bird-cap-hill-denver?t=0",
+      "endOffset": 55
+    },
+    {
+      "@type": "Clip",
+      "name": "A dead city, in a great way",
+      "startOffset": 55,
+      "url": "https://wethem.xyz/watch/no-wifi-no-ai-and-a-comic-about-a-bird-cap-hill-denver?t=55",
+      "endOffset": 66
+    },
+    {
+      "@type": "Clip",
+      "name": "Why Cap Hill is her favorite part of Denver",
+      "startOffset": 66,
+      "url": "https://wethem.xyz/watch/no-wifi-no-ai-and-a-comic-about-a-bird-cap-hill-denver?t=66",
+      "endOffset": 118
+    },
+    {
+      "@type": "Clip",
+      "name": "What she draws: pen on paper, nudity and nature",
+      "startOffset": 118,
+      "url": "https://wethem.xyz/watch/no-wifi-no-ai-and-a-comic-about-a-bird-cap-hill-denver?t=118",
+      "endOffset": 151
+    },
+    {
+      "@type": "Clip",
+      "name": "Why she doesn't live in RiNo: tech bros",
+      "startOffset": 151,
+      "url": "https://wethem.xyz/watch/no-wifi-no-ai-and-a-comic-about-a-bird-cap-hill-denver?t=151",
+      "endOffset": 174
+    },
+    {
+      "@type": "Clip",
+      "name": "What's wrong with tech bros? They're boring",
+      "startOffset": 174,
+      "url": "https://wethem.xyz/watch/no-wifi-no-ai-and-a-comic-about-a-bird-cap-hill-denver?t=174",
+      "endOffset": 199
+    },
+    {
+      "@type": "Clip",
+      "name": "Getting an AI image pulled from a museum poster",
+      "startOffset": 199,
+      "url": "https://wethem.xyz/watch/no-wifi-no-ai-and-a-comic-about-a-bird-cap-hill-denver?t=199",
+      "endOffset": 233
+    },
+    {
+      "@type": "Clip",
+      "name": "Maceo: I use AI a lot. Her: not for art",
+      "startOffset": 233,
+      "url": "https://wethem.xyz/watch/no-wifi-no-ai-and-a-comic-about-a-bird-cap-hill-denver?t=233",
+      "endOffset": 259
+    },
+    {
+      "@type": "Clip",
+      "name": "When should the internet have stopped? 2007",
+      "startOffset": 259,
+      "url": "https://wethem.xyz/watch/no-wifi-no-ai-and-a-comic-about-a-bird-cap-hill-denver?t=259",
+      "endOffset": 303
+    },
+    {
+      "@type": "Clip",
+      "name": "Nineties technology, a box TV and no Wi-Fi",
+      "startOffset": 303,
+      "url": "https://wethem.xyz/watch/no-wifi-no-ai-and-a-comic-about-a-bird-cap-hill-denver?t=303",
+      "endOffset": 344
+    },
+    {
+      "@type": "Clip",
+      "name": "What's in her VHS collection",
+      "startOffset": 344,
+      "url": "https://wethem.xyz/watch/no-wifi-no-ai-and-a-comic-about-a-bird-cap-hill-denver?t=344",
+      "endOffset": 400
+    },
+    {
+      "@type": "Clip",
+      "name": "A girl, a forest, and a bird called Bird",
+      "startOffset": 400,
+      "url": "https://wethem.xyz/watch/no-wifi-no-ai-and-a-comic-about-a-bird-cap-hill-denver?t=400",
+      "endOffset": 475
+    },
+    {
+      "@type": "Clip",
+      "name": "Her message for kids: you are kind and worthy",
+      "startOffset": 475,
+      "url": "https://wethem.xyz/watch/no-wifi-no-ai-and-a-comic-about-a-bird-cap-hill-denver?t=475",
+      "endOffset": 499
+    }
+  ],
+  "creator": {
+    "@type": "Person",
+    "name": "Maceo",
+    "url": "https://wethem.xyz/people/maceo"
+  },
+  "transcript": "[bleeped] up story. Oh, I got that. Ex-boyfriend. Some [bleeped] like that. Yeah, I hear that. You're single now, huh? Uh, no. No. New boyfriend's in town, but Yeah. Yeah. No, we've been together for like 3 years. He's Denver native, so\nOkay, that's sweet. There's not a lot of those, it feels like. [bleeped] Not really. That's kind of like a dying breed right here. So, yeah. Yeah. Yeah. So, what does he think about Denver? And I'm going ask you what you think.\nYeah. Um, he loves it out here. It's like I don't think he's ever going to leave. like this is his [bleeped] I feel like a lot of people complain about how it's changed with gentrification and stuff like that over the last like 20 years\nfor sure. Um I'm probably the worst person to ask about that since I just moved here recently. Um I was curious what you think he thinks about it. You said he's Denver native.\nYeah. So he te technically Denver uh native but he lived like kind of like in Roxboro area. Okay. Um so it's a little bit different.\nOkay. Um Okay. Cool. Yeah. Cool. So what do you think about Denver? You've been here 3 years now. You're from LA. From Los Angeles originally.\nHow do you compare the two? [bleeped] Uh, it's really quiet out here. Like super [bleeped] quiet. Like dead city. Uh, but in a great way. Like you can like really get a lot of your [bleeped] done out here. I feel like\nYeah. Yeah. Yeah. People walk in out here. I didn't not too many distractions. Yeah. That's I think that's what I like about it. Um, I really [bleeped] miss the ocean. There's a pretty good sense of community, especially out here in Cap Hill. Uh, there's some really really great people out here. This is one of my favorite parts of Denver. Oh, yeah. Is this city? Yeah. is like this this kind of area. Yeah. I live over on like 14th Corona, so kind of like local to this part.\nHow you doing? Yeah. What's What makes this like your favorite part? Oh my god. Yeah. Her name's Ashley. She's really sweet. She's a sweet girl. Yeah. This is probably my favorite part cuz there's just so much art around the city and there really is a huge sense of community here. Like I I know my neighbors and [bleeped] Like I feel like that's not really like that out in like Lo or Rhino or any of those areas. Uh, Cap Hill is definitely my favorite. Um, yeah, I sell my art, my local art around here and stuff, too. I've gotten to know all the local businesses.\nOh, you you make art? I do. Yeah, I'm an artist. Okay. Yeah, you're an artist, huh? What kind of artist are you? Yeah, I do mainly illustration work. So, everything's done pen on paper. Uh, yeah. Handdrawn stuff.\nLike, what what kind of stuff do you draw? Do you do stuff for clients? Like, do you do books? Like, what is like Yeah, so I make my own comic book. It's called the Little [bleeped] Chronicles.\nOkay. Little Chronicles. Look at that. It's pretty sick. A lot of my work sort of centers around like nudity and nature. Okay. Yeah. Pretty like weird style. A lot of people say that like it's very different. They haven't seen a style like that before. So, it's very original to me.\nOh, that's cool though. I feel like I don't know a lot of poly people, but I knew of a poly couple that was out here. I feel like there's like a progressive scene in in out here.\nAbsolutely. Yeah. No, I mean this this area for sure is like really great on that. I would say like downtown like like Rhino, that kind of area. It's definitely more like tech bro centered,\nwhich I'm not [bleeped] into. So that's why I chose to live out here for sure. That makes sense. What do you think of the tech bros?\nUm I I I hate them. Why is that? I don't know. I just feel like they're really boring. They don't have [bleeped] [bleeped] to say about like anything. They're just They're just there [bleeped] raising my rent, [bleeped] raising my food costs. Those [bleeped]\nOkay. Yeah. Not a huge fan. Um that's cool. More than anything, I think they're just [bleeped] boring, and that's what I don't like about them.\nWhat do you think about AI? Not a fan. As a handdrawn artist myself, like not a [bleeped] fan. Um, I try to boycott all that [bleeped] So, recently the Denver Art Museum like uploaded something that was AI on one of their posters. There was like a huge boycotting there. Like, all the employees were pissed off. Like, we were all pissed off. So, we actually got them to remove it, that image. Uh, which is really cool. That is cool.\nUm, yeah. No, super. It's nice to be responsive like that. Yeah. Yeah, absolutely. Um, I don't [bleeped] use that [bleeped] so that's cool. I use AI a lot. I'm not going to lie.\nThat's all right. A lot of people do, but not for art. I don't really like AI music. Not for art. Hey, like if I can get it to wash my goddamn dishes, that'd be awesome.\nI feel like that's the future. I That's the future. That's what people talk about. They say they can put people out of jobs though as well.\nYes. But I feel like it's like that, but like way more complicated things like mechanics gone. No. Yeah. Really? That's [bleeped] Like I feel like they're going to be like the equivalent of people who like operate the frosting machine at Wendy's just like going like, \"Oh yeah, your car's done.\"\nYeah. Cartwashes. But what's it called? Overall though, what do you think about the internet? You feel like the internet's been good or bad for humanity? You feel like it makes it easier to get access to the truth?\nThere was a point in time where I think the internet should have stopped um progressing. Like I think like early 2000, 2007 maybe. I think it just I think it just should have stopped right there. Like the second we got smartphones is the second we stopped [bleeped] like talking to each other.\nI think if that had never been invented if [bleeped] like that should have just never I think we would have been doing great honestly. Like um I'm actually thinking about getting rid of my phone and just getting like a a watch and I think a flip phone was what I was thinking too just for calls. But um\nyou like anti, huh? Huh? You like anti- tech, huh? I love '9s technology. I really do. Like I still have my old box TV at my house. I don't have Wi-Fi. I only like watch VHS tapes and like DVDs. Like\nI don't [bleeped] Wi-Fi at my house. Like you know I'm Yeah, I'm pretty much like off the grid when it comes to that. Um radio for music, that kind of [bleeped]\nUm I try to use as less of as least as I can. But as an artist, I got to have my Instagram and all that crap, too. So\nyou want to shout out your Instagram? Uh sure. Yeah, I'm anime tits. Anime tits on Instagram. So, yeah, that's me. And and shout us out some of the some of the films in your VHS collection.\nOh, yeah. I got a lot of horror movies. Um, we got The Bird. Um, I have got a lot of like anime. So, I actually have some Sailor Moon on VHS. I've got the entire collection of the Dragon Ball Z saga, the Frieza saga. I've got that all lined up in a box set on VHS.\nI like that. That's good, dude. It's It's pretty [bleeped] sick. Yeah. Just a lot of old school classic horror movies and stuff. Misery, you know, a lot of Stephen King.\nYeah. Well, just some Office Space. My favorite [bleeped] movie. Okay. [bleeped] yeah. Yeah. Yeah. What about DVDs? DVDs? I got the entire I got a lot of um what is that called? I got a lot of TV series. I got like early 2000s TV series. I got like Entourage, like all that [bleeped] you know?\nOh, like that. Yeah. Yeah. It's pretty cool. Entire season of King of the Hill on DVD. Okay. Just [bleeped] like that. I must have over like a hundred DVDs and VHS tapes. Like they're all just in my house. You like comic books though, too? You read comics?\nUm, I used to read so many mangas when I was a kid. I'm not like haven't been doing it as of recently, but I've been focusing more on like making my own stuff. So, the Little K Chronicles is like my life right now. I I don't think I'll stop making that. That'll be like a lifelong project.\nOkay. Yeah. So, I haven't done you justice. Like, so what is Lil Kung Chronicles about? Yeah. Yeah. So, it's about two best friends. Uh, a girl who is always naked and she lives in the forest. Her best friend is a bird. Mhm.\nA little yellow bird that uh doesn't speak. The only thing I can say is meow. Okay. Uh it's actually based off my cat, who I call bird.\nOkay. Uh they're best friends. They live in the forest together and they go on little adventures and stuff. It's pretty cool. Yeah. Okay. And what prompted you to start this like the series?\nLike is there a plot? Like what's the what's is it like an ongoing thing or like a situational? Absolutely ongoing situational. So I make these like as like as I'm making it I'm coming up with the story like as I'm drawing. Um, a lot of it is like very like like the last one was my volume two and that one they travel to a small town that's nearby the forest and you know Bird is sick so she's got to go get medicine and\nthere's like a whole story scene there but it's really like small stories uh just throughout it. So it's not like big scaled arcs yet. Not big scaled yet but I'm thinking in a couple years maybe\nthere's still character development. Huge character development going on still. Yeah. Okay. Well that's pretty sick. Thank you. Yeah. I appreciate it. Yeah. Any any you have any anything you want to tell people under the age of nine?\nUnder the age of nine. Oh um well you are kind, you are smart and you are worthy. Oh yeah. So there is that. Oh yeah.",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Denver",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "url": "https://wethem.xyz/places#denver"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Denver Unfiltered",
+    "url": "https://wethem.xyz/portfolio#p-denver"
+  },
+  "keywords": [
+    "Is the internet good for us?",
+    "What would you say to someone under ten?"
+  ],
+  "dateCreated": "2026-03-08"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Denver Unfiltered",
+      "item": "https://wethem.xyz/portfolio#p-denver"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "No Wi-Fi, no AI, and a comic about a bird",
+      "item": "https://wethem.xyz/watch/no-wifi-no-ai-and-a-comic-about-a-bird-cap-hill-denver"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place], who[data-pf-who]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2026-03-10" data-pf-vid="TsmYwUL4N9E" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;8:19&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="Denver" data-pf-country="United States" data-pf-project="Denver Unfiltered" data-pf-who="Maceo">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-denver">Denver Unfiltered</a></li>
+            <li aria-current="page">No Wi-Fi, no AI, and a comic about a bird</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">No Wi-Fi, no AI, and a comic about a bird.</h1>
+
+    <p class="wt-byline">Reported by <strong><a href="../people/maceo.html">Maceo</a></strong> &middot; Denver &middot; 8 min &middot; filmed <time datetime="2026-03-08">8 March 2026</time></p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="TsmYwUL4N9E" live postersrcset="../stills/TsmYwUL4N9E-320.jpg 320w, ../stills/TsmYwUL4N9E-480.jpg 480w, ../stills/TsmYwUL4N9E-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/TsmYwUL4N9E?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="No Wi-Fi, no AI, and a comic about a bird, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+    <p class="wt-answers">Answers <a href="../question/is-the-internet-good-for-us.html">Is the internet good for us?</a> and <a href="../question/what-would-you-say-to-someone-under-ten.html">What would you say to someone under ten?</a> &middot; see how other cities answered &rarr;</p>
+    <div class="wt-prose">
+            <p>What is it like to live in Denver with no Wi-Fi and no AI? An illustrator on Colfax moved from Los Angeles three years ago, lives on Capitol Hill and draws everything by hand. &ldquo;It&rsquo;s really quiet out here.&rdquo; Then: &ldquo;Like dead city, but in a great way.&rdquo; She misses the ocean. &ldquo;There&rsquo;s a pretty good sense of community, especially out here in Cap Hill. I know my neighbors.&rdquo;</p>
+            <p>The work: &ldquo;Everything&rsquo;s done pen on paper.&rdquo; On RiNo, where the tech money is, rent is going up and food with it, but that is not her complaint: &ldquo;I just feel like they&rsquo;re really boring.&rdquo;</p>
+            <p>On AI, as a hand-drawn artist, her answer is no. Asked about gentrification she declines: &ldquo;I&rsquo;m probably the worst person ask about that since I just moved here recently.&rdquo; Eight minutes on Colfax.</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../question/is-the-internet-good-for-us.html">Every answer to “Is the internet good for us?”</a></p>
+        <p class="wt-rail-link"><a href="../question/what-would-you-say-to-someone-under-ten.html">Every answer to “What would you say to someone under ten?”</a></p>
+        <p class="wt-rail-link"><a href="../places.html#denver">Everything filmed in Denver</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="housing-school-and-the-street-from-somebody-born-here-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/JwJOZGs3bqA-640.jpg" srcset="../stills/JwJOZGs3bqA-320.jpg 320w, ../stills/JwJOZGs3bqA-480.jpg 480w, ../stills/JwJOZGs3bqA-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>12:58</span></span><span>Housed, then evicted, and what happened to her daughter.</span></a>
+        <a class="wt-rail-card" href="denver-politics-and-where-the-homeless-went-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/hT_oDk_DnMw-640.jpg" srcset="../stills/hT_oDk_DnMw-320.jpg 320w, ../stills/hT_oDk_DnMw-480.jpg 480w, ../stills/hT_oDk_DnMw-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>17:35</span></span><span>Where the homeless went before the convention came.</span></a>
+        <a class="wt-rail-card" href="first-friday-freestyle-on-the-corner-of-santa-fe.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/uSyxfx1ldXE-640.jpg" srcset="../stills/uSyxfx1ldXE-320.jpg 320w, ../stills/uSyxfx1ldXE-480.jpg 480w, ../stills/uSyxfx1ldXE-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>19:15</span></span><span>A First Friday freestyle, caught on camera.</span></a>
+        <a class="wt-rail-card" href="montbello-then-and-now-and-a-note-to-self.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/C2FroCKz9wk-640.jpg" srcset="../stills/C2FroCKz9wk-320.jpg 320w, ../stills/C2FroCKz9wk-480.jpg 480w, ../stills/C2FroCKz9wk-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>5:31</span></span><span>Walking the East Side: street footage from Denver.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c0"><a class="wt-t" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-s">Three years from Los Angeles</span></li>
+                <li class="wt-line" id="c55"><a class="wt-t" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=55s" target="_blank" rel="noopener" data-pagefind-ignore>0:55</a><span class="wt-s">A dead city, in a great way</span></li>
+                <li class="wt-line" id="c66"><a class="wt-t" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=66s" target="_blank" rel="noopener" data-pagefind-ignore>1:06</a><span class="wt-s">Why Cap Hill is her favorite part of Denver</span></li>
+                <li class="wt-line" id="c118"><a class="wt-t" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=118s" target="_blank" rel="noopener" data-pagefind-ignore>1:58</a><span class="wt-s">What she draws: pen on paper, nudity and nature</span></li>
+                <li class="wt-line" id="c151"><a class="wt-t" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=151s" target="_blank" rel="noopener" data-pagefind-ignore>2:31</a><span class="wt-s">Why she doesn&#x27;t live in RiNo: tech bros</span></li>
+                <li class="wt-line" id="c174"><a class="wt-t" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=174s" target="_blank" rel="noopener" data-pagefind-ignore>2:54</a><span class="wt-s">What&#x27;s wrong with tech bros? They&#x27;re boring</span></li>
+                <li class="wt-line" id="c199"><a class="wt-t" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=199s" target="_blank" rel="noopener" data-pagefind-ignore>3:19</a><span class="wt-s">Getting an AI image pulled from a museum poster</span></li>
+                <li class="wt-line" id="c233"><a class="wt-t" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=233s" target="_blank" rel="noopener" data-pagefind-ignore>3:53</a><span class="wt-s">Maceo: I use AI a lot. Her: not for art</span></li>
+                <li class="wt-line" id="c259"><a class="wt-t" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=259s" target="_blank" rel="noopener" data-pagefind-ignore>4:19</a><span class="wt-s">When should the internet have stopped? 2007</span></li>
+                <li class="wt-line" id="c303"><a class="wt-t" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=303s" target="_blank" rel="noopener" data-pagefind-ignore>5:03</a><span class="wt-s">Nineties technology, a box TV and no Wi-Fi</span></li>
+                <li class="wt-line" id="c344"><a class="wt-t" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=344s" target="_blank" rel="noopener" data-pagefind-ignore>5:44</a><span class="wt-s">What&#x27;s in her VHS collection</span></li>
+                <li class="wt-line" id="c400"><a class="wt-t" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=400s" target="_blank" rel="noopener" data-pagefind-ignore>6:40</a><span class="wt-s">A girl, a forest, and a bird called Bird</span></li>
+                <li class="wt-line" id="c475"><a class="wt-t" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=475s" target="_blank" rel="noopener" data-pagefind-ignore>7:55</a><span class="wt-s">Her message for kids: you are kind and worthy</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Transcribed from the original audio and corrected for names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a>[bleeped] up story. Oh, I got that. Ex-boyfriend. Some [bleeped] like that. Yeah, I hear that. You&rsquo;re single now, huh? Uh, no. No. New boyfriend&rsquo;s in town, but Yeah. Yeah. No, we&rsquo;ve been together for like 3 years. He&rsquo;s Denver native, so</p>
+            <p id="s12"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=12s" target="_blank" rel="noopener" data-pagefind-ignore>0:12</a>Okay, that&rsquo;s sweet. There&rsquo;s not a lot of those, it feels like. [bleeped] Not really. That&rsquo;s kind of like a dying breed right here. So, yeah. Yeah. Yeah. So, what does he think about Denver? And I&rsquo;m going ask you what you think.</p>
+            <p id="s20"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=20s" target="_blank" rel="noopener" data-pagefind-ignore>0:20</a>Yeah. Um, he loves it out here. It&rsquo;s like I don&rsquo;t think he&rsquo;s ever going to leave. like this is his [bleeped] I feel like a lot of people complain about how it&rsquo;s changed with gentrification and stuff like that over the last like 20 years</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s30"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=30s" target="_blank" rel="noopener" data-pagefind-ignore>0:30</a>for sure. Um I&rsquo;m probably the worst person to ask about that since I just moved here recently. Um I was curious what you think he thinks about it. You said he&rsquo;s Denver native.</p>
+            <p id="s38"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=38s" target="_blank" rel="noopener" data-pagefind-ignore>0:38</a>Yeah. So he te technically Denver uh native but he lived like kind of like in Roxboro area. Okay. Um so it&rsquo;s a little bit different.</p>
+            <p id="s47"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=47s" target="_blank" rel="noopener" data-pagefind-ignore>0:47</a>Okay. Um Okay. Cool. Yeah. Cool. So what do you think about Denver? You&rsquo;ve been here 3 years now. You&rsquo;re from LA. From Los Angeles originally.</p>
+            <p id="s55"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=55s" target="_blank" rel="noopener" data-pagefind-ignore>0:55</a>How do you compare the two? [bleeped] Uh, it&rsquo;s really quiet out here. Like super [bleeped] quiet. Like dead city. Uh, but in a great way. Like you can like really get a lot of your [bleeped] done out here. I feel like</p>
+            <p id="s66"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=66s" target="_blank" rel="noopener" data-pagefind-ignore>1:06</a>Yeah. Yeah. Yeah. People walk in out here. I didn&rsquo;t not too many distractions. Yeah. That&rsquo;s I think that&rsquo;s what I like about it. Um, I really [bleeped] miss the ocean. There&rsquo;s a pretty good sense of community, especially out here in Cap Hill. Uh, there&rsquo;s some really really great people out here. This is one of my favorite parts of Denver. Oh, yeah. Is this city? Yeah. is like this this kind of area. Yeah. I live over on like 14th Corona, so kind of like local to this part.</p>
+            <p id="s88"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=88s" target="_blank" rel="noopener" data-pagefind-ignore>1:28</a>How you doing? Yeah. What&rsquo;s What makes this like your favorite part? Oh my god. Yeah. Her name&rsquo;s Ashley. She&rsquo;s really sweet. She&rsquo;s a sweet girl. Yeah. This is probably my favorite part cuz there&rsquo;s just so much art around the city and there really is a huge sense of community here. Like I I know my neighbors and [bleeped] Like I feel like that&rsquo;s not really like that out in like Lo or Rhino or any of those areas. Uh, Cap Hill is definitely my favorite. Um, yeah, I sell my art, my local art around here and stuff, too. I&rsquo;ve gotten to know all the local businesses.</p>
+            <p id="s118"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=118s" target="_blank" rel="noopener" data-pagefind-ignore>1:58</a>Oh, you you make art? I do. Yeah, I&rsquo;m an artist. Okay. Yeah, you&rsquo;re an artist, huh? What kind of artist are you? Yeah, I do mainly illustration work. So, everything&rsquo;s done pen on paper. Uh, yeah. Handdrawn stuff.</p>
+            <p id="s129"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=129s" target="_blank" rel="noopener" data-pagefind-ignore>2:09</a>Like, what what kind of stuff do you draw? Do you do stuff for clients? Like, do you do books? Like, what is like Yeah, so I make my own comic book. It&rsquo;s called the Little [bleeped] Chronicles.</p>
+            <p id="s136"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=136s" target="_blank" rel="noopener" data-pagefind-ignore>2:16</a>Okay. Little Chronicles. Look at that. It&rsquo;s pretty sick. A lot of my work sort of centers around like nudity and nature. Okay. Yeah. Pretty like weird style. A lot of people say that like it&rsquo;s very different. They haven&rsquo;t seen a style like that before. So, it&rsquo;s very original to me.</p>
+            <p id="s151"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=151s" target="_blank" rel="noopener" data-pagefind-ignore>2:31</a>Oh, that&rsquo;s cool though. I feel like I don&rsquo;t know a lot of poly people, but I knew of a poly couple that was out here. I feel like there&rsquo;s like a progressive scene in in out here.</p>
+            <p id="s158"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=158s" target="_blank" rel="noopener" data-pagefind-ignore>2:38</a>Absolutely. Yeah. No, I mean this this area for sure is like really great on that. I would say like downtown like like Rhino, that kind of area. It&rsquo;s definitely more like tech bro centered,</p>
+            <p id="s168"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=168s" target="_blank" rel="noopener" data-pagefind-ignore>2:48</a>which I&rsquo;m not [bleeped] into. So that&rsquo;s why I chose to live out here for sure. That makes sense. What do you think of the tech bros?</p>
+            <p id="s174"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=174s" target="_blank" rel="noopener" data-pagefind-ignore>2:54</a>Um I I I hate them. Why is that? I don&rsquo;t know. I just feel like they&rsquo;re really boring. They don&rsquo;t have [bleeped] [bleeped] to say about like anything. They&rsquo;re just They&rsquo;re just there [bleeped] raising my rent, [bleeped] raising my food costs. Those [bleeped]</p>
+            <p id="s191"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=191s" target="_blank" rel="noopener" data-pagefind-ignore>3:11</a>Okay. Yeah. Not a huge fan. Um that&rsquo;s cool. More than anything, I think they&rsquo;re just [bleeped] boring, and that&rsquo;s what I don&rsquo;t like about them.</p>
+            <p id="s199"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=199s" target="_blank" rel="noopener" data-pagefind-ignore>3:19</a>What do you think about AI? Not a fan. As a handdrawn artist myself, like not a [bleeped] fan. Um, I try to boycott all that [bleeped] So, recently the Denver Art Museum like uploaded something that was AI on one of their posters. There was like a huge boycotting there. Like, all the employees were pissed off. Like, we were all pissed off. So, we actually got them to remove it, that image. Uh, which is really cool. That is cool.</p>
+            <p id="s224"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=224s" target="_blank" rel="noopener" data-pagefind-ignore>3:44</a>Um, yeah. No, super. It&rsquo;s nice to be responsive like that. Yeah. Yeah, absolutely. Um, I don&rsquo;t [bleeped] use that [bleeped] so that&rsquo;s cool. I use AI a lot. I&rsquo;m not going to lie.</p>
+            <p id="s233"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=233s" target="_blank" rel="noopener" data-pagefind-ignore>3:53</a>That&rsquo;s all right. A lot of people do, but not for art. I don&rsquo;t really like AI music. Not for art. Hey, like if I can get it to wash my goddamn dishes, that&rsquo;d be awesome.</p>
+            <p id="s240"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=240s" target="_blank" rel="noopener" data-pagefind-ignore>4:00</a>I feel like that&rsquo;s the future. I That&rsquo;s the future. That&rsquo;s what people talk about. They say they can put people out of jobs though as well.</p>
+            <p id="s247"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=247s" target="_blank" rel="noopener" data-pagefind-ignore>4:07</a>Yes. But I feel like it&rsquo;s like that, but like way more complicated things like mechanics gone. No. Yeah. Really? That&rsquo;s [bleeped] Like I feel like they&rsquo;re going to be like the equivalent of people who like operate the frosting machine at Wendy&rsquo;s just like going like, &ldquo;Oh yeah, your car&rsquo;s done.&rdquo;</p>
+            <p id="s259"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=259s" target="_blank" rel="noopener" data-pagefind-ignore>4:19</a>Yeah. Cartwashes. But what&rsquo;s it called? Overall though, what do you think about the internet? You feel like the internet&rsquo;s been good or bad for humanity? You feel like it makes it easier to get access to the truth?</p>
+            <p id="s268"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=268s" target="_blank" rel="noopener" data-pagefind-ignore>4:28</a>There was a point in time where I think the internet should have stopped um progressing. Like I think like early 2000, 2007 maybe. I think it just I think it just should have stopped right there. Like the second we got smartphones is the second we stopped [bleeped] like talking to each other.</p>
+            <p id="s286"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=286s" target="_blank" rel="noopener" data-pagefind-ignore>4:46</a>I think if that had never been invented if [bleeped] like that should have just never I think we would have been doing great honestly. Like um I&rsquo;m actually thinking about getting rid of my phone and just getting like a a watch and I think a flip phone was what I was thinking too just for calls. But um</p>
+            <p id="s303"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=303s" target="_blank" rel="noopener" data-pagefind-ignore>5:03</a>you like anti, huh? Huh? You like anti- tech, huh? I love &rsquo;9s technology. I really do. Like I still have my old box TV at my house. I don&rsquo;t have Wi-Fi. I only like watch VHS tapes and like DVDs. Like</p>
+            <p id="s317"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=317s" target="_blank" rel="noopener" data-pagefind-ignore>5:17</a>I don&rsquo;t [bleeped] Wi-Fi at my house. Like you know I&rsquo;m Yeah, I&rsquo;m pretty much like off the grid when it comes to that. Um radio for music, that kind of [bleeped]</p>
+            <p id="s325"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=325s" target="_blank" rel="noopener" data-pagefind-ignore>5:25</a>Um I try to use as less of as least as I can. But as an artist, I got to have my Instagram and all that crap, too. So</p>
+            <p id="s333"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=333s" target="_blank" rel="noopener" data-pagefind-ignore>5:33</a>you want to shout out your Instagram? Uh sure. Yeah, I&rsquo;m anime tits. Anime tits on Instagram. So, yeah, that&rsquo;s me. And and shout us out some of the some of the films in your VHS collection.</p>
+            <p id="s344"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=344s" target="_blank" rel="noopener" data-pagefind-ignore>5:44</a>Oh, yeah. I got a lot of horror movies. Um, we got The Bird. Um, I have got a lot of like anime. So, I actually have some Sailor Moon on VHS. I&rsquo;ve got the entire collection of the Dragon Ball Z saga, the Frieza saga. I&rsquo;ve got that all lined up in a box set on VHS.</p>
+            <p id="s359"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=359s" target="_blank" rel="noopener" data-pagefind-ignore>5:59</a>I like that. That&rsquo;s good, dude. It&rsquo;s It&rsquo;s pretty [bleeped] sick. Yeah. Just a lot of old school classic horror movies and stuff. Misery, you know, a lot of Stephen King.</p>
+            <p id="s367"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=367s" target="_blank" rel="noopener" data-pagefind-ignore>6:07</a>Yeah. Well, just some Office Space. My favorite [bleeped] movie. Okay. [bleeped] yeah. Yeah. Yeah. What about DVDs? DVDs? I got the entire I got a lot of um what is that called? I got a lot of TV series. I got like early 2000s TV series. I got like Entourage, like all that [bleeped] you know?</p>
+            <p id="s386"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=386s" target="_blank" rel="noopener" data-pagefind-ignore>6:26</a>Oh, like that. Yeah. Yeah. It&rsquo;s pretty cool. Entire season of King of the Hill on DVD. Okay. Just [bleeped] like that. I must have over like a hundred DVDs and VHS tapes. Like they&rsquo;re all just in my house. You like comic books though, too? You read comics?</p>
+            <p id="s400"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=400s" target="_blank" rel="noopener" data-pagefind-ignore>6:40</a>Um, I used to read so many mangas when I was a kid. I&rsquo;m not like haven&rsquo;t been doing it as of recently, but I&rsquo;ve been focusing more on like making my own stuff. So, the Little K Chronicles is like my life right now. I I don&rsquo;t think I&rsquo;ll stop making that. That&rsquo;ll be like a lifelong project.</p>
+            <p id="s415"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=415s" target="_blank" rel="noopener" data-pagefind-ignore>6:55</a>Okay. Yeah. So, I haven&rsquo;t done you justice. Like, so what is Lil Kung Chronicles about? Yeah. Yeah. So, it&rsquo;s about two best friends. Uh, a girl who is always naked and she lives in the forest. Her best friend is a bird. Mhm.</p>
+            <p id="s427"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=427s" target="_blank" rel="noopener" data-pagefind-ignore>7:07</a>A little yellow bird that uh doesn&rsquo;t speak. The only thing I can say is meow. Okay. Uh it&rsquo;s actually based off my cat, who I call bird.</p>
+            <p id="s434"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=434s" target="_blank" rel="noopener" data-pagefind-ignore>7:14</a>Okay. Uh they&rsquo;re best friends. They live in the forest together and they go on little adventures and stuff. It&rsquo;s pretty cool. Yeah. Okay. And what prompted you to start this like the series?</p>
+            <p id="s444"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=444s" target="_blank" rel="noopener" data-pagefind-ignore>7:24</a>Like is there a plot? Like what&rsquo;s the what&rsquo;s is it like an ongoing thing or like a situational? Absolutely ongoing situational. So I make these like as like as I&rsquo;m making it I&rsquo;m coming up with the story like as I&rsquo;m drawing. Um, a lot of it is like very like like the last one was my volume two and that one they travel to a small town that&rsquo;s nearby the forest and you know Bird is sick so she&rsquo;s got to go get medicine and</p>
+            <p id="s464"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=464s" target="_blank" rel="noopener" data-pagefind-ignore>7:44</a>there&rsquo;s like a whole story scene there but it&rsquo;s really like small stories uh just throughout it. So it&rsquo;s not like big scaled arcs yet. Not big scaled yet but I&rsquo;m thinking in a couple years maybe</p>
+            <p id="s475"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=475s" target="_blank" rel="noopener" data-pagefind-ignore>7:55</a>there&rsquo;s still character development. Huge character development going on still. Yeah. Okay. Well that&rsquo;s pretty sick. Thank you. Yeah. I appreciate it. Yeah. Any any you have any anything you want to tell people under the age of nine?</p>
+            <p id="s486"><a class="wt-at" href="https://www.youtube.com/watch?v=TsmYwUL4N9E&amp;t=486s" target="_blank" rel="noopener" data-pagefind-ignore>8:06</a>Under the age of nine. Oh um well you are kind, you are smart and you are worthy. Oh yeah. So there is that. Oh yeah.</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+
+    <section id="after-transcript" tabindex="-1" class="wrap wt-more" aria-label="Filmed the same day">
+        <div class="country-head">
+            <h2 class="country-name">Filmed the same day.</h2>
+            <span class="country-meta">8 March 2026</span>
+        </div>
+        <ul class="rel-list">
+            <li class="rel-item">
+                <a class="rel-link" href="montbello-then-and-now-and-a-note-to-self.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/C2FroCKz9wk/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">Montbello Then and Now, and a Note to Self | Denver</span>
+                        <span class="rel-why">8.51pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="https://www.youtube.com/watch?v=WEC04oIEkik" rel="noopener">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/WEC04oIEkik/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">Pitched the Cookie on Colfax</span>
+                        <span class="rel-why">9.14pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">On YouTube</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="https://www.youtube.com/watch?v=IM5vMVUYJXc" rel="noopener">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/IM5vMVUYJXc/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">Ashley Walker&#x27;s POV · Street Journalism Through Someone Else&#x27;s Eyes | Denver CO We Them Media</span>
+                        <span class="rel-why">9.16pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">On YouTube</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="truth-discourse-and-being-called-a-gentrifier-colfax.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/tZRn0IQTEp4/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">Truth, Discourse and Being Called a Gentrifier | Colfax</span>
+                        <span class="rel-why">9.29pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="housing-school-and-the-street-from-somebody-born-here-denver.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/JwJOZGs3bqA/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">Housed, Then Evicted Over a Sprinkler | Denver</span>
+                        <span class="rel-why">10.04pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+<div><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from Denver Unfiltered.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-denver">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="a-first-interview-and-advice-back-to-newark-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/UkX8veGIl58-640.jpg" srcset="../stills/UkX8veGIl58-320.jpg 320w, ../stills/UkX8veGIl58-480.jpg 480w, ../stills/UkX8veGIl58-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:15</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · ETH Denver 2024</span>
+                    <h3 class="report-title">A first interview, and advice back to Newark.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="building-a-dao-and-making-governance-a-game-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/qcTocIWf34U-640.jpg" srcset="../stills/qcTocIWf34U-320.jpg 320w, ../stills/qcTocIWf34U-480.jpg 480w, ../stills/qcTocIWf34U-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:45</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">A content coin, and making governance a game.</h3>
+                    
+                </div>
+            </a>
+            <a href="from-america-to-denver-what-brought-you-here-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/DdXcCfCc26E-640.jpg" srcset="../stills/DdXcCfCc26E-320.jpg 320w, ../stills/DdXcCfCc26E-480.jpg 480w, ../stills/DdXcCfCc26E-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:21</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · Street</span>
+                    <h3 class="report-title">A borrowed camera, and Denver block by block.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../question/is-the-internet-good-for-us.html">Every answer to “Is the internet good for us?”</a> &middot; <a href="../question/what-would-you-say-to-someone-under-ten.html">Every answer to “What would you say to someone under ten?”</a> &middot; <a href="../places.html#denver">Everything filmed in Denver</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

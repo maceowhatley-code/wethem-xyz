@@ -1,0 +1,849 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="On Day 1 of the Black Blockchain Summit 2026, Maceo Whatley talks with Ingrid Sturgis, who teaches journalism at Howard University&#x27;s School of…">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/ingrid-sturgis-crypto-inflation-trust-howard">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="A Journalism Professor on Crypto and Inflation | Howard | DC">
+    <meta property="og:description" content="On Day 1 of the Black Blockchain Summit 2026, Maceo Whatley talks with Ingrid Sturgis, who teaches journalism at Howard University&#x27;s School of…">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/ingrid-sturgis-crypto-inflation-trust-howard.jpg?v=791a3ae081">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="A journalism professor on crypto and inflation">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/ingrid-sturgis-crypto-inflation-trust-howard.jpg?v=791a3ae081">
+    <meta property="og:url" content="https://wethem.xyz/watch/ingrid-sturgis-crypto-inflation-trust-howard">
+    <title>A Journalism Professor on Crypto and Inflation | Howard | DC &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/ingrid-sturgis-crypto-inflation-trust-howard#video",
+  "name": "A Journalism Professor on Crypto and Inflation | Howard | DC",
+  "description": "On Day 1 of the Black Blockchain Summit 2026, Maceo Whatley talks with Ingrid Sturgis, who teaches journalism at Howard University's School of Communications and still works as a journalist herself. She describes crypto as a currency owned by no single entity, one she says can be exploited: \"It is a casino,\" and some of the people trading in it are, in her word, \"unscrupulous.\" Maceo walks her through Bitcoin as a hedge against inflation and the idea of de-dollarization; she is candid that she is new to some of it, but firm that current tariffs and trade policy are already weakening the US dollar's position. The conversation turns personal when Maceo asks whether she uses the word in his old podcast's name. Her answer is \"No,\" a stance she says she settled on in college. She closes with advice: for anyone navigating poverty, think about becoming an entrepreneur; for Black students who want to be journalists, learn the craft and stay honest. Filmed at Howard University in Washington, DC, on 25 September 2026.",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/g8Yzm2pjNho/mqdefault.jpg"
+  ],
+  "uploadDate": "2026-09-26T12:51:07Z",
+  "embedUrl": "https://www.youtube.com/embed/g8Yzm2pjNho",
+  "url": "https://wethem.xyz/watch/ingrid-sturgis-crypto-inflation-trust-howard",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT16M23S",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "Meeting a Howard journalism professor",
+      "startOffset": 0,
+      "url": "https://wethem.xyz/watch/ingrid-sturgis-crypto-inflation-trust-howard?t=0",
+      "endOffset": 56
+    },
+    {
+      "@type": "Clip",
+      "name": "What crypto is, and why it can be exploited",
+      "startOffset": 56,
+      "url": "https://wethem.xyz/watch/ingrid-sturgis-crypto-inflation-trust-howard?t=56",
+      "endOffset": 139
+    },
+    {
+      "@type": "Clip",
+      "name": "Inflation is going up",
+      "startOffset": 139,
+      "url": "https://wethem.xyz/watch/ingrid-sturgis-crypto-inflation-trust-howard?t=139",
+      "endOffset": 165
+    },
+    {
+      "@type": "Clip",
+      "name": "Bitcoin as a hedge, and de-dollarization",
+      "startOffset": 165,
+      "url": "https://wethem.xyz/watch/ingrid-sturgis-crypto-inflation-trust-howard?t=165",
+      "endOffset": 348
+    },
+    {
+      "@type": "Clip",
+      "name": "Are tariffs weakening the US dollar?",
+      "startOffset": 348,
+      "url": "https://wethem.xyz/watch/ingrid-sturgis-crypto-inflation-trust-howard?t=348",
+      "endOffset": 489
+    },
+    {
+      "@type": "Clip",
+      "name": "Navigating poverty? Consider entrepreneurship",
+      "startOffset": 489,
+      "url": "https://wethem.xyz/watch/ingrid-sturgis-crypto-inflation-trust-howard?t=489",
+      "endOffset": 536
+    },
+    {
+      "@type": "Clip",
+      "name": "What are you doing to support a free press?",
+      "startOffset": 536,
+      "url": "https://wethem.xyz/watch/ingrid-sturgis-crypto-inflation-trust-howard?t=536",
+      "endOffset": 578
+    },
+    {
+      "@type": "Clip",
+      "name": "Why she gave up the word in his podcast's name",
+      "startOffset": 578,
+      "url": "https://wethem.xyz/watch/ingrid-sturgis-crypto-inflation-trust-howard?t=578",
+      "endOffset": 928
+    },
+    {
+      "@type": "Clip",
+      "name": "Advice for Black journalists: learn your craft",
+      "startOffset": 928,
+      "url": "https://wethem.xyz/watch/ingrid-sturgis-crypto-inflation-trust-howard?t=928",
+      "endOffset": 983
+    }
+  ],
+  "creator": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "transcript": "Okay, what's up everybody? My name is Maceo Whatley. I'm the founder of We Them Media. We're here in Washington, DC at Howard University this weekend for the Black Blockchain Summit. This is year number 7, I believe. And today I'm here with Ingrid Sturgis. Sturgis, a professor.\nI teach journalism at the School of Communications at Howard University.\nOkay. And how'd you get into that?\nI was a former journalist. I'm still a journalist, actually.\nOkay. And what do you, what do you like? What journalism inspires you? It makes you feel you have to do work. You need to work.\nWell, journalism inspires me because it's the foundation of the First Amendment, and we keep everybody in check. We tell the people what they need to know. We investigate the stories that need to be investigated. We keep the powerful in check. And so it's really important if you want to support democracy to support the First Amendment. And as a journalist, that's what we do.\nOkay. I'm here with the fourth estate in the flesh. That's what we heard today. And so what do you know about crypto?\nUm, crypto is a currency that's digital in nature and is spread out over -- it's not, it's not owned by one single entity, so it's owned by a number of entities. And the thing about crypto is that you have to be careful because it can be exploited.\nAnd do you feel like that's different from other money?\nExcuse me?\nDo you feel like that's Different than other money?\nOh, yeah. It's different than every money because currency is basically controlled by the government here. And so crypto is not controlled by the government.\nA lot of people like that, right?\nSome people like that. Not everybody like that. I don't think it's necessarily the safest because it's private. And so you don't know who's exchanging the funds. And a lot of people have been duped into investing in cryptocurrency and lost all their money.\nThat's absolutely correct. That's absolutely correct. I stand behind that. That's important for people to understand that for the most part, this is a casino.\nIt is a casino. And we don't know who's trading the money. We don't know where the money's going. We don't know where it's coming from. It's very disseminated across a large number of people. And some of those people are unscrupulous.\nCan you define unscrupulous?\nUnscrupulous means they can't be trusted.\nI know some of y'all are about to start using that word today. But we like that. Okay, excellent. And so what do you think about inflation?\nWell, inflation's going up. I think that the, uh, interest rate now is at 7%, which if you're trying to buy a house is really high. Although when I first -- my boy -- when I first bought my first house, it was at 8%, but the price of a house was much cheaper then.\nAnd so do you feel you understand the relationship between cryptocurrency and inflation?\nNot quite. No, not really. I don't think I understand what that is. Can you explain what that is?\nWell, absolutely. That's actually what I'm here to do. You know, Bitcoin was created, people say, kind of tongue-in-cheek, to be decentralized money, peer-to-peer money. But in fact, there's only 21 million of it. And some assume that the actual goal was to replace fiat currency at scale because people assert that, you know, since we left the gold standard, you know, and any country can actually print money. You know, that there's always a concern of hyperinflation when the interests of those in power misalign with the interests of everyday people.\nRight. But that's always the case when you deal with the stock market. Yeah, the economy is not the stock market. The stock market's a certain number of people and a certain number of stocks, but it's not everybody and it's not most people.\nYeah, absolutely. You know, but my perception when it comes to crypto, I'm not as familiar with the stock market. I'll tell you, I've been studying crypto the last several years. And how I see it is that Bitcoin, like as I mentioned, was designed to be a hedge against inflation under this assumption that they can print as much money as they ever want. People say, oh, there will only ever be 21 million Bitcoin. Well, that's awesome. I should hold some Bitcoin just in case they do print me into hyperinflation.\nCan you afford Bitcoin now?\nMaybe not a whole Bitcoin, but if inflation keeps going up -- I have a Bitcoin. Yeah, but if inflation keeps getting worse, you're going to be able to afford less of Bitcoin, right? That's what people assert. And so people -- have you heard of de-dollarization?\nNo, not really, no.\nSo de-dollarization is this movement around the globe where people see the US dollar as a hegemonic currency. And so there are people who want to see the world shift away from the dollar as a reserve currency. But that scares me because that means Bitcoin might do well if we switch to Bitcoin as a reserve currency. But for every working-class American who's in proximity to poverty, who's working for US dollars, a dollar that is no longer in demand around the globe is what they're working for. And where does that leave them?\nTo me, that's a scary thought. It's a scary thought, but we have other currency. Other governments print currency and they have their own currencies. We could quite conceivably go into Chinese currency and they're pretty reliable and steady right now.\nI just think overnight if the country started saying like, you know, and if say 12 hours away they start saying while we're asleep we're all going to switch away, people wake up the next day groceries are 10 times more expensive.\nYeah, that could be dangerous if we go away from U.S. currency because we've dominated for so long, but that's not to say that we will continue to dominate, especially if you have the kind of government policies that you have now.\nMm-hmm.\nWe could be in big trouble in the next 5 to 10 years because US currency may not have the same status or value because of what the policies are now that we're -- the economic policies that the government is engaging in right now. And it scares everybody. And so as a result, many countries are probably going to be moving away from US currency. Because we're not reliable and as steady as we used to be. And that is because of current economic policy by this administration.\nIt's not new.\nIt's not new.\nThis is just exceptionally, maybe more predatory.\nBut they're doing some things that may permanently impact US currency.\nWhat things come to mind for you specifically?\nThe trade wars, the -- what do you call it? What is the thing that they're doing? The, um, tariffs. The tariffs, right. The tariffs could impact people. You know, our allies such as Canada are saying, well, we may not want to depend on the U.S. government because they're beating us over the head with tariffs. And the tariffs are coming down because, you know, the everyday person pays the tariffs. The companies, you know, when they had that big refund, the companies got the refund from suing the government over tariffs. But do we see any of that money? No. So these kind of policies and the work that the US government is doing against our allies means that our currency, our economic way of life could be jeopardized and weakened over -- it may not be permanent, but it will definitely impact us over the next 20 years.\nAbsolutely. And that's really what matters to me when it comes to crypto. I don't care if you buy crypto or don't buy crypto, but I think it's incredibly important that Black Americans today, people navigating poverty, understand what they should be planning to navigate over the next 5 years. Because saving money isn't going to do it. Working hard isn't going to do it. You know, it's really about being intentional. You know, somebody earlier asked you, when are people going to get tired of spending money on holidays and start coming up as a family to make annual investments that fail and succeed? Because then they can learn something every year with the money, as opposed to coming together and feeling good for a moment. And that really, to me, was kind of interesting. I said, oh wow, what if we did do a investment experiment every year. We definitely have a lot more investment experience and, you know, understanding collectively, my family in particular, right? If we did that.\nWell, we, we, we have more people who are doing that. This may not be, uh, you know, it may not be an overwhelming number, but a lot of people are focusing on how they can support their families financially, how they can plan better. And some families are making more than they've ever made in their lives, and so they're able to save and put money forward towards the next generation. So some of that is going on, and we shouldn't be so negative and defeatist about all of that because some people are doing that. Now, whether or not it benefits everyone, that's going to be tough to figure out. Yeah, whether or not it benefits everyone.\nThat's correct. I agree with that. And so my final question -- I have 2 more questions, actually, 3 more questions, actually.\nSo I'll be quick.\nWhat would your message be to Black Americans, Americans navigating poverty right now?\nOh, navigating poverty, that's tough because if you're navigating poverty, you don't always have a lot of options. Um, right now it's hard to get a second job. It's difficult to get, uh, access to benefits. So I would think that the best thing that somebody could do if they're in poverty is think about some kind of way to become an entrepreneur, to make Something that you can sell for, for additional funds, because I'm not sure if you're going to be able to -- I don't know that people are going to be able to find jobs. I mean, you still could probably do Uber, but even they are cutting back, right? So the best thing to do is to find something that you can make and sell that will earn you extra money and be intentional about becoming an entrepreneur.\nOh, yeah. And if you could ask people around the world one question, what would you ask them?\nAround the world.\nWe're creating citizen journalism across the diaspora, the biggest citizen journalism network, and we're going out and asking people questions, this one in particular. And then we're picking one to go out and ask collectively.\nWhat are you doing to support freedom of the press? What are you doing to support democracy? What are you doing to support the fact that we are getting -- some of our freedoms are being eroded? What are you doing to make sure that everybody has Is able to live a healthy, free, and a healthy, free, and educationally rich life.\nAmen. And then I told you my podcast used to be called We Them Niggas, and so my last question is: We them niggas or nah?\nNo.\nOkay. Never. And what makes you say that, if I can ask?\nBecause it's a term that even though we may use it, some people may use it as a term of endearment. Basically. It's a term that really tears people down. Ultimately, it's not really a great way to talk about one another, especially when it's weaponized against Black people. And we help to -- we help it to be weaponized against Black people. So no, it's a no for me. I gave it up when I was in college.\nBut before that, you had a different opinion?\nI probably used it every now and again, but I definitely gave it up when I became a college student and I realized the negative implications. However, here we are in the rap or post-rap era, and everybody thinks it's okay to use -- not everybody, many people think it's okay. I think still a lot of people don't use it, but for me, it's a no. I try to avoid it.\nI appreciate that. You know, I'm asking people on purpose, right? People could say yes or no. I think, you know, my podcast at one point was called We Them Niggas because I wanted to actually facilitate more discourse around how people understand that word, the politics of that word. And even our identity as people descended from slavery potentially here in America and what terms actually recognize that, you know, and give us dignity inside that context and who does and who doesn't. Right.\nSo how did you do that?\nI had people on my podcast and I asked them, you know, what's their first experience with the word? How do they understand it? What's their understanding of why people get upset when people say it? Things like that. You know, can people say it or not? Just trying to facilitate the discourse.\nSo did you think it did that?\nYeah, I would say to some degree. I think, you know, I got into crypto and so I started interviewing a lot of Black people in crypto and it became more represent -- like documenting people in this space and what they were doing and trying to showcase what, you know, people descended from slavery were doing right now in a space that might not feel like it's for us. And, you know, it's taken me around the globe. I've spent 4 months in Africa. I spent months in Asia. I've been to Europe, you know, and I'm still on the journey, right? Asking people about it, as you can see right now.\nOkay.\nBut I think it's important for us to start to unpack really what it means for Black people in America to be descended.\nSo what do you think about it, the use of the word?\nUm, I, I think it's the, it's the only term that implies that I'm someone descended from slavery and from a family that's lived through slavery and racism in this society. And I think calling me Black doesn't necessarily do that justice in the same way. And so I think when We Them Niggas is the name of my podcast, it's about, you know, I am I'm the descendant of people who have survived, overcome, and lived through those circumstances, and I'm still navigating what that means for me and discovering it, you know.\nI guess that's one way of looking at it.\nAnd, you know, they were calling -- they were calling us something different before, you know. But at the end of the day, we're the people they were calling that. And where are we now?\nI think we're better off.\nBut, you know, I agree with that, you know. But I want to show people where are we now while honoring that history, right, and including it and talking about it. And this word is, I think, a big part of that history.\nI don't mind using the word when it's, uh, appropriate to use it. Maybe you're writing poetry, maybe you're talking about something in particular, maybe there's somebody that fits the definition, right?\nWhat does that mean? So talk about that, because that, that --\nwell, it means that's the way somebody who, who, who is in essence causing their own demise or causing the demise of their own people, then I think sometimes that word might be appropriate.\nBut if we're talking about So that's your definition though, because a lot of young people aren't walking around with that definition.\nIt's not my definition. It's kind of like what I see it being used as.\nBut, you know, that's your perception of the word.\nThat's my perception of the word, right?\nTo say it better. So I'm not here to put words in your mouth. I'm going to be a good journalist. I promise.\nYou better. It doesn't -- now you made me lose my train of thought. I think it can be -- it can have some appropriate use. But I don't think it should be used every day, all day, and as a substitute for other words that we have that better define what you're trying to say. You know, remember, I'm a journalist, so I use words and words have meaning. And so you have to be intentional about how you're using words and what you're describing and who you're describing and how you're describing them.\nDo you think it's -- to me, it occurs like saying And in any environment such as a white supremacist society like we live in right now, you know, to say that we as Black people are responsible for our own demise really steps over everything that we're standing in the face of and coping with and navigating.\nI don't think necessarily so. I think some of us do kind of do that and are engaged in that. I mean, you know, just look at some of the Black people in the Republican Party, right? They're standing next to white supremacy because they think they're going to benefit from it to the demise of other people, right? So there are some of us --\nThat's a nigga in your book.\nI didn't say that.\nDemise. I apologize.\nI'm done. No, but you know, there are some people who are not necessarily upholding and supporting Black people, and so those are the people who you know, are not for us. And, you know, not everybody's for us. You know, there were also people back in slavery who didn't want to get out of slavery, right?\nYeah.\nYou know, so what would Harriet do? She left them behind. Or she said that she threatened to kill them and shoot them if they didn't free themselves. So, you know, we have -- we still have that. We still have a lot of that. And that's unfortunate given where we are and what we know about our history and how we got here and what we had to go through to reach where we are now.\nNo, thank you. And I have one more question, actually, because you're here representing the journalism school.\nYou know, go ahead. Go ahead. Well, it's your last question.\nIt will be.\nOkay.\nWhat would be your word of advice to Black people who want to be journalists in today's world?\nBecome an independent journalist. Learn your craft. Learn your trade. However you do it, go to school. Take a lesson from --\nI should go to school for journalism. Should I go to school for journalism?\nYou graduated already, didn't you? Graduate from something? What is your degree in?\nMoral psychology.\nOkay, so you're well, you're pretty much a journalist already. Moral psychology.\nThanks. That's that's nice credit to get.\nBut um, so I don't think you need to go to school for it because you're out here practicing it. I think you just need to uphold all the tenets of being a good journalist, which is being factual, which is being honest, which is being truthful, and you. You seem to be doing some of that from what I can tell, having first met you on the street.\nThat's where we meet people, right? That's where we meet community.\nAlrighty, thank you so much.\nThank you.\nSo where am I going to see this?",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Washington, DC",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "url": "https://wethem.xyz/places#washington-dc"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Black Blockchain Summit",
+    "url": "https://wethem.xyz/portfolio#p-black-blockchain-summit"
+  },
+  "dateCreated": "2026-09-25"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Black Blockchain Summit",
+      "item": "https://wethem.xyz/portfolio#p-black-blockchain-summit"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "A journalism professor on crypto and inflation",
+      "item": "https://wethem.xyz/watch/ingrid-sturgis-crypto-inflation-trust-howard"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2026-09-26" data-pf-vid="g8Yzm2pjNho" data-pf-k="{&quot;l&quot;:&quot;16:23&quot;}" data-pf-place="Washington, DC" data-pf-country="United States" data-pf-project="Black Blockchain Summit">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-black-blockchain-summit">Black Blockchain Summit</a></li>
+            <li aria-current="page">A journalism professor on crypto and inflation</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">A journalism professor on crypto and inflation.</h1>
+
+    <p class="wt-byline">Washington, DC &middot; 16 min &middot; filmed <time datetime="2026-09-25">25 September 2026</time></p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="g8Yzm2pjNho" live poster="hqdefault" postersrcset="https://i.ytimg.com/vi/g8Yzm2pjNho/mqdefault.jpg 320w, https://i.ytimg.com/vi/g8Yzm2pjNho/hqdefault.jpg 480w"><iframe src="https://www.youtube-nocookie.com/embed/g8Yzm2pjNho?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="A journalism professor on crypto and inflation, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+
+    <div class="wt-prose">
+            <p>On Day 1 of the Black Blockchain Summit 2026, Maceo Whatley talks with Ingrid Sturgis, who teaches journalism at Howard University&rsquo;s School of Communications and still works as a journalist herself. She describes crypto as a currency owned by no single entity, one she says can be exploited: &ldquo;It is a casino,&rdquo; and some of the people trading in it are, in her word, &ldquo;unscrupulous.&rdquo; Maceo walks her through Bitcoin as a hedge against inflation and the idea of de-dollarization; she is candid that she is new to some of it, but firm that current tariffs and trade policy are already weakening the US dollar&rsquo;s position. The conversation turns personal when Maceo asks whether she uses the word in his old podcast&rsquo;s name. Her answer is &ldquo;No,&rdquo; a stance she says she settled on in college. She closes with advice: for anyone navigating poverty, think about becoming an entrepreneur; for Black students who want to be journalists, learn the craft and stay honest. Filmed at Howard University in Washington, DC, on 25 September 2026.</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../places.html#washington-dc">Everything filmed in Washington, DC</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="the-biggest-question-of-2026-howard.html"><span class="wt-next-thumb wt-thumb"><img src="https://i.ytimg.com/vi/PNy7fc_ssHY/hqdefault.jpg" srcset="https://i.ytimg.com/vi/PNy7fc_ssHY/mqdefault.jpg 320w, https://i.ytimg.com/vi/PNy7fc_ssHY/hqdefault.jpg 480w" sizes="300px" alt="" loading="lazy" decoding="async" width="480" height="270"><span class="wt-dur"><span class="visually-hidden">Length </span>14:32</span></span><span>The biggest question of 2026.</span></a>
+        <a class="wt-rail-card" href="12-years-in-prison-now-building-legal-tech-howard.html"><span class="wt-next-thumb wt-thumb"><img src="https://i.ytimg.com/vi/v_nTLNDag_A/hqdefault.jpg" srcset="https://i.ytimg.com/vi/v_nTLNDag_A/mqdefault.jpg 320w, https://i.ytimg.com/vi/v_nTLNDag_A/hqdefault.jpg 480w" sizes="300px" alt="" loading="lazy" decoding="async" width="480" height="270"><span class="wt-dur"><span class="visually-hidden">Length </span>27:02</span></span><span>12 years in prison, now building legal tech.</span></a>
+        <a class="wt-rail-card" href="a-freshman-learns-why-the-dollar-is-losing-value-howard.html"><span class="wt-next-thumb wt-thumb"><img src="https://i.ytimg.com/vi/iVmfZjKSp7Q/hqdefault.jpg" srcset="https://i.ytimg.com/vi/iVmfZjKSp7Q/mqdefault.jpg 320w, https://i.ytimg.com/vi/iVmfZjKSp7Q/hqdefault.jpg 480w" sizes="300px" alt="" loading="lazy" decoding="async" width="480" height="270"><span class="wt-dur"><span class="visually-hidden">Length </span>7:34</span></span><span>A freshman learns why the dollar is losing value.</span></a>
+        <a class="wt-rail-card" href="finding-comfort-in-her-blackness-howard.html"><span class="wt-next-thumb wt-thumb"><img src="https://i.ytimg.com/vi/KYWZX1FsXfs/hqdefault.jpg" srcset="https://i.ytimg.com/vi/KYWZX1FsXfs/mqdefault.jpg 320w, https://i.ytimg.com/vi/KYWZX1FsXfs/hqdefault.jpg 480w" sizes="300px" alt="" loading="lazy" decoding="async" width="480" height="270"><span class="wt-dur"><span class="visually-hidden">Length </span>8:38</span></span><span>Comfortable in her Blackness: a senior&#x27;s story.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c0"><a class="wt-t" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-s">Meeting a Howard journalism professor</span></li>
+                <li class="wt-line" id="c56"><a class="wt-t" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=56s" target="_blank" rel="noopener" data-pagefind-ignore>0:56</a><span class="wt-s">What crypto is, and why it can be exploited</span></li>
+                <li class="wt-line" id="c139"><a class="wt-t" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=139s" target="_blank" rel="noopener" data-pagefind-ignore>2:19</a><span class="wt-s">Inflation is going up</span></li>
+                <li class="wt-line" id="c165"><a class="wt-t" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=165s" target="_blank" rel="noopener" data-pagefind-ignore>2:45</a><span class="wt-s">Bitcoin as a hedge, and de-dollarization</span></li>
+                <li class="wt-line" id="c348"><a class="wt-t" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=348s" target="_blank" rel="noopener" data-pagefind-ignore>5:48</a><span class="wt-s">Are tariffs weakening the US dollar?</span></li>
+                <li class="wt-line" id="c489"><a class="wt-t" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=489s" target="_blank" rel="noopener" data-pagefind-ignore>8:09</a><span class="wt-s">Navigating poverty? Consider entrepreneurship</span></li>
+                <li class="wt-line" id="c536"><a class="wt-t" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=536s" target="_blank" rel="noopener" data-pagefind-ignore>8:56</a><span class="wt-s">What are you doing to support a free press?</span></li>
+                <li class="wt-line" id="c578"><a class="wt-t" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=578s" target="_blank" rel="noopener" data-pagefind-ignore>9:38</a><span class="wt-s">Why she gave up the word in his podcast&#x27;s name</span></li>
+                <li class="wt-line" id="c928"><a class="wt-t" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=928s" target="_blank" rel="noopener" data-pagefind-ignore>15:28</a><span class="wt-s">Advice for Black journalists: learn your craft</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Who speaks, by their own introduction on the tape: <a href="../guests.html#g-maceo" data-pagefind-filter="person">Maceo</a> at <a class="wt-at" data-seek="0" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a>. Transcribed from the original audio and corrected for names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Okay, what&rsquo;s up everybody? My name is Maceo Whatley. I&rsquo;m the founder of We Them Media. We&rsquo;re here in Washington, DC at Howard University this weekend for the Black Blockchain Summit. This is year number 7, I believe. And today I&rsquo;m here with Ingrid Sturgis. Sturgis, a professor.</p>
+            <p id="s15"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=15s" target="_blank" rel="noopener" data-pagefind-ignore>0:15</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I teach journalism at the School of Communications at Howard University.</p>
+            <p id="s19"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=19s" target="_blank" rel="noopener" data-pagefind-ignore>0:19</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Okay. And how&rsquo;d you get into that?</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s20"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=20s" target="_blank" rel="noopener" data-pagefind-ignore>0:20</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I was a former journalist. I&rsquo;m still a journalist, actually.</p>
+            <p id="s24"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=24s" target="_blank" rel="noopener" data-pagefind-ignore>0:24</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Okay. And what do you, what do you like? What journalism inspires you? It makes you feel you have to do work. You need to work.</p>
+            <p id="s30"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=30s" target="_blank" rel="noopener" data-pagefind-ignore>0:30</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Well, journalism inspires me because it&rsquo;s the foundation of the First Amendment, and we keep everybody in check. We tell the people what they need to know. We investigate the stories that need to be investigated. We keep the powerful in check. And so it&rsquo;s really important if you want to support democracy to support the First Amendment. And as a journalist, that&rsquo;s what we do.</p>
+            <p id="s51"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=51s" target="_blank" rel="noopener" data-pagefind-ignore>0:51</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Okay. I&rsquo;m here with the fourth estate in the flesh. That&rsquo;s what we heard today. And so what do you know about crypto?</p>
+            <p id="s56"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=56s" target="_blank" rel="noopener" data-pagefind-ignore>0:56</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Um, crypto is a currency that&rsquo;s digital in nature and is spread out over -- it&rsquo;s not, it&rsquo;s not owned by one single entity, so it&rsquo;s owned by a number of entities. And the thing about crypto is that you have to be careful because it can be exploited.</p>
+            <p id="s77"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=77s" target="_blank" rel="noopener" data-pagefind-ignore>1:17</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>And do you feel like that&rsquo;s different from other money?</p>
+            <p id="s80"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=80s" target="_blank" rel="noopener" data-pagefind-ignore>1:20</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Excuse me?</p>
+            <p id="s82"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=82s" target="_blank" rel="noopener" data-pagefind-ignore>1:22</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Do you feel like that&rsquo;s Different than other money?</p>
+            <p id="s84"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=84s" target="_blank" rel="noopener" data-pagefind-ignore>1:24</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Oh, yeah. It&rsquo;s different than every money because currency is basically controlled by the government here. And so crypto is not controlled by the government.</p>
+            <p id="s91"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=91s" target="_blank" rel="noopener" data-pagefind-ignore>1:31</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>A lot of people like that, right?</p>
+            <p id="s93"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=93s" target="_blank" rel="noopener" data-pagefind-ignore>1:33</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Some people like that. Not everybody like that. I don&rsquo;t think it&rsquo;s necessarily the safest because it&rsquo;s private. And so you don&rsquo;t know who&rsquo;s exchanging the funds. And a lot of people have been duped into investing in cryptocurrency and lost all their money.</p>
+            <p id="s107"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=107s" target="_blank" rel="noopener" data-pagefind-ignore>1:47</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>That&rsquo;s absolutely correct. That&rsquo;s absolutely correct. I stand behind that. That&rsquo;s important for people to understand that for the most part, this is a casino.</p>
+            <p id="s113"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=113s" target="_blank" rel="noopener" data-pagefind-ignore>1:53</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It is a casino. And we don&rsquo;t know who&rsquo;s trading the money. We don&rsquo;t know where the money&rsquo;s going. We don&rsquo;t know where it&rsquo;s coming from. It&rsquo;s very disseminated across a large number of people. And some of those people are unscrupulous.</p>
+            <p id="s128"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=128s" target="_blank" rel="noopener" data-pagefind-ignore>2:08</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Can you define unscrupulous?</p>
+            <p id="s130"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=130s" target="_blank" rel="noopener" data-pagefind-ignore>2:10</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Unscrupulous means they can&rsquo;t be trusted.</p>
+            <p id="s133"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=133s" target="_blank" rel="noopener" data-pagefind-ignore>2:13</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>I know some of y&rsquo;all are about to start using that word today. But we like that. Okay, excellent. And so what do you think about inflation?</p>
+            <p id="s139"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=139s" target="_blank" rel="noopener" data-pagefind-ignore>2:19</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Well, inflation&rsquo;s going up. I think that the, uh, interest rate now is at 7%, which if you&rsquo;re trying to buy a house is really high. Although when I first -- my boy -- when I first bought my first house, it was at 8%, but the price of a house was much cheaper then.</p>
+            <p id="s156"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=156s" target="_blank" rel="noopener" data-pagefind-ignore>2:36</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>And so do you feel you understand the relationship between cryptocurrency and inflation?</p>
+            <p id="s160"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=160s" target="_blank" rel="noopener" data-pagefind-ignore>2:40</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Not quite. No, not really. I don&rsquo;t think I understand what that is. Can you explain what that is?</p>
+            <p id="s165"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=165s" target="_blank" rel="noopener" data-pagefind-ignore>2:45</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Well, absolutely. That&rsquo;s actually what I&rsquo;m here to do. You know, Bitcoin was created, people say, kind of tongue-in-cheek, to be decentralized money, peer-to-peer money. But in fact, there&rsquo;s only 21 million of it. And some assume that the actual goal was to replace fiat currency at scale because people assert that, you know, since we left the gold standard, you know, and any country can actually print money. You know, that there&rsquo;s always a concern of hyperinflation when the interests of those in power misalign with the interests of everyday people.</p>
+            <p id="s195"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=195s" target="_blank" rel="noopener" data-pagefind-ignore>3:15</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Right. But that&rsquo;s always the case when you deal with the stock market. Yeah, the economy is not the stock market. The stock market&rsquo;s a certain number of people and a certain number of stocks, but it&rsquo;s not everybody and it&rsquo;s not most people.</p>
+            <p id="s209"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=209s" target="_blank" rel="noopener" data-pagefind-ignore>3:29</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Yeah, absolutely. You know, but my perception when it comes to crypto, I&rsquo;m not as familiar with the stock market. I&rsquo;ll tell you, I&rsquo;ve been studying crypto the last several years. And how I see it is that Bitcoin, like as I mentioned, was designed to be a hedge against inflation under this assumption that they can print as much money as they ever want. People say, oh, there will only ever be 21 million Bitcoin. Well, that&rsquo;s awesome. I should hold some Bitcoin just in case they do print me into hyperinflation.</p>
+            <p id="s231"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=231s" target="_blank" rel="noopener" data-pagefind-ignore>3:51</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Can you afford Bitcoin now?</p>
+            <p id="s233"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=233s" target="_blank" rel="noopener" data-pagefind-ignore>3:53</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Maybe not a whole Bitcoin, but if inflation keeps going up -- I have a Bitcoin. Yeah, but if inflation keeps getting worse, you&rsquo;re going to be able to afford less of Bitcoin, right? That&rsquo;s what people assert. And so people -- have you heard of de-dollarization?</p>
+            <p id="s243"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=243s" target="_blank" rel="noopener" data-pagefind-ignore>4:03</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>No, not really, no.</p>
+            <p id="s244"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=244s" target="_blank" rel="noopener" data-pagefind-ignore>4:04</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>So de-dollarization is this movement around the globe where people see the US dollar as a hegemonic currency. And so there are people who want to see the world shift away from the dollar as a reserve currency. But that scares me because that means Bitcoin might do well if we switch to Bitcoin as a reserve currency. But for every working-class American who&rsquo;s in proximity to poverty, who&rsquo;s working for US dollars, a dollar that is no longer in demand around the globe is what they&rsquo;re working for. And where does that leave them?</p>
+            <p id="s269"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=269s" target="_blank" rel="noopener" data-pagefind-ignore>4:29</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>To me, that&rsquo;s a scary thought. It&rsquo;s a scary thought, but we have other currency. Other governments print currency and they have their own currencies. We could quite conceivably go into Chinese currency and they&rsquo;re pretty reliable and steady right now.</p>
+            <p id="s282"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=282s" target="_blank" rel="noopener" data-pagefind-ignore>4:42</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>I just think overnight if the country started saying like, you know, and if say 12 hours away they start saying while we&rsquo;re asleep we&rsquo;re all going to switch away, people wake up the next day groceries are 10 times more expensive.</p>
+            <p id="s292"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=292s" target="_blank" rel="noopener" data-pagefind-ignore>4:52</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, that could be dangerous if we go away from U.S. currency because we&rsquo;ve dominated for so long, but that&rsquo;s not to say that we will continue to dominate, especially if you have the kind of government policies that you have now.</p>
+            <p id="s305"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=305s" target="_blank" rel="noopener" data-pagefind-ignore>5:05</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Mm-hmm.</p>
+            <p id="s305-2"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=305s" target="_blank" rel="noopener" data-pagefind-ignore>5:05</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>We could be in big trouble in the next 5 to 10 years because US currency may not have the same status or value because of what the policies are now that we&rsquo;re -- the economic policies that the government is engaging in right now. And it scares everybody. And so as a result, many countries are probably going to be moving away from US currency. Because we&rsquo;re not reliable and as steady as we used to be. And that is because of current economic policy by this administration.</p>
+            <p id="s335"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=335s" target="_blank" rel="noopener" data-pagefind-ignore>5:35</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>It&rsquo;s not new.</p>
+            <p id="s336"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=336s" target="_blank" rel="noopener" data-pagefind-ignore>5:36</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It&rsquo;s not new.</p>
+            <p id="s338"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=338s" target="_blank" rel="noopener" data-pagefind-ignore>5:38</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>This is just exceptionally, maybe more predatory.</p>
+            <p id="s340"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=340s" target="_blank" rel="noopener" data-pagefind-ignore>5:40</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>But they&rsquo;re doing some things that may permanently impact US currency.</p>
+            <p id="s347"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=347s" target="_blank" rel="noopener" data-pagefind-ignore>5:47</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>What things come to mind for you specifically?</p>
+            <p id="s348"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=348s" target="_blank" rel="noopener" data-pagefind-ignore>5:48</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>The trade wars, the -- what do you call it? What is the thing that they&rsquo;re doing? The, um, tariffs. The tariffs, right. The tariffs could impact people. You know, our allies such as Canada are saying, well, we may not want to depend on the U.S. government because they&rsquo;re beating us over the head with tariffs. And the tariffs are coming down because, you know, the everyday person pays the tariffs. The companies, you know, when they had that big refund, the companies got the refund from suing the government over tariffs. But do we see any of that money? No. So these kind of policies and the work that the US government is doing against our allies means that our currency, our economic way of life could be jeopardized and weakened over -- it may not be permanent, but it will definitely impact us over the next 20 years.</p>
+            <p id="s404"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=404s" target="_blank" rel="noopener" data-pagefind-ignore>6:44</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Absolutely. And that&rsquo;s really what matters to me when it comes to crypto. I don&rsquo;t care if you buy crypto or don&rsquo;t buy crypto, but I think it&rsquo;s incredibly important that Black Americans today, people navigating poverty, understand what they should be planning to navigate over the next 5 years. Because saving money isn&rsquo;t going to do it. Working hard isn&rsquo;t going to do it. You know, it&rsquo;s really about being intentional. You know, somebody earlier asked you, when are people going to get tired of spending money on holidays and start coming up as a family to make annual investments that fail and succeed? Because then they can learn something every year with the money, as opposed to coming together and feeling good for a moment. And that really, to me, was kind of interesting. I said, oh wow, what if we did do a investment experiment every year. We definitely have a lot more investment experience and, you know, understanding collectively, my family in particular, right? If we did that.</p>
+            <p id="s443"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=443s" target="_blank" rel="noopener" data-pagefind-ignore>7:23</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Well, we, we, we have more people who are doing that. This may not be, uh, you know, it may not be an overwhelming number, but a lot of people are focusing on how they can support their families financially, how they can plan better. And some families are making more than they&rsquo;ve ever made in their lives, and so they&rsquo;re able to save and put money forward towards the next generation. So some of that is going on, and we shouldn&rsquo;t be so negative and defeatist about all of that because some people are doing that. Now, whether or not it benefits everyone, that&rsquo;s going to be tough to figure out. Yeah, whether or not it benefits everyone.</p>
+            <p id="s482"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=482s" target="_blank" rel="noopener" data-pagefind-ignore>8:02</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>That&rsquo;s correct. I agree with that. And so my final question -- I have 2 more questions, actually, 3 more questions, actually.</p>
+            <p id="s488"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=488s" target="_blank" rel="noopener" data-pagefind-ignore>8:08</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So I&rsquo;ll be quick.</p>
+            <p id="s489"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=489s" target="_blank" rel="noopener" data-pagefind-ignore>8:09</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>What would your message be to Black Americans, Americans navigating poverty right now?</p>
+            <p id="s492"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=492s" target="_blank" rel="noopener" data-pagefind-ignore>8:12</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Oh, navigating poverty, that&rsquo;s tough because if you&rsquo;re navigating poverty, you don&rsquo;t always have a lot of options. Um, right now it&rsquo;s hard to get a second job. It&rsquo;s difficult to get, uh, access to benefits. So I would think that the best thing that somebody could do if they&rsquo;re in poverty is think about some kind of way to become an entrepreneur, to make Something that you can sell for, for additional funds, because I&rsquo;m not sure if you&rsquo;re going to be able to -- I don&rsquo;t know that people are going to be able to find jobs. I mean, you still could probably do Uber, but even they are cutting back, right? So the best thing to do is to find something that you can make and sell that will earn you extra money and be intentional about becoming an entrepreneur.</p>
+            <p id="s536"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=536s" target="_blank" rel="noopener" data-pagefind-ignore>8:56</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Oh, yeah. And if you could ask people around the world one question, what would you ask them?</p>
+            <p id="s542"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=542s" target="_blank" rel="noopener" data-pagefind-ignore>9:02</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Around the world.</p>
+            <p id="s544"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=544s" target="_blank" rel="noopener" data-pagefind-ignore>9:04</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>We&rsquo;re creating citizen journalism across the diaspora, the biggest citizen journalism network, and we&rsquo;re going out and asking people questions, this one in particular. And then we&rsquo;re picking one to go out and ask collectively.</p>
+            <p id="s553"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=553s" target="_blank" rel="noopener" data-pagefind-ignore>9:13</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>What are you doing to support freedom of the press? What are you doing to support democracy? What are you doing to support the fact that we are getting -- some of our freedoms are being eroded? What are you doing to make sure that everybody has Is able to live a healthy, free, and a healthy, free, and educationally rich life.</p>
+            <p id="s578"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=578s" target="_blank" rel="noopener" data-pagefind-ignore>9:38</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Amen. And then I told you my podcast used to be called We Them Niggas, and so my last question is: We them niggas or nah?</p>
+            <p id="s585"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=585s" target="_blank" rel="noopener" data-pagefind-ignore>9:45</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>No.</p>
+            <p id="s586"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=586s" target="_blank" rel="noopener" data-pagefind-ignore>9:46</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Okay. Never. And what makes you say that, if I can ask?</p>
+            <p id="s589"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=589s" target="_blank" rel="noopener" data-pagefind-ignore>9:49</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Because it&rsquo;s a term that even though we may use it, some people may use it as a term of endearment. Basically. It&rsquo;s a term that really tears people down. Ultimately, it&rsquo;s not really a great way to talk about one another, especially when it&rsquo;s weaponized against Black people. And we help to -- we help it to be weaponized against Black people. So no, it&rsquo;s a no for me. I gave it up when I was in college.</p>
+            <p id="s613"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=613s" target="_blank" rel="noopener" data-pagefind-ignore>10:13</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>But before that, you had a different opinion?</p>
+            <p id="s616"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=616s" target="_blank" rel="noopener" data-pagefind-ignore>10:16</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I probably used it every now and again, but I definitely gave it up when I became a college student and I realized the negative implications. However, here we are in the rap or post-rap era, and everybody thinks it&rsquo;s okay to use -- not everybody, many people think it&rsquo;s okay. I think still a lot of people don&rsquo;t use it, but for me, it&rsquo;s a no. I try to avoid it.</p>
+            <p id="s637"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=637s" target="_blank" rel="noopener" data-pagefind-ignore>10:37</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>I appreciate that. You know, I&rsquo;m asking people on purpose, right? People could say yes or no. I think, you know, my podcast at one point was called We Them Niggas because I wanted to actually facilitate more discourse around how people understand that word, the politics of that word. And even our identity as people descended from slavery potentially here in America and what terms actually recognize that, you know, and give us dignity inside that context and who does and who doesn&rsquo;t. Right.</p>
+            <p id="s657"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=657s" target="_blank" rel="noopener" data-pagefind-ignore>10:57</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So how did you do that?</p>
+            <p id="s658"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=658s" target="_blank" rel="noopener" data-pagefind-ignore>10:58</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>I had people on my podcast and I asked them, you know, what&rsquo;s their first experience with the word? How do they understand it? What&rsquo;s their understanding of why people get upset when people say it? Things like that. You know, can people say it or not? Just trying to facilitate the discourse.</p>
+            <p id="s672"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=672s" target="_blank" rel="noopener" data-pagefind-ignore>11:12</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So did you think it did that?</p>
+            <p id="s674"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=674s" target="_blank" rel="noopener" data-pagefind-ignore>11:14</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Yeah, I would say to some degree. I think, you know, I got into crypto and so I started interviewing a lot of Black people in crypto and it became more represent -- like documenting people in this space and what they were doing and trying to showcase what, you know, people descended from slavery were doing right now in a space that might not feel like it&rsquo;s for us. And, you know, it&rsquo;s taken me around the globe. I&rsquo;ve spent 4 months in Africa. I spent months in Asia. I&rsquo;ve been to Europe, you know, and I&rsquo;m still on the journey, right? Asking people about it, as you can see right now.</p>
+            <p id="s699"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=699s" target="_blank" rel="noopener" data-pagefind-ignore>11:39</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Okay.</p>
+            <p id="s699-2"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=699s" target="_blank" rel="noopener" data-pagefind-ignore>11:39</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>But I think it&rsquo;s important for us to start to unpack really what it means for Black people in America to be descended.</p>
+            <p id="s705"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=705s" target="_blank" rel="noopener" data-pagefind-ignore>11:45</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So what do you think about it, the use of the word?</p>
+            <p id="s707"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=707s" target="_blank" rel="noopener" data-pagefind-ignore>11:47</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Um, I, I think it&rsquo;s the, it&rsquo;s the only term that implies that I&rsquo;m someone descended from slavery and from a family that&rsquo;s lived through slavery and racism in this society. And I think calling me Black doesn&rsquo;t necessarily do that justice in the same way. And so I think when We Them Niggas is the name of my podcast, it&rsquo;s about, you know, I am I&rsquo;m the descendant of people who have survived, overcome, and lived through those circumstances, and I&rsquo;m still navigating what that means for me and discovering it, you know.</p>
+            <p id="s732"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=732s" target="_blank" rel="noopener" data-pagefind-ignore>12:12</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I guess that&rsquo;s one way of looking at it.</p>
+            <p id="s735"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=735s" target="_blank" rel="noopener" data-pagefind-ignore>12:15</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>And, you know, they were calling -- they were calling us something different before, you know. But at the end of the day, we&rsquo;re the people they were calling that. And where are we now?</p>
+            <p id="s740"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=740s" target="_blank" rel="noopener" data-pagefind-ignore>12:20</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I think we&rsquo;re better off.</p>
+            <p id="s744"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=744s" target="_blank" rel="noopener" data-pagefind-ignore>12:24</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>But, you know, I agree with that, you know. But I want to show people where are we now while honoring that history, right, and including it and talking about it. And this word is, I think, a big part of that history.</p>
+            <p id="s752"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=752s" target="_blank" rel="noopener" data-pagefind-ignore>12:32</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I don&rsquo;t mind using the word when it&rsquo;s, uh, appropriate to use it. Maybe you&rsquo;re writing poetry, maybe you&rsquo;re talking about something in particular, maybe there&rsquo;s somebody that fits the definition, right?</p>
+            <p id="s764"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=764s" target="_blank" rel="noopener" data-pagefind-ignore>12:44</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>What does that mean? So talk about that, because that, that --</p>
+            <p id="s766"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=766s" target="_blank" rel="noopener" data-pagefind-ignore>12:46</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>well, it means that&rsquo;s the way somebody who, who, who is in essence causing their own demise or causing the demise of their own people, then I think sometimes that word might be appropriate.</p>
+            <p id="s778"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=778s" target="_blank" rel="noopener" data-pagefind-ignore>12:58</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>But if we&rsquo;re talking about So that&rsquo;s your definition though, because a lot of young people aren&rsquo;t walking around with that definition.</p>
+            <p id="s782"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=782s" target="_blank" rel="noopener" data-pagefind-ignore>13:02</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It&rsquo;s not my definition. It&rsquo;s kind of like what I see it being used as.</p>
+            <p id="s787"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=787s" target="_blank" rel="noopener" data-pagefind-ignore>13:07</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>But, you know, that&rsquo;s your perception of the word.</p>
+            <p id="s789"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=789s" target="_blank" rel="noopener" data-pagefind-ignore>13:09</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>That&rsquo;s my perception of the word, right?</p>
+            <p id="s791"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=791s" target="_blank" rel="noopener" data-pagefind-ignore>13:11</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>To say it better. So I&rsquo;m not here to put words in your mouth. I&rsquo;m going to be a good journalist. I promise.</p>
+            <p id="s796"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=796s" target="_blank" rel="noopener" data-pagefind-ignore>13:16</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>You better. It doesn&rsquo;t -- now you made me lose my train of thought. I think it can be -- it can have some appropriate use. But I don&rsquo;t think it should be used every day, all day, and as a substitute for other words that we have that better define what you&rsquo;re trying to say. You know, remember, I&rsquo;m a journalist, so I use words and words have meaning. And so you have to be intentional about how you&rsquo;re using words and what you&rsquo;re describing and who you&rsquo;re describing and how you&rsquo;re describing them.</p>
+            <p id="s826"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=826s" target="_blank" rel="noopener" data-pagefind-ignore>13:46</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Do you think it&rsquo;s -- to me, it occurs like saying And in any environment such as a white supremacist society like we live in right now, you know, to say that we as Black people are responsible for our own demise really steps over everything that we&rsquo;re standing in the face of and coping with and navigating.</p>
+            <p id="s843"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=843s" target="_blank" rel="noopener" data-pagefind-ignore>14:03</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I don&rsquo;t think necessarily so. I think some of us do kind of do that and are engaged in that. I mean, you know, just look at some of the Black people in the Republican Party, right? They&rsquo;re standing next to white supremacy because they think they&rsquo;re going to benefit from it to the demise of other people, right? So there are some of us --</p>
+            <p id="s866"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=866s" target="_blank" rel="noopener" data-pagefind-ignore>14:26</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>That&rsquo;s a nigga in your book.</p>
+            <p id="s867"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=867s" target="_blank" rel="noopener" data-pagefind-ignore>14:27</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I didn&rsquo;t say that.</p>
+            <p id="s869"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=869s" target="_blank" rel="noopener" data-pagefind-ignore>14:29</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Demise. I apologize.</p>
+            <p id="s871"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=871s" target="_blank" rel="noopener" data-pagefind-ignore>14:31</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I&rsquo;m done. No, but you know, there are some people who are not necessarily upholding and supporting Black people, and so those are the people who you know, are not for us. And, you know, not everybody&rsquo;s for us. You know, there were also people back in slavery who didn&rsquo;t want to get out of slavery, right?</p>
+            <p id="s894"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=894s" target="_blank" rel="noopener" data-pagefind-ignore>14:54</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Yeah.</p>
+            <p id="s894-2"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=894s" target="_blank" rel="noopener" data-pagefind-ignore>14:54</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>You know, so what would Harriet do? She left them behind. Or she said that she threatened to kill them and shoot them if they didn&rsquo;t free themselves. So, you know, we have -- we still have that. We still have a lot of that. And that&rsquo;s unfortunate given where we are and what we know about our history and how we got here and what we had to go through to reach where we are now.</p>
+            <p id="s918"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=918s" target="_blank" rel="noopener" data-pagefind-ignore>15:18</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>No, thank you. And I have one more question, actually, because you&rsquo;re here representing the journalism school.</p>
+            <p id="s922"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=922s" target="_blank" rel="noopener" data-pagefind-ignore>15:22</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>You know, go ahead. Go ahead. Well, it&rsquo;s your last question.</p>
+            <p id="s926"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=926s" target="_blank" rel="noopener" data-pagefind-ignore>15:26</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>It will be.</p>
+            <p id="s926-2"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=926s" target="_blank" rel="noopener" data-pagefind-ignore>15:26</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Okay.</p>
+            <p id="s928"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=928s" target="_blank" rel="noopener" data-pagefind-ignore>15:28</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>What would be your word of advice to Black people who want to be journalists in today&rsquo;s world?</p>
+            <p id="s932"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=932s" target="_blank" rel="noopener" data-pagefind-ignore>15:32</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Become an independent journalist. Learn your craft. Learn your trade. However you do it, go to school. Take a lesson from --</p>
+            <p id="s942"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=942s" target="_blank" rel="noopener" data-pagefind-ignore>15:42</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>I should go to school for journalism. Should I go to school for journalism?</p>
+            <p id="s945"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=945s" target="_blank" rel="noopener" data-pagefind-ignore>15:45</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>You graduated already, didn&rsquo;t you? Graduate from something? What is your degree in?</p>
+            <p id="s948"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=948s" target="_blank" rel="noopener" data-pagefind-ignore>15:48</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Moral psychology.</p>
+            <p id="s949"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=949s" target="_blank" rel="noopener" data-pagefind-ignore>15:49</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Okay, so you&rsquo;re well, you&rsquo;re pretty much a journalist already. Moral psychology.</p>
+            <p id="s953"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=953s" target="_blank" rel="noopener" data-pagefind-ignore>15:53</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Thanks. That&rsquo;s that&rsquo;s nice credit to get.</p>
+            <p id="s955"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=955s" target="_blank" rel="noopener" data-pagefind-ignore>15:55</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>But um, so I don&rsquo;t think you need to go to school for it because you&rsquo;re out here practicing it. I think you just need to uphold all the tenets of being a good journalist, which is being factual, which is being honest, which is being truthful, and you. You seem to be doing some of that from what I can tell, having first met you on the street.</p>
+            <p id="s974"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=974s" target="_blank" rel="noopener" data-pagefind-ignore>16:14</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>That&rsquo;s where we meet people, right? That&rsquo;s where we meet community.</p>
+            <p id="s977"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=977s" target="_blank" rel="noopener" data-pagefind-ignore>16:17</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Alrighty, thank you so much.</p>
+            <p id="s980"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=980s" target="_blank" rel="noopener" data-pagefind-ignore>16:20</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 0:00" data-pagefind-ignore>Maceo</span>Thank you.</p>
+            <p id="s980-2"><a class="wt-at" href="https://www.youtube.com/watch?v=g8Yzm2pjNho&amp;t=980s" target="_blank" rel="noopener" data-pagefind-ignore>16:20</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So where am I going to see this?</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+<div id="after-transcript" tabindex="-1"><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from the Black Blockchain Summit.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-black-blockchain-summit">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="scam-man-ricasso-on-crypto-and-inflation-howard.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="https://i.ytimg.com/vi/UP0J8UFdIMU/hqdefault.jpg" srcset="https://i.ytimg.com/vi/UP0J8UFdIMU/mqdefault.jpg 320w, https://i.ytimg.com/vi/UP0J8UFdIMU/hqdefault.jpg 480w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="480" height="270"><span class="wt-dur"><span class="visually-hidden">Length </span>12:48</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Washington, DC · Black Blockchain Summit 2026 · 13 min</span>
+                    <h3 class="report-title">Scam, man: Ricasso on crypto and inflation.</h3>
+                    
+                </div>
+            </a>
+            <a href="a-computer-science-student-learns-bitcoin-howard.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="https://i.ytimg.com/vi/FECEC0yVugw/hqdefault.jpg" srcset="https://i.ytimg.com/vi/FECEC0yVugw/mqdefault.jpg 320w, https://i.ytimg.com/vi/FECEC0yVugw/hqdefault.jpg 480w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="480" height="270"><span class="wt-dur"><span class="visually-hidden">Length </span>5:49</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Washington, DC · Black Blockchain Summit 2026 · 6 min</span>
+                    <h3 class="report-title">A computer science student learns Bitcoin.</h3>
+                    
+                </div>
+            </a>
+            <a href="pre-med-student-on-why-black-doctors-matter-howard.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="https://i.ytimg.com/vi/7ey0LNFUAiE/hqdefault.jpg" srcset="https://i.ytimg.com/vi/7ey0LNFUAiE/mqdefault.jpg 320w, https://i.ytimg.com/vi/7ey0LNFUAiE/hqdefault.jpg 480w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="480" height="270"><span class="wt-dur"><span class="visually-hidden">Length </span>8:26</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Washington, DC · Black Blockchain Summit 2026 · 8 min</span>
+                    <h3 class="report-title">A pre-med student on why Black doctors matter.</h3>
+                    
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../places.html#washington-dc">Everything filmed in Washington, DC</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

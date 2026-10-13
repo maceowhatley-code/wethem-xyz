@@ -1,0 +1,63 @@
+
+
+body[data-page="donate"] .masthead-cta,
+body[data-page="budget"] .masthead-cta,
+body[data-page="home"] .masthead-cta {
+    background: transparent !important;
+    color: var(--text-muted) !important;
+    border: 1px solid var(--border-strong) !important;
+    font-weight: 500 !important;
+}
+body[data-page="donate"] .masthead-cta:hover,
+body[data-page="budget"] .masthead-cta:hover,
+body[data-page="home"] .masthead-cta:hover {
+    color: var(--coral) !important;
+    border-color: var(--coral) !important;
+}
+
+html, body {
+    overflow-x: hidden;
+    overflow-x: clip;
+    max-width: 100%;
+}
+
+iframe, embed, object, video {
+    max-width: 100%;
+}
+
+.brand img,
+.brand picture img {
+    width: 32px !important;
+    height: 32px !important;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+}
+
+@media (max-width: 720px) {
+    
+
+    .masthead-inner {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        gap: 0.6rem !important;
+    }
+
+    .brand span {
+        font-size: 1rem !important;
+        letter-spacing: -0.015em;
+    }
+
+    .masthead-cta {
+        padding: 0.55rem 0.85rem !important;
+        font-size: 0.75rem !important;
+        letter-spacing: 0.08em !important;
+    }
+
+    .nav-toggle { margin-left: 0.25rem; }
+}
+
+@media (max-width: 420px) {
+    .brand span { display: none; }
+    .masthead-cta { padding: 0.55rem 0.7rem !important; }
+}

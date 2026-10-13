@@ -1,0 +1,878 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="What is the most pressing issue in the world?">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/education-inequality-and-harm-reduction-denver">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="Education Inequality and Harm Reduction: Edward | Denver">
+    <meta property="og:description" content="What is the most pressing issue in the world?">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/education-inequality-and-harm-reduction-denver.jpg?v=a462b56259">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="A sociology student on loneliness, capitalism, and what worries her most">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/education-inequality-and-harm-reduction-denver.jpg?v=a462b56259">
+    <meta property="og:url" content="https://wethem.xyz/watch/education-inequality-and-harm-reduction-denver">
+    <title>Education Inequality and Harm Reduction: Edward | Denver &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/education-inequality-and-harm-reduction-denver#video",
+  "name": "Education Inequality and Harm Reduction: Edward | Denver",
+  "description": "What is the most pressing issue in the world? Edward, a sociology student in Denver, gives three. The first is education inequality: \"Education is like the pipeline for social mobility, especially in our country. But there's these power structures in place that make it impossible for many people to get access.\" And: \"My family's military. That's the only reason I get to go to school.\" The third is the globalisation of capitalism: \"Capitalism, when it spread around the world, starts to incentivise people to make money instead of being kind of more human. Well, I don't think humans are meant to be on this planet to compete with each other. We're social beings to begin with.\" He points down the street: \"I don't think there should be a world where that gentleman doesn't feel like he has the opportunity to go somewhere, or be able to find a place to sleep at night, or find comfort in community.\" What he does about it: he is president of the sociology club at the University of Colorado Denver, and got the school to fund about $2,500 of supplies for a local harm reduction organisation.",
+  "thumbnailUrl": [
+    "https://wethem.xyz/stills/RkdEgIlLEqw.jpg",
+    "https://i.ytimg.com/vi/RkdEgIlLEqw/maxresdefault.jpg"
+  ],
+  "uploadDate": "2026-03-28T17:57:29Z",
+  "embedUrl": "https://www.youtube.com/embed/RkdEgIlLEqw",
+  "url": "https://wethem.xyz/watch/education-inequality-and-harm-reduction-denver",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT10M16S",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "Why this archive exists at all",
+      "startOffset": 0,
+      "url": "https://wethem.xyz/watch/education-inequality-and-harm-reduction-denver?t=0",
+      "endOffset": 32
+    },
+    {
+      "@type": "Clip",
+      "name": "Why education inequality blocks social mobility",
+      "startOffset": 32,
+      "url": "https://wethem.xyz/watch/education-inequality-and-harm-reduction-denver?t=32",
+      "endOffset": 93
+    },
+    {
+      "@type": "Clip",
+      "name": "How global capitalism makes us compete",
+      "startOffset": 93,
+      "url": "https://wethem.xyz/watch/education-inequality-and-harm-reduction-denver?t=93",
+      "endOffset": 146
+    },
+    {
+      "@type": "Clip",
+      "name": "“I don’t think humans are meant to compete”",
+      "startOffset": 146,
+      "url": "https://wethem.xyz/watch/education-inequality-and-harm-reduction-denver?t=146",
+      "endOffset": 169
+    },
+    {
+      "@type": "Clip",
+      "name": "Dignity for all",
+      "startOffset": 169,
+      "url": "https://wethem.xyz/watch/education-inequality-and-harm-reduction-denver?t=169",
+      "endOffset": 201
+    },
+    {
+      "@type": "Clip",
+      "name": "Start local: you can’t change the world overnight",
+      "startOffset": 201,
+      "url": "https://wethem.xyz/watch/education-inequality-and-harm-reduction-denver?t=201",
+      "endOffset": 232
+    },
+    {
+      "@type": "Clip",
+      "name": "What is harm reduction? Clean needles, clean water",
+      "startOffset": 232,
+      "url": "https://wethem.xyz/watch/education-inequality-and-harm-reduction-denver?t=232",
+      "endOffset": 289
+    },
+    {
+      "@type": "Clip",
+      "name": "What was your most transformative moment?",
+      "startOffset": 289,
+      "url": "https://wethem.xyz/watch/education-inequality-and-harm-reduction-denver?t=289",
+      "endOffset": 321
+    },
+    {
+      "@type": "Clip",
+      "name": "A year alone, and two hours on a beach",
+      "startOffset": 321,
+      "url": "https://wethem.xyz/watch/education-inequality-and-harm-reduction-denver?t=321",
+      "endOffset": 511
+    },
+    {
+      "@type": "Clip",
+      "name": "Turning twenty-one in Spain",
+      "startOffset": 511,
+      "url": "https://wethem.xyz/watch/education-inequality-and-harm-reduction-denver?t=511",
+      "endOffset": 616
+    }
+  ],
+  "creator": {
+    "@type": "Person",
+    "name": "Maceo",
+    "url": "https://wethem.xyz/people/maceo"
+  },
+  "transcript": "She got even further than that. How long have you been doing this? Um I've been doing content for a couple years actually and I made a lot of money in crypto doing content like over 100k and I've been around the world but I didn't really shoot content like this. I was doing podcasting then. And so it's like but if I had been vlogging imagine right traveling the world vlogging is like way cooler content than the [bleeped] [bleeped] crypto podcast I was doing. Yeah that would be pretty cool bro. You do the same series too just yeah you get so many different perspectives that would be dope. And I was getting them\nanyway like I used to talk to people but I wouldn't like You didn't get to post it. I didn't shoot I didn't record it and it wasn't like a thought for me like this could be the real archive.\nYeah. You know but You already running? Yeah yeah yeah. Okay so the question was what's the most pressing issue in the world right now? Yeah my name is Maceo and this is for poidh we're here with We Them Media. What's up what's up what's up? I'm Edward. It kind of depends there's like a bunch of pressing issues in the world I think but if I had to name what I personally think is probably the biggest one is I think education inequality is is super big so I think especially like in America you know not very many people get to have access to education but education is\nlike the pipeline for social mobility especially in our country. So being able to access that I think is really important but there's these these power structures in place that make it impossible for many people to get access to education. Like I mentioned before how my family's military that's the only reason I get to go to school if not then I wouldn't even know about this. So I would say that's pretty big. I would say health care's definitely uh definitely up there um you know people just have worse health outcomes when they hear let's go this way. Very cool. Uh worse health outcomes when they you\nknow they don't feel safe they don't feel like they have anyone to talk to it's just bad for your overall health. I think um maybe uh globalization of uh of uh um So I think one of the other biggest ones would probably be like the globalization of capitalism. Let's wait a second. Probably be the globalization of capitalism. It I've been mentioning these like power structures and um capitalism when it spread around the world like this starts to incentivize people to make money instead of being kind of more human I think. Um so for example I'm a sociology student so I study this kind of stuff a lot and\nA man with some context. And so you you put these people in these situations where they have to compete with each other. Well I don't think humans are meant to be on this planet to compete with each other you know. We're social beings to begin with we shouldn't really have to compete you know. Like I don't think there should be a world where that gentleman down the street doesn't feel like he has the opportunity to go somewhere or be able to find a place to sleep at night or find comfort in community. That should be available to everybody.\nStop playing with him. Dignity for all. Yeah yeah crazy ask for right? I'm I'm so crazy for that. I want men with compassion. Yeah so I don't know. It's hard to boil it down to just one thing there's so many things wrong but each of those are interrelated as everything's kind of interrelated. But um Yeah I don't know I think people just have the opportunity to meet other people talk to other people just be in organizations and communities and stuff that can really help to build their perspectives and build their compassion and empathy and I think um that's something that people can do in their own lives to\nyou know to fix in the immediate immediate stuff that's going on. You can't you can't change the whole world overnight but you can help yourself in your your local community. So yeah. How are you involved in your community? So like I said I'm a sociology uh sociology student. I go to the University of Colorado Denver. I'm the sociology club president. We just did this event last week.\nsniped him off the sidewalk. We did this event last week where we got the school to pay for um are you familiar with harm reduction? Like the idea of harm reduction? No just tell me I'm I'm going to say no and I'm I'm like I'm someone that doesn't so tell us.\nharm reduction is this idea that um for like drugs for example right? So doing drugs is just dangerous. Um like if if especially if you're doing stuff on the street you know you might not have access to clean needles clean water that kind of stuff you know or hygiene. Um and so our club we got the school to pay for at least donations for the harm reduction action center which is a local organization you should check out but they're really cool. We got to send like $2500 worth of stuff there and made these like really impactful goody bags. We got a bunch of people to\ncome together. It was really a big event it was really good really good time honestly. Oh yeah. But yeah just stuff like that you know like I'm just some random guy. I I mean like you know anybody can do what I do I think you know. Just interact with the community in that way or even if you don't want to be a part of a club you know just talk to your neighbor. I think that a little goes a long way. So yeah. Okay and if you could ask people around the world one question what would you ask everybody? Oh that's a good question I don't know.\nUm maybe like uh what's the uh Damn so many good questions. You can ask a couple there's no we got infinite weeks ahead of us. That's true that's true. So maybe like I don't know what's the most like transformative moment in your life? I think a lot of people growing up at least I did I had a moment where like my worldview was challenged and it caused me to change and have a more open perspective. I think a lot of people have that. When was that? Um I had that many times but um during COVID I was uh moving cuz my my family's military so I was moving and I\nmoved to a new school. I didn't know anybody there which was just kind of sad and so I was like pretty isolated for a year and it caused me to have to like rethink a lot of like who I was as a person and do a lot of self-reflection. And so I had this moment with one of my family members where we just like went on a beach and we talked for two hours. Changed my life. Him and I don't even have the same views on the world but just having someone talk to you like that that changed my life. So yeah I think a lot of people have\ninstances like that. I'd be curious to hear about stuff like that you know. Maybe um what's the most like fulfilling relationship someone's had too that'd be another one. I think it's important to have those types of relationships with people. Yeah just so many questions. Some high some high impact conversations that people have had with us that have helped us evolve as individuals. I think so yeah it's important to have that. Hell yeah. Yeah. Any other questions you'd ask people? Um You said you had like a little roster so I want you to put them on the internet for us. Uh like other orgs I work with? Other questions you'd\nask the world. Oh yeah yeah. Um maybe like oh what's your favorite food bro? Okay. Food everybody eats food you know it's a great way to relate to people and plus I just like food a lot bro I'm I like eating food so you know someone's putting me on I'll definitely pay attention to that. Okay I like that. Maybe uh favorite place you've ever been? Mhm. I think that'd be a good question so many people around the world can ask that. Um I don't know. I mean you said you went to a bunch of countries right? What was your favorite? If you could even pick\none I don't know if I'd be able to pick one honestly. My favorite country that I went to Yeah. is hard to say. I I like being in Japan a lot I was in Japan for a month.\nDude I want to go to Japan. Yeah I would say it was really cool I wish I spoke Japanese though would've made it like 10 times cooler.\nThat's fair yeah. Cuz I feel like I couldn't do stuff like this in Japan like some of my sayings as far as I get excuse me. You know. Um so but it was cool to like be in Tokyo and have people who were doing like culture show I went to like a fashion show. I went to like a fashion pop-up in like the Tokyo district that I know for coffee actually which is really cool. Um and I just got to see\nfashionable actually it it worked out for you bro. No thanks thanks. It's it's one of my few outfits don't worry. You got to have them on rotation that's important. Yeah I I've learned that recently. The social cues are arriving in real time real time. That's funny bro that's funny yeah I got that. Um but I would say that was one of my favorites. One of my close friends is like a child celebrity in Vietnam. Whoa whoa whoa. I went to visit this guy there them there and that was honestly surreal being in Vietnam with like just like this person that everybody turns and looks at. And\nthey just know? Yeah yeah they speak Vietnamese but it was just like cool to be there with with them traveling around with like around Hanoi a little bit and seeing it. Yeah. So I would say that was probably the most meaningful cuz I'm like my friend is from Hanoi. I'm getting to meet his mom. I had food with him on Christmas [bleeped] like that.\nDude that's so cool. out for my birthday. That's so cool. Hey did you just have your birthday recently? End of December so this was 2024 I was there for Christmas and [bleeped]\nI see. Happy birthday though. Yeah thanks thanks thanks. but still you know. Yeah but that's that's what I would say were two of my favorite places but I was in Africa last year for four months too.\nNo way. Dude that's so cool I want to go to Africa. Yeah I mean you know. I want to go to like northern Africa. I'm trying to hit up like Algeria bro. I've heard Algeria is so pretty but I don't know honestly. I'm I'm trying to travel the entire world. If I don't hit up at least every continent once in my life bro I probably am not doing it right. I think that's a good vibe man. I think I think the more you travel like the smaller the world gets and like the more you see all the network effects of all the [bleeped] going on. I'm going out of\nthe country bro. I'm going to Spain this summer. I'm so excited bro. That's sick. Just Spain are you going to how long you going to be there? Uh like two weeks yeah. I'm having my 21st birthday over there dude. I'm going to it's going to be so awesome I'm looking forward to it.\nor family or school trip? Yeah for school yeah. It's for sociology. That's cool. So what are you going to be doing there? What's the program? So do you know GIS? It's yeah so we're going to be doing GIS training there I'm going to get my certificate.\nOh GIS like the mapping stuff. Yeah yeah. Okay. I like Global Institute of Scholars like that's like where my brain is going. Um so that GIS too because I'm Yeah okay hell yeah. So you know we're going there there's like a an internationally recognized um what is it called place there research organization there research center and we're going there we're going to be learning getting certified certificate in that in those systems and then we're just going to be traveling around Spain for another week and learning about the culture in Spain. I'm so excited bro. I'm like Is he good in Spanish? Uh I'm a little\nmy my family's Hispanic so I speak a little but I'm not fluent. Okay hablo hablo español. Oh hell no don't even put me on the spot like that. Yeah you got more than I do I'm sure yeah. But I'm excited I'll have to learn some before I go I can't be I can't be\nHow how's your family Hispanic? Argentine and they also some of them are from Spain as well. Okay sick. And Ecuador I guess I mean you know a lot of a lot of a little bit everywhere. But my my mom asked me when I was like four years old like Edward you want to learn Spanish and I was like no that sounds like a lot of work and she was like you'll regret that and I'm like dude I'm four bro I'm like what do you want me to say? She's funny. She needed a little bit a little bit more resistance to your resistance up.\nYeah, yeah. I mean, you know. It's good that she respected your autonomy for a long time. That was nice at least, but I wish she would have just told me to shut up and learn. Yeah, you know, it's a balance.\nYeah, but you know. Um I think I got to go. I'm about to I'm trying to hit to the park. All right, man. Well, thank you.\nSo, uh oh",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Denver",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "url": "https://wethem.xyz/places#denver"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Denver Unfiltered",
+    "url": "https://wethem.xyz/portfolio#p-denver"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "The Engaged Citizens",
+      "url": "https://wethem.xyz/topics/engaged-citizens"
+    }
+  ],
+  "keywords": [
+    "The Engaged Citizens",
+    "What is the most important global issue today?",
+    "If you could ask people around the world one question, what would you ask them?"
+  ],
+  "dateCreated": "2026-03-26"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Denver Unfiltered",
+      "item": "https://wethem.xyz/portfolio#p-denver"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "A sociology student on loneliness, capitalism, and what worries her most",
+      "item": "https://wethem.xyz/watch/education-inequality-and-harm-reduction-denver"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place], who[data-pf-who]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2026-03-28" data-pf-vid="RkdEgIlLEqw" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;10:16&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="Denver" data-pf-country="United States" data-pf-project="Denver Unfiltered" data-pf-who="Maceo">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-denver">Denver Unfiltered</a></li>
+            <li aria-current="page">A sociology student on loneliness, capitalism, and what worries her most</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">A sociology student on loneliness, capitalism, and what worries her most.</h1>
+
+    <p class="wt-byline"><strong>Edward</strong> &middot; Reported by <strong><a href="../people/maceo.html">Maceo</a></strong> &middot; Denver &middot; 10 min &middot; filmed <time datetime="2026-03-26">26 March 2026</time></p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="RkdEgIlLEqw" live posterurl="../stills/RkdEgIlLEqw.jpg" postersrcset="../stills/RkdEgIlLEqw-320.jpg 320w, ../stills/RkdEgIlLEqw-480.jpg 480w, ../stills/RkdEgIlLEqw-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/RkdEgIlLEqw?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="A sociology student on loneliness, capitalism, and what worries her most, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+    <p class="wt-answers">Answers <a href="../question/most-important-global-issue.html">What is the most important global issue today?</a> and <a href="../question/what-would-you-ask-the-world.html">If you could ask people around the world one question, what would you ask them?</a> &middot; see how other cities answered &rarr;</p>
+    <div class="wt-prose">
+            <p>What is the most pressing issue in the world? Edward, a sociology student in Denver, gives three. The first is education inequality: &ldquo;Education is like the pipeline for social mobility, especially in our country. But there&rsquo;s these power structures in place that make it impossible for many people to get access.&rdquo; And: &ldquo;My family&rsquo;s military. That&rsquo;s the only reason I get to go to school.&rdquo;</p>
+            <p>The third is the globalisation of capitalism: &ldquo;Capitalism, when it spread around the world, starts to incentivise people to make money instead of being kind of more human. Well, I don&rsquo;t think humans are meant to be on this planet to compete with each other. We&rsquo;re social beings to begin with.&rdquo;</p>
+            <p>He points down the street: &ldquo;I don&rsquo;t think there should be a world where that gentleman doesn&rsquo;t feel like he has the opportunity to go somewhere, or be able to find a place to sleep at night, or find comfort in community.&rdquo;</p>
+            <p>What he does about it: he is president of the sociology club at the University of Colorado Denver, and got the school to fund about $2,500 of supplies for a local harm reduction organisation.</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../question/most-important-global-issue.html">Every answer to “What is the most important global issue today?”</a></p>
+        <p class="wt-rail-link"><a href="../question/what-would-you-ask-the-world.html">Every answer to “If you could ask people around the world one question, what would you ask them?”</a></p>
+        <p class="wt-rail-link"><a href="../places.html#denver">Everything filmed in Denver</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="housing-school-and-the-street-from-somebody-born-here-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/JwJOZGs3bqA-640.jpg" srcset="../stills/JwJOZGs3bqA-320.jpg 320w, ../stills/JwJOZGs3bqA-480.jpg 480w, ../stills/JwJOZGs3bqA-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>12:58</span></span><span>Housed, then evicted, and what happened to her daughter.</span></a>
+        <a class="wt-rail-card" href="what-unschooling-is-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/v1HXs7CoXCE-640.jpg" srcset="../stills/v1HXs7CoXCE-320.jpg 320w, ../stills/v1HXs7CoXCE-480.jpg 480w, ../stills/v1HXs7CoXCE-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:03</span></span><span>What is unschooling? Raised half in the US, half in Costa Rica.</span></a>
+        <a class="wt-rail-card" href="narcan-youth-and-colfax-avenue.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/JDu-GZRgofc-640.jpg" srcset="../stills/JDu-GZRgofc-320.jpg 320w, ../stills/JDu-GZRgofc-480.jpg 480w, ../stills/JDu-GZRgofc-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>3:39</span></span><span>An overdose prevention worker on Narcan, youth, and Colfax Ave.</span></a>
+        <a class="wt-rail-card" href="truth-discourse-and-being-called-a-gentrifier-colfax.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/tZRn0IQTEp4-640.jpg" srcset="../stills/tZRn0IQTEp4-320.jpg 320w, ../stills/tZRn0IQTEp4-480.jpg 480w, ../stills/tZRn0IQTEp4-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>14:38</span></span><span>Gaming culture and street life at the arcade on Colfax.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c0"><a class="wt-t" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-s">Why this archive exists at all</span></li>
+                <li class="wt-line" id="c32"><a class="wt-t" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=32s" target="_blank" rel="noopener" data-pagefind-ignore>0:32</a><span class="wt-s">Why education inequality blocks social mobility</span></li>
+                <li class="wt-line" id="c93"><a class="wt-t" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=93s" target="_blank" rel="noopener" data-pagefind-ignore>1:33</a><span class="wt-s">How global capitalism makes us compete</span></li>
+                <li class="wt-line" id="c146"><a class="wt-t" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=146s" target="_blank" rel="noopener" data-pagefind-ignore>2:26</a><span class="wt-s">“I don’t think humans are meant to compete”</span></li>
+                <li class="wt-line" id="c169"><a class="wt-t" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=169s" target="_blank" rel="noopener" data-pagefind-ignore>2:49</a><span class="wt-s">Dignity for all</span></li>
+                <li class="wt-line" id="c201"><a class="wt-t" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=201s" target="_blank" rel="noopener" data-pagefind-ignore>3:21</a><span class="wt-s">Start local: you can’t change the world overnight</span></li>
+                <li class="wt-line" id="c232"><a class="wt-t" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=232s" target="_blank" rel="noopener" data-pagefind-ignore>3:52</a><span class="wt-s">What is harm reduction? Clean needles, clean water</span></li>
+                <li class="wt-line" id="c289"><a class="wt-t" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=289s" target="_blank" rel="noopener" data-pagefind-ignore>4:49</a><span class="wt-s">What was your most transformative moment?</span></li>
+                <li class="wt-line" id="c321"><a class="wt-t" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=321s" target="_blank" rel="noopener" data-pagefind-ignore>5:21</a><span class="wt-s">A year alone, and two hours on a beach</span></li>
+                <li class="wt-line" id="c511"><a class="wt-t" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=511s" target="_blank" rel="noopener" data-pagefind-ignore>8:31</a><span class="wt-s">Turning twenty-one in Spain</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Who speaks, by their own introduction on the tape: <a href="../guests.html#g-maceo">Maceo</a> at <a class="wt-at" data-seek="38" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=38s" target="_blank" rel="noopener" data-pagefind-ignore>0:38</a>, <a href="../guests.html#g-edward">Edward</a> at <a class="wt-at" data-seek="42" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=42s" target="_blank" rel="noopener" data-pagefind-ignore>0:42</a>. Where YouTube masked a word it shows as [bleeped]. Speaker letters mark turns, not names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a>She got even further than that. How long have you been doing this? Um I&rsquo;ve been doing content for a couple years actually and I made a lot of money in crypto doing content like over 100k and I&rsquo;ve been around the world but I didn&rsquo;t really shoot content like this. I was doing podcasting then. And so it&rsquo;s like but if I had been vlogging imagine right traveling the world vlogging is like way cooler content than the [bleeped] [bleeped] crypto podcast I was doing. Yeah that would be pretty cool bro. You do the same series too just yeah you get so many different perspectives that would be dope. And I was getting them</p>
+            <p id="s25"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=25s" target="_blank" rel="noopener" data-pagefind-ignore>0:25</a>anyway like I used to talk to people but I wouldn&rsquo;t like You didn&rsquo;t get to post it. I didn&rsquo;t shoot I didn&rsquo;t record it and it wasn&rsquo;t like a thought for me like this could be the real archive.</p>
+            <p id="s32"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=32s" target="_blank" rel="noopener" data-pagefind-ignore>0:32</a>Yeah. You know but You already running? Yeah yeah yeah. Okay so the question was what&rsquo;s the most pressing issue in the world right now? Yeah my name is Maceo and this is for <a class="wt-gloss" href="../glossary.html#poidh">poidh</a> we&rsquo;re here with We Them Media. What&rsquo;s up what&rsquo;s up what&rsquo;s up? I&rsquo;m Edward. It kind of depends there&rsquo;s like a bunch of pressing issues in the world I think but if I had to name what I personally think is probably the biggest one is I think education inequality is is super big so I think especially like in America you know not very many people get to have access to education but education is</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s62"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=62s" target="_blank" rel="noopener" data-pagefind-ignore>1:02</a>like the pipeline for social mobility especially in our country. So being able to access that I think is really important but there&rsquo;s these these power structures in place that make it impossible for many people to get access to education. Like I mentioned before how my family&rsquo;s military that&rsquo;s the only reason I get to go to school if not then I wouldn&rsquo;t even know about this. So I would say that&rsquo;s pretty big. I would say health care&rsquo;s definitely uh definitely up there um you know people just have worse health outcomes when they hear let&rsquo;s go this way. Very cool. Uh worse health outcomes when they you</p>
+            <p id="s93"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=93s" target="_blank" rel="noopener" data-pagefind-ignore>1:33</a>know they don&rsquo;t feel safe they don&rsquo;t feel like they have anyone to talk to it&rsquo;s just bad for your overall health. I think um maybe uh globalization of uh of uh um So I think one of the other biggest ones would probably be like the globalization of capitalism. Let&rsquo;s wait a second. Probably be the globalization of capitalism. It I&rsquo;ve been mentioning these like power structures and um capitalism when it spread around the world like this starts to incentivize people to make money instead of being kind of more human I think. Um so for example I&rsquo;m a sociology student so I study this kind of stuff a lot and</p>
+            <p id="s146"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=146s" target="_blank" rel="noopener" data-pagefind-ignore>2:26</a>A man with some context. And so you you put these people in these situations where they have to compete with each other. Well I don&rsquo;t think humans are meant to be on this planet to compete with each other you know. We&rsquo;re social beings to begin with we shouldn&rsquo;t really have to compete you know. Like I don&rsquo;t think there should be a world where that gentleman down the street doesn&rsquo;t feel like he has the opportunity to go somewhere or be able to find a place to sleep at night or find comfort in community. That should be available to everybody.</p>
+            <p id="s169"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=169s" target="_blank" rel="noopener" data-pagefind-ignore>2:49</a>Stop playing with him. Dignity for all. Yeah yeah crazy ask for right? I&rsquo;m I&rsquo;m so crazy for that. I want men with compassion. Yeah so I don&rsquo;t know. It&rsquo;s hard to boil it down to just one thing there&rsquo;s so many things wrong but each of those are interrelated as everything&rsquo;s kind of interrelated. But um Yeah I don&rsquo;t know I think people just have the opportunity to meet other people talk to other people just be in organizations and communities and stuff that can really help to build their perspectives and build their compassion and empathy and I think um that&rsquo;s something that people can do in their own lives to</p>
+            <p id="s201"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=201s" target="_blank" rel="noopener" data-pagefind-ignore>3:21</a>you know to fix in the immediate immediate stuff that&rsquo;s going on. You can&rsquo;t you can&rsquo;t change the whole world overnight but you can help yourself in your your local community. So yeah. How are you involved in your community? So like I said I&rsquo;m a sociology uh sociology student. I go to the University of Colorado Denver. I&rsquo;m the sociology club president. We just did this event last week.</p>
+            <p id="s220"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=220s" target="_blank" rel="noopener" data-pagefind-ignore>3:40</a>sniped him off the sidewalk. We did this event last week where we got the school to pay for um are you familiar with harm reduction? Like the idea of harm reduction? No just tell me I&rsquo;m I&rsquo;m going to say no and I&rsquo;m I&rsquo;m like I&rsquo;m someone that doesn&rsquo;t so tell us.</p>
+            <p id="s232"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=232s" target="_blank" rel="noopener" data-pagefind-ignore>3:52</a>harm reduction is this idea that um for like drugs for example right? So doing drugs is just dangerous. Um like if if especially if you&rsquo;re doing stuff on the street you know you might not have access to clean needles clean water that kind of stuff you know or hygiene. Um and so our club we got the school to pay for at least donations for the harm reduction action center which is a local organization you should check out but they&rsquo;re really cool. We got to send like $2500 worth of stuff there and made these like really impactful goody bags. We got a bunch of people to</p>
+            <p id="s262"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=262s" target="_blank" rel="noopener" data-pagefind-ignore>4:22</a>come together. It was really a big event it was really good really good time honestly. Oh yeah. But yeah just stuff like that you know like I&rsquo;m just some random guy. I I mean like you know anybody can do what I do I think you know. Just interact with the community in that way or even if you don&rsquo;t want to be a part of a club you know just talk to your neighbor. I think that a little goes a long way. So yeah. Okay and if you could ask people around the world one question what would you ask everybody? Oh that&rsquo;s a good question I don&rsquo;t know.</p>
+            <p id="s289"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=289s" target="_blank" rel="noopener" data-pagefind-ignore>4:49</a>Um maybe like uh what&rsquo;s the uh Damn so many good questions. You can ask a couple there&rsquo;s no we got infinite weeks ahead of us. That&rsquo;s true that&rsquo;s true. So maybe like I don&rsquo;t know what&rsquo;s the most like transformative moment in your life? I think a lot of people growing up at least I did I had a moment where like my worldview was challenged and it caused me to change and have a more open perspective. I think a lot of people have that. When was that? Um I had that many times but um during COVID I was uh moving cuz my my family&rsquo;s military so I was moving and I</p>
+            <p id="s321"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=321s" target="_blank" rel="noopener" data-pagefind-ignore>5:21</a>moved to a new school. I didn&rsquo;t know anybody there which was just kind of sad and so I was like pretty isolated for a year and it caused me to have to like rethink a lot of like who I was as a person and do a lot of self-reflection. And so I had this moment with one of my family members where we just like went on a beach and we talked for two hours. Changed my life. Him and I don&rsquo;t even have the same views on the world but just having someone talk to you like that that changed my life. So yeah I think a lot of people have</p>
+            <p id="s344"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=344s" target="_blank" rel="noopener" data-pagefind-ignore>5:44</a>instances like that. I&rsquo;d be curious to hear about stuff like that you know. Maybe um what&rsquo;s the most like fulfilling relationship someone&rsquo;s had too that&rsquo;d be another one. I think it&rsquo;s important to have those types of relationships with people. Yeah just so many questions. Some high some high impact conversations that people have had with us that have helped us evolve as individuals. I think so yeah it&rsquo;s important to have that. Hell yeah. Yeah. Any other questions you&rsquo;d ask people? Um You said you had like a little roster so I want you to put them on the internet for us. Uh like other orgs I work with? Other questions you&rsquo;d</p>
+            <p id="s372"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=372s" target="_blank" rel="noopener" data-pagefind-ignore>6:12</a>ask the world. Oh yeah yeah. Um maybe like oh what&rsquo;s your favorite food bro? Okay. Food everybody eats food you know it&rsquo;s a great way to relate to people and plus I just like food a lot bro I&rsquo;m I like eating food so you know someone&rsquo;s putting me on I&rsquo;ll definitely pay attention to that. Okay I like that. Maybe uh favorite place you&rsquo;ve ever been? Mhm. I think that&rsquo;d be a good question so many people around the world can ask that. Um I don&rsquo;t know. I mean you said you went to a bunch of countries right? What was your favorite? If you could even pick</p>
+            <p id="s398"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=398s" target="_blank" rel="noopener" data-pagefind-ignore>6:38</a>one I don&rsquo;t know if I&rsquo;d be able to pick one honestly. My favorite country that I went to Yeah. is hard to say. I I like being in Japan a lot I was in Japan for a month.</p>
+            <p id="s408"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=408s" target="_blank" rel="noopener" data-pagefind-ignore>6:48</a>Dude I want to go to Japan. Yeah I would say it was really cool I wish I spoke Japanese though would&rsquo;ve made it like 10 times cooler.</p>
+            <p id="s413"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=413s" target="_blank" rel="noopener" data-pagefind-ignore>6:53</a>That&rsquo;s fair yeah. Cuz I feel like I couldn&rsquo;t do stuff like this in Japan like some of my sayings as far as I get excuse me. You know. Um so but it was cool to like be in Tokyo and have people who were doing like culture show I went to like a fashion show. I went to like a fashion pop-up in like the Tokyo district that I know for coffee actually which is really cool. Um and I just got to see</p>
+            <p id="s431"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=431s" target="_blank" rel="noopener" data-pagefind-ignore>7:11</a>fashionable actually it it worked out for you bro. No thanks thanks. It&rsquo;s it&rsquo;s one of my few outfits don&rsquo;t worry. You got to have them on rotation that&rsquo;s important. Yeah I I&rsquo;ve learned that recently. The social cues are arriving in real time real time. That&rsquo;s funny bro that&rsquo;s funny yeah I got that. Um but I would say that was one of my favorites. One of my close friends is like a child celebrity in Vietnam. Whoa whoa whoa. I went to visit this guy there them there and that was honestly surreal being in Vietnam with like just like this person that everybody turns and looks at. And</p>
+            <p id="s460"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=460s" target="_blank" rel="noopener" data-pagefind-ignore>7:40</a>they just know? Yeah yeah they speak Vietnamese but it was just like cool to be there with with them traveling around with like around Hanoi a little bit and seeing it. Yeah. So I would say that was probably the most meaningful cuz I&rsquo;m like my friend is from Hanoi. I&rsquo;m getting to meet his mom. I had food with him on Christmas [bleeped] like that.</p>
+            <p id="s475"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=475s" target="_blank" rel="noopener" data-pagefind-ignore>7:55</a>Dude that&rsquo;s so cool. out for my birthday. That&rsquo;s so cool. Hey did you just have your birthday recently? End of December so this was 2024 I was there for Christmas and [bleeped]</p>
+            <p id="s481"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=481s" target="_blank" rel="noopener" data-pagefind-ignore>8:01</a>I see. Happy birthday though. Yeah thanks thanks thanks. but still you know. Yeah but that&rsquo;s that&rsquo;s what I would say were two of my favorite places but I was in Africa last year for four months too.</p>
+            <p id="s490"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=490s" target="_blank" rel="noopener" data-pagefind-ignore>8:10</a>No way. Dude that&rsquo;s so cool I want to go to Africa. Yeah I mean you know. I want to go to like northern Africa. I&rsquo;m trying to hit up like Algeria bro. I&rsquo;ve heard Algeria is so pretty but I don&rsquo;t know honestly. I&rsquo;m I&rsquo;m trying to travel the entire world. If I don&rsquo;t hit up at least every continent once in my life bro I probably am not doing it right. I think that&rsquo;s a good vibe man. I think I think the more you travel like the smaller the world gets and like the more you see all the network effects of all the [bleeped] going on. I&rsquo;m going out of</p>
+            <p id="s511"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=511s" target="_blank" rel="noopener" data-pagefind-ignore>8:31</a>the country bro. I&rsquo;m going to Spain this summer. I&rsquo;m so excited bro. That&rsquo;s sick. Just Spain are you going to how long you going to be there? Uh like two weeks yeah. I&rsquo;m having my 21st birthday over there dude. I&rsquo;m going to it&rsquo;s going to be so awesome I&rsquo;m looking forward to it.</p>
+            <p id="s522"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=522s" target="_blank" rel="noopener" data-pagefind-ignore>8:42</a>or family or school trip? Yeah for school yeah. It&rsquo;s for sociology. That&rsquo;s cool. So what are you going to be doing there? What&rsquo;s the program? So do you know GIS? It&rsquo;s yeah so we&rsquo;re going to be doing GIS training there I&rsquo;m going to get my certificate.</p>
+            <p id="s532"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=532s" target="_blank" rel="noopener" data-pagefind-ignore>8:52</a>Oh GIS like the mapping stuff. Yeah yeah. Okay. I like Global Institute of Scholars like that&rsquo;s like where my brain is going. Um so that GIS too because I&rsquo;m Yeah okay hell yeah. So you know we&rsquo;re going there there&rsquo;s like a an internationally recognized um what is it called place there research organization there research center and we&rsquo;re going there we&rsquo;re going to be learning getting certified certificate in that in those systems and then we&rsquo;re just going to be traveling around Spain for another week and learning about the culture in Spain. I&rsquo;m so excited bro. I&rsquo;m like Is he good in Spanish? Uh I&rsquo;m a little</p>
+            <p id="s562"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=562s" target="_blank" rel="noopener" data-pagefind-ignore>9:22</a>my my family&rsquo;s Hispanic so I speak a little but I&rsquo;m not fluent. Okay hablo hablo español. Oh hell no don&rsquo;t even put me on the spot like that. Yeah you got more than I do I&rsquo;m sure yeah. But I&rsquo;m excited I&rsquo;ll have to learn some before I go I can&rsquo;t be I can&rsquo;t be</p>
+            <p id="s575"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=575s" target="_blank" rel="noopener" data-pagefind-ignore>9:35</a>How how&rsquo;s your family Hispanic? Argentine and they also some of them are from Spain as well. Okay sick. And Ecuador I guess I mean you know a lot of a lot of a little bit everywhere. But my my mom asked me when I was like four years old like Edward you want to learn Spanish and I was like no that sounds like a lot of work and she was like you&rsquo;ll regret that and I&rsquo;m like dude I&rsquo;m four bro I&rsquo;m like what do you want me to say? She&rsquo;s funny. She needed a little bit a little bit more resistance to your resistance up.</p>
+            <p id="s598"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=598s" target="_blank" rel="noopener" data-pagefind-ignore>9:58</a>Yeah, yeah. I mean, you know. It&rsquo;s good that she respected your autonomy for a long time. That was nice at least, but I wish she would have just told me to shut up and learn. Yeah, you know, it&rsquo;s a balance.</p>
+            <p id="s608"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=608s" target="_blank" rel="noopener" data-pagefind-ignore>10:08</a>Yeah, but you know. Um I think I got to go. I&rsquo;m about to I&rsquo;m trying to hit to the park. All right, man. Well, thank you.</p>
+            <p id="s614"><a class="wt-at" href="https://www.youtube.com/watch?v=RkdEgIlLEqw&amp;t=614s" target="_blank" rel="noopener" data-pagefind-ignore>10:14</a>So, uh oh</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+
+    <section id="after-transcript" tabindex="-1" class="wrap wt-more" aria-label="Filmed the same day">
+        <div class="country-head">
+            <h2 class="country-name">Filmed the same day.</h2>
+            <span class="country-meta">26 March 2026</span>
+        </div>
+        <ul class="rel-list">
+            <li class="rel-item">
+                <a class="rel-link" href="bring-our-people-home-denver.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/WjOTWRTM2Gk/mqdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">Bring Our People Home: Foreign Policy Is the Issue | Denver</span>
+                        <span class="rel-why">12.57pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="housing-and-jobs-the-most-important-global-issue.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/opBIiXE69HU/mqdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">Housing and Jobs: The Most Important Global Issue | Denver</span>
+                        <span class="rel-why">1.29pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="../archive/isabelle-from-marseilles-on-climate-change-french-people-don-t-talk-th.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/i1t0DBM702Y/mqdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">Isabelle From Marseilles on Climate Change · &quot;French People Don&#x27;t Talk That Much&quot; | Denver</span>
+                        <span class="rel-why">1.33pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Transcript</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="never-been-ashamed-to-cry-denver.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/yepfMr68Rao/mqdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">Never Been Ashamed to Cry: Eric, 56, on Grief | Denver</span>
+                        <span class="rel-why">1.39pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="../archive/denver-broncos-bo-nix-camaraderie-over-competition-eric-from-shrevepor.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/hxzdn7FUe_o/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">Denver Broncos, Bo Nix &amp; &quot;Camaraderie Over Competition&quot; · Eric From Shreveport Part 2 | Denver CO</span>
+                        <span class="rel-why">2.08pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Transcript</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="https://www.youtube.com/watch?v=YkQEkM1BUcU" rel="noopener">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/YkQEkM1BUcU/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">&quot;We&#x27;re Back&quot; · Denver Street Interview Interlude | Part 3.4</span>
+                        <span class="rel-why">2.23pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">On YouTube</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+<div><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from Denver Unfiltered.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-denver">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="a-first-interview-and-advice-back-to-newark-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/UkX8veGIl58-640.jpg" srcset="../stills/UkX8veGIl58-320.jpg 320w, ../stills/UkX8veGIl58-480.jpg 480w, ../stills/UkX8veGIl58-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:15</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · ETH Denver 2024</span>
+                    <h3 class="report-title">A first interview, and advice back to Newark.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="building-a-dao-and-making-governance-a-game-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/qcTocIWf34U-640.jpg" srcset="../stills/qcTocIWf34U-320.jpg 320w, ../stills/qcTocIWf34U-480.jpg 480w, ../stills/qcTocIWf34U-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:45</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">A content coin, and making governance a game.</h3>
+                    
+                </div>
+            </a>
+            <a href="from-america-to-denver-what-brought-you-here-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/DdXcCfCc26E-640.jpg" srcset="../stills/DdXcCfCc26E-320.jpg 320w, ../stills/DdXcCfCc26E-480.jpg 480w, ../stills/DdXcCfCc26E-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:21</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · Street</span>
+                    <h3 class="report-title">A borrowed camera, and Denver block by block.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../question/most-important-global-issue.html">Every answer to “What is the most important global issue today?”</a> &middot; <a href="../question/what-would-you-ask-the-world.html">Every answer to “If you could ask people around the world one question, what would you ask them?”</a> &middot; <a href="../places.html#denver">Everything filmed in Denver</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

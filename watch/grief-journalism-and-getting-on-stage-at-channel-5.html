@@ -1,0 +1,912 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="What does Andrew Callaghan do that other journalists do not?">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/grief-journalism-and-getting-on-stage-at-channel-5">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="Channel 5 Line: Grief, Journalism and a Freestyle | Denver">
+    <meta property="og:description" content="What does Andrew Callaghan do that other journalists do not?">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/grief-journalism-and-getting-on-stage-at-channel-5.jpg?v=199659cd65">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Andrew Callaghan’s Carnival Tour hits Denver: fans on journalism">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/grief-journalism-and-getting-on-stage-at-channel-5.jpg?v=199659cd65">
+    <meta property="og:url" content="https://wethem.xyz/watch/grief-journalism-and-getting-on-stage-at-channel-5">
+    <title>Channel 5 Line: Grief, Journalism and a Freestyle | Denver &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/grief-journalism-and-getting-on-stage-at-channel-5#video",
+  "name": "Channel 5 Line: Grief, Journalism and a Freestyle | Denver",
+  "description": "What does Andrew Callaghan do that other journalists do not? Fans in the line outside his Channel 5 show in Denver answer. \"I like that he shows up where people are at and he talks to them,\" one says. \"He interviews like homeless people and just like regular people. You don't see that a lot.\" David drove thirteen hours from Fargo for his birthday, and his question for the world: \"Are you living a life for yourself or are you living it for other people?\" A young woman on grief wishes America had something like Dia de los Muertos, a day and a place to honour the dead. On losing her grandfather: \"It was just like it was a beautiful sunny day and the world just kept moving even though my world was ending.\" A man in a wheelchair calls the gunshot that put him there a head start. At the end the filmmaker is on stage with the host.",
+  "thumbnailUrl": [
+    "https://wethem.xyz/stills/F5vXOAif_FQ.jpg",
+    "https://i.ytimg.com/vi/F5vXOAif_FQ/maxresdefault.jpg"
+  ],
+  "uploadDate": "2026-07-19T04:00:18Z",
+  "embedUrl": "https://www.youtube.com/embed/F5vXOAif_FQ",
+  "url": "https://wethem.xyz/watch/grief-journalism-and-getting-on-stage-at-channel-5",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT14M17S",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "How did fans find Channel 5? YouTube",
+      "startOffset": 22,
+      "url": "https://wethem.xyz/watch/grief-journalism-and-getting-on-stage-at-channel-5?t=22",
+      "endOffset": 83
+    },
+    {
+      "@type": "Clip",
+      "name": "He goes where people are: why fans like Callaghan",
+      "startOffset": 83,
+      "url": "https://wethem.xyz/watch/grief-journalism-and-getting-on-stage-at-channel-5?t=83",
+      "endOffset": 156
+    },
+    {
+      "@type": "Clip",
+      "name": "Pittsburgh, 2023: the last time on this tour",
+      "startOffset": 156,
+      "url": "https://wethem.xyz/watch/grief-journalism-and-getting-on-stage-at-channel-5?t=156",
+      "endOffset": 223
+    },
+    {
+      "@type": "Clip",
+      "name": "A weekly bounty for asking one question",
+      "startOffset": 223,
+      "url": "https://wethem.xyz/watch/grief-journalism-and-getting-on-stage-at-channel-5?t=223",
+      "endOffset": 298
+    },
+    {
+      "@type": "Clip",
+      "name": "David, thirteen hours from Fargo, on his birthday",
+      "startOffset": 298,
+      "url": "https://wethem.xyz/watch/grief-journalism-and-getting-on-stage-at-channel-5?t=298",
+      "endOffset": 395
+    },
+    {
+      "@type": "Clip",
+      "name": "Why she wishes America had a Día de los Muertos",
+      "startOffset": 395,
+      "url": "https://wethem.xyz/watch/grief-journalism-and-getting-on-stage-at-channel-5?t=395",
+      "endOffset": 572
+    },
+    {
+      "@type": "Clip",
+      "name": "Treat each other kindly: her grandfather’s lesson",
+      "startOffset": 572,
+      "url": "https://wethem.xyz/watch/grief-journalism-and-getting-on-stage-at-channel-5?t=572",
+      "endOffset": 683
+    },
+    {
+      "@type": "Clip",
+      "name": "Shot as a bystander, he calls it a head start",
+      "startOffset": 683,
+      "url": "https://wethem.xyz/watch/grief-journalism-and-getting-on-stage-at-channel-5?t=683",
+      "endOffset": 725
+    },
+    {
+      "@type": "Clip",
+      "name": "On stage: the freestyle",
+      "startOffset": 725,
+      "url": "https://wethem.xyz/watch/grief-journalism-and-getting-on-stage-at-channel-5?t=725",
+      "endOffset": 793
+    },
+    {
+      "@type": "Clip",
+      "name": "What made Andrew Callaghan smile this week?",
+      "startOffset": 793,
+      "url": "https://wethem.xyz/watch/grief-journalism-and-getting-on-stage-at-channel-5?t=793",
+      "endOffset": 857
+    }
+  ],
+  "creator": {
+    "@type": "Person",
+    "name": "Maceo",
+    "url": "https://wethem.xyz/people/maceo"
+  },
+  "transcript": "I'm doing some interviews ahead of the show. Could I ask you all some questions? Would you be open? Sure, yeah. Fuck yeah. So, how did you guys find out, can I hand you the mic? Yes. Hell yeah. How did you guys first find out about Channel 5 or Andrew Callaghan? YouTube Okay, was it you know like like it was in your feed or somebody sent it to you?\nHonestly, I think it was in my feed. Yeah,\nfuck. Yeah. Do you remember what's the first video you remember from him from them?\nMost recent one that I can think of though like I don't know about the first one, but some about LA some about Skid Row.\nOkay. Okay. Yeah. Yeah.\nYeah.\nOkay. Yeah, then it was that yeah\nOkay, and what do you think he does right the other journalists don't do right? It's a leading question, but I'm not a real journalist\nyeah you're not a real journalist aren't you actively doing journalism right now\ni guess so my friends had a leading leading question it's a leading question i'm like oh it's a leading question uh\nno i mean i appreciate that\ni'm a real journalist\nyeah like i pretty sure like journalism is what you do so yeah yeah it's not like who you are necessarily if you like do it you do it but yeah i like that he shows up where people are at and he talks to them you know what i mean like you're doing it right now kind of which is like kind of meta you know if you think about\nIt's kind of metadome, but I'm not a real journalist. I'm a meta-journalist.\nMeta-journalist, yeah. No, but I think it's cool that he just goes to places and talks to people. He doesn't say shit about places he's never been and then refused to go there and continue to say the same shit, which is what a lot of people do, so, yeah.\nI saw Andrew Callaghan's show and I was like, damn, I want to go there, but I can't, so.\nWhat do you like about Andrew? What does he do right?\nWhat does he do, right? Well, I haven't seen him since like three years ago, but I just like how it's like semi-ironically. He's got the fire explosions and like all that shit and then he has the people like rap at the end and it's like, I don't know. I think it's cool how he interviews like homeless people and just like regular people. You don't see that a lot with other interviewers or YouTubers or people. They always interview like I don't know they don't interview like just the regular folks and the crazy people\nYou remember when you first found out about Andrew? About First encounter\nmaybe like five years ago on YouTube. Yeah,\nremember which video was\nnot a clue I remember like the The sex convention one that was pretty funny.\nYeah, that's funny you know, I actually also saw him live three years ago in Pittsburgh, Pennsylvania on that same tour I saw\nOh, cool.\nHe was playing videos from the sex convention like during that thing. I'm pretty sure.\nOh, I see I see\nand somebody in Pittsburgh for that show was in the talent show and also had been in that video And so he pulled up the video to show us specifically because somebody from that video was in the audience with us\nOh, I see. I see.\nI think I beat them in the talent show Okay, are there any stories between Texas or here and Denver that you feel like aren't getting enough coverage? and we have a lot of people coverage or aren't being done justice that somebody like Andrew should be servicing the critical consciousness of an audience such as this. What\nabout this?\nPick one thing.\nPick one thing. What stands out here is\nnot getting enough coverage in the world right now. Claudie,\nI didn't have some good.\nNo, no, no, I'm here to ask the people, right? The people. I've been doing this project. We've been giving out 100 bucks a week for people who go out and and ask the question of the week that we're doing on this crypto platform. We've had people, like I said, around the world participate and so every week we ask a question. What's a question you would ask people around the world?\nI guess like if you had unlimited resources, what would you create? You know, there's there is this like philosophy or hypothesis that I like to follow. That's the balance of consumption versus creation. so the more people create the more we put in balance that dichotomy and we want people to be creating more than we're consuming because creation comes from you know a really special place obviously women have the anatomy to create life but the same energetic center resides in all of us no matter what kind of anatomy you have or identify with so\nNo, shout out to you, that's a good take, that's a good take See, I knew you had, you had everything we needed How do you see what's going on in the world right now?\nHe is my world right now\nOh, you're the world right now, what's up? And you pull up in real time What's up, man, can I ask you one question? So how's the show been tonight?\nBeen great, bro,\nit's been great\nActually, I drove in from Fargo, North Dakota I drove 13 hours to get here, bro Really? It's my birthday today You here for your birthday? Yes, sir Fuck yeah, bro, happy fucking birthday I appreciate it, man,\nfor real, bro\nHell yeah If you could ask people around the world one question, what would you ask them? Are you living a life for yourself or are you living it for other people? You gotta ask yourself that Sheesh, and what's your name? David Alright, shout out to David, the birthday guy Appreciate it, man, for sure Hell yeah Ask people around the world one question, what would you ask them?\nI don't know, it'd probably be generic, but like, what's it all for? Not in a pessimistic way, like, not in a negative context, but just like What are the things that make you happy and what are the things that are worth your time and worth your efforts? It's always curious to say with that that, you know?\nOh, yeah, man. Like,\ndefault's always going to be family and friends, but sometimes people say something like, shit, man, like, I just love eating blueberries, and they're like, oh, that's a good answer. I've worked my whole entire life, love eating 20 blueberries, like, I don't know. Or they're like, oh, I like swimming, I like reading books. It's like, those are good answers. It doesn't always come down to, like, building a business or some industrious type thing. It's like some pleasure in life. So if you always give radical answers to me, it's always an interesting thing to hear. What about you? What's the last question you want to ask\nLast question, I guess I have two more questions You know, speaking about Right, that guy, Rick, or I don't know What his name was, right, what do you think are some of the shortcomings About our culture around grief here in America\nOur shortcomings about grief?\nYeah, the shortcomings of our culture Around grief, are there any I ask a lot of leading questions I guess,\nI feel like there There are like a lot of shortcomings\nThis guy lost his wife and his bird That's just referring to like whatever shows up when I speak to that But go ahead, you're speaking\nYeah, I think that we just kind of, we don't acknowledge it. Like, I really wish, like, as a culture, like, we had something like Dia de los Muertos, where you celebrate the coming back of your lost loved ones, and you build shrines. Even, like, Asian culture, Japan, they build shrines. You remember them actively. But we don't really do that. We have cemeteries, but if you want to be cremated, then you don't get to go somewhere to honor your loved one. and it's just, you just do it every day, try to find something in daily life to remember them by and sometimes that's not enough. And it would be nice to have a day, to have a moment that is dedicated to like honoring their memory specifically instead of just on a day to day, get hit with that grief out of nowhere and have to cope with it.\nWhere like our society, I think the biggest thing, like when I lost my grandfather. It was just like it was a beautiful sunny day and the world just kept moving even though my world was ending. It was really hard. So I think that is kind of where we we come up short where it feels very isolating. Everything just keeps moving. No one stops. There's no time to but\nnot given time to process.\nYeah. And there's just no we just don't have anything in our culture. to honor the dead\nyeah yeah or to dignify the grief you might say yeah that's what i would say\nthat's yeah i think that's a good way to put it like i mean i would want to be cremated i know he wants to be cremated i think my like recent anyone that has passed recently has been cremated so there's nowhere to go to honor them so you have to find that place but then it's like am i like is it cultural appropriation if i build a shrine or if i try to celebrate their death on like Halloween because that's Dia de los Muertos so it's you know there's just nothing to do that to have that release as a community and it's very frustrating. Thanks.\nYeah.\nDo you have an answer?\nI don't.\nThanks babe.\nYeah. That's very heartfelt. I appreciate your authenticity.\nYeah. Yeah. I've thought about it a lot. Yeah.\nWe always talk about how you're doing. I do love Dia de los Muertos.\nI do yeah. I find it comforting to think like there's a day that they came back.\nYour grandfather was a big person for you, huh?\nHe was.\nWho was he in the world?\nHe was a father and a friend and an avid fisherman.\nHe was a grandfather.\nYeah. And my only father. I didn't know my dad and he stepped up, so.\nIf this video were his shrine, what would you think it would be important to say? Or have inscribed on the internet?\nI think just treat each other fairly. Treat each other kindly. I feel like that's always what he did. My mom always described him as he would give you the shirt off his back. He always welcomed any kid that needed help into his house. Yeah. Just love each other.\nIt's really nice to be with you both. I love you both so much. I appreciate you just bringing your heart right here.\nYeah.\nDidn't think I was going to do that tonight, but here we are.\nDidn't think you were here.\nYeah. It's funny you don't realize how like broad is, until you start talking about it. It's like, oh yeah, that still hurts, shit. So yeah.\nWell you look good with your heart on your sleeve, I'll let you know.\nThank you.\nI'll dignify your grief.\nAppreciate it.\nAnd if you two could ask people around the world one question, what would you ask them? Okay, well she's already called, you don't get to decline. Well my first thing to take me to say that was to me, what was her name again? Maceo.\nMaceo? That was my question?\nCan I ask you how you ended up in the chair?\nYeah, I was a victim of a gunshot wound, yeah, fortunately, but... Was it\na bystander or you got assaulted? A\nbystander, yeah, I was just a bystander, yeah, bystander and got caught on the crossfire, fortunately, yeah, but, yeah, it wasn't that bad, I'll do it again, I'd\ndo it again. Did that change your life? I assume so. Oh, for sure,\nyeah, but like with the knowledge and just kind of mindset I've gotten from it is way more positive, or... We're more impactful than losing my legs, you know what I mean? I feel like I just got a head start, we're all going to be in a wheelchair eventually.\nYou can hear it,\nyeah? I'm on stage at Channel 5 hours of the second time, keep it for real. 2023, I was with this dude in Pittsburgh with Funky Close and my girl, Isaac. Now I'm at Channel 5 again in 2026 in Denver. I don't come in this bitch, but I'm up in this bitch, and you know I'll wrap it up. Ooh, but I'm not done yet. That last guy went for like eight minutes. I said, damn, I thought we found like 60 seconds. Is he finished? He said, no. It's like Andrew said, it's time to go. Now I'm on a stage taking up my own time on a roll.\nYeah. I said, what's your question for the fucking world? Somebody else I said, what they think about America outside of America? I said, that's a good fucking question. What they think about America? The world's like going to war and shit. They're blaming us. I don't know if you guys know, but apparently most people in Nigeria last month only had 20 hours of electricity. That's fucking crazy. And that's because gas prices are going up and their whole electric grid runs on gasoline. That shit is fucked. Hope you guys enjoy this shit and run me up on YouTube with We Them Media. Check me out. Thank you very much.\nHell yeah, man. I appreciate it. My name is Maceo. Maceo, where are you from, man?\nI'm from Philly.\nHell yeah, me too.\nFuck yeah. I'm out here. I was outside shooting interviews like you on the street, asking people what they think about you, how they found out about Channel 5. We Them Media, we've been putting up questions every week on like a crypto bounty board and having people around the world go out and ask questions. This week's question was, what's something that made you smile this week? So Andrew, what's something that made you smile this week? Hey, a crew back in and out of jail made me smile.\nFuck yeah!\nI went to Panda Express, there was no line this afternoon when they were smiling.\nFuck yeah! I\njust got my Xbox installed so I could take some time off and fall in New Vegas and stuff. Something that made me smile, man, I've been in Denver five weeks, I came out here for a conference And I'm going back home on Thursday, and I'm excited to see my niece and nephew I've been away from them, and I saw them on Zoom on Sunday, and I feel like it made my whole week Best of luck, man, shoutouts to you",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Denver",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "url": "https://wethem.xyz/places#denver"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Channel 5 Carnival, Denver",
+    "url": "https://wethem.xyz/portfolio#p-channel5"
+  },
+  "keywords": [
+    "If you could ask people around the world one question, what would you ask them?"
+  ],
+  "dateCreated": "2026-04-04"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Channel 5 Carnival, Denver",
+      "item": "https://wethem.xyz/portfolio#p-channel5"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Andrew Callaghan’s Carnival Tour hits Denver: fans on journalism",
+      "item": "https://wethem.xyz/watch/grief-journalism-and-getting-on-stage-at-channel-5"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place], who[data-pf-who]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2026-07-19" data-pf-vid="F5vXOAif_FQ" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;14:17&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="Denver" data-pf-country="United States" data-pf-project="Channel 5 Carnival, Denver" data-pf-who="Maceo">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-channel5">Channel 5 Carnival, Denver</a></li>
+            <li aria-current="page">Andrew Callaghan’s Carnival Tour hits Denver: fans on journalism</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">Andrew Callaghan’s Carnival Tour hits Denver: fans on journalism.</h1>
+
+    <p class="wt-byline">Reported by <strong><a href="../people/maceo.html">Maceo</a></strong> &middot; Denver &middot; 14 min &middot; filmed <time datetime="2026-04-04">4 April 2026</time></p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="F5vXOAif_FQ" live posterurl="../stills/F5vXOAif_FQ.jpg" postersrcset="../stills/F5vXOAif_FQ-320.jpg 320w, ../stills/F5vXOAif_FQ-480.jpg 480w, ../stills/F5vXOAif_FQ-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/F5vXOAif_FQ?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="Andrew Callaghan’s Carnival Tour hits Denver: fans on journalism, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+    <p class="wt-answers">Answers <a href="../question/what-would-you-ask-the-world.html">If you could ask people around the world one question, what would you ask them?</a> &middot; see how other cities answered &rarr;</p>
+    <div class="wt-prose">
+            <p>What does Andrew Callaghan do that other journalists do not? Fans in the line outside his Channel 5 show in Denver answer. &ldquo;I like that he shows up where people are at and he talks to them,&rdquo; one says. &ldquo;He interviews like homeless people and just like regular people. You don&rsquo;t see that a lot.&rdquo;</p>
+            <p>David drove thirteen hours from Fargo for his birthday, and his question for the world: &ldquo;Are you living a life for yourself or are you living it for other people?&rdquo;</p>
+            <p>A young woman on grief wishes America had something like Dia de los Muertos, a day and a place to honour the dead. On losing her grandfather: &ldquo;It was just like it was a beautiful sunny day and the world just kept moving even though my world was ending.&rdquo; A man in a wheelchair calls the gunshot that put him there a head start. At the end the filmmaker is on stage with the host.</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../question/what-would-you-ask-the-world.html">Every answer to “If you could ask people around the world one question, what would you ask them?”</a></p>
+        <p class="wt-rail-link"><a href="../places.html#denver">Everything filmed in Denver</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="freestyle-and-the-question-of-the-week-on-stage-at-channel-5.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/ne-laPnmFcE-640.jpg" srcset="../stills/ne-laPnmFcE-320.jpg 320w, ../stills/ne-laPnmFcE-480.jpg 480w, ../stills/ne-laPnmFcE-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>3:03</span></span><span>Freestyle and the question of the week.</span></a>
+        <a class="wt-rail-card" href="pundits-versus-ground-reporting-channel-5-queue.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/b-adB_nX8ak-640.jpg" srcset="../stills/b-adB_nX8ak-320.jpg 320w, ../stills/b-adB_nX8ak-480.jpg 480w, ../stills/b-adB_nX8ak-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>20:14</span></span><span>Channel 5 fans on pundits and ground reporting.</span></a>
+        <a class="wt-rail-card" href="channel-5-fans-on-what-andrew-callaghan-does-right.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/CgFdClu5uow-640.jpg" srcset="../stills/CgFdClu5uow-320.jpg 320w, ../stills/CgFdClu5uow-480.jpg 480w, ../stills/CgFdClu5uow-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>16:28</span></span><span>Channel 5 fans on what makes Andrew Callaghan work.</span></a>
+        <a class="wt-rail-card" href="a-hitchhiker-on-a-spiritual-mission-outside-channel-5.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/80E_4pItE_Y-640.jpg" srcset="../stills/80E_4pItE_Y-320.jpg 320w, ../stills/80E_4pItE_Y-480.jpg 480w, ../stills/80E_4pItE_Y-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:42</span></span><span>A hitchhiker on a spiritual mission.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap clip-sec" aria-labelledby="clips-here-h" data-pagefind-ignore="all">
+        <h2 class="clip-sec-h" id="clips-here-h">Shorts from this piece</h2>
+        <ul class="clip-row">
+            <li><a class="clip-card" href="../clips.html#LHNer67mYrM"><span class="clip-card-pic"><img class="clip-img" src="../stills/clips/LHNer67mYrM-360.jpg" srcset="../stills/clips/LHNer67mYrM-360.jpg 360w, ../stills/clips/LHNer67mYrM-720.jpg 720w" sizes="(min-width: 721px) 168px, 144px" width="360" height="640" alt="" loading="lazy" decoding="async"></span><span class="clip-card-t">"Let's just treat each other kindly... that's what he always did."</span><span class="clip-card-p">Denver</span></a><a class="clip-card-yt" href="https://www.youtube.com/shorts/LHNer67mYrM">On YouTube &rarr;</a></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c22"><a class="wt-t" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=22s" target="_blank" rel="noopener" data-pagefind-ignore>0:22</a><span class="wt-s">How did fans find Channel 5? YouTube</span></li>
+                <li class="wt-line" id="c83"><a class="wt-t" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=83s" target="_blank" rel="noopener" data-pagefind-ignore>1:23</a><span class="wt-s">He goes where people are: why fans like Callaghan</span></li>
+                <li class="wt-line" id="c156"><a class="wt-t" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=156s" target="_blank" rel="noopener" data-pagefind-ignore>2:36</a><span class="wt-s">Pittsburgh, 2023: the last time on this tour</span></li>
+                <li class="wt-line" id="c223"><a class="wt-t" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=223s" target="_blank" rel="noopener" data-pagefind-ignore>3:43</a><span class="wt-s">A weekly bounty for asking one question</span></li>
+                <li class="wt-line" id="c298"><a class="wt-t" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=298s" target="_blank" rel="noopener" data-pagefind-ignore>4:58</a><span class="wt-s">David, thirteen hours from Fargo, on his birthday</span></li>
+                <li class="wt-line" id="c395"><a class="wt-t" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=395s" target="_blank" rel="noopener" data-pagefind-ignore>6:35</a><span class="wt-s">Why she wishes America had a Día de los Muertos</span></li>
+                <li class="wt-line" id="c572"><a class="wt-t" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=572s" target="_blank" rel="noopener" data-pagefind-ignore>9:32</a><span class="wt-s">Treat each other kindly: her grandfather’s lesson</span></li>
+                <li class="wt-line" id="c683"><a class="wt-t" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=683s" target="_blank" rel="noopener" data-pagefind-ignore>11:23</a><span class="wt-s">Shot as a bystander, he calls it a head start</span></li>
+                <li class="wt-line" id="c725"><a class="wt-t" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=725s" target="_blank" rel="noopener" data-pagefind-ignore>12:05</a><span class="wt-s">On stage: the freestyle</span></li>
+                <li class="wt-line" id="c793"><a class="wt-t" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=793s" target="_blank" rel="noopener" data-pagefind-ignore>13:13</a><span class="wt-s">What made Andrew Callaghan smile this week?</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Who speaks, by their own introduction on the tape: <a href="../guests.html#g-maceo" data-pagefind-filter="person">Maceo</a> at <a class="wt-at" data-seek="794" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=794s" target="_blank" rel="noopener" data-pagefind-ignore>13:14</a>. Transcribed from the original audio and corrected for names. Speaker letters mark turns, not names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s22"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=22s" target="_blank" rel="noopener" data-pagefind-ignore>0:22</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>I&rsquo;m doing some interviews ahead of the show. Could I ask you all some questions? Would you be open? Sure, yeah. Fuck yeah. So, how did you guys find out, can I hand you the mic? Yes. Hell yeah. How did you guys first find out about <a class="wt-gloss" href="../glossary.html#channel-5">Channel 5</a> or Andrew Callaghan? YouTube Okay, was it you know like like it was in your feed or somebody sent it to you?</p>
+            <p id="s43"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=43s" target="_blank" rel="noopener" data-pagefind-ignore>0:43</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Honestly, I think it was in my feed. Yeah,</p>
+            <p id="s45"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=45s" target="_blank" rel="noopener" data-pagefind-ignore>0:45</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>fuck. Yeah. Do you remember what&rsquo;s the first video you remember from him from them?</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s49"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=49s" target="_blank" rel="noopener" data-pagefind-ignore>0:49</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Most recent one that I can think of though like I don&rsquo;t know about the first one, but some about LA some about Skid Row.</p>
+            <p id="s60"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=60s" target="_blank" rel="noopener" data-pagefind-ignore>1:00</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>Okay. Okay. Yeah. Yeah.</p>
+            <p id="s61"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=61s" target="_blank" rel="noopener" data-pagefind-ignore>1:01</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Yeah.</p>
+            <p id="s62"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=62s" target="_blank" rel="noopener" data-pagefind-ignore>1:02</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Okay. Yeah, then it was that yeah</p>
+            <p id="s64"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=64s" target="_blank" rel="noopener" data-pagefind-ignore>1:04</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>Okay, and what do you think he does right the other journalists don&rsquo;t do right? It&rsquo;s a leading question, but I&rsquo;m not a real journalist</p>
+            <p id="s69"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=69s" target="_blank" rel="noopener" data-pagefind-ignore>1:09</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>yeah you&rsquo;re not a real journalist aren&rsquo;t you actively doing journalism right now</p>
+            <p id="s75"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=75s" target="_blank" rel="noopener" data-pagefind-ignore>1:15</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>i guess so my friends had a leading leading question it&rsquo;s a leading question i&rsquo;m like oh it&rsquo;s a leading question uh</p>
+            <p id="s79"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=79s" target="_blank" rel="noopener" data-pagefind-ignore>1:19</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>no i mean i appreciate that</p>
+            <p id="s81"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=81s" target="_blank" rel="noopener" data-pagefind-ignore>1:21</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>i&rsquo;m a real journalist</p>
+            <p id="s82"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=82s" target="_blank" rel="noopener" data-pagefind-ignore>1:22</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>yeah like i pretty sure like journalism is what you do so yeah yeah it&rsquo;s not like who you are necessarily if you like do it you do it but yeah i like that he shows up where people are at and he talks to them you know what i mean like you&rsquo;re doing it right now kind of which is like kind of meta you know if you think about</p>
+            <p id="s96"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=96s" target="_blank" rel="noopener" data-pagefind-ignore>1:36</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>It&rsquo;s kind of metadome, but I&rsquo;m not a real journalist. I&rsquo;m a meta-journalist.</p>
+            <p id="s100"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=100s" target="_blank" rel="noopener" data-pagefind-ignore>1:40</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Meta-journalist, yeah. No, but I think it&rsquo;s cool that he just goes to places and talks to people. He doesn&rsquo;t say shit about places he&rsquo;s never been and then refused to go there and continue to say the same shit, which is what a lot of people do, so, yeah.</p>
+            <p id="s114"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=114s" target="_blank" rel="noopener" data-pagefind-ignore>1:54</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>I saw Andrew Callaghan&rsquo;s show and I was like, damn, I want to go there, but I can&rsquo;t, so.</p>
+            <p id="s118"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=118s" target="_blank" rel="noopener" data-pagefind-ignore>1:58</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>What do you like about Andrew? What does he do right?</p>
+            <p id="s120"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=120s" target="_blank" rel="noopener" data-pagefind-ignore>2:00</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>What does he do, right? Well, I haven&rsquo;t seen him since like three years ago, but I just like how it&rsquo;s like semi-ironically. He&rsquo;s got the fire explosions and like all that shit and then he has the people like rap at the end and it&rsquo;s like, I don&rsquo;t know. I think it&rsquo;s cool how he interviews like homeless people and just like regular people. You don&rsquo;t see that a lot with other interviewers or YouTubers or people. They always interview like I don&rsquo;t know they don&rsquo;t interview like just the regular folks and the crazy people</p>
+            <p id="s156"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=156s" target="_blank" rel="noopener" data-pagefind-ignore>2:36</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>You remember when you first found out about Andrew? About First encounter</p>
+            <p id="s162"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=162s" target="_blank" rel="noopener" data-pagefind-ignore>2:42</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>maybe like five years ago on YouTube. Yeah,</p>
+            <p id="s165"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=165s" target="_blank" rel="noopener" data-pagefind-ignore>2:45</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>remember which video was</p>
+            <p id="s166"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=166s" target="_blank" rel="noopener" data-pagefind-ignore>2:46</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>not a clue I remember like the The sex convention one that was pretty funny.</p>
+            <p id="s175"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=175s" target="_blank" rel="noopener" data-pagefind-ignore>2:55</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>Yeah, that&rsquo;s funny you know, I actually also saw him live three years ago in Pittsburgh, Pennsylvania on that same tour I saw</p>
+            <p id="s181"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=181s" target="_blank" rel="noopener" data-pagefind-ignore>3:01</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Oh, cool.</p>
+            <p id="s181-2"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=181s" target="_blank" rel="noopener" data-pagefind-ignore>3:01</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>He was playing videos from the sex convention like during that thing. I&rsquo;m pretty sure.</p>
+            <p id="s185"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=185s" target="_blank" rel="noopener" data-pagefind-ignore>3:05</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Oh, I see I see</p>
+            <p id="s186"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=186s" target="_blank" rel="noopener" data-pagefind-ignore>3:06</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>and somebody in Pittsburgh for that show was in the talent show and also had been in that video And so he pulled up the video to show us specifically because somebody from that video was in the audience with us</p>
+            <p id="s194"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=194s" target="_blank" rel="noopener" data-pagefind-ignore>3:14</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Oh, I see. I see.</p>
+            <p id="s195"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=195s" target="_blank" rel="noopener" data-pagefind-ignore>3:15</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>I think I beat them in the talent show Okay, are there any stories between Texas or here and Denver that you feel like aren&rsquo;t getting enough coverage? and we have a lot of people coverage or aren&rsquo;t being done justice that somebody like Andrew should be servicing the critical consciousness of an audience such as this. What</p>
+            <p id="s211"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=211s" target="_blank" rel="noopener" data-pagefind-ignore>3:31</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>about this?</p>
+            <p id="s213"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=213s" target="_blank" rel="noopener" data-pagefind-ignore>3:33</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>Pick one thing.</p>
+            <p id="s215"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=215s" target="_blank" rel="noopener" data-pagefind-ignore>3:35</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Pick one thing. What stands out here is</p>
+            <p id="s218"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=218s" target="_blank" rel="noopener" data-pagefind-ignore>3:38</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>not getting enough coverage in the world right now. Claudie,</p>
+            <p id="s223"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=223s" target="_blank" rel="noopener" data-pagefind-ignore>3:43</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>I didn&rsquo;t have some good.</p>
+            <p id="s225"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=225s" target="_blank" rel="noopener" data-pagefind-ignore>3:45</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>No, no, no, I&rsquo;m here to ask the people, right? The people. I&rsquo;ve been doing this project. We&rsquo;ve been giving out 100 bucks a week for people who go out and and ask the <a class="wt-gloss" href="../glossary.html#the-question-of-the-week">question of the week</a> that we&rsquo;re doing on this crypto platform. We&rsquo;ve had people, like I said, around the world participate and so every week we ask a question. What&rsquo;s a question you would ask people around the world?</p>
+            <p id="s241"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=241s" target="_blank" rel="noopener" data-pagefind-ignore>4:01</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>I guess like if you had unlimited resources, what would you create? You know, there&rsquo;s there is this like philosophy or hypothesis that I like to follow. That&rsquo;s the balance of consumption versus creation. so the more people create the more we put in balance that dichotomy and we want people to be creating more than we&rsquo;re consuming because creation comes from you know a really special place obviously women have the anatomy to create life but the same energetic center resides in all of us no matter what kind of anatomy you have or identify with so</p>
+            <p id="s283"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=283s" target="_blank" rel="noopener" data-pagefind-ignore>4:43</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>No, shout out to you, that&rsquo;s a good take, that&rsquo;s a good take See, I knew you had, you had everything we needed How do you see what&rsquo;s going on in the world right now?</p>
+            <p id="s290"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=290s" target="_blank" rel="noopener" data-pagefind-ignore>4:50</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>He is my world right now</p>
+            <p id="s292"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=292s" target="_blank" rel="noopener" data-pagefind-ignore>4:52</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>Oh, you&rsquo;re the world right now, what&rsquo;s up? And you pull up in real time What&rsquo;s up, man, can I ask you one question? So how&rsquo;s the show been tonight?</p>
+            <p id="s302"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=302s" target="_blank" rel="noopener" data-pagefind-ignore>5:02</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>Been great, bro,</p>
+            <p id="s302-2"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=302s" target="_blank" rel="noopener" data-pagefind-ignore>5:02</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>it&rsquo;s been great</p>
+            <p id="s303"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=303s" target="_blank" rel="noopener" data-pagefind-ignore>5:03</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>Actually, I drove in from Fargo, North Dakota I drove 13 hours to get here, bro Really? It&rsquo;s my birthday today You here for your birthday? Yes, sir Fuck yeah, bro, happy fucking birthday I appreciate it, man,</p>
+            <p id="s312"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=312s" target="_blank" rel="noopener" data-pagefind-ignore>5:12</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>for real, bro</p>
+            <p id="s312-2"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=312s" target="_blank" rel="noopener" data-pagefind-ignore>5:12</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>Hell yeah If you could ask people around the world one question, what would you ask them? Are you living a life for yourself or are you living it for other people? You gotta ask yourself that Sheesh, and what&rsquo;s your name? David Alright, shout out to David, the birthday guy Appreciate it, man, for sure Hell yeah Ask people around the world one question, what would you ask them?</p>
+            <p id="s328"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=328s" target="_blank" rel="noopener" data-pagefind-ignore>5:28</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>I don&rsquo;t know, it&rsquo;d probably be generic, but like, what&rsquo;s it all for? Not in a pessimistic way, like, not in a negative context, but just like What are the things that make you happy and what are the things that are worth your time and worth your efforts? It&rsquo;s always curious to say with that that, you know?</p>
+            <p id="s346"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=346s" target="_blank" rel="noopener" data-pagefind-ignore>5:46</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>Oh, yeah, man. Like,</p>
+            <p id="s347"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=347s" target="_blank" rel="noopener" data-pagefind-ignore>5:47</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>default&rsquo;s always going to be family and friends, but sometimes people say something like, shit, man, like, I just love eating blueberries, and they&rsquo;re like, oh, that&rsquo;s a good answer. I&rsquo;ve worked my whole entire life, love eating 20 blueberries, like, I don&rsquo;t know. Or they&rsquo;re like, oh, I like swimming, I like reading books. It&rsquo;s like, those are good answers. It doesn&rsquo;t always come down to, like, building a business or some industrious type thing. It&rsquo;s like some pleasure in life. So if you always give radical answers to me, it&rsquo;s always an interesting thing to hear. What about you? What&rsquo;s the last question you want to ask</p>
+            <p id="s376"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=376s" target="_blank" rel="noopener" data-pagefind-ignore>6:16</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>Last question, I guess I have two more questions You know, speaking about Right, that guy, Rick, or I don&rsquo;t know What his name was, right, what do you think are some of the shortcomings About our culture around grief here in America</p>
+            <p id="s387"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=387s" target="_blank" rel="noopener" data-pagefind-ignore>6:27</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Our shortcomings about grief?</p>
+            <p id="s390"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=390s" target="_blank" rel="noopener" data-pagefind-ignore>6:30</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>Yeah, the shortcomings of our culture Around grief, are there any I ask a lot of leading questions I guess,</p>
+            <p id="s398"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=398s" target="_blank" rel="noopener" data-pagefind-ignore>6:38</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>I feel like there There are like a lot of shortcomings</p>
+            <p id="s400"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=400s" target="_blank" rel="noopener" data-pagefind-ignore>6:40</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>This guy lost his wife and his bird That&rsquo;s just referring to like whatever shows up when I speak to that But go ahead, you&rsquo;re speaking</p>
+            <p id="s405"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=405s" target="_blank" rel="noopener" data-pagefind-ignore>6:45</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Yeah, I think that we just kind of, we don&rsquo;t acknowledge it. Like, I really wish, like, as a culture, like, we had something like Dia de los Muertos, where you celebrate the coming back of your lost loved ones, and you build shrines. Even, like, Asian culture, Japan, they build shrines. You remember them actively. But we don&rsquo;t really do that. We have cemeteries, but if you want to be cremated, then you don&rsquo;t get to go somewhere to honor your loved one. and it&rsquo;s just, you just do it every day, try to find something in daily life to remember them by and sometimes that&rsquo;s not enough. And it would be nice to have a day, to have a moment that is dedicated to like honoring their memory specifically instead of just on a day to day, get hit with that grief out of nowhere and have to cope with it.</p>
+            <p id="s405-2"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=405s" target="_blank" rel="noopener" data-pagefind-ignore>6:45</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Where like our society, I think the biggest thing, like when I lost my grandfather. It was just like it was a beautiful sunny day and the world just kept moving even though my world was ending. It was really hard. So I think that is kind of where we we come up short where it feels very isolating. Everything just keeps moving. No one stops. There&rsquo;s no time to but</p>
+            <p id="s488"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=488s" target="_blank" rel="noopener" data-pagefind-ignore>8:08</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>not given time to process.</p>
+            <p id="s492"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=492s" target="_blank" rel="noopener" data-pagefind-ignore>8:12</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Yeah. And there&rsquo;s just no we just don&rsquo;t have anything in our culture. to honor the dead</p>
+            <p id="s500"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=500s" target="_blank" rel="noopener" data-pagefind-ignore>8:20</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>yeah yeah or to dignify the grief you might say yeah that&rsquo;s what i would say</p>
+            <p id="s504"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=504s" target="_blank" rel="noopener" data-pagefind-ignore>8:24</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>that&rsquo;s yeah i think that&rsquo;s a good way to put it like i mean i would want to be cremated i know he wants to be cremated i think my like recent anyone that has passed recently has been cremated so there&rsquo;s nowhere to go to honor them so you have to find that place but then it&rsquo;s like am i like is it cultural appropriation if i build a shrine or if i try to celebrate their death on like Halloween because that&rsquo;s Dia de los Muertos so it&rsquo;s you know there&rsquo;s just nothing to do that to have that release as a community and it&rsquo;s very frustrating. Thanks.</p>
+            <p id="s542"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=542s" target="_blank" rel="noopener" data-pagefind-ignore>9:02</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Yeah.</p>
+            <p id="s543"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=543s" target="_blank" rel="noopener" data-pagefind-ignore>9:03</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>Do you have an answer?</p>
+            <p id="s546"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=546s" target="_blank" rel="noopener" data-pagefind-ignore>9:06</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>I don&rsquo;t.</p>
+            <p id="s547"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=547s" target="_blank" rel="noopener" data-pagefind-ignore>9:07</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>Thanks babe.</p>
+            <p id="s547-2"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=547s" target="_blank" rel="noopener" data-pagefind-ignore>9:07</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>Yeah. That&rsquo;s very heartfelt. I appreciate your authenticity.</p>
+            <p id="s551"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=551s" target="_blank" rel="noopener" data-pagefind-ignore>9:11</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Yeah. Yeah. I&rsquo;ve thought about it a lot. Yeah.</p>
+            <p id="s555"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=555s" target="_blank" rel="noopener" data-pagefind-ignore>9:15</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>We always talk about how you&rsquo;re doing. I do love Dia de los Muertos.</p>
+            <p id="s559"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=559s" target="_blank" rel="noopener" data-pagefind-ignore>9:19</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>I do yeah. I find it comforting to think like there&rsquo;s a day that they came back.</p>
+            <p id="s567"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=567s" target="_blank" rel="noopener" data-pagefind-ignore>9:27</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>Your grandfather was a big person for you, huh?</p>
+            <p id="s569"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=569s" target="_blank" rel="noopener" data-pagefind-ignore>9:29</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>He was.</p>
+            <p id="s572"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=572s" target="_blank" rel="noopener" data-pagefind-ignore>9:32</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>Who was he in the world?</p>
+            <p id="s577"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=577s" target="_blank" rel="noopener" data-pagefind-ignore>9:37</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>He was a father and a friend and an avid fisherman.</p>
+            <p id="s582"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=582s" target="_blank" rel="noopener" data-pagefind-ignore>9:42</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>He was a grandfather.</p>
+            <p id="s584"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=584s" target="_blank" rel="noopener" data-pagefind-ignore>9:44</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Yeah. And my only father. I didn&rsquo;t know my dad and he stepped up, so.</p>
+            <p id="s590"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=590s" target="_blank" rel="noopener" data-pagefind-ignore>9:50</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>If this video were his shrine, what would you think it would be important to say? Or have inscribed on the internet?</p>
+            <p id="s597"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=597s" target="_blank" rel="noopener" data-pagefind-ignore>9:57</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>I think just treat each other fairly. Treat each other kindly. I feel like that&rsquo;s always what he did. My mom always described him as he would give you the shirt off his back. He always welcomed any kid that needed help into his house. Yeah. Just love each other.</p>
+            <p id="s624"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=624s" target="_blank" rel="noopener" data-pagefind-ignore>10:24</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>It&rsquo;s really nice to be with you both. I love you both so much. I appreciate you just bringing your heart right here.</p>
+            <p id="s631"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=631s" target="_blank" rel="noopener" data-pagefind-ignore>10:31</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Yeah.</p>
+            <p id="s632"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=632s" target="_blank" rel="noopener" data-pagefind-ignore>10:32</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Didn&rsquo;t think I was going to do that tonight, but here we are.</p>
+            <p id="s634"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=634s" target="_blank" rel="noopener" data-pagefind-ignore>10:34</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>Didn&rsquo;t think you were here.</p>
+            <p id="s636"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=636s" target="_blank" rel="noopener" data-pagefind-ignore>10:36</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Yeah. It&rsquo;s funny you don&rsquo;t realize how like broad is, until you start talking about it. It&rsquo;s like, oh yeah, that still hurts, shit. So yeah.</p>
+            <p id="s652"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=652s" target="_blank" rel="noopener" data-pagefind-ignore>10:52</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>Well you look good with your heart on your sleeve, I&rsquo;ll let you know.</p>
+            <p id="s655"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=655s" target="_blank" rel="noopener" data-pagefind-ignore>10:55</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Thank you.</p>
+            <p id="s656"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=656s" target="_blank" rel="noopener" data-pagefind-ignore>10:56</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>I&rsquo;ll dignify your grief.</p>
+            <p id="s659"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=659s" target="_blank" rel="noopener" data-pagefind-ignore>10:59</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Appreciate it.</p>
+            <p id="s661"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=661s" target="_blank" rel="noopener" data-pagefind-ignore>11:01</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>And if you two could ask people around the world one question, what would you ask them? Okay, well she&rsquo;s already called, you don&rsquo;t get to decline. Well my first thing to take me to say that was to me, what was her name again? Maceo.</p>
+            <p id="s678"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=678s" target="_blank" rel="noopener" data-pagefind-ignore>11:18</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>Maceo? That was my question?</p>
+            <p id="s681"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=681s" target="_blank" rel="noopener" data-pagefind-ignore>11:21</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>Can I ask you how you ended up in the chair?</p>
+            <p id="s684"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=684s" target="_blank" rel="noopener" data-pagefind-ignore>11:24</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>Yeah, I was a victim of a gunshot wound, yeah, fortunately, but... Was it</p>
+            <p id="s689"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=689s" target="_blank" rel="noopener" data-pagefind-ignore>11:29</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>a bystander or you got assaulted? A</p>
+            <p id="s691"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=691s" target="_blank" rel="noopener" data-pagefind-ignore>11:31</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>bystander, yeah, I was just a bystander, yeah, bystander and got caught on the crossfire, fortunately, yeah, but, yeah, it wasn&rsquo;t that bad, I&rsquo;ll do it again, I&rsquo;d</p>
+            <p id="s700"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=700s" target="_blank" rel="noopener" data-pagefind-ignore>11:40</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>do it again. Did that change your life? I assume so. Oh, for sure,</p>
+            <p id="s703"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=703s" target="_blank" rel="noopener" data-pagefind-ignore>11:43</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>yeah, but like with the knowledge and just kind of mindset I&rsquo;ve gotten from it is way more positive, or... We&rsquo;re more impactful than losing my legs, you know what I mean? I feel like I just got a head start, we&rsquo;re all going to be in a wheelchair eventually.</p>
+            <p id="s717"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=717s" target="_blank" rel="noopener" data-pagefind-ignore>11:57</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>You can hear it,</p>
+            <p id="s724"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=724s" target="_blank" rel="noopener" data-pagefind-ignore>12:04</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>yeah? I&rsquo;m on stage at Channel 5 hours of the second time, keep it for real. 2023, I was with this dude in Pittsburgh with Funky Close and my girl, Isaac. Now I&rsquo;m at Channel 5 again in 2026 in Denver. I don&rsquo;t come in this bitch, but I&rsquo;m up in this bitch, and you know I&rsquo;ll wrap it up. Ooh, but I&rsquo;m not done yet. That last guy went for like eight minutes. I said, damn, I thought we found like 60 seconds. Is he finished? He said, no. It&rsquo;s like Andrew said, it&rsquo;s time to go. Now I&rsquo;m on a stage taking up my own time on a roll.</p>
+            <p id="s724-2"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=724s" target="_blank" rel="noopener" data-pagefind-ignore>12:04</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>Yeah. I said, what&rsquo;s your question for the fucking world? Somebody else I said, what they think about America outside of America? I said, that&rsquo;s a good fucking question. What they think about America? The world&rsquo;s like going to war and shit. They&rsquo;re blaming us. I don&rsquo;t know if you guys know, but apparently most people in Nigeria last month only had 20 hours of electricity. That&rsquo;s fucking crazy. And that&rsquo;s because gas prices are going up and their whole electric grid runs on gasoline. That shit is fucked. Hope you guys enjoy this shit and run me up on YouTube with We Them Media. Check me out. Thank you very much.</p>
+            <p id="s724-3"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=724s" target="_blank" rel="noopener" data-pagefind-ignore>12:04</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>Hell yeah, man. I appreciate it. My name is Maceo. Maceo, where are you from, man?</p>
+            <p id="s797"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=797s" target="_blank" rel="noopener" data-pagefind-ignore>13:17</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>I&rsquo;m from Philly.</p>
+            <p id="s798"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=798s" target="_blank" rel="noopener" data-pagefind-ignore>13:18</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Hell yeah, me too.</p>
+            <p id="s800"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=800s" target="_blank" rel="noopener" data-pagefind-ignore>13:20</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>Fuck yeah. I&rsquo;m out here. I was outside shooting interviews like you on the street, asking people what they think about you, how they found out about Channel 5. We Them Media, we&rsquo;ve been putting up questions every week on like a crypto bounty board and having people around the world go out and ask questions. This week&rsquo;s question was, what&rsquo;s something that made you smile this week? So Andrew, what&rsquo;s something that made you smile this week? Hey, a crew back in and out of jail made me smile.</p>
+            <p id="s821"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=821s" target="_blank" rel="noopener" data-pagefind-ignore>13:41</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Fuck yeah!</p>
+            <p id="s825"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=825s" target="_blank" rel="noopener" data-pagefind-ignore>13:45</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>I went to Panda Express, there was no line this afternoon when they were smiling.</p>
+            <p id="s829"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=829s" target="_blank" rel="noopener" data-pagefind-ignore>13:49</a><span class="wt-spk" title="Speaker F, as separated by the model" data-pagefind-ignore>F</span>Fuck yeah! I</p>
+            <p id="s830"><a class="wt-at" href="https://www.youtube.com/watch?v=F5vXOAif_FQ&amp;t=830s" target="_blank" rel="noopener" data-pagefind-ignore>13:50</a><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model; gives the name Maceo at 13:14" data-pagefind-ignore>Maceo</span>just got my Xbox installed so I could take some time off and fall in New Vegas and stuff. Something that made me smile, man, I&rsquo;ve been in Denver five weeks, I came out here for a conference And I&rsquo;m going back home on Thursday, and I&rsquo;m excited to see my niece and nephew I&rsquo;ve been away from them, and I saw them on Zoom on Sunday, and I feel like it made my whole week Best of luck, man, shoutouts to you</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+
+    <section id="after-transcript" tabindex="-1" class="wrap wt-more" aria-label="Filmed the same day">
+        <div class="country-head">
+            <h2 class="country-name">Filmed the same day.</h2>
+            <span class="country-meta">4 April 2026</span>
+        </div>
+        <ul class="rel-list">
+            <li class="rel-item">
+                <a class="rel-link" href="../archive/biking-to-channel-5-live-denver-tour-colorado-vlog.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/oAJikDSLvaU/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">Biking to Channel 5 Live Denver Tour | Colorado Vlog</span>
+                        <span class="rel-why">6.33pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Transcript</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="pundits-versus-ground-reporting-channel-5-queue.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/b-adB_nX8ak/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">Channel 5 Fans on Pundits vs Ground Reporting | Denver</span>
+                        <span class="rel-why">7.12pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="channel-5-fans-on-what-andrew-callaghan-does-right.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/CgFdClu5uow/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">Channel 5 Fans on What Andrew Callaghan Does Right | Denver</span>
+                        <span class="rel-why">7.35pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+<div><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from the Channel 5 Carnival in Denver.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-channel5">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="channel-5-fans-on-what-andrew-callaghan-does-right.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/CgFdClu5uow-640.jpg" srcset="../stills/CgFdClu5uow-320.jpg 320w, ../stills/CgFdClu5uow-480.jpg 480w, ../stills/CgFdClu5uow-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>16:28</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · Channel 5 live show</span>
+                    <h3 class="report-title">Channel 5 fans on what makes Andrew Callaghan work.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="pundits-versus-ground-reporting-channel-5-queue.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/b-adB_nX8ak-640.jpg" srcset="../stills/b-adB_nX8ak-320.jpg 320w, ../stills/b-adB_nX8ak-480.jpg 480w, ../stills/b-adB_nX8ak-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>20:14</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · Channel 5 live show</span>
+                    <h3 class="report-title">Channel 5 fans on pundits and ground reporting.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="../portfolio.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/oAJikDSLvaU-640.jpg" srcset="../stills/oAJikDSLvaU-320.jpg 320w, ../stills/oAJikDSLvaU-480.jpg 480w, ../stills/oAJikDSLvaU-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>3:57</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver · Channel 5 live show</span>
+                    <h3 class="report-title">Biking to Channel 5 Live with Tim.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../question/what-would-you-ask-the-world.html">Every answer to “If you could ask people around the world one question, what would you ask them?”</a> &middot; <a href="../places.html#denver">Everything filmed in Denver</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

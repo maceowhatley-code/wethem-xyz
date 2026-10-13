@@ -1,0 +1,862 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="This is an episode of the Doni Glover Show, hosted by Donnie Glover of BlackUSA.News and BeMoreNews.com, recorded live during the 6th Annual Black…">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/kamal/kamal-hubbard-on-the-doni-glover-show-live-at-the-black-blockchain">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="Kamal Hubbard on the Doni Glover Show, live at the Black Blockchain Summit | Crypto with Kamal">
+    <meta property="og:description" content="This is an episode of the Doni Glover Show, hosted by Donnie Glover of BlackUSA.News and BeMoreNews.com, recorded live during the 6th Annual Black…">
+    <meta property="og:image" content="https://i.ytimg.com/vi/32_CZWbYOv8/hqdefault.jpg">
+    <meta property="og:image:alt" content="Kamal Hubbard on the Doni Glover Show, live at the Black Blockchain Summit">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://i.ytimg.com/vi/32_CZWbYOv8/hqdefault.jpg">
+    <meta property="og:url" content="https://wethem.xyz/kamal/kamal-hubbard-on-the-doni-glover-show-live-at-the-black-blockchain">
+    <title>Kamal Hubbard on the Doni Glover Show, live at the Black Blockchain Summit | Crypto with Kamal</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/kamal/kamal-hubbard-on-the-doni-glover-show-live-at-the-black-blockchain#video",
+  "name": "Kamal Hubbard on the Doni Glover Show, live at the Black Blockchain Summit | Crypto with Kamal",
+  "description": "This is an episode of the Doni Glover Show, hosted by Donnie Glover of BlackUSA.News and BeMoreNews.com, recorded live during the 6th Annual Black Blockchain Summit at Howard University. Donnie calls it \"a special edition\" covering blockchain and crypto, admitting up front, \"I don't know too much about crypto,\" before bringing on Kamal Hubbard, there representing ICP Hub North America. The show also brings on attorney Eric Guthrie, author of Blockchain or Die, who describes his book as bringing \"all the technology and all the learnings about cryptocurrencies and blockchains in plain, easy-to-speak language,\" and later Dr. Taborn of STEM City USA. Guthrie closes with his standing advice to anyone getting into crypto: \"Never invest in anything you do not understand.\"",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/32_CZWbYOv8/hqdefault.jpg"
+  ],
+  "uploadDate": "2023-09-23",
+  "duration": "PT1H12M56S",
+  "embedUrl": "https://www.youtube.com/embed/32_CZWbYOv8",
+  "url": "https://wethem.xyz/kamal/kamal-hubbard-on-the-doni-glover-show-live-at-the-black-blockchain",
+  "inLanguage": "en",
+  "creator": {
+    "@id": "https://wethem.xyz/kamal#person"
+  },
+  "author": {
+    "@type": "Person",
+    "@id": "https://wethem.xyz/kamal#person",
+    "name": "Kamal Hubbard",
+    "url": "https://wethem.xyz/kamal"
+  },
+  "copyrightHolder": {
+    "@id": "https://wethem.xyz/kamal#person"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "@id": "https://wethem.xyz/kamal#series",
+    "name": "Crypto with Kamal",
+    "url": "https://www.youtube.com/channel/UCOTUb--qU1EwN5FGa_GnS4A",
+    "author": {
+      "@id": "https://wethem.xyz/kamal#person"
+    }
+  },
+  "sdPublisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Kamal Hubbard",
+      "item": "https://wethem.xyz/kamal"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Kamal Hubbard on the Doni Glover Show, live at the Black Blockchain Summit",
+      "item": "https://wethem.xyz/kamal/kamal-hubbard-on-the-doni-glover-show-live-at-the-black-blockchain"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece pw-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], who[data-pf-who], show[data-pf-show], vid[data-pf-vid], k[data-pf-k]" data-pagefind-filter="kind[data-pf-kind], partner[data-pf-partner]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="partner" data-pf-date="2023-09-23" data-pf-who="Kamal Hubbard" data-pf-show="Crypto with Kamal" data-pf-partner="kamal" data-pf-vid="32_CZWbYOv8" data-pf-k="{&quot;l&quot;:&quot;1:12:56&quot;}">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../kamal.html">Kamal Hubbard</a></li>
+            <li aria-current="page">Kamal Hubbard on the Doni Glover Show, live at the Black Blockchain Summit</li>
+        </ol>
+    </nav>
+
+    <p class="pw-from" data-pagefind-ignore>From <a href="https://www.youtube.com/channel/UCOTUb--qU1EwN5FGa_GnS4A">Crypto with Kamal</a>, by <a href="../kamal.html">Kamal Hubbard</a></p>
+    <h1 class="wt-title">Kamal Hubbard on the Doni Glover Show, live at the Black Blockchain Summit</h1>
+
+    <p class="wt-byline"><strong><a href="../kamal.html">Kamal Hubbard</a></strong> &middot; posted to Crypto with Kamal on <time datetime="2023-09-23">23 September 2023</time> &middot; 1:12:56</p>
+
+    <div class="wt-frame">
+        <lite-yt videoid="32_CZWbYOv8" live poster="hqdefault" postersrcset="https://i.ytimg.com/vi/32_CZWbYOv8/mqdefault.jpg 320w, https://i.ytimg.com/vi/32_CZWbYOv8/hqdefault.jpg 480w"><iframe src="https://www.youtube-nocookie.com/embed/32_CZWbYOv8?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="Kamal Hubbard on the Doni Glover Show, live at the Black Blockchain Summit, Crypto with Kamal" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-note pw-source" data-pagefind-ignore>This is Kamal&rsquo;s video, shown here with his permission. <a href="https://www.youtube.com/watch?v=32_CZWbYOv8">Watch it on his channel</a>, where the comments are.</p>
+    <div class="wt-prose">
+            <p>This is an episode of the Doni Glover Show, hosted by Donnie Glover of BlackUSA.News and BeMoreNews.com, recorded live during the 6th Annual Black Blockchain Summit at Howard University. Donnie calls it &ldquo;a special edition&rdquo; covering blockchain and crypto, admitting up front, &ldquo;I don&rsquo;t know too much about crypto,&rdquo; before bringing on Kamal Hubbard, there representing ICP Hub North America.</p>
+            <p>The show also brings on attorney Eric Guthrie, author of Blockchain or Die, who describes his book as bringing &ldquo;all the technology and all the learnings about cryptocurrencies and blockchains in plain, easy-to-speak language,&rdquo; and later Dr. Taborn of STEM City USA. Guthrie closes with his standing advice to anyone getting into crypto: &ldquo;Never invest in anything you do not understand.&rdquo;</p>
+            
+    </div>
+</article>
+
+    <div class="wrap pw-book-wrap">
+    <aside class="pw-book" aria-label="DeFi for the Diaspora, the book">
+        <a class="pw-book-cover" href="../defi-for-the-diaspora.html"><img src="../defi-for-the-diaspora-cover.jpg" alt="The cover of DeFi for the Diaspora" width="120" height="180" loading="lazy" decoding="async"></a>
+        <div class="pw-book-body">
+            <p class="pw-book-k">Kamal&#x27;s book</p>
+            <p class="pw-book-t"><a href="../defi-for-the-diaspora.html">DeFi for the Diaspora</a></p>
+            <p class="pw-book-line">The history of money, where it has left Black communities around the world, and how decentralized finance could be used to change that.</p>
+            <p class="pw-book-cta"><a class="btn btn-primary" href="https://buy.stripe.com/bIY3dP8XLgugdFu8wB">Buy the hardcover &rarr;</a></p>
+            <p class="pw-book-note">Also on <a href="https://www.mahoganybooks.com/9781736709740">MahoganyBooks (the 2023 paperback)</a>. Kamal is our research lead.</p>
+        </div>
+    </aside>
+    </div>
+
+    <section class="wrap wt-transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint">Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Transcribed by We Them Media from the original audio, with Kamal&rsquo;s permission. Speaker letters mark turns, as the model separated them.</p>
+        <p class="wt-note">These are the speakers&rsquo; own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s17"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=17s" target="_blank" rel="noopener">0:17</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>When I&rsquo;m walking down the street --</p>
+            <p id="s19"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=19s" target="_blank" rel="noopener">0:19</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I do want to say to Donnie and many of you in this room that over a very long career in this city, all of you have helped me and my colleagues tell The truth, and to try to tell.</p>
+            <p id="s36"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=36s" target="_blank" rel="noopener">0:36</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I may not look like you and you me, but I&rsquo;m from North Carolina, so I just -- You can join in.</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s44"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=44s" target="_blank" rel="noopener">0:44</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>What does this event mean to you, Miss Peggy Morris? Oh, my heart. Happy 20th anniversary.</p>
+            <p id="s50"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=50s" target="_blank" rel="noopener">0:50</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>My heart is about loving up on my sisters.</p>
+            <p id="s53"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=53s" target="_blank" rel="noopener">0:53</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Do you know what it feels like to have your sisters in the room?</p>
+            <p id="s57"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=57s" target="_blank" rel="noopener">0:57</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Done. And dare to be different and unique. I&rsquo;m gonna be the best me I can be by letting his glory shine through. I am beautiful, I am blessed, but not just what you see in the flesh. I&rsquo;m free from people, free from myself. There&rsquo;s a --</p>
+            <p id="s80"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=80s" target="_blank" rel="noopener">1:20</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>The doctor lived next door to the janitor, the janitor to the reverend and the lawyer.</p>
+            <p id="s85"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=85s" target="_blank" rel="noopener">1:25</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>We were together.</p>
+            <p id="s87"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=87s" target="_blank" rel="noopener">1:27</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Now we get so high and mighty that you create stress for your society because feel like poor black folk either. That&rsquo;s a health problem.</p>
+            <p id="s95"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=95s" target="_blank" rel="noopener">1:35</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Get yourself together so I can stop being taking care of geriatric people and get back to pediatrics. I thank you, Donnie, for all you&rsquo;ve done.</p>
+            <p id="s104"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=104s" target="_blank" rel="noopener">1:44</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Let&rsquo;s keep doing it more and more.</p>
+            <p id="s106"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=106s" target="_blank" rel="noopener">1:46</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Letting his glory shine through. Dare to be you. Dare to be me. Dare to be different and unique. I&rsquo;m gonna be the best me I can be by letting his glory shine through. And I dare you, I dare you, I dare you to be you.</p>
+            <p id="s132"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=132s" target="_blank" rel="noopener">2:12</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>First name&rsquo;s Donnie, last name&rsquo;s Glover. In it to win it for the long haul, baby. So today&rsquo;s guest, this is a special edition, let me tell you, and we&rsquo;re talking about blockchain and crypto. and all of that good stuff. There&rsquo;s actually a summit going on as we speak at Howard University, and our guest today, among others, will be Kamal Hubbard. Now let me just tell you, I don&rsquo;t know too much about crypto. I know a little bit about setting up a wallet and you get 12 words, and if you lose those 12 words, then you&rsquo;re in a world of trouble. Oh my goodness. But, um, I guess today is, is Kamal Hubbard, and Kamal is logging on, but he&rsquo;s at this summit at Howard University.</p>
+            <p id="s132-2"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=132s" target="_blank" rel="noopener">2:12</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>It&rsquo;s going on, it&rsquo;s been going on for the past couple of days regarding blockchain and crypto and all of those fancy buzzwords that I know nothing about. It&rsquo;s called a Black Blockchain Summit, and you know, we&rsquo;re just honored to be a part of this discussion. More and more people are talking about crypto. Jamal, uh, Kamal does a regular show on it. He&rsquo;s been, uh, this particular summit, he&rsquo;s in collaboration with DFINITY and the Internet Computer Protocol. Uh, as a part of this cooperative effort with ICP Hub North America, he&rsquo;ll be covering this intriguing layer blockchain. And of course, he&rsquo;s at this Black Blockchain Summit, so he&rsquo;s there collaborating, meeting with other project, uh, founders, other blockchain enthusiasts.</p>
+            <p id="s132-3"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=132s" target="_blank" rel="noopener">2:12</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>And to say the least, This young man is super duper excited. So if you have any questions on blockchain, on crypto, write them down, get them together, get your questions together, because we should have the premier expert on the line with us immediately. Now clearly he&rsquo;s from the West Coast because here on the East Coast, you know, we don&rsquo;t play with time. Time is money, money is time. Uh, he said that he&rsquo;s still getting the guests together, but of course we are live and we cannot have any of that. So we&rsquo;ll just see. Bear with me a second. Well, yes sir, we are live and waiting on you, sir.</p>
+            <p id="s132-4"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=132s" target="_blank" rel="noopener">2:12</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>How are you? You are live and on the air.</p>
+            <p id="s324"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=324s" target="_blank" rel="noopener">5:24</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Ah, okay, well, I am getting in the, the StreamYard right now. I&rsquo;m just waiting for my internet to connect and I will be right on.</p>
+            <p id="s335"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=335s" target="_blank" rel="noopener">5:35</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Alrighty, alrighty.</p>
+            <p id="s336"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=336s" target="_blank" rel="noopener">5:36</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Thank you, sir.</p>
+            <p id="s338"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=338s" target="_blank" rel="noopener">5:38</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>All right, so, so again, we&rsquo;re talking with, uh, Kamal Hubbard, uh, regarding the Black Blockchain Summit. And the summit will bring together blockchain enthusiasts, entrepreneurs, and thinkers to discuss the myriad of key challenges facing Black communities around the world. One thing I have learned is that those proponents, uh, Black proponents of crypto, blockchain, and that whole universe find this to be an alternative to the traditional banking route. They are not fans. That&rsquo;s my general take on it. They&rsquo;re not fans of the banking system. And when COVID hit and the pandemic, and let alone the economic challenges back in &rsquo;08, back in &rsquo;01. These things threaten the well-being of everybody&rsquo;s livelihood.</p>
+            <p id="s338-2"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=338s" target="_blank" rel="noopener">5:38</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>I remember when Barack Obama first took office, that was the very first thing he had to do back in &rsquo;08 was address the financial crisis that not only the United States found itself in, but the world. And the corporate bailouts of the CEOs with the golden parachutes, remember that was the talk of the day. So there was a lot of reason, a lot of motivation behind some alternative means of financing, of finding money, of getting money. And, you know, I&rsquo;m just thinking of the show we did earlier today talking about the future of journalism, how it was so important to Uh, to us who started websites like Black USA, uh, Be More News, to have an -- to have an option.</p>
+            <p id="s338-3"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=338s" target="_blank" rel="noopener">5:38</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Uh, traditional media wasn&rsquo;t working. And similarly, in the banking world, crypto found its way. What they say, necessity is the mother of invention. And so, uh, here we are, a whole new world, 2023. We&rsquo;re talking about wallets and not the kind of wallet you slide in your pocket, but the kind of wallet that has to do with crypto and blockchain and a whole bunch of computers and all of the goodies that come with that. So I just want to thank you, Kamal, for leaving me in a pickle as if I know a darn thing about crypto. By the way, make sure you check your email.</p>
+            <p id="s338-4"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=338s" target="_blank" rel="noopener">5:38</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>I sent you a notification about the White House tomorrow. Haven&rsquo;t heard back from you, but we know you still have jet lag. Yeah, you got to check your email. Uh, how are you? Welcome to the show.</p>
+            <p id="s501"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=501s" target="_blank" rel="noopener">8:21</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>I&rsquo;m doing great. Thanks for having me, Donnie. You know, it is always, uh, a pleasure to be on your show, to be asked on your show. As you can tell, um, live here from our nation&rsquo;s capital, Washington, DC. a stone&rsquo;s throw away from you in Baltimore. So I appreciate you having me on. And as you can also tell, you know, I&rsquo;m still on West Coast time. So I&rsquo;m running a little behind here. And I apologize for that.</p>
+            <p id="s532"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=532s" target="_blank" rel="noopener">8:52</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>You know, I don&rsquo;t know if you know anything about basketball, but that&rsquo;s kind of, kind of, you know, West Coast versus East Coast.</p>
+            <p id="s541"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=541s" target="_blank" rel="noopener">9:01</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Oh, well, I know a little bit about basketball. I don&rsquo;t -- I probably don&rsquo;t know as much as you do.</p>
+            <p id="s548"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=548s" target="_blank" rel="noopener">9:08</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>That&rsquo;s for sure.</p>
+            <p id="s548-2"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=548s" target="_blank" rel="noopener">9:08</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>We love the Lakers.</p>
+            <p id="s551"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=551s" target="_blank" rel="noopener">9:11</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>I love the Lakers. I mean, I&rsquo;m a Magic fan for life. Magic. Oh yeah, James Worthy, even some of the newer Lakers. Uh, of course, can&rsquo;t, can&rsquo;t forget to mention Kobe. But yeah, we&rsquo;re on East Coast time now, so it&rsquo;s -- yep, chop chop. What you got going on? Tell me about it.</p>
+            <p id="s567"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=567s" target="_blank" rel="noopener">9:27</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Not, not a lot, not a lot. I&rsquo;m here at the Black Blockchain Summit at Howard University, and so this is the 6th annual Black Blockchain Summit that I&rsquo;m attending, and it&rsquo;s been very interesting so far. Met a lot of great folks and looking to have one of the attendees join us here momentarily. But, you know, you&rsquo;re really getting to see the best that our community has to offer when it comes to blockchain, crypto, Web3, And it&rsquo;s just been an amazing time. It&rsquo;s almost like, to a certain extent, a family reunion, but it&rsquo;s also an opportunity to meet new and other folks. And it&rsquo;s, it&rsquo;s like I said, it&rsquo;s very exciting. And we all get to be here in one place. And it&rsquo;s a great energy.</p>
+            <p id="s623"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=623s" target="_blank" rel="noopener">10:23</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>So let me just ask you, have you been to the previous Blockchain Summits?</p>
+            <p id="s630"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=630s" target="_blank" rel="noopener">10:30</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>No, I have not. So I was a previous media partner and, you know, just helped to get the word out in the first couple years. And then COVID hit. And so everything went virtual. And actually, most of today&rsquo;s program is virtual. So most of the folks who are doing panel discussions and addresses are actually coming from you know, outside of DC. But tomorrow will be mostly in person where most of the people are flying in and doing their addresses. So I&rsquo;m looking forward to tomorrow and seeing a lot more folks here. There&rsquo;s a good amount of folks here, but there&rsquo;s going to be even more tomorrow.</p>
+            <p id="s670"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=670s" target="_blank" rel="noopener">11:10</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Okay, so, um, the other question is, how is it for you? Because to my knowledge California doesn&rsquo;t have many historically Black colleges and universities. How&rsquo;s it feel to be on the campus of the Howard University?</p>
+            <p id="s690"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=690s" target="_blank" rel="noopener">11:30</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Well, it feels great. And so I&rsquo;ll say this, I am a graduate of Florida A&amp;M University and so -- and Texas Southern University. So I&rsquo;m a double HBCU grad. It&rsquo;s a little bit different out here in DC, but I&rsquo;m not new to an HBCU.</p>
+            <p id="s710"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=710s" target="_blank" rel="noopener">11:50</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Okay, okay. What do you think of Howard?</p>
+            <p id="s712"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=712s" target="_blank" rel="noopener">11:52</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Howard&rsquo;s beautiful. Beautiful campus, beautiful people. And, uh, my brother actually went to med school here, so, you know, I&rsquo;ve been here a couple times to visit him. And, um, it&rsquo;s great to see, uh, young minds interested in, uh, really just the pursuit of knowledge.</p>
+            <p id="s731"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=731s" target="_blank" rel="noopener">12:11</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>So what about, you know, so, so tell me about the flavor of this Black Blockchain Summit? What&rsquo;s, what&rsquo;s the mentality? What&rsquo;s the spirit? You know, help me to understand the countenance of the, uh, summit.</p>
+            <p id="s746"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=746s" target="_blank" rel="noopener">12:26</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Well, it&rsquo;s really showcasing, uh, a lot of, once again, our great minds that are in blockchain and Web3 and, um, you know, what they have going on, whether it is education books like yourself or any other sort of things. Unfortunately, I think we&rsquo;re catching some feedback. I&rsquo;m right next to our next guest here, Mr. Eric Guthrie.</p>
+            <p id="s777"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=777s" target="_blank" rel="noopener">12:57</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Good deal. Eric Guthrie, welcome to the show. How are you?</p>
+            <p id="s782"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=782s" target="_blank" rel="noopener">13:02</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I&rsquo;m well.</p>
+            <p id="s782-2"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=782s" target="_blank" rel="noopener">13:02</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>How about yourself, Donnie?</p>
+            <p id="s784"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=784s" target="_blank" rel="noopener">13:04</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>I&rsquo;m doing good. Uh, tell us a little bit about yourself. What&rsquo;s your background?</p>
+            <p id="s790"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=790s" target="_blank" rel="noopener">13:10</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So I&rsquo;m also an HBCU grad. I went to Morehouse College.</p>
+            <p id="s793"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=793s" target="_blank" rel="noopener">13:13</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>There you go. There you go. I try to tell them it&rsquo;s only one school in Georgia. This lady last night, let me tell you, she, she tried to tell me, uh, it&rsquo;s a bunch of -- I say, no, lady, there&rsquo;s one school in Georgia. Why wouldn&rsquo;t she listen to me? I was born in Atlanta. I don&rsquo;t care.</p>
+            <p id="s816"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=816s" target="_blank" rel="noopener">13:36</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Well, I mean, listen, I definitely have a love for HBCUs, but of course Morehouse is a special place in my heart and in my life. So, but HBCU love, we&rsquo;re here at Howard, like Kamau was saying. So my father also went to Howard. He was in the Howard Dental School, which is right across the street. So whenever I&rsquo;m here, I think about him because this is, that&rsquo;s his alma mater. But back to me, I am an attorney. I&rsquo;ve been practicing in the crypto and blockchain space since 2017. I&rsquo;m the author of the book Blockchain or Die. It&rsquo;s Amazon number 1 bestseller 5 times. It&rsquo;s won 3 book awards.</p>
+            <p id="s816-2"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=816s" target="_blank" rel="noopener">13:36</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Thank you, I appreciate that. And I&rsquo;m also creating a diversity NFT that I hope to be dropping in the rest of 2023, and I&rsquo;m also writing a sequel to Blockchain Diet. It was so successful, uh, and it got me on so many stages, so many clients, that I said I need to update the content. So, uh, the next version of Blockchain Diet will have metaverse, NFTs, level 2 blockchains, all the things that have happened since 2019, which is quite a bit. So the book will cover that as well. And final piece, I am actually in negotiations to do uh, blockchain courses at, uh, 2 HBCUs to make sure that, you know, our youth are prepared for tomorrow today by giving them the benefit of learning this technology while it&rsquo;s still in relatively in the early adoption phase.</p>
+            <p id="s910"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=910s" target="_blank" rel="noopener">15:10</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>So, so let me just, let&rsquo;s go back to this background of yours. I&rsquo;m, I&rsquo;m, I&rsquo;m hearing, I&rsquo;m hearing Barrow. I mean, I&rsquo;m hearing a little, you know, New York City or New England or something up that way. Where are you from?</p>
+            <p id="s923"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=923s" target="_blank" rel="noopener">15:23</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So I was born and raised in New York, Brooklyn, Long Island -- Brooklyn, New York, and I moved to Long Island after that. My parents and I moved to Long Island. But also, for the very, very acutely attuned ear, they could hear some Jamaican. My father was from Jamaica.</p>
+            <p id="s941"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=941s" target="_blank" rel="noopener">15:41</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Wagwan!</p>
+            <p id="s942"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=942s" target="_blank" rel="noopener">15:42</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Wagwan! So, so yeah, so, and actually to bring this into the crypto space. I&rsquo;ve been doing a lot of talks with the ambassador to the US from Jamaica, as well as some politicians to bring some blockchain and cryptocurrency efforts into Jamaican and the Caribbean community. So I do want to make sure that not just our people here in the US, but our people in the Caribbean have access into and the same opportunities that we&rsquo;re trying to give them here in the U.S., for example, at this conference, do the same thing in Jamaica and the Caribbean islands.</p>
+            <p id="s984"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=984s" target="_blank" rel="noopener">16:24</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Okay, so by way of introduction, this is my first book, Unapologetically Black. It&rsquo;s autobiographical in nature, and yes, that&rsquo;s the White House, which you are just not far from.</p>
+            <p id="s997"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=997s" target="_blank" rel="noopener">16:37</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>A stone&rsquo;s throw away.</p>
+            <p id="s998"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=998s" target="_blank" rel="noopener">16:38</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Yes, sir. And this is my second book, I Am Black Wall Street. And what&rsquo;s particularly meaningful about this is, one, we do mention Nanny, Nanny the Maroon Queen.</p>
+            <p id="s1011"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1011s" target="_blank" rel="noopener">16:51</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Mm-hmm.</p>
+            <p id="s1011-2"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1011s" target="_blank" rel="noopener">16:51</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>On a $500 Jamaican bill. We mentioned Nanny in this book, and we also mentioned Weeksville in this book. If you&rsquo;re from Brooklyn, then you&rsquo;ve been to Buffalo Avenue, and you may know a little something about the Weeksville Heritage Center founded by James Weeks, which was a, for lack of a better term, a Black Wall Street.</p>
+            <p id="s1035"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1035s" target="_blank" rel="noopener">17:15</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So yeah, it was. Yeah, there&rsquo;s actually a number of Black Wall Streets in the U.S. There&rsquo;s one in Charlotte, there&rsquo;s one in Brooklyn, there&rsquo;s, there&rsquo;s, uh, some in, in the Texas area. So unfortunately, history does not give them the credit they deserve because it would show the power of us doing communal business with each other and rising above the oppression that has really been levied against us for centuries. So they tried to destroy that. Well, they can destroy the buildings, they can destroy, you know, the businesses temporarily, but they can&rsquo;t destroy the spirit.</p>
+            <p id="s1071"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1071s" target="_blank" rel="noopener">17:51</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>And once people say Oklahoma has 70 to 80 Black towns, East Texas alone had 500. 500. And, and, and They never taught us this.</p>
+            <p id="s1083"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1083s" target="_blank" rel="noopener">18:03</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>No, it&rsquo;s right. And, you know, the funny thing is, is that I learned about Juneteenth probably about 20-something years ago before it became popular. And I was like, I was so like mesmerized by the story that, you know, they kept the freedom from these slaves for years. And finally, when they learned, they actually, you know, went on and lived the rest of their life in freedom. But, you know, it&rsquo;s just becoming popular now. but it was being celebrated, you know, 20-some-odd years ago, you know, in many different states and many different venues. And I guess I gave a speech about cryptocurrencies and blockchain technology on Juneteenth 2 years ago, and how if we had transparent and we had communications that could be distributed across communities without having to go through a centralized quote-unquote racist source, then we wouldn&rsquo;t have had to wait years to become free.</p>
+            <p id="s1083-2"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1083s" target="_blank" rel="noopener">18:03</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>They wouldn&rsquo;t have had to wait years. They would have learned about it because it would have been transparent, verifiable information. So I gave a whole speech about that, and it was extremely well received because when you put blockchain and cryptos in context, it can impact every part of our lives, even historically speaking as well. So that&rsquo;s why this technology is so important. It really does -- it really is a game changer and does bring a lot of opportunities to what we can do as a community.</p>
+            <p id="s1168"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1168s" target="_blank" rel="noopener">19:28</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Well, I have to bring Kamal in on this. Kamal has been our guiding light over the past couple of years ever since we connected, and he has made sure that at least this audience has been aware of the changes and the developments. So Kamal, I&rsquo;m gonna pass the ball to you. I know you&rsquo;re on You want to unmute yourself there and jump on in? You want to guide this ship? This is your thing.</p>
+            <p id="s1196"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1196s" target="_blank" rel="noopener">19:56</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Yeah. Well, you know, anyone who is in the area and wants to stop by the Black Blockchain Summit, it&rsquo;s here at 2201 Georgia Avenue, I believe, here in Washington, D.C. There&rsquo;s an open door and please join us tomorrow. I&rsquo;m out here obviously representing and collaborating with the Internet Computer Protocol Hub North America. They are major contributors to the Internet Computer, and I&rsquo;m here to speak with students and other attendees about the Internet Computer and the various grants programs for communities as well as developers. So It&rsquo;s a great program, and I&rsquo;m trying to get as many people who look like us, hence why I&rsquo;m at the Black Blockchain Summit, to understand what the Internet Computer is and how it works and how it can help your projects or your community of people who are interested in blockchain, your community of blockchain enthusiasts.</p>
+            <p id="s1196-2"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1196s" target="_blank" rel="noopener">19:56</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>So that, and of course, uh, here also with my book DeFi for the Diaspora, where I&rsquo;m talking about how we can leverage DeFi to create a more sustainable and equitable global economy through decentralized finance. So having a great time so far. Like I said, seeing a lot of familiar faces as well as some new faces too. So Donnie, I appreciate you taking time out, inviting me back on the show, as well as having Mr. Guthrie, Esquire.</p>
+            <p id="s1303"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1303s" target="_blank" rel="noopener">21:43</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>So you want to lead the discussion there, Kamal? I mean, you&rsquo;re more of a subscriber than I.</p>
+            <p id="s1310"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1310s" target="_blank" rel="noopener">21:50</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>I was gonna say, I mentioned my book a little bit, but I&rsquo;d like Mr. Guthrie to tell us a little bit more about his book.</p>
+            <p id="s1319"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1319s" target="_blank" rel="noopener">21:59</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Okay, so thanks, Kamal. So Blockchain or Die is really a book that brings all the technology and all the learnings about cryptocurrencies and blockchains in plain, easy-to-speak language. And that&rsquo;s one of the best things I&rsquo;ve heard about it from folks that say, Eric, you really break it down. You break it down with stories, you break it down with scenarios, and you really help unpack the complexities of blockchain technology and cryptocurrencies in this book. One of the most reviewed things about this book on Amazon.com is every chapter ends with a success strategy action items section. What that means is after you read the chapter, then I give you things to do so you can actually use what you learned in that chapter.</p>
+            <p id="s1319-2"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1319s" target="_blank" rel="noopener">21:59</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So I&rsquo;m a global trainer, I train all over the world, and you -- when you&rsquo;re training adult learners, adult learners learn by doing, not by reading. I mean, those are -- when you just read and read and read, those are college days. Right? When you&rsquo;re an adult learner, you learn by doing. So each chapter ends with things to do to be able to give you the experience to use blockchain technology and cryptocurrencies, even if it&rsquo;s a small thing -- downloading some types of apps or, you know, attending some types of conferences like this conference, for example. It gives you things to do so you can learn. Now, the next version is going to be even more intense than that because I have a surprise on the way I&rsquo;m going to be rolling out the success strategy action items.</p>
+            <p id="s1319-3"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1319s" target="_blank" rel="noopener">21:59</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>One thing about blockchain technology and cryptocurrencies is that it&rsquo;s always evolving. If you&rsquo;re not evolving with it, then you are not staying in pace with this technology. So I have to evolve too. I can&rsquo;t preach it and not evolve with it. Now, this book is not necessarily a tech book. It&rsquo;s tech adjacent, if you will, because, you know, it is still a a hard copy book, or you can download it from Amazon. But I do provide ways in this new book, the next version I&rsquo;m writing, to be much more technologically, uh, connected with the information than just reading it in the book. So that&rsquo;s a quick summary.</p>
+            <p id="s1319-4"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1319s" target="_blank" rel="noopener">21:59</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Uh, you can find it on Amazon. The ebook is $0.99. I essentially give away the information. I want our community to really have this information. And what I tell people to do is to buy 10 books, keep 1, and give 9 away. That is the price of a Starbucks coffee, but you&rsquo;re giving away the power of information, the power of the future. And this could be really used to bring our communities into this fold where it&rsquo;s a multi-trillion-dollar industry that&rsquo;s being built, and we are not at the table nearly enough. But to get to the table, You got to know what it is, you got to know how you can get involved and how to monetize it.</p>
+            <p id="s1319-5"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1319s" target="_blank" rel="noopener">21:59</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And that&rsquo;s what Blockchain or Die does.</p>
+            <p id="s1497"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1497s" target="_blank" rel="noopener">24:57</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>I, I&rsquo;ve got a couple of questions for you. So one, I&rsquo;ve just returned back to school to finish up my master&rsquo;s, 2 semesters, and I walk with a master&rsquo;s in journalism. And I&rsquo;m looking specifically at the future of journalism, digital Journalism, newspapers. As was said earlier today, newspapers are on a gurney, and this whole digital news, including TikTok. I had to get on TikTok just to go right to the heart of your one of your recent statements. I had no interest in TikTok, man. I remember MySpace.</p>
+            <p id="s1538"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1538s" target="_blank" rel="noopener">25:38</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Mm-hmm.</p>
+            <p id="s1539"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1539s" target="_blank" rel="noopener">25:39</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Right.</p>
+            <p id="s1540"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1540s" target="_blank" rel="noopener">25:40</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>But now I&rsquo;m thinking. What&rsquo;s next? What&rsquo;s, what, what&rsquo;s around the corner? What&rsquo;s coming next? And so, like you, if I&rsquo;m gonna be a practitioner, then I have to stay up on it. But here&rsquo;s my question for you, counselor. You mentioned teaching it at HBCUs.</p>
+            <p id="s1561"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1561s" target="_blank" rel="noopener">26:01</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Mm-hmm.</p>
+            <p id="s1562"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1562s" target="_blank" rel="noopener">26:02</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Now, the thing is, this technology is changing faster You know, traditionally you could have a textbook and the course and that, that knowledge would be good for a year.</p>
+            <p id="s1578"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1578s" target="_blank" rel="noopener">26:18</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Mm-hmm.</p>
+            <p id="s1581"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1581s" target="_blank" rel="noopener">26:21</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>What you teach this week might not be good next, next month.</p>
+            <p id="s1584"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1584s" target="_blank" rel="noopener">26:24</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Well, that, that there is some truth to that, but the foundations of what you learn in blockchain or crypto is that does not change. Right. The advancements change, the updates change, right? The new, the new coins, the new blockchain applications, those change. But the foundation is still the same. And you really should learn that before you get involved in those advancements and those evolutions, because then you won&rsquo;t have the foundation. So blockchain and DAI is going to be --</p>
+            <p id="s1617"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1617s" target="_blank" rel="noopener">26:57</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Like algebra.</p>
+            <p id="s1618"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1618s" target="_blank" rel="noopener">26:58</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Exactly right. You learn algebra before you learn differential equations. Right? So, so Blockchain or Die is going to be a textbook in at least 2 HBCUs because it gives the foundation. Once you understand the foundation, then you can, you know, update yourself with the most recent technology. And here&rsquo;s a quote that I love that really kind of encapsulates this. Bruce Lee said, first you learn the rules, then you master the rules, and then you break the rules. Right? So you can&rsquo;t go right to rule breaking because you haven&rsquo;t learned it and mastered it. So what we&rsquo;re doing, a lot of us in the blockchain space, uh, like Kamala and myself, is we teach them the rules and then we teach them how to master the rules. Then what they do after that is up to them, and that&rsquo;s what we&rsquo;re trying to encourage.</p>
+            <p id="s1667"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1667s" target="_blank" rel="noopener">27:47</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Okay, so here&rsquo;s the follow-up to that. As HBCUs -- one, one thing, and this is not a criticism of our beloved HBCUs. And, and I can really tell you that the graduate program I&rsquo;m in at Morgan, it&rsquo;s, uh, 90-95% virtual.</p>
+            <p id="s1687"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1687s" target="_blank" rel="noopener">28:07</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Okay.</p>
+            <p id="s1688"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1688s" target="_blank" rel="noopener">28:08</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>But I remember a couple of years ago, I&rsquo;m seeing all of these universities -- Harvard -- I&rsquo;m seeing all of the traditionally white institutions, you know, they&rsquo;ve got the online component. And I&rsquo;m saying to myself, damn, we&rsquo;re missing it. Our HBCUs are missing this online component. How does that work with blockchain?</p>
+            <p id="s1714"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1714s" target="_blank" rel="noopener">28:34</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So I&rsquo;ll answer it 2 ways. So, you know, the COVID-19 pandemic, of course, was a tragedy. We had millions of people that died globally, but There really was one silver lining to the cloud, which was HBCUs were required to actually adopt and create, you know, virtual course content. So, you know, schools like Morehouse and Howard and Hampton and Fisk and FAMU, they really were relying on coming to the campus, being part of the culture, the HBCU, which is so rich and so vibrant and so necessary, that, you know, they weren&rsquo;t really focusing on online courses, but then they had to. 2 years had to be put into virtual courses for the HBCUs to survive.</p>
+            <p id="s1714-2"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1714s" target="_blank" rel="noopener">28:34</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So now some of them are actually integrating that into their, the curricula. I know Morehouse is. So we have seen that transition. Now, to answer the question another way, you know, there are ways that we can actually create even more advanced learnings in the blockchain space, and one of them is in the metaverse, right? You know, you take courses in, in college, and you can take virtually like this using Blackboard or what have you, but you&rsquo;re not really in the blockchain space. You&rsquo;re not in high-tech world because Blackboard has been around for well over a decade, probably even 2 decades, right? Now, in the metaverse, we actually teach it in a virtual classroom where everything is being done either on a centralized server or on a blockchain, because you don&rsquo;t really need to have a metaverse be on a decentralized blockchain, but there are companies that do that.</p>
+            <p id="s1714-3"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1714s" target="_blank" rel="noopener">28:34</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>That&rsquo;s much more advanced. And what it&rsquo;s also doing is teaching the student how to use the technology. And if they learn how to use it, they&rsquo;ll be able to create products, services, and engage more with their community because they&rsquo;re using it on a day-to-day thing like attending school. So the things that we can do to make it available to them so they can be successful with it, we just have to do it more often.</p>
+            <p id="s1847"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1847s" target="_blank" rel="noopener">30:47</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Do you see this spreading like wildfire? We can&rsquo;t afford to be behind this curve with blockchain. I mean, you mentioned 2 or 3 HBCUs. Uh, we need you now. We, we need, we need it at Coppin. At Morgan, at Bowie State. We, we need them at University of Maryland Eastern Shore, the 4 HBCUs here, here in, uh, Maryland and everywhere else. How do we get the other HBCUs on board now? We don&rsquo;t have tomorrow.</p>
+            <p id="s1880"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1880s" target="_blank" rel="noopener">31:20</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Well, yeah, so I agree. I mean, we&rsquo;re, as usual, we are behind the time, we&rsquo;re behind the 8-ball, we&rsquo;re always playing catch-up, and this was an opportunity to be at the table when this pie was being baked, this multi-trillion-dollar pie was being baked. It&rsquo;s being cut up, but it&rsquo;s not too late. So the way I respond to that is in 2 ways. One, you know, we need to create some really good professorial trainer-trainer programs. And if we can do that, then we can, you know, teach them how to rather than how to fish, you know, rather than giving a fish, to teach them how to be fishermen and fisherwomen and pull this money out of this system that is designed to have, you know, a new currency, a new blockchain technology, new products, new services.</p>
+            <p id="s1880-2"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1880s" target="_blank" rel="noopener">31:20</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>The other thing I&rsquo;ll say is, unfortunately, no one wants to be the first one to try and do it and not succeed. So we&rsquo;re going to have to have -- and that&rsquo;s one thing I&rsquo;m trying to do Uh, trying to have to have one or a few HBCUs successfully implement blockchain technology courses. And in that way, when they say, oh, this school is doing that, well, damn, we can do it too then. But no one wants to be the first because the fear of failure is too strong. Well, guess what? I love failure because you learn from it and then you make a better product or you make a better service.</p>
+            <p id="s1880-3"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1880s" target="_blank" rel="noopener">31:20</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So that&rsquo;s what I&rsquo;m doing with the HBCUs I&rsquo;m involved in.</p>
+            <p id="s1969"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1969s" target="_blank" rel="noopener">32:49</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>You make a hell of a point. I, I, when I started -- so this is blackusa.news, but the mothership, our flagship, is bemorenews.com, which is 21 years old. And I remember being one of the first that&rsquo;s out there, and that staying power is, is very -- you don&rsquo;t want to be the rabbit. You don&rsquo;t want to be the rabbit in the race. Because the rabbit doesn&rsquo;t win, right?</p>
+            <p id="s1998"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=1998s" target="_blank" rel="noopener">33:18</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>The tortoise wins.</p>
+            <p id="s2001"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2001s" target="_blank" rel="noopener">33:21</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Yeah.</p>
+            <p id="s2001-2"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2001s" target="_blank" rel="noopener">33:21</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>So you&rsquo;re looking around and you have to -- you&rsquo;re constantly adapting. Come on in, Kamal.</p>
+            <p id="s2006"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2006s" target="_blank" rel="noopener">33:26</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Well, you know, I&rsquo;m on mute.</p>
+            <p id="s2012"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2012s" target="_blank" rel="noopener">33:32</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>So what I did want to say is on the flip side of that. So Eric is right. We have to find a way to teach blockchain in schools properly in a way that the students can pick it up, take it to the higher levels of graduate school, or take it into the private sector and become business leaders. There&rsquo;s a lot of us that are doing that already, but on the flip side of that, the students who have this passion for blockchain and want to find a way to tap into it and get experience even though it&rsquo;s not being taught at their schools They can find me.</p>
+            <p id="s2012-2"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2012s" target="_blank" rel="noopener">33:32</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Like I said, that&rsquo;s part of the, the work that I&rsquo;m doing with ICP, the Internet Computer Protocol, is to find students once again who are looking to break into this industry. ICP will work with you to create a blockchain club at your school or a blockchain lab at your school so that students can be self- self-driven and be their own catalyst in learning this technology and learning more. So, you know, hopefully if they&rsquo;re not students in Professor Guthrie&rsquo;s class, then they can work with me and they can band together with other students on campus and do this once again on their -- in their free time.</p>
+            <p id="s2012-3"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2012s" target="_blank" rel="noopener">33:32</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>And ICP will do a way or find a way to help support them do it, to do it, excuse me.</p>
+            <p id="s2107"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2107s" target="_blank" rel="noopener">35:07</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>So let&rsquo;s, let&rsquo;s get back to you, all right, Counselor. How does the legal world keep up with a technology that&rsquo;s ever developing? Obviously, I mean, at some juncture, I imagine the Supreme Court, some case is going to go before the Supreme Court where there&rsquo;s no precedent. So just like us journalists, and we&rsquo;re delving into the digital, uh, technology, and they call people like us imaginaries. You are a legal imaginary. Where do you see the legal angle coming? How, how will lawsuits go as it relates to blockchain? I mean, what do you foresee happening?</p>
+            <p id="s2158"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2158s" target="_blank" rel="noopener">35:58</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So, so great question. The, the first answer is that the law is always 10, 20 steps behind technology because someone can create code in their basement, roll it out, and it can hit the streets the next day and it could be distributed to hundreds of thousands, millions of people. Well, if that code changes the very fabric of some legal or regulatory structures, then someone has to be aggrieved. There has to be either a lawsuit, there has to be some type of complaint to Congress or legislative body, then it has to be a response. If it&rsquo;s in a lawsuit, then it has to be, you know, cases, litigation filed, discovery motions, etc., etc., before it gets in front of a judge.</p>
+            <p id="s2158-2"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2158s" target="_blank" rel="noopener">35:58</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>That can take years, quite frankly, right? So the legal system is not designed to be something that&rsquo;s a rapid response, with a few exceptions, like maybe with injunctions, things of that nature. But overall, it&rsquo;s not designed to be something that&rsquo;s rapid response because it&rsquo;s designed to be deliberative. It&rsquo;s designed to be, you know, people coming together to create a better legal product and not just one person just snapping their fingers and creating legal decisions or legislation. That may not serve everybody. So that being said, you know, you see now, for example, there was the, uh, the suit against Ripple. And in the Ripple suit, the issue was, well, is the Ripple token, uh, is it a security?</p>
+            <p id="s2158-3"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2158s" target="_blank" rel="noopener">35:58</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And, uh, the judge in New York, uh, the Southern District of New York, ruled that the, the token itself that people buy off of exchanges It&rsquo;s not a security. But when Ripple made agreements with institutional investors or institutional organizations, that contract they made made it a security. So it was kind of -- I won&rsquo;t say it&rsquo;s like splitting the baby like King Solomon, but there was that, which I think was actually a very legally logical way to decide the case. There was the fact that, you know, if you buy a cryptocurrency, if you buy Ripple, off an exchange, you have no agreement with Ripple. You only have what you bought from the exchange, right?</p>
+            <p id="s2158-4"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2158s" target="_blank" rel="noopener">35:58</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So that was the difference. So now the SEC is suing Coinbase, is suing Binance. There&rsquo;s a whole bunch of -- in different jurisdictions, one&rsquo;s in New York, one&rsquo;s in DC. There&rsquo;s a whole different set of issues involving securities exchanges, right? Because Binance and Coinbase Uh, their exchange is not necessarily just a cryptocurrency, even though Binance has a cryptocurrency.</p>
+            <p id="s2320"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2320s" target="_blank" rel="noopener">38:40</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Well, I, I have to, I have to jump in here. We have just been joined by the founder of the metaverse. Okay, okay, he&rsquo;s not the founder of the metaverse, but we have Stem City USA. And so, Doc, let me just take this, uh, banner down, but these guys are at the Black Blockchain Summit At Howard University, Kamal Hubbard. He does a show on our network, as you well know.</p>
+            <p id="s2350"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2350s" target="_blank" rel="noopener">39:10</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Absolutely, absolutely.</p>
+            <p id="s2352"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2352s" target="_blank" rel="noopener">39:12</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Attorney Eric Guthrie, a Morehouse man. Need I say any more? Plus, he&rsquo;s from Brooklyn, and he&rsquo;s he&rsquo;s got roots from where Gene Hamilton&rsquo;s from.</p>
+            <p id="s2362"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2362s" target="_blank" rel="noopener">39:22</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Jamaica, Jamaica. Hey, listen! First of all, just so you know, I&rsquo;m in a public setting, so if I pop off, there&rsquo;s a lot of noise. I&rsquo;m in Detroit. I&rsquo;m here to support Hill Harper, who is the -- who will be the emcee for Women of Color Conference here in Detroit next month. And so I&rsquo;m here to support his campaign. But again, I&rsquo;m in a public place, so if I pop off, it&rsquo;s because I don&rsquo;t want to -- I just want the audience to know I&rsquo;m not being rude. I just -- there&rsquo;s a lot of noise around me.</p>
+            <p id="s2394"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2394s" target="_blank" rel="noopener">39:54</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Well, one of the things that Eric was talking about was blockchain. All right, why don&rsquo;t you help me?</p>
+            <p id="s2401"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2401s" target="_blank" rel="noopener">40:01</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>We --</p>
+            <p id="s2402"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2402s" target="_blank" rel="noopener">40:02</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>so Doc here is -- he&rsquo;s closing the digital divide for Black and brown people. He created STEM City USA, and it&rsquo;s our safe space in the metaverse.</p>
+            <p id="s2412"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2412s" target="_blank" rel="noopener">40:12</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>That&rsquo;s right, that&rsquo;s right. And blockchain, as you know, you know, when we talk about blockchain, what we&rsquo;re really talking about at the heart of everything is the is the decentralization of data on the web. So what blockchain is allowing us to do is to decentralize all of this information on the web. Blockchain is also -- of the decentralization of data also means that you&rsquo;re able to create digital assets, which is something that you&rsquo;ve never been able to do with the internet, right?</p>
+            <p id="s2448"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2448s" target="_blank" rel="noopener">40:48</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah.</p>
+            <p id="s2448-2"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2448s" target="_blank" rel="noopener">40:48</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Because all of the data is always -- the people who control the servers control the wealth. With decentralization, now we shifted from being able to control the wealth through servers to being able to control wealth through the transfer of data. Would you guys agree or disagree with that?</p>
+            <p id="s2472"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2472s" target="_blank" rel="noopener">41:12</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, so I agree. The way I like to describe it is that, you know, Web 2.0 is the commerce of information, right?</p>
+            <p id="s2483"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2483s" target="_blank" rel="noopener">41:23</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Yes.</p>
+            <p id="s2484"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2484s" target="_blank" rel="noopener">41:24</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And the commerce of connectivity, because when the internet first came out, it was just basically information. Web 2.0 came out with social media and other ways to create greater ways to communicate to greater numbers of people. You could have 10 million followers.</p>
+            <p id="s2502"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2502s" target="_blank" rel="noopener">41:42</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Right, right.</p>
+            <p id="s2504"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2504s" target="_blank" rel="noopener">41:44</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Before, an email or something like that, or a chat was one-on-one, but now it&rsquo;s 10 million. Web 3.0, like Doc is saying, that&rsquo;s the internet of value. And the internet of value means that you don&rsquo;t need to have a credit card or a bank or PayPal attached to something to buy something off of the internet. You can use the value of the token that&rsquo;s associated with that blockchain. Right? And that&rsquo;s what&rsquo;s -- then that&rsquo;s what&rsquo;s so powerful about it is because you now -- the value is inherent in the internet. And that took what, almost 30 years for that to happen? And look at the internet back in the &rsquo;90s, it&rsquo;s so different than it is now. When you -- when we fast forward 20 years, everything we&rsquo;re saying is going to be second nature. Kids are going to grow up not having to have known what it is to put a credit card on the internet. They&rsquo;ll have tokens that they&rsquo;ll be using on their own, and it&rsquo;ll be second nature for them because we&rsquo;re in the transition phase. They won&rsquo;t be.</p>
+            <p id="s2566"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2566s" target="_blank" rel="noopener">42:46</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>That&rsquo;s right. That&rsquo;s right. And that&rsquo;s why it&rsquo;s so critical what we&rsquo;re trying to do in building the metaverse as being a platform. It is the ability to have commerce. You have to have e-commerce, which is what we&rsquo;ve done with our financial exchange system. So I&rsquo;d like to talk to you guys about that offline. Uh, our community does not understand we&rsquo;re going through a major transformational moment right now, a moment that&rsquo;s as important as when the microprocessor was created. Uh, the ability of trillions I&rsquo;m not joking. This is a trillion-dollar industry and nobody&rsquo;s in front of it yet. Everybody&rsquo;s trying to figure it out. Facebook hasn&rsquo;t, or Meta, whatever they want to call themselves, Google, none of them have figured out the right platform. Apple hasn&rsquo;t figured out the right platform. I think we&rsquo;ve created the right platform, uh, but we shall see, you know, who wins, either Beta or VHS. But the point is, somebody&rsquo;s going to win. And what you guys are doing and what you&rsquo;re talking about, we&rsquo;ve got to raise the alarm because this is the last battle in the digital divide. If we do not participate, if we do not win here, I&rsquo;m telling -- I know you -- I see the heads nodding. You know this is the battle of our lifetime.</p>
+            <p id="s2658"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2658s" target="_blank" rel="noopener">44:18</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, agreed.</p>
+            <p id="s2659"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2659s" target="_blank" rel="noopener">44:19</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Eric, I hate to be redundant, can you show them your book? Oh, oh, we, we just lost him.</p>
+            <p id="s2667"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2667s" target="_blank" rel="noopener">44:27</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It just -- oh, this is my book.</p>
+            <p id="s2672"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2672s" target="_blank" rel="noopener">44:32</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>I&rsquo;m still here. Oh man, I&rsquo;m sorry I didn&rsquo;t bring my book, the, uh, Metaquake USA, you know. But can you send me a copy of your book? Can I -- Donnie, can you get that for me? And I&rsquo;ll put it out. I also publish US Black Engineer. I&rsquo;ll make sure we review your book and get it out there. Okay. And I&rsquo;ll get it out. I&rsquo;ll get it out to our membership.</p>
+            <p id="s2692"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2692s" target="_blank" rel="noopener">44:52</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Tell them what the book&rsquo;s about.</p>
+            <p id="s2695"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2695s" target="_blank" rel="noopener">44:55</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So Blockchain or Die breaks down blockchain and cryptocurrencies in a way that the average person can understand it. Uh, the first half of the book is more so on the crypto side and a lot of happens in the blockchain side. But it really gives the way that a reader could actually use the information. Each chapter ends with success strategy action items so they can actually read what&rsquo;s in the chapter and then they&rsquo;ll go and they can go do it. As a global trainer, I know the benefit of actually having to have my people do something rather than just read it. That&rsquo;s where you really learn and you get those sticky learning points that will become so helpful for their future use of the technology. So, you know, this is the first edition. The second edition is coming out probably by the end of the year, and I have, I have some evolved techniques in that book and in the revised book to be even more helpful to readers.</p>
+            <p id="s2753"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2753s" target="_blank" rel="noopener">45:53</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Hey, Eric, I&rsquo;m gonna jump to the other panelists we have. I want to ask you a question. Why do you think -- what are the challenges? Why is our community -- 2 questions here, and I&rsquo;m gonna go, I have to turn off the camera in a second. But 2 questions that I have for you. Number one, what are the challenges of our community really grasping what&rsquo;s going on right now? That&rsquo;s one, what are the challenges? And number 2, why, how do you break it down for our people to really understand why this thing is so important, what we&rsquo;re going through?</p>
+            <p id="s2795"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2795s" target="_blank" rel="noopener">46:35</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>I&rsquo;d love for Eric to answer that, but I think Dr. Taborn directed it to me. So, you know, I would say right now it&rsquo;s crucial. Just like Eric said, we&rsquo;re in a transition phase. And we need to change our mindset from being consumers of the web to actually becoming innovators now. And an example, just like Professor Guthrie said, you know, putting it into example, a few months back there were some TikTok creators, some Black TikTok creators who created dances, and then some people from outside of the community picked up on those dances and got more attention for it. In a Web3 environment, what those TikTok -- TikTokers could have done is created the dance, minted an NFT, and anyone who subsequently uses that dance, they would have to buy that NFT or a fractionalized piece of that NFT to actually do the dance on subsequent TikToks.</p>
+            <p id="s2795-2"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2795s" target="_blank" rel="noopener">46:35</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>So now you&rsquo;re creators in this whole Web3 space. and you&rsquo;re getting paid. And there&rsquo;s also the concept of decentralized identity as well, where your identity -- me being Kamal Hubbard -- and I&rsquo;m in a -- I&rsquo;m interacting with different platforms and data providers who are paying me for the data and how I interact with them. Now, now instead of me just having my cell phone, right, and I&rsquo;m walking everywhere And all the apps on my phone are taking the data off of where I am, what I&rsquo;m buying, what I&rsquo;m doing, listening to me 24/7, and, uh, presenting ads to me. Now those advertisers would pay me. Once again, my identification could be something in the form of an NFT or a token, right?</p>
+            <p id="s2914"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2914s" target="_blank" rel="noopener">48:34</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Right.</p>
+            <p id="s2914-2"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2914s" target="_blank" rel="noopener">48:34</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>That they buy, and I get a share of those advertising dollars.</p>
+            <p id="s2919"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2919s" target="_blank" rel="noopener">48:39</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Hey, see, Donnie, that&rsquo;s what I&rsquo;ve been telling you. Digital is called digital agency, right? And I&rsquo;ve been telling you exactly that, that no matter how many people are listening to your show, it doesn&rsquo;t matter because Facebook and YouTube, uh, they&rsquo;re getting all the ad revenue and you&rsquo;re producing all of the content because you have no digital agency, unlike what we&rsquo;re doing at stemcityusa.com. Where you do own, you have digital agency, and we also are moving there. I mean, that&rsquo;s an excellent point. I keep saying that, and you&rsquo;ve broken it down a whole lot better than I could ever do.</p>
+            <p id="s2960"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2960s" target="_blank" rel="noopener">49:20</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>No, well, I absolutely admire and respect and acknowledge all the work that you&rsquo;ve done, Dr. Taborn. So I appreciate having the opportunity to be on here with you today. As well as Professor Guthrie.</p>
+            <p id="s2975"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2975s" target="_blank" rel="noopener">49:35</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Wow, thank you.</p>
+            <p id="s2976"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2976s" target="_blank" rel="noopener">49:36</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>I&rsquo;ll let you guys do the rest of the talking. I&rsquo;m always on here with Donnie, and, you know, we&rsquo;re always talking, so I&rsquo;d like to hear more from you guys.</p>
+            <p id="s2988"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=2988s" target="_blank" rel="noopener">49:48</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Well, I would actually like to ask Eric a question since I see the law degree behind his name. You know, one of the biggest challenges that we have, and And we&rsquo;re doing a lot in AI. We actually have -- we&rsquo;ve actually created an AI digital library where we&rsquo;re right now in machine learning that goes behind our entire platform. So over 40 years of data of all Black engineers, women, Hispanics, that&rsquo;s all being dumped into a model. And a teacher will be able to go in After December, that&rsquo;s how close we are to this situation. After December, a teacher will be able to go into the platform and ask for a lesson plan, and we&rsquo;ll be able to generate, um, this stuff. And also on our platform, anybody doing anything will be, uh, put, uh, dumped into the library. But Eric, my question to you is for a lawyer dealing with the new frontier of artificial intelligence and how this data is being kicked out? What are some of the, uh, what are some of the opportunities and challenges? Because this is a whole new frontier.</p>
+            <p id="s3064"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3064s" target="_blank" rel="noopener">51:04</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It is. Thank you, Doc. And that&rsquo;s a great question. And actually, I teach this in my legal blockchain certification course because there are opportunities and there are challenges. I&rsquo;ll start with the challenges. The challenges is that the law is not settled in this yet. So there&rsquo;s a lot of cases that are, that are just starting to spin up. And, you know, lawyers are having to create arguments that are based on prior precedent that&rsquo;s outside of the crypto blockchain space, but somehow is tendential or, you know, makes sense. The other thing is in the regulatory field where you know, you have legislators, you have regulators relying on legislation that was, you know, written back in the &rsquo;20s and the &rsquo;30s.</p>
+            <p id="s3064-2"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3064s" target="_blank" rel="noopener">51:04</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And, you know, they are having to apply it to, you know, the crypto blockchain space. Now, some of the laws like the Securities and Exchange Act or the Commodities Exchange Act, all of those have very general catch-all phrases in terms of the type of investments or commodities that can be covered. But, you know, there&rsquo;s been a push to actually write regulations that are specific for the crypto and blockchain space. Until that&rsquo;s done, lawyers don&rsquo;t have the exact answers on how to respond to these things. They can make arguments and estimates based on the laws and the regs as they are right now. But here&rsquo;s the opportunities.</p>
+            <p id="s3064-3"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3064s" target="_blank" rel="noopener">51:04</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>The opportunity for an attorney that&rsquo;s in this space is, first of all, to be at a cutting-edge legal profession, which is the crypto and blockchain space, a legal practice, because it&rsquo;s not being done yet in a broad scale. The attorneys that were on the cutting edge of internet law back in the &rsquo;90s They did extremely well. And here we are again. I mean, we have -- this is a paradigm shift for our generation. Every generation has a paradigm-changing event. The internet was for us, you know, for 20-some-odd years ago. And now we have cryptos and blockchain. And the microchip was mentioned before. That was another paradigm-shifting event.</p>
+            <p id="s3064-4"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3064s" target="_blank" rel="noopener">51:04</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And notice most of these paradigm-shifting events are in technology because it impacts every part of our life. So, the other thing that attorneys can do is they can educate themselves and they can market themselves as an attorney with experience in this area. Now, someone like me that&rsquo;s been doing it for about 7 years, I can say I have 7 years experience. So, a new attorney may have to kind of ramp up to be able to you know, have that type of education and experience dealing with these kinds of issues. But the sooner you start, the sooner you can actually, you know, down the road say you have all this experience.</p>
+            <p id="s3064-5"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3064s" target="_blank" rel="noopener">51:04</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So don&rsquo;t wait, start now.</p>
+            <p id="s3255"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3255s" target="_blank" rel="noopener">54:15</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Okay, Morehouse man, it&rsquo;s me and you. So one thing, one question I have is, what&rsquo;s the association? What&rsquo;s the national association? And then on the same Tip, what do we do globally? We can&rsquo;t mention Jamaica, US, and not even think of Africa in the big scheme of things, especially if we&rsquo;re talking about something that can level the playing field. So the first question is, is there -- just like in the Black newspaper industry, there&rsquo;s the National Newspaper Publishers Association. or there&rsquo;s the National Association of Black Journalists. What is the Black national organization for crypto and, uh, uh, blockchain dialogue?</p>
+            <p id="s3311"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3311s" target="_blank" rel="noopener">55:11</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, so there&rsquo;s not just one. I mean, right now we&rsquo;re at the Black Blockchain Summit. This is probably one of the premier, uh, events and premier, you know, like networking opportunities for folks in this space. So I mean, I would lead with that, obviously, because, you know, Kamal and I are speakers here. We&rsquo;re here, we&rsquo;re, you know, we&rsquo;re talking to people from this morning, and we&rsquo;ll be here all day today and tomorrow. I do think that there are other, like, colleges, and there are other organizations that -- there used to be a Black Blockchain Consultants, but I think that&rsquo;s actually no longer in existence. But there are a number of organizations, not just one, a number of them that provide opportunities for our people to be involved in this space.</p>
+            <p id="s3311-2"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3311s" target="_blank" rel="noopener">55:11</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Globally speaking, I mean, there are some global organizations like, for example, the Government Blockchain Association. Matter of fact, they&rsquo;re having a conference here next week where I&rsquo;m actually speaking on that conference as well, and they have at least 10 to 15 countries involved with their organization. And there were a number of other global organizations as well. So, uh, I mean, the bottom line is, in, in terms of Africa, you know, I mean, Africa is really, uh, it&rsquo;s -- I would even call it the birthplace of cryptocurrency. Here&rsquo;s why I say that. Most people don&rsquo;t know --</p>
+            <p id="s3397"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3397s" target="_blank" rel="noopener">56:37</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>you look Ethiopian too. You, you could pass. I&rsquo;ve been to Ethiopia. You could pass for Ethiopian.</p>
+            <p id="s3403"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3403s" target="_blank" rel="noopener">56:43</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Uh, never heard that before, but I&rsquo;m honored because they&rsquo;re very beautiful people. So, um, there is a quick -- there is a digital currency in Kenya called M-Pesa, M-P-E-S-A, and it&rsquo;s used on -- it&rsquo;s used on the cell phones. And it&rsquo;s been around for over 20-some-odd years. And they did it because, um, the cell phone provider realized that there were banks In Kenya, that could not service the rural community, but they had cell phones and they had internet. So created M-Pesa. Now that&rsquo;s a digital currency used on cell phones. There&rsquo;s nothing nothing tangible about it at all. That was around before even Bitcoin in Africa. People don&rsquo;t realize that M-Pesa E-M-P-E-S-A.</p>
+            <p id="s3458"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3458s" target="_blank" rel="noopener">57:38</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>You&rsquo;re absolutely right on that. Hey, let me throw out this challenge real quickly. Uh, your conference next year, why, um, you know, Black Engineer of the Year, 11,000 people attend. We&rsquo;re going to be in Baltimore. Why not do something at, um, why not bring some, um, uh, seminars in February on this issue to BEA? I mean, why are we doing --</p>
+            <p id="s3482"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3482s" target="_blank" rel="noopener">58:02</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>That&rsquo;ll be happening soon.</p>
+            <p id="s3483"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3483s" target="_blank" rel="noopener">58:03</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Yeah, good. So Donnie, can you make that happen? Because we, we are doing all of these things and they&rsquo;re not scalable, you know. I mean, we&rsquo;ve got everybody showing up at BEA, you know. This is the 38th year of BEA. You got 11,000 people. Bring the content, I&rsquo;ll give you the space. Let&rsquo;s make it happen. Can, can we make that happen, Donnie?</p>
+            <p id="s3504"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3504s" target="_blank" rel="noopener">58:24</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Absolutely. Bet all the tea and china on it.</p>
+            <p id="s3507"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3507s" target="_blank" rel="noopener">58:27</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>All right. Yeah, and I&rsquo;m only here in Silver Spring, so I can just drive to Baltimore and, and be part of the conversation very easily.</p>
+            <p id="s3515"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3515s" target="_blank" rel="noopener">58:35</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>You tell me how we will figure this out. We will give you X amount of seminars. The organizations you mentioned, you know, you still should do your own conferences, but how can you avoid 11,000 people who show up? The leaders in industry, CEOs. Why? You know, often we are all doing our own thing, and, you know, when Northrop loses a contract and Lockheed gets it, guess who subcontracts? Northrop subcontracts to Lockheed. It&rsquo;s just who gets the check, right?</p>
+            <p id="s3550"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3550s" target="_blank" rel="noopener">59:10</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Right, right.</p>
+            <p id="s3551"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3551s" target="_blank" rel="noopener">59:11</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>We, we, we don&rsquo;t tend to, uh, uh, tie ourselves together. Okay, so we&rsquo;re gonna make that happen. You guys hear all the noise? I&rsquo;m gonna have to go. I don&rsquo;t want to mess up your show, Donnie.</p>
+            <p id="s3562"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3562s" target="_blank" rel="noopener">59:22</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, and just so you know, I&rsquo;ve attended AF for many, many years. I used to be in United Technologies.</p>
+            <p id="s3570"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3570s" target="_blank" rel="noopener">59:30</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Wow.</p>
+            <p id="s3570-2"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3570s" target="_blank" rel="noopener">59:30</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, one year even one of our executives won the award, the Engineer of the Year Award. So I was in the Bay Area. Who was that? It was Hansel. Hansel.</p>
+            <p id="s3585"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3585s" target="_blank" rel="noopener">59:45</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Yeah, yeah, yeah, yeah, yeah, yeah. He was -- yeah, Hansel was at -- he was at Raytheon at the time, right?</p>
+            <p id="s3592"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3592s" target="_blank" rel="noopener">59:52</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Well, he was at Pratt Whitney. It was before it was purchased by Raytheon.</p>
+            <p id="s3596"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3596s" target="_blank" rel="noopener">59:56</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Yeah, yeah, yeah, yeah, yeah, okay.</p>
+            <p id="s3598"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3598s" target="_blank" rel="noopener">59:58</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Hansel Tukes, I think his last name was. That is it. I haven&rsquo;t thought about him in over 10 years because I left that company 20 years ago. So, uh, so I used to coordinate Black Engineer of the Year presidents for United Technologies when I used to work there.</p>
+            <p id="s3614"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3614s" target="_blank" rel="noopener">60:14</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>I&rsquo;ll be doggone. See, I mean, you see, this is a small world. And that&rsquo;s why we all work together. United Techno -- oh man, okay, great. Hey Donnie, thank you for reminding me to hop on the show. Like I said, I&rsquo;m sorry I&rsquo;m in the middle of -- I&rsquo;m, you know, um, I&rsquo;m in a public place.</p>
+            <p id="s3635"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3635s" target="_blank" rel="noopener">60:35</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Yeah, I can&rsquo;t be mad at you.</p>
+            <p id="s3638"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3638s" target="_blank" rel="noopener">60:38</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>All right, well, I&rsquo;ll tell Hill you said hello. Okay, man.</p>
+            <p id="s3641"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3641s" target="_blank" rel="noopener">60:41</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Thank you, big brother.</p>
+            <p id="s3643"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3643s" target="_blank" rel="noopener">60:43</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Thank you guys. I appreciate everybody. Yes, sir.</p>
+            <p id="s3646"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3646s" target="_blank" rel="noopener">60:46</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Thank you, Doctor. Appreciate you.</p>
+            <p id="s3648"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3648s" target="_blank" rel="noopener">60:48</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D</span>Thank you. I appreciate you more.</p>
+            <p id="s3649"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3649s" target="_blank" rel="noopener">60:49</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>What a small world, man. You&rsquo;ve been to BAYA before? It&rsquo;s coming back to Baltimore. Baltimore wasn&rsquo;t taking care of it, man, and it&rsquo;s finally coming back home.</p>
+            <p id="s3662"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3662s" target="_blank" rel="noopener">61:02</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, I probably went to about 7 or 8 of them before I left the organization. I also been to NSBE and SHPE and SWE, so I&rsquo;ve been to all of the engineering conferences. Also Black MBA, Hispanic MBA, I used to speak at both of those conferences, at Black and Hispanic MBA, for many years before I left and went into different parts of the non-mechanical engineering world. So yeah, I&rsquo;m very familiar with those conferences.</p>
+            <p id="s3691"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3691s" target="_blank" rel="noopener">61:31</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>You&rsquo;ve been merging law and technology for some time now. This is, I guess, a staple of your career.</p>
+            <p id="s3699"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3699s" target="_blank" rel="noopener">61:39</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So it has been actually, you know, even though back then I wouldn&rsquo;t envision it being what it is now, but yeah, I mean, I would go and, you know, coordinate with hiring managers to try and bring more diversity into our organization. I actually totally redesigned the diversity recruiting process for 2 Fortune 50 companies. So not so much legal, but more so process improvement and diversity and inclusion, because no one else was able to do it, but I was able to figure it out. And the most important important thing was communication expectations. You know, the executives had different expectations of the conferences and resources, but they wouldn&rsquo;t resource it and they didn&rsquo;t communicate well with all these stakeholders.</p>
+            <p id="s3699-2"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3699s" target="_blank" rel="noopener">61:39</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Well, I came in and I said, look, I need the resources and I need the communication authorization to go out and do all these things. And once I did that, Our numbers more than doubled in terms of numbers in the applicant pool and people that accepted positions. And I was able to achieve that because the one thing that was missing in every single scenario was we would send all these people to all these recruiting conferences, but we would never send the hiring managers. And I would see all these other conferences sending hiring managers. I said, okay, timeout. No, this is no longer an HR thing.</p>
+            <p id="s3699-3"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3699s" target="_blank" rel="noopener">61:39</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I want to have more hiring managers than I have HR people, and I want them to be hiring managers with open positions, and I want them to be able to do second-round interviews at the conference itself. And when I tell you our numbers doubled at 2 different companies, that&rsquo;s an understatement. It was probably more than that. Resources, communication, expectations.</p>
+            <p id="s3815"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3815s" target="_blank" rel="noopener">63:35</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>How do we get in touch with you, Eric Guthrie?</p>
+            <p id="s3820"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3820s" target="_blank" rel="noopener">63:40</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Well, I mean, you can get me through Kamau, but I will put my email in the chat, so anyone that wants to reach out to me, they can. And of course, you and I will probably talk offline about some other initiatives, but it&rsquo;s [email removed]. at blockchainordie.org. That&rsquo;s my email. You can find me on Facebook at Blockchain or Die. You can find me on Twitter at Diversify or Die. Now, Blockchain or Die is my second book. My first book is Diversify or Die. It&rsquo;s about diversity inclusion, which I tell some of the stories that I&rsquo;ve been telling you in this, on this interview. And I&rsquo;m making the NFT, the non-fungible token, on diversity and inclusion. So on, on Twitter -- well, now it&rsquo;s called X, okay, which I will not make any comments on, uh, but it&rsquo;s Diversify or Die. Put that in the chat. And on Facebook and Instagram is Blockchain or Die.</p>
+            <p id="s3887"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3887s" target="_blank" rel="noopener">64:47</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>What a small world, man. And, and, you know, I&rsquo;m reminded that there&rsquo;s a place in this new world even for a 29-year veteran journalist like myself. We had to -- we did a show earlier again on the, the fact that the print industry is on a gurney and this whole new world is digital. And, and I&rsquo;ll wrap this up, but there&rsquo;s still a place. But like you said, we have to stay involved. So this platform here, this StreamYard, I had been wanting to do maybe in 2019, and no one would teach me. Then I ran across StreamYard. A lady down your way, uh, Peggy Morris, down in Prince George&rsquo;s County told me about StreamYard.</p>
+            <p id="s3936"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3936s" target="_blank" rel="noopener">65:36</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>Mm-hmm.</p>
+            <p id="s3937"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3937s" target="_blank" rel="noopener">65:37</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>And now we&rsquo;re able to do a show. We&rsquo;ve connected Baltimore, you&rsquo;re in DC, Doc&rsquo;s over there in Chicago somewhere. We&rsquo;ve even done 4 shows live from Africa. So Technology is changing and we have to stay up with it, just as you stated.</p>
+            <p id="s3955"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3955s" target="_blank" rel="noopener">65:55</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And when I -- listen, when I travel, I&rsquo;m supposed to be going -- I just came back from Sri Lanka a few months ago. I&rsquo;m going to probably Thailand to do some training and laser training in December. I&rsquo;m happy to do a show from that country so we could bring more of a global audience to, uh, to the Black USA Network.</p>
+            <p id="s3973"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3973s" target="_blank" rel="noopener">66:13</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>We would love to have it. And, and It&rsquo;s such a pleasure. I got to ask you, I got to give you some -- I got to get some more. Look, hold on. I can&rsquo;t just let you say you&rsquo;re from Morehouse. Were you -- got to keep this clean, though. What would -- tell me your favorite Morehouse experience. How about that?</p>
+            <p id="s3996"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3996s" target="_blank" rel="noopener">66:36</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>My favorite Morehouse experience?</p>
+            <p id="s3999"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=3999s" target="_blank" rel="noopener">66:39</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>What class were you in? Now, I was only there 3 semesters, but I got to tell you, It was the greatest 3 semesters of my life.</p>
+            <p id="s4006"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=4006s" target="_blank" rel="noopener">66:46</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>It was the greatest 4 years of mine. I came out with the class of &rsquo;88. We call ourselves the Great &rsquo;88 because we do so many impactful things for the school.</p>
+            <p id="s4016"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=4016s" target="_blank" rel="noopener">66:56</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>So you remember DC Metro Club? I was there &rsquo;83 to &rsquo;85. So we were literally there at least a semester together. And it was really probably We crossed a year. He was doing School Daze. He was filming School Daze.</p>
+            <p id="s4034"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=4034s" target="_blank" rel="noopener">67:14</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yep, yep. Spike Lee came in &rsquo;85 and he shot a lot of scenes at school. As a matter of fact, my roommate back in &rsquo;85, he did open casting in the college and like 3 people got a speaking part in School Daze, and he was one of them. He was one of the locals in the Church&rsquo;s Fried Chicken scene where there was a conflict between the college students and the local in the community. He was one of the locals in the community. His name was Moses in the movie, and he had about 2 or 3 lines, but he was so excited to have that, that opportunity to work with, uh, Spike and with Robey Reid, who was the casting director back then.</p>
+            <p id="s4073"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=4073s" target="_blank" rel="noopener">67:53</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Well, I know I&rsquo;m getting ready to pull your card, so look, we&rsquo;ve been doing these awards these Black Wall Street Awards since 2011. We were recently in Atlanta, uh, right across the street at the Absalom Jones Episcopal Center. One of our honorees was Mukasa Dada.</p>
+            <p id="s4101"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=4101s" target="_blank" rel="noopener">68:21</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Mukasa, yeah, yeah.</p>
+            <p id="s4104"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=4104s" target="_blank" rel="noopener">68:24</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>You remember Mukasa?</p>
+            <p id="s4106"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=4106s" target="_blank" rel="noopener">68:26</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Do I remember him? I still talk to him. He was just in South Africa last year, and his son was there, his son is there, and he still comes to campus every now and then, he still talks to us, he&rsquo;s still fortunately in fairly good health, so, you know, he&rsquo;s definitely, he was definitely a mainstay, a staple at Morehouse, because if you sat down and talked to him, you know, rather than having him shout out things in the cafeteria to try and educate us, if you sat and talked to him, you actually really understand that he is a very deep brother. He&rsquo;s mentioned in Malcolm X&rsquo;s book. He&rsquo;s mentioned in Malcolm X&rsquo;s Autobiography of Malcolm X, Willie Ricks. And actually, I did my -- I missed that.</p>
+            <p id="s4152"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=4152s" target="_blank" rel="noopener">69:12</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>I&rsquo;m going to have to go back and find that.</p>
+            <p id="s4155"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=4155s" target="_blank" rel="noopener">69:15</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, yeah, it&rsquo;s in there. And you know how I know that is because for my senior paper in my communications class, they wanted, they wanted us to interview somebody. Well, I interviewed Rukasa in my dorm room for about 4 hours, and people were just fascinated. I&rsquo;m sorry. Yeah, yeah, people were just fascinated by the stories that he told me for my paper.</p>
+            <p id="s4178"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=4178s" target="_blank" rel="noopener">69:38</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Global, global.</p>
+            <p id="s4179"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=4179s" target="_blank" rel="noopener">69:39</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, no, yeah, definitely. Yeah, definitely. I mean, he, he was there with X. He was there with X. He was there during that whole movement. And, you know, I mean, name dimension in the autobiography of Malcolm X. I mean, you can&rsquo;t get much more impactful than that.</p>
+            <p id="s4196"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=4196s" target="_blank" rel="noopener">69:56</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Any final thoughts, Zarka? Thank you for joining us on our network. It&rsquo;s certainly a pleasure to meet you.</p>
+            <p id="s4204"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=4204s" target="_blank" rel="noopener">70:04</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>The honor was all mine. The pleasure was all mine. I thank you for -- to your audience for listening. Uh, this has been a great program. I&rsquo;m so honored to be a part of it. Uh, I will say the final words are get engaged, get involved, learn about blockchain technology whichever way you do it. Kamal&rsquo;s book, my book, any book that you can read that is of high-quality content, get involved and learn it. But I&rsquo;m gonna say 2 things that are extremely important. Never invest in anything you do not understand. If you don&rsquo;t understand it, don&rsquo;t invest in it. Don&rsquo;t jump in because of fear of missing out.</p>
+            <p id="s4204-2"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=4204s" target="_blank" rel="noopener">70:04</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>That&rsquo;s the fastest way to lose your money. That&rsquo;s number one. Number 2, if you&rsquo;re gonna invest, never invest anything you can&rsquo;t afford to lose. I say these 2 statements literally in every speech, every radio show I do. Why? Because the fastest way for us to lose confidence in this market, in this new technology, is to get in without understanding it. Learn it first, understand it first, join organizations, get involved. Don&rsquo;t just sit and wait for it to come to you because it&rsquo;s not going to come to you. You have to go and learn it and understand it. And then, then you will start your path towards the future of money, the future of business, and the future of the Black community.</p>
+            <p id="s4283"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=4283s" target="_blank" rel="noopener">71:23</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Okay, I got one last question for you. This is a safe question. This is the last one. How did you choose Morehouse?</p>
+            <p id="s4290"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=4290s" target="_blank" rel="noopener">71:30</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Uh, so I was in high school and my best friend went to Morehouse the year before me, and Morehouse has a program where you send -- the freshmen send applications to 2 of their friends in high school. So he sent one to me and one to another one of our friends. And I&rsquo;m sitting in homeroom and the teacher says, oh, you&rsquo;ve got mail. Now who the heck gets mail in homeroom? I mean, you know, back then no one did. So the whole class is looking at me like, why is Eric getting mail in homeroom? So I was like, okay. So it was an application to Morehouse.</p>
+            <p id="s4325"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=4325s" target="_blank" rel="noopener">72:05</a><span class="wt-spk" title="Speaker E, as separated by the model" data-pagefind-ignore>E</span>And I knew --</p>
+            <p id="s4326"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=4326s" target="_blank" rel="noopener">72:06</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>his name is Rob. I knew Rob went to Morehouse and I was considering it, but But when I went back and did some research, I found out, you know, the prestige, you know, Dr. King went there and the importance that Morehouse played in the civil rights movement and the importance of not just King Jr., but Daddy King as well, you know, and some of the other greats that graduated from Morehouse. I said, you know what, this is the school I want to go to. So I applied and fortuitously I got in.</p>
+            <p id="s4356"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=4356s" target="_blank" rel="noopener">72:36</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Good for you. It&rsquo;s a pleasure, counselor. Thank you so much for your time. It&rsquo;s been a beautiful interview, and, and I&rsquo;ve learned so much. I&rsquo;m inspired.</p>
+            <p id="s4365"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=4365s" target="_blank" rel="noopener">72:45</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So am I, Donnie. I appreciate you. Thank you so much from the bottom of my heart. I&rsquo;m looking forward to talking with you again.</p>
+            <p id="s4370"><a class="wt-at" href="https://www.youtube.com/watch?v=32_CZWbYOv8&amp;t=4370s" target="_blank" rel="noopener">72:50</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Yes, sir. All the best. Good afternoon, everybody.</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole conversation.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+
+    <section class="wrap wt-more" id="after-transcript" tabindex="-1">
+        <div class="country-head">
+            <h2 class="country-name">More from Crypto with Kamal.</h2>
+            <span class="country-meta"><a href="../kamal.html">Every episode, and who Kamal is &rarr;</a></span>
+        </div>
+        <p class="pw-nav"><a href="ep-40-jomari-peterson-of-snowball.html" rel="prev">&larr; Newer: Jomari Peterson of Snowball</a> <a href="ep-39-yvonne-kagondu-of-kushite-icp-hub-east-africa.html" rel="next">Older: Yvonne Kagondu of Kushite ICP Hub East Africa &rarr;</a></p>
+        <div class="report-grid">
+            <a href="the-great-reset-crypto-defi-and-ai-in-the-age-of-diminished-digital.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="https://i.ytimg.com/vi/1nS_DgNPVkk/mqdefault.jpg" srcset="https://i.ytimg.com/vi/1nS_DgNPVkk/mqdefault.jpg 320w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="320" height="180"><span class="wt-dur"><span class="visually-hidden">Length </span>5:07</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Crypto with Kamal · 22 October 2025</span>
+                    <h3 class="report-title">The Great Reset: crypto, DeFi and AI in the age of diminished digital sovereignty</h3>
+                </div>
+            </a>
+            <a href="a-caffeine-ai-walkthrough-with-yvonne-anne-pignolet-of-dfinity.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="https://i.ytimg.com/vi/R7x3408vWF0/mqdefault.jpg" srcset="https://i.ytimg.com/vi/R7x3408vWF0/mqdefault.jpg 320w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="320" height="180"><span class="wt-dur"><span class="visually-hidden">Length </span>4:38</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Crypto with Kamal · 22 July 2025</span>
+                    <h3 class="report-title">A caffeine.ai walkthrough with Yvonne-Anne Pignolet of DFINITY</h3>
+                </div>
+            </a>
+            <a href="kyle-stoflet-on-ckbtc-and-bitcoin-nashville.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="https://i.ytimg.com/vi/jzitf1YYDCI/mqdefault.jpg" srcset="https://i.ytimg.com/vi/jzitf1YYDCI/mqdefault.jpg 320w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="320" height="180"><span class="wt-dur"><span class="visually-hidden">Length </span>6:35</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Crypto with Kamal · 30 May 2024</span>
+                    <h3 class="report-title">Kyle Stoflet on ckBTC and Bitcoin Nashville</h3>
+                </div>
+            </a>
+            <a href="adam-mccoy-renaissance-man.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="https://i.ytimg.com/vi/g9zFlndH1HM/mqdefault.jpg" srcset="https://i.ytimg.com/vi/g9zFlndH1HM/mqdefault.jpg 320w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="320" height="180"><span class="wt-dur"><span class="visually-hidden">Length </span>3:23</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Crypto with Kamal · 30 May 2024</span>
+                    <h3 class="report-title">Adam McCoy: Renaissance man</h3>
+                </div>
+            </a>
+        </div>
+    </section>
+
+<div class="wrap wtm-share"></div>
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>

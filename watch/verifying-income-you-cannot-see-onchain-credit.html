@@ -1,0 +1,886 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="If you earn on Shopify, YouTube, Upwork or TikTok, a lender has no way to see your income, so you get refused for credit that someone on a salary gets…">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4274127674281678"
+     crossorigin="anonymous"></script>
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/verifying-income-you-cannot-see-onchain-credit">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="Onchain Credit for Creators: Verifying Income You Can't See">
+    <meta property="og:description" content="If you earn on Shopify, YouTube, Upwork or TikTok, a lender has no way to see your income, so you get refused for credit that someone on a salary gets…">
+    <meta property="og:image" content="https://wethem.xyz/og/watch/verifying-income-you-cannot-see-onchain-credit.jpg?v=f3b92a63fe">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Income verification, onchain lending, and neobanks">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og/watch/verifying-income-you-cannot-see-onchain-credit.jpg?v=f3b92a63fe">
+    <meta property="og:url" content="https://wethem.xyz/watch/verifying-income-you-cannot-see-onchain-credit">
+    <title>Onchain Credit for Creators: Verifying Income You Can't See &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/verifying-income-you-cannot-see-onchain-credit#video",
+  "name": "Onchain Credit for Creators: Verifying Income You Can't See",
+  "description": "If you earn on Shopify, YouTube, Upwork or TikTok, a lender has no way to see your income, so you get refused for credit that someone on a salary gets approved for. The co-founder of Credentials explains how he hit that wall himself in college, and where he found the other half of the answer. The problem was his before it was a company. He and his co-founder ran a website business and he freelanced on the side. \"When I tried to access credit, they asked for so much documentation just to reject us in the end.\" He had the problem and no solution for years. The solution came from somewhere unrelated. He went to work at the Ethereum Foundation, on Privacy and Scaling Explorations, doing developer relations around zero knowledge proofs, and recognised what he was holding. His explanation of the technology is the least jargon-heavy on this channel: \"It's the ability to verify that you know a certain piece of information without actually revealing the underlying data itself. In the case of what we do, we can verify people's income without even seeing the data ourselves.\" Pressed on how that is possible at all, he shrugs it down to \"it's just mathematics. At the end of the day it's polynomials.\" He is twenty-six, from Houston, and names the room he is standing in without softening it: \"There's not many people that are our age and of our skin colour.\" He adds the qualifier that matters to him, and the interviewer repeats it back: building real products. The last third is the widest part. He is Nigerian, Isoko, from Delta State, and has been working on open banking infrastructure in countries like Ghana and Kenya, where accessing your own bank statements still means a PDF. What Africa taught him was that the Western product does not transfer: \"It's fundamentally different. It's relationship and trust driven.\" And his read on the conference floor around him, which is the sharpest criticism in it: \"Most of them are yield driven. But that is not really the major focus outside of the US.\" Outside it, the technology is doing something else entirely, and he lists it: currency devaluation, saving in stablecoins, and two neighbouring countries whose money will not cross the border between them. His message: it is a bear market, but it is a builder's market, and right now it is all signal.",
+  "thumbnailUrl": [
+    "https://wethem.xyz/stills/WkCICP2Dtlw.jpg",
+    "https://i.ytimg.com/vi/WkCICP2Dtlw/maxresdefault.jpg"
+  ],
+  "uploadDate": "2026-08-17T19:15:21Z",
+  "embedUrl": "https://www.youtube.com/embed/WkCICP2Dtlw",
+  "url": "https://wethem.xyz/watch/verifying-income-you-cannot-see-onchain-credit",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT15M52S",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "Why New York, and why an Ethereum conference",
+      "startOffset": 32,
+      "url": "https://wethem.xyz/watch/verifying-income-you-cannot-see-onchain-credit?t=32",
+      "endOffset": 180
+    },
+    {
+      "@type": "Clip",
+      "name": "Few builders here are his age or skin colour",
+      "startOffset": 180,
+      "url": "https://wethem.xyz/watch/verifying-income-you-cannot-see-onchain-credit?t=180",
+      "endOffset": 224
+    },
+    {
+      "@type": "Clip",
+      "name": "Why online earners struggle to get credit",
+      "startOffset": 224,
+      "url": "https://wethem.xyz/watch/verifying-income-you-cannot-see-onchain-credit?t=224",
+      "endOffset": 331
+    },
+    {
+      "@type": "Clip",
+      "name": "Rejected after all the paperwork, in college",
+      "startOffset": 331,
+      "url": "https://wethem.xyz/watch/verifying-income-you-cannot-see-onchain-credit?t=331",
+      "endOffset": 356
+    },
+    {
+      "@type": "Clip",
+      "name": "How the Ethereum Foundation led him to the fix",
+      "startOffset": 356,
+      "url": "https://wethem.xyz/watch/verifying-income-you-cannot-see-onchain-credit?t=356",
+      "endOffset": 411
+    },
+    {
+      "@type": "Clip",
+      "name": "What is a zero knowledge proof?",
+      "startOffset": 411,
+      "url": "https://wethem.xyz/watch/verifying-income-you-cannot-see-onchain-credit?t=411",
+      "endOffset": 527
+    },
+    {
+      "@type": "Clip",
+      "name": "Will Credentials be open source? Not yet",
+      "startOffset": 527,
+      "url": "https://wethem.xyz/watch/verifying-income-you-cannot-see-onchain-credit?t=527",
+      "endOffset": 602
+    },
+    {
+      "@type": "Clip",
+      "name": "What is open banking? Building it in Ghana, Kenya",
+      "startOffset": 602,
+      "url": "https://wethem.xyz/watch/verifying-income-you-cannot-see-onchain-credit?t=602",
+      "endOffset": 665
+    },
+    {
+      "@type": "Clip",
+      "name": "Why you can't just ship a US product to Africa",
+      "startOffset": 665,
+      "url": "https://wethem.xyz/watch/verifying-income-you-cannot-see-onchain-credit?t=665",
+      "endOffset": 742
+    },
+    {
+      "@type": "Clip",
+      "name": "What crypto solves outside the West",
+      "startOffset": 742,
+      "url": "https://wethem.xyz/watch/verifying-income-you-cannot-see-onchain-credit?t=742",
+      "endOffset": 822
+    },
+    {
+      "@type": "Clip",
+      "name": "Money that will not cross a border",
+      "startOffset": 822,
+      "url": "https://wethem.xyz/watch/verifying-income-you-cannot-see-onchain-credit?t=822",
+      "endOffset": 859
+    },
+    {
+      "@type": "Clip",
+      "name": "“A bear market, but a builder’s market”",
+      "startOffset": 859,
+      "url": "https://wethem.xyz/watch/verifying-income-you-cannot-see-onchain-credit?t=859",
+      "endOffset": 952
+    }
+  ],
+  "creator": {
+    "@type": "Person",
+    "name": "Maceo",
+    "url": "https://wethem.xyz/people/maceo"
+  },
+  "transcript": "No one wants a CD, so you have a problem, like, you know, and Stablecoins is also solving that problem by making it easy to just send money to someone in, like, a second without having to, like, really adopt too much of the infrastructure and change, like, what you're doing. Yeah, and being able to, like, save in Stablecoins, right? I think outside of the US, we have, there are fundamental problems that actually, you know, that this technology is actually solving, like FX issues, like with the currency devaluation, that was actually the solution to a lot of the problems that we had when it comes to like being able to streamline that process of accessing credit, right?\nYeah, so at Credentials, basically what we do is we provide a unified way for lenders, neobanks, and fintechs to be able to verify people's income in the digital economy that are earning from platforms like Shopify, YouTube, Upwork, TikTok, right?\nPeople that love to be decentralized, you know what I'm saying?\nThis is for y'all. And also, rest in peace, Sugar Plum, that's my Shih Tzu.\nShe died about 10 years ago.\nAppreciate you. Woo-hoo! Yeah, you have questions right? Like, what did he just drink? Why is he honoring his late Shih Tzu at a basketball game? Who are the people even being decentralized?\nWhat does that mean?\nWell, that's why I'm here. Let's find out. New York doesn't ease you in. You step out and you're already in it. A few million strangers, all going somewhere all at once. I grew up a couple hours away until close enough that New York was never some distant idea. It was a city you took the bus to or trained to. A place I get to go and see my friends from high school and college. That's the thing about this city, it's stacked, bodegas under glass towers, old New York holding up the new one And most new people have no idea what the old one even looked like.\nOh, not you, sorry. This time I linked up with some friends out here in the city. People are already connected, already part of what I came for, an Ethereum conference. The kind of room where we're negotiating where technology is going. But before any of that, you eat, you walk. You let the city remind you why people around the world dream of being here. And somewhere between these streets and the conference floor, that's where the story really starts. My name is Maceo Whatley and I'm the founder of We Them Media. Over the last five years, we've been researching how cryptocurrency and decentralized technology can empower everyday people around the world.\nAnd that's why I attended the Ethereum conference in New York City a couple weeks ago. To better understand and share with you all how Ethereum is working to show Wall Street it is ready to be the global settlement layer for financial systems. And we're here to show you what it means. Let's go.\nWell, what's up, everybody? I'm out here. I'm Maceo from We Them Media. We're at ETH Conference right here in Manhattan. This is the first ETH Global conference they've ever organized. And I'm here with? Elomukoro from Credentials.\nI'm the co-founder.\nHeck yeah. And so tell us a little about where are you from?\nSo I'm from Houston, Texas.\nOkay. How old are you? 26. Okay. Wow. Like myself, 26. Yeah, young.\nSo what's it been like for you being a young builder in this ecosystem?\nA young black man building in this ecosystem?\nThat's a very nuanced question. I think it's been great, right? Right. Like there's not many people that are our age and of our skin color.\nSo being able to add that perspective. Building real products.\nBuilding real products. That's why\nI want to say that too.\nExactly. There's not many people doing that. So being able to like be in these rooms with people that have all this experience and all this capital and everything like that. And also being able to provide value has really been like awesome to witness in this time period. Yeah.\nSo. Okay. And so tell us a little about credentials. Yeah,\nso at Credentials, basically what we do is we provide a unified way for lenders, neobanks, and fintechs to be able to verify people's income in the digital economy that are earning from platforms like Shopify, YouTube, Upwork, TikTok, right? We find that there's a huge problem in the world right now. These subset of earners really have a hard way or really have it hard when it comes to accessing credit. And we're basically here to make it very easy for them to access credit to get to get access to credit edit that part out\nhear that okay but that's cool that's cool and so how has it been for you actually working on this product things where you are right now how would you describe the face right now yeah\nso like um we've actually been working on this for some time now about two years um but over time the vision has gotten a lot more clear and i think it also has to do with timing as well this space really wasn't ready for what we were building like two years ago. But over time, like when you look at neobanks and fintechs, right, they've done everything from the stablecoinback cards. Then, you know, they're now in the yield phase, like yield products. But the next frontier is unsecured credit. And now the timing is starting to get a lot more ripe. And we're seeing a lot more interest in what we're building.\nSo people can actually lend to individuals and businesses. is through Crypto Rails.\nYeah, yeah, and you know, it's remarkable. You're building, you're thinking about real use cases. You know what you just said, right, around lending. I think that's remarkable around credit, right? And I'm curious, like, what's your background? How did you even identify this as a problem? Like, how did you become qualified to even explore this design space, this problem space?\nYeah, so two parts to this, actually. I first started off unqualified. I actually experienced the problem while in college with my co-founder. We had a website business, you know, We Were Just Like Making Money Like I Was Even A Freelancer To Making Money From Random Places But When I Tried To Access Credit They Asked For So Much Documentation Just To Reject Us In The End\nYou Guys Been Doing Paperwork Though\nMan Like They Just Had Me Doing Paperwork And Stuff Like That So Look After That Like I Was Like Okay That's A Problem And You Know I've Heard This My Whole Life All These Types Of People That Are earning Online In Non-traditional Formats Really Struggle To Access Credit So like I didn't have the solution for it at the time. The solution came when I started to work at the Ethereum Foundation in specific PSE, privacy of scaling explorations at the time. And I worked on zero knowledge like proofs and like I was a lead lead dev row and I was onboarding people to open source tools.\nAnd that was actually the solution to a lot of the problems that we had when it comes to like being able to streamline that process of accessing credit. Right. Right. So I put two and two together, the problem, the solution. And I'm like, oh, yeah, we need to start a company and do this thing. Right. So that's okay.\nAnd for those who don't know, like, what is what is your knowledge proofs mean?\nYeah. So, you know, I don't actually explain this term too much, really, because\nhe's overqualified to break it down. So let's hear it.\nBasically what zero knowledge proofs are is it's the ability to verify that you know a certain piece of information or a certain piece of data without actually revealing the underlying data itself. So in the case of like what we do, we can verify people's income without even seeing the data ourselves, right?\nhow can you possibly do that\nit's you know that that that's fine you want but definitely it's just mathematics right at the end of the day is polynomials right you don't know polynomials that's okay\nwe'll break it down\ndon't worry yeah but yeah it's all just like mathematical equations that equal to a true or false statement right in the end so that's that's how it works\nokay awesome and who are the people that you're targeting to be used to your application like who are the people you're really solving a problem for\nyeah so we are beat to beat C2C company. So we kind of are solving the problem for two sets of people. The businesses being the neobanks, the lenders and the fintechs. They have no visibility into their like users of where their income sources are. So we're helping them make that a lot more clear so they can actually like give credit and expand their product offerings in this competitive like crypto space that we're in today. And then you also have the consumer that is actually the users of our, the customers that we aim for. And we're helping them, you know, be able to verify their income and share that with these institutions so they can access credit or whatever financial services, a credit card, buy now, pay later.\nSo yeah, those are like the two sets of like users that we essentially are working for.\nOkay, man. And congrats. Congrats on where you're at. I think it's awesome that you're right in that intersection and being able to serve people on both sides. It sounds like you're in a space with a massive market.\nOh, for sure. Yeah. And\nyou're an early mover. 26 and move it early. I like that.\nYes, sir. Yes, sir.\nAnd so what would you say is a long-term or are you trying to build to be like public infrastructure? And I guess I think of public goods is something that I like in this crypto space. I think it's really cool that we can see emerging. Does your product evolve to be a piece of decentralized technology? technology, or is it something privately owned in the long term? Yeah. There's no, it could be either. I'm just curious.\nYeah, you know, even come from EF, like I'm very big on public good infrastructure. At this time, it is private, but I can definitely see- Get that money. Yeah. I can definitely see over time, like we'll begin to open source some of our like infrastructure to where like anybody will be able to verify their income without needing us to do so. But as of right now, it is like a private institution So you get that $1 billion EF grant Hey, then we can change some things Wow,\nthat's sick, go ahead\nYeah, I was going to talk about something else, but it's okay\nWhat were you thinking about?\nI was just thinking about like, you know We're also working outside in emerging markets as well To establish open banking Okay,\nwe'll talk about that, yeah Yeah, like\nFirst of all, what is open banking for those who don't know Open banking is really just the ability To, you know, be able to access Financial statements From any bank, right Yeah, in a Compliant way And right now If you look at, like, countries like Ghana And Kenya, etc. There really is no Open banking infrastructure to be able To easily access your statements without needing to like do that whole PDF thing and everything like that. So we're actually in talks with the government and stuff on like building out open banking infrastructure as well. That's just like it's a long it takes a while to like close those things.\nBut that's something I'm very excited about, like enabling open banking in these like emerging markets.\nNo, I think that's incredible. I know that you were just in Africa. How has that shaped your perspective on the opportunity in that space? I'm curious to hear.\nOh, my gosh. Yeah. You know, I'm Nigerian, too, at the end of the day. Isoko.\nIsoko. Damn, I didn't know that one.\nIt's a new one. You haven't heard of it, huh? Yeah, it's a smaller one. From where?\nWhat state?\nDelta state.\nOkay, okay, that's cool.\nYeah, yeah, yeah. Isoko. Yeah, Isoko. So I would say, like, going to Africa and being in Africa really has opened my mind just in terms of, like, you know, how different it is from the West and how you also have to build for that region as well. It's not like you can just take a product from the West or take the product from the U.S. and just take it there and think that it'll work because it's not. It's fundamentally different. It's relationship and trust-driven. and actually you know the market is just not is not as established as the United States so there's a lot of figuring out that needs to happen by being on the ground by actually talking to people and developing those relationships and that's something that I learned in my travels throughout Africa\nokay incredible incredible man and then my last question would be like you know when you see this ecosystem when you see this technology what do you feel like everyday people aren't getting or taking for granted that you know you could and how would you address that\nyeah so looking at this ecosystem right now um it's very institutional you know even if confident where we're at right now there's a lot of institutions that are here and that's cool um and it's that time for them to come in um but when you look at the west i think we're really focused on yield like if you look at actually look at all the booths here most of them are like yield driven right or institutional privacy, etc, etc. But honestly, like, that is not really the major focus outside of the US. I think outside of the US, we have, there are fundamental problems that actually, you know, that this technology is actually solving, like FX issues, where like with the currency devaluation, yeah, and being able to like save and stable coins, right?\nOr other problems\nin order to hedge against inflation.\nYeah, to hedge against it. Exactly. There are other problems like, you know, currencies are not actually communicating with each other. Like Nigeria and Ghana being right next to each other.\nNobody wants that Naira.\nNobody wants that Naira. No one wants the CD. So you have a problem. Like, you know, and Stablecoins is also solving that problem by making it easy to just send money to someone in like a second without having to like really adopt too much of the infrastructure and change like what you're doing. What I Want People To Realize Is The Use Cases Are Actually Abundant And They're Necessary Now You May Not See That In The West But Just Look Outside Look At Your Neighbouring Country Like Latin Has The Same Problems Africa Has The Same Problems Asia Has The Same Problems And I Think This Technology Was Really Fundamentally Built For Them Yeah Yeah\nOh Yeah And You Have A Message For The Ecosystem\nA Message For The Ecosystem them. I'd say, you know, it's a bear market right now, but it's actually a builder's market. Actually, my friend Maceo told me that.\nMaceo. But Luciano told me that, so we're back to Luciano.\nBack to Luciano. Maceo, got you. Sorry about that.\nI called him Elo at first. That was wrong.\nWe're both learning. Yeah. So it's a builder's market. And what I'd say to that is just like, you know, this is the best time to get the relationships and, you know, actually build what matters because when all the people start to come, that's when it's all annoying. But right now it's just signal. So just go out there and connect and build and create something great.\nAll right, man. You want to say where you're coming from one more time? Yeah,\nso coming from Houston, Texas and... Representing your company? Okay, coming from Houston, Texas, representing credentials. That's CR3Dentials. And\nthen we like to say Booyah to close out our interview So 3, 2, 1 Booyah",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "New York",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "url": "https://wethem.xyz/places#new-york"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "ETH Global, New York",
+    "url": "https://wethem.xyz/portfolio#p-eth-global"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Blockchain Builders",
+      "url": "https://wethem.xyz/topics/blockchain-builders"
+    },
+    {
+      "@type": "Thing",
+      "name": "Crypto",
+      "url": "https://wethem.xyz/topics/crypto"
+    }
+  ],
+  "keywords": [
+    "Blockchain Builders",
+    "Crypto",
+    "Do you have a message for the builders?"
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ETH Global, New York",
+      "item": "https://wethem.xyz/portfolio#p-eth-global"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Income verification, onchain lending, and neobanks",
+      "item": "https://wethem.xyz/watch/verifying-income-you-cannot-see-onchain-credit"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="true" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work →</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html" aria-label="Learn crypto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One question</span></a></nav>
+<div class="wrap tw-row"><span class="tw-k">This week</span><ul class="tw-list"><li><a href="../weekly-connect.html"><span class="tw-kind">The Weekly Connect</span> Wed Oct 14</a></li><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../onequestion.html"><span class="tw-kind">One question</span> what would you ask the world?</a></li></ul></div>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place], who[data-pf-who]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2026-08-17" data-pf-vid="WkCICP2Dtlw" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;15:52&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="New York" data-pf-country="United States" data-pf-project="ETH Global, New York" data-pf-who="Maceo">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-eth-global">ETH Global, New York</a></li>
+            <li aria-current="page">Income verification, onchain lending, and neobanks</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">Income verification, onchain lending, and neobanks.</h1>
+
+    <p class="wt-byline">Reported by <strong><a href="../people/maceo.html">Maceo</a></strong> &middot; New York &middot; 16 min &middot; filmed <time datetime="2026-06">June 2026</time></p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="WkCICP2Dtlw" live posterurl="../stills/WkCICP2Dtlw.jpg" postersrcset="../stills/WkCICP2Dtlw-320.jpg 320w, ../stills/WkCICP2Dtlw-480.jpg 480w, ../stills/WkCICP2Dtlw-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/WkCICP2Dtlw?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="Income verification, onchain lending, and neobanks, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week &rarr;</a></p>
+    <p class="wt-answers">Answers <a href="../question/a-message-for-the-builders.html">Do you have a message for the builders?</a> &middot; see how other cities answered &rarr;</p>
+    <div class="wt-prose">
+            <p>If you earn on Shopify, YouTube, Upwork or TikTok, a lender has no way to see your income, so you get refused for credit that someone on a salary gets approved for. The co-founder of Credentials explains how he hit that wall himself in college, and where he found the other half of the answer.</p>
+            <p>The problem was his before it was a company. He and his co-founder ran a website business and he freelanced on the side. &ldquo;When I tried to access credit, they asked for so much documentation just to reject us in the end.&rdquo; He had the problem and no solution for years.</p>
+            <p>The solution came from somewhere unrelated. He went to work at the Ethereum Foundation, on Privacy and Scaling Explorations, doing developer relations around zero knowledge proofs, and recognised what he was holding. His explanation of the technology is the least jargon-heavy on this channel: &ldquo;It&rsquo;s the ability to verify that you know a certain piece of information without actually revealing the underlying data itself. In the case of what we do, we can verify people&rsquo;s income without even seeing the data ourselves.&rdquo; Pressed on how that is possible at all, he shrugs it down to &ldquo;it&rsquo;s just mathematics. At the end of the day it&rsquo;s polynomials.&rdquo;</p>
+            <p>He is twenty-six, from Houston, and names the room he is standing in without softening it: &ldquo;There&rsquo;s not many people that are our age and of our skin colour.&rdquo; He adds the qualifier that matters to him, and the interviewer repeats it back: building real products.</p>
+            <p>The last third is the widest part. He is Nigerian, Isoko, from Delta State, and has been working on open banking infrastructure in countries like Ghana and Kenya, where accessing your own bank statements still means a PDF. What Africa taught him was that the Western product does not transfer: &ldquo;It&rsquo;s fundamentally different. It&rsquo;s relationship and trust driven.&rdquo;</p>
+            <p>And his read on the conference floor around him, which is the sharpest criticism in it: &ldquo;Most of them are yield driven. But that is not really the major focus outside of the US.&rdquo; Outside it, the technology is doing something else entirely, and he lists it: currency devaluation, saving in stablecoins, and two neighbouring countries whose money will not cross the border between them.</p>
+            <p>His message: it is a bear market, but it is a builder&rsquo;s market, and right now it is all signal.</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><strong><span data-count="supporters">8</span> supporters at <span data-count="per_month_usd">$178</span> a month</strong> pay for this work, on the way to <span data-count="goal_usd">$1,000</span> a month. <a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../question/a-message-for-the-builders.html">Every answer to “Do you have a message for the builders?”</a></p>
+        <p class="wt-rail-link"><a href="../places.html#new-york">Everything filmed in New York</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="eth-global-nyc-trailer-why-we-went.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/TW1hm-EiW8I-640.jpg" srcset="../stills/TW1hm-EiW8I-320.jpg 320w, ../stills/TW1hm-EiW8I-480.jpg 480w, ../stills/TW1hm-EiW8I-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>1:53</span></span><span>Blockchain: the next foundation of finance. ETH Global NYC, the trailer.</span></a>
+        <a class="wt-rail-card" href="crypto-privacy-and-global-finance-at-an-ethereum-conference-new-york.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/WXm8AWkc37M-640.jpg" srcset="../stills/WXm8AWkc37M-320.jpg 320w, ../stills/WXm8AWkc37M-480.jpg 480w, ../stills/WXm8AWkc37M-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>12:31</span></span><span>Crypto, privacy and global finance at ETHconf: Maggie of Unlink.</span></a>
+        <a class="wt-rail-card" href="arikia-millikan-on-licensing-journalism-peer-to-peer.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/yGDz77IGjBw-640.jpg" srcset="../stills/yGDz77IGjBw-320.jpg 320w, ../stills/yGDz77IGjBw-480.jpg 480w, ../stills/yGDz77IGjBw-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>15:26</span></span><span>Arikia Millikan, on licensing journalism peer to peer.</span></a>
+        <a class="wt-rail-card" href="crypto-for-people-who-cant-trust-their-bank-ethconf-nyc.html"><span class="wt-next-thumb wt-thumb"><img src="https://i.ytimg.com/vi/o5BBj121_G0/hqdefault.jpg" srcset="https://i.ytimg.com/vi/o5BBj121_G0/mqdefault.jpg 320w, https://i.ytimg.com/vi/o5BBj121_G0/hqdefault.jpg 480w" sizes="300px" alt="" loading="lazy" decoding="async" width="480" height="270"><span class="wt-dur"><span class="visually-hidden">Length </span>6:01</span></span><span>ETHConf: crypto for people who can&#x27;t trust their bank.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap clip-sec" aria-labelledby="clips-here-h" data-pagefind-ignore="all">
+        <h2 class="clip-sec-h" id="clips-here-h">Shorts from this piece</h2>
+        <ul class="clip-row">
+            <li><a class="clip-card" href="../clips.html#GeF0qdm0I0U"><span class="clip-card-pic"><img class="clip-img" src="../stills/clips/GeF0qdm0I0U-360.jpg" srcset="../stills/clips/GeF0qdm0I0U-360.jpg 360w, ../stills/clips/GeF0qdm0I0U-720.jpg 720w" sizes="(min-width: 721px) 168px, 144px" width="360" height="640" alt="" loading="lazy" decoding="async"></span><span class="clip-card-t">Prove Something Without Revealing  It?🤔Zero Knowledge Proofs Explained</span><span class="clip-card-p">New York</span></a><a class="clip-card-yt" href="https://www.youtube.com/shorts/GeF0qdm0I0U">On YouTube &rarr;</a></li>
+            <li><a class="clip-card" href="../clips.html#1ImuyKapMWM"><span class="clip-card-pic"><img class="clip-img" src="../stills/clips/1ImuyKapMWM-360.jpg" srcset="../stills/clips/1ImuyKapMWM-360.jpg 360w, ../stills/clips/1ImuyKapMWM-720.jpg 720w" sizes="(min-width: 721px) 168px, 144px" width="360" height="640" alt="" loading="lazy" decoding="async"></span><span class="clip-card-t">Sending Money like a Text?🤔</span><span class="clip-card-p">New York</span></a><a class="clip-card-yt" href="https://www.youtube.com/shorts/1ImuyKapMWM">On YouTube &rarr;</a></li>
+            <li><a class="clip-card" href="../clips.html#L47eHuqH95w"><span class="clip-card-pic"><img class="clip-img" src="../stills/clips/L47eHuqH95w-360.jpg" srcset="../stills/clips/L47eHuqH95w-360.jpg 360w, ../stills/clips/L47eHuqH95w-720.jpg 720w" sizes="(min-width: 721px) 168px, 144px" width="360" height="640" alt="" loading="lazy" decoding="async"></span><span class="clip-card-t">How Credentials Is Making Income  Verification Easier for Freelancers and Creators</span><span class="clip-card-p">New York</span></a><a class="clip-card-yt" href="https://www.youtube.com/shorts/L47eHuqH95w">On YouTube &rarr;</a></li>
+            <li><a class="clip-card" href="../clips.html#Opcx6YXt4KQ"><span class="clip-card-pic"><img class="clip-img" src="../stills/clips/Opcx6YXt4KQ-360.jpg" srcset="../stills/clips/Opcx6YXt4KQ-360.jpg 360w, ../stills/clips/Opcx6YXt4KQ-720.jpg 720w" sizes="(min-width: 721px) 168px, 144px" width="360" height="640" alt="" loading="lazy" decoding="async"></span><span class="clip-card-t">What If You Could Get a Loan Without Putting Up Your Crypto?</span><span class="clip-card-p">New York</span></a><a class="clip-card-yt" href="https://www.youtube.com/shorts/Opcx6YXt4KQ">On YouTube &rarr;</a></li>
+            <li><a class="clip-card" href="../clips.html#LD3Fb-JmETc"><span class="clip-card-pic"><img class="clip-img" src="../stills/clips/LD3Fb-JmETc-360.jpg" srcset="../stills/clips/LD3Fb-JmETc-360.jpg 360w, ../stills/clips/LD3Fb-JmETc-720.jpg 720w" sizes="(min-width: 721px) 168px, 144px" width="360" height="640" alt="" loading="lazy" decoding="async"></span><span class="clip-card-t">You make money online. So why can’t you prove it?</span><span class="clip-card-p">New York</span></a><a class="clip-card-yt" href="https://www.youtube.com/shorts/LD3Fb-JmETc">On YouTube &rarr;</a></li>
+            <li><a class="clip-card" href="../clips.html#dcAwscqd7qI"><span class="clip-card-pic"><img class="clip-img" src="../stills/clips/dcAwscqd7qI-360.jpg" srcset="../stills/clips/dcAwscqd7qI-360.jpg 360w, ../stills/clips/dcAwscqd7qI-720.jpg 720w" sizes="(min-width: 721px) 168px, 144px" width="360" height="640" alt="" loading="lazy" decoding="async"></span><span class="clip-card-t">What happens when you have income, a business, and proof of work, but still cannot get credit?</span><span class="clip-card-p">New York</span></a><a class="clip-card-yt" href="https://www.youtube.com/shorts/dcAwscqd7qI">On YouTube &rarr;</a></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c32"><a class="wt-t" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=32s" target="_blank" rel="noopener" data-pagefind-ignore>0:32</a><span class="wt-s">Why New York, and why an Ethereum conference</span></li>
+                <li class="wt-line" id="c180"><a class="wt-t" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=180s" target="_blank" rel="noopener" data-pagefind-ignore>3:00</a><span class="wt-s">Few builders here are his age or skin colour</span></li>
+                <li class="wt-line" id="c224"><a class="wt-t" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=224s" target="_blank" rel="noopener" data-pagefind-ignore>3:44</a><span class="wt-s">Why online earners struggle to get credit</span></li>
+                <li class="wt-line" id="c331"><a class="wt-t" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=331s" target="_blank" rel="noopener" data-pagefind-ignore>5:31</a><span class="wt-s">Rejected after all the paperwork, in college</span></li>
+                <li class="wt-line" id="c356"><a class="wt-t" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=356s" target="_blank" rel="noopener" data-pagefind-ignore>5:56</a><span class="wt-s">How the Ethereum Foundation led him to the fix</span></li>
+                <li class="wt-line" id="c411"><a class="wt-t" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=411s" target="_blank" rel="noopener" data-pagefind-ignore>6:51</a><span class="wt-s">What is a zero knowledge proof?</span></li>
+                <li class="wt-line" id="c527"><a class="wt-t" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=527s" target="_blank" rel="noopener" data-pagefind-ignore>8:47</a><span class="wt-s">Will Credentials be open source? Not yet</span></li>
+                <li class="wt-line" id="c602"><a class="wt-t" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=602s" target="_blank" rel="noopener" data-pagefind-ignore>10:02</a><span class="wt-s">What is open banking? Building it in Ghana, Kenya</span></li>
+                <li class="wt-line" id="c665"><a class="wt-t" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=665s" target="_blank" rel="noopener" data-pagefind-ignore>11:05</a><span class="wt-s">Why you can&#x27;t just ship a US product to Africa</span></li>
+                <li class="wt-line" id="c742"><a class="wt-t" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=742s" target="_blank" rel="noopener" data-pagefind-ignore>12:22</a><span class="wt-s">What crypto solves outside the West</span></li>
+                <li class="wt-line" id="c822"><a class="wt-t" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=822s" target="_blank" rel="noopener" data-pagefind-ignore>13:42</a><span class="wt-s">Money that will not cross a border</span></li>
+                <li class="wt-line" id="c859"><a class="wt-t" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=859s" target="_blank" rel="noopener" data-pagefind-ignore>14:19</a><span class="wt-s">“A bear market, but a builder’s market”</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript">
+        <h2>Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Who speaks, by their own introduction on the tape: <a href="../guests.html#g-maceo">Maceo</a> at <a class="wt-at" data-seek="147" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=147s" target="_blank" rel="noopener" data-pagefind-ignore>2:27</a>. Transcribed from the original audio and corrected for names. Speaker letters mark turns, not names. <a href="../search.html">Search every transcript &rarr;</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>No one wants a CD, so you have a problem, like, you know, and Stablecoins is also solving that problem by making it easy to just send money to someone in, like, a second without having to, like, really adopt too much of the infrastructure and change, like, what you&rsquo;re doing. Yeah, and being able to, like, save in Stablecoins, right? I think outside of the US, we have, there are fundamental problems that actually, you know, that this technology is actually solving, like FX issues, like with the currency devaluation, that was actually the solution to a lot of the problems that we had when it comes to like being able to streamline that process of accessing credit, right?</p>
+            <p id="s32"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=32s" target="_blank" rel="noopener" data-pagefind-ignore>0:32</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, so at Credentials, basically what we do is we provide a unified way for lenders, neobanks, and fintechs to be able to verify people&rsquo;s income in the digital economy that are earning from platforms like Shopify, YouTube, Upwork, TikTok, right?</p>
+            <p id="s59"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=59s" target="_blank" rel="noopener" data-pagefind-ignore>0:59</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>People that love to be decentralized, you know what I&rsquo;m saying?</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s62"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=62s" target="_blank" rel="noopener" data-pagefind-ignore>1:02</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>This is for y&rsquo;all. And also, rest in peace, Sugar Plum, that&rsquo;s my Shih Tzu.</p>
+            <p id="s66"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=66s" target="_blank" rel="noopener" data-pagefind-ignore>1:06</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>She died about 10 years ago.</p>
+            <p id="s67"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=67s" target="_blank" rel="noopener" data-pagefind-ignore>1:07</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Appreciate you. Woo-hoo! Yeah, you have questions right? Like, what did he just drink? Why is he honoring his late Shih Tzu at a basketball game? Who are the people even being decentralized?</p>
+            <p id="s80"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=80s" target="_blank" rel="noopener" data-pagefind-ignore>1:20</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>What does that mean?</p>
+            <p id="s82"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=82s" target="_blank" rel="noopener" data-pagefind-ignore>1:22</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Well, that&rsquo;s why I&rsquo;m here. Let&rsquo;s find out. New York doesn&rsquo;t ease you in. You step out and you&rsquo;re already in it. A few million strangers, all going somewhere all at once. I grew up a couple hours away until close enough that New York was never some distant idea. It was a city you took the bus to or trained to. A place I get to go and see my friends from high school and college. That&rsquo;s the thing about this city, it&rsquo;s stacked, bodegas under glass towers, old New York holding up the new one And most new people have no idea what the old one even looked like.</p>
+            <p id="s100"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=100s" target="_blank" rel="noopener" data-pagefind-ignore>1:40</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>Oh, not you, sorry. This time I linked up with some friends out here in the city. People are already connected, already part of what I came for, an <a class="wt-gloss" href="../glossary.html#ethereum">Ethereum</a> conference. The kind of room where we&rsquo;re negotiating where technology is going. But before any of that, you eat, you walk. You let the city remind you why people around the world dream of being here. And somewhere between these streets and the conference floor, that&rsquo;s where the story really starts. My name is Maceo Whatley and I&rsquo;m the founder of We Them Media. Over the last five years, we&rsquo;ve been researching how cryptocurrency and decentralized technology can empower everyday people around the world.</p>
+            <p id="s100-2"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=100s" target="_blank" rel="noopener" data-pagefind-ignore>1:40</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C</span>And that&rsquo;s why I attended the Ethereum conference in New York City a couple weeks ago. To better understand and share with you all how Ethereum is working to show Wall Street it is ready to be the global settlement layer for financial systems. And we&rsquo;re here to show you what it means. Let&rsquo;s go.</p>
+            <p id="s171"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=171s" target="_blank" rel="noopener" data-pagefind-ignore>2:51</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Well, what&rsquo;s up, everybody? I&rsquo;m out here. I&rsquo;m Maceo from We Them Media. We&rsquo;re at ETH Conference right here in Manhattan. This is the first ETH Global conference they&rsquo;ve ever organized. And I&rsquo;m here with? Elomukoro from Credentials.</p>
+            <p id="s182"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=182s" target="_blank" rel="noopener" data-pagefind-ignore>3:02</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I&rsquo;m the co-founder.</p>
+            <p id="s183"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=183s" target="_blank" rel="noopener" data-pagefind-ignore>3:03</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Heck yeah. And so tell us a little about where are you from?</p>
+            <p id="s185"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=185s" target="_blank" rel="noopener" data-pagefind-ignore>3:05</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>So I&rsquo;m from Houston, Texas.</p>
+            <p id="s187"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=187s" target="_blank" rel="noopener" data-pagefind-ignore>3:07</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Okay. How old are you? 26. Okay. Wow. Like myself, 26. Yeah, young.</p>
+            <p id="s192"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=192s" target="_blank" rel="noopener" data-pagefind-ignore>3:12</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>So what&rsquo;s it been like for you being a young builder in this ecosystem?</p>
+            <p id="s195"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=195s" target="_blank" rel="noopener" data-pagefind-ignore>3:15</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>A young black man building in this ecosystem?</p>
+            <p id="s197"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=197s" target="_blank" rel="noopener" data-pagefind-ignore>3:17</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>That&rsquo;s a very nuanced question. I think it&rsquo;s been great, right? Right. Like there&rsquo;s not many people that are our age and of our skin color.</p>
+            <p id="s204"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=204s" target="_blank" rel="noopener" data-pagefind-ignore>3:24</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So being able to add that perspective. Building real products.</p>
+            <p id="s208"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=208s" target="_blank" rel="noopener" data-pagefind-ignore>3:28</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Building real products. That&rsquo;s why</p>
+            <p id="s209"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=209s" target="_blank" rel="noopener" data-pagefind-ignore>3:29</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I want to say that too.</p>
+            <p id="s210"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=210s" target="_blank" rel="noopener" data-pagefind-ignore>3:30</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Exactly. There&rsquo;s not many people doing that. So being able to like be in these rooms with people that have all this experience and all this capital and everything like that. And also being able to provide value has really been like awesome to witness in this time period. Yeah.</p>
+            <p id="s223"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=223s" target="_blank" rel="noopener" data-pagefind-ignore>3:43</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>So. Okay. And so tell us a little about credentials. Yeah,</p>
+            <p id="s227"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=227s" target="_blank" rel="noopener" data-pagefind-ignore>3:47</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>so at Credentials, basically what we do is we provide a unified way for lenders, neobanks, and fintechs to be able to verify people&rsquo;s income in the digital economy that are earning from platforms like Shopify, YouTube, Upwork, TikTok, right? We find that there&rsquo;s a huge problem in the world right now. These subset of earners really have a hard way or really have it hard when it comes to accessing credit. And we&rsquo;re basically here to make it very easy for them to access credit to get to get access to credit edit that part out</p>
+            <p id="s260"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=260s" target="_blank" rel="noopener" data-pagefind-ignore>4:20</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>hear that okay but that&rsquo;s cool that&rsquo;s cool and so how has it been for you actually working on this product things where you are right now how would you describe the face right now yeah</p>
+            <p id="s269"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=269s" target="_blank" rel="noopener" data-pagefind-ignore>4:29</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>so like um we&rsquo;ve actually been working on this for some time now about two years um but over time the vision has gotten a lot more clear and i think it also has to do with timing as well this space really wasn&rsquo;t ready for what we were building like two years ago. But over time, like when you look at neobanks and fintechs, right, they&rsquo;ve done everything from the stablecoinback cards. Then, you know, they&rsquo;re now in the yield phase, like yield products. But the next frontier is unsecured credit. And now the timing is starting to get a lot more ripe. And we&rsquo;re seeing a lot more interest in what we&rsquo;re building.</p>
+            <p id="s269-2"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=269s" target="_blank" rel="noopener" data-pagefind-ignore>4:29</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>So people can actually lend to individuals and businesses. is through Crypto Rails.</p>
+            <p id="s316"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=316s" target="_blank" rel="noopener" data-pagefind-ignore>5:16</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Yeah, yeah, and you know, it&rsquo;s remarkable. You&rsquo;re building, you&rsquo;re thinking about real use cases. You know what you just said, right, around lending. I think that&rsquo;s remarkable around credit, right? And I&rsquo;m curious, like, what&rsquo;s your background? How did you even identify this as a problem? Like, how did you become qualified to even explore this design space, this problem space?</p>
+            <p id="s331"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=331s" target="_blank" rel="noopener" data-pagefind-ignore>5:31</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, so two parts to this, actually. I first started off unqualified. I actually experienced the problem while in college with my co-founder. We had a website business, you know, We Were Just Like Making Money Like I Was Even A Freelancer To Making Money From Random Places But When I Tried To Access Credit They Asked For So Much Documentation Just To Reject Us In The End</p>
+            <p id="s354"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=354s" target="_blank" rel="noopener" data-pagefind-ignore>5:54</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>You Guys Been Doing Paperwork Though</p>
+            <p id="s357"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=357s" target="_blank" rel="noopener" data-pagefind-ignore>5:57</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Man Like They Just Had Me Doing Paperwork And Stuff Like That So Look After That Like I Was Like Okay That&rsquo;s A Problem And You Know I&rsquo;ve Heard This My Whole Life All These Types Of People That Are earning Online In Non-traditional Formats Really Struggle To Access Credit So like I didn&rsquo;t have the solution for it at the time. The solution came when I started to work at the Ethereum Foundation in specific PSE, privacy of scaling explorations at the time. And I worked on zero knowledge like proofs and like I was a lead lead dev row and I was onboarding people to open source tools.</p>
+            <p id="s357-2"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=357s" target="_blank" rel="noopener" data-pagefind-ignore>5:57</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>And that was actually the solution to a lot of the problems that we had when it comes to like being able to streamline that process of accessing credit. Right. Right. So I put two and two together, the problem, the solution. And I&rsquo;m like, oh, yeah, we need to start a company and do this thing. Right. So that&rsquo;s okay.</p>
+            <p id="s411"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=411s" target="_blank" rel="noopener" data-pagefind-ignore>6:51</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And for those who don&rsquo;t know, like, what is what is your knowledge proofs mean?</p>
+            <p id="s414"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=414s" target="_blank" rel="noopener" data-pagefind-ignore>6:54</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah. So, you know, I don&rsquo;t actually explain this term too much, really, because</p>
+            <p id="s420"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=420s" target="_blank" rel="noopener" data-pagefind-ignore>7:00</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>he&rsquo;s overqualified to break it down. So let&rsquo;s hear it.</p>
+            <p id="s423"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=423s" target="_blank" rel="noopener" data-pagefind-ignore>7:03</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Basically what zero knowledge proofs are is it&rsquo;s the ability to verify that you know a certain piece of information or a certain piece of data without actually revealing the underlying data itself. So in the case of like what we do, we can verify people&rsquo;s income without even seeing the data ourselves, right?</p>
+            <p id="s444"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=444s" target="_blank" rel="noopener" data-pagefind-ignore>7:24</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>how can you possibly do that</p>
+            <p id="s445"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=445s" target="_blank" rel="noopener" data-pagefind-ignore>7:25</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>it&rsquo;s you know that that that&rsquo;s fine you want but definitely it&rsquo;s just mathematics right at the end of the day is polynomials right you don&rsquo;t know polynomials that&rsquo;s okay</p>
+            <p id="s455"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=455s" target="_blank" rel="noopener" data-pagefind-ignore>7:35</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>we&rsquo;ll break it down</p>
+            <p id="s457"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=457s" target="_blank" rel="noopener" data-pagefind-ignore>7:37</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>don&rsquo;t worry yeah but yeah it&rsquo;s all just like mathematical equations that equal to a true or false statement right in the end so that&rsquo;s that&rsquo;s how it works</p>
+            <p id="s465"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=465s" target="_blank" rel="noopener" data-pagefind-ignore>7:45</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>okay awesome and who are the people that you&rsquo;re targeting to be used to your application like who are the people you&rsquo;re really solving a problem for</p>
+            <p id="s471"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=471s" target="_blank" rel="noopener" data-pagefind-ignore>7:51</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>yeah so we are beat to beat C2C company. So we kind of are solving the problem for two sets of people. The businesses being the neobanks, the lenders and the fintechs. They have no visibility into their like users of where their income sources are. So we&rsquo;re helping them make that a lot more clear so they can actually like give credit and expand their product offerings in this competitive like crypto space that we&rsquo;re in today. And then you also have the consumer that is actually the users of our, the customers that we aim for. And we&rsquo;re helping them, you know, be able to verify their income and share that with these institutions so they can access credit or whatever financial services, a credit card, buy now, pay later.</p>
+            <p id="s471-2"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=471s" target="_blank" rel="noopener" data-pagefind-ignore>7:51</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>So yeah, those are like the two sets of like users that we essentially are working for.</p>
+            <p id="s526"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=526s" target="_blank" rel="noopener" data-pagefind-ignore>8:46</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Okay, man. And congrats. Congrats on where you&rsquo;re at. I think it&rsquo;s awesome that you&rsquo;re right in that intersection and being able to serve people on both sides. It sounds like you&rsquo;re in a space with a massive market.</p>
+            <p id="s536"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=536s" target="_blank" rel="noopener" data-pagefind-ignore>8:56</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Oh, for sure. Yeah. And</p>
+            <p id="s537"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=537s" target="_blank" rel="noopener" data-pagefind-ignore>8:57</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>you&rsquo;re an early mover. 26 and move it early. I like that.</p>
+            <p id="s539"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=539s" target="_blank" rel="noopener" data-pagefind-ignore>8:59</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yes, sir. Yes, sir.</p>
+            <p id="s540"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=540s" target="_blank" rel="noopener" data-pagefind-ignore>9:00</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>And so what would you say is a long-term or are you trying to build to be like public infrastructure? And I guess I think of public goods is something that I like in this crypto space. I think it&rsquo;s really cool that we can see emerging. Does your product evolve to be a piece of decentralized technology? technology, or is it something privately owned in the long term? Yeah. There&rsquo;s no, it could be either. I&rsquo;m just curious.</p>
+            <p id="s563"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=563s" target="_blank" rel="noopener" data-pagefind-ignore>9:23</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, you know, even come from EF, like I&rsquo;m very big on public good infrastructure. At this time, it is private, but I can definitely see- Get that money. Yeah. I can definitely see over time, like we&rsquo;ll begin to open source some of our like infrastructure to where like anybody will be able to verify their income without needing us to do so. But as of right now, it is like a private institution So you get that $1 billion EF grant Hey, then we can change some things Wow,</p>
+            <p id="s595"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=595s" target="_blank" rel="noopener" data-pagefind-ignore>9:55</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>that&rsquo;s sick, go ahead</p>
+            <p id="s596"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=596s" target="_blank" rel="noopener" data-pagefind-ignore>9:56</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, I was going to talk about something else, but it&rsquo;s okay</p>
+            <p id="s602"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=602s" target="_blank" rel="noopener" data-pagefind-ignore>10:02</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>What were you thinking about?</p>
+            <p id="s603"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=603s" target="_blank" rel="noopener" data-pagefind-ignore>10:03</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>I was just thinking about like, you know We&rsquo;re also working outside in emerging markets as well To establish open banking Okay,</p>
+            <p id="s616"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=616s" target="_blank" rel="noopener" data-pagefind-ignore>10:16</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>we&rsquo;ll talk about that, yeah Yeah, like</p>
+            <p id="s618"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=618s" target="_blank" rel="noopener" data-pagefind-ignore>10:18</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>First of all, what is open banking for those who don&rsquo;t know Open banking is really just the ability To, you know, be able to access Financial statements From any bank, right Yeah, in a Compliant way And right now If you look at, like, countries like Ghana And Kenya, etc. There really is no Open banking infrastructure to be able To easily access your statements without needing to like do that whole PDF thing and everything like that. So we&rsquo;re actually in talks with the government and stuff on like building out open banking infrastructure as well. That&rsquo;s just like it&rsquo;s a long it takes a while to like close those things.</p>
+            <p id="s618-2"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=618s" target="_blank" rel="noopener" data-pagefind-ignore>10:18</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>But that&rsquo;s something I&rsquo;m very excited about, like enabling open banking in these like emerging markets.</p>
+            <p id="s665"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=665s" target="_blank" rel="noopener" data-pagefind-ignore>11:05</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>No, I think that&rsquo;s incredible. I know that you were just in Africa. How has that shaped your perspective on the opportunity in that space? I&rsquo;m curious to hear.</p>
+            <p id="s672"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=672s" target="_blank" rel="noopener" data-pagefind-ignore>11:12</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Oh, my gosh. Yeah. You know, I&rsquo;m Nigerian, too, at the end of the day. Isoko.</p>
+            <p id="s678"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=678s" target="_blank" rel="noopener" data-pagefind-ignore>11:18</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Isoko. Damn, I didn&rsquo;t know that one.</p>
+            <p id="s680"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=680s" target="_blank" rel="noopener" data-pagefind-ignore>11:20</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>It&rsquo;s a new one. You haven&rsquo;t heard of it, huh? Yeah, it&rsquo;s a smaller one. From where?</p>
+            <p id="s685"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=685s" target="_blank" rel="noopener" data-pagefind-ignore>11:25</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>What state?</p>
+            <p id="s685-2"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=685s" target="_blank" rel="noopener" data-pagefind-ignore>11:25</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Delta state.</p>
+            <p id="s686"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=686s" target="_blank" rel="noopener" data-pagefind-ignore>11:26</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Okay, okay, that&rsquo;s cool.</p>
+            <p id="s687"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=687s" target="_blank" rel="noopener" data-pagefind-ignore>11:27</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, yeah, yeah. Isoko. Yeah, Isoko. So I would say, like, going to Africa and being in Africa really has opened my mind just in terms of, like, you know, how different it is from the West and how you also have to build for that region as well. It&rsquo;s not like you can just take a product from the West or take the product from the U.S. and just take it there and think that it&rsquo;ll work because it&rsquo;s not. It&rsquo;s fundamentally different. It&rsquo;s relationship and trust-driven. and actually you know the market is just not is not as established as the United States so there&rsquo;s a lot of figuring out that needs to happen by being on the ground by actually talking to people and developing those relationships and that&rsquo;s something that I learned in my travels throughout Africa</p>
+            <p id="s741"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=741s" target="_blank" rel="noopener" data-pagefind-ignore>12:21</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>okay incredible incredible man and then my last question would be like you know when you see this ecosystem when you see this technology what do you feel like everyday people aren&rsquo;t getting or taking for granted that you know you could and how would you address that</p>
+            <p id="s755"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=755s" target="_blank" rel="noopener" data-pagefind-ignore>12:35</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>yeah so looking at this ecosystem right now um it&rsquo;s very institutional you know even if confident where we&rsquo;re at right now there&rsquo;s a lot of institutions that are here and that&rsquo;s cool um and it&rsquo;s that time for them to come in um but when you look at the west i think we&rsquo;re really focused on yield like if you look at actually look at all the booths here most of them are like yield driven right or institutional privacy, etc, etc. But honestly, like, that is not really the major focus outside of the US. I think outside of the US, we have, there are fundamental problems that actually, you know, that this technology is actually solving, like FX issues, where like with the currency devaluation, yeah, and being able to like save and stable coins, right?</p>
+            <p id="s804"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=804s" target="_blank" rel="noopener" data-pagefind-ignore>13:24</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Or other problems</p>
+            <p id="s809"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=809s" target="_blank" rel="noopener" data-pagefind-ignore>13:29</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>in order to hedge against inflation.</p>
+            <p id="s811"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=811s" target="_blank" rel="noopener" data-pagefind-ignore>13:31</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Yeah, to hedge against it. Exactly. There are other problems like, you know, currencies are not actually communicating with each other. Like Nigeria and Ghana being right next to each other.</p>
+            <p id="s822"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=822s" target="_blank" rel="noopener" data-pagefind-ignore>13:42</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Nobody wants that Naira.</p>
+            <p id="s823"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=823s" target="_blank" rel="noopener" data-pagefind-ignore>13:43</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Nobody wants that Naira. No one wants the CD. So you have a problem. Like, you know, and Stablecoins is also solving that problem by making it easy to just send money to someone in like a second without having to like really adopt too much of the infrastructure and change like what you&rsquo;re doing. What I Want People To Realize Is The Use Cases Are Actually Abundant And They&rsquo;re Necessary Now You May Not See That In The West But Just Look Outside Look At Your Neighbouring Country Like Latin Has The Same Problems Africa Has The Same Problems Asia Has The Same Problems And I Think This Technology Was Really Fundamentally Built For Them Yeah Yeah</p>
+            <p id="s866"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=866s" target="_blank" rel="noopener" data-pagefind-ignore>14:26</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Oh Yeah And You Have A Message For The Ecosystem</p>
+            <p id="s868"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=868s" target="_blank" rel="noopener" data-pagefind-ignore>14:28</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>A Message For The Ecosystem them. I&rsquo;d say, you know, it&rsquo;s a bear market right now, but it&rsquo;s actually a builder&rsquo;s market. Actually, my friend Maceo told me that.</p>
+            <p id="s881"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=881s" target="_blank" rel="noopener" data-pagefind-ignore>14:41</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>Maceo. But Luciano told me that, so we&rsquo;re back to Luciano.</p>
+            <p id="s884"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=884s" target="_blank" rel="noopener" data-pagefind-ignore>14:44</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>Back to Luciano. Maceo, got you. Sorry about that.</p>
+            <p id="s886"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=886s" target="_blank" rel="noopener" data-pagefind-ignore>14:46</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>I called him Elo at first. That was wrong.</p>
+            <p id="s888"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=888s" target="_blank" rel="noopener" data-pagefind-ignore>14:48</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>We&rsquo;re both learning. Yeah. So it&rsquo;s a builder&rsquo;s market. And what I&rsquo;d say to that is just like, you know, this is the best time to get the relationships and, you know, actually build what matters because when all the people start to come, that&rsquo;s when it&rsquo;s all annoying. But right now it&rsquo;s just signal. So just go out there and connect and build and create something great.</p>
+            <p id="s912"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=912s" target="_blank" rel="noopener" data-pagefind-ignore>15:12</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>All right, man. You want to say where you&rsquo;re coming from one more time? Yeah,</p>
+            <p id="s918"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=918s" target="_blank" rel="noopener" data-pagefind-ignore>15:18</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A</span>so coming from Houston, Texas and... Representing your company? Okay, coming from Houston, Texas, representing credentials. That&rsquo;s CR3Dentials. And</p>
+            <p id="s931"><a class="wt-at" href="https://www.youtube.com/watch?v=WkCICP2Dtlw&amp;t=931s" target="_blank" rel="noopener" data-pagefind-ignore>15:31</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B</span>then we like to say Booyah to close out our interview So 3, 2, 1 Booyah</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email &rarr;</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+        <script src="../share-moment.js" defer></script>
+    </section>
+<div id="after-transcript" tabindex="-1"><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from ETH Global in New York.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-eth-global">The whole project &rarr;</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="crypto-privacy-and-global-finance-at-an-ethereum-conference-new-york.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/WXm8AWkc37M-640.jpg" srcset="../stills/WXm8AWkc37M-320.jpg 320w, ../stills/WXm8AWkc37M-480.jpg 480w, ../stills/WXm8AWkc37M-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>12:31</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">New York · June 2026 · The feature</span>
+                    <h3 class="report-title">Crypto, privacy and global finance at ETHconf: Maggie of Unlink.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="eth-global-nyc-trailer-why-we-went.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/TW1hm-EiW8I-640.jpg" srcset="../stills/TW1hm-EiW8I-320.jpg 320w, ../stills/TW1hm-EiW8I-480.jpg 480w, ../stills/TW1hm-EiW8I-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>1:53</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">New York · June 2026 · Trailer</span>
+                    <h3 class="report-title">Blockchain: the next foundation of finance. ETH Global NYC, the trailer.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+            <a href="durgadas-on-coordinating-people-and-capital.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/mszXmKxwvSQ-640.jpg" srcset="../stills/mszXmKxwvSQ-320.jpg 320w, ../stills/mszXmKxwvSQ-480.jpg 480w, ../stills/mszXmKxwvSQ-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>42:18</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">New York · June 2026</span>
+                    <h3 class="report-title">Durgadas, on coordinating people and capital.</h3>
+                    <p class="report-byline">By <strong>Maceo</strong></p>
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../question/a-message-for-the-builders.html">Every answer to “Do you have a message for the builders?”</a> &middot; <a href="../places.html#new-york">Everything filmed in New York</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. The work published here was made in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week &rarr;</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas &middot; Belgium &middot; Ethiopia &middot; Ghana &middot; India &middot; Israel/Palestine &middot; Japan &middot; Kenya &middot; Mexico &middot; Nigeria &middot; Pakistan &middot; Switzerland &middot; Thailand &middot; United Kingdom &middot; United States &middot; Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../lite-yt.js" defer></script>
+<script src="../nav.js" defer></script>
+<script src="../track.js" defer></script>
+<script src="../reactions.js" defer></script>
+<script data-late>(function(){function go(){['../memory.js', '../share.js', '../correct.js'].forEach(function(f){var s=document.createElement('script');s.src=f;s.async=false;document.body.appendChild(s)})}if(document.readyState==='complete'){go()}else{window.addEventListener('load',go)}})()</script>
+</body>
+</html>
