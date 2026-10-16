@@ -482,7 +482,7 @@
         if (!el || typeof el.seek !== 'function') return;
         if (!(el.hasAttribute('live') && !(e && e.type === 'hashchange'))) el.seek(t);
         var isWatch = !!document.querySelector('.wt-frame');
-        if (isWatch && window.innerWidth <= 820) {
+        if (isWatch && window.innerWidth <= 820 && window.innerHeight > window.innerWidth) {
             scrollToParagraph(t);
         } else {
             el.scrollIntoView({ block: 'center' });
@@ -503,7 +503,7 @@
     function initStickyFrame() {
         var frame = document.querySelector('.wt-frame');
         if (!frame || !window.IntersectionObserver) return;
-        var phone = window.matchMedia ? window.matchMedia('(max-width: 820px)') : { matches: true };
+        var phone = window.matchMedia ? window.matchMedia('(max-width: 820px) and (orientation: portrait)') : { matches: true };
         var placeholder = document.createElement('div');
         placeholder.className = 'wt-frame-placeholder';
         placeholder.hidden = true;
