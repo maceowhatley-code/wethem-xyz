@@ -366,16 +366,19 @@
         }
     };
 
-    LiteYT.prototype.cue = function (t) {
-        var old = this.querySelector('iframe');
-        if (!old) return;
-        var src = (old.getAttribute('src') || '').replace(/&(?:start|autoplay)=\d+/g, '');
-        var f = old.cloneNode(false);
-        f.setAttribute('src', src + '&start=' + Math.max(0, parseInt(t, 10) || 0) + '&autoplay=1');
-        this._ready = false;
-        old.parentNode.replaceChild(f, old);
-        this.listen();
-    };
+    Object.defineProperty(LiteYT.prototype, 'cue', {
+        writable: true, configurable: true,
+        value: function (t) {
+            var old = this.querySelector('iframe');
+            if (!old) return;
+            var src = (old.getAttribute('src') || '').replace(/&(?:start|autoplay)=\d+/g, '');
+            var f = old.cloneNode(false);
+            f.setAttribute('src', src + '&start=' + Math.max(0, parseInt(t, 10) || 0) + '&autoplay=1');
+            this._ready = false;
+            old.parentNode.replaceChild(f, old);
+            this.listen();
+        }
+    });
 
     LiteYT.prototype.listen = function () {
         var host = this, f = this.querySelector('iframe'), n = 0;
