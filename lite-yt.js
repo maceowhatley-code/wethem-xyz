@@ -506,6 +506,7 @@
     function initStickyFrame() {
         var frame = document.querySelector('.wt-frame');
         if (!frame || !window.IntersectionObserver) return;
+        if (frame.classList.contains('hh-trailer')) return;
         var phone = window.matchMedia ? window.matchMedia('(max-width: 820px) and (orientation: portrait)') : { matches: true };
         var placeholder = document.createElement('div');
         placeholder.className = 'wt-frame-placeholder';
