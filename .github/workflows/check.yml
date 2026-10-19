@@ -1,6 +1,10 @@
 name: check
+# A pull request is checked on the files it changes; every push to main, the sync commits included, on every file
+# (19 Oct 2026). Read-only token, no secrets.
 on:
   pull_request:
+    branches: [main]
+  push:
     branches: [main]
 permissions:
   contents: read
@@ -13,4 +17,4 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: The checks in .github/check_public.py
-        run: python3 .github/check_public.py
+        run: python3 .github/check_public.py ${{ github.event_name == 'push' && '--all' || '' }}
