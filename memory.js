@@ -4,8 +4,8 @@
     if (!d.querySelector || !d.body || !window.JSON) { return; }
     var CONSENT = 'wtm_consent', SEEN = 'wtm_seen', UID = 'wtm_uid', SEEN_MAX = 24;
     var ASK_AGAIN = 15552000;
-    var me = d.querySelector('script[src$="memory.js"]');
-    var up = me ? (me.getAttribute('src') || '').replace(/memory\.js.*$/, '') : '';
+    var me = d.querySelector('script[src$="wtm-core.js"], script[src$="memory.js"]');
+    var up = me ? (me.getAttribute('src') || '').replace(/(?:wtm-core|memory)\.js.*$/, '') : '';
 
     function cookie(k) {
         var m = d.cookie.match(new RegExp('(?:^|; )' + k + '=([^;]*)'));
@@ -210,9 +210,10 @@
         if (stored === 'no') return;
         if (stored === 'yes') { onYes(); return; }
         var bar = el('div', 'wtm-near-ask');
-        bar.setAttribute('role', 'dialog');
-        bar.setAttribute('aria-label', 'Location');
+        bar.setAttribute('role', 'group');
+        bar.setAttribute('aria-labelledby', 'wtm-near-q');
         var txt = el('span', '', 'Show videos filmed near you?');
+        txt.id = 'wtm-near-q';
         var yes = el('button', 'btn btn-primary btn-sm', 'Yes');
         var no = el('button', 'btn btn-line btn-sm', 'No thanks');
         yes.type = no.type = 'button';

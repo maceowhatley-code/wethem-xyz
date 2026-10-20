@@ -23,7 +23,7 @@
     'use strict';
     var t = document.querySelector('.nav-toggle'),
         n = document.getElementById('primary-nav');
-    if (!t || !n || t.dataset.wired) { return; }
+    if (!t || !n || t.dataset.wired || document.querySelector('script[data-nav-inline]')) { return; }
     t.dataset.wired = '1';
 
     function set(o) {

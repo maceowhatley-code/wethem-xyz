@@ -25,7 +25,7 @@
     }
 
     function panel() {
-        var wrap = el('div', { class: 'fix-panel', role: 'dialog',
+        var wrap = el('div', { class: 'fix-panel', id: 'fix-panel', role: 'dialog',
                                'aria-label': 'Send a correction' });
         var h = el('h2', { class: 'fix-h' }, 'Something wrong here?');
         var p = el('p', { class: 'fix-p' },
@@ -48,7 +48,7 @@
 
         var PLACEHOLDER = 'What is wrong, and what it should say.';
         var ta = el('textarea', { name: 'text', rows: '4', required: 'required',
-            placeholder: PLACEHOLDER });
+            placeholder: PLACEHOLDER, 'aria-label': 'What is wrong, and what it should say' });
         function syncKind() {
             if (sel.value === 'takedown') {
                 ta.removeAttribute('required');
@@ -59,13 +59,15 @@
             }
         }
         sel.addEventListener('change', syncKind);
-        var nm = el('input', { name: 'name', type: 'text', placeholder: 'Your name (optional)' });
+        var nm = el('input', { name: 'name', type: 'text', placeholder: 'Your name (optional)',
+            'aria-label': 'Your name (optional)', autocomplete: 'name' });
         var rp = el('input', { name: 'reply', type: 'text',
-            placeholder: 'Email or handle, if you want an answer (optional)' });
+            placeholder: 'Email or handle, if you want an answer (optional)',
+            'aria-label': 'Email or handle, if you want an answer (optional)' });
         var hp = el('input', { name: 'website', type: 'text', tabindex: '-1',
             autocomplete: 'off', 'aria-hidden': 'true', class: 'fix-hp' });
         var send = el('button', { type: 'submit', class: 'fix-send' }, 'Send it');
-        var note = el('p', { class: 'fix-note' });
+        var note = el('p', { class: 'fix-note', role: 'status', 'aria-live': 'polite', tabindex: '-1' });
 
         [sel, ta, nm, rp, hp, send, note].forEach(function (n) { f.appendChild(n); });
         wrap.appendChild(h); wrap.appendChild(p); wrap.appendChild(at); wrap.appendChild(f);
@@ -96,6 +98,7 @@
                               + 'and we will get back to you within two weeks.'
                             : 'Got it. Thank you. A person reads these.';
                         f.appendChild(note);
+                        note.focus();
                     } else {
                         note.textContent = (j && j.error) ? j.error : 'That did not send. Try again in a moment.';
                         send.disabled = false;
@@ -111,17 +114,29 @@
 
     function init() {
         var host = document.querySelector('footer .wrap') || document.querySelector('footer') || document.body;
-        var open = el('button', { type: 'button', class: 'fix-open' }, 'Something wrong here?');
+        var open = el('button', { type: 'button', class: 'fix-open', 'aria-expanded': 'false',
+                                  'aria-controls': 'fix-panel' }, 'Something wrong here?');
         open.style.minHeight = '44px';
         open.style.borderBottom = '0';
         open.style.textDecoration = 'underline';
         open.style.textUnderlineOffset = '3px';
-        var box = null;
+        var box = null, opener = null;
+        function hide() {
+            if (!box || box.hidden) { return; }
+            box.hidden = true;
+            open.setAttribute('aria-expanded', 'false');
+            if (opener && opener.focus) { opener.focus(); }
+        }
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && box && !box.hidden && box.contains(document.activeElement)) { hide(); }
+        });
         function show(kind, after, at) {
             if (!box) { box = panel(); }
             var where = after || open;
+            opener = (document.activeElement && document.activeElement !== document.body) ? document.activeElement : where;
             where.parentNode.insertBefore(box, where.nextSibling);
             box.hidden = false;
+            open.setAttribute('aria-expanded', where === open ? 'true' : 'false');
             if (at) { box.setAttribute('data-stamp', at); } else { box.removeAttribute('data-stamp'); }
             var line = box.querySelector('.fix-at');
             var moment = at || stamp;
@@ -138,7 +153,7 @@
             if (t) { t.focus(); }
         }
         open.addEventListener('click', function () {
-            if (box && !box.hidden && box.previousSibling === open) { box.hidden = true; return; }
+            if (box && !box.hidden && box.previousSibling === open) { box.hidden = true; open.setAttribute('aria-expanded', 'false'); return; }
             show('', open);
         });
         document.addEventListener('click', function (e) {

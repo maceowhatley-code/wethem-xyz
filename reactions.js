@@ -1,5 +1,6 @@
 (function () {
     'use strict';
+    if (!document.querySelector('script[data-like]') && !document.querySelector('script[src$="reactions.js"]')) { return; }
     var player = document.querySelector('.wt-frame > lite-yt[videoid]');
     if (!player || !window.fetch || !window.JSON) { return; }
     var d = document, vid = player.getAttribute('videoid');

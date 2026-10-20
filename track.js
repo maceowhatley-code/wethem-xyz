@@ -26,7 +26,7 @@
     try { ref = d.referrer ? new URL(d.referrer).hostname.replace(/^www\./, '') : ''; } catch (e) { ref = ''; }
     if (ref === location.hostname.replace(/^www\./, '')) { ref = '(site)'; }
     var q = location.search, utm = [];
-    ['utm_source', 'utm_medium', 'utm_campaign', 's'].forEach(function (k) {
+    ['utm_source', 'utm_medium', 'utm_campaign', 's', 'from'].forEach(function (k) {
         var m = new RegExp('[?&]' + k + '=([^&#]*)').exec(q);
         if (m) { utm.push(k.replace('utm_', '') + '=' + decodeURIComponent(m[1]).slice(0, 40)); }
     });
