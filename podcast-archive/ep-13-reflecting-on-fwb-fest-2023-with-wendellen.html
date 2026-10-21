@@ -1,0 +1,582 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Episode 13 of We Them, the podcast Maceo started in college, published 19 August 2023: Reflecting on FWB Fest 2023, With Wendellen. The full transcript.">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/podcast-archive/ep-13-reflecting-on-fwb-fest-2023-with-wendellen">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Reflecting on FWB Fest 2023, With Wendellen | We Them EP 13">
+    <meta property="og:description" content="Episode 13 of We Them, the podcast Maceo started in college, published 19 August 2023: Reflecting on FWB Fest 2023, With Wendellen. The full transcript.">
+    <meta property="og:url" content="https://wethem.xyz/podcast-archive/ep-13-reflecting-on-fwb-fest-2023-with-wendellen">
+    <meta property="og:image" content="https://wethem.xyz/og-site.png?v=2f44c9ed24">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Street journalism from around the world. On a Mission to Keep You In The Know.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og-site.png?v=2f44c9ed24">
+    <meta name="twitter:image:alt" content="Street journalism from around the world. On a Mission to Keep You In The Know.">
+    <title>Reflecting on FWB Fest 2023, With Wendellen | We Them EP 13, We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PodcastEpisode",
+  "name": "Reflecting on FWB Fest 2023, With Wendellen | We Them EP 13",
+  "description": "Episode 13 of We Them, the podcast Maceo started in college, published 19 August 2023: Reflecting on FWB Fest 2023, With Wendellen. The full transcript.",
+  "datePublished": "2023-08-19",
+  "url": "https://wethem.xyz/podcast-archive/ep-13-reflecting-on-fwb-fest-2023-with-wendellen",
+  "timeRequired": "PT33M",
+  "associatedMedia": {
+    "@type": "MediaObject",
+    "contentUrl": "https://podcasters.spotify.com/pod/show/wethemmedia/episodes/EP-13-Reflecting-on-FWB-Fest-2023-with-Wendellen-e28984f"
+  },
+  "partOfSeries": {
+    "@type": "PodcastSeries",
+    "name": "We Them",
+    "url": "https://wethem.xyz/podcast-archive/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  }
+}
+    </script>
+</head>
+<body>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="page" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<main id="main-content">
+
+<article class="wrap wt-piece">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="index.html">We Them, the podcast</a></li>
+            <li aria-current="page">Reflecting on FWB Fest 2023, With Wendellen | We Them EP 13</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date]" data-pagefind-filter="kind[data-pf-kind]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="archive" data-pf-date="2023-08-19">Reflecting on FWB Fest 2023, With Wendellen | We Them EP 13</h1>
+
+    <p class="wt-byline">Episode 13, published <time datetime="2023-08-19">19 August 2023</time>, 33 min</p>
+
+    <div class="wt-prose">
+        <p>An episode of We Them, the podcast Maceo started in college, where We Them Media began. It was published as audio
+        only. This page carries its full transcript so the words can be read, searched and quoted. It is not a
+        written piece. <a href="https://podcasters.spotify.com/pod/show/wethemmedia/episodes/EP-13-Reflecting-on-FWB-Fest-2023-with-Wendellen-e28984f" target="_blank" rel="noopener">Listen to it where it was published</a>.</p>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript" aria-labelledby="tx-h">
+        <h2 id="tx-h">Transcript</h2>
+        <p class="wt-note">Transcribed from the original audio. Speakers are told apart by the model, and a name
+        stands where the tape says who is speaking. <a href="../search.html">Search every transcript</a></p>
+        <p class="wt-note">These are the speakers&rsquo; own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s8"><span class="wt-at" data-pagefind-ignore>0:08</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Hello everyone, and welcome to another episode of We Them Niggas, a podcast and project I&rsquo;ve been working on for just over a year and a half now, where our goal is to bring together creatives centering Black and Indigenous people of color as we explore what is happening in the world of Web3 and the evolving technologies that are relevant today. Today we&rsquo;re going to be -- I&rsquo;m here with my friend Wendelin. You can say hi, Wendelin. Welcome.</p>
+            <p id="s36"><span class="wt-at" data-pagefind-ignore>0:36</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Wendellen<span class="visually-hidden">: </span></span>Hey everyone, I&rsquo;m Wendelin.</p>
+            <p id="s39"><span class="wt-at" data-pagefind-ignore>0:39</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah, and we just got back this past weekend from the Friends with Benefits Festival out in Idyllwild, California. And so we&rsquo;re just going to give you guys a quick recap about our experience there, what we saw, who we met, and what we thought of it. So yeah, I guess we can just jump straight into it. So Welcome, Wendelin, to the podcast. I appreciate you coming out with me to the conference/festival. And I guess we can just jump into like, what would you -- how would you describe FWB Fest this past weekend?</p>
+            <p id="s70"><span class="wt-at" data-pagefind-ignore>1:10</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Wendellen<span class="visually-hidden">: </span></span>Hmm. How would I describe FWB Fest? Well, I wrote to a friend that I was decelerating the way you would Burning Man. It was super diverse. Like, it brought together people from all around the world. It&rsquo;s an experimental community, and everyone believes in togetherness, I felt. There was just such a range. There was collaboration. It was just very real-world. There were politics, practical. There was networking, and it was a lot of fun. There was relaxing and enjoyment. I learned. I exchanged ideas. And yeah, there&rsquo;s definitely the Web3, this decentralized element. But I think what I loved about FWB is that it definitely is accessible and appealing to the greater internet and just like real world, which internet arguably is, but I won&rsquo;t go into that now. And yeah, I think accessibility was something that really stood out to me. And yeah, I feel really lucky that I was able to go. Yeah. How about you, Maceo? What&rsquo;s your assessment?</p>
+            <p id="s152"><span class="wt-at" data-pagefind-ignore>2:32</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah, I mean, I definitely agree. I think it was super accessible. Like, I definitely met some people there that were like very fresh into Web3 and they were like, I&rsquo;m kind of here to get how this is relevant to music or how this is relevant to media. I know, like, I met one girl who&rsquo;s like really into music in that space, based in LA, on like the last day of the pasta cooking session. And she was saying she&rsquo;d been at the music all weekend and that she loved that and that it kind of gave her a better sense of like how the two come together or relate to each other, just being there, be able to talk to people. But then we also met that, uh, the other guy on the last day who was really interested in like how do we do decentralized media. He&rsquo;s gotten into crypto also relatively recently. Um, and so like, like those two people as well as like one other person I met, um, were like really, really new to the space. And all three of them really expressed that the weekend was kind of like, not just like kind of gave them a more, I guess, more confidence around coming into the space and like seeing it as a space they could fit in and find belonging, but also just a place where they could come and have fun, which is, I think, definitely very exciting. I would say the weekend as a whole, I would say it felt like a middle ground between a conference focused on culture, media, and tech, and a music festival. They had music going every day. They had the big court, the big amphitheater and the stage down there where they had everyone from Caroline Polchak and I didn&rsquo;t really go see much of the music, I won&rsquo;t lie. I saw Alex Purdy perform, that was super cool. I was excited to see Hudson perform, but he didn&rsquo;t end up performing.</p>
+            <p id="s236"><span class="wt-at" data-pagefind-ignore>3:56</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Wendellen<span class="visually-hidden">: </span></span>Leo Pastel was great. I also saw Charli XCX, and she&rsquo;s like -- I mean, I love pop music. I&rsquo;ve never seen Charli XCX before. So yeah, it was pretty incredible. It was a pretty incredible lineup of artists.</p>
+            <p id="s254"><span class="wt-at" data-pagefind-ignore>4:14</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah, absolutely. And I felt like there were a lot of people there thinking -- one other highlight for me, or another, I guess, thing that I saw was that it was a lot of the people who have been thinking about media and technology in this space over the past few years kind of coming together and seeing what there was agreement about or disagreement about. And it was really cool to be able to hear from Steph, who&rsquo;s working on Vessel, used to be over at Seed Club, sharing about her project now, Vessel. It was cool to be able to talk to Dina from over at Boys Club and Natasha over at Boys Club and hear Natasha on her panel talking about like the world of brand building right now in Web3 and making it accessible to people. And I think like another thing that I guess I would say is that it felt like, like in the bear market especially, it&rsquo;s been kind of challenging to get a sense of like what&rsquo;s important right now and what&rsquo;s not important. And like, am I focused on the right things myself personally? So it was really affirming to kind of be there and get to discuss with people like what&rsquo;s happening right now in this space, both in the panels and like in like the circle discussion. but also outside them. I think on the first day, on the members-only day, there was discussion of, should we be using the word builder? Is that a good term, or should we be using something like the word creator or something that feels less masculine, was the way that LaTosha described it. And I agree. When I think of the word builder, I think of Bob the Builder. It&rsquo;s very tangential. It feels very right there. But I also think the word builder in my mind is a lot about how are we dignifying the contributions people are making to the space, like software developers. They want to be seen as people that are building the future of technology. when they build applications. I think it is important to recognize those contributions. So I thought the conversation around terminology was pretty interesting, but when it comes to accessibility and are we branding the language around Web3 the right way, I think it kind of felt to me like we were focusing way more on are we using the right words and less on are we focusing on the problems people actually are dealing with that we need to solve so they can see these things as culturally relevant.</p>
+            <p id="s369"><span class="wt-at" data-pagefind-ignore>6:09</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Wendellen<span class="visually-hidden">: </span></span>Do you remember what some of the problems were that came up?</p>
+            <p id="s374"><span class="wt-at" data-pagefind-ignore>6:14</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah. I mean, I don&rsquo;t think that people were really discussing the problems that much. That&rsquo;s kind of what I&rsquo;m saying. People were like, oh, is Web3 the right word? Or should we be using the word builder? Or maybe we shouldn&rsquo;t use Web3. It was just kind of like, is this language too technical for people? And I&rsquo;m really interested in how can we encourage people to be more technical rather than dissuading them from engaging in the technical side of things. We&rsquo;re at this conference because of the evolution of technology. And I think it is both exciting and important for people to be present to what that actually means, what kind of roles they can play in it. It&rsquo;s really valuable to be contributing to the space and to give yourself the skills to be able to meaningfully contribute. I definitely would say I feel a lot more excited to, I guess, take on becoming more technical in the coming year after this past weekend. After going to ETHDenver, I was definitely thinking about like, okay, I feel like I should become more technical, learn software development so that I don&rsquo;t feel so confused when they start talking about technology. And I feel like this weekend talking to people, and I feel like this weekend talking to people, I kind of got more of like a -- like I got more clear on like what some of the builders in the space -- some of the builders, huh, there I go -- but some of the software developers in the space, like how they, how they do distinguish, you know, those skills and like their contributions in like a meaningful way. And I think it would be really exciting to take all the knowledge I have now about this space and build upon it with like more technical knowledge so that I can be more clear about where things are headed and why and be able to be in a better position, I think, to also ask different kinds of questions than I am able to ask as a non-technical person in this space.</p>
+            <p id="s468"><span class="wt-at" data-pagefind-ignore>7:48</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Wendellen<span class="visually-hidden">: </span></span>Well, I mean, yeah, I think a lot of the focus on terminology, it&rsquo;s like, well, maybe the space is the space. There&rsquo;s even debate over whether we should call it the space. But I think it&rsquo;s just like, well, we&rsquo;re trying to define ourselves. Because everything is so experimental and always in flux. And there are so many different voices. I mean, in terms of becoming more technical, yeah, I&rsquo;m just like, I can totally relate. It&rsquo;s like, on one hand, there&rsquo;s a part of me that&rsquo;s like, oh, it&rsquo;s like, well, accessibility means maybe finding terms that people that more people can understand. But then at the same time, it&rsquo;s like, no, but it could be -- we could also be respectful to the people who are building and who are responsible for all the infrastructure that creators create on top of by using their terminology and making that effort.</p>
+            <p id="s535"><span class="wt-at" data-pagefind-ignore>8:55</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah. I guess something else I want to kind of switch over to is what were your thoughts ahead of FEST? What was your initial familiarity with FWB? with Friends with Benefits Fest? I know I reached out to you about the fact that I was going, but I don&rsquo;t know how familiar you were initially.</p>
+            <p id="s550"><span class="wt-at" data-pagefind-ignore>9:10</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Wendellen<span class="visually-hidden">: </span></span>I&rsquo;d obviously, you know, I&rsquo;d heard of FWB and like, yeah, like I knew that they had an app. I wasn&rsquo;t in it. I knew that they were like known as like the cool community. And I mean, yeah, like I think that going definitely confirmed that, like definitely like a community of tastemakers. And yeah, I think that that&rsquo;s part of the reason why this community is able to also appeal to those outside of Web3. But yeah, but I really went with no expectations and just a lot of openness. So yeah, I really wanted to go, but You know, I wasn&rsquo;t sure if it could happen, so thanks, Maceo, um, for helping facilitate that.</p>
+            <p id="s611"><span class="wt-at" data-pagefind-ignore>10:11</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah, I mean, I definitely felt like I had to go. I feel like, uh, like, I agree, I think definitely a cool group. Like, I would say, like, I wouldn&rsquo;t even tell -- like, I thought of them as, like, a cool group per se. I just feel like it felt like, uh, like in the bull market, their, like, token price was super high and it felt super inaccessible to join this community and meet the people. And coming around this year, like, I didn&rsquo;t know what FWB, Friends with Benefits, was. Like, when I first got into crypto, I just saw their token and I was like, well, that&rsquo;s not a community I would join. And I think it very easily kind of, for me, was like, oh, this is like just rich people. Like, that&rsquo;s a community of rich people in crypto. Like, they have a community, that&rsquo;s cool. And I think when I first saw like footage from Friends with Benefits Festival last year, specifically like seeing Toby Schorrin&rsquo;s talk on Life After Lifestyle and seeing his article about that as well, the essay, I was like, wow, this is like -- it&rsquo;s like a semi -- like, what I missed from college is like going to lectures and hearing different people talk who have like really strong expertise about things. And seeing that, it kind of felt like a similar kind of academic or intellectual showcase, just like people sharing ideas. And so, I was like, okay, people are just here sharing ideas and this is like the kind of community that exists here. And I definitely want to, you know, travel to wherever it is to be able to meet the people who are thinking so deeply that they want to also be in these conversations. So for me, that was really a lot of the allure. And this year I was just like, yeah, like I&rsquo;ve been working on this project for a year. I&rsquo;ve been thinking about, you know, what is the future of, you know, music on the blockchain? What is the future of media on the blockchain? You know, what even is my role on the blockchain as someone that wants to create value and, you know, create opportunities for people? So that was kind of what drew me in. And I think it was like everything I wanted it to be and more. Absolutely. I think I met so many amazing people, so many smart people, so many people who have just been Like, who I just -- I feel like I haven&rsquo;t even seen on the internet before. I feel like I met people that I never even heard of. So I was really excited to find faces I didn&rsquo;t anticipate meeting and also to connect with people that I&rsquo;ve seen and met before, like Dean and Natasha, but also getting to connect with Austin Robey and do his little meta-label activity. I thought that was super cool, but we&rsquo;ll circle back to that.</p>
+            <p id="s741"><span class="wt-at" data-pagefind-ignore>12:21</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Wendellen<span class="visually-hidden">: </span></span>Oh, I just got some messages from CY as we were speaking. Mm-hmm. He&rsquo;s a huge collector in the space. And I&rsquo;m like, yes, meeting CY was really great. And going to he and Forrest&rsquo;s session on documenting on the blockchain, documenting yourself as a museum -- or sorry, a museum of you. And yeah, actually what he said I think relates to accessibility, but I&rsquo;m not quite sure. I mean, I&rsquo;m thinking out loud now. But he said that, yeah, it&rsquo;s like until the next bull market, it&rsquo;s kind of going to be a slog because there just aren&rsquo;t a lot of collectors and there&rsquo;s just not a lot of income floating around. And yet we&rsquo;re here talking about how it&rsquo;s actually made the space more accessible. You&rsquo;re saying that, but you&rsquo;ve been able to meet people that you wouldn&rsquo;t have had before. It&rsquo;s like we&rsquo;re able to access this community. And I say we because I actually learned about FWB through Aidan, who I used to work with. And I did not have the crypto or the funds to join at the time. And when he told me how much it was to join, I was just like, okay, yeah, I definitely can&rsquo;t afford that. So, yeah, it&rsquo;s nice that -- or how do I say this? It&rsquo;s like, well, on one hand, yeah, as someone who&rsquo;s entering the space, or entered the space right as the market crashed and is now inspired to make NFT art when there&rsquo;s no collectors or there&rsquo;s very few collectors, it&rsquo;s like that makes the space inaccessible, but then at the same time, it makes spaces like FWB accessible.</p>
+            <p id="s852"><span class="wt-at" data-pagefind-ignore>14:12</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah, I think absolutely. And I think even just beyond FWB, I feel like something that I&rsquo;ve been really consistent about over the past year has just been reaching out to people on Twitter. on Instagram and just people that I see in the space, you know. Um, and I think if we were in the bull market, you know, people would be, I feel like, busier. That&rsquo;s kind of my assessment of things. People would have, uh, like their projects would maybe have -- they&rsquo;d have more problems to solve, they&rsquo;d have more people to talk to. And so I feel like being able to connect with people when there&rsquo;s less, I guess, traffic and noise in the space, um, really makes it a lot easier to form meaningful relationships with people that are thinking about the similar stuff, um, with maybe way more resources than I necessarily have. So. I definitely agree. In the bear market, there are opportunities to connect and be present and find value, even if it&rsquo;s not really monetary value.</p>
+            <p id="s899"><span class="wt-at" data-pagefind-ignore>14:59</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Wendellen<span class="visually-hidden">: </span></span>Yeah, I love that. And that resonates so hard. In the bear market, there&rsquo;s more opportunities to connect. I mean, for sure. I mean, the artists, people, figures I&rsquo;ve met in the space in my time since I&rsquo;ve been involved in Web3, it&rsquo;s like, yeah, I never thought I&rsquo;d be interacting Yeah. And not only that, but being supported and backed by -- that&rsquo;s wild. So when I think about it, it&rsquo;s like, well, accessibility and value. Is being collected really of more value than the other access that is allowed during this bear market?</p>
+            <p id="s949"><span class="wt-at" data-pagefind-ignore>15:49</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah, I think it&rsquo;s all up in the air, but I definitely think it&rsquo;s hard. There&rsquo;s not a lot of people that are present and active in the bull market or in the bear market that are really -- they don&rsquo;t really have resources. I think it&rsquo;s a lot harder to be present and be engaged just because you don&rsquo;t make money just showing up. So I think collectors definitely make a huge difference, but we can kind of get back to highlight moments. I&rsquo;d love to give people a clear sense of what FWB is. So if we&rsquo;re looking at their website, Friends with Benefits, Um, what they say is that we believe in the promise of a better internet, one where communities and authentic connections thrive, where creativity is valued, and where the future can be collaboratively built. Our aim is to be the social convening point for the individuals, squads, and institutions using decentralized technology to build what comes next. As a community, we aim to push forward while elevating and amplifying each other in the process. Was that your experience of FWWB this past weekend?</p>
+            <p id="s1011"><span class="wt-at" data-pagefind-ignore>16:51</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Wendellen<span class="visually-hidden">: </span></span>Hmm. Yeah, definitely met people from so many different reaches. And yeah, just feeling connected through the overlap. Something that was a meaningful connection for me was meeting Meeting the woman who started FWB in China. I am a Chinese immigrant, and I&rsquo;m pretty disconnected from my roots and my heritage. And yeah, that was impactful for me. And then I think also meeting people who would maybe describe themselves as Web3 adjacent. So having shared values and ideals, but maybe not being directly on-chain, that for me also kind of expanded. It both expanded and affirmed what I see as Web3, which is that it&rsquo;s not this walled container of Web2 versus outside. I&rsquo;m sorry, Web3 versus outside Web3. There&rsquo;s Web3 and it bleeds into just everything, or it can. And yeah, I think that also speaks to accessibility. I think that having that perspective, yeah, I think it can really grow the space, especially I guess right now during a bear market.</p>
+            <p id="s1118"><span class="wt-at" data-pagefind-ignore>18:38</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah, absolutely. I mean, I feel like the people that were there and the opportunities to connect, like, for me, did affirm that it&rsquo;s not just like, you know, Web3 versus the world, quote unquote. It&rsquo;s more of like, you know, how can Web3 allow us to coordinate in new meaningful ways to accomplish ends that we agree are worthwhile, but maybe not incentivized in traditional society or inside the traditional incentives of society? And that kind of, I think, goes back to, you know, you&rsquo;re not necessarily going to get paid to be in Web3 just to be there, but you can find a lot of value in showing up. And that&rsquo;s kind of been my experience, even without having a job in the space. So yeah, I definitely agree. I definitely feel like it&rsquo;s not so much a walled garden, but like a place where we&rsquo;re still figuring out how do we make what our values are, what we&rsquo;re doing here apparent and relatable to people who aren&rsquo;t necessarily in the space or who feel like the space is. far-fetched for them as a place to find belonging.</p>
+            <p id="s1175"><span class="wt-at" data-pagefind-ignore>19:35</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Wendellen<span class="visually-hidden">: </span></span>Yeah, I mean, you know, it&rsquo;s like even like within like my own communities, like outside of Web3, like I see like the crossover and like the adoption and like the influence and impact that like Web3 culture has. Like, for example, my embodiment coach, like she just, like she just released these 1:1 potency sessions. And, you know, I think like the term like 1:1 is being used more, but maybe I&rsquo;m just also It&rsquo;s like from a Web3 lens, I&rsquo;m like, oh, one-one is from Web3. But I mean, one-one has always existed as a term. But yeah, but I think that from within Web3, it&rsquo;s easy to think like, oh, it&rsquo;s like this is a bubble and what&rsquo;s Web3 kind of stays Web3. But actually, I think that the effects of Web3, it&rsquo;s already seeped way outside of Web3.</p>
+            <p id="s1228"><span class="wt-at" data-pagefind-ignore>20:28</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>And when you say that, like, what do you actually mean? Like, what are instances besides your embodiment coaches one-on-ones where you see that?</p>
+            <p id="s1234"><span class="wt-at" data-pagefind-ignore>20:34</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Wendellen<span class="visually-hidden">: </span></span>I think kind of like direct access to, or like artists and creators having direct access to like appreciators. I think we&rsquo;re seeing like more of that. But again, I&rsquo;m also like, oh, like, is this just my perspective? Because Patreon actually existed like before like collecting culture.</p>
+            <p id="s1254"><span class="wt-at" data-pagefind-ignore>20:54</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>I think your answer is good. I hadn&rsquo;t really thought of the word collecting culture before, to be honest, but I think that&rsquo;s a good term. Like, I think collecting is an emerging culture for appreciating, um, like the creatives that are creating things that we can collect, um, as opposed to just stream and consume. Like, I think it&rsquo;s, it&rsquo;s a new form of consumption, um, but I think like what that new form is, does consist of, is collecting. So switching gears, I&rsquo;m curious to hear for you, like, what were some of the highlight moments from the weekend?</p>
+            <p id="s1281"><span class="wt-at" data-pagefind-ignore>21:21</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Wendellen<span class="visually-hidden">: </span></span>Like the after gathering by the creek after the festival was over on Sunday. Yeah, to me it was everything Web3 is stereotypically not. It was offline, it was off-chain, accessible for everyone, everyone just enjoying. Yeah, super diverse ages, gender, race. And we were just like -- Yeah, helping each other, getting to know each other, and being with the Earth. Other highlights were just talking to people, real live humans. And as someone who&rsquo;s mostly working on her computer, just realizing that I&rsquo;m not a genius. We&rsquo;re all having similar ideas, and our thoughts are all beating to a similar pulse. And that definitely helped me feel really connected and less alone. Collaborating, the zine workshop by MetaLabel. Yeah, I&rsquo;ll definitely be sharing that. But really also working with paper and just remembering how much I miss the physical. I was like, wow, I&rsquo;m really enjoying cutting this paper right now, and then vibing creatively in person with someone. Yeah, just like all these reminders to actually get offline. I think those were a lot of my highlights. Yeah. How about you? What would you say were your highlights?</p>
+            <p id="s1378"><span class="wt-at" data-pagefind-ignore>22:58</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Well, I&rsquo;ll get into that, but I think like what you&rsquo;re saying about like the creek moment, I definitely really agree. I think it was kind of like the antithesis of Web3. It&rsquo;s like we&rsquo;re on the internet, we&rsquo;re a lot of people that are really on the internet, and yet here we are, we find ourselves in the middle of the wilderness in Idyllwild, California, up in the mountains where there&rsquo;s really next to no phone service. Like stomping through this creek. Stomping is probably like maybe too aggressive words, but, you know, like walking through this creek. But just more so like you&rsquo;re saying, like we were outside, we were like really connected but not connected to the internet. And I didn&rsquo;t really have any pictures from the creek. I think I took like one video, but I feel like the point was really just to be present with each other. It felt like a space where we got to close out the weekend with each other, like where the stakes weren&rsquo;t really had to show up any kind of way. We just kind of got to, you know, we got to debrief. I got to talk to Hamza up there. Hamza, I got to talk to Santino. I got to talk to Chris, got to talk to Keaton. I got to talk to some people that I really hadn&rsquo;t gotten to talk to at other points of the weekend as well. And I think it was really just nice to have like quality time. I think the quality time I got at the festival was really like a highlight for me. Like, I think like being able to stay at Blueberry, which is like the cabin area that Sister Jam Chris organized. I thought that was like an amazing experience, honestly. Like, they, like, he, Phelps, Keaton, and maybe some other people had organized food for the weekend there. So we got to all like pitch in for that. And I thought that like made my experience definitely a lot easier because I wasn&rsquo;t going to the store thinking about meals, like being able to come back to the cabins and like get a burger or have a turkey sandwich or even just like grab a beer out of the fridge, like that kind of stuff. I think for me, like, it just like not having to like, like, like cover everything myself logistically, I think for me was just really like a blessing because I was definitely like, uh, I feel like there was a lot to think about, you know, just being there and covering all my bases. And like, as much as I might think, you know, I&rsquo;m an adult, like there&rsquo;s definitely things I overlook all the time. Um, but I think like, uh, yeah, the quality time component for me was, was, it was a huge plus. Like I was going there definitely like with the hopes and the intention of getting to know the people that make up this community. You know, we&rsquo;ve seen FWB in the bull market and now in the bear market, like the token price, but who actually are the people behind the token price? You know, who are the people that have been here over the past 2 years and what are they thinking about? What do they care about? You know, is this a community I want to be a part of? Like, those were all my questions. Um, and like, you know, like, like, I see all the sponsors, you know, but like, where is this community headed? Um, and so I think being able to show up and like you were talking about, like meeting Trini was definitely, uh, super cool, being able to share space with someone, you know, that&rsquo;s coming from all the way across the world. Like, that stuff was really like the highlights for me. And even just like, you know, like they had a meditation sponsored by Lent and being able to go there and like, I&rsquo;m pretty sure I was sober. I hadn&rsquo;t smoked any weed yet, I don&rsquo;t think. But just being able to like sit down and like, I&rsquo;m not a big like meditation, like sit in my head kind of person. But, you know, I took out my journal, I laid down, I planned out my day. I wrote out like, you know, I reflected on like the past 2 days and just being able to like take space for that, you know, and take space for ourselves as like a part of like the The structure and the scheduling of the programming, that&rsquo;s the word, of Fest. I loved that kind of stuff as well. Um, and then like on the last day you had us go to the, the, the pasta cooking session, which James ran from Zora.</p>
+            <p id="s1576"><span class="wt-at" data-pagefind-ignore>26:16</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Wendellen<span class="visually-hidden">: </span></span>Yes.</p>
+            <p id="s1577"><span class="wt-at" data-pagefind-ignore>26:17</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>And I thought that was like an amazing experience. Like, not just because like I got to make pasta, but because I got to, I got to meet James. I got to learn about Zora. I got to learn about his background. I think just like getting to see people outside of like their super technical context, you know, of like, oh, this person works at this platform, they do this thing. It&rsquo;s like, But they&rsquo;re also like a human being outside of their role in like the evolving internet. Um, and getting to get present to that with people, I thought like it kind of brings an intimacy that the internet, you know, really can&rsquo;t bring. Um, and so I was really, I feel like that for me was a highlight. And, and then I would say, I guess like one last thing, like, like they had like the, like a stand where they were serving tea. Um, and being able to go in and get some of that mushroom tea, I think like, like I was like, oh, this is a microdose. Like, I&rsquo;m not really gonna be tripping once I, once I take this tea, like it&rsquo;ll be fine. And then lo and behold, like, here I am, you know, feeling queasy, like, oh, I&rsquo;m definitely tripping a little bit. But it kind of brought to light, you know, some of my anxieties about this space. You know, I&rsquo;ve been in this space since like the fall of my senior year of college, but wanting to be able to stay in this space and continue to build on my knowledge and build on my relationships has really been like something that&rsquo;s really of interest to me and thinking, you know, can I find work in this space? Which was a goal of mine right after college, but still hasn&rsquo;t been realized, has been like, a question on my mind, and is the time that I&rsquo;m putting into this space, you know, really going to be worthwhile? Or like, am I just like on a fool&rsquo;s errand and like still like blind to it, naive about it? Um, and so I think being able to -- like, I was sitting in like the food court probably for like 3 hours on like, uh, I think it was maybe Friday night or Saturday. I think it was Friday night. Um, and just talking to, to Wren, who&rsquo;s over, uh, working on his project, um, which is in the Seed Club incubator. And just being able to get some feedback, you know, from like him, he who is already working on a project about like, what am I thinking about We Them Niggas and where it&rsquo;s going? You know, what are my goals? Am I trying to build a brand? Am I trying to build a business? You know, what are my short-term and long-term goals and who am I trying to serve? I think just being able to really interrogate those questions with people who are thinking actively about how do you build a business and who have experience in that world was really helpful for me. Because, you know, I really wasn&rsquo;t showing up for the music, but like for the people and for the perspective people could potentially offer me, because I feel like being around people all the time that aren&rsquo;t really very native to the space, it&rsquo;s hard to really get a clear sense of where I stand outside my own perspective from someone that has reference points.</p>
+            <p id="s1714"><span class="wt-at" data-pagefind-ignore>28:34</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Wendellen<span class="visually-hidden">: </span></span>For sure. Yeah, I think it was really good. I think a good recap or sum-up is that it was great to connect with people through the internet offline and just like this reminder that there&rsquo;s so much value in that, but it&rsquo;s also both. And it&rsquo;s like, don&rsquo;t forget about balance. And also that the connections that you make through the internet don&rsquo;t have to stay on the internet, and it&rsquo;s only fuller when we embrace online and offline. If that resonates with you.</p>
+            <p id="s1759"><span class="wt-at" data-pagefind-ignore>29:19</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah, it definitely does. I think a big thing, like something that I heard from some people was that like Friends with Benefits was their introduction to Web3, you know. And so having like an in-person community that can introduce you to like the evolving world of technology, I think is super exciting. And also like a big part of what I want to be able to do with WeThemNicholas as a community in the long term. And so it was super affirming to hear from people that that was their experience with FWB. And, you know, now they&rsquo;ve been in the space for a year and a half or 2 years. And now they&rsquo;re like, quote unquote, multi-cyclers. They&rsquo;ve seen bull markets and bear markets.</p>
+            <p id="s1789"><span class="wt-at" data-pagefind-ignore>29:49</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Wendellen<span class="visually-hidden">: </span></span>Right. So they&rsquo;re like, we have faith. Don&rsquo;t worry. It&rsquo;s normal for there to be down moments because you need them to have high moments. And so the cycle goes. That&rsquo;s the balance.</p>
+            <p id="s1800"><span class="wt-at" data-pagefind-ignore>30:00</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah, that&rsquo;s the balance. And I think it also was just like people that go from no knowledge of even finance or cryptocurrency to having seen an institution exist across market cycles, I think It&rsquo;s really cool. That&rsquo;s someone&rsquo;s introduction to this space and this way of thinking about small and large-scale economics. And so, I think that&rsquo;s a super important role to be playing as an institution in the lives of people. And even being able to find internet friends and have those turn into meaningful in-person relationships, I think, is a lot of what people overlook when they see this space. And so, I think in conclusion, what the weekend was for us, I guess something I really liked that Alan, at the pasta-making session, what he said is, touch grass, touch dough. And I love it because, you know, we&rsquo;re all out there, you know, touching grass, and then we&rsquo;re here making this pasta. I, like, momentarily was like, oh, can I just help with your pasta? Trying to figure out what the hell was going on because there were, like, no directions. Shout out James for coordinating and facilitating that whole exercise. But I was definitely confused for, like, the first, like, 80 seconds to 10 minutes.</p>
+            <p id="s1870"><span class="wt-at" data-pagefind-ignore>31:10</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Wendellen<span class="visually-hidden">: </span></span>Yeah. James, shout out James. Inspiring food-grade floaty tape. Inspiring me to freeze my eggs into human caviar for AI-human fusions. I took it there.</p>
+            <p id="s1883"><span class="wt-at" data-pagefind-ignore>31:23</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yep. Gwendolyn is thinking about the AI, and it doesn&rsquo;t have to make sense because we don&rsquo;t present things with context all the time. Shout out to the things that come with no context. But yes, it was a beautiful experience. Once again, I guess we should say a huge shout out to everybody from FWB and from Form who took time to put on this whole event, all the artists who performed, and really just everyone that put effort into bringing it all together. I think it was a beautiful event and for me, definitely a model of what a community that&rsquo;s really committed to working together can bring to life. So I was very impressed, very inspired, and I&rsquo;m very grateful for the whole thing.</p>
+            <p id="s1922"><span class="wt-at" data-pagefind-ignore>32:02</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Wendellen<span class="visually-hidden">: </span></span>I hope we played a part and would love to contribute in any way going forward.</p>
+            <p id="s1929"><span class="wt-at" data-pagefind-ignore>32:09</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah, I think it&rsquo;s just about being in the Discord, but Yeah, it was an amazing time meeting the people who were taking lead there, and I&rsquo;m excited to get more involved in that community for sure and continue to find more value-aligned people from Web3 through that space because it definitely is an international community, which I think is impressive at this point, especially in the bear market to find. So, great to find people who are here for the right reasons to build a future that&rsquo;s more just and people-centric and that values creatives, and I&rsquo;m super thrilled to have been a part of it. Um, and continue to be a part of it because I definitely intend, like I said, to get more involved. So thank you everyone once again.</p>
+            <p id="s1963"><span class="wt-at" data-pagefind-ignore>32:43</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Wendellen<span class="visually-hidden">: </span></span>Thank you, tastemakers.</p>
+            <p id="s1964"><span class="wt-at" data-pagefind-ignore>32:44</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yes, thank you to the tastemakers. Uh, we will drop some links to our respective social medias as well as to the website and social medias of FWB. Um, thank you guys again for listening to another episode of We Them Niggas, and I&rsquo;m excited to keep building together. Feel free to reach out to me on social media if you&rsquo;d like to become part of our Discord community. Where we are working to think about how can independent creatives, you know, come together and bring our ideas to life together. So peace and love, friends, and thanks again.</p>
+        </div>
+    </section>
+
+    <nav class="wrap wt-more" aria-label="More episodes">
+        <p>Before this: <a href="ep-12-ashley-caines-on-building-equitable-futures-with-daos.html">Ashley Caines on Building Equitable Futures With DAOs</a> &middot; <a href="index.html">Every episode</a></p>
+    </nav>
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. We made the work published here in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+<script src="../wtm-player.js" defer></script>
+<script src="../wtm-core.js" defer></script>
+
+</body>
+</html>

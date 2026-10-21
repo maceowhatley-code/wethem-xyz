@@ -1,0 +1,672 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Episode 6 of We Them, the podcast Maceo started in college, published 11 April 2023: Podcasting With the Pros: Mike Brown. The full transcript.">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/podcast-archive/ep-06-podcasting-with-the-pros-mike-brown">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Podcasting With the Pros: Mike Brown | We Them EP 6">
+    <meta property="og:description" content="Episode 6 of We Them, the podcast Maceo started in college, published 11 April 2023: Podcasting With the Pros: Mike Brown. The full transcript.">
+    <meta property="og:url" content="https://wethem.xyz/podcast-archive/ep-06-podcasting-with-the-pros-mike-brown">
+    <meta property="og:image" content="https://wethem.xyz/og-site.png?v=2f44c9ed24">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Street journalism from around the world. On a Mission to Keep You In The Know.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og-site.png?v=2f44c9ed24">
+    <meta name="twitter:image:alt" content="Street journalism from around the world. On a Mission to Keep You In The Know.">
+    <title>Podcasting With the Pros: Mike Brown | We Them EP 6, We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PodcastEpisode",
+  "name": "Podcasting With the Pros: Mike Brown | We Them EP 6",
+  "description": "Episode 6 of We Them, the podcast Maceo started in college, published 11 April 2023: Podcasting With the Pros: Mike Brown. The full transcript.",
+  "datePublished": "2023-04-11",
+  "url": "https://wethem.xyz/podcast-archive/ep-06-podcasting-with-the-pros-mike-brown",
+  "timeRequired": "PT66M",
+  "associatedMedia": {
+    "@type": "MediaObject",
+    "contentUrl": "https://podcasters.spotify.com/pod/show/wethemmedia/episodes/EP-6-Podcasting-with-the-Pros-an-Interview-w-Mike-Brown-e2258kd"
+  },
+  "partOfSeries": {
+    "@type": "PodcastSeries",
+    "name": "We Them",
+    "url": "https://wethem.xyz/podcast-archive/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  }
+}
+    </script>
+</head>
+<body>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="page" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<main id="main-content">
+
+<article class="wrap wt-piece">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="index.html">We Them, the podcast</a></li>
+            <li aria-current="page">Podcasting With the Pros: Mike Brown | We Them EP 6</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date]" data-pagefind-filter="kind[data-pf-kind]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="archive" data-pf-date="2023-04-11">Podcasting With the Pros: Mike Brown | We Them EP 6</h1>
+
+    <p class="wt-byline">Episode 6, published <time datetime="2023-04-11">11 April 2023</time>, 1 h 06 min</p>
+
+    <div class="wt-prose">
+        <p>An episode of We Them, the podcast Maceo started in college, where We Them Media began. It was published as audio
+        only. This page carries its full transcript so the words can be read, searched and quoted. It is not a
+        written piece. <a href="https://podcasters.spotify.com/pod/show/wethemmedia/episodes/EP-6-Podcasting-with-the-Pros-an-Interview-w-Mike-Brown-e2258kd" target="_blank" rel="noopener">Listen to it where it was published</a>.</p>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript" aria-labelledby="tx-h">
+        <h2 id="tx-h">Transcript</h2>
+        <p class="wt-note">Transcribed from the original audio. Speakers are told apart by the model, and a name
+        stands where the tape says who is speaking. <a href="../search.html">Search every transcript</a></p>
+        <p class="wt-note">These are the speakers&rsquo; own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><span class="wt-at" data-pagefind-ignore>0:00</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Hello everybody, and welcome to the We Them Niggas podcast, where today I&rsquo;m connecting with, uh, Mike Brown, host of the Art of Letting Go podcast. Hey Mike, thanks for joining me here today. I really appreciate you reaching out to me on Twitter, and I&rsquo;m excited to have a real honest conversation with you today.</p>
+            <p id="s18"><span class="wt-at" data-pagefind-ignore>0:18</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Man, I&rsquo;m happy to be here. Thank you for having me.</p>
+            <p id="s20"><span class="wt-at" data-pagefind-ignore>0:20</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah, of course. Uh, so your podcast has extended well beyond 150 episodes now, correct?</p>
+            <p id="s29"><span class="wt-at" data-pagefind-ignore>0:29</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Yeah, yeah, I think, uh, this week will be 174.</p>
+            <p id="s36"><span class="wt-at" data-pagefind-ignore>0:36</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Booyah! And so that&rsquo;s exciting. Congratulations. I think it&rsquo;s exciting when somebody, you know, has an idea and then brings it to life. I think it&rsquo;s something to be proud of anytime.</p>
+            <p id="s45"><span class="wt-at" data-pagefind-ignore>0:45</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>I appreciate that, man. Thank you.</p>
+            <p id="s47"><span class="wt-at" data-pagefind-ignore>0:47</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah, of course. I definitely think it&rsquo;s inspiring. This is maybe my 6th episode of my podcast I&rsquo;ve recorded so far, and so it was definitely, uh, affirming for me here, uh, seeing you reach out to me on Twitter.</p>
+            <p id="s58"><span class="wt-at" data-pagefind-ignore>0:58</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Yeah, I saw, uh, I saw you post on Twitter. I think it was like, would you like to be a guest on the show? And I saw the name of the show and it just sounded dope. So I was like, yeah, I would love to, uh, just come be a part of it.</p>
+            <p id="s70"><span class="wt-at" data-pagefind-ignore>1:10</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>No, I appreciate that. So what about the name of the show stood out to you? I think the We Them Niggas podcast is the name. So I&rsquo;ve been having -- I don&rsquo;t know, it&rsquo;s definitely something I&rsquo;ve given a lot of thought to, you know, why should it be the name, how do I approach it. But what did it mean to you?</p>
+            <p id="s85"><span class="wt-at" data-pagefind-ignore>1:25</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Uh, so it stood out to me because I do feel like I&rsquo;m that nigga, you know. So for somebody to start a podcast about, you know, being them niggas, it, it just sparked my attention immediately, you know, because I see that as a positive thing, like to see yourself, you know, as the shit. That&rsquo;s, that&rsquo;s what I saw it as, like we the shit. And, uh, I connected to it immediately.</p>
+            <p id="s107"><span class="wt-at" data-pagefind-ignore>1:47</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>No, I appreciate that. I think I&rsquo;m glad you see it so clearly because I think, like, I just graduated from my school. I just graduated Franklin Marshall College here in PA.</p>
+            <p id="s119"><span class="wt-at" data-pagefind-ignore>1:59</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Congratulations.</p>
+            <p id="s120"><span class="wt-at" data-pagefind-ignore>2:00</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah, I appreciate that. I appreciate that a lot. Uh, it was definitely, like, not what I imagined it to be when I started 4 years ago, and I feel like I grew and learned a lot, and I&rsquo;m excited to be where I&rsquo;m at. But I was gonna say, my roommate, uh, shout out Drew, I was talking to him about my podcast idea, and he was like, you think that&rsquo;s the name, really? And I said, I do think so. He didn&rsquo;t really have the vision, but he said, if you see it, I believe in that. And my other roommate, I was telling him it might be the Maseya Watley Podcast. I think I had him on the first episode. And he was like, nah, nah, it should be the We Them Niggas Podcast. And so there was definitely some uncertainty as to whether or not it&rsquo;s an unprofessional title or name for my podcast or brand and whether or not it would resonate with people. But I appreciate my community around me really being like, yeah, I think that&rsquo;s where you should be headed. That&rsquo;s where your heart is at. And I should be honest with it. So I&rsquo;m glad it stood out to you.</p>
+            <p id="s172"><span class="wt-at" data-pagefind-ignore>2:52</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Yeah, it&rsquo;s a bold name. I mean, when you see it just written out like that and you&rsquo;re reading it, whether you&rsquo;re reading it in your head or out loud, and you see We Them Niggas, it&rsquo;s like, whoa, what is this about? And just talking to you and getting to know you and seeing your vision, that is something that would cross my mind. Of like, is this professional or not? But I love that you are taking that stand of just like, this is what I believe, this is what I stand for, and you&rsquo;re gonna attract the people that you&rsquo;re supposed to attract, you know what I mean? Like, all that professionalism and shit like that, man, that shit -- if you got a quality product, none of that means nothing, you know what I mean? Like, I don&rsquo;t even know who really creates those standards. Like, that&rsquo;s, that&rsquo;s something that even in my professional life, as far as jobs and stuff, like having tattoos that are Visible, you know, you can&rsquo;t have tattoos that are visible. And mind you, I just told you I was a teacher for 3 years with tattoos that are visible. So it&rsquo;s like, fuck that, we them niggas and we gonna keep it moving.</p>
+            <p id="s238"><span class="wt-at" data-pagefind-ignore>3:58</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>I like that. Fuck that, we them niggas. I like that. Yeah, I think that&rsquo;s really like -- I agree with you. My ambition is really to attract those people who have that same attitude, you know. There&rsquo;s something to take pride in, um, when I think about who I am. And I want to be a resource for those people. And I want to be somebody who&rsquo;s out here recognizing those people and bringing them into community. Because I think it can be like -- I took a feminist philosophy class and we talked about like there being a tendency to become hyper-independent for men of color. Yeah. And I think ideally, this can be an avenue towards finding maybe some men in that position who maybe don&rsquo;t feel like they found community quite yet. And making sure that they do have that. I think a support system really can be life-changing. And having people you can be honest with and be vulnerable with, I think is essential. So I really appreciate you showing up here and, and standing for what this podcast stands for. I&rsquo;m excited to be with you and to recognize you for what it is that you do.</p>
+            <p id="s298"><span class="wt-at" data-pagefind-ignore>4:58</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>I appreciate that, man. And I&rsquo;m excited to be here.</p>
+            <p id="s302"><span class="wt-at" data-pagefind-ignore>5:02</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah. And you mentioned you were a teacher. Can you bring us into how that&rsquo;s been a part of your life?</p>
+            <p id="s310"><span class="wt-at" data-pagefind-ignore>5:10</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>So I actually got into teaching just to supplement income. I moved to Los Angeles in 2010 pursuing music production. I was producing music and I just felt like this was the place to be. And I&rsquo;ve always been like one foot in, one foot out. you know, making music, having a job, making music, having a job, making music, freelancing, just -- and it became a struggle. And one of my friends that is a teacher, she recommended that I look into substitute teaching because you could create your own schedule. And, um, I really enjoyed it. I enjoyed it a lot. And the last school that I subbed at, because I subbed for about 2 years, the last school I subbed at They wanted me to be a full-time teacher because they lost their music teacher. I took the music teacher&rsquo;s role, the teacher left, and the position opened up. And I enjoyed it so much that I ended up taking the long-term position. And it was really dope. I love working with kids. I love just being in that space of just new ideas. And it was never slow. It was never a boring day. Being a teacher, the biggest challenges I think were more so from, and not even the administrative people, but just the administrative sides of pay, healthcare, stuff like that that should be a given, that should be easy for people that are in the care of our future. But you have to fight for your value and your worth, and it&rsquo;s mind-blowing to me.</p>
+            <p id="s414"><span class="wt-at" data-pagefind-ignore>6:54</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>So is that a thing that you found yourself doing, like, that, that was like energy draining while you were a teacher?</p>
+            <p id="s421"><span class="wt-at" data-pagefind-ignore>7:01</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Yeah, it can be energy draining because the expectations are so high of what you&rsquo;re supposed to bring to the space and be in the space, but you aren&rsquo;t compensated in that way, you know. So it&rsquo;s like, let me get everything out of you that I possibly can without paying you what you&rsquo;re worth. And it&rsquo;s so disrespectful. And I think I was blessed to -- because I didn&rsquo;t study education in school, I studied audio production and sales and marketing. And I was blessed to know that I am more than just this. I think a lot of times when people study education, and this is no diss to nobody because there are amazing teachers out there. Shout out to all the teachers. But sometimes when that is your career life path, you become that and you don&rsquo;t see yourself being valued at more than that. So it&rsquo;s like when a school is telling you, you have to do this, this, and this, and we&rsquo;re not going to pay you extra, some people do it because they feel like that&rsquo;s all they -- they have to do it. And for me, there was never a have to. It was always a, this is my contract, this is what it says, this is what I&rsquo;m going to do. If I choose to do more than that, I&rsquo;m choosing to do it, but also I&rsquo;m not obligated to do anything outside of my contract. And it can come off kind of like you being an asshole, but at the same time, education is one of those industries, I guess almost like church or religion, where people use trigger words to manipulate. Words like family and shit like that. We&rsquo;re not family, we coworkers. I work for this company. It&rsquo;s a company, but they treat a school like it&rsquo;s something else, but it&rsquo;s a business at the end of the day.</p>
+            <p id="s531"><span class="wt-at" data-pagefind-ignore>8:51</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>So you started off as a substitute teacher. It sounds to me like you didn&rsquo;t see yourself getting into education. And so when you ended up there, it was more of a choice. And I&rsquo;m guessing --</p>
+            <p id="s546"><span class="wt-at" data-pagefind-ignore>9:06</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>It was, yeah. I&rsquo;m sorry, what were you saying?</p>
+            <p id="s550"><span class="wt-at" data-pagefind-ignore>9:10</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>No, I was just going to ask you. So how was it for you to make the choice to leave being a teacher in this school?</p>
+            <p id="s557"><span class="wt-at" data-pagefind-ignore>9:17</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>It was something I was clear on, but it was also something that was a little challenging. It was challenging more so because of how I felt about the kids and leaving the kids. But as far as leaving the job, I was very clear on that, especially I knew it. I&rsquo;ll be honest with you, I knew it going into the school year. At the beginning of the year, the first day of the school year last year, something in my mind, and I heard it in my voice, told me, you&rsquo;re not supposed to be here.</p>
+            <p id="s590"><span class="wt-at" data-pagefind-ignore>9:50</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Mm.</p>
+            <p id="s591"><span class="wt-at" data-pagefind-ignore>9:51</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>And I heard it clear as day. And I tried to push through it, I tried to ignore it, I tried to fight it. And then February, I had a residency with Spotify, and to do that for 4 days I was podcasting, I was doing interviews, I was doing photo shoots, I was doing all kinds of shit that essentially felt natural to me to do it. So to go from that to go back to a classroom was just like, how do you expect me to be here doing all of this? And I couldn&rsquo;t take it anymore. And I let them know that I wasn&rsquo;t returning. And it was points where I felt like quitting before, but -- You know, for the kids, I followed through with my commitment of, okay, I signed this contract for a year, let me finish this year out and I&rsquo;m not coming back. And honestly, this is probably the most free that I felt in my life right now.</p>
+            <p id="s645"><span class="wt-at" data-pagefind-ignore>10:45</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Mm-hmm. Well, thank you for sticking it out and you had that commitment. I think that&rsquo;s really respectable. And</p>
+            <p id="s653"><span class="wt-at" data-pagefind-ignore>10:53</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>I appreciate that.</p>
+            <p id="s654"><span class="wt-at" data-pagefind-ignore>10:54</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>It&rsquo;s exciting that this is the most free you felt so far in your life. I think that that really is telling. So I guess I&rsquo;m interested now in pivoting more into your podcast. What was -- I guess first I&rsquo;d like to hear, what was that residency like? What was that experience like for you?</p>
+            <p id="s670"><span class="wt-at" data-pagefind-ignore>11:10</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>It was surreal. I felt like I was in a dream because when I look back at it now, I guess because I was so in it, I was more in shock. But looking back, and seeing the other people that were part of it. There were artists like Larry June, uh, Sango, Dochi, who is now on the XXL cover, uh, Vic Mensa, you know, and me. You know, there were, there were 9 of us and, and me. And it was really, uh, I thought somebody was playing a joke on me. I really did. I thought it was a joke because I just, I just didn&rsquo;t know that people were watching me or paying attention to me like that. And to be acknowledged for your work and acknowledged for your work in a sense of like, I don&rsquo;t have a million followers, you know, I don&rsquo;t have a big studio that I&rsquo;m recording out of. Like, I don&rsquo;t have a lot of the resources that people have. But to know that I was able to do this on my own, because when I talk to other people about their podcast, it&rsquo;s a lot of people that are moving smart. And I&rsquo;m, and I&rsquo;m, and like I said, I&rsquo;m, I respect it because I&rsquo;m getting to the point where it&rsquo;s like, I don&rsquo;t want to do this by myself no more. I want to have support in marketing, promotions, editing, all that stuff. There are people that have that shit. So for me to do everything by myself and to get to that level, it was like, it felt like, it felt like beating a level of a video game. You know, I didn&rsquo;t, I didn&rsquo;t bask in it too long. I didn&rsquo;t like sit in it and like, yeah, I did this. It was like, okay, we did this checkpoint. keep going. But yeah, looking back at it, it was a beautiful experience and it was curated by Black people. And I think that&rsquo;s what made it so special for me because Spotify has a department specifically for Black artists and Black art in general called Frequency. So their Frequency team reached out to me and they just created this beautiful experience for us, shot a documentary, It was surreal to be acknowledged for your work. It feels special. I got to meet a lot of dope people, build some relationships that I feel like are lasting forever. I feel like there are people that I can call when I need advice or whatever I need from somebody over there, and they really look out for me and take care of me. So it was a beautiful experience, man. You know, I look forward to doing more stuff like that.</p>
+            <p id="s837"><span class="wt-at" data-pagefind-ignore>13:57</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>That makes sense. And so as you look at expanding, like you&rsquo;re saying, in the past, you&rsquo;ve done a lot, like all your editing, your marketing and stuff like that for yourself. How are you thinking about what it looks like to have a team in the space of podcasting now? Because I haven&rsquo;t even really even begun to think about that stuff, honestly.</p>
+            <p id="s855"><span class="wt-at" data-pagefind-ignore>14:15</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Honestly, I really just want to be talent. for this show. I want to show up, host, have my production notes. You know what? I still like doing social media stuff, but I realize if I had the time to solely focus on the creative, I could be my most creative possible. And if I had somebody to do my marketing and promotions, if I had somebody to do my editing, if I had somebody to produce the show, You know, uh, things might look differently and I&rsquo;m, I&rsquo;m open to what that would look like. You know, I, everything for me has been trial and error and I feel like I&rsquo;ve built a great foundation on this show so far that I can, I can delegate the work that I&rsquo;m looking for, but also be open to new ideas.</p>
+            <p id="s906"><span class="wt-at" data-pagefind-ignore>15:06</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>I hear you. What is like the, what role does a producer play in a podcast?</p>
+            <p id="s915"><span class="wt-at" data-pagefind-ignore>15:15</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Uh, so the producer would be, you know, kind of in control of the flow of the show. Uh, you know, I would want them like determining like what, what stays in, what comes out, what&rsquo;s being used as like clips. Um, yeah, like also having a hand in like the editing and all that kind of stuff as well. So just really having a hand in like just the overall production of the show.</p>
+            <p id="s941"><span class="wt-at" data-pagefind-ignore>15:41</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>That makes sense. That&rsquo;s something I wasn&rsquo;t clear on, so I appreciate you sharing that with me. And</p>
+            <p id="s948"><span class="wt-at" data-pagefind-ignore>15:48</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>yeah,</p>
+            <p id="s949"><span class="wt-at" data-pagefind-ignore>15:49</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>you were saying it was exciting to get recognition, um, working with Frequency, uh, because you&rsquo;ve been doing this show, uh, like you said, more than 100, almost around 170 episodes now. Uh, when you first started, can you share with us a little bit about how you, like, began the process? I know you shared it had a bit to do with, with counseling and mental health, so I think it&rsquo;s important to touch on if we&rsquo;re talking about what it is you do.</p>
+            <p id="s970"><span class="wt-at" data-pagefind-ignore>16:10</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Yeah, I appreciate that. Uh, so I started the show, um, probably November 2017. Uh, I was in therapy. I would -- I just recently got out of a relationship. Uh, I was just being open about my sexuality around that time. Well, in 2012, but in that, that time I was still kind of just figuring things out and working through things. And I was going to therapy and my therapy sessions, the therapist had upped the price and it got too expensive for me. I wasn&rsquo;t working at the time. I had just quit Starbucks and I still needed a space to express myself. There was a guy who&rsquo;s on the radio out here in LA named Anthony Valadez. He started a podcast about podcasting and recorded it on his phone. And he simplified it so much because I always had this idea, like, I wanted -- because I would record myself, kind of going back, I would record myself with my friends just having conversations because we would just have like such valuable conversations that I would just turn the microphone on and just let it record, let it ride. And, um, when I heard his podcast though, I was inspired to start my own. I was like, I still need a space to talk because I know how much this is helping me. And I had a friend who was like, you know, he was willing to, to be on the show with me. And that&rsquo;s kind of how we got started. We were recording. I would, I would just not even, not even too much pre-production or pre-planning. Like, I would just come in with an idea and, you know, just, just start talking about it. You know, maybe go for a walk or even smoke a joint, go for a walk, come back. And I&rsquo;m like, boom, I got it. As soon as the microphone turns on, I know what I&rsquo;m gonna say. I know what I&rsquo;m gonna do. And it&rsquo;s funny, I still kind of work in that way, but I&rsquo;m getting a little more intentional about my recording. So it&rsquo;s like when I have a guest, I know what I&rsquo;m going to talk to that guest about. I&rsquo;m also going to do a little research because I never, honestly, I never used to do research on people. I never, it would just be like, hey, as soon as the microphone comes on and people enjoyed it. You know, it just, it was something that really came natural to me, but I kind of want to, like I said, build those practices of when somebody else steps in this role, it&rsquo;s like, okay, now you&rsquo;re doing the research on the person, you&rsquo;re finding the guests, you&rsquo;re seeing who aligns with the brand of what we&rsquo;re doing. Because, uh, yeah, that&rsquo;s, that stuff requires work as well. And, and that&rsquo;s something that I&rsquo;m not always willing to do. Like sometimes all I want to do is record and not -- Look into who a person is. And, you know, and that&rsquo;s like I said, it&rsquo;s never anything against the person. It&rsquo;s just extra work that I don&rsquo;t really like to do. Like, I started this to get my own feelings out and it&rsquo;s grown to something bigger than I ever imagined. So that&rsquo;s why it&rsquo;s like, okay, now that it&rsquo;s grown to something bigger, I need to be a part of it in a bigger way and make it bigger, like be intentional about where this is gonna go. So yeah, that&rsquo;s kind of how I got started. I know I probably was all over the place, but that is how it started. Therapy was too expensive for me, and, uh, I just needed a space to express myself.</p>
+            <p id="s1177"><span class="wt-at" data-pagefind-ignore>19:37</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah. And so you created one, and I think that there&rsquo;s something that&rsquo;s powerful and inspiring. And I know I was listening to your episode with the -- is it The Boys Podcast?</p>
+            <p id="s1186"><span class="wt-at" data-pagefind-ignore>19:46</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Yeah. Yeah.</p>
+            <p id="s1188"><span class="wt-at" data-pagefind-ignore>19:48</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah. And they were talking about how important doing some of that research can be. And I try and do, like, I did some research, but really only listening to your other episodes, like picking out a few, like 5 or 6 that really stood out to me. But that&rsquo;s as extensive as the research I did was. And I don&rsquo;t know, I agree with you. I think it is, I mean, maybe you weren&rsquo;t really making a case for not doing research, I guess, but I think that showing up and just having an authentic conversation that&rsquo;s intentional, but not necessarily like, uh, putting somebody like, here, this is who this person is, let me tell you everything about them. It&rsquo;s more like let you get to know them through the conversation in a more natural way, I guess. It&rsquo;s like more like natural progression.</p>
+            <p id="s1227"><span class="wt-at" data-pagefind-ignore>20:27</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>And that&rsquo;s -- I agree with that. And that&rsquo;s how I&rsquo;ve always seen it. It&rsquo;s like, if you want to know more about this person, you&rsquo;ll look into them, you know? Like, if, if this person sparks your interest enough -- like, I have a friend who came on my show and she does like Reiki Reiki massages and stuff like that. And I could have got all into her history and all that stuff, but it&rsquo;s just like, I did a Reiki massage with her. Let me talk about my experience and see what it does for her. And she actually booked clients off of that episode. She told me she&rsquo;s gotten 4 or 5 clients from people that listened to the show and they reached out to her after hearing about our conversation. And that&rsquo;s That for me is more beautiful than doing research. Like, if somebody is so touched by the conversation that they&rsquo;re able to, you know, reach out to that person. So, you know, it&rsquo;s, it&rsquo;s cool. And, and, you know, the thing about it is there&rsquo;s no right or wrong way to do this. It&rsquo;s not a right or wrong way. You know, we all do it in the way we want to, and, you know, you see what sticks and what doesn&rsquo;t. It doesn&rsquo;t.</p>
+            <p id="s1298"><span class="wt-at" data-pagefind-ignore>21:38</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>No, I think that&rsquo;s lovely. My mom, actually, she&rsquo;s a Reiki practitioner. She&rsquo;s been doing training over the past few years, uh, to become certified as someone that can train other people in becoming Reiki practitioners as well. So I think that&rsquo;s pretty tough. What&rsquo;s that? Who are you doing the episode with?</p>
+            <p id="s1313"><span class="wt-at" data-pagefind-ignore>21:53</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Uh, a friend named Trudy, and, uh, she&rsquo;s a massage therapist, but she also does Reiki. And like, the first time I did it, it was so It was so enlightening, just some of the information that she gave me that, mind you, we&rsquo;re friends, but stuff that we never even talked about before that she was finding within my body. And yeah, I had to share that with people because just as I&rsquo;m sure with your podcast, you are going to expose your community that you&rsquo;re building to things that they may not know anything about. And I know Reiki was something I never knew anything about, so I was like, I&rsquo;m sure my community is not familiar with it. Some people may be, but for the majority, they probably aren&rsquo;t. So it&rsquo;s like, let me, let me open people up to things that are helping me, tools that I&rsquo;m using to get places. And it&rsquo;s beautiful, man. Like, it&rsquo;s really beautiful what you can do in this medium. Because you never know what anybody&rsquo;s going to talk about. Sometimes you don&rsquo;t even know what the fuck you&rsquo;re going to say, you know what I mean? But that one thing might stick to somebody and it&rsquo;s nice, man. It&rsquo;s really nice having this space.</p>
+            <p id="s1397"><span class="wt-at" data-pagefind-ignore>23:17</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>No, and it sounds like you really take full ownership of this space and appreciate it for being a platform for you to be in touch with and build a community. And I think That&rsquo;s something I do admire about you because I think that, that really is my ambition to expose the people and community that I&rsquo;m building to different kinds of ideas and information and technology. And like, I like the idea that We Them Nick is like, it&rsquo;s a more communal, like, like we&rsquo;re out here, we&rsquo;re doing it. And like, let me put you on game if there&rsquo;s game to get put onto. And like, if people are putting me on game, you know, let me spread the word. Yeah. And I think I&rsquo;m excited to have that be like how I can use this space. And it&rsquo;s not something I really ever encounter because I listen to mostly music, like, until maybe like 6 months ago. I was like, I&rsquo;m gonna start a podcast. Somebody was like, do you listen to any podcasts? And I was like, actually, no, I really listen to the same, like, playlist I make on loop every day.</p>
+            <p id="s1450"><span class="wt-at" data-pagefind-ignore>24:10</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>And I&rsquo;m gonna tell you, uh, it&rsquo;s okay to not listen to podcasts. You know, I&rsquo;m not a super podcast listener. Like, people&rsquo;s -- people think that I do, But I don&rsquo;t listen to a whole lot of podcasts like that, mainly because when I was, when I was really heavy into doing music, I found myself being influenced by the music I was listening to. So I kind of took that approach in the podcast and like, I don&rsquo;t want to be influenced by people. But I will tell you, it&rsquo;s nice to listen to podcasts and find things that you like about them. and carry those into your space. Like, if you hear something on a podcast, like a segment or something that you think is cool, and just trying it out. Like, I&rsquo;ve definitely done that as well. Like, I just started putting freestyles on the beginning of my episodes. And I have a friend that has a podcast. Did you? Yeah, I, I do like a freestyle verse, uh, which is like a summary of the episode, kind of like the Cliff Notes for people that, uh, you know, when they tune in. And it&rsquo;s, it&rsquo;s been really -- I&rsquo;ve only done it on 2 episodes, but I&rsquo;ve seen like growth coming into my podcast just by me putting this on the episode, but also putting the freestyle on social media. So people are like, oh, this is on the episode, let me check it out. And, uh, like I said, I have a friend that&rsquo;s been doing it for the last 5 years, and it&rsquo;s, it&rsquo;s been so inspiring to me that I&rsquo;m just like, let me try it out and see what it is. And, you know, even like starting a phone line for people to send messages and questions Like, those are things that I picked up from, from other spaces and, you know, made them my own.</p>
+            <p id="s1550"><span class="wt-at" data-pagefind-ignore>25:50</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>I like that. So you&rsquo;re saying you have a friend who&rsquo;s been doing freestyles on their content for 5 years?</p>
+            <p id="s1558"><span class="wt-at" data-pagefind-ignore>25:58</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s1559"><span class="wt-at" data-pagefind-ignore>25:59</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Oh, who&rsquo;s that? I think that&rsquo;s pretty cool, actually. In the few episodes I have done, like, I did one with my friend Moody Montage Jack, and he&rsquo;s an artist, and so I was trying to get him to freestyle a bit, so I did put on some beats And we&rsquo;re just freestyling the episode. And at the beginning of another episode, you can hear that as well. Me and my friend Thomas, who has another podcast called the Come As You Are Podcast. And it&rsquo;s not really been super structured, but I like the idea of just kind of drawing people into that space of expression. And kind of, I think it kind of starts people out on a more comfortable ground if they&rsquo;re willing to dip into it.</p>
+            <p id="s1593"><span class="wt-at" data-pagefind-ignore>26:33</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Yeah, yeah. The podcast I got that from is called The Couple of Nobodies. And we started around the same time. And these guys have not taken a break since they started their podcast, and I think they&rsquo;re like 220 now, 225. Like, I&rsquo;ve taken breaks, you know, I, I take a pause when I need to, but these guys have consistently went for this show for like 225 episodes. So, you know, I&rsquo;m inspired by that.</p>
+            <p id="s1624"><span class="wt-at" data-pagefind-ignore>27:04</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah, I&rsquo;m gonna have to check that out. I like that. A Couple of Nobodies, you said?</p>
+            <p id="s1630"><span class="wt-at" data-pagefind-ignore>27:10</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Yeah,</p>
+            <p id="s1632"><span class="wt-at" data-pagefind-ignore>27:12</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>that is cool. And so can you take us back into your, like, life as an artist as well? Like, you were saying you went to college for music engineering, like, right? That&rsquo;s what you said?</p>
+            <p id="s1642"><span class="wt-at" data-pagefind-ignore>27:22</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Yeah, so I, I started school in New Orleans, uh, and I&rsquo;ve been, I&rsquo;ve been playing music since, since 3rd, 4th grade. I&rsquo;ve been recording myself since that time also. Like, you know, my parents bought me a Uh, radio where I was able to record my voice, and I would do that. But yeah, I probably started making music, um, in like 2009, maybe 2008, 2009, when I was in college and I was living in New Orleans and I was working with, you know, people that were local there and just feeling so like inspired, like I could do more. That I moved to LA to do the same thing, but also to, I guess, get better in my craft. I started studying audio production, and, uh, it was more of an audio engineering program, which is cool, but, you know, I was more into the creating than the technical, you know. So, I mean, I learned some tips there, but in my journey, I was freelancing a lot of audio and music, doing background music for websites, doing music for people here and there. But I never really gave myself 100% push because I always was scared, especially just being a queer man and pursuing rap, hip-hop. It was internally a scary space to be in because I felt like if people knew who I truly was, then I would be rejected. That&rsquo;s how I always felt. So I hindered myself, I held myself back. But through the podcast -- and you know what&rsquo;s so crazy? Music is one of those things that I&rsquo;ve never been able to escape. even when I&rsquo;ve tried to put it down or take a break from it, it&rsquo;s always came back around and something has always brought me back to it, brought me back in. Um, I did something with Carnegie Hall last year that was really dope, and it was producing music, you know, producing music and performing. Like, I rapped in the video and, you know, I&rsquo;ve always -- That&rsquo;s so cool. I appreciate that. And I&rsquo;ve, I&rsquo;ve always rapped and I&rsquo;ve never really put myself out there as an artist. I always tried to just play the background of the producer. But now in this podcast and finding my comfort here is bringing me back around to it again, but in a different way. It&rsquo;s like, okay, I&rsquo;m, I&rsquo;ve been the face of this for a while now. I&rsquo;m more comfortable being the face of my own music and putting myself out there. And it feels good. It feels good. And I see how people connect to me and my art. Um, and I just, I just feel in a place of wanting to share it more, be open, more open with it.</p>
+            <p id="s1820"><span class="wt-at" data-pagefind-ignore>30:20</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>So are you producing -- like, are you doing your freestyles, not beginning of episodes -- are you producing those beats that you&rsquo;re using?</p>
+            <p id="s1826"><span class="wt-at" data-pagefind-ignore>30:26</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Uh, so the 2 that I did so far, no, I didn&rsquo;t produce them. Uh, I did, I did like a Beyoncé beat and, uh, I did another like jazz song that I found. But I&rsquo;ve been telling myself that I do want to take the time to, uh, produce them. I just wanted to kind of get a feel and get in the flow of like just doing them. And, um, you know, I, I feel like I will get around to start using some of my own production. I think I just, just working my way through getting out of my head, you know?</p>
+            <p id="s1858"><span class="wt-at" data-pagefind-ignore>30:58</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>No, that makes a lot of sense. I mean, like, it was probably winter 2020 is when I said, you know, I want to be a rapper. I was like, what I want to do after I graduate college -- I&rsquo;m majoring in moral psychology And I&rsquo;m like, what kind of job do I want? Yeah. And I&rsquo;m like, I could be a therapist, I could go into social work. Um, but it&rsquo;s like, but what I&rsquo;m really feeling is like 2020 and quarantine, like I listened to more music than I listened to my first 2 full years of college over because I just had all of a sudden had nothing to do but sit there in front of my speaker stereo set and just go on Spotify and listen through albums. And I think I was like, there&rsquo;s something I want to do, but what does it look like to do this? Like from a business standpoint, like how do I make a living? And yeah, you know, so I started writing songs, started freestyling, trying to practice, you know, getting flows and cadence and, um, just trying to get in pockets on different kinds of beats, figuring out where my sound was. But, uh, when I finally came around to podcasting, I was like, oh, this is a good way for me to build an audience and do something that&rsquo;s more significant than just saying what I gotta say all the time. &rsquo;Cause I, I don&rsquo;t have a whole lot to say honestly right now. And I remember seeing like a clip of Nipsey Hussle and it was him saying, If you don&rsquo;t have anything to write about or rap about, then you probably shouldn&rsquo;t be focused on writing music right now.</p>
+            <p id="s1932"><span class="wt-at" data-pagefind-ignore>32:12</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>And that&rsquo;s real.</p>
+            <p id="s1934"><span class="wt-at" data-pagefind-ignore>32:14</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>I think the podcast was like, oh, it&rsquo;s a nice way for me to go out and identify producers who maybe don&rsquo;t have an audience like the way they would like to. Because I saw there&rsquo;s so many talented producers just on YouTube, especially since COVID They&rsquo;ve been putting up beats, put up beats every day. You could see the work ethic, but maybe don&rsquo;t have like enough of a discovery factor. Like, it&rsquo;s not like, where do you really -- who&rsquo;s really going online just looking for beats besides, I feel like, rappers and people that are looking to sign producers. But I think there&rsquo;s a lot of rappers don&rsquo;t necessarily know where producers are at or how to find them. So just trying to -- like, something you talked about was bringing -- humanizing artists. I know we talked about that a little bit. Yeah. And so I thought it would be a cool way to humanize artists. But that was also a way to not have to put myself at the forefront of creating content. Like, I&rsquo;m making a song, I&rsquo;m like, what are people going to think? What are they going to think about that? How, like, how did I say that? Is that how I would say it authentically? Like, I&rsquo;m like, politics of who I am. I&rsquo;m like, I don&rsquo;t really wanna -- I&rsquo;m just feeling a bit self-conscious. I felt like the podcast was a nice way to build something more intentional that didn&rsquo;t feel quite as intimidating. And also let me invite and connect with some of my peers in school. Like, I felt like if I just focused on music, then people who are musicians maybe could find their way into like what I was creating. But I think the podcast is a lot more freeform, and I feel like -- I don&rsquo;t feel like there&rsquo;s as much pressure to be a certain kind of way or do a certain kind of thing. But so I think that that&rsquo;s exciting. What does it look like for you now trying to become more intentional with the podcast? Like, what are the work -- what&rsquo;s that looking like?</p>
+            <p id="s2022"><span class="wt-at" data-pagefind-ignore>33:42</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Um, it really makes me, um, like hyper-conscious of just what I align to, and that&rsquo;s like people, places, and things. Like, you know, I&rsquo;m very, uh, I feel like my guests are very curated, my topics, just even some of the stuff that&rsquo;s being put out on social media. I&rsquo;m very aware of what I&rsquo;m putting out. I&rsquo;m not getting drunk and posting pictures, and I don&rsquo;t really feel like I post a lot of my personal life. I do share moments of it, but that&rsquo;s not what this is. You know what I mean? This is a business and I treat it as such. And I recognize like I am the business. So that&rsquo;s why, like I said, sometimes I may put myself out there a little bit. And I mean, shit, I put myself out there a lot, but in the sense of like showing you what restaurant I&rsquo;m at or in real time that I&rsquo;m at the beach, like I don&rsquo;t need people to know where I&rsquo;m at like that, you know? Um, I take my time with my posts. I take my time with posting things. I plan out my posts. I just really want to be clear on how everything looks, sounds, and feels because the feeling is most important to me. And if I am selling mental health, And selling, you know, because I mean, at the end of the day, that&rsquo;s what we all are doing. We&rsquo;re selling something, you know. But if, if I&rsquo;m selling mental health, growth, authenticity, I have to be all of those things, you know. I can&rsquo;t, I can&rsquo;t just be out here talking my shit and living life sloppy, you know. So I really try to live my life in a way that is authentic to what I am putting out into the world because You know, we see it all day with people. Like, if it ain&rsquo;t real, we don&rsquo;t connect to it. So I think that that is why people really connect to what I&rsquo;m doing. But as far as the podcast, yeah, like, the podcast is a part of my business, but it&rsquo;s not everything, you know. Like, I, I see -- like I said, I see myself speaking. I see myself and actually doing it, you know. I&rsquo;m saying I see it, but I&rsquo;ve done it at least like 3 or 4 times, been on panels this year. Um, stepping back into music. How was that like? It was dope. Um, the first one was a little intimidating because I had never done it before, but once I get in the flow of talking, it just, it just feels natural. And I think something that I always remind myself is like, you were asked to come here for the knowledge that you have, so just be yourself. And it always works. It -- I feel like I always Stand out in the sense of people letting me know how authentic I am, how vulnerable I am. These are consistent words across all spaces. So it&rsquo;s just like, okay, just keep putting that into the world. Keep putting that into the world. And that is what I see myself as. That&rsquo;s where I see things going with everything that I&rsquo;m doing is me helping people reach Like inspiring people to reach vulnerability and authenticity, you know, um, and just living a more free life.</p>
+            <p id="s2235"><span class="wt-at" data-pagefind-ignore>37:15</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Cheers to that. Shout out to that. I think that&rsquo;s a phenomenal thing to be trying to bring more of to the world.</p>
+            <p id="s2242"><span class="wt-at" data-pagefind-ignore>37:22</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Yeah, appreciate that.</p>
+            <p id="s2245"><span class="wt-at" data-pagefind-ignore>37:25</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>It sounds like you&rsquo;re really creating yourself as a leader, uh, in terms of bringing that to the world too. I think that&rsquo;s phenomenal.</p>
+            <p id="s2252"><span class="wt-at" data-pagefind-ignore>37:32</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>I appreciate that, man. It&rsquo;s definitely a role that I&rsquo;ve always shied away from, but, um, I&rsquo;m accepting now in my life and just letting it be what it&rsquo;s gonna be, you know.</p>
+            <p id="s2264"><span class="wt-at" data-pagefind-ignore>37:44</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>I guess a question I have, I guess kind of looking at that, is what makes you -- what initially led you to feel like that&rsquo;s what you needed to bring to the world?</p>
+            <p id="s2273"><span class="wt-at" data-pagefind-ignore>37:53</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Uh, you know, I&rsquo;ve always -- I don&rsquo;t know, something in me has always just made me want to help people. Um, even when I was doing music, like, I -- like, like when I first, first started doing music, like, I had this idea of I wanted to inspire people. And I remember I put a number on it and I was like, I want to inspire at least 8 people. And, uh, putting such a low number on it made me realize like, wow, I was really thinking small back then. But the idea was still there of like, I want to inspire people, I want to help people. And that&rsquo;s just with everything I want to do. And it&rsquo;s funny because my friends, you know, in the spaces that they work in, they like -- we have this common idea of, you know, how can we contribute to people? And, um, you know, to -- I like -- sometimes mine feels the most challenging because I&rsquo;m doing it from the art stance as opposed to everybody&rsquo;s like a doctor or A therapist, uh, you know. But for me, it&rsquo;s like, how do, how do I get this out here? And it can be discouraging at times, but I think right now in my life, I&rsquo;m so clear on this is what I want to do and this is what I have to do. Like I said, it&rsquo;s inescapable. Um, it&rsquo;s the inevitable. So I just have to do it and figure it out. And that the figuring it out is starting to become the fun part. You know, the figuring it out was challenging before. Like, it, it was discouraging. But right now, figuring it out is -- it feels like the, you know, like I said, trying to beat the game. Trying to beat the game.</p>
+            <p id="s2374"><span class="wt-at" data-pagefind-ignore>39:34</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>No, that makes a lot of sense. I, I would say, like, similarly, I felt like that was like the figuring it out became a lot of the fun, uh, when it came to thinking about like, how do I want to make a living inside this entertainment space? Like, it&rsquo;s like I am creative. It&rsquo;s okay. Like, this is just me trying to see what, based on the moving parts around me, like, how can I bring value into a space where it doesn&rsquo;t currently see a need for me to be there? It&rsquo;s like, well, how do I see, like, how can I show up and make a difference? And so -- Yeah. I guess that kind of leads me to my next question, which is about, like you&rsquo;re saying, you&rsquo;re trying to figure out what&rsquo;s aligned with these underlying values of bringing value and inspiring people. to be their honest and authentic selves, be vulnerable. I know on your 100th episode you were talking about wanting to expand beyond just kind of like your show, and you&rsquo;re even talking about like speaking now and your ebooks. What do you see as like your larger, or I guess what&rsquo;s your biggest ambition in the space of like of content? So I really do see that you&rsquo;re on a path towards being somewhere great. And I mean, realistically, you already are somewhere that I think deserves recognition that it sounds like you really are proud of.</p>
+            <p id="s2445"><span class="wt-at" data-pagefind-ignore>40:45</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>I appreciate that. Um, my biggest ambition is to like help people be more confident and heal through audio. Um, this is -- audio has always been my medium, whether it&rsquo;s music, whether it&rsquo;s podcasting, you know, uh, just recording myself, you know, writing books and, and having audiobooks. I want to do all of this in, in, like I said, in this medium of audio. And, um, yeah, that&rsquo;s like my, my biggest goal right now, just to help people heal and be confident.</p>
+            <p id="s2483"><span class="wt-at" data-pagefind-ignore>41:23</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah, so you&rsquo;re, you&rsquo;re a healer.</p>
+            <p id="s2486"><span class="wt-at" data-pagefind-ignore>41:26</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>You know what, I&rsquo;m, I&rsquo;m accepting that. Um, I think it&rsquo;s a title that felt bigger than me, but You know, to some degree I am.</p>
+            <p id="s2499"><span class="wt-at" data-pagefind-ignore>41:39</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah, I mean, I think that&rsquo;s phenomenal. I mean, if you&rsquo;re even being willing to, I think, contribute to people, um, in a way that helps them find closure and healing, I think that&rsquo;s a -- it&rsquo;s not an easy undertaking.</p>
+            <p id="s2512"><span class="wt-at" data-pagefind-ignore>41:52</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s2515"><span class="wt-at" data-pagefind-ignore>41:55</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>So that&rsquo;s pretty fire. And I guess you&rsquo;re also doing like, uh, helping people to start their own podcast. You sent me a message about that. What&rsquo;s that? Yeah.</p>
+            <p id="s2526"><span class="wt-at" data-pagefind-ignore>42:06</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Um, so, you know, I&rsquo;ve, I&rsquo;ve been doing it a lot lately for free. Um, just -- and, and I&rsquo;m gonna be honest with you, like, yes, I&rsquo;m, I&rsquo;m going to start offering classes and also like one-on-one mentoring, but still, just me being me, if somebody reaches out to me and they ask me for advice, I&rsquo;m still gonna give them advice. I&rsquo;m not gonna be the person that&rsquo;s like, refer to the course. Like, I&rsquo;m still, I&rsquo;m still gonna give advice. But I would love if people supported what I&rsquo;m doing because like, I really feel like the information I have is valuable. And I, I&rsquo;ve looked at other people&rsquo;s like podcasting courses and one-on-one mentoring and the shit they offer, and it&rsquo;s so generic. It&rsquo;s so generic because nobody&rsquo;s telling people like, hey, you know, like the -- I noticed like one thing that I see with all these people is like I&rsquo;ll teach you how to monetize off your podcast. And that&rsquo;s some bullshit, you know? And I can say that&rsquo;s bullshit confidently because when I was doing music, people would try to sell those same things of like, this is how you make money, this is how you do this. And there&rsquo;s no one way of doing this shit. And I want to make that clear to the people I work with. And I also really just want to just show them how to be consistent. with what you&rsquo;re doing, how to believe in what you&rsquo;re doing, how to be confident in what you&rsquo;re doing, because that&rsquo;s what&rsquo;s going to sell it. All that other, like, bullshit, all the fluff that people sell in these, these projects and shit, I mean, it, it&rsquo;s not authentic. And another thing that I want to give to people is the opportunity to, you know, if you want, if you want me as a guest on your podcast, I will come sit on your podcast and talk all day. If you want to Talk to me about whatever. Like, once you&rsquo;ve done -- once you&rsquo;ve done business with me, I will be connected to you for as long as we connected, you know. So when people have questions and shit, I, I will respond to the best of my ability, you know. I&rsquo;m not gonna say that I&rsquo;m just gonna be able to answer every single question, but to the best of my ability. Like, I want to support the people that support me, so in any way that I could, I could give back to them I want to do that, you know.</p>
+            <p id="s2660"><span class="wt-at" data-pagefind-ignore>44:20</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Um, that makes a lot of sense. So what are some podcasts you&rsquo;ve been kind of providing some of this mentoring to? Like, who are some of those people?</p>
+            <p id="s2666"><span class="wt-at" data-pagefind-ignore>44:26</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Um, so there is a podcast called Tori Talks, uh, and she basically wanted to start a podcast, listen to my podcast, but wasn&rsquo;t sure where to start, how to start. Um, there&rsquo;s a lady who is a birth and death doula who was considering starting a podcast. And actually, I, I saw that she started like a, like a Zoom show. Um, I don&rsquo;t know if she went full into the audio format just yet, but she did start a show on Zoom, and it&rsquo;s cool to see that. Um, yeah, I just, I, I swear I have somebody reach out to me every day with a podcast question. And I answer it, you know, like whatever that question may be. Um, a lot of people that I find are trying to start podcasts but don&rsquo;t know where to start, or just don&rsquo;t have the motivation or the inspiration to start because it feels overwhelming. And I think that&rsquo;s my biggest thing is just breaking that idea down. Like, like I said, I&rsquo;ve recorded episodes on the phone before, still to this day. Like if my equipment doesn&rsquo;t work, I mean, at At some point this year, I recorded an episode on my phone. Mind you, I&rsquo;ve been doing this for 5 years and people probably think you get to a certain level and you&rsquo;re not supposed to do certain things, but I really want to dispel the myth of you have to have the most expensive mic, you have to have all of this to start. You don&rsquo;t need any of that to start. You can just start it. Don&rsquo;t go into this. And I think that&rsquo;s what I really want people to understand is Don&rsquo;t get into this expecting money out the bat, out the gate. It could happen. Don&rsquo;t get me wrong, it could happen. But just do it because you enjoy it. Do it because it&rsquo;s something new. You&rsquo;re excited about it. Have fun with this shit and just stay consistent. Like, that&rsquo;s the biggest thing is just staying consistent because I know it could be discouraging to have 5 listens, 20 listens. You know, but those go up as you grow. All that shit grows and it may go down at some point. Trust me, I&rsquo;ve seen my numbers drop drastically, go up, drop. It&rsquo;s all a part of the game and it&rsquo;s not going to stop me from doing it. So I don&rsquo;t want it to stop other people. You know, that&rsquo;s my biggest thing. I just don&rsquo;t want people to be discouraged because I know that this is a powerful tool that we all have access to. You know, there, there are no, you know, it&rsquo;s, it&rsquo;s not like music where there&rsquo;s like this big gap of like, you know, the, the celebrity and the, the regular person. Like with this, everybody can do this shit. You know, a kid that&rsquo;s in second grade could do this just like somebody 70 years old could do it.</p>
+            <p id="s2842"><span class="wt-at" data-pagefind-ignore>47:22</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>You know? Yeah, I think that&rsquo;s something that&rsquo;s exciting to me about it is this really didn&rsquo;t feel like a very intimidating space to get into.</p>
+            <p id="s2851"><span class="wt-at" data-pagefind-ignore>47:31</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Yeah,</p>
+            <p id="s2851-2"><span class="wt-at" data-pagefind-ignore>47:31</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>I felt like that&rsquo;s something that I thought somebody anywhere might enjoy listening to. It&rsquo;s like, why not throw my hat over the fence? Why not talk into my phone like you&rsquo;re saying? Like, like, if the conversation is not going to be recorded anywhere else and we don&rsquo;t have the $10,000 microphone, it&rsquo;s going to be off the phone microphone today.</p>
+            <p id="s2867"><span class="wt-at" data-pagefind-ignore>47:47</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>And as long as your quality -- your, your content is quality, and as long as you have something that is of value People will listen to that shit with static. They will listen to it however, you know. I listen to Earl Sweatshirt, and sometimes his music is by far the worst mix that I&rsquo;ve ever heard. Vocals sound terrible, but something keeps me going back because there&rsquo;s a feeling within the music. So, you know, even with this, there has to be a feeling that goes into it for people to really connect to it.</p>
+            <p id="s2904"><span class="wt-at" data-pagefind-ignore>48:24</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah, I hear that. When you want to, when you want to create something, the feeling behind it really needs to be, uh, one that you&rsquo;re going to be able to hold on to. It&rsquo;s going to be sustained, it sounds like.</p>
+            <p id="s2912"><span class="wt-at" data-pagefind-ignore>48:32</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s2913"><span class="wt-at" data-pagefind-ignore>48:33</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>So I guess the, the next thing I want to kind of get your attention on is like you&rsquo;re talking about not entering this thinking about the money. And I have to admit, as I entered this space, I definitely am thinking not so much, I guess, about the money, but about like how I can make a living in this space, which I guess is the money. There&rsquo;s not really a way to beat around the bush there, but I&rsquo;m thinking, like I talked to you about a bit earlier, it was like thinking about artists and producers and how I can help them to build a platform. And I know like when I was in high school, I used to love watching like Funk Flex freestyles and even -- Yeah. More recently into like a lot of New York drill music. And so they have On the Radar show with Gabe, who&rsquo;s the -- he&rsquo;s the host of that. So he kind of got me inspired to think about the freestyles and freestyling myself on my show. Um, and so I&rsquo;m kind of thinking, have you thought at all about, uh, the Web3 space and how that might be an opportunity to monetize your content, your community, or just even engage your community and audience in new ways?</p>
+            <p id="s2974"><span class="wt-at" data-pagefind-ignore>49:34</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Uh, so I&rsquo;ll be honest, I kind of looked into like -- so is Web3 like NFTs and stuff like that?</p>
+            <p id="s2983"><span class="wt-at" data-pagefind-ignore>49:43</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah, exactly.</p>
+            <p id="s2984"><span class="wt-at" data-pagefind-ignore>49:44</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>So I looked into it because I did want to get into it on some of my art, uh, because I, I do paint and stuff as well. But it was kind of intimidating for me, and I, I haven&rsquo;t looked at it since. Um, but yeah, it has crossed my mind because I, I do have some friends that do move in that space, and I would love to learn more about it. But it was, it was a little intimidating for me.</p>
+            <p id="s3009"><span class="wt-at" data-pagefind-ignore>50:09</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>That makes sense. Yeah, I think in Web3, at least in my perspective, it encompasses like NFTs, but also like the The community aspect is also what stands out to me a lot, is like new ways to engage your audience and even being able to tokenize like your community in the first place. Like there&rsquo;s this, this service protocol, it&rsquo;s called Zora. What they try and do is give different kinds of creators ways to engage their audience and see even who historically has engaged with you and your products. Like if you sell merchandise or if you sell artwork, like someone being able to buy a coin, which is the right to order one of your paintings.</p>
+            <p id="s3051"><span class="wt-at" data-pagefind-ignore>50:51</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Wow.</p>
+            <p id="s3052"><span class="wt-at" data-pagefind-ignore>50:52</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>It even creates like a secondary market. So if someone wants to buy your painting or the rights to the painting, you know, to have it shipped to them, put on their wall or whatever it might be, they could also hold on to it and be like, I actually believe Mike&rsquo;s gonna be huge in 4 years, and me and Mike can both profit off of me reselling. And so I take this, this, this piece into my home. That&rsquo;s not really where I want it to be. And I think that&rsquo;s something that I think is is really cool, particularly for artists where there&rsquo;s a lot of questions about how do I make a living? Even if I work 40 hours a week creating music that has this feeling behind it, if I can&rsquo;t get to an audience, how do I think about that? And so I think those are a lot of the -- The things that stand out to me is even just like being able to have your audience all be in one Discord server, you know, or people that are interested in supporting you. Like if you sell an NFT, it&rsquo;s just like, hey, I&rsquo;m selling this. So that, you know, if you really are someone who cares about me, this is what we&rsquo;re funding. You&rsquo;re gonna be in the credits for this project. You&rsquo;ll be like acknowledged as someone who contributed. And it&rsquo;s not necessarily about like that person making money on the back end, but investing and being able to enjoy what it is that you create in that and the outcome too. So I think it even creates like altruistic means for people to engage with artists and creatives that they really appreciate.</p>
+            <p id="s3128"><span class="wt-at" data-pagefind-ignore>52:08</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Yeah, that sounds really dope. And I&rsquo;m curious to know, how would you apply that to like the podcasting space?</p>
+            <p id="s3136"><span class="wt-at" data-pagefind-ignore>52:16</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>So that&rsquo;s something I&rsquo;ve been thinking about because as I look at like a lot of the go-to-market opportunities for musicians in Web3 now, there&rsquo;s like Sound XYZ and what they do is they&rsquo;ll let artists like release a song on their platform or release a project on their platform, I believe. And then they&rsquo;ll do like a big Twitter Spaces so they can have like a big album release party, listening party. And people can go and buy the NFT. And then after that, you know, some people who end up with like the golden egg NFT, they can comment on the song and like leave like a, like, hey, this is what I have to say about it until they sell their NFT. But there&rsquo;s a lot of difficulty ending up on these kinds of platforms like, like Sound XYZ. And then there&rsquo;s some platforms which is like Audius. Audius is kind of adjacent to SoundCloud, I would say, in the Web3 space, and it&rsquo;s free to upload your songs there. But there&rsquo;s not really like, and you can like make playlists on there and get rewarded for having people listen to your playlist. But a lot of that UI is still pretty new. The user interface, like it&rsquo;s like going on Instagram in like their first month kind of, I would say like it looks nice for like new internet. Yeah. But it&rsquo;s still very much under construction in terms of like what they want to be able to provide their users. And I&rsquo;d say even in terms of deciding who their primary audience or customer is, like, is it the audience? It&rsquo;s like, no, you&rsquo;re putting out music for free. So then is it the musician and kind of what&rsquo;s the value we&rsquo;re aiming to create for artists? But I think, like, once again, the challenge is, I think, getting artists to have a larger platform in these spaces. So at least for me in this podcast, I&rsquo;m thinking, what would it be like if like Sound XYZ had a protocol or like an opportunity for people that have podcasts to go about trying to scout talent? You know, like these are artists that I know that are in my local area, um, and they&rsquo;re looking to mint their NFTs. And of course, like, the platform cares about, like, thoughtful, intentional content, um, that&rsquo;s being uploaded to their platform. But I think if you can have podcasts to kind of fill that gap of trying to locate talent, then you can end up having your audience and those fans kind of be the advocates for who ends up being listed on these platforms. And so I think that I&rsquo;m thinking, like, I&rsquo;m kind of becoming a music journalist. And as I go about that, kind of thinking of the discovery value I bring to people who don&rsquo;t necessarily, I guess, to these services who are looking to serve artists primarily. And also thinking, well, if they need to onboard artists anyway, like how can we help them to increase that pace while also still doing due diligence of getting to know the people as people in the first place? And thinking about what it looks like to invest in them when it comes to their team or what they&rsquo;re missing right now in terms of being able to deliver on the kind of content they want to be creating in the first place. So that&rsquo;s kind of how I&rsquo;ve been thinking about it. And I think it even being that these services are oriented towards music and content creators in the first place, and particularly audio creators, musicians, I think this is just another avenue for like, once again, Sound XYZ or catalog or audience to engage in another kind of audio content, which isn&rsquo;t necessarily them creating content to onboard people, but rather having content creators kind of operating more on synergies. It&rsquo;s like, yeah, serving these different people and these different stakeholders in your enterprise kind of cooperatively deliver a larger ecosystem that, I guess, not funds, but funnels people into the positions you&rsquo;re looking to have people be in. So you&rsquo;re looking to have artists, you know, selling their NFTs, interacting with community through your platform and service. Like, people that have shows can kind of facilitate that. And so that&rsquo;s kind of how I&rsquo;ve been thinking about it. It&rsquo;s just like a new way to put musicians in contact with audiences and also educate them about how to go to market in the first place through these services, which are still, I would say, in a lot of ways doing their product-market fit and where there&rsquo;s really nobody that has like a An advan -- not necessarily an advantage, but that has, uh, demonstrated the potential to become like a dominant player in this space. Like, there&rsquo;s not a whole lot of cultural significance yet to Web3 and music, uh, when you&rsquo;re just talking to people out on the street.</p>
+            <p id="s3382"><span class="wt-at" data-pagefind-ignore>56:22</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Yeah, that&rsquo;s really dope. Yeah, I would, I would love to, uh, I would love to learn more about it.</p>
+            <p id="s3388"><span class="wt-at" data-pagefind-ignore>56:28</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>I think I have like a playlist that I&rsquo;ve made on YouTube of just different videos, like documentaries about blockchain and cryptocurrency. Currency. And I can send that over to you if you&rsquo;ll be looking for like a list of resources. But that&rsquo;s just kind of how I&rsquo;ve been, like documenting where I&rsquo;m learning things and just trying to self-educate as much as possible. So I really can ideally be in a space to help artists learn how they can make a living and not be in a position of thinking like, what else am I going to do? So I think there&rsquo;s people everywhere trying to learn how to make a living all around the world. And I think particularly places where people don&rsquo;t necessarily have much else they feel like they can offer besides their music. I think it&rsquo;d be cool to kind of get those people a place to really feel like they can do that, um, and feel like they are delivering on their purpose or what it is that excites them about life.</p>
+            <p id="s3434"><span class="wt-at" data-pagefind-ignore>57:14</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>That&rsquo;s really dope, man. And I&rsquo;m curious to know, how does that align with We Them Niggas?</p>
+            <p id="s3441"><span class="wt-at" data-pagefind-ignore>57:21</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>That&rsquo;s a good question. I think so. It&rsquo;s like a lot of times I feel like in time I&rsquo;ve listened to hip-hop, which has been really mostly since like 8th, 7th, 8th grade, into the present, whether it&rsquo;s more recently in D&rsquo;Thang, he&rsquo;s a Bronx rapper, and he was on the Radar show I was talking about, and he has a freestyle and he&rsquo;s like, I&rsquo;mma get out the hood, I&rsquo;mma do it, and he&rsquo;s just saying that. But I think that does speak to a larger sentiment where you have a lot of rappers or musicians who are Black and brown and are interested in making music because they see it as a way out of their current circumstances if they can become successful. And I think that there&rsquo;s a lot of really talented musicians who don&rsquo;t necessarily have the marketing wherewithal or like the knowledge of how to market themselves and social media and things like that to effectively make a living, not because their content and craft isn&rsquo;t where it needs to be, but because they aren&rsquo;t finding their audience in the most efficient way. And so I&rsquo;m thinking this will be a nice way for artists who people believe in to be able to engage their communities to promote them more. We Them Niggas is also, I think, about recognizing that this is our time. This is a time where all there is for us to do is put in the work. And if we&rsquo;re patient, what it is that we&rsquo;re building towards will come to fruition. And so I think I&rsquo;d like to be a path not just towards hope so much, but showing people that you can become a musician, but make it easier to be someone who&rsquo;s making a living as a musician and in a position to make the kind of difference that people say they wanna make. &rsquo;Cause I think like more than 60% of revenue generated in the music industry doesn&rsquo;t go to artists. And like how often are --</p>
+            <p id="s3541"><span class="wt-at" data-pagefind-ignore>59:01</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>That&rsquo;s crazy.</p>
+            <p id="s3541-2"><span class="wt-at" data-pagefind-ignore>59:01</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Artists being exploited, you know, Black and brown. And I think it&rsquo;s, it&rsquo;s a shame, you know, I&rsquo;ve, I grew up, I feel like watching Lil Uzi Vert and his stuff with DJ Drama, who I know is,</p>
+            <p id="s3552"><span class="wt-at" data-pagefind-ignore>59:12</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>yeah,</p>
+            <p id="s3553"><span class="wt-at" data-pagefind-ignore>59:13</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>involved in the Web3 space now. And I think also thinking about NBA YoungBoy and his, his drama with with his major label. And it&rsquo;s just, it&rsquo;s not new at all. But I think --</p>
+            <p id="s3564"><span class="wt-at" data-pagefind-ignore>59:24</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s3565"><span class="wt-at" data-pagefind-ignore>59:25</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>These platforms and Web3 services are an opportunity for independent artists in particular to make a living for themselves that&rsquo;s outside of the apparatus of the corporate music industry, which I think a lot of artists see as a potential trap and are very concerned about. And I think it even gives artists an opportunity, independent artists in particular, once again, to put a little bit more pressure on these larger streaming services and platforms, Apple Music and Spotify and Tidal, to meet demands and interests of artists. Because artists no longer, ideally, are no longer going to have to be dependent on these services and platforms for encountering a new artist. It&rsquo;s not going to be a Spotify playlist that determines whether or not you get heard. Maybe it is a completely different kind of advertising and interaction with your audience that that promotes it, like the network effects of having your audience be like 1,000 people who are like, yeah, I&rsquo;m gonna reshare this because like, I feel like I really do have a stake in this person, you know, being successful. Like, I put my money where my mouth is, and this is a project that I&rsquo;m excited about and an artist that I feel like is gonna make a difference for the people around them, including myself. And I think it just kind of lets their community align with you in completely new ways. And I think that when it comes to organizing around putting pressure on these larger industry individuals or corporations or entities. It&rsquo;s exciting to have these new spaces to congregate and to bring discourse between artists like ourselves into the public eye so the artists aren&rsquo;t feeling like, oh, my only way to do this music stuff is to align myself with a label and get signed and then post my music on Spotify and then quote unquote sell out. I don&rsquo;t think that&rsquo;s the idea.</p>
+            <p id="s3664"><span class="wt-at" data-pagefind-ignore>1:01:04</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s3664-2"><span class="wt-at" data-pagefind-ignore>1:01:04</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>anybody&rsquo;s ideal. And I think there&rsquo;s a lot of people that get overlooked when that is the normative practice around music. And that&rsquo;s kind of how I&rsquo;m thinking about it being related to the We Them Niggas podcast. It&rsquo;s just kind of like trying to vouch for a space that I think can put a lot more power in the hands of independent artists that look like myself, that don&rsquo;t look like me, but that feel like they want to make a difference and feel like what&rsquo;s standing in the way is being able to make a living while they do what they feel is their their, their passion, like their calling, and like where their power is, uh, represented at.</p>
+            <p id="s3695"><span class="wt-at" data-pagefind-ignore>1:01:35</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>That&rsquo;s what&rsquo;s up, man. I think you should definitely, uh, I think you should definitely share that, that information more with like the artists you connect with because that&rsquo;s really dope.</p>
+            <p id="s3704"><span class="wt-at" data-pagefind-ignore>1:01:44</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>No, I appreciate that, and I definitely intend to. I appreciate you letting me kind of bring that into this episode and share with you, of course, what my knowledge is.</p>
+            <p id="s3712"><span class="wt-at" data-pagefind-ignore>1:01:52</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>I said I, I want to know more about it, so I would love if you shared that playlist with me because I would love to Just look more into it.</p>
+            <p id="s3720"><span class="wt-at" data-pagefind-ignore>1:02:00</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>No, will do. And if you keep a look at it, what I retweet on Twitter too, I try and find like worthwhile threads with links to different resources. So just, you know, stay tapped in to what it is that I&rsquo;m putting out. Yeah. And you&rsquo;ll be in the know. That&rsquo;s my ambition with this whole project. So.</p>
+            <p id="s3736"><span class="wt-at" data-pagefind-ignore>1:02:16</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>I appreciate that.</p>
+            <p id="s3738"><span class="wt-at" data-pagefind-ignore>1:02:18</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Thank you. I appreciate that you appreciate that. I feel like not everybody does. So when things are aligned like this, I do, I do feel excited. I feel a tingling in my toes. That&rsquo;s what I say. And then I say, booyah. But thanks again so much for sharing with us today and connecting with me on the We Them Niggas podcast,</p>
+            <p id="s3759"><span class="wt-at" data-pagefind-ignore>1:02:39</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>man. Thank you for having me. This was fun. This was really dope.</p>
+            <p id="s3761"><span class="wt-at" data-pagefind-ignore>1:02:41</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>I appreciate that. It was a whole lot of fun. Do you want to let my audience know where they can find you,</p>
+            <p id="s3768"><span class="wt-at" data-pagefind-ignore>1:02:48</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>man? Y&rsquo;all can find me at The Art of Letting Go Podcast on Instagram, Facebook, um, Just_MikeBrown on Twitter, uh, The Art of Letting Go podcast is on all streaming services. Um, yeah, yeah, I&rsquo;m, I&rsquo;m out here in the world, you know. If you look for Mike Brown, it&rsquo;s a common name, but if it&rsquo;s tied to The Art of Letting Go, I&rsquo;ll be somewhere out there.</p>
+            <p id="s3793"><span class="wt-at" data-pagefind-ignore>1:03:13</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>And, uh, do you have any advice for myself going forward in this podcasting space as a Creative.</p>
+            <p id="s3802"><span class="wt-at" data-pagefind-ignore>1:03:22</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Man, I want to tell you to keep going, keep having fun with this. Um, be open to where it takes you. You know, just -- you may have an idea today, you may have -- you know, I, I had ideas of what my audience would look like, who was going to listen to my podcast. You never know who&rsquo;s connecting to you, so just stay open, keep sharing information. And I know I said earlier, don&rsquo;t worry about the money, but think about the money for sure. But don&rsquo;t let the money be the driving force of doing this because like I said, it will make you not want to do it because it takes a long time to get to it. Sometimes it takes a long time, sometimes you get to it fast, but don&rsquo;t let that be the driving force for doing this. Do it because you truly love it. All the extra shit that you want will come to you. I guarantee it.</p>
+            <p id="s3855"><span class="wt-at" data-pagefind-ignore>1:04:15</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>I appreciate that. That&rsquo;s an affirmation.</p>
+            <p id="s3858"><span class="wt-at" data-pagefind-ignore>1:04:18</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Yeah, man.</p>
+            <p id="s3860"><span class="wt-at" data-pagefind-ignore>1:04:20</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>All right, well, thank you so much. I intend to keep having fun first and foremost, and I can listen back through this if I ever need to, to recenter myself now.</p>
+            <p id="s3870"><span class="wt-at" data-pagefind-ignore>1:04:30</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Yeah, man, this was fun. I, I really appreciate you having me on here.</p>
+            <p id="s3874"><span class="wt-at" data-pagefind-ignore>1:04:34</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah, of course. I appreciate you reaching out once again. It&rsquo;s exciting that the even the name is connecting with people. Yeah, I&rsquo;m on the right path.</p>
+            <p id="s3882"><span class="wt-at" data-pagefind-ignore>1:04:42</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Look, you gotta have some merch, you know. I, I need a shirt that says We Them Niggas just as a reminder. So, you know, when you got it, I&rsquo;ll be your first customer.</p>
+            <p id="s3892"><span class="wt-at" data-pagefind-ignore>1:04:52</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>I appreciate that, Mike. I appreciate that so much. So there you go, everybody. Thank you for checking in to the We Them Niggas podcast today as I connect with Mike Brown, host of the Art of Letting Go podcast, great piece of content we can go check out. You heard us mention today his work with The Boys podcast. You said you have other podcasts you&rsquo;ve done some mentoring work around. It was her name, Trudy, is that correct?</p>
+            <p id="s3918"><span class="wt-at" data-pagefind-ignore>1:05:18</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Uh, Tori Talks. Tori Talks. Uh, also check out the Couple of Nobodies podcast. Uh, that&rsquo;s who I get a lot of inspiration from. But yeah, um, it&rsquo;s a lot of people out here doing a lot of Amazing work. So check them out.</p>
+            <p id="s3935"><span class="wt-at" data-pagefind-ignore>1:05:35</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s3936"><span class="wt-at" data-pagefind-ignore>1:05:36</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>And shout out to the Weed &rsquo;Em Niggas podcast. You got to check it out too. I mean, you&rsquo;re here already, but you know.</p>
+            <p id="s3941"><span class="wt-at" data-pagefind-ignore>1:05:41</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>But stay tuned in.</p>
+            <p id="s3943"><span class="wt-at" data-pagefind-ignore>1:05:43</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Mike Brown<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s3944"><span class="wt-at" data-pagefind-ignore>1:05:44</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Shout out to everybody out there building and creating something they&rsquo;re excited about. I think you&rsquo;re doing the right work, and we&rsquo;re here to remind you of that. So thanks for checking us out today. Booyah.</p>
+        </div>
+    </section>
+
+    <nav class="wrap wt-more" aria-label="More episodes">
+        <p>Before this: <a href="ep-05-colonialism-and-its-impact-on-the-modern-world-with-phil-chin.html">Colonialism and Its Impact on the Modern World, With Phil Chin</a> &middot; Next: <a href="ep-07-blackdave-on-being-a-creative-in-web3.html">BlackDave on Being a Creative in Web3</a> &middot; <a href="index.html">Every episode</a></p>
+    </nav>
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. We made the work published here in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+<script src="../wtm-player.js" defer></script>
+<script src="../wtm-core.js" defer></script>
+
+</body>
+</html>

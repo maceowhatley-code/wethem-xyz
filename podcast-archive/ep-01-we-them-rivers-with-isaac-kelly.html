@@ -1,0 +1,684 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Episode 1 of We Them, the podcast Maceo started in college, published 23 June 2022: We Them Rivers, With Isaac Kelly. The full transcript.">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/podcast-archive/ep-01-we-them-rivers-with-isaac-kelly">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="We Them Rivers, With Isaac Kelly | We Them EP 1">
+    <meta property="og:description" content="Episode 1 of We Them, the podcast Maceo started in college, published 23 June 2022: We Them Rivers, With Isaac Kelly. The full transcript.">
+    <meta property="og:url" content="https://wethem.xyz/podcast-archive/ep-01-we-them-rivers-with-isaac-kelly">
+    <meta property="og:image" content="https://wethem.xyz/og-site.png?v=2f44c9ed24">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Street journalism from around the world. On a Mission to Keep You In The Know.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/og-site.png?v=2f44c9ed24">
+    <meta name="twitter:image:alt" content="Street journalism from around the world. On a Mission to Keep You In The Know.">
+    <title>We Them Rivers, With Isaac Kelly | We Them EP 1, We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PodcastEpisode",
+  "name": "We Them Rivers, With Isaac Kelly | We Them EP 1",
+  "description": "Episode 1 of We Them, the podcast Maceo started in college, published 23 June 2022: We Them Rivers, With Isaac Kelly. The full transcript.",
+  "datePublished": "2022-06-23",
+  "url": "https://wethem.xyz/podcast-archive/ep-01-we-them-rivers-with-isaac-kelly",
+  "timeRequired": "PT59M",
+  "associatedMedia": {
+    "@type": "MediaObject",
+    "contentUrl": "https://podcasters.spotify.com/pod/show/wethemmedia/episodes/EP-1-We-Them-Rivers-with-Guest-Isaac-Kelly-e1kars6"
+  },
+  "partOfSeries": {
+    "@type": "PodcastSeries",
+    "name": "We Them",
+    "url": "https://wethem.xyz/podcast-archive/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  }
+}
+    </script>
+</head>
+<body>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li><a href="../portfolio.html" aria-current="page" title="the pieces we have written up, by project">Projects <span class="nav-d" aria-hidden="true">the pieces we have written up, by project</span></a></li>
+                <li><a href="../learn.html" title="from the people who use it">Learn crypto <span class="nav-d" aria-hidden="true">from the people who use it</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../people.html" title="who filmed what">Contributors <span class="nav-d" aria-hidden="true">who filmed what</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Funding <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<main id="main-content">
+
+<article class="wrap wt-piece">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="index.html">We Them, the podcast</a></li>
+            <li aria-current="page">We Them Rivers, With Isaac Kelly | We Them EP 1</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date]" data-pagefind-filter="kind[data-pf-kind]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="archive" data-pf-date="2022-06-23">We Them Rivers, With Isaac Kelly | We Them EP 1</h1>
+
+    <p class="wt-byline">Episode 1, published <time datetime="2022-06-23">23 June 2022</time>, 59 min</p>
+
+    <div class="wt-prose">
+        <p>An episode of We Them, the podcast Maceo started in college, where We Them Media began. It was published as audio
+        only. This page carries its full transcript so the words can be read, searched and quoted. It is not a
+        written piece. <a href="https://podcasters.spotify.com/pod/show/wethemmedia/episodes/EP-1-We-Them-Rivers-with-Guest-Isaac-Kelly-e1kars6" target="_blank" rel="noopener">Listen to it where it was published</a>.</p>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript" aria-labelledby="tx-h">
+        <h2 id="tx-h">Transcript</h2>
+        <p class="wt-note">Transcribed from the original audio. Speakers are told apart by the model, and a name
+        stands where the tape says who is speaking. <a href="../search.html">Search every transcript</a></p>
+        <p class="wt-note">These are the speakers&rsquo; own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s1"><span class="wt-at" data-pagefind-ignore>0:01</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Welcome to the We Them Niggas podcast. Today I have with me my first guest on our first ever episode of the podcast. I guess my first ever episode of the podcast. And my guest today is Isaac Helle. He is a musical artist, a writer, a college student, 22 years old, an important thinker who thinks he&rsquo;s got his finger on the pulse, and my roommate. And I&rsquo;m really excited to have him here with me today. I think he&rsquo;s an impressive artist. and someone I really enjoy speaking to, and I&rsquo;m excited that you guys get to hear him speak with me today. Uh, yeah, so thank you, Isaac.</p>
+            <p id="s36"><span class="wt-at" data-pagefind-ignore>0:36</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>It&rsquo;s such an honor to be here. Um, thank you so much for having me. It means a lot. I&rsquo;m from New York. Um, I was born in Washington Heights, lived there for about 8 years, and then I moved Upstate, about an hour away from New York City, to Tarrytown, New York. And that&rsquo;s where my folks still live and I still live. But now I&rsquo;m living in Lancaster with you and Drew, and it&rsquo;s been such a wonderful time.</p>
+            <p id="s73"><span class="wt-at" data-pagefind-ignore>1:13</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Literally such a blast. I&rsquo;m glad you feel that way too. And so how do you think, like, going from Like moving to upstate New York and the time before that, how do you think, like, what kind of music were you exposed to, I guess, really is what I was gonna ask.</p>
+            <p id="s85"><span class="wt-at" data-pagefind-ignore>1:25</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>I was exposed to a lot of different kinds of music. Both of my parents are musicians. My father is a bluegrass Americana folk singer and singer-songwriter, plays guitar, mandolin, mandola. And my mother was a classically trained opera singer. who was a professional opera singer in Montreal. She went to the Indiana Music School, which is one of the best music schools in the country. And -- Shout out to her. Yeah, go, go, go Ellen Paltiel, go Bill Kelly. I love them very much. Um, they both kind of influenced me a lot. I remember coming up, I was listening to a lot of Indian music, a lot of drones, harmoniums, circles, drum circles. And growing up in the Upper East Side of New York City, I was exposed to a lot of Soulja Boy, Sean Paul. Yeah. I remember singing a lot of that. Yeah, a lot of Spanish music as well.</p>
+            <p id="s161"><span class="wt-at" data-pagefind-ignore>2:41</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>So for this journey, so how do you cut this? How did you come to be around Indian music? Like, that&rsquo;s not really apparent to me.</p>
+            <p id="s168"><span class="wt-at" data-pagefind-ignore>2:48</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>My father is a yoga instructor and he enjoys Indian music and making classic ancient, you know, music. And it&rsquo;s a beautiful kind of music. So there were periods of time when we would go to retreats or some kind of meeting of musicians that just wanted to sit in a circle and play this very specific kind of music, which is -- there&rsquo;s a drone, which is just one note being held by one instrument. That could be a stringed instrument or a harmonium, which is a hand-powered organ. And that note acts as the kind of baseline and cosmic concrete grounding for everything else that goes on top of it. It&rsquo;s a good foundation, um, and there&rsquo;s a very meditative aspect to hearing just one long note being played, um, and I think that&rsquo;s -- I like that a lot.</p>
+            <p id="s235"><span class="wt-at" data-pagefind-ignore>3:55</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>That makes sense. And so your dad was doing bluegrass but also really into this older kind of music where this drum was very central? Do you see like parallels between this kind of, I don&rsquo;t know, drone and like what you listen to now?</p>
+            <p id="s249"><span class="wt-at" data-pagefind-ignore>4:09</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Yes, I think a lot of the music I listen to now has elements of drone-style mechanics of, of playing a song, but I think that In some ways, no, because specifically these types of songs have a drone throughout and it&rsquo;s just one note and it kind of keeps -- the only song I can really think of that I listen to regularly that does that, that&rsquo;s made within the last 50 to 100 years is Venus in Furs by the Velvet Underground, which is a really fantastic song. Just has this one mmm throughout the entire thing, and it&rsquo;s very, very cool and intense. I like what they were doing in the &rsquo;60s with -- I don&rsquo;t know if they had Indian influences, or I don&rsquo;t know where they got the idea to do that, but I think it was really cool that they were doing</p>
+            <p id="s316"><span class="wt-at" data-pagefind-ignore>5:16</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>that. Who do you say are artists that inspire you? Like, being around all these different things, like, who are the people that stand out? The creatives?</p>
+            <p id="s323"><span class="wt-at" data-pagefind-ignore>5:23</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>I feel like I started really acquiring mentors, just literary mentors and musical mentors. I can remember really loving Abbey Road. It was the first album that I ever bought on the iTunes Store.</p>
+            <p id="s345"><span class="wt-at" data-pagefind-ignore>5:45</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Who&rsquo;s that? What&rsquo;s that? I never heard</p>
+            <p id="s347"><span class="wt-at" data-pagefind-ignore>5:47</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>of that. It&rsquo;s a Beatles record. I think it&rsquo;s fantastic. It has so many great tracks. A lot of people claim that The White Album is their best album, but I would disagree. I would say that it&rsquo;s Abbey Road. Some people would say Revolver. I disagree. I say it&rsquo;s Abbey Road. I just think that the songs that flow into each other are amazing. It&rsquo;s about 8 or 9 that continue into one another and kind of are just incredible. And George Harrison has some times on that song and on that album, and that&rsquo;s kind of an unbeatable track. There are a lot -- Maxwell Silver Hammer, She Came in Through the Bathroom Window, Polythene Pam, Mean Mr. Mustard, Sun King. come together. It&rsquo;s just a -- it&rsquo;s a legendary album. It has so many good songs on it. Anyway, um, I, I was just going to mention a couple other people. Um, I really like Zora Neale Hurston. She wrote Their Eyes Are Watching God. Um, I think it&rsquo;s the best -- she has the best opening of any book I&rsquo;ve ever read before. I really like openings of books. I was doing reviews of the openings of books on TikTok for a while, and then -- Oh, that&rsquo;s cool. I stopped, yeah. I really like -- I think it&rsquo;s important how -- however something -- it&rsquo;s really important how you start something. Starting something is like so integral to whatever comes afterwards, and it&rsquo;s, it&rsquo;s like a catal -- it&rsquo;s the catalyst for why you&rsquo;re reading it and whatever comes afterwards. And, and there are some really, really, really, really just special, beautiful, mind-bending people out there that are able to craft a a beautiful and pertinent and penetrating introduction to their, whatever they&rsquo;re presenting to you. And I think it&rsquo;s the mark of a very powerful piece of art. The Bible, for example, has an amazing opening. Genesis. Genesis was one of my favorite openings of any book ever. But I think Zora Neale Hurston has it beat.</p>
+            <p id="s476"><span class="wt-at" data-pagefind-ignore>7:56</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>I agree with that.</p>
+            <p id="s477"><span class="wt-at" data-pagefind-ignore>7:57</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Yeah. I like David Foster Wallace. I like Charles Bukowski. I think I&rsquo;d -- in my writing, I take after those two a lot, as well as Zora Neale Hurston. And I&rsquo;ve been into George Clinton and Funkadelic recently. I think Maggot Brain is something that I aspire to create, some -- a body of work like that. I can&rsquo;t. yet, but someday that&rsquo;ll be, that&rsquo;ll be what I&rsquo;m trying to hit. I think it&rsquo;s one of the cleanest, best albums created. Why? Because it has -- it opens with Maggot Brain, which is just the epitome of, um, some soul and bearing of male -- a man&rsquo;s tragic -- it just sounds so raw and human and curated and beautiful. But then it doesn&rsquo;t hammer you over the head with that tragicness for the whole thing. It then goes into Can You Get to That and Hit It and Quit It and then You and Your Folks and then Super Stupid and then We&rsquo;re Back in Our Minds. And those 5 tracks -- are just groovy and crazy and just not really sad, just really like good, crazy, funky songs. And then it ends with Wars of Armageddon, which is like a 10-minute, um, reeling, horrific jazz fusion song that&rsquo;s, that&rsquo;s like really intense with like babies crying and horses being killed and, and like all this horrible pollute -- pollution. of, you know, mine. But then, you know, it&rsquo;s just kind of like you&rsquo;re just kind of in it for the time being. And I think it&rsquo;s cool that it opens with something really crazy and closes with something crazy. But in the middle of it, you&rsquo;re just allowed to kind of like be in that, be in that space where there&rsquo;s just beautiful music. And I don&rsquo;t know, I&rsquo;m still figuring it out right now. But for some reason, I know it&rsquo;s important. And I don&rsquo;t know. what they were doing in 1971, but whatever they were doing, they were killing it.</p>
+            <p id="s612"><span class="wt-at" data-pagefind-ignore>10:12</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>I hear you. How&rsquo;d you first hear Maggot Brain?</p>
+            <p id="s615"><span class="wt-at" data-pagefind-ignore>10:15</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>My friend played it for me on a pretty intense mushroom trip that I was doing. It was the first time I&rsquo;d ever taken mushrooms, and I just kind of blacked out hearing it. And it just kind of -- I couldn&rsquo;t -- I remember afterwards laying awake for another hour just listening to it on my phone. Trying to make sure no one was like being woken up from me listening to it again and again and again and again. But I listened to it like, like 5 more times after I heard it because it was just like the first, first thing that I heard. And that was like that, that really touched me somewhere deep and was just like such a journey. I love that.</p>
+            <p id="s659"><span class="wt-at" data-pagefind-ignore>10:59</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>So I guess you just talked a bit about like what you aspire to create. You talk about Maggie bringing you to that, at least the epitome of something for you. But how do you think about like why you want to create? Like aside from like what you want to create, how do you think about what it is that you&rsquo;re really aiming to create? Like what motivates you? I guess that&rsquo;s really what I&rsquo;m asking. Like when you sit down and I walk in your room and you&rsquo;re sitting at your computer doing like stuff on your computer on Ableton, like what draws you back every time?</p>
+            <p id="s684"><span class="wt-at" data-pagefind-ignore>11:24</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>I don&rsquo;t know, it&rsquo;s like if I don&rsquo;t create, I&rsquo;ll, I&rsquo;ll die. Or I&rsquo;ll not even die, it&rsquo;s not, it&rsquo;s not a bad feeling, it&rsquo;s just like I need to hear myself and hear -- know that I&rsquo;m there by creating something. And it&rsquo;s a good reminder that I&rsquo;m alive and I can be a part of the whole of the universe. So that&rsquo;s beautiful. I think that&rsquo;s important. I think it&rsquo;s important to understand that you&rsquo;re just like a vessel for something. Like, you&rsquo;re just a vessel for whatever came from whatever came before. You&rsquo;re carrying all of that, and you have to kind of walk as far as you can. You just keep walking, keep making, creating, saying, doing things. It doesn&rsquo;t really matter. You&rsquo;re just walking. And then when you can&rsquo;t walk anymore, you put down the torch and then the next person picks it up and they carry it for as far as they can. And, you know, it&rsquo;s your job. It&rsquo;s your duty to walk as far as you can in any direction that you can. Doing whatever you love, whatever your passion is, walk as far as you can in that passion. Work as hard as you can so that the next person in line has an opportunity to go even farther. And then I don&rsquo;t know where we&rsquo;re going, but it&rsquo;s better than just sitting on your ass.</p>
+            <p id="s787"><span class="wt-at" data-pagefind-ignore>13:07</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>You know where you&rsquo;re going?</p>
+            <p id="s789"><span class="wt-at" data-pagefind-ignore>13:09</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>I&rsquo;m going to die. I know that. I&rsquo;m going to disappear and resume a disassembled state, but it&rsquo;s like a, like a fire, like kind of letting it burn throughout, just trying to, just trying to burn bright or burn, burn however I&rsquo;m supposed to burn. And then --</p>
+            <p id="s812"><span class="wt-at" data-pagefind-ignore>13:32</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>But like, what do you want?</p>
+            <p id="s813"><span class="wt-at" data-pagefind-ignore>13:33</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>I want to be happy more than 50% of the time of my life. I think that&rsquo;s a good goal. Um, no, it&rsquo;s not a good goal. That&rsquo;s like very depressing. I don&rsquo;t know what the goal is. I&rsquo;d like to -- I&rsquo;d like to make something that someone comes along later and is like, oh, that&rsquo;s the thing. That&rsquo;s how -- that&rsquo;s how you do it. That&rsquo;s -- he had something -- he had something figured out, and I want to learn about it or take -- take after it and just give.</p>
+            <p id="s854"><span class="wt-at" data-pagefind-ignore>14:14</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>That reminds me, like, I, you know, I listen to a lot of New York drill music right now, and I was talking like about the song City of God&rsquo;s Warriors today, uh, with, with, with, with some other friends and just like saying something I really appreciate about it is like Alicia Keys is without a question like the best vocalist, like most highbred vocalist I&rsquo;ve heard touch a drill beat like since listening to Almost Exclusively drill music, at least most days, for like more than 5, 6 months now. And like, I think that&rsquo;s like the most impressive thing about it. It&rsquo;s just like, oh, this is something -- this is a way someone could do it. Like, it was like a remix, like some B-Love song came out with A Boogie, and I was like, wow, this is like fantastic. Like, I don&rsquo;t like the lyrics at all, but it&rsquo;s just like, like the notion that it&rsquo;s even possible and this is what it can sound like, it&rsquo;s like a concept even in itself that&rsquo;s like exciting. Uh, for me, like, I wasn&rsquo;t -- like, I guess the main reason I was listening to so much drill music is because, like, there&rsquo;s so much, like, room for novelty that it&rsquo;s like I can be continually amazed by, like, just what people are doing. And so I think that makes a lot of sense to me.</p>
+            <p id="s917"><span class="wt-at" data-pagefind-ignore>15:17</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>What do you feel like you -- what does it mean to have Alicia Keys on a song like that to you?</p>
+            <p id="s925"><span class="wt-at" data-pagefind-ignore>15:25</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>I think it just means it&rsquo;s music, you know? Like, I don&rsquo;t think -- I don&rsquo;t really think about it. I guess if I am thinking about it though, it&rsquo;s like drill music is mostly like in New York, like these young guys and young women, uh, from -- from just people from the Bronx, people from the Queens, people from Brooklyn. Uh, I like Shawnee Bin Laden, B-Love, Kay Flock, uh, and there&rsquo;s other people as well. But I like Fabio, you know, I love Fabio Foreign. But I think -- And of course you have to mention Pop Smoke. I guess we&rsquo;re gonna bring up the conversation. 917 racks out here. as well. Rax, Rax, Rax, can&rsquo;t forget the guy.</p>
+            <p id="s960"><span class="wt-at" data-pagefind-ignore>16:00</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Mommy Dead, check it out.</p>
+            <p id="s962"><span class="wt-at" data-pagefind-ignore>16:02</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Check it out, facts. But I think like, uh, it&rsquo;s mostly young people, you know. I feel like it&rsquo;s like niche music. I feel like Alicia Keys though is a completely different name. Kanye West is a completely different name. They just have completely different reputations than like these adolescent people, uh, these adolescents really, these kids. And I think that that&rsquo;s, that&rsquo;s, that&rsquo;s what excites me, I guess. That&rsquo;s what it means. It means that it&rsquo;s like, it&rsquo;s It&rsquo;s not just music for kids or music for people of one background. It&rsquo;s like, uh, it&rsquo;s a place for us to, to put the stories, uh, that mean the world to us. It&rsquo;s a place that we can say anything we want, and it&rsquo;s a place where anybody can do that. I think Alicia Keys is just like a new face, a new face in the space, and that&rsquo;s exciting. I guess that&rsquo;s how I think about it. But I don&rsquo;t know, it&rsquo;s definitely songs I like a lot more than like, uh, there&rsquo;s parts of this song I like a lot more. I like Kanye&rsquo;s verse. I think it&rsquo;s like, you hear Kanye rapping With New York rappers. I think it&rsquo;s exciting to hear him just talking about how he&rsquo;s feeling in like an honest way. I feel like a lot of what&rsquo;s going on is kind of scary in terms of like the way that he&rsquo;s going about like dealing with like his divorce from Kim and like the video for Eazy, for example, and like threatening this guy. I feel like, you know, it&rsquo;s very evidently inappropriate behavior. It&rsquo;s like violence, like to be threatening him just because you can&rsquo;t threaten her. It&rsquo;s kind of like -- I don&rsquo;t know, it&rsquo;s a way to go around it, which I definitely don&rsquo;t approve of. Um, but I think it&rsquo;s exciting to be able to hear him talking about where that&rsquo;s coming from, and he&rsquo;s not doing it really anywhere else besides his music where he feels really comfortable. So I think it&rsquo;s exciting to, to have his perspective. I think it kind of humanizes it, but it also, uh, for me, it&rsquo;s also reassuring that he&rsquo;s thinking about it too, you know, and taking a critical stance on like what he&rsquo;s doing and why, and putting himself around people that are listening to him as well. So I think that&rsquo;s just as important as anything. Yeah. being a Black guy in a world where the people around you in power positions oftentimes are not that, and presumably not equipped to sympathize with what that means. So I think that&rsquo;s really what it means to me. It just means that there&rsquo;s a lot going on in the, in the new original space and that Kanye&rsquo;s a part of it.</p>
+            <p id="s1079"><span class="wt-at" data-pagefind-ignore>17:59</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Whoever -- I feel like whenever they need a crazy New York banger, they call -- they, they have Alicia Keys on speed dial and they&rsquo;re like, Excuse me, Miss Keys, the jet&rsquo;s waiting. They fly her in, she does her verse. She&rsquo;s really good. I like her a</p>
+            <p id="s1098"><span class="wt-at" data-pagefind-ignore>18:18</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>lot. Yeah, I&rsquo;m excited for -- yeah, she&rsquo;s really good. She did a phenomenal job. I would agree with that. I&rsquo;m really excited for, uh, for this Fabio Foreign album that Kanye is executive producing as well. It&rsquo;s called Bible, and I think it&rsquo;s cool that Kanye&rsquo;s doing that for him. It&rsquo;s really the first time we saw them connect was on on Donda when he did Off the Grid with Kanye with Playboi Carti as well. Pretty exciting, honestly. Like, I was -- I fucking love that song. But I think it&rsquo;s interesting that you say that, you point out that like, uh, Alicia Keys is the vocal on that song as well, because that&rsquo;s on -- that&rsquo;s on, uh, it&rsquo;s on Jay-Z&rsquo;s Blueprint 3. So maybe this Bible was like the Blueprint 4 of sorts.</p>
+            <p id="s1135"><span class="wt-at" data-pagefind-ignore>18:55</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>I like -- I think Kanye is doing a very smart thing where he&rsquo;s, he&rsquo;s constantly connecting with new artists in the, in the scene, um, whether it be Lil Pump, Playboi Carti, Favi, Weeknd. I mean, The Weeknd doesn&rsquo;t really count as a new up-and-coming artist, but he did it with Frank Ocean on Watch the Throne. No one really knew who Frank -- I mean, Frank Ocean was at that time, and he&rsquo;s on the, he&rsquo;s on the opening track of that. I think Kanye, Kanye is a An important thinker that has his finger on the pulse. That&rsquo;s -- I think I would like to take after that by involving myself heavily with new talent that I see, or just constantly trying to expand my scope of what I can reference.</p>
+            <p id="s1188"><span class="wt-at" data-pagefind-ignore>19:48</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>I guess, yeah, like, who -- how do you characterize Kanye&rsquo;s production style? When you look at like -- I&rsquo;m not a producer, I really have no idea like how to think about like technical terms. How do you think about him? How do you think about what he&rsquo;s done as a producer, as a musician, as a songwriter?</p>
+            <p id="s1204"><span class="wt-at" data-pagefind-ignore>20:04</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>It&rsquo;s extremely musical. He&rsquo;s a, he&rsquo;s a very musical person. He just has, um, all of his production, his drums, his adaptation of soul music. I&rsquo;m a huge fan of soul music. And it&rsquo;s -- I think it&rsquo;s interesting that he probably grew up around that more heavily than I did. I think his production style is unique and soulful, but also punchy and always kind of in its own lane. It is the best thing at that time. It&rsquo;s just whatever he wants to do, he always kind of is at the epitome of that sound. Maybe some people would argue not, but I think wherever you look at -- I mean, College Dropout is just a different kind of sound that I don&rsquo;t think anybody was expecting or hearing at that time, the lyrics and the production. But it&rsquo;s not really what I would call -- A hip-hop album. Visionary, because it didn&rsquo;t -- nothing after that really took on that sound. Late Registration, not either. But Graduation. Graduation, 808s&amp; Heartbreak, Yeezus. Those 3 at least were extremely visionary and extremely -- the foresight is -- I don&rsquo;t know if it&rsquo;s foresight or just how impactful they were. But they kind of -- each individual project and sound that he had curated would come to be a very popular form of music production in the years afterwards. I think My Beautiful Toasted Fantasy is kind of a college dropout-esque -- it&rsquo;s very quintessentially Kanye. Yeah. West and not predictive, or as predictive as those three that I named before. But doesn&rsquo;t mean that they&rsquo;re any less good. I think people can; they are they are good due to their originality and authentic nature. I think he does really a great job at being himself. And putting that work out there.</p>
+            <p id="s1354"><span class="wt-at" data-pagefind-ignore>22:34</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>I hear that. What about other favorite producers? Like, who are your favorite producers beyond Kanye West and like the impact he&rsquo;s made?</p>
+            <p id="s1361"><span class="wt-at" data-pagefind-ignore>22:41</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Mike Dean. Really love Mike Dean, who Kanye works closely with. Um, Mike Dean is this like old white guy. Sorry, Mike Dean, if you ever hear this. You&rsquo;re not that -- you&rsquo;re old to me, but I, I, um, It doesn&rsquo;t matter how old he is. He was -- he&rsquo;s just like, just an insane -- he&rsquo;s like an old blunt, constantly smoking blunts, uh, Houston. I think he&rsquo;s from Houston. I know he&rsquo;s from Texas. Um, he was doing -- he did -- he -- the first thing he ever did, I think the first thing I can find on Spotify -- he probably was doing shit before this, but the first thing I could find on Spotify was Bushwick Bill. Um, who was this? Like this, like I think he was a midget. He was like a 4&rsquo;5 or smaller rapper from Bushwick in Brooklyn. He&rsquo;s fire though. He&rsquo;s like really tough. I don&rsquo;t love the production on that album per se, but it&rsquo;s crazy that he goes that far back. I think it was like late &rsquo;80s or like early &rsquo;90s. I think Bushwick Bill is really funny. And pretty cool. And then Mike Dean has this album called 4/20 and 4/22, which are like psychedelic electronic symphonies that I think are really crazy. Really, really crazy music. Yeah, like he&rsquo;s kind of like a modern-day composer of like a blend of -- like he just, he describes it as like a long Pink Floyd outro, but I would say it&rsquo;s like a, like, um, a modern Beethoven -- not Beethoven, but, you know, complicated music, complex music, beautiful synthesizers, and, and using, using the modern technology and to, to kind of blend a sound. That&rsquo;s really cool.</p>
+            <p id="s1479"><span class="wt-at" data-pagefind-ignore>24:39</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah, and create something intricate, it sounds like, too.</p>
+            <p id="s1481"><span class="wt-at" data-pagefind-ignore>24:41</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Yeah, but he&rsquo;s like also a hip-hop producer. Like, he&rsquo;s -- he produces beats that are just insane, made You know, Hold My Liquor. Um, what&rsquo;s that other shit? Um, Timmy Turner.</p>
+            <p id="s1494"><span class="wt-at" data-pagefind-ignore>24:54</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>I&rsquo;m a big Panda, big Desiigner fan.</p>
+            <p id="s1496"><span class="wt-at" data-pagefind-ignore>24:56</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Big Desiigner fan.</p>
+            <p id="s1497"><span class="wt-at" data-pagefind-ignore>24:57</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Desiigner&rsquo;s making a comeback, just wait on it. I&rsquo;ve been saying it for more than 3 years and I stand by it to this day.</p>
+            <p id="s1502"><span class="wt-at" data-pagefind-ignore>25:02</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>I think Desiigner has been unfairly slept on by people like me. Um, I thought Timmy Turner was crazy when it came out. I thought Panda was insanity. I think he&rsquo;s insane, but he&rsquo;s actually quite versatile, which I&rsquo;ve learned through you. Um, and listening to more of his deeper cuts, he can really rap. And it&rsquo;s, it&rsquo;s strange because his public persona comes off as like very stupid, but he&rsquo;s not. Like, when he -- I was hearing him rap and I was like, this is like a -- I&rsquo;ve never heard him speak like this in any interviews, in any public -- I was like, what? Desiigner? This is Desiigner? I was just like, oh shit, like You really have to be careful with like the limited amounts of things you see about people, or like you see a person once and it&rsquo;s like you make such broad sweeping assumptions and it&rsquo;s dangerous.</p>
+            <p id="s1561"><span class="wt-at" data-pagefind-ignore>26:01</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah, and it&rsquo;s easy too.</p>
+            <p id="s1562"><span class="wt-at" data-pagefind-ignore>26:02</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s1562-2"><span class="wt-at" data-pagefind-ignore>26:02</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>But you&rsquo;re saying, so Mike Deeney has these electronic psychedelic symphonies. What are they called? I think we should add these to our libraries. Shout it out.</p>
+            <p id="s1569"><span class="wt-at" data-pagefind-ignore>26:09</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Electronic, uh, they&rsquo;re called 420 and 422. Um, really crazy music. Pretty, pretty, pretty cool, different. If you like, if you like it, you&rsquo;ll like it. If you don&rsquo;t like it, you might find it pretentious or, or, um, or, um, a bit long. But I think it&rsquo;s crazy. I think he&rsquo;s a producer to look out for. I like Molly Raw. Molly Raw makes a lot of Lil Uzi&rsquo;s beats. became really famous in like 2016. I really slept on that, Lil Uzi Vert&rsquo;s The World. My friend Jordan was telling me about that. I remember him coming up to me on the bus and being like, yo, this album is crazy. You have to listen to this. And I was like, this is garbage. And then who knew that like 4 years later I&rsquo;d be like riding on my bike with my speaker blasting Canadian Goose, like, like just every, every day on my way to work. just blasting Canada Goose. That</p>
+            <p id="s1628"><span class="wt-at" data-pagefind-ignore>27:08</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>was me in 2020.</p>
+            <p id="s1629"><span class="wt-at" data-pagefind-ignore>27:09</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>2018, 2019. I don&rsquo;t know. But like, just that whole album is so good and probably the best Uzi album, in my opinion.</p>
+            <p id="s1638"><span class="wt-at" data-pagefind-ignore>27:18</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>I don&rsquo;t disagree with that.</p>
+            <p id="s1639"><span class="wt-at" data-pagefind-ignore>27:19</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Maybe --</p>
+            <p id="s1641"><span class="wt-at" data-pagefind-ignore>27:21</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Grab the Wheel is one of my favorite songs.</p>
+            <p id="s1643"><span class="wt-at" data-pagefind-ignore>27:23</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Yeah. Um, Grab the Wheel. Canadian Goose, High Roller, Money Longer, Ramona.</p>
+            <p id="s1655"><span class="wt-at" data-pagefind-ignore>27:35</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah, Scott and Ramona.</p>
+            <p id="s1656"><span class="wt-at" data-pagefind-ignore>27:36</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Scott and Ramona. That one&rsquo;s really weird.</p>
+            <p id="s1659"><span class="wt-at" data-pagefind-ignore>27:39</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah,</p>
+            <p id="s1660"><span class="wt-at" data-pagefind-ignore>27:40</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>um,</p>
+            <p id="s1661"><span class="wt-at" data-pagefind-ignore>27:41</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>it&rsquo;s cool though. It&rsquo;s a cool sound.</p>
+            <p id="s1662"><span class="wt-at" data-pagefind-ignore>27:42</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Hit It From the Back. That one&rsquo;s good too.</p>
+            <p id="s1665"><span class="wt-at" data-pagefind-ignore>27:45</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Pretty hilarious. Yeah, it is a good song.</p>
+            <p id="s1670"><span class="wt-at" data-pagefind-ignore>27:50</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Crying in My Arms. That&rsquo;s a good one.</p>
+            <p id="s1673"><span class="wt-at" data-pagefind-ignore>27:53</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah, you just don&rsquo;t say the N-word, huh?</p>
+            <p id="s1674"><span class="wt-at" data-pagefind-ignore>27:54</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>I don&rsquo;t like saying it. I, I, I, I, yeah, I just, I just don&rsquo;t like saying it. I think it causes problems. I don&rsquo;t know.</p>
+            <p id="s1689"><span class="wt-at" data-pagefind-ignore>28:09</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Does that mean it scares you?</p>
+            <p id="s1690"><span class="wt-at" data-pagefind-ignore>28:10</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>No, I just, I feel like it really upsets people and it&rsquo;s such an unnecessary thing that I could just like not say. And there&rsquo;s no skin off my back for not saying it. that keeps the peace in some way. It keeps -- it&rsquo;s just respectful in my opinion to like be careful around words like that that are like important for some. You just never know. And if you never know, be really careful. So.</p>
+            <p id="s1722"><span class="wt-at" data-pagefind-ignore>28:42</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>That makes sense. I was just, you know, asking because here you are quoting these like 2 words between the N-word and Lil Uzi Vert songs.</p>
+            <p id="s1731"><span class="wt-at" data-pagefind-ignore>28:51</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>I honestly just forgot. I, I honestly just forgot the --</p>
+            <p id="s1734"><span class="wt-at" data-pagefind-ignore>28:54</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>might as well be the rest of the lyric.</p>
+            <p id="s1736"><span class="wt-at" data-pagefind-ignore>28:56</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>It&rsquo;s like a radio edit.</p>
+            <p id="s1738"><span class="wt-at" data-pagefind-ignore>28:58</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah, yeah. But no, I like that album a lot actually. I remember 2016, I was working as a lifeguard in the summer. I rode my bike to work and I listened to that whole album there and back every single time, rain or shine. It&rsquo;s just me and my bike listening to this album and listening to Lil Big Pac, uh, Kodak&rsquo;s mixtape that summer as well. I would say that was definitely a time. Remember when Too Much Sauce came out, DJ Esco? I was like, dang, this guy Uzi&rsquo;s just really running the whole city right now. It was really a wild time. I think that&rsquo;s why you were like, this is garbage. I think that&rsquo;s a crazy -- that&rsquo;s a hot take. A hot take.</p>
+            <p id="s1775"><span class="wt-at" data-pagefind-ignore>29:35</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>At the time, I don&rsquo;t know, I just never -- I don&rsquo;t think I had a frame of reference at that point to really understand it. It took me a long time to just hear the -- it took me making that kind of music or that kind of beat or that structure and understanding what goes into making that and what -- why it&rsquo;s good and why it&rsquo;s interesting.</p>
+            <p id="s1801"><span class="wt-at" data-pagefind-ignore>30:01</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Um, just tell us about that. Like, what was that like? Like, why is it interesting? Because I still haven&rsquo;t done that.</p>
+            <p id="s1810"><span class="wt-at" data-pagefind-ignore>30:10</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>It&rsquo;s like, it&rsquo;s such a different kind of music than anything that&rsquo;s come before. It&rsquo;s like, it&rsquo;s these like fast, like it&rsquo;s, it&rsquo;s like the, like a snare. When you play a snare in, in like an acoustic snare, not an electronic like WAV file or something, um, that has its own or like independent, um, cosmically random sound that could be anything. Like the way you hit it, you could hit it, you could never hit it the way you hit it that time, that place in the universe, that, that in that second. But having these like these stock drums are like kinds of it. Okay, so the first, this is really interesting, the Bee Gees, um, Stayin&rsquo; Alive, that song. So Stayin&rsquo; Alive is the first, I think, if I&rsquo;m not wrong, it&rsquo;s the first. So when you&rsquo;re, when you&rsquo;re like sampling now, there&rsquo;s a terminology which is like chopping a sample up, which is like taking a piece of, of a piece of music, isolating that part of it, and then chopping chopping it out of the whole and then using that in parts of the, you know, to create something new. You chop it up and then create, create a new sound. And the Bee Gees, um, when they were going to record Staying Alive, their drummer -- I forget the reason why, but he had to leave. Um, he wasn&rsquo;t there for the sound, and then they were considering getting a new drummer, but they didn&rsquo;t want to. But they had the this piece of tape, this like -- they had a tape of a drum solo, and what they did is literally chopped the sample up, where they literally chopped -- they cut the tape, um, and con -- yeah, they, they chopped up, uh, uh, the, the recording tape of this, of this drum loop, um, and they made a loop. They, they, they, they physically connected the tape and chopped the sample. And that&rsquo;s why it has this like washing machine beat. Like, it&rsquo;s like -- It&rsquo;s just like a -- it&rsquo;s like it sounds perfect, almost perfect. And that&rsquo;s what -- that&rsquo;s the quintessential interesting part of a lot of the production of a lot of hip-hop is that it&rsquo;s perfect. It&rsquo;s that you have -- we have these intricate systems where like you can make the perfect sound however you want it to sound. And I think that&rsquo;s like the perfection of like the snare hitting on this thing. And like you can like tweak how you want that thing to sound to the most finite degree. And the people that really care about that kind of thing refine their sound to the point where they&rsquo;re creating the exact reproductions of what they have in their heads. Yeah. And if you know your instrument, which is your digital audio workspace, to these people down to some of these people, I&rsquo;m sure there are multi-instrumentalist producers. But, you know, that&rsquo;s also an instrument is being able to, you know, bring forth what&rsquo;s in your head. So that&rsquo;s what I think is interesting. It&rsquo;s the perfectionist element to this kind of music that&rsquo;s -- Really cool. Combined with a kind of freeform element of any kind of spoken word rap or, you know, singing or over kind of like perfected beats. I think that&rsquo;s very cool.</p>
+            <p id="s2034"><span class="wt-at" data-pagefind-ignore>33:54</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>So like, so far in this interview you&rsquo;ve talked a bit about, uh, like the Maggot Brain album. You talked about Mike Dean. You talked about the Bee Gees now as well. Molly Rawl, your dad doing some folk bluegrass music, as well as these drones, Toronto Wings opera music. How do you think, like, all these people kind of shape your production style when you look at, like, the way that you approach, like, music?</p>
+            <p id="s2058"><span class="wt-at" data-pagefind-ignore>34:18</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>The way that I approach music is that all of God&rsquo;s creations are beautiful, and I don&rsquo;t really discriminate against musicians or music. I remember we were talking to a friend recently and he was saying that he&rsquo;s done being negative to musicians, he&rsquo;s trying to be more positive. And I think that&rsquo;s really healthy. And you want to play a line, in my opinion, you play a line between being objective and overcritical and also being supportive and understanding that everybody&rsquo;s you know, has like a beauty to bring forth. But that beauty can be refined and improved upon to some degree. But improvement, I don&rsquo;t know what that word even means in music. Like, I just like, after all here, as of yet in my life, after all this time, just kind of understanding more and more about what music can be and what it means and why it&rsquo;s important. It&rsquo;s expression, and expression is so important to the survival of our species and the continuation of beauty, if that -- To beauty, like what -- Beauty is a beautiful thing, and it&rsquo;s an important thing to sustain and remind ourselves that, you know, partake in the world and its juice and suck it dry and then spit it back out. And that&rsquo;s the whole shebang. That&rsquo;s the whole gamut. Suck it up, spit it out. I don&rsquo;t know, try and, try and get in the mix as much as you can until you have to leave, until you&rsquo;re pulled off stage.</p>
+            <p id="s2183"><span class="wt-at" data-pagefind-ignore>36:23</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>I hear it. Until it&rsquo;s curtain call, closing time. So what are you working on now? Like, tell us about, like, where is -- you go by Isaac the Young Man, that&rsquo;s your producer tag. Is that something you&rsquo;re still going by?</p>
+            <p id="s2200"><span class="wt-at" data-pagefind-ignore>36:40</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>I don&rsquo;t know, it&rsquo;s -- it -- I thought it was funny. I thought it was cool. I was looking for a catchy, like, memorable name, and I thought, like, um, they&rsquo;re like Yung Gravy, Young Thug, Young -- and I thought Young Man, like, like a young man, and that, that would be really funny. It&rsquo;s like, that&rsquo;s an actual thing. Um, like, it&rsquo;s -- it was like, uh -- I kept hearing it over and over again, like, young man, young man, young man. And then I was like, I&rsquo;m not a young man. I don&rsquo;t want to be a young man. How long am I going to be a young man for? Like, is that how I want people to be like, oh yeah, it&rsquo;s the young man? I was like, I don&rsquo;t know. But it&rsquo;s like old man, middle-aged man. Maybe I&rsquo;ll change it. Yeah, with every, every year it&rsquo;ll be like less young man or 22-year-old man. But, um, that&rsquo;d be kind</p>
+            <p id="s2256"><span class="wt-at" data-pagefind-ignore>37:36</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>of cool. It&rsquo;s like, how do you know what part of his life he was in? Well, if you look at the producer tag, you can tell us exactly how old he was.</p>
+            <p id="s2263"><span class="wt-at" data-pagefind-ignore>37:43</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>I think producer tags are fascinating. It&rsquo;s like a, like a union, really. It&rsquo;s, it&rsquo;s weird that like There are people -- they have to put their, like -- well, it&rsquo;s good. I think it&rsquo;s cool that artists allow these producers to, like, let people know who they are or they&rsquo;re connected with them. And I think it&rsquo;s a -- it speaks to the interconnectedness of this genre. That&rsquo;s, that&rsquo;s cool. It&rsquo;s like not a band anymore. It&rsquo;s not a lot of band, um. It&rsquo;s like individuals collaborating in this like different kind of way that is kind of unprecedented at any time in musical history. You wouldn&rsquo;t be able to send a file across the country and get it back a second later or, you know, create something across the country. Yeah. You&rsquo;d have to like get together and organize it. But here you can make a track, have it sit in your library for like 5 years, DJ Khaled probably had like -- I don&rsquo;t know, he probably has like 8,000 beats in his library. And just like maybe, you know, 10 years from now, someone hops on like a 15-year-old DJ Khaled beat and it sounds crazy. That&rsquo;s so cool. That&rsquo;s so insane. Like -- Yeah, that&rsquo;s crazy. Like they&rsquo;re just in the bank, like from the future to the past. Like you can have like the past coming to the future. and the future coming into the past and all these sounds that are kind of like colliding and congealing into something new. I used to think sampling was kind of cheap, a cheap trick, until I got into it and I love doing it and I think it&rsquo;s really different. Like sampling any -- when you&rsquo;re playing guitar, you&rsquo;re sampling the instrument. You&rsquo;re sampling, you&rsquo;re not like creating that sound. You&rsquo;re using a format from which you create your palette, and it&rsquo;s all about where you go with the, the source code or this, the input, and you kind of take that with your own, whoever you are, whatever you want to make.</p>
+            <p id="s2407"><span class="wt-at" data-pagefind-ignore>40:07</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>That brings me back once again to like, what are you making now? What are you in the process of?</p>
+            <p id="s2416"><span class="wt-at" data-pagefind-ignore>40:16</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>I&rsquo;m writing a play right now that I like. I think it&rsquo;s, it&rsquo;s cool. It&rsquo;s about a young girl, Clementine, who has to fight against the Nothing. And the Nothing is kind of like an anti-creation force. Could be a symbol of depression or absence of creation or just kind of like writer&rsquo;s block, but like in a very significant way. primal sense of like doom and, and the overwhelming sense of like, I won&rsquo;t be anything, or the nothing. Like, you are the nothing. And like kind of having to -- everybody has to prove every -- so it&rsquo;s like her father gets -- her father has been, um, like taken away from her by the nothing, and, and it&rsquo;s kind of a metaphor for his own, um, Depression, and he&rsquo;s trying to keep it from her. But she has to kind of help him fight the nothing in her own -- by her fighting the nothing, she helps him fight the nothing. And I think we all help each other fight the nothing. Because the nothing is real. Like, the nothing is like really scary and real, and I&rsquo;ve felt it before. And it&rsquo;s kind of like a -- that&rsquo;s how people die. and get hurt and recess into themselves. And you need to pull people back out of that and kind of put the, put the lemon in their mouth and get them to, or maybe lead them somewhere to -- if someone you know is kind of in a limbo space, it&rsquo;s important for you to jump on it and be there for them.</p>
+            <p id="s2519"><span class="wt-at" data-pagefind-ignore>41:59</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>I do that all the time. What are you writing right now? What&rsquo;d you call it?</p>
+            <p id="s2521"><span class="wt-at" data-pagefind-ignore>42:01</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>It&rsquo;s a play.</p>
+            <p id="s2522"><span class="wt-at" data-pagefind-ignore>42:02</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>It&rsquo;s a play. So we&rsquo;re gonna be able to read your play somewhere?</p>
+            <p id="s2524"><span class="wt-at" data-pagefind-ignore>42:04</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Yeah, I wanna, I wanna put it on maybe the Lancaster Theater.</p>
+            <p id="s2531"><span class="wt-at" data-pagefind-ignore>42:11</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Really? You think that&rsquo;d be cool?</p>
+            <p id="s2533"><span class="wt-at" data-pagefind-ignore>42:13</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>That&rsquo;d be fucking crazy if that was possible. I&rsquo;d start, I&rsquo;d start at the F&amp;M Theater. Yeah, I&rsquo;d start there and then work my way up there, but I think this is a different Um, different piece of writing. Probably the best writing I&rsquo;ve done in a little bit.</p>
+            <p id="s2551"><span class="wt-at" data-pagefind-ignore>42:31</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Wow.</p>
+            <p id="s2552"><span class="wt-at" data-pagefind-ignore>42:32</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Um,</p>
+            <p id="s2554"><span class="wt-at" data-pagefind-ignore>42:34</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>you should put it on like open mic, like, like try and find actors to do like, uh, it is like,</p>
+            <p id="s2559"><span class="wt-at" data-pagefind-ignore>42:39</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>like a read-through.</p>
+            <p id="s2561"><span class="wt-at" data-pagefind-ignore>42:41</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah, read-through or like as a skit, like without staging, stuff like that.</p>
+            <p id="s2564"><span class="wt-at" data-pagefind-ignore>42:44</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Yeah, staging is complicated.</p>
+            <p id="s2567"><span class="wt-at" data-pagefind-ignore>42:47</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Without a question, that shit is super complicated.</p>
+            <p id="s2569"><span class="wt-at" data-pagefind-ignore>42:49</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Yeah, it&rsquo;d be easier just to have them Have him read it at first.</p>
+            <p id="s2573"><span class="wt-at" data-pagefind-ignore>42:53</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>You kind of see what it looks like as well. I think that&rsquo;s cool though. Super multifaceted guy.</p>
+            <p id="s2579"><span class="wt-at" data-pagefind-ignore>42:59</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Thank you.</p>
+            <p id="s2581"><span class="wt-at" data-pagefind-ignore>43:01</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah, of course. Well, how can the rest of us support you, like, with where you are right now as an artist? I mean, what&rsquo;s that look like for you?</p>
+            <p id="s2591"><span class="wt-at" data-pagefind-ignore>43:11</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>It looks like, um, talking to me if you See me in the world and say hi and be a part of my life. And in the brief time that we -- our paths cross each other, make me feel something. Make me, you know, hear it. Make me listen. Make me experience something different if you can. and then listen to what I have to say, and I&rsquo;ll try to make it worth your while. And if you&rsquo;d like to check out my stuff, I have a bunch of music on SoundCloud. My SoundCloud name is Ike space 914. Ike914. It&rsquo;s my, my nickname. It&rsquo;s my nickname plus the area code where I live now. Um, so check that out. And then</p>
+            <p id="s2662"><span class="wt-at" data-pagefind-ignore>44:22</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>check it out</p>
+            <p id="s2663"><span class="wt-at" data-pagefind-ignore>44:23</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>if you ever want to collaborate on anything. I&rsquo;m super down and I, I&rsquo;d like to work with people, but, um,</p>
+            <p id="s2671"><span class="wt-at" data-pagefind-ignore>44:31</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>do you have music on YouTube?</p>
+            <p id="s2676"><span class="wt-at" data-pagefind-ignore>44:36</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Yes, I have a song, one song on YouTube with a music video I shot.</p>
+            <p id="s2680"><span class="wt-at" data-pagefind-ignore>44:40</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Music video? Go check that out, guys.</p>
+            <p id="s2682"><span class="wt-at" data-pagefind-ignore>44:42</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>I actually have 2 things on YouTube. The first one is of when I was like 8, 9, 10 years old. It&rsquo;s Rock-a-Bye Railroad. It&rsquo;s me, my mom, and my dad.</p>
+            <p id="s2695"><span class="wt-at" data-pagefind-ignore>44:55</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Really?</p>
+            <p id="s2695-2"><span class="wt-at" data-pagefind-ignore>44:55</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s2696"><span class="wt-at" data-pagefind-ignore>44:56</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>I haven&rsquo;t heard that. I gotta hear that.</p>
+            <p id="s2697"><span class="wt-at" data-pagefind-ignore>44:57</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>You haven&rsquo;t heard it yet? It&rsquo;s really, uh, it&rsquo;s really something. Super, super wholesome, slightly embarrassing.</p>
+            <p id="s2706"><span class="wt-at" data-pagefind-ignore>45:06</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Go check it out.</p>
+            <p id="s2707"><span class="wt-at" data-pagefind-ignore>45:07</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Go check that out. Rockabye Railroad. Um, check out my dad&rsquo;s music. Handsome Bill. Um,</p>
+            <p id="s2714"><span class="wt-at" data-pagefind-ignore>45:14</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>check out Handsome Bill.</p>
+            <p id="s2715"><span class="wt-at" data-pagefind-ignore>45:15</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Check out Handsome Bill. Um, Good Truth and Beauty is a great album. It&rsquo;s one of my favorite of his. Um, Bread on the Water is another favorite of his. Uh, Jumbo. Um, he&rsquo;s a beautiful folk bluegrass artist that kind of makes me cry when I listen to him sometimes. Wow. I think he&rsquo;s a great writer and a great singer and a great player. And, you know, he&rsquo;s like a real musician. He&rsquo;s been doing it his whole life, and it&rsquo;s what he loves to do. He&rsquo;s an artist. He&rsquo;s a -- he&rsquo;s, um, an interesting man, and I think he deserves to be way more popular than he is, and way more people should hear his music.</p>
+            <p id="s2767"><span class="wt-at" data-pagefind-ignore>46:07</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Word. So there it is.</p>
+            <p id="s2771"><span class="wt-at" data-pagefind-ignore>46:11</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Hire him. Have him play at your wedding or anywhere if you&rsquo;d like. Handsome Bill. Bill Kelly. And, um,</p>
+            <p id="s2782"><span class="wt-at" data-pagefind-ignore>46:22</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>yeah, we&rsquo;ll put that on a playlist for you guys. Don&rsquo;t even worry, we&rsquo;ll make it quite accessible. And then I guess the last thing, I asked you if you had a poem you wanted to share while you&rsquo;re on the show.</p>
+            <p id="s2799"><span class="wt-at" data-pagefind-ignore>46:39</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s2800"><span class="wt-at" data-pagefind-ignore>46:40</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>And you selected, uh, tell us a little about the piece you selected.</p>
+            <p id="s2804"><span class="wt-at" data-pagefind-ignore>46:44</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>This is, uh, This plays about 6 and a half minutes into, um, Good Thoughts, Bad Thoughts by Funkadelic, which is, I think, the last song on the album of, um, Standing on the Verge of Getting It On from 1974. And I&rsquo;ll read it now. Travel like a king. Listen to the inner voice. A higher wisdom is at work for you. Conquering the stumbling blocks comes easier when the conqueror is in tune with the infinite. Every ending is a new beginning. Life is an endless unfoldment. Change your mind and you change your relation to time. You can find the answer. The solution lies within the problem. The answer is in every question. Dig it? An attitude is all you need to rise and walk away. Inspire yourself. Your life is yours. It fits you like your skin. The oak sleeps in the acorn. The giant sequoia tree sleeps in its tiny seed. The bird waits in the egg. God waits for his unfoldment in man. You gravitate to that which you secretly love most. You meet in life the exact reproduction of your own thoughts. There is no chance, coincidence, or accident in a rule -- in a world ruled by law and divine order. You rise as high as your dominant aspiration You descend to the level of your lowest concept of yourself. Free your mind and your ass will follow. The infinite intelligence within you knows the answers. Its nature is to respond to your thoughts. Be careful of the thought seeds you plant in the garden of your mind, for seeds grow after your kind. Play on, children. Every thought felt as true Or allowed to be accepted as true by your conscious mind takes roots in your subconscious, blossoms sooner or later into an act, and bears its own fruit. Good thoughts bring forth good fruit. Bullshit thoughts rot your meat. Think right and you can fly. The kingdom of heaven is within. Free your mind and your ass will follow. Play on.</p>
+            <p id="s2969"><span class="wt-at" data-pagefind-ignore>49:29</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Thank you.</p>
+            <p id="s2970"><span class="wt-at" data-pagefind-ignore>49:30</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s2971"><span class="wt-at" data-pagefind-ignore>49:31</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>So why&rsquo;d you choose that? Why&rsquo;d you choose to share that with us today?</p>
+            <p id="s2974"><span class="wt-at" data-pagefind-ignore>49:34</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>I think it&rsquo;s just really solid advice. I think it&rsquo;s just like a crazy list of insightful, good advice that&rsquo;s just like really healthy and positive and true and really simple. It&rsquo;s not like -- it&rsquo;s just like practical and simple advice that people take for granted and you don&rsquo;t have to do like -- if you really took all of that to heart, every piece of it, like it&rsquo;s such a -- it helps me a lot just kind of reflecting on something. If I&rsquo;m obsessing over something, I&rsquo;m like, see, that&rsquo;s like a bad thought. That&rsquo;s like a bullshit thought. And it&rsquo;s like, that&rsquo;ll -- if I internalize that, It&rsquo;s gonna cause problems later. And then I can just kind of like, bye-bye. Like, I don&rsquo;t need, I don&rsquo;t need to have, I don&rsquo;t need to have bad fruit. I can just throw, poop that out and not have it, you know, grow in my mind.</p>
+            <p id="s3036"><span class="wt-at" data-pagefind-ignore>50:36</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah. Pay attention to something else. Yeah. I like that. Do you have a favorite part? Like any particular advice that you go back to time and time again? Yeah.</p>
+            <p id="s3047"><span class="wt-at" data-pagefind-ignore>50:47</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>I like, you rise as high as your dominant aspiration and you descend to the level of your lowest concept of yourself, which I think is beautiful. So, you know, you&rsquo;re -- whatever you&rsquo;re focusing on most, you&rsquo;ll, you&rsquo;ll get there. You know, wherever you&rsquo;re -- wherever you want to go, you&rsquo;ll get there. Or wherever you, you know, you rise as high as that. And then the only way that you can be a bad person or a negative person is by, you know, internalizing who that person is, kind of having that concept of yourself to be able to put yourself in that position. Mm-hmm. And so the lowest form of how you see yourself is where you&rsquo;ll go. And that&rsquo;s something to understand. And you&rsquo;ll be there. Everybody sinks low to some depth that you come back from and you rise up again. But try to think of yourself in good light so you can -- you don&rsquo;t have to sink so low.</p>
+            <p id="s3124"><span class="wt-at" data-pagefind-ignore>52:04</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>I like that a lot. I know I&rsquo;ve been thinking more and more about like, who do I want to be for the people in my life, people I care about, my family, my friends, my roommates, my mom, my sister, my dad, my grandma, my niece, my nephew, my great aunt, my aunts and uncles, my cousins, people, people I don&rsquo;t even know, you know, like what I want to leave people with. And I&rsquo;ve heard you say, you know, it&rsquo;s best to be a gift. I think that&rsquo;s really what that sounds like. It&rsquo;s like, you know, I guess I want to ask you also then, I guess, what does that mean to you when you say that? Because I&rsquo;ve heard you say that a lot of times. It&rsquo;s something I think about when I try to reimagine who I am for people, and as I said, I&rsquo;ve been doing a lot of that.</p>
+            <p id="s3164"><span class="wt-at" data-pagefind-ignore>52:44</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>I worked for a very special lady, Mrs. H. H.H. Leonard owns a museum in Washington, D.C., the mansion on O Street. And she&rsquo;s -- she kind of became my accidental mentor just because I was around her so much. And I have a lot of problems with her, but I also learned a lot from her. And one of the most important things that I learned was that she told me that you have to be -- any life that you enter, you have to be a gift. And that&rsquo;s really important because it helps you kind of avoid people that you can&rsquo;t be a gift to. And if you can&rsquo;t be a gift to someone, don&rsquo;t get involved and don&rsquo;t try to, you know, it&rsquo;s a good way of approaching situations. You know, it&rsquo;s a guidebook. The more, you know, sometimes I don&rsquo;t want so many rules, but I think because it limits the the ways you can -- you, you want -- you -- if you have so many rules, then you can only act accordingly to those rules. But also, no, because having a lot of rules lets you know why you&rsquo;re kind of bending the rules. And if you learn all these rules and kind of construct them, and then you can deviate from them, you understand why you&rsquo;re deviating from them. But when you stick to them, you also like live an easier life because you have like, you know, you understand why you&rsquo;re doing things. Or why good things are good and why things are bad. And I think being a gift to people is so important because it just frames the way that you interact with people in a positive way. And trying to, you know, service is so important to me. That was one of the services, like the main thing that she advocates for. And that&rsquo;s just kind of finding your own -- Purpose. purpose through making sure that everybody around you is good and that that makes you good. That, you know, being a river to the people, to being a river to your people, you know, is, you</p>
+            <p id="s3294"><span class="wt-at" data-pagefind-ignore>54:54</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>know -- I like that. You&rsquo;re a river to your people.</p>
+            <p id="s3296"><span class="wt-at" data-pagefind-ignore>54:56</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Yeah. Trying to be the, the Euphrates or the Tigris or any, any modern, any ancient -- the first civilizations were built on rivers. Um, some of those rivers were really like volatile and dangerous, and they&rsquo;re characterized so, um, in ancient texts. Um, and I&rsquo;d like to imagine myself as like a, a calmer, a calmer river than the Tigris or the Euphrates. Um, but I think it&rsquo;s interesting that there&rsquo;s like all -- there&rsquo;s these 2 rivers that are like essential for the people of the Indus River Valley civilization to have their civilization. But at the same time, they&rsquo;re constantly like overflowing and like ruining these people&rsquo;s crops. So I don&rsquo;t want to, I don&rsquo;t want to be that kind of river. Um, but I&rsquo;d like to be, um, like the Nile, like a really fertile area, like a really like --</p>
+            <p id="s3351"><span class="wt-at" data-pagefind-ignore>55:51</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Well, let&rsquo;s be a gift to the, to the, to the ecosystem environment, to the things around you.</p>
+            <p id="s3357"><span class="wt-at" data-pagefind-ignore>55:57</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Yeah,</p>
+            <p id="s3358"><span class="wt-at" data-pagefind-ignore>55:58</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>I hear that. I think that&rsquo;s a pretty fire idea. Civilizations are built on the, on the foundations of fertile land.</p>
+            <p id="s3365"><span class="wt-at" data-pagefind-ignore>56:05</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Mm-hmm.</p>
+            <p id="s3366"><span class="wt-at" data-pagefind-ignore>56:06</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>So you want to make sure the land around you is fertile and see to it that that is so. Well, thank you for seeing to it that this, this first episode of the Masea Watley Podcast has some fertile soil to grow on. This is a phenomenal place to start, and I&rsquo;m really excited you I decided to sit down and have this conversation with you tonight.</p>
+            <p id="s3384"><span class="wt-at" data-pagefind-ignore>56:24</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>I think that you&rsquo;re a really special person, and I&rsquo;m thrilled that I&rsquo;ve had another opportunity to spend time with you. And I look forward to -- I look forward to just, you know, watching you grow and Where you&rsquo;re gonna go and who, like, whatever crazy thing you&rsquo;re gonna do for the world, it&rsquo;s gonna be, you know, spectacular. And, you know, I think you&rsquo;re a river as well. You&rsquo;re like a raging river, or just like a --</p>
+            <p id="s3427"><span class="wt-at" data-pagefind-ignore>57:07</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>I think you sound like a droning -- Yeah,</p>
+            <p id="s3430"><span class="wt-at" data-pagefind-ignore>57:10</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>you are, you are like a, like a, like a, like a presence. a connecting, a connective presence for, you know, a lot of people. And that&rsquo;s not a coincidence. It&rsquo;s not.</p>
+            <p id="s3446"><span class="wt-at" data-pagefind-ignore>57:26</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s3447"><span class="wt-at" data-pagefind-ignore>57:27</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>It&rsquo;s the way that it is. And that&rsquo;s a, that&rsquo;s a lot of responsibility to take on. But I think responsibility is the way that we Acquire meaning. And the more that we can take on, the more that we can return. And I think you take on a lot. I think you take on so much that it, that it&rsquo;s hard for you sometimes. Um, and I think that&rsquo;s brave. And it&rsquo;s like working out. Yeah. You&rsquo;re building those muscles. way faster than a lot of people are. Many, like most people. So I think you&rsquo;re going to be like, you know, when I forget, I never watched Naruto much, but there&rsquo;s like broccoli that takes the weights off.</p>
+            <p id="s3500"><span class="wt-at" data-pagefind-ignore>58:20</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s3501"><span class="wt-at" data-pagefind-ignore>58:21</span><span class="wt-spk wt-spk-named" title="Speaker B, as separated by the model" data-pagefind-ignore>Isaac Kelly<span class="visually-hidden">: </span></span>Like you can take the weights off. Like, like one day you&rsquo;re going to like, you&rsquo;re going to take your weights off and you&rsquo;re going to be like, oh shit. Like, I&rsquo;ve had these weights on for like so long. And like, that&rsquo;s -- I feel like you&rsquo;re training with weights on right now. And like, whenever you feel like taking them off, you can.</p>
+            <p id="s3525"><span class="wt-at" data-pagefind-ignore>58:45</span><span class="wt-spk wt-spk-named" title="Speaker A, as separated by the model" data-pagefind-ignore>Maceo<span class="visually-hidden">: </span></span>I appreciate that. I&rsquo;m excited for what comes ahead. I think I&rsquo;m excited for both of us. I think being able to look back and see this is the beginning is going to be a crazy thing to be able to do. And I&rsquo;m excited to do it with you, my friend. So yeah, thank you again for coming on. I really appreciate you being here. And, uh, thank everybody for listening. Thank you.</p>
+        </div>
+    </section>
+
+    <nav class="wrap wt-more" aria-label="More episodes">
+        <p>Next: <a href="the-trailer.html">The Trailer</a> &middot; <a href="index.html">Every episode</a></p>
+    </nav>
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. We made the work published here in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Where to start</a></li>
+                    <li><a href="../portfolio.html">Projects</a></li>
+                    <li><a href="../learn.html">Learn crypto</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../mission.html">Mission</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Contributors</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Back the work</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../brand-campaign.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+<script src="../wtm-player.js" defer></script>
+<script src="../wtm-core.js" defer></script>
+
+</body>
+</html>
