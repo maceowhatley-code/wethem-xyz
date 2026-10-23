@@ -1,0 +1,767 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Why We Them Media exists, how the work is made and funded, and the seven editorial standards we hold ourselves to. Field footage from 16 countries.">
+    <meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="wtm-logo-180.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="We Them Media">
+    <meta property="og:url" content="https://wethem.xyz/about">
+    <link rel="canonical" href="https://wethem.xyz/about">
+    <meta property="og:title" content="Mission and standards, We Them Media">
+    <meta property="og:description" content="Why this exists, how the work gets made and paid for, and the seven editorial standards we publish and are held to. Field footage from 16 countries.">
+    <meta property="og:image" content="https://wethem.xyz/og-about.png?v=2026-09-11b">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Narrative is a public good. Community-driven media, from the bottom up.">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mission and standards, We Them Media">
+    <meta name="twitter:description" content="Why this exists, how it is made and funded, and the seven standards we hold ourselves to. Field footage from 16 countries.">
+    <meta name="twitter:image" content="https://wethem.xyz/og-about.png?v=2026-09-11b">
+    <meta name="twitter:image:alt" content="Narrative is a public good. Community-driven media, from the bottom up.">
+
+    <title>Mission and standards &middot; We Them Media</title>
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="wtm.css">
+    <link rel="stylesheet" href="wtm-v2.css">
+    <link rel="stylesheet" href="cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+        }
+
+        .mission-prose p { font-family: var(--body, var(--display)); font-size: 1.06rem; line-height: 1.65; margin-bottom: 1.1rem; max-width: 68ch; }
+        .mission-prose p strong { color: var(--coral); }
+    
+        .msn-band { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; padding: 0 6px; background: #000; }
+        .msn-band a { display: block; aspect-ratio: 16 / 9; overflow: hidden; background: var(--bg-elev); }
+        .msn-band img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .25s ease; }
+        .msn-band a:hover img { transform: scale(1.05); }
+        @media (max-width: 700px) { .msn-band { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+</style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+<script type="application/ld+json" data-chrome="about">
+{
+ "@context": "https://schema.org",
+ "@type": "AboutPage",
+ "name": "Mission and standards",
+ "url": "https://wethem.xyz/about",
+ "description": "Why We Them Media exists, how the work is made and funded, and the seven editorial standards we hold ourselves to. Field footage from 16 countries.",
+ "about": {
+  "@type": "Organization",
+  "@id": "https://wethem.xyz/#organization",
+  "name": "We Them Media",
+  "url": "https://wethem.xyz"
+ },
+ "isPartOf": {
+  "@type": "WebSite",
+  "name": "We Them Media",
+  "url": "https://wethem.xyz"
+ }
+}
+</script>
+</head>
+<body data-page="secondary">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="brush" viewBox="0 0 320 16" preserveAspectRatio="none">
+      <path d="M3 8 Q 32 3, 64 9 T 140 10 Q 200 4, 250 8 T 318 9" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.95"/>
+      <path d="M50 6 Q 100 13, 160 7 T 280 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
+    </symbol>
+    <symbol id="spiral" viewBox="0 0 24 24">
+      <path d="M12 12 m-1 0 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0 M12 12 m-3 0 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0 M12 12 m-6 0 a6 6 0 1 0 12 0 a6 6 0 1 0 -12 0 M12 12 m-9 0 a9 9 0 1 0 18 0 a9 9 0 1 0 -18 0" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="index.html" class="brand">
+            <picture><source srcset="wtm-mark-64.webp 1x, wtm-mark-128.webp 2x" type="image/webp"><img src="wtm-mark-64.png" srcset="wtm-mark-64.png 1x, wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li class="nav-more"><a href="index.html" title="the question of the week and the newest pieces">Home <span class="nav-d" aria-hidden="true">the question of the week and the newest pieces</span></a></li>
+                <li><a href="portfolio.html" title="every piece, by project, place, person and topic">Watch <span class="nav-d" aria-hidden="true">every piece, by project, place, person and topic</span></a></li>
+                <li><a href="onequestion.html" title="one question, asked around the world">One Question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="learn.html" title="from the people who use crypto">Learn <span class="nav-d" aria-hidden="true">from the people who use crypto</span></a></li>
+                <li><a href="people.html" title="who filmed what, and the people reporting with us">Correspondents <span class="nav-d" aria-hidden="true">who filmed what, and the people reporting with us</span></a></li>
+                <li><a href="start.html" aria-current="true" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li><a href="work-with-us.html" title="brand work, documented">Work with us <span class="nav-d" aria-hidden="true">brand work, documented</span></a></li>
+                <li class="nav-clips nav-more"><a href="clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="supporter.html" title="how the work is paid for">Support <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="supporter.html" class="masthead-cta">Back the work</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="learn.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One Question</span></a></nav>
+
+<aside class="wrap tw-row" aria-labelledby="tw-k"><span class="tw-k" id="tw-k">This week</span><ul class="tw-list"><li><a href="watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="watch/making-the-beats-behind-ready-to-die-in-full-philadelphia.html" title="The beats behind Ready to Die, in full: Easy Mo Bee at Black and Nobel"><span class="tw-kind">New</span> The beats behind Ready to Die, in full</a></li><li><a href="onequestion.html"><span class="tw-kind">One Question</span> what would you ask the world?</a></li></ul></aside>
+<main id="main-content">
+
+
+<section class="page-header">
+    <div class="wrap">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="index.html" title="what's on right now">Home</a></li>
+                <li aria-current="page">Mission</li>
+            </ol>
+        </nav>
+        <div class="page-kicker">
+            <span class="mono-eyebrow">Mission</span>
+        </div>
+        <h1 class="page-title">What would you ask, <span class="italic"><span class="climax-ink">if you could ask the world?</span></span></h1>
+        <svg class="page-header-brush" viewBox="0 0 320 16" preserveAspectRatio="none" aria-hidden="true">
+            <use href="#brush"/>
+        </svg>
+        <p class="page-deck">Almost everything you know about the rest of the world reached you through a system you cannot see into. We Them Media runs the other way. A camera in the hands of someone who lives there, asking the question, keeping the answer in their own voice.</p>
+    </div>
+</section>
+
+<section class="spread" id="short-version">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <div>
+                <div class="section-number">The short version</div>
+            </div>
+            <h2>We Them Media, <span class="italic">in five lines.</span></h2>
+        </div>
+        <div class="mission-prose reveal">
+            <p><strong>What it is.</strong> A community-driven documentary journalism platform: ordinary people, filmed on their own streets, talking about how money and technology actually reach them.</p>
+            <p><strong>Who and when.</strong> Founded in 2021 by Maceo Whatley, with contributing reporters filing from where they live. The team is on the <a href="team.html">Team page</a>.</p>
+            <p><strong>How it is made.</strong> Every piece is free to watch. Quotes are verbatim from the tape, every transcript links each line to the second it was said, and speakers are named as they gave their names.</p>
+            <p><strong>How to quote us.</strong> Name the speaker, the piece and We Them Media, and link the watch page. Each watch page prints the line to copy.</p>
+            <p><strong>How to take part.</strong> Watch in <a href="library.html">the library</a>, back the work on <a href="supporter.html">the support page</a>, hire us through <a href="work-with-us.html">Work with us</a>, or read <a href="dispatch.html">The We Them Weekly</a>.</p>
+        </div>
+    </div>
+</section>
+
+<section class="spread elev" id="what-is-missing">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <div>
+                <div class="section-number">What is missing</div>
+            </div>
+            <h2>Why this exists. <span class="italic">In the founder&rsquo;s words.</span></h2>
+        </div>
+
+        <div class="mission-prose reveal">
+            <p class="wt-note" style="margin-bottom:1.2rem">Draft in the founder&rsquo;s voice, built from his 2022&ndash;2024 writing and the tape. <strong>Under review by Maceo</strong>, sentences in quotation marks are his, verbatim, and link to where he said them.</p>
+            <p>Before now I never envisioned myself running a newsroom. This started as a podcast I made to contribute something to the music industry, and that podcast is how I built the network, the community, and the archive that We Them Media is now built on. What I learned in web3 shifted what it was for. <a href="https://paragraph.com/@wethemniggas/welcome-to-we-them-niggas-a-community" target="_blank" rel="noopener">&ldquo;Originally conceived as a podcast, things have shifted-- as my journey into the realm of Web 3.0 has taught me the importance of prioritizing community over content creation.&rdquo;</a> That sentence is from September 2022 and it is still the shortest version of how We Them Media happened.</p>
+            <p>Here is the problem as I see it. Almost everything you know about a place you have never been reached you through somebody else&rsquo;s edit. It came filtered, summarized, and reordered before it got to you, by people and now by machines that never asked the person it was about. Ask a question about a country you have never set foot in and watch what comes back: an answer in seconds, confidently written, from sources you cannot inspect, about people nobody talked to. <strong>You lose the ability to act on any of it, because you cannot tell what is true.</strong></p>
+            <p>The thing I keep coming back to is that <a href="watch/documenting-war-from-all-sides-in-the-channel-5-line.html">&ldquo;the victors are the history books.&rdquo;</a> So this time we should do our work and archive from all sides. That is the whole idea.</p>
+            <p><strong>What is missing is the footage.</strong> Enough video made by people who live where the story is happening that anyone can check a claim against a face. Enough of it to put communities in front of each other who would otherwise never meet. Make enough of that and people can act on what they can finally see.</p>
+        </div>
+    </div>
+</section>
+
+<section class="spread" id="one-line">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <div>
+                <div class="section-number">The Mission</div>
+                <div class="section-tag">In one line</div>
+            </div>
+            <h2>Narrative is a public good. <span class="italic">News is a public good.</span></h2>
+        </div>
+
+        <div class="mission-prose reveal">
+            <p><a href="watch/what-made-you-smile-today-exploring-denver-from-wyoming.html">&ldquo;We Them Media is a community-driven media platform trying to be at the intersection of tech, community, and culture.&rdquo;</a></p>
+            <p>The longer version is the one I wrote in 2024 and still stand behind: our mission is <a href="https://paragraph.com/@wethemniggas/eth-denver-2024-a-milestone-project" target="_blank" rel="noopener">&ldquo;to communicate the viability of blockchain technology as a tool to expand the agency of Black communities to have a new level of control over our economies, culture, and ideas.&rdquo;</a> The way we do it now is street journalism. The idea is, all of a sudden you&rsquo;ve got a neighbor committed to being your neighborly newscaster. Businesses shutting down, people getting evicted, good deeds, accomplishments, tragedy. All of it. We put up a question every week, people around the world go out and ask it on their own streets, and the answers go up with the person&rsquo;s name and city on them. Narrative is a public good. News is a public good. <strong>I want the people the rest of the industry categorizes, generalizes, or ignores to be the ones holding the camera.</strong></p>
+        </div>
+    </div>
+</section>
+
+<section class="spread elev" id="community">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <div>
+                <div class="section-number">The Community</div>
+                <div class="section-tag">Who we serve</div>
+            </div>
+            <h2>The &#8220;Them&#8221; in our name is the people <span class="italic">who get spoken about rather than spoken with.</span></h2>
+        </div>
+
+        <div class="mission-prose reveal">
+            <p>We make videos from and for communities whose stories are most often told extractively, by outsiders passing through a place they don&#8217;t share, or not told at all.</p>
+            <p>There&#8217;s a pattern behind that extraction. It&#8217;s colonial, neo-colonial, and corporate, and we don&#8217;t pretend it isn&#8217;t. <strong>Colonialism in particular is the biggest unwritten story of contemporary media.</strong> We treat it as a lens through which other stories get told. George Floyd needed colonial context to be told justly. Biafra needs it. Land and economic questions in Kenya carry the long shadow of British settler structures, even when the day&#8217;s news looks unrelated. Eviction in Charlotte needs colonial-and-corporate context. Most outlets leave that context out. That&#8217;s how communities end up dehumanized and decontextualized in the same breath. We don&#8217;t.</p>
+            <p>The work is led from Africa and the diaspora. White collaborators and other allied voices join the network on the same anti-extractive terms. Where you come from matters here. It is not a test you pass or fail. The question we ask anyone joining us is whether they treat the people in their videos as partners or as objects.</p>
+            <p>The network is <strong>anchored in Africa</strong>. That&#8217;s where most of our contributor base lives and where the founder has spent the most time on the ground. The immediate work is to show the model holds in Nigeria, Kenya and Ethiopia, then expand. We&#8217;re not committing to a second continent before the first one is properly anchored. The English-speaking diaspora is already part of the work. Expansion comes in stages.</p>
+            <p>The team is split across continent and diaspora, from Lagos and Abuja to Nairobi to Philadelphia, and everyone is <a href="team.html">named on the masthead</a>. The audience: people who want to understand somewhere they don&#8217;t live, from someone who does.</p>
+            <p>The work is free to access. No paywall. No advertising. <strong>The audience we earn is the audience we owe.</strong></p>
+        </div>
+    </div>
+</section>
+<div class="msn-band" aria-label="Frames from the tape">
+    <a href="watch/black-women-as-the-most-important-global-issue.html"><img src="stills/4Us2-ohD21k.jpg" alt="Gigi, interviewed against a brick wall in Denver" loading="lazy" width="480" height="270"></a>
+    <a href="watch/crypto-privacy-and-global-finance-at-an-ethereum-conference-new-york.html"><img src="stills/WXm8AWkc37M.jpg" alt="Maggie of Unlink at ETHConf, New York" loading="lazy" width="480" height="270"></a>
+    <a href="watch/unlearning-a-hate-for-blockchain-ethiopia.html"><img src="stills/aFLVXj6g0Uw.jpg" alt="Gloria, interviewed in Ethiopia" loading="lazy" width="480" height="270"></a>
+    <a href="watch/after-the-denver-protest-project-2025-in-his-own-words.html"><img src="stills/Xtqu9LbClYU.jpg" alt="On the ground at a Denver protest" loading="lazy" width="480" height="270"></a>
+</div>
+
+
+<section class="spread" id="stakes">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <div>
+                <div class="section-number">The Stakes</div>
+                <div class="section-tag">Why this matters now</div>
+            </div>
+            <h2>We&#8217;ve been pacified <span class="italic">into complacency.</span></h2>
+        </div>
+
+        <div class="mission-prose reveal">
+            <p>Most Americans don&#8217;t know what&#8217;s happening in the rest of the world, and when we do, we&#8217;ve been given reasons designed to make us feel there&#8217;s nothing we can do about it. So we don&#8217;t. <strong>We have been taught to feel helpless, and the feeling keeps us quiet.</strong></p>
+            <p>The U.S. holds disproportionate weight on the planet, and most of us have been set up to undervalue that, because recognizing the power that comes with it would mean having to use it. An American citizen could push for a great deal. Most push for very little. Much of the difference comes down to not knowing what is happening, and to whom. Nobody has to hide the news when it never arrives.</p>
+            <p>The work We Them Media is committed to is closing the gap. <strong>We want the world to be able to say in 2030, &#8220;that&#8217;s how I knew what was going on.&#8221;</strong> That is a ten-year arc. Most media builds for a cycle that ends tonight. We&#8217;re working on the cycle that ends with people having context they didn&#8217;t have, and acting differently because of it.</p>
+            <p>The audience we&#8217;re filming <em>with</em> and the audience we&#8217;re publishing <em>to</em> aren&#8217;t the same audience. Africa and the diaspora are where the videos come from. The whole world is who we&#8217;re publishing to, but the U.S. specifically is where the most consequential complacency lives. So the editorial bridge is two-way on purpose.</p>
+        </div>
+    </div>
+</section>
+
+<section class="spread elev" id="model">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <div>
+                <div class="section-number">The Model</div>
+                <div class="section-tag">How the media works</div>
+            </div>
+            <h2>Video-first, conversation-led, <span class="italic">on the ground.</span></h2>
+        </div>
+
+        <div class="mission-prose reveal">
+            <p>WTM sits on the same shelf as independent host-led media, Lex Fridman, Channel 5, Zane Lowe, Afropolitan. <strong>The closest comparison is Channel 5, which films from an American vantage. Our contributors film from Africa, the diaspora and the U.S.</strong> We put those places in conversation with each other. We&#8217;re not in the same lane as legacy hard-news outlets and we&#8217;re not trying to be.</p>
+            <p>Everyone reports from somewhere. A newsroom that claims to stand nowhere is standing somewhere and not saying so. We say where we stand. The work is led from Africa, made with the diaspora, and filmed by people in the places they live. Put enough of those vantages side by side and you get a truer picture than any one of them alone. We don&#8217;t apologize for that. Saying where you stand is more honest than claiming you stand nowhere.</p>
+            <p>We don&#8217;t just cover communities. <strong>Coverage leaves when the story does. What we are trying to leave behind is the capacity to keep filming.</strong></p>
+            <p>How it works: <strong>One Question</strong> is the programme. Somebody on their own street answers a question on camera before they walk away. Contributors across the network film them in the places they live. Anyone can also post a question to the platform and attach money to it, and storytellers close to that question pick it up, film it, and earn the bounty on delivery. We retain the strongest contributors at the end of each season as lead voices for their regions. Funding flows through mechanisms you can see: recurring support through Fractured Atlas, our fiscal sponsor, and open bounties on poidh where every question and every payout is public. Readers can see what they&#8217;re paying for and contributors can see what they&#8217;re being paid in. WTM holds editorial direction. Not by funders. Not by token holders. Not by partners. The conversation all of this produces is the point.</p>
+        </div>
+    </div>
+</section>
+<div class="msn-band" aria-label="Frames from the tape">
+    <a href="watch/grief-journalism-and-getting-on-stage-at-channel-5.html"><img src="stills/F5vXOAif_FQ.jpg" alt="The Channel 5 carnival crowd in Denver" loading="lazy" width="480" height="270"></a>
+    <a href="watch/denver-night-walk-mile-high-city-after-dark-denver.html"><img src="stills/89iDbSyt-tQ.jpg" alt="A rooftop conversation at night over Denver" loading="lazy" width="480" height="270"></a>
+    <a href="watch/never-been-ashamed-to-cry-denver.html"><img src="stills/yepfMr68Rao.jpg" alt="Eric, interviewed in Denver" loading="lazy" width="480" height="270"></a>
+    <a href="watch/rexii-dubz-on-the-record-denver.html"><img src="stills/zb_zN46MEpM.jpg" alt="A DJ interviewed in Denver" loading="lazy" width="480" height="270"></a>
+</div>
+
+
+<section class="spread" id="stack">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <div>
+                <div class="section-number">The Stack</div>
+                <div class="section-tag">Four layers</div>
+            </div>
+            <h2>Four layers. Each does <span class="italic">a different job.</span></h2>
+        </div>
+
+        <div class="mission-prose reveal">
+            <p>None of these replace a person with a camera. Layer one is what you read. Layers two through four keep the work online, paid for and searchable if one platform disappears.</p>
+        </div>
+
+        <div class="stack-grid reveal">
+            <article class="stack-card">
+                <div class="stack-card-num">Layer 01, Editorial</div>
+                <h3 class="stack-card-title">We Them Media</h3>
+                <p class="stack-card-tagline">We own the editorial direction. <em>Partners support the rails. They don&#8217;t pick the stories.</em></p>
+                <p>The content happens here. Contributors shoot and write, we edit, the piece goes out under the WTM masthead. Everything else in the stack exists so this layer can do its job without depending on any one platform&#8217;s mood.</p>
+                <p>Two channels, two jobs. <a href="https://paragraph.com/@wethemniggas" target="_blank" rel="noopener"><strong>Paragraph</strong></a> hosts the long-form pieces. We sign each one onchain, so the record of who owns it sits in our wallet rather than on someone else&#8217;s server. <strong>Beehiiv</strong> sends the newsletter. The subscriber list is ours, and the mail reaches inboxes.</p>
+                <div class="stack-card-status"><span class="label">Status:</span> Operating since 2021. Work from <span data-count="countries">16</span> countries.</div>
+            </article>
+
+            <article class="stack-card">
+                <div class="stack-card-num">Layer 02, Licensing</div>
+                <h3 class="stack-card-title">CTRL+X</h3>
+                <p class="stack-card-tagline">When a piece gets republished, <em>we know who, when, and at what rate.</em></p>
+                <p>Right now, when an outlet reposts a WTM piece, the only enforcement mechanism is a takedown email. <a href="https://ctrlx.world/" target="_blank" rel="noopener">CTRL+X</a> is building rails on Solana that change that, a license attached to the piece, recorded to the chain, queryable by anyone, with terms and payments enforced at the protocol level.</p>
+                <p>Arikia Millikan, founder of CTRL+X and formerly the youngest editor at WIRED, joined WTM in May 2026 and is now <strong>Editorial Advisor</strong>.</p>
+                <div class="stack-card-status"><span class="label">Status:</span> Active. Arikia Millikan joined WTM in May 2026, now Editorial Advisor.</div>
+            </article>
+
+            <article class="stack-card">
+                <div class="stack-card-num">Layer 03, Memory</div>
+                <h3 class="stack-card-title">bonfires.ai</h3>
+                <p class="stack-card-tagline">You can search the notes behind each piece later. <em>If it&#8217;s worth licensing, we license it. If it isn&#8217;t, we don&#8217;t.</em></p>
+                <p><a href="https://www.bonfires.ai/" target="_blank" rel="noopener">Bonfires.ai</a> sits behind the work, not in front of it. Once a piece is filmed and published, what surrounded it is kept where it can be searched later. That means the source threads, the corrections, the follow-ups, and the things we learned and didn&#8217;t use.</p>
+                <p>If WTM&#8217;s body of work makes a useful asset on Bonfires, we license access to it and the revenue flows back to the people who made the videos. If nobody&#8217;s buying, we don&#8217;t spend cycles on it.</p>
+            </article>
+
+            <article class="stack-card">
+                <div class="stack-card-num">Layer 04, Commissioning</div>
+                <h3 class="stack-card-title">POIDH</h3>
+                <p class="stack-card-tagline">Bounties commission specific stories. <em>The work is paid in stable money that crosses borders.</em></p>
+                <p>POIDH (pics or it didn&#8217;t happen) is the bounty platform WTM runs open contributor calls through. Anyone can claim a bounty, ship the piece, and get paid in USDC. Every fulfilled bounty mints as a moment NFT in the WTM POIDH album, the on-chain record of who filmed what, when.</p>
+                <p>Part of the POIDH platform fee on bounties WTM creates flows back to WTM <strong>on completed bounties</strong>.</p>
+                <div class="stack-card-status"><span class="label">Status:</span> Live.</div>
+            </article>
+        </div>
+
+        <aside class="motto-card reveal" style="margin-top: 3rem;">
+            <span class="motto-tag">Operating motto</span>
+            <p class="motto-quote">&#8220;Shots on goal.&#8221;</p>
+            <p class="motto-deck">More content, get it out, things will work. Polish on the second pass. The first pass is just showing up. <em>Most of media never ships because it&#8217;s waiting to be perfect first.</em></p>
+            <p class="motto-cite">A collaborator</p>
+        </aside>
+    </div>
+</section>
+
+<section class="spread elev" id="roadmap">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <span class="mono-eyebrow">The record</span>
+            <h2>What has shipped, and what is next.</h2>
+        </div>
+        <p class="reveal" style="max-width: 62ch;">The running timeline of what has shipped and what is underway lives on one page and is updated when state changes, not when this one is: <a href="state.html">the state of We Them Media</a> The numbers behind it are counted from the tape at every build, on <a href="ledger.html">the ledger</a>.</p>
+    </div>
+</section>
+
+<section class="spread" id="success">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <div>
+                <div class="section-number">The Horizon</div>
+                <div class="section-tag">What success looks like</div>
+            </div>
+            <h2>A self-sustaining, community-driven media platform <span class="italic">where the people closest to a story are the ones paid to tell it.</span></h2>
+        </div>
+
+        <div class="mission-prose reveal">
+            <p>The editorial standard is published where anyone can read it and hold us to it.</p>
+            <p>By the end of 2026: the model shown to hold in Nigeria, Kenya and Ethiopia. Three lead voices retained. The first season&#8217;s work published. Money coming in through more than one door, monthly supporters, fellowships and grants, none of them with a say over what gets filmed. By 2027 and 2028: more regions, decided by what the first ones teach us about where the model travels.</p>
+            <p>If someone asks five years from now what We Them Media changed, the answer I want is <strong>reconnection</strong>. Black America back in touch with the rest of the African diaspora. Diasporic communities back in conversation with the continent. Someone in Philadelphia watching a cousin they have never met answer a question on a street in Lagos, and recognizing the way they talk. Black Americans seeing themselves as a global people, curious about the rest of the diaspora in a new way. The videos are the means. The end is people who were split up by distance and time finding each other again.</p>
+            <p>The bigger ambition, honestly, is to create a mirror that wouldn&#8217;t exist if we weren&#8217;t doing it. A way for the world to start to see itself without the messages funded to reach us, and without the edit of people who have a stake in us not doing this. People in places that don&#8217;t even have power, getting online and on the record. That&#8217;s the work.</p>
+            <p><strong>The people on the tape are credited by name, and so are the people who film them. Paying the people who film is what the supporter goal is for. Nobody is paid for it yet.</strong></p>
+        </div>
+    </div>
+</section>
+
+<section class="spread elev" id="where-this-started">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <span class="mono-eyebrow">Where this started</span>
+            <h2>From a college apartment in Lancaster, with the proceeds of an ENS airdrop.</h2>
+        </div>
+        <p class="reveal" style="max-width: 62ch;">A podcast bought with an airdrop became a network, a community and this archive. The whole story, year by year: <a href="history.html">how We Them Media got here</a></p>
+    </div>
+</section>
+
+<section class="spread" id="own-words">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <div>
+                <div class="section-number">In his own words</div>
+                <div class="section-tag">Quoted from the tape</div>
+            </div>
+            <h2>What the founder says <span class="italic">when a stranger asks what he is doing.</span></h2>
+        </div>
+        <div class="mission-prose reveal">
+            <p>The rest of this page is written. These three lines are not: they are moments on tape where someone with a mic asked Maceo what We Them Media is, quoted from the transcript and linked to the second. <a href="in-his-own-words.html">All 13, in publication order</a></p>
+        </div>
+        <ol class="qa-list ow-list reveal">
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="watch/thirty-years-of-a-local-head-shop-and-why-community.html" aria-label="Watch: Frank on thirty years at Purple Haze and the art of glass."><img src="stills/PCLjSkqhm5I-640.jpg" srcset="stills/PCLjSkqhm5I-320.jpg 320w, stills/PCLjSkqhm5I-480.jpg 480w, stills/PCLjSkqhm5I-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>8:11</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Published March 29, 2026</p>
+                    <blockquote class="qa-quote">&ldquo;So I&rsquo;m doing this like weekly contest where we we put up $100 bounty each week and people around the world can submit and we ask them to go out and ask a question. And it&rsquo;s like my project, We Them Media. So I have to go out and ask people the question.&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>Denver</strong>, Frank on thirty years at Purple Haze and the art of glass &middot; <a href="watch/thirty-years-of-a-local-head-shop-and-why-community.html">The full piece &rarr;</a> &middot; <a href="watch/thirty-years-of-a-local-head-shop-and-why-community.html#t=335">at 5:35</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="watch/documenting-war-from-all-sides-in-the-channel-5-line.html" aria-label="Watch: Documenting war from all sides."><img src="stills/bvortImszoI-640.jpg" srcset="stills/bvortImszoI-320.jpg 320w, stills/bvortImszoI-480.jpg 480w, stills/bvortImszoI-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>2:35</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Published July 17, 2026</p>
+                    <blockquote class="qa-quote">&ldquo;I think it&rsquo;s critical that we kind of document this moment from as many perspectives as possible. Because I say the victors are the history books, the victors. True. So I think this time we should do our work to archive, you know, from all sides.&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>Denver</strong>, Documenting war from all sides &middot; <a href="watch/documenting-war-from-all-sides-in-the-channel-5-line.html">The full piece &rarr;</a> &middot; <a href="watch/documenting-war-from-all-sides-in-the-channel-5-line.html#t=52">at 0:52</a></p>
+                </div>
+            </li>
+            <li class="qa">
+                <a class="qa-thumb wt-thumb" href="watch/a-hitchhiker-on-a-spiritual-mission-outside-channel-5.html" aria-label="Watch: A hitchhiker on a spiritual mission."><img src="stills/80E_4pItE_Y-640.jpg" srcset="stills/80E_4pItE_Y-320.jpg 320w, stills/80E_4pItE_Y-480.jpg 480w, stills/80E_4pItE_Y-640.jpg 640w" sizes="(max-width: 560px) 220px, 148px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:42</span></a>
+                <div class="qa-body">
+                    <p class="qa-gist">Published July 17, 2026</p>
+                    <blockquote class="qa-quote">&ldquo;Now I&rsquo;m trying to evolve into a grassroots platform that&rsquo;s supporting people around the world and doing journalism, surfacing stories from different parts of the planet.&rdquo;</blockquote>
+                    <p class="qa-meta"><strong>Denver</strong>, A hitchhiker on a spiritual mission &middot; <a href="watch/a-hitchhiker-on-a-spiritual-mission-outside-channel-5.html">The full piece &rarr;</a> &middot; <a href="watch/a-hitchhiker-on-a-spiritual-mission-outside-channel-5.html#t=216">at 3:36</a></p>
+                </div>
+            </li>
+        </ol>
+    </div>
+</section>
+
+<section class="spread" id="standards">
+    <div class="section-wrap">
+        <div class="country-head reveal">
+            <h2>Standards. <span class="italic"><span class="climax-ink">Named, so they can be tested.</span></span></h2>
+            <span class="country-meta">Seven principles, applied to Maceo first</span>
+        </div>
+
+        <div class="steps" style="border-top: var(--rule);">
+            <div class="step">
+                <div class="n">01</div>
+                <h3>Rules apply to Maceo first</h3>
+                <p>Every standard on this list applies to the founder before it applies to anyone else on the team. If Maceo violates a rule, it gets published as a correction, publicly.</p>
+            </div>
+            <div class="step">
+                <div class="n">02</div>
+                <h3>A name said to the camera is the consent</h3>
+                <p>A person who gives their name to the camera has agreed to be on it. That is the record. There is no signed release. Anyone in a piece can ask for a change or a takedown: message us on Instagram (@we_them_media) or X (@WeThemMediaHQ), or use the panel headed Something wrong here? at the foot of the page, and we will get back to you within two weeks.</p>
+            </div>
+            <div class="step">
+                <div class="n">03</div>
+                <h3>We check the words against the tape</h3>
+                <p>We check names, places, dates and every quoted line against the tape before a piece goes up. We do not check the claims people make: the transcripts are their words as they said them, and every transcript page says so.</p>
+            </div>
+            <div class="step">
+                <div class="n">04</div>
+                <h3>Conflicts of interest get named</h3>
+                <p>If Maceo or anyone on the team has a financial stake, a personal relationship, or a prior collaboration with a subject or funder, that gets named in the piece itself. Not disclosed later. Named up front.</p>
+            </div>
+            <div class="step">
+                <div class="n">05</div>
+                <h3>Corrections are visible</h3>
+                <p>If we get something wrong, we say so where the original ran, at the top, with the date of correction and what changed.</p>
+            </div>
+            <div class="step">
+                <div class="n">06</div>
+                <h3>The reporting is never machine-made</h3>
+                <p>What people said on camera is what they said.</p>
+            </div>
+            <div class="step">
+                <div class="n">07</div>
+                <h3>Funding does not direct the work</h3>
+                <p>Supporters fund the work. They do not choose stories, edit copy, or veto pieces. Editorial direction sits with WTM. The bills are published so anyone can audit that the money and the work stay separate.</p>
+            </div>
+        </div>
+
+        <p style="font-family: var(--body, var(--display)); font-size: 0.96rem; color: var(--text-muted); margin-top: 2rem; max-width: 60ch;">
+            These seven make the standard visible. If any principle here is broken, the mechanism to name it is a DM to <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" style="color: var(--teal); border-bottom: 1px solid rgba(11, 10, 8, 0.4);">any of our social pages</a> or a reply to <a href="dispatch.html" style="color: var(--teal); border-bottom: 1px solid rgba(11, 10, 8, 0.4);">The We Them Weekly</a>. Corrections get published where the original ran.
+        </p>
+    </div>
+</section>
+
+<section class="pull-quote pull-quote--margin">
+    <div class="wrap">
+        <div class="pull-quote-margin-grid">
+            <div class="pull-quote-margin-rule"></div>
+            <blockquote>
+                All of a sudden you&#8217;ve got a neighbor committed to <span class="highlight">being your neighborly newscaster.</span>
+            </blockquote>
+        </div>
+        <cite>by Maceo, founder, We Them Media</cite>
+    </div>
+</section>
+
+
+<section class="spread elev">
+    <div class="wrap">
+        <div class="page-cta reveal">
+            <div class="page-cta-eyebrow">Where this goes next</div>
+            <h2 class="page-cta-head">If this is the media you want <span class="italic">to exist, fund it.</span></h2>
+            <p class="page-cta-body">Recurring support pays for the tools and keeps every video free to watch, with no ads and no paywall.</p>
+            <div class="cta" style="margin-top: 26px;">
+            <a class="btn btn-coral" href="supporter.html">Back the work</a>
+            <a class="btn btn-teal" href="dispatch.html">Get The We Them Weekly</a>
+            <a class="btn btn-line" href="portfolio.html">See the work</a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="wrap wtm-share"></div>
+<section class="wrap ask" aria-label="Back the work">
+    <div class="ask-in">
+        <span class="ask-k">Keep this going</span>
+        <p class="ask-t"><a href="onequestion.html"><span data-count="oq_count">61</span> people have been asked One Question on camera</a>. This season's campaign runs to Thursday 10 December.</p>
+        <div class="ask-cta">
+            <a class="btn btn-primary" href="supporter.html">Back the work</a>
+            <a class="btn btn-line" href="film.html">Film one where you live</a>
+        </div>
+    </div>
+</section>
+</main>
+
+<aside class="page-pager" aria-label="Continue reading">
+    <a href="pizzaday.html" class="page-pager-link">
+        <span class="page-pager-eyebrow">🍕 Bitcoin Pizza Day, Philadelphia</span>
+        <span class="page-pager-title">Want to be part of the work? <em class="climax-ink">Join the community.</em></span>
+        <span class="page-pager-arrow" aria-hidden="true">→</span>
+    </a>
+    <a href="supporter.html" class="page-pager-link" style="margin-top: 1rem;">
+        <span class="page-pager-eyebrow">Read next</span>
+        <span class="page-pager-title">Join: <em class="climax-ink">back the work.</em></span>
+        <span class="page-pager-arrow" aria-hidden="true">→</span>
+    </a>
+</aside>
+
+<section class="whats-playing-rail" aria-label="From the We Them Media catalogue">
+    <div class="wrap" style="max-width: 1320px; margin: 0 auto; padding: 4rem 2rem 1rem;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border-strong);">
+            <div style="display: flex; align-items: baseline; gap: 0.6rem;">
+                <span style="font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--coral);">From the catalogue</span>
+                <span style="font-family: var(--body, var(--display)); font-style: italic; color: var(--text-muted); font-size: 0.95rem;">Five years of it, free to watch</span>
+            </div>
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" style="font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold, #E8B958); text-decoration: none; border-bottom: 1px solid currentColor;">Full archive</a>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 1.25rem;">
+            <article>
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 4px; background: #000; margin-bottom: 0.75rem;">
+                    <lite-yt videoid="Cyv1UwE_K3w" title="Mr. P, on the math of working for nobody" postersrcset="stills/Cyv1UwE_K3w-320.jpg 320w, stills/Cyv1UwE_K3w-480.jpg 480w, stills/Cyv1UwE_K3w-640.jpg 640w"><img class="lite-yt-fallback" src="stills/Cyv1UwE_K3w-320.jpg" srcset="stills/Cyv1UwE_K3w-320.jpg 320w, stills/Cyv1UwE_K3w-480.jpg 480w, stills/Cyv1UwE_K3w-640.jpg 640w" alt="" loading="lazy" decoding="async"></lite-yt>
+                </div>
+                <div style="font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--coral); margin-bottom: 0.25rem;">Philadelphia, Field interview</div>
+                <div style="font-family: var(--display); font-weight: 600; font-size: 1.05rem; line-height: 1.2; color: var(--text);">"The numbers don't add up to work for nobody."</div>
+            </article>
+
+            <article>
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 4px; background: #000; margin-bottom: 0.75rem;">
+                    <lite-yt videoid="aFLVXj6g0Uw" title="Gloria on pop-up cities and web3" posterurl="stills/aFLVXj6g0Uw.jpg" postersrcset="stills/aFLVXj6g0Uw-320.jpg 320w, stills/aFLVXj6g0Uw-480.jpg 480w, stills/aFLVXj6g0Uw-640.jpg 640w"><img class="lite-yt-fallback" src="stills/aFLVXj6g0Uw-320.jpg" srcset="stills/aFLVXj6g0Uw-320.jpg 320w, stills/aFLVXj6g0Uw-480.jpg 480w, stills/aFLVXj6g0Uw-640.jpg 640w" alt="" loading="lazy" decoding="async"></lite-yt>
+                </div>
+                <div style="font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--coral); margin-bottom: 0.25rem;">Ethiopia, ETH Pop-up</div>
+                <div style="font-family: var(--display); font-weight: 600; font-size: 1.05rem; line-height: 1.2; color: var(--text);">Gloria on pop-up cities and web3.</div>
+            </article>
+
+            <article>
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 4px; background: #000; margin-bottom: 0.75rem;">
+                    <lite-yt videoid="cC3MQS8QsD8" title="Latest LTAE episode" postersrcset="stills/cC3MQS8QsD8-320.jpg 320w, stills/cC3MQS8QsD8-480.jpg 480w, stills/cC3MQS8QsD8-640.jpg 640w"><img class="lite-yt-fallback" src="stills/cC3MQS8QsD8-320.jpg" srcset="stills/cC3MQS8QsD8-320.jpg 320w, stills/cC3MQS8QsD8-480.jpg 480w, stills/cC3MQS8QsD8-640.jpg 640w" alt="" loading="lazy" decoding="async"></lite-yt>
+                </div>
+                <div style="font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--coral); margin-bottom: 0.25rem;">LTAE, Newest</div>
+                <div style="font-family: var(--display); font-weight: 600; font-size: 1.05rem; line-height: 1.2; color: var(--text);">Six episodes, guests across continents. Complete.</div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. We made the work published here in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="where-to-start.html">Watch first</a></li>
+                    <li><a href="portfolio.html">Watch</a></li>
+                    <li><a href="learn.html">Learn</a></li>
+                    <li><a href="clips.html">Clips</a></li>
+                    <li><a href="library.html">The library</a></li>
+                    <li><a href="places.html">Where we filmed</a></li>
+                    <li><a href="guests.html">Who is on the tape</a></li>
+                    <li><a href="dispatches.html">Updates</a></li>
+                    <li><a href="podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="start.html">About</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="history.html">How this started</a></li>
+                    <li><a href="people.html">Correspondents</a></li>
+                    <li><a href="team.html">The editor roster</a></li>
+                    <li><a href="books.html">Books from the community</a></li>
+                    <li><a href="state.html">State of the network</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="ledger.html">What we have not published</a></li>
+                    <li><a href="privacy.html">What this site keeps about you</a></li>
+                    <li><a href="privacy.html#collect">Your choices</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="supporter.html">Support</a></li>
+                    <li><a href="work-with-us.html">Work with us</a></li>
+                    <li><a href="dispatch.html" class="footer-newsletter-link">Newsletter, once a week</a></li>
+                    <li><a href="onequestion.html">One Question</a></li>
+                    <li><a href="commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="work-with-us.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+<script>
+    (function(){
+        var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        var reveals = document.querySelectorAll(".reveal");
+        var v1Reveals = document.querySelectorAll(".v1-reveal");
+        var brushes = document.querySelectorAll(".brush-line");
+
+        if (reduce || !("IntersectionObserver" in window)) {
+            reveals.forEach(function(el){ el.classList.add("visible"); });
+            v1Reveals.forEach(function(el){ el.classList.add("in"); });
+            brushes.forEach(function(el){ el.classList.add("in"); });
+            return;
+        }
+
+        var observer = new IntersectionObserver(function(entries){
+            entries.forEach(function(entry){
+                if (entry.isIntersecting) {
+                    if (entry.target.classList.contains("v1-reveal") || entry.target.classList.contains("brush-line")) {
+                        entry.target.classList.add("in");
+                    } else {
+                        entry.target.classList.add("visible");
+                    }
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+        reveals.forEach(function(el){ observer.observe(el); });
+        v1Reveals.forEach(function(el){ observer.observe(el); });
+        brushes.forEach(function(el){ observer.observe(el); });
+
+        setTimeout(function(){
+            reveals.forEach(function(el){ el.classList.add("visible"); });
+            v1Reveals.forEach(function(el){ el.classList.add("in"); });
+            brushes.forEach(function(el){ el.classList.add("in"); });
+        }, 800);
+    })();
+</script>
+
+<script>
+    (function(){
+        const progressBar = document.querySelector('.scroll-progress');
+        if (!progressBar) return;
+        let ticking = false;
+        function updateProgress() {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            progressBar.style.width = pct + '%';
+            ticking = false;
+        }
+        window.addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(updateProgress); ticking = true; } }, { passive: true });
+        updateProgress();
+    })();
+
+    (function(){
+        const navToggle = document.querySelector('.nav-toggle');
+        const primaryNav = document.getElementById('primary-nav');
+        if (!navToggle || !primaryNav) return;
+        function setNavOpen(open) {
+            navToggle.setAttribute('aria-expanded', String(open));
+            navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+            primaryNav.classList.toggle('is-open', open);
+            document.body.style.overflow = open ? 'hidden' : '';
+        }
+        navToggle.addEventListener('click', () => {
+            const open = navToggle.getAttribute('aria-expanded') === 'true';
+            setNavOpen(!open);
+        });
+        primaryNav.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => setNavOpen(false));
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') {
+                setNavOpen(false);
+                navToggle.focus();
+            }
+        });
+        const desktopMQ = window.matchMedia('(min-width: 821px)');
+        desktopMQ.addEventListener('change', (e) => { if (e.matches) setNavOpen(false); });
+    })();
+</script>
+
+
+<aside aria-label="Newsletter"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" class="wtm-newsletter-pill" aria-label="The We Them Weekly, once a week by email: what went up and what we are asking next">The We Them Weekly, once a week by email <span class="wtm-newsletter-pill-arrow">&rarr;</span></a></aside>
+<script src="wtm-player.js" defer></script>
+<script src="wtm-core.js" defer data-nav-inline></script>
+</body>
+</html>
+

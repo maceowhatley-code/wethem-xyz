@@ -1,0 +1,776 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Yeah, absolutely. I thought you were going to hit us with a freestyle, guys. He&#x27;s a, he&#x27;s an artist, artist, and he&#x27;s not freestyling. Who is this guy?">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/archive/let-s-talk-about-ethereum-w-pablo-from-ghana">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="Let&#x27;s Talk About Ethereum: w/ Pablo from Ghana">
+    <meta property="og:description" content="Yeah, absolutely. I thought you were going to hit us with a freestyle, guys. He&#x27;s a, he&#x27;s an artist, artist, and he&#x27;s not freestyling. Who is this guy?">
+    <meta property="og:url" content="https://wethem.xyz/archive/let-s-talk-about-ethereum-w-pablo-from-ghana">
+    <meta property="og:image" content="https://i.ytimg.com/vi/lujj9Wr1R0Q/mqdefault.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://i.ytimg.com/vi/lujj9Wr1R0Q/mqdefault.jpg">
+    <title>Let&#x27;s Talk About Ethereum: w/ Pablo from Ghana</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Let's Talk About Ethereum: w/ Pablo from Ghana",
+  "description": "Yeah, absolutely. I thought you were going to hit us with a freestyle, guys. He's a, he's an artist, artist, and he's not freestyling. Who is this guy?",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/lujj9Wr1R0Q/mqdefault.jpg"
+  ],
+  "uploadDate": "2026-03-29",
+  "duration": "PT1H6M16S",
+  "embedUrl": "https://www.youtube.com/embed/lujj9Wr1R0Q",
+  "url": "https://wethem.xyz/archive/let-s-talk-about-ethereum-w-pablo-from-ghana",
+  "publisher": {
+    "@type": "Organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  }
+}
+    </script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://wethem.xyz"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "The archive",
+   "item": "https://wethem.xyz/archive/index"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Let's Talk About Ethereum: w/ Pablo from Ghana"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li class="nav-more"><a href="../index.html" title="the question of the week and the newest pieces">Home <span class="nav-d" aria-hidden="true">the question of the week and the newest pieces</span></a></li>
+                <li><a href="../portfolio.html" aria-current="true" title="every piece, by project, place, person and topic">Watch <span class="nav-d" aria-hidden="true">every piece, by project, place, person and topic</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One Question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../learn.html" title="from the people who use crypto">Learn <span class="nav-d" aria-hidden="true">from the people who use crypto</span></a></li>
+                <li><a href="../people.html" title="who filmed what, and the people reporting with us">Correspondents <span class="nav-d" aria-hidden="true">who filmed what, and the people reporting with us</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li><a href="../work-with-us.html" title="brand work, documented">Work with us <span class="nav-d" aria-hidden="true">brand work, documented</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Support <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One Question</span></a></nav>
+<aside class="wrap tw-row" aria-labelledby="tw-k"><span class="tw-k" id="tw-k">This week</span><ul class="tw-list"><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../watch/making-the-beats-behind-ready-to-die-in-full-philadelphia.html" title="The beats behind Ready to Die, in full: Easy Mo Bee at Black and Nobel"><span class="tw-kind">New</span> The beats behind Ready to Die, in full</a></li><li><a href="../onequestion.html"><span class="tw-kind">One Question</span> what would you ask the world?</a></li></ul></aside>
+<main id="main-content">
+
+<article class="wrap wt-piece">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="index.html">The archive</a></li>
+            <li aria-current="page">Let&#x27;s Talk About Ethereum: w/ Pablo from Ghana</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k]" data-pagefind-filter="kind[data-pf-kind]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="archive" data-pf-date="2026-03-29" data-pf-vid="lujj9Wr1R0Q" data-pf-k="{&quot;l&quot;:&quot;1:06:16&quot;}">Let&#x27;s Talk About Ethereum: w/ Pablo from Ghana</h1>
+
+    <p class="wt-byline">From the archive, published <time datetime="2026-03-29">2026-03-29</time></p>
+
+    <div class="wt-frame">
+        <lite-yt videoid="lujj9Wr1R0Q" title="Let&#x27;s Talk About Ethereum: w/ Pablo from Ghana" poster="hqdefault" postersrcset="https://i.ytimg.com/vi/lujj9Wr1R0Q/mqdefault.jpg 320w, https://i.ytimg.com/vi/lujj9Wr1R0Q/hqdefault.jpg 480w"><img class="lite-yt-fallback" src="https://i.ytimg.com/vi/lujj9Wr1R0Q/mqdefault.jpg" srcset="https://i.ytimg.com/vi/lujj9Wr1R0Q/mqdefault.jpg 320w, https://i.ytimg.com/vi/lujj9Wr1R0Q/hqdefault.jpg 480w" alt="" loading="lazy" decoding="async"></lite-yt>
+    </div>
+
+    <div class="wt-prose">
+        <p>This is an archive entry: the video and its full transcript, published so
+        the words can be read, searched and quoted. It is not a written piece.
+        </p>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript" aria-labelledby="tx-h">
+        <h2 id="tx-h">Transcript</h2>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Transcribed from the original audio and corrected for names. <a href="../search.html">Search every transcript</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s3"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3s" target="_blank" rel="noopener" aria-label="Play from 0:03" data-pagefind-ignore>0:03</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Mose, you want to lead us off?</p>
+            <p id="s4"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=4s" target="_blank" rel="noopener" aria-label="Play from 0:04" data-pagefind-ignore>0:04</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Yeah, absolutely. I thought you were going to hit us with a freestyle, guys. He&rsquo;s a, he&rsquo;s an artist, artist, and he&rsquo;s not freestyling. Who is this guy? Now, um, GMGM, everybody, what&rsquo;s up and welcome to another episode of Let&rsquo;s Talk About ETH. Um, we&rsquo;re back for episode 3, um, with the one and only Pablo, the man, the myth, the legend, the young man from Ghana. Um, I first connected with Pablo back in Thailand at DevCon in 2024. Then we got to spend a month together in Ethiopia. He saw me in my crypto adventure, my East African adventure as I ran between worlds. And I&rsquo;m super excited to bring you and your technical competence and your innovation, innovational mind, and you as someone who&rsquo;s been exploring Africa, looking at Web3 in the world, looking at Web3 into this conversation, right? And share, to share your perspective. But I&rsquo;ll pass it over to Brian and Nizal to introduce themselves and then we can get into it.</p>
+            <p id="s52"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=52s" target="_blank" rel="noopener" aria-label="Play from 0:52" data-pagefind-ignore>0:52</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Most definitely. Yes, let&rsquo;s talk about ETH. Yeah, I&rsquo;m Ohnahji B. Bryan, founder of Ohnahji and Ohnahji University. Um, yeah, just with my, with my amazing co-host here in the building, Better Call Saul and Marcel. Yeah, sitting down with Pablo, it&rsquo;s gonna be a good conversation. I&rsquo;m excited. Nice early one for me, 8 in the morning. Let&rsquo;s get it. What&rsquo;s going on, Z? How you feeling, man?</p>
+            <p id="s73"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=73s" target="_blank" rel="noopener" aria-label="Play from 1:13" data-pagefind-ignore>1:13</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Yeah, I just want to say it&rsquo;s pretty cool to, you know, it&rsquo;s 8 in the morning for you, but it&rsquo;s different times actually for all of us. all 4 of us over the different time zones, which is pretty cool. My name is Zoll, Better Call Zoll, and I run the ZAO, help organize different projects within that, really focus on bringing the profit margin data and IP rights back to independent artists. And been rocking some of the content creation stuff with different awesome folks in the community like Ohnahji B and Maceo here, and excited to chat with you more here, Pablo. And dive into some of the fun things that are ahead for us here in 2026 with crypto, but more on the deep tech side. Because I always like to say I&rsquo;m a super nerd, but I&rsquo;m not even nearly as much of a giga brain as some of the people and folks in this <a class="wt-gloss" href="../glossary.html#ethereum">Ethereum</a> community. So it&rsquo;s always great to be in a room where I&rsquo;m learning a lot. So excited to be here, excited to learn, and excited to hear more. So Feel free to give us an intro, Pablo.</p>
+            <p id="s134"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=134s" target="_blank" rel="noopener" aria-label="Play from 2:14" data-pagefind-ignore>2:14</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Yeah. Thank you so much as well for the introduction. So it&rsquo;s Pablo and yeah, I&rsquo;m from Ghana. I&rsquo;m an enthusiast of Africa, Ethereum, and then Web3 ecosystem. I&rsquo;ve been training people for 5 years now inside the Ethereum ecosystem. I also host projects, host events. across the globe, especially focused in Africa. And yeah, I think that&rsquo;s basically it.</p>
+            <p id="s164"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=164s" target="_blank" rel="noopener" aria-label="Play from 2:44" data-pagefind-ignore>2:44</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s165"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=165s" target="_blank" rel="noopener" aria-label="Play from 2:45" data-pagefind-ignore>2:45</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Good to meet you all.</p>
+            <p id="s166"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=166s" target="_blank" rel="noopener" aria-label="Play from 2:46" data-pagefind-ignore>2:46</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Excellent to meet you guys. And so you said you&rsquo;ve been training people in the ecosystem for 5 years. Like, how&rsquo;s that been?</p>
+            <p id="s175"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=175s" target="_blank" rel="noopener" aria-label="Play from 2:55" data-pagefind-ignore>2:55</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Yeah, I mean, it&rsquo;s been good. It was actually a transition. So 2 years I was more into the crypto side. So I was doing a lot of trading. But then after that 2 years, I went deep into the tech aspects of crypto, blockchain, Ethereum. So that is where my Ethereum journey actually started. And then I got into the space of the Ethereum Foundation and what they&rsquo;ve been doing. So I&rsquo;ve been trying to follow what Ethereum Foundation has been doing, and I got into Celo, and that&rsquo;s how come I&rsquo;m here right now. Yeah, it&rsquo;s been good. Yeah, it&rsquo;s been really, really awesome.</p>
+            <p id="s216"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=216s" target="_blank" rel="noopener" aria-label="Play from 3:36" data-pagefind-ignore>3:36</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Okay, sick, sick, sick. And how&rsquo;s 2026 treating you? What are the current focuses? Are you still training people?</p>
+            <p id="s223"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=223s" target="_blank" rel="noopener" aria-label="Play from 3:43" data-pagefind-ignore>3:43</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Yeah, of course, for the training, it still stands. But then currently we are having a big shift. And as we all know, even though we still have Ethereum, we still have crypto, we still have Web3, But we know we are moving into the AI cycle, right? So even though we did have like a lot of like blockchain stuff, but then this time we are seeing how blockchain and AI works. So talking about 2026 has been that focus, right? And you might have been hearing of a lot of like AI agents on-chain, and that is the current trend that have been happening inside the ecosystem, especially even the Ethereum ecosystem. Both technically and non-technically.</p>
+            <p id="s269"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=269s" target="_blank" rel="noopener" aria-label="Play from 4:29" data-pagefind-ignore>4:29</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s272"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=272s" target="_blank" rel="noopener" aria-label="Play from 4:32" data-pagefind-ignore>4:32</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Okay. And how&rsquo;s it been for you messing with AI tools? I know Brian and Zal are all over the AI tools. I use Claude Code to clean up my computer storage. Well, that&rsquo;s like the extent to which I&rsquo;ve explored, honestly.</p>
+            <p id="s283"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=283s" target="_blank" rel="noopener" aria-label="Play from 4:43" data-pagefind-ignore>4:43</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Yeah. So talking about like the use of AI tools, I remember we had a funny joke where If you hit the limit on Claude, you need to go and grab some coffee because you can&rsquo;t do any other thing. And I mean, that is what is happening throughout, even inside the Ethereum or the blockchain ecosystem, because we are all accustomed to the AI right now. And if you&rsquo;re not using AI, I don&rsquo;t know what else you&rsquo;re doing, right? It&rsquo;s going to be a time where our children are going to be very surprised that we actually hardcoded everything without using AI. And they&rsquo;ll be like, hey, Dad, did you actually code this thing yourself?</p>
+            <p id="s283-2"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=283s" target="_blank" rel="noopener" aria-label="Play from 4:43" data-pagefind-ignore>4:43</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Because they can&rsquo;t even imagine coding without the use of AI. And so that is currently what is happening inside the Ethereum ecosystem where we use AI to solve a lot of solutions. I was part of this hackathon, Celo Hackathon. I don&rsquo;t know if you guys have heard of the Synthesis. which just closed a week ago, focused on AI agents, building on AI agents. And there was a winner from the Celo Hackathon. And to be frank, he didn&rsquo;t write a single code. He just told his AI agent that he should do this both for him, do this on-chain transaction, and he had to just follow it.</p>
+            <p id="s283-3"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=283s" target="_blank" rel="noopener" aria-label="Play from 4:43" data-pagefind-ignore>4:43</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>I think he used OpenClaw. And that was it. He was able to create his own agent, was able to create an AI agent on-chain, and he was able to win. And I think that is the era we are going to inside the Ethereum ecosystem. Maybe last year it was a different thing. Last year, maybe we could have been talking about DeFi, right? Last year we could have been talking about -- probably last 2 or 3 years we were talking about NFTs, right? That was the trend. But this year, I think it&rsquo;s more about AI. And now there&rsquo;s like a lot of like research into how AI can actually make transactions on-chain, how AI can actually interact on-chain.</p>
+            <p id="s283-4"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=283s" target="_blank" rel="noopener" aria-label="Play from 4:43" data-pagefind-ignore>4:43</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>And currently I think Celo, because I also work with Celo, and they are even having the talent protocol where you can be able to see how your AI agent is actually working on-chain. So yeah, these are some of the things that have been happening inside the Ethereum ecosystem. Generally, yeah.</p>
+            <p id="s431"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=431s" target="_blank" rel="noopener" aria-label="Play from 7:11" data-pagefind-ignore>7:11</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Okay, that&rsquo;s pretty sick. Yeah, Brian, I was gonna pass it over to you. You&rsquo;re Mr. AI.</p>
+            <p id="s435"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=435s" target="_blank" rel="noopener" aria-label="Play from 7:15" data-pagefind-ignore>7:15</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Yeah, I don&rsquo;t know about Mr. AI. I dabble here and there. I think, um, uh, yeah, it&rsquo;s pretty cool. I think, you know, a lot of the blockchain people, a lot of the Web3 people, Ethereum, you know, networks that we&rsquo;re connected with is really, you know, pivoting. Of course, you can&rsquo;t, you can&rsquo;t deny that AI is taking the attention share right now. But a lot of people, you know, especially in my network, are kind of brainstorming around how can we use these AI tools to, you know, further blockchain, or how can we use those together paired, you know, with that ecosystem. And I think, you know, AI agents, you know, making transactions, doing on-chain transactions, different things like that on these, you know, decentralized social platforms.</p>
+            <p id="s435-2"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=435s" target="_blank" rel="noopener" aria-label="Play from 7:15" data-pagefind-ignore>7:15</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>I think even we are kind of not even scratching the surface yet. You know, we had Vitalik when he was, you know, going on his, uh, his Hyperfocus rants and stuff, and he was talking about, you know, governance and even using the agents to do on-chain governance. And I think we&rsquo;re gonna see, you know, this, this is like the very tip of the iceberg when it comes to both AI and blockchain and both paired together. It&rsquo;s like we&rsquo;re gonna see some crazy use cases, you know, in the future. And, you know, I, I don&rsquo;t know, everything I But like with AI, like for me, blockchain, hopping into blockchain, that wasn&rsquo;t all this, like, it wasn&rsquo;t super like mind-blowing.</p>
+            <p id="s435-3"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=435s" target="_blank" rel="noopener" aria-label="Play from 7:15" data-pagefind-ignore>7:15</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>It just made sense. It was like, cool. It was very revolutionary. You know, people trying to, you know, fix, fix money globally. That makes sense. It&rsquo;s like sometimes, you know, these AI tools, I&rsquo;m like, man, I feel old. I&rsquo;m not gonna lie. It&rsquo;s like, this, this is crazy. Like even the whole coding side and you&rsquo;re mentioning, you know, The kids, they&rsquo;re gonna be like, yo, Pops, did you actually code this? Or, you know, were you using one of those languages you had to learn? It&rsquo;s like, no, we&rsquo;re talking to the bots and they&rsquo;re coding for us. So it&rsquo;s a different era, it&rsquo;s a different time.</p>
+            <p id="s435-4"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=435s" target="_blank" rel="noopener" aria-label="Play from 7:15" data-pagefind-ignore>7:15</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>I think, you know, it&rsquo;s gonna be cool to see people brainstorming around future use cases on how to, you know, pair all this emerging tech together. So it&rsquo;s pretty cool.</p>
+            <p id="s551"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=551s" target="_blank" rel="noopener" aria-label="Play from 9:11" data-pagefind-ignore>9:11</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Yeah, yeah, I agree. And I think Talking about even on-chain and talking, and there&rsquo;s a lot of even talks happening technically in terms of how AI is going to work, how agent-to-agent AIs are going to work, how transactions are going to work, how you can actually register your agents on-chain. I think those conversations are going to happen. And that would also let us even look at the future, how we are looking at the future in terms of AI agents. I think there&rsquo;s going to be a time where we don&rsquo;t have to even send instructions on-chain, right? I think probably AI agents will get smarter to be able to make transactions if it&rsquo;s needed.</p>
+            <p id="s551-2"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=551s" target="_blank" rel="noopener" aria-label="Play from 9:11" data-pagefind-ignore>9:11</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Even it&rsquo;s going to get to a time where we researchers are no longer needed because we would have AI agent researchers, which we already have. I think if you follow Vitalik, he was talking about a guy building a roadmap, the Ethereum roadmap, through the use of AI, right? And I think that is the future we are moving to, whether we like it or not, right? And it&rsquo;s best to hop on. The only thing I&rsquo;ll say is that a lot of things are moving so, so quickly. And even for me, sometimes I don&rsquo;t even get what is going on because every single week or every single day, there&rsquo;s a new thing.</p>
+            <p id="s551-3"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=551s" target="_blank" rel="noopener" aria-label="Play from 9:11" data-pagefind-ignore>9:11</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Even if you&rsquo;re not talking about blockchain, you&rsquo;re talking about Claude bringing something new, you&rsquo;re talking about Keza bringing something new, and sometimes it&rsquo;s very difficult to hop on. So imagine being inside the Ethereum ecosystem and then also trying to hop on what is actually happening inside the Ethereum ecosystem, talking about AI and talking about blockchain itself. I think it&rsquo;s a lot to take in, but then my advice would be like just to steady the markets, see what use cases that AI can actually do for you and more of like evolve with that particular AI.</p>
+            <p id="s675"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=675s" target="_blank" rel="noopener" aria-label="Play from 11:15" data-pagefind-ignore>11:15</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Yeah. Yeah.</p>
+            <p id="s680"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=680s" target="_blank" rel="noopener" aria-label="Play from 11:20" data-pagefind-ignore>11:20</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Something that immediately came to mind is like, I know like when I first got into crypto, people would be like, we&rsquo;re so early, we&rsquo;re so early. We didn&rsquo;t even have layer 2s yet. And now we got like AI agents and it&rsquo;s like a whole different ballgame, right? Than it was when I got into this. space. And it&rsquo;s like, I couldn&rsquo;t even imagine like an LLM when I was in high school. I&rsquo;m like, oh, look at me with like paperator.com giving me feedback on my grammar. And now people are rewriting the whole paper with ChatGPT and Claude, right? They do all their research, never close a tab. What is a primary source? They just give it qualifying prompts, right? And it&rsquo;s just so crazy to even just consider that, right? You&rsquo;re saying this guy at the hackathon, it&rsquo;s just like, oh, my agent just did everything. I just came here with my pre-workout and I sit here and watch the gym do its stuff.</p>
+            <p id="s724"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=724s" target="_blank" rel="noopener" aria-label="Play from 12:04" data-pagefind-ignore>12:04</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Wow.</p>
+            <p id="s725"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=725s" target="_blank" rel="noopener" aria-label="Play from 12:05" data-pagefind-ignore>12:05</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Yeah, but his agent, right, that he built at some point, right? So like, I think that&rsquo;s a huge part of it is like that initial step forward is doing and testing and trying things. I think one of the things I&rsquo;ve been hearing recently a lot is that blockchain wasn&rsquo;t really built for humans with emotions. Like all these things that, and these problems that we&rsquo;ve had in blockchain and crypto, like crypto actually really, blockchain just being the tech. If AI agents were in a vacuum, able to attack a singular mission together, I think they could do it a lot more successfully than the flaws that we have as humans.</p>
+            <p id="s725-2"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=725s" target="_blank" rel="noopener" aria-label="Play from 12:05" data-pagefind-ignore>12:05</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>So I think blockchain can be utilized in a completely different aspect because of AI agents and taking out some of the human layer for that and having these blockchain rails for payment rails. internationally instantly, because otherwise it wouldn&rsquo;t make sense for AI agents, right? So I&rsquo;m curious what your take on where we&rsquo;re going with the future here of blockchain specifically, like why we&rsquo;re -- it seems as though a lot of the mindshare, like Ohnahji was saying, is going towards AI. So a lot of the money, the capital, the attention, the awareness in blockchain is towards AI as a whole, but AI agents? How are we going to -- what is this kind of tech evolution going to bring for us as we kind of continue on this blockchain journey?</p>
+            <p id="s814"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=814s" target="_blank" rel="noopener" aria-label="Play from 13:34" data-pagefind-ignore>13:34</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Okay, that&rsquo;s a good question. Talking about the future and how we are going to see this journey, to be frank, probably people know, but to be frank, no one really knows. Right? That is what I would say because I&rsquo;ve been following a lot of people inside the space and their views on AI and on blockchain. Some say that the trend of AI is going to go soon, and then there&rsquo;s going to be a time we&rsquo;d have blockchain coming back to be the trend instead of just blockchain and AI. Some people are also saying that AI agents is the new UI. So instead of like having to interact with other things, we can now use AI to do whatever we want to do, even talking about blockchain, right?</p>
+            <p id="s814-2"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=814s" target="_blank" rel="noopener" aria-label="Play from 13:34" data-pagefind-ignore>13:34</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Because when you also look at the proposals that the Ethereum Foundation have actually been bringing, like for example, they brought out what we call ERC-8001, right? Which is called like the Agent Coordination Framework. And before then, they already brought out a lot of proposals, like a lot of EIPs to change some of how agents work or register agents or make transactions or how smart contracts can work automatically with AI without our interactions. So there were a lot of things that have been happening, but as of now, now they are focusing on security. Now, you know, there&rsquo;s a lot of talks in blockchain about security and privacy.</p>
+            <p id="s814-3"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=814s" target="_blank" rel="noopener" aria-label="Play from 13:34" data-pagefind-ignore>13:34</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>So to be frank, We don&rsquo;t really know that this is actually going to happen. It&rsquo;s just more of like predictions knowing that, okay, probably AI agent is going to be the new UI, right? We are not going to be interacting with the blockchain ourselves, but agents will be doing that for us. So there might be a future where we&rsquo;d be having AI agents, and I think we already have it where we get paid through AI agents. So more of like an AI agent called a smart contract developer. where he does everything to receive payments for yourself. He does all the coordination. He talks to the clients that you&rsquo;re supposed to talk to without you intervening.</p>
+            <p id="s814-4"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=814s" target="_blank" rel="noopener" aria-label="Play from 13:34" data-pagefind-ignore>13:34</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>And I think that is where we are moving. But then if you talk about Africa, because I&rsquo;m someone from Africa, we still have a lot of solutions that needs to be fixed in Africa. So when you talk about Ethereum itself and the solutions it will solve in Africa, there&rsquo;s still a lot of gap that we need to fill in terms of Africa because we still have issues like cross-border payments. We still have some issues like talking about stablecoins and talking about our own currency and talking about regulations happening in different parts of the country or in different parts of the continent. So in terms of AI and blockchain itself, there&rsquo;s going to be a lot of evolution again.</p>
+            <p id="s814-5"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=814s" target="_blank" rel="noopener" aria-label="Play from 13:34" data-pagefind-ignore>13:34</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>And I might still say that we are still in a bit of the early ages because we haven&rsquo;t even seen 50% of what is happening, right? And we&rsquo;ll be amazed about what is going to happen or what&rsquo;s the potential of these AI agents or Ethereum is actually going to solve in terms of these particular countries.</p>
+            <p id="s1020"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1020s" target="_blank" rel="noopener" aria-label="Play from 17:00" data-pagefind-ignore>17:00</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s1022"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1022s" target="_blank" rel="noopener" aria-label="Play from 17:02" data-pagefind-ignore>17:02</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>No, I love that. I think there&rsquo;s so many simple things that blockchain can still solve that people kind of skip and jump onto what the trend is currently. And that is AI as a whole. But blockchain can solve so many other problems right now with the tech that&rsquo;s there. And using these agentic tools, giving the non-technical folks a hand in solving problems in their local community, I think creates all of the difference in what we can do here. So it&rsquo;s not not just AI agents, but changing the opportunities for people who weren&rsquo;t able to do something and have the ability to do that, to be able to do that through natural language and manifest some of their ideas into reality, right?</p>
+            <p id="s1069"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1069s" target="_blank" rel="noopener" aria-label="Play from 17:49" data-pagefind-ignore>17:49</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s1069-2"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1069s" target="_blank" rel="noopener" aria-label="Play from 17:49" data-pagefind-ignore>17:49</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>I think that&rsquo;s another huge thing that AI brings, whether that&rsquo;s for just like for people using and creating more blockchain technology, like people like Ohnahji B and I are, in trying to find ways that we can teach more folks to be able to level up and use this technology, create what they want with their communities, and just create things that weren&rsquo;t possible before because those individuals with that creativity weren&rsquo;t able to have the technical capacity to create that thing. But those borders are kind of being lowered. So I think that can be really powerful in a country like Africa.</p>
+            <p id="s1103"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1103s" target="_blank" rel="noopener" aria-label="Play from 18:23" data-pagefind-ignore>18:23</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Yeah, yeah, 100%. 100%.</p>
+            <p id="s1106"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1106s" target="_blank" rel="noopener" aria-label="Play from 18:26" data-pagefind-ignore>18:26</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s1107"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1107s" target="_blank" rel="noopener" aria-label="Play from 18:27" data-pagefind-ignore>18:27</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Continent. And I wanted to ask you, Pablo, like what it&rsquo;s been like for you traveling around the continent and getting to see, like, to see these different economies, the policies, the politics, the technology, like the tech community, right? Like, yeah. What&rsquo;s that been like for you?</p>
+            <p id="s1124"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1124s" target="_blank" rel="noopener" aria-label="Play from 18:44" data-pagefind-ignore>18:44</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Globally or African-focused?</p>
+            <p id="s1126"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1126s" target="_blank" rel="noopener" aria-label="Play from 18:46" data-pagefind-ignore>18:46</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>For Africa first, right? And then like to zoom out, like how do you compare?</p>
+            <p id="s1130"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1130s" target="_blank" rel="noopener" aria-label="Play from 18:50" data-pagefind-ignore>18:50</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>All right. So talking about Africa, it actually opened my eyes. And I always like love to tell the story about Last year, moving to like different African countries and seeing how they actually like operate. So, for example, moving to Ethiopia, realized that Ethiopia is one of the biggest mining companies in the world, if I&rsquo;m not wrong. But crypto is not actually really legal in Ethiopia. And why is that? When I went to Ivory Coast, I realized that we have like top developers. And because, you know, sometimes we say language could be a barrier. But then after moving to Argentina and like looking at the people building there, or let&rsquo;s say Latin America, and looking at Ivory Coast, I felt like that is not a barrier.</p>
+            <p id="s1130-2"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1130s" target="_blank" rel="noopener" aria-label="Play from 18:50" data-pagefind-ignore>18:50</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Because even in Ivory Coast, they have something called technical English where, um, instead of like, um, writing code in French, they write it in English. So those are some of the things that we don&rsquo;t know, but, uh, we, we just like I think that those are some of the issues. But I mean, there were a lot of things happening. And currently, I think even though we&rsquo;re talking about Ethereum, I think StarkNet, Stellar, and some other big blockchains are working in some of those countries and making huge transactions, right?</p>
+            <p id="s1213"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1213s" target="_blank" rel="noopener" aria-label="Play from 20:13" data-pagefind-ignore>20:13</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Yeah, you can talk about any blockchain. All blockchains are open.</p>
+            <p id="s1217"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1217s" target="_blank" rel="noopener" aria-label="Play from 20:17" data-pagefind-ignore>20:17</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Yeah, and this is like more of like the evolution. And if I didn&rsquo;t go there, I wouldn&rsquo;t have known all those things happening. Right? So it&rsquo;s more of like an eye-opener for me, um, knowing how, um, CFA is tied to the euros, but then, um, CFA is being used in Benin, I think, and CFA is also being used in Ivory Coast, and that same CFA is also being used in, in Togo, right? And that&rsquo;s -- yeah, CFA is the, the, the, uh, currency.</p>
+            <p id="s1247"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1247s" target="_blank" rel="noopener" aria-label="Play from 20:47" data-pagefind-ignore>20:47</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Oh.</p>
+            <p id="s1248"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1248s" target="_blank" rel="noopener" aria-label="Play from 20:48" data-pagefind-ignore>20:48</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Yeah. Um, um, they are currently -- Ivory Coast, uh, most, um, Francophone countries use CFA. So more like that, we do have like the cedis, and then the Nigeria that we do have the naira, they use the CFA.</p>
+            <p id="s1264"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1264s" target="_blank" rel="noopener" aria-label="Play from 21:04" data-pagefind-ignore>21:04</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Okay, that&rsquo;s cool. And it&rsquo;s across these different countries. I didn&rsquo;t even know that. That&rsquo;s cool.</p>
+            <p id="s1268"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1268s" target="_blank" rel="noopener" aria-label="Play from 21:08" data-pagefind-ignore>21:08</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Yeah, and when you go deeper, you realize that it&rsquo;s not every African problem that is an African problem. So for example, when you go to Ivory Coast and you go to Benin, we talk about inflation rates and other things. I don&rsquo;t think they have that same issue, right? Even though we could have similar similarities like, um, cross-border payment issues, because it&rsquo;s still difficult to send money from Benin to, to, to Ivory Coast even though they have same currency, it&rsquo;s still a bit difficult. Um, they don&rsquo;t have that same issue like trying to use stablecoins because of this inflation rate. So sometimes we need to get there to see their perspective of what they actually need, right?</p>
+            <p id="s1268-2"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1268s" target="_blank" rel="noopener" aria-label="Play from 21:08" data-pagefind-ignore>21:08</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>So for example, I also compared Latin America to some parts of Africa where we have similar inflation rates and some of the solutions given to Africa is not only Africa. So now we have Latin America who are like trying to solve the same solutions that we&rsquo;re also trying to solve. So I feel like these are some of the things that I noticed as I traveled. I noticed that there&rsquo;s also a very high necessity for education still. We might be talking about AI and blockchain, but education is very, very important because, for example, when Momo and M-Pesa started, so I had a conversation with one guy with Momo and M-Pesa, and even I had that experience 2 or 3 years ago.</p>
+            <p id="s1268-3"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1268s" target="_blank" rel="noopener" aria-label="Play from 21:08" data-pagefind-ignore>21:08</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Momo and MTN is just like more of like a transaction we use in Ghana. When you go to a market woman and you want to use Momo, she gets very angry. But in our current time, when you go to a market woman and you tell her that, do you actually have Momo? She&rsquo;ll be very excited to give you a number to receive that payment. And so that is the evolution that we are also looking for in terms of the crypto industry, where we can actually make payments without needing to say, where it&rsquo;s like we have to convert it into Ethereum or into stablecoins to receive that money.</p>
+            <p id="s1268-4"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1268s" target="_blank" rel="noopener" aria-label="Play from 21:08" data-pagefind-ignore>21:08</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>I think there&rsquo;s a lot of projects that have been built to solve some of these solutions, but I think we still need to do a lot of education. We still need to make it very simple for people to actually use these technologies to solve some of these solutions. So I think that&rsquo;s what I&rsquo;ve seen totally. I&rsquo;m still researching more onto some of the things that Africa actually needs. Because aside the payment itself, there are a lot of things that we need to actually solve. But then, as you know, just like how we&rsquo;ve been talking about AI and blockchain, the payments in the stablecoin ecosystem also have been really hyped.</p>
+            <p id="s1268-5"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1268s" target="_blank" rel="noopener" aria-label="Play from 21:08" data-pagefind-ignore>21:08</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>And I think we need to look beyond that also.</p>
+            <p id="s1439"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1439s" target="_blank" rel="noopener" aria-label="Play from 23:59" data-pagefind-ignore>23:59</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s1439-2"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1439s" target="_blank" rel="noopener" aria-label="Play from 23:59" data-pagefind-ignore>23:59</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Awesome. Well said.</p>
+            <p id="s1439-3"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1439s" target="_blank" rel="noopener" aria-label="Play from 23:59" data-pagefind-ignore>23:59</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>I like that perspective though. I think, you know, it&rsquo;s very valuable just to have that diversity of movement. Like, you have your experience, you know, across these African countries, and then even taking that to, you know, Latin America, it&rsquo;s like, okay, these are the similarities, these are the differences. And it&rsquo;s really cool to, you know, have people care about evaluating those issues in multiple places because If you have, you know, you could have whole countries of folks and they don&rsquo;t know what&rsquo;s going on outside until someone like you, Pablo, comes in and is like, oh, you know, people across the globe are experiencing the same thing. Here&rsquo;s how we&rsquo;re tackling it. Or how are you guys tackling it over here? Like, that&rsquo;s, that&rsquo;s brilliant. That&rsquo;s beautiful. I think that elevates -- that&rsquo;s, I mean, for me, that&rsquo;s what the internet&rsquo;s for. That&rsquo;s what this, this, this digital communication&rsquo;s for. And I think, you know, digital money, blockchain, AI, all of that just goes hand in hand with the invention of internet as a whole. So yeah, shout out to you. That&rsquo;s really dope.</p>
+            <p id="s1498"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1498s" target="_blank" rel="noopener" aria-label="Play from 24:58" data-pagefind-ignore>24:58</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Thank you so much. Thank you so much.</p>
+            <p id="s1500"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1500s" target="_blank" rel="noopener" aria-label="Play from 25:00" data-pagefind-ignore>25:00</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s1502"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1502s" target="_blank" rel="noopener" aria-label="Play from 25:02" data-pagefind-ignore>25:02</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Uh, uh, Brian, have you been outside the country? Where have you traveled to?</p>
+            <p id="s1505"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1505s" target="_blank" rel="noopener" aria-label="Play from 25:05" data-pagefind-ignore>25:05</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>I have -- I haven&rsquo;t. I haven&rsquo;t. So I&rsquo;m like, I&rsquo;m itching.</p>
+            <p id="s1509"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1509s" target="_blank" rel="noopener" aria-label="Play from 25:09" data-pagefind-ignore>25:09</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>I think probably we&rsquo;ll see you in the next DEF CON happening in India.</p>
+            <p id="s1514"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1514s" target="_blank" rel="noopener" aria-label="Play from 25:14" data-pagefind-ignore>25:14</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>I like that.</p>
+            <p id="s1515"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1515s" target="_blank" rel="noopener" aria-label="Play from 25:15" data-pagefind-ignore>25:15</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>There we go.</p>
+            <p id="s1515-2"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1515s" target="_blank" rel="noopener" aria-label="Play from 25:15" data-pagefind-ignore>25:15</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Tell them.</p>
+            <p id="s1516"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1516s" target="_blank" rel="noopener" aria-label="Play from 25:16" data-pagefind-ignore>25:16</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Jeez.</p>
+            <p id="s1517"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1517s" target="_blank" rel="noopener" aria-label="Play from 25:17" data-pagefind-ignore>25:17</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Okay.</p>
+            <p id="s1517-2"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1517s" target="_blank" rel="noopener" aria-label="Play from 25:17" data-pagefind-ignore>25:17</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Yeah, I gotta make something happen. Yeah.</p>
+            <p id="s1521"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1521s" target="_blank" rel="noopener" aria-label="Play from 25:21" data-pagefind-ignore>25:21</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>What do you think about that as well? What do you think about DevCon India?</p>
+            <p id="s1524"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1524s" target="_blank" rel="noopener" aria-label="Play from 25:24" data-pagefind-ignore>25:24</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Yeah, I like the plan for that. Let&rsquo;s manifest that 100%. When I went to India in January, the only place I ever saw cents of rupees was on Uber. Other than that, it was just, you know, rounding to the nearest rupee because about $1 for us was like 90 rupees or so. So I was just adding 10 and just making it like equivalent of 1 cent. So, um, it was just really interesting to, to see the, the way it is. It was a lot of things were digital, which wasn&rsquo;t always what I had imagined, especially what I remembered, but I hadn&rsquo;t been there in 8+ years. So, um, I think it&rsquo;s really cool to have that opportunity to see how different countries work. And like you said, Pablo, be able to travel to different parts of the continent and then see. I&rsquo;m curious what your learnings of different people&rsquo;s currencies and like kind of pros and cons of what you&rsquo;ve seen, or just even like in people losing out in just like fees and stuff like that where they don&rsquo;t really know better or they&rsquo;re taking the most convenient option, but there&rsquo;s better potential options out there to swap?</p>
+            <p id="s1601"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1601s" target="_blank" rel="noopener" aria-label="Play from 26:41" data-pagefind-ignore>26:41</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Yeah, so thanks so much for that question. So I mean, even sometimes when we start this journey, we actually get affected ourselves in terms of trying to make transactions. And that is where our journey actually starts, right? Where we just want to make payments in Nigeria or we want to make payments in Kenya and we don&rsquo;t have any way to actually make that payment. So I remember I had an issue where I think I was supposed to travel to Kenya, or I was supposed to travel and I was not supposed to send -- and that was long, long ago -- and I was not supposed to send an amount of money, or I was not supposed to hold an amount of money in dollars moving out of that country.</p>
+            <p id="s1601-2"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1601s" target="_blank" rel="noopener" aria-label="Play from 26:41" data-pagefind-ignore>26:41</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>And the one solution I had was to like have it in crypto. And I was quite very amazed when I reached Kenya and I had to get a SIM and find a way to actually deposit my money into M-Pesa. But then even when I went the first time, I was using the cross-border payments where I had to change that money from my crypto to M-Pesa and just make payments and was so smooth. I was so excited and I was like, oh wow, if we have this technology like this, imagine a lot of people knowing about similar thing. And so I think that is where it started from because people have similar issues, right?</p>
+            <p id="s1601-3"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1601s" target="_blank" rel="noopener" aria-label="Play from 26:41" data-pagefind-ignore>26:41</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>You might not -- you want to like purchase something in Kenya, but you don&rsquo;t know anything about crypto. And so all you have to do is that you have to find a way to get that money probably to your friend and then go and take that money, which would also cost. Because if you&rsquo;re sending money from a bank from Ghana to Kenya, I don&rsquo;t know the approximate duration it takes, but it doesn&rsquo;t take like just a second. It could take like a day or 2, or it could even take a week. Imagine you have a flight the next day and you need to purchase that thing the next day.</p>
+            <p id="s1601-4"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1601s" target="_blank" rel="noopener" aria-label="Play from 26:41" data-pagefind-ignore>26:41</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>What would you do, right? Um, going to get a loan is not an option, right? That would, that would cost you a lot. So the best, the best solution is what? Crypto. Because you can send money to someone in less than a second and receive that money And so a lot of people face some of these issues because one thing about life is it has to be fast, right? It has to be easy. And so if you cannot get some of those things, and then so that is the issue. And that is why we are always trying to solve some of these problems. And the other thing also is like a normal Ghanaian, because we&rsquo;ve been trying to solve this, not only crypto, but ahead of crypto, right?</p>
+            <p id="s1601-5"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1601s" target="_blank" rel="noopener" aria-label="Play from 26:41" data-pagefind-ignore>26:41</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>So how can we actually try to make the interface very easy for you not to even talk about crypto, right? So remember those days where we had this issue where crypto was not regulated and was regulated, meaning that in Africa we didn&rsquo;t have anything like the regulation board talking about crypto, and people were actually scared to even talk about Bitcoin and crypto because they thought Bitcoin was a scam. And I mean, it was normal because like 5 or 6 years ago, everywhere, anytime you talk about Bitcoin or Ethereum, it looked like a scam, And so these were some of the struggles we actually faced as we were trying to even build some of these solutions.</p>
+            <p id="s1601-6"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1601s" target="_blank" rel="noopener" aria-label="Play from 26:41" data-pagefind-ignore>26:41</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>And so we&rsquo;re thinking, why not build something that would not need to even talk about crypto or even talking about Ethereum? Why not build something that we can just use our email to link up with our wallets without needing to keep our <a class="wt-gloss" href="../glossary.html#seed-phrase">seed phrase</a>? And so that is why we had some of these solutions coming out, like Ethereum trying to produce what we call account abstraction, a lot of technologies trying to come because we are trying to solve a solution to enter the existing market. Because, um, if you try to bring something new also into the old market very quickly, um, it&rsquo;s not too good.</p>
+            <p id="s1601-7"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1601s" target="_blank" rel="noopener" aria-label="Play from 26:41" data-pagefind-ignore>26:41</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Let me give like an example, like talking about AI, right? Probably when OpenAI started, probably they could have had like version 1.0, they could have had version 2.0 or version 3.0 somewhere, but then Probably they decided to start with 1.0 and 2.0 as time went on because they don&rsquo;t want to rush everything into the market. And I think that was the same for crypto where we try to see how we can make it very easy to integrate the already existing market into crypto to make it easier for people to use. And so these are some of the things we actually faced, like trying to keep your seed phrase.</p>
+            <p id="s1601-8"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1601s" target="_blank" rel="noopener" aria-label="Play from 26:41" data-pagefind-ignore>26:41</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Now you don&rsquo;t need to keep your seed phrase into your Telegram because it might be hacked. And so how can you keep that seed phrase? And maybe if you want to import, you need to now get all the 12 letters and try to import. Someone who sells something in the market might not understand this, right? But imagine using your email to log in into a MetaMask wallet, right? So I think this is some of the things that we, we looked at and tried to solve some of these problems. Yeah.</p>
+            <p id="s1900"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1900s" target="_blank" rel="noopener" aria-label="Play from 31:40" data-pagefind-ignore>31:40</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>I appreciate that. I&rsquo;m curious, like, who are the people that you feel like are putting their most energy into that?</p>
+            <p id="s1912"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1912s" target="_blank" rel="noopener" aria-label="Play from 31:52" data-pagefind-ignore>31:52</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>I think basically everyone. Not everyone, but everyone, especially like the builders, right? And that is why I respect the Ethereum community so much, because always the Ethereum Especially the Ethereum contributors are always up to something to solve solutions that we actually care about. Especially talking about like last or 2 years, we didn&rsquo;t have anything like account abstraction and we&rsquo;ve been complaining about how can we keep this seed phrase or how can we just log in without needing to import our wallets, right? And so some of these solutions were solved by the Ethereum community or the Ethereum builders. And that is why I remember I was telling you, Maceo, that this is why even researchers are very, very important inside the ecosystem because they are the people that actually solve some of these solutions and grow our ecosystem, right?</p>
+            <p id="s1912-2"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1912s" target="_blank" rel="noopener" aria-label="Play from 31:52" data-pagefind-ignore>31:52</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>So we have the builders, we have the community guys, we have the ecosystem leads, we have even the marketers, right? A lot of people just come together to solve the solution. And for me personally, I think even the way forward is not a one-month thing. It&rsquo;s a collective thing because I think what Ethereum is trying to achieve is an ecosystem we would have without any one country in a particular ecosystem. And so we are even seeing a time where we wouldn&rsquo;t even have an Ethereum Foundation, but then the Ethereum ecosystem would be moving, right? And we would be the ones controlling that particular particular ecosystem.</p>
+            <p id="s1912-3"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=1912s" target="_blank" rel="noopener" aria-label="Play from 31:52" data-pagefind-ignore>31:52</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>I think that is the future we are all looking for, where we have an ecosystem that is actually running, but then we didn&rsquo;t have an entity trying to control that particular ecosystem. For now, I don&rsquo;t know how things are going to move, especially now that AI is moving. We might have -- we might still have decentralized and centralized as it is, but that is the future we are hopeful for.</p>
+            <p id="s2039"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2039s" target="_blank" rel="noopener" aria-label="Play from 33:59" data-pagefind-ignore>33:59</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s2042"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2042s" target="_blank" rel="noopener" aria-label="Play from 34:02" data-pagefind-ignore>34:02</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Oh yeah.</p>
+            <p id="s2043"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2043s" target="_blank" rel="noopener" aria-label="Play from 34:03" data-pagefind-ignore>34:03</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>I&rsquo;m curious, even, um, right, when you zoom out and look at these different blockchains, right, you mentioned Stark, you mentioned Celo, I think that&rsquo;s Celo L2 now. I, um, I&rsquo;m curious, like, how do you see these different ecosystems, right? Like, this is, this is the Let&rsquo;s Talk About Ethereum podcast, but that&rsquo;s just because we want people to be able to see people around the world who are building to make this, you know, primitive of a decentralized global computer accessible and available to people around the world. And I&rsquo;m curious, how do you think about that? Do you feel like Ethereum is doing its job right now? Vitalik has been posting his new directions and stuff like that. I&rsquo;m curious, how do you see where we&rsquo;re at as an ecosystem, as a community, in terms of leadership, in terms of are we upholding the things we say we&rsquo;re here for?</p>
+            <p id="s2086"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2086s" target="_blank" rel="noopener" aria-label="Play from 34:46" data-pagefind-ignore>34:46</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Yeah. Okay, so let me answer your first question, talking about the Ethereum ecosystem, talking about Stellar. Stellar, talking about StarkNet itself. I think even outside Ethereum, most of the ecosystems are doing very well, especially Stellar. So when I went to Ivory Coast and I was asking a lot of questions about blockchain, how the ecosystem works, I think one thing I always hear is Stellar. Even when you go to Latin America, I remember when I was part of the Invisible Garden builders for DevConnect in Argentina. I was speaking to a lot of builders and they were talking about Stellar, how Stellar even funded some of their flights to come from Mexico, to come to Argentina to build, some places from Medellín, Colombia to build in Argentina.</p>
+            <p id="s2086-2"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2086s" target="_blank" rel="noopener" aria-label="Play from 34:46" data-pagefind-ignore>34:46</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>It&rsquo;s wonderful because I think that is what Ethereum vision also is, right? Because one ecosystem cannot do everything. I think it&rsquo;s a collective thing. And so Stellar has been doing well on that side, even in Africa and beyond in Latin America. Talking about StarkNet, StarkNet has also been doing very well. I think now we really moved into the Francophone ecosystem, and that is what we&rsquo;ve been always talking about, because talking about crypto, it shouldn&rsquo;t be left out, right? And so that is what we are looking at. Now let&rsquo;s talk about Celo and talking about the L2s, right? And L2s are all part of the Ethereum ecosystem, and they&rsquo;ve been helping hand in hand.</p>
+            <p id="s2086-3"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2086s" target="_blank" rel="noopener" aria-label="Play from 34:46" data-pagefind-ignore>34:46</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>When you go to Africa, when you go to Nigeria, you&rsquo;ve been talking a lot about Stroke Scroll, we&rsquo;ve been talking a lot about Celo, we&rsquo;ve been talking a lot about Base, we&rsquo;ve been talking a lot about some of these ecosystems. And I think some of these ecosystems just help the system itself to move. And so now when you&rsquo;re talking about Ethereum, you are not talking about Ethereum as Ethereum itself, but when you talk about Ethereum, you talk about Ethereum as Optimism. When you talk about Ethereum, you talk about Ethereum as Celo. So if you get funded from Optimism, you&rsquo;re getting funding from Ethereum because they are all part of this ecosystem.</p>
+            <p id="s2086-4"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2086s" target="_blank" rel="noopener" aria-label="Play from 34:46" data-pagefind-ignore>34:46</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>And that is how I see it, right? And so we don&rsquo;t even have to distinct that, okay, Ethereum is this, and then sometimes people do because sometimes the use case is actually a bit different. But when you see it in a broader view, you realize that every chain, every L2, every ecosystem has a part to play in the ecosystem. Either it could be something competitive, which is good. It could be something like supporting the builders with grants and funding, which is also good. So that is how I see it in my perspective. Yeah.</p>
+            <p id="s2260"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2260s" target="_blank" rel="noopener" aria-label="Play from 37:40" data-pagefind-ignore>37:40</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Yeah, I love that take. I think, you know, I align with that heavily too. It&rsquo;s like the whole EVM machine as a whole is, you know, working together. I think it&rsquo;s more of, you know, it&rsquo;s like the NFL, right? We&rsquo;ve got all these different teams. I think it&rsquo;s more collaborative than people want to make it seem. I think, you know, the, the PvP element kind of gets celebrated a little too much. And, you know, at the end of the day, we&rsquo;re all in this together. It&rsquo;s still a tiny niche of just crypto blockchain as a whole. So it&rsquo;s like, to kind of fractionalize all these different chains and, you know, pit one against the other, it&rsquo;s like, no, it&rsquo;s, you know, we&rsquo;re all, we&rsquo;re all EVM, we&rsquo;re all working to further this And, you know, like now, if you look at StarkNet, we were having a lot of things talking about Bitcoin and seeing how Bitcoin can actually work on the StarkNet.</p>
+            <p id="s2321"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2321s" target="_blank" rel="noopener" aria-label="Play from 38:41" data-pagefind-ignore>38:41</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>And we have a lot of seeing how Ethereum can work with Bitcoin. And these are some of the conversations that have been happening day in, day out. And I think it&rsquo;s going to be even more where we&rsquo;d have probably chains coming together, agents coming together to to create something unique that would have like all chains coming together, maybe from Avalanche, maybe from Celo, just like coming together to build. I think that is the future we are all looking at.</p>
+            <p id="s2349"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2349s" target="_blank" rel="noopener" aria-label="Play from 39:09" data-pagefind-ignore>39:09</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s2349-2"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2349s" target="_blank" rel="noopener" aria-label="Play from 39:09" data-pagefind-ignore>39:09</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Yeah, a million percent. If you had an African that was getting more interested in blockchain but didn&rsquo;t know what communities to dive more into, didn&rsquo;t know where to start, didn&rsquo;t know where -- was hungry but didn&rsquo;t know what resources to go to, what advice would you give them?</p>
+            <p id="s2372"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2372s" target="_blank" rel="noopener" aria-label="Play from 39:32" data-pagefind-ignore>39:32</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>All right, this is a great question. I love that. Um, so, um, last 2 weeks I started creating a page which probably I could, I could send later on. So when you go to my page, it&rsquo;s, um, www. It&rsquo;s also on my X. So when you search for me on African Builder on X, you would find my website called enestakapo.com. And I have a page that I wrote an article actually inside that page. But then when you go to that page called Into Web3, right? It gives you access to an article first that you need to read to go into. And it says how -- what I wish I had known when I was into Web3, right?</p>
+            <p id="s2372-2"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2372s" target="_blank" rel="noopener" aria-label="Play from 39:32" data-pagefind-ignore>39:32</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>And so it gives an article view on what are some of the things you&rsquo;re supposed to know inside the Web3, or let&rsquo;s say unspoken rules inside the Web3 ecosystem, right? And then when you go down to the page, it looks -- it gives you a look on some of the events, some of the grants, some of the hackathons, some of the events that you should attend in these various African countries. So let me answer your question. But then you can still go to that website to get access to some of the information. So first of all, you need to have a community. I know it&rsquo;s something so simple, but it&rsquo;s not too, too simple because you need to be in a community before you start something.</p>
+            <p id="s2372-3"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2372s" target="_blank" rel="noopener" aria-label="Play from 39:32" data-pagefind-ignore>39:32</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Because anytime you start something, especially in the blockchain space, without knowing anything about it, sometimes you end up going to the wrong channel and you can&rsquo;t go back, or you don&rsquo;t have anyone to actually tell you that, hey, bro, this is not the path. But then if you have a community that guides you through everything, it&rsquo;s really helpful. So to someone who is an African or even globally who wants to enter the Web3 ecosystem, you need to be part of a community. Now, how do you find those communities? Currently, there&rsquo;s a lot of events that happen globally, especially locally in your particular place, especially like conferences yearly and even weekly.</p>
+            <p id="s2372-4"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2372s" target="_blank" rel="noopener" aria-label="Play from 39:32" data-pagefind-ignore>39:32</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>So for example, in Ghana, we have a conference called ETH Accra that happens yearly, which is a hackathon that happens yearly, and it&rsquo;s also a community that you can join. For example, in Nigeria, they have something called Web3 Bridge. It&rsquo;s a hub which helps students or supports students to build and train them, and they also have a conference that happens yearly also. Then when you move to Kenya, we have what we call EAT Safari, which also happens yearly, and they also have a lot and a lot of events that happen, right? So these are some of the things you need to get hold on The other thing is try to participate in hackathons.</p>
+            <p id="s2372-5"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2372s" target="_blank" rel="noopener" aria-label="Play from 39:32" data-pagefind-ignore>39:32</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Um, hackathons really, really help you. It doesn&rsquo;t matter if you are a technical or a non-technical person. It&rsquo;s best to just try your luck in hackathons. Maybe you are going for the money, but aside the money aspect, we have other benefits, right? Um, I always love to go into like EAT Global events because there&rsquo;s a lot of networking that you actually like have in like a lot of EAT Global hackathons. Because whilst you&rsquo;re building, you find errors you need to solve, there&rsquo;s always someone who is ready to help you. You could have conversations on nights that you didn&rsquo;t even expect to happen. And some of these things happen inside hackathons.</p>
+            <p id="s2372-6"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2372s" target="_blank" rel="noopener" aria-label="Play from 39:32" data-pagefind-ignore>39:32</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>I met a very, very good guy, very, very best friend through a hackathon. Right? So these are some of the things that don&rsquo;t happen if you are just learning about Web3, right? So the other thing is stay updated, and that is also linked to the community. So you can join a community, try to focus. Um, I would also not advise to join more than 5 communities. I&rsquo;d advise you to join at least 1 or 2 communities to get accustomed to that community. The other thing would be more of like build in public. I know sometimes when people are in the Web3 ecosystem, they just want to be in their one corner and build something and then show it to the world.</p>
+            <p id="s2372-7"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2372s" target="_blank" rel="noopener" aria-label="Play from 39:32" data-pagefind-ignore>39:32</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>But I think sometimes if probably you&rsquo;re not like a core developer where you just -- and even that is even building in public because you&rsquo;re committing a lot of things on GitHub and people are actually seeing what you&rsquo;re doing. So everything is more about just building in public, right? Show what you&rsquo;re doing. And I think even this even goes to jobs, right? Because CVs and interviews are very important, but then trying to show what you&rsquo;re actually doing in public through Web3 also adds credit to whatever you are doing. So building in public is also very important. You would have a lot of people even reaching out to you because you&rsquo;re building in public.</p>
+            <p id="s2372-8"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2372s" target="_blank" rel="noopener" aria-label="Play from 39:32" data-pagefind-ignore>39:32</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>And that also helps you to learn. So I think these are some of the few things that you&rsquo;re supposed to know as someone who is starting into the Web3 ecosystem.</p>
+            <p id="s2693"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2693s" target="_blank" rel="noopener" aria-label="Play from 44:53" data-pagefind-ignore>44:53</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Yeah. I love it. Go ahead, Brian. No, I just, you know, nail on the head, man. Community, learning, and sharing and showcasing. That&rsquo;s -- we go far with that.</p>
+            <p id="s2712"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2712s" target="_blank" rel="noopener" aria-label="Play from 45:12" data-pagefind-ignore>45:12</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>So Pablo, do you know at all about Ohnahji University?</p>
+            <p id="s2713"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2713s" target="_blank" rel="noopener" aria-label="Play from 45:13" data-pagefind-ignore>45:13</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Uh, no.</p>
+            <p id="s2719"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2719s" target="_blank" rel="noopener" aria-label="Play from 45:19" data-pagefind-ignore>45:19</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Yeah, I mean, that&rsquo;s, that&rsquo;s the community that we built, um, you know, back in 2022. Started off as just like a $10K PFP, you know, mainnet ETH. And then, you know, I got so many questions around like, what is all this stuff? I don&rsquo;t know the terminology and things like that. I&rsquo;m like, okay, let&rsquo;s Let&rsquo;s, let&rsquo;s educate folks. And, you know, we&rsquo;ve been, uh, hosting, uh, Saturday calls since 2022, February 2022, and really just been diving in and building community, helping people learn and grow in emerging tech. So it was heavily on the, on the blockchain side.</p>
+            <p id="s2752"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2752s" target="_blank" rel="noopener" aria-label="Play from 45:52" data-pagefind-ignore>45:52</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Gotcha.</p>
+            <p id="s2752-2"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2752s" target="_blank" rel="noopener" aria-label="Play from 45:52" data-pagefind-ignore>45:52</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Now it&rsquo;s, you know, it&rsquo;s a lot of AI knowledge as well too. But yeah, that&rsquo;s what we&rsquo;ve been doing over, um, since 2022 on Najee and on Najee University. You know, they, the community basically like branded us, you know, Web3&rsquo;s first HBCU, you know, Black and brown folks and just home team vibes. And yeah, that&rsquo;s the energy.</p>
+            <p id="s2770"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2770s" target="_blank" rel="noopener" aria-label="Play from 46:10" data-pagefind-ignore>46:10</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Do you know about HBCUs, Pablo? Do they know about that in Ghana?</p>
+            <p id="s2773"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2773s" target="_blank" rel="noopener" aria-label="Play from 46:13" data-pagefind-ignore>46:13</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>No, no, no, no, no, no.</p>
+            <p id="s2776"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2776s" target="_blank" rel="noopener" aria-label="Play from 46:16" data-pagefind-ignore>46:16</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>You better get in the game.</p>
+            <p id="s2779"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2779s" target="_blank" rel="noopener" aria-label="Play from 46:19" data-pagefind-ignore>46:19</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Yeah, um, historically Black, uh, colleges and universities in the US.</p>
+            <p id="s2784"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2784s" target="_blank" rel="noopener" aria-label="Play from 46:24" data-pagefind-ignore>46:24</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Oh, okay.</p>
+            <p id="s2784-2"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2784s" target="_blank" rel="noopener" aria-label="Play from 46:24" data-pagefind-ignore>46:24</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Going through civil rights and all that. Yeah, it was It was an area, a safe space for, you know, the university side for -- and that&rsquo;s kind of like, we got a bunch of like alums in the community that went to actual HBCUs and stuff. So yeah, it&rsquo;s a good time.</p>
+            <p id="s2801"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2801s" target="_blank" rel="noopener" aria-label="Play from 46:41" data-pagefind-ignore>46:41</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Okay, nice, nice. I think I also have a community that I&rsquo;m building, and I think we can collaborate together, especially like focusing on students to support them in their journey inside the WordPress space. We&rsquo;ve also added AI now. And so I started this like 2 or 3 years ago. And because I was actually impacted from this, because I felt like just someone coming to a conference to talk to me about blockchain actually changed my perspective. And I think there&rsquo;s a lot of people who don&rsquo;t really still know about blockchain, and we need to really educate them. That is why I really appreciate everyone doing this initiative, especially trying to educate people on some of these things, even talking about AI, talking about blockchain. So I appreciate you a lot. And that is like a very, very good work. Yeah, I appreciate that.</p>
+            <p id="s2857"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2857s" target="_blank" rel="noopener" aria-label="Play from 47:37" data-pagefind-ignore>47:37</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s2857-2"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2857s" target="_blank" rel="noopener" aria-label="Play from 47:37" data-pagefind-ignore>47:37</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Okay. I&rsquo;m curious. I know at DevCon 2024 in Thailand, we were in a group together talking about DAOs, Pablo. And Zal is a <a class="wt-gloss" href="../glossary.html#dao">DAO</a> nerd. I&rsquo;m a big fan of DAOs and decentralized coordination. Ohnahji launched a PFP project, considered a DAO or not. I&rsquo;m curious, what do you think about the state of DAOs today and like them as a primitive and opportunity for new kinds of coordination?</p>
+            <p id="s2882"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2882s" target="_blank" rel="noopener" aria-label="Play from 48:02" data-pagefind-ignore>48:02</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>I think that&rsquo;s a good question. DAOs are going to still exist whether we like it or not, but there are going to be different types of DAOs. So I think I was reading a tweet about Vitalik talking about DAOs. I need to bring that and maybe on another session I can talk about that because I need to verify that. But it was just giving a perspective on how DAOs are going to change in the near future, even adding AI to DAOs. And so the way we see how DAOs actually operate might change from time, maybe how we pay or how we actually like see Maybe we would be seeing an evolution of DAOs, right, as time goes on.</p>
+            <p id="s2882-2"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2882s" target="_blank" rel="noopener" aria-label="Play from 48:02" data-pagefind-ignore>48:02</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>But currently we still have a lot of DAOs, but we don&rsquo;t have a lot of DAOs. It means that we have a lot of DAOs, but currently they are not operating anymore. It could be because of funding, it could be because of how their business model or how everything is working currently. And, you know, we just have to accept the fact the system is quite down and it&rsquo;s been down for a while. If I&rsquo;m talking about the system, I&rsquo;m talking about the ecosystem, the crypto ecosystem. And so a lot of operations in a lot of communities and a lot of countries are actually going down.</p>
+            <p id="s2882-3"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2882s" target="_blank" rel="noopener" aria-label="Play from 48:02" data-pagefind-ignore>48:02</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>But I think there&rsquo;s a lot of things also happening maybe I&rsquo;m not seeing. And so, yeah, that is my my perspective on DAOs.</p>
+            <p id="s2977"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2977s" target="_blank" rel="noopener" aria-label="Play from 49:37" data-pagefind-ignore>49:37</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>No, that&rsquo;s cool. So I saw on the Nouns Builder last night that you were -- you&rsquo;ve been buying Rage Quit tokens. They got like $33 in the treasury. What was that about?</p>
+            <p id="s2986"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2986s" target="_blank" rel="noopener" aria-label="Play from 49:46" data-pagefind-ignore>49:46</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Um, I was just exploring the different sub-Nouns. Um, we created our own Nouns DAO as a pseudo multisig, um, for me, uh, and I was interested in seeing what other builders are doing with their noun sub-dows and how they&rsquo;re thinking about that potential and using that primitive for something else. So, um, I, I, I&rsquo;m really interested to see where dows can go. I think you&rsquo;re, you&rsquo;re right on the money there, Pablo. It&rsquo;s gonna be a lot of different types of dows than the ones we&rsquo;ve seen in the past, um, succeeding in a lot of different ways, whether that is in the traditional aspect that we see them, or just completely different ways?</p>
+            <p id="s2986-2"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=2986s" target="_blank" rel="noopener" aria-label="Play from 49:46" data-pagefind-ignore>49:46</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Because I&rsquo;ve actually just heard of so many DAOs in my time in the last 3 years after learning about what decentralization really is, that don&rsquo;t consider themselves DAOs, don&rsquo;t know anything about DAOs even, but they are decentralized orgs in some capacity where some group of individuals has created an impact network of some capacity that&rsquo;s out there, that&rsquo;s uh, self-iterating on itself that has its ideals, that kind of has been building for XYZ amount of years. So I think there&rsquo;s a lot of DAOs out there that don&rsquo;t know that they&rsquo;re DAOs. There&rsquo;s a lot of different types of DAOs that are going to come out of this tokenization model with DAOs as well.</p>
+            <p id="s3075"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3075s" target="_blank" rel="noopener" aria-label="Play from 51:15" data-pagefind-ignore>51:15</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Yeah, I, I perfectly agree with what you&rsquo;re saying, and that is what is going to happen. And yeah, I think probably would have AI agents DAOs also soon coming in where we&rsquo;d have like AI agents.</p>
+            <p id="s3089"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3089s" target="_blank" rel="noopener" aria-label="Play from 51:29" data-pagefind-ignore>51:29</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>No people allowed.</p>
+            <p id="s3090"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3090s" target="_blank" rel="noopener" aria-label="Play from 51:30" data-pagefind-ignore>51:30</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Yeah, at the beginning of my infrastructure, well, at the beginning of my infrastructure of my DAO, it was always perceived and we always left a seat open for the AI agent facilitator at the top of the DAO because in the end of the day, that was gonna be the way we became autonomous, the A part of DAO. decentralized autonomous organization, right? Organization is having those basic things that a company needs, mission, vision, values, have a core belief and thing to push behind and have your identity of individuals you want to join. That&rsquo;s the organization piece. Decentralized, that&rsquo;s a whole mess right now, right? I think we had Swathi, had her on a couple weeks ago, And he said that the only successful DAO that&rsquo;s been out there is Ethereum.</p>
+            <p id="s3090-2"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3090s" target="_blank" rel="noopener" aria-label="Play from 51:30" data-pagefind-ignore>51:30</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Ethereum as an organization is the only decentralized org or thing that has created itself. Everyone else is either working on it or kind of faking it, right? And I think that&rsquo;s super powerful to then understand, okay, decentralization is its own mixed bag. So let&rsquo;s look at autonomous. And autonomous, I think we&rsquo;re at that point now where that part of the question is being answered with AI agents and how we can have facilitators in DAOs where someone came up with the idea for me where each individual within the DAO, once you join, you kind of set your preferences to your AI agent and any proposal that comes up, you get a preset sent to you set of reasons why you -- your bot believes you should vote X, Y, or Z on a proposal.</p>
+            <p id="s3090-3"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3090s" target="_blank" rel="noopener" aria-label="Play from 51:30" data-pagefind-ignore>51:30</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>And I think that helps with a lot of the decision fatigue, A, and then B, the participation and quorum to be able to go up and people actually participating in DAO votes because you have the capacity to then actually get an understanding. Maybe you don&rsquo;t even get the option of being chosen for a vote because your preference is for a different type of vote, right? And, and because you&rsquo;re not of that skill, you&rsquo;re not able to get that vote. And I think there&rsquo;s a lot of power in more specification than just, okay, like, one governance vote is one governance vote, right? Like, it&rsquo;s not different.</p>
+            <p id="s3090-4"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3090s" target="_blank" rel="noopener" aria-label="Play from 51:30" data-pagefind-ignore>51:30</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Um, it&rsquo;s, uh, like that difference in fungible versus non-fungible at the end of the day, right? The difference in different types of votes for different types of things based on what your you or your agent is skilled at. And I think that autonomous part is finally being solved. So as we push more towards decentralization, understanding that and having more decentralized orgs, I think, uh, we&rsquo;ll start to really have DAOs in its full form of people as people have imagined for some time.</p>
+            <p id="s3263"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3263s" target="_blank" rel="noopener" aria-label="Play from 54:23" data-pagefind-ignore>54:23</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Yeah, yeah, true. And there is going to be probably something like identification of AI agents also. And probably something like accreditation score, something like that, where probably if you do probably activities like voting on the DAO as an agent, probably you&rsquo;d have a score or some sort of something like how Gitcoin was working previously. But yeah, I think we are still exploring that world. So we are not setting off anything yet, but we just have to wait to see what happens.</p>
+            <p id="s3301"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3301s" target="_blank" rel="noopener" aria-label="Play from 55:01" data-pagefind-ignore>55:01</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s3301-2"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3301s" target="_blank" rel="noopener" aria-label="Play from 55:01" data-pagefind-ignore>55:01</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Oh yeah. I know we&rsquo;re coming up on the hour. I want to invite you to answer our guest from our first episode, Kenny. We Them Media and his project <a class="wt-gloss" href="../glossary.html#poidh">poidh</a>, Picture It Didn&rsquo;t Happen, have been doing like a weekly video journalism bounty. And this week we&rsquo;re going out and letting people ask these different questions, right? And so first week was about misinformation and information. Week 2 was, what is Ethereum? So we got to get people&rsquo;s immediate reactions to this word being thrown at them. I got all kinds of nebulous stuff, all kinds of -- or like, it&rsquo;s -- I think that&rsquo;s it. That&rsquo;s it. That&rsquo;s impossible finite possibilities. People starting to say stuff to me. And this week&rsquo;s question has been, you know, what&rsquo;s the most important global issue today? And I&rsquo;m curious, Pablo, what would your answer be to that question?</p>
+            <p id="s3346"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3346s" target="_blank" rel="noopener" aria-label="Play from 55:46" data-pagefind-ignore>55:46</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Coming in with the last question, what&rsquo;s the most important global issue today? Hmm, this has to put some thought into it. I think, um, the important global issue today, right, in Africa, right, it could be exposure, right? Um, so I was like having a conversation last -- I think it was yesterday where, um, We were talking about exposure in terms of AI and blockchain, and I was saying the same thing. So for example, someone who has a very good product, right, have like good users, will not get funding because he doesn&rsquo;t have that exposure. Someone in Stanford who has like similar solution but does not understand the market would get that funding because he has that exposure, right?</p>
+            <p id="s3346-2"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3346s" target="_blank" rel="noopener" aria-label="Play from 55:46" data-pagefind-ignore>55:46</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>In terms of Africa, I think that is one of the biggest issues we have because we might have good products, but we don&rsquo;t have VCs coming to our country to explore that, okay, this actually is worth something, right? And I feel like this is one of the biggest issues we have in -- as a continent in Africa. I think globally would be perspective and understanding of things. Even for me as an African, if I didn&rsquo;t travel to go to Ivory Coast, I wouldn&rsquo;t have understood their economy because I would have always said that it&rsquo;s always cross-border payment and inflation that is the issue, right? But then when I went to Ivory Coast, that perspective changed because I understood how they work there.</p>
+            <p id="s3346-3"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3346s" target="_blank" rel="noopener" aria-label="Play from 55:46" data-pagefind-ignore>55:46</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Things. I always thought of Ivory Coast, Benin, and Senegal as countries that speak French. So that could be a barrier why we don&rsquo;t have a lot of Ethereum communities there. But that is not the issue, right? So I feel like it&rsquo;s more about the perspective. When I went to Latin America, my perspective changed. When I went to Singapore, I realized how compliant and how they actually work with crypto in that particular community. And so I think that&rsquo;s the global issue that we have where maybe, Maceo, I might not know what is happening in the US, or I might not know what is happening on the side of Zola or what he&rsquo;s trying to build.</p>
+            <p id="s3346-4"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3346s" target="_blank" rel="noopener" aria-label="Play from 55:46" data-pagefind-ignore>55:46</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>And I think this is a time where we need to really be appreciative of what everyone is trying to build, to understand more on what they are trying to build. And this could be like a general thing, but I think it also happens really inside the ecosystem, especially the Ethereum ecosystem, where we don&rsquo;t really understand what is happening and we are not ready to understand what is actually happening in those particular sectors or those particular ecosystems. Yeah.</p>
+            <p id="s3534"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3534s" target="_blank" rel="noopener" aria-label="Play from 58:54" data-pagefind-ignore>58:54</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Yeah. And I think I&rsquo;d touch on that and say more than that, it&rsquo;s not even necessarily just what they&rsquo;re doing, but why. What&rsquo;s the problem that they&rsquo;re trying to solve? that like burning desire and passion that they want to get out because then if you find a like-minded individual, it&rsquo;s easy to pair people up even if they&rsquo;re not working on the same solution. They might be working towards the same problem.</p>
+            <p id="s3558"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3558s" target="_blank" rel="noopener" aria-label="Play from 59:18" data-pagefind-ignore>59:18</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Yeah, yeah, yeah, perfectly true. Yeah.</p>
+            <p id="s3564"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3564s" target="_blank" rel="noopener" aria-label="Play from 59:24" data-pagefind-ignore>59:24</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>No, but I love that answer to the question. I appreciate that exposure, right? And talking about the Silicon Valley Stanford guy. California, SoCal person, as opposed to somebody in Africa, right, who&rsquo;s actually building with, you know, market context and like depth of knowledge and visible opportunities for how they would scale, etc. And I think what you said, right, about understanding what&rsquo;s going on in these different international contexts too is such -- that&rsquo;s really, you know, I&rsquo;m so on board with that. And I would say that&rsquo;s really why I&rsquo;m excited about this initiative, um, is because we&rsquo;re actually getting people from around the world to answer these questions.</p>
+            <p id="s3564-2"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3564s" target="_blank" rel="noopener" aria-label="Play from 59:24" data-pagefind-ignore>59:24</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>You know, you&rsquo;re the first person now on footage to answer the question in Ghana, so shout out to you. We&rsquo;ve had people in Nigeria and Kenya and India participate outside the US now so far. And I probably asked 15 people this week here in the US shooting videos. And I just think it&rsquo;s like, just to even start to understand, you know, what are the different contexts we&rsquo;re living in, right? I think propaganda is so, is so prominent everywhere that, you know, one thing happens, right? Iran gets bombed, Abu Dhabi gets bombed, and we all get 13 different narratives about what just happened. Right? But I think there&rsquo;s really an opportunity for us to start using the internet to really get in conversation about what our actual understanding of truth is, um, in a proactive way.</p>
+            <p id="s3564-3"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3564s" target="_blank" rel="noopener" aria-label="Play from 59:24" data-pagefind-ignore>59:24</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Um, and, right, really like creating some kind of something we can measure against, right? Like, what are we, what are we in agreement about, right? What are we in disagreement about and why? And start to really pinpoint, you know, whose agenda has us be in disagreement? Because I think we&rsquo;re just trying to understand what&rsquo;s going on, right? We&rsquo;re not really trying to be disagreeing. And we get caught up just trying to understand the world in this vortex of who&rsquo;s who and who&rsquo;s right and who&rsquo;s wrong. And I just think we end up pitted against each other when we&rsquo;re one -- we&rsquo;re one human race on one planet, you know, that&rsquo;s kind of on a train, on a train to the shithole with AI agents.</p>
+            <p id="s3564-4"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3564s" target="_blank" rel="noopener" aria-label="Play from 59:24" data-pagefind-ignore>59:24</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>But yeah, man, thank you for answering the question. I&rsquo;m curious, do you have a question you would ask the world? If you could query the world, what would you want to know?</p>
+            <p id="s3672"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3672s" target="_blank" rel="noopener" aria-label="Play from 61:12" data-pagefind-ignore>61:12</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>You mean like generally to everyone? If I had a question to --</p>
+            <p id="s3678"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3678s" target="_blank" rel="noopener" aria-label="Play from 61:18" data-pagefind-ignore>61:18</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Yeah, you got to pick next week&rsquo;s question. What would your question be?</p>
+            <p id="s3681"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3681s" target="_blank" rel="noopener" aria-label="Play from 61:21" data-pagefind-ignore>61:21</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Oh, you mean like when you&rsquo;re asking them the questions like, what is Ethereum or their perspective about Ethereum? I think one question I would love to know is, what&rsquo;s the biggest use case of Ethereum in Africa? That could be a long question, but that could be something to have a thought on. What could be the biggest use case in your community? I want to also know that perspective. So, for instance, we know that, let&rsquo;s say, for instance, Asia -- was it Asia? Or let&rsquo;s say, let&rsquo;s use an example, US. When you&rsquo;re sending money in US or you&rsquo;re sending money in Europe, it&rsquo;s easy to use Stripe to make those transactions at a very low fee. Unlike Africa, it&rsquo;s not like that. So, more of like trying to know what their biggest use case is in that particular community. I think that would help us to understand more on how some people use crypto or Ethereum to solve some of these solutions.</p>
+            <p id="s3749"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3749s" target="_blank" rel="noopener" aria-label="Play from 62:29" data-pagefind-ignore>62:29</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Yeah. Okay. I love that. Do you have a question for like the average everyday person that you&rsquo;d want to know? Because I feel like a lot of people aren&rsquo;t going to have a take on the most reasonable use case for And I appreciate the question. I think it&rsquo;s a cool idea for a bounty, right? Because we will get people who have a lot of context who feel like they&rsquo;re not getting the exposure they want. And so now we get to surface those ideas, which is exciting.</p>
+            <p id="s3769"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3769s" target="_blank" rel="noopener" aria-label="Play from 62:49" data-pagefind-ignore>62:49</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Yeah, that&rsquo;s very true. That&rsquo;s very true. Yeah, yeah. And so for me, I think the question would be probably, what is crypto, right? Or asking what is stablecoins, right? I think that would be the best currently. Or what do you think about the Genius Act? Because I think that is one of the important things. So just to understand their view, because they might have heard about the Genius Act, but maybe they have just like something small about it. So maybe you could ask some of those questions.</p>
+            <p id="s3808"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3808s" target="_blank" rel="noopener" aria-label="Play from 63:28" data-pagefind-ignore>63:28</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Yeah. Okay. You have thoughts on the Genius Act you want to share before we wrap up? That&rsquo;s, that&rsquo;s a very timely thing to bring up. So big respect.</p>
+            <p id="s3816"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3816s" target="_blank" rel="noopener" aria-label="Play from 63:36" data-pagefind-ignore>63:36</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Exactly.</p>
+            <p id="s3817"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3817s" target="_blank" rel="noopener" aria-label="Play from 63:37" data-pagefind-ignore>63:37</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>I think there will be another time to talk about the Genius Act. Yeah, because I was having that same conversation with a friend yesterday, but I think we could, we could talk about that later on. It would be like more of like a lengthy, lengthy conversation. Yeah.</p>
+            <p id="s3831"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3831s" target="_blank" rel="noopener" aria-label="Play from 63:51" data-pagefind-ignore>63:51</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Okay, the people want that. The people need that. All right, Pablo, well, thank you so much for joining us today. Um, thank you, Brian. Thank you, Zal. I&rsquo;m so grateful to be co-creating this podcast and to be able to have guests from around the world, people like yourself, Pablo, who are thinking about, right, how do we have this technology make a difference in our communities? I feel so blessed. So blessed.</p>
+            <p id="s3853"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3853s" target="_blank" rel="noopener" aria-label="Play from 64:13" data-pagefind-ignore>64:13</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Yeah. Thanks so much also. It was great meeting you. Love to be on the session again. Maybe I&rsquo;ll be the one asking more questions because I think I want to know more about what you guys are building, especially Brian. I love what he&rsquo;s actually building. I want to also know what Zwal is also building. So maybe this time asking questions to understand. I think I have more view on how Masiya has been working, especially with the media, because I think they&rsquo;ve been working across Africa also. But then I would love to hear more about our brand and what he&rsquo;s working on. And Zwal, yeah.</p>
+            <p id="s3889"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3889s" target="_blank" rel="noopener" aria-label="Play from 64:49" data-pagefind-ignore>64:49</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Hell yeah. Well, they go live every day.</p>
+            <p id="s3895"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3895s" target="_blank" rel="noopener" aria-label="Play from 64:55" data-pagefind-ignore>64:55</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Perfect then.</p>
+            <p id="s3896"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3896s" target="_blank" rel="noopener" aria-label="Play from 64:56" data-pagefind-ignore>64:56</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s3898"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3898s" target="_blank" rel="noopener" aria-label="Play from 64:58" data-pagefind-ignore>64:58</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Anything for you, Brian? Anything for me, Saul?</p>
+            <p id="s3900"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3900s" target="_blank" rel="noopener" aria-label="Play from 65:00" data-pagefind-ignore>65:00</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Yeah, it was amazing having you. Uh, it&rsquo;s good to meet you. Uh, yeah, definitely want to keep in touch and learn more about what you&rsquo;re building and just continue killing it, man. We need more people out here, um, with that energy and that mission of educating folks and, you know, helping utilizing blockchain and AI, any emerging technology to, to help humanity, man. That&rsquo;s what it&rsquo;s all about. And all that. So, sure. Yeah, 100%.</p>
+            <p id="s3925"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3925s" target="_blank" rel="noopener" aria-label="Play from 65:25" data-pagefind-ignore>65:25</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>It was a, it was a pleasure having you, Pablo. It was great learning more about what your thoughts are. I think there was a lot of great conversation. And, uh, no, it was just a pleasure to hear more builders building in different areas. We have a lot of, um, teammates out in, in Africa, in different places in Africa that are finding their way to make a difference in their, uh, an impact in their community in one way or another by learning something from blockchain, whether it&rsquo;s just some skill or utility from the community or actually something that is bringing blockchain right to their community doorstep directly. So, um, it was a pleasure hearing more about what you&rsquo;re doing and excited to have you on again.</p>
+            <p id="s3967"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3967s" target="_blank" rel="noopener" aria-label="Play from 66:07" data-pagefind-ignore>66:07</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>All right.</p>
+            <p id="s3968"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3968s" target="_blank" rel="noopener" aria-label="Play from 66:08" data-pagefind-ignore>66:08</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Thank you so much. Yeah. Thank you. Pleasure meeting everyone.</p>
+            <p id="s3971"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3971s" target="_blank" rel="noopener" aria-label="Play from 66:11" data-pagefind-ignore>66:11</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Yeah. Appreciate you, man. Peace.</p>
+            <p id="s3974"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3974s" target="_blank" rel="noopener" aria-label="Play from 66:14" data-pagefind-ignore>66:14</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s3975"><a class="wt-at" href="https://www.youtube.com/watch?v=lujj9Wr1R0Q&amp;t=3975s" target="_blank" rel="noopener" aria-label="Play from 66:15" data-pagefind-ignore>66:15</a><span class="wt-spk" title="Speaker D, as separated by the model" data-pagefind-ignore>D<span class="visually-hidden">: </span></span>Peace.</p>
+        </div>
+    </section>
+
+
+    <section class="wrap wt-more" aria-label="More from the library">
+        <div class="country-head">
+            <h2 class="country-name">Keep reading.</h2>
+            <span class="country-meta"><a href="../library.html">The whole library</a></span>
+        </div>
+        <ul class="rel-list">
+            <li class="rel-item">
+                <a class="rel-link" href="../watch/making-the-beats-behind-ready-to-die-in-full-philadelphia.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/DmVhqSsobd4/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">The Beats Behind Ready to Die, in Full, Philadelphia</span>
+                        <span class="rel-why">Philadelphia</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="../watch/there-is-no-black-genre-trenton-book-fair.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/xRlacivMfN8/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">There&#x27;s No Black Genre, Trenton Book Fair</span>
+                        <span class="rel-why">2026</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/A6FyDnhHPks/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">New Jersey&#x27;s First True Superhero, Trenton Book Fair</span>
+                        <span class="rel-why">2026</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+<div class="wrap wtm-share"></div>
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. We made the work published here in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Watch first</a></li>
+                    <li><a href="../portfolio.html">Watch</a></li>
+                    <li><a href="../learn.html">Learn</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Correspondents</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Support</a></li>
+                    <li><a href="../work-with-us.html">Work with us</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../work-with-us.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+<script src="../wtm-player.js" defer></script>
+<script src="../wtm-core.js" defer></script>
+</body>
+</html>

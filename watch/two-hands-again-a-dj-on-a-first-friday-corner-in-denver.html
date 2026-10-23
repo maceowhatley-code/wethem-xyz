@@ -1,0 +1,867 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="What made you smile this week?">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/watch/two-hands-again-a-dj-on-a-first-friday-corner-in-denver">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="Two Hands Again: A DJ on a First Friday Corner | Denver">
+    <meta property="og:description" content="What made you smile this week?">
+    <meta property="og:image" content="https://wethem.xyz/stills/FD4qlpB_q7s.jpg">
+    <meta property="og:image:alt" content="Two hands again: a DJ on a First Friday corner in Denver">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://wethem.xyz/stills/FD4qlpB_q7s.jpg">
+    <meta property="og:url" content="https://wethem.xyz/watch/two-hands-again-a-dj-on-a-first-friday-corner-in-denver">
+    <title>Two Hands Again: A DJ on a First Friday Corner | Denver &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://wethem.xyz/watch/two-hands-again-a-dj-on-a-first-friday-corner-in-denver#video",
+  "name": "Two Hands Again: A DJ on a First Friday Corner | Denver",
+  "description": "What made you smile this week? DJ Bkellz, playing a set on a corner at First Friday in Denver, says his favorite quote is \"the only day wasted is the day that you don't laugh.\" He posts something he is grateful for on Instagram every day, and this week it included the artist Heilig, who makes \"all these cool cats.\" He has started gardening again, peas and beans for now: \"Everyone should grow food. It's easy. All it takes is dirt and water.\" He broke his wrist snowboarding and DJed one-handed, and everybody loved it: \"wait till I got 2 hands again. Here I am with 2 hands, baby.\" Raised in Watertown, New York, he threw music festivals at Woodhenge, a sustainable community where they built \"an off-grid solar-powered underground house\" with a music venue off the back. Then COVID came: he sold everything, bought a motorhome, traveled the country and ended up in Denver. Last week's question was the most important issue in the world today. His answer is that musicians are underpaid. He says Ireland recently passed a universal income for musicians, and he calls for \"a union and a collective for musicians\": if he sells 100 tickets at $20 each, \"why do I only get $100 and the venue gets $10,000?\" He also invites people to a show at the Black Box that Sunday where festival tickets are hidden as Easter eggs. Filmed 3 April 2026 at First Friday in Denver.",
+  "thumbnailUrl": [
+    "https://wethem.xyz/stills/FD4qlpB_q7s.jpg",
+    "https://i.ytimg.com/vi/FD4qlpB_q7s/mqdefault.jpg"
+  ],
+  "uploadDate": "2026-04-04T15:15:35Z",
+  "embedUrl": "https://www.youtube.com/embed/FD4qlpB_q7s",
+  "url": "https://wethem.xyz/watch/two-hands-again-a-dj-on-a-first-friday-corner-in-denver",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "duration": "PT7M27S",
+  "inLanguage": "en",
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "What made you smile this week?",
+      "startOffset": 0,
+      "url": "https://wethem.xyz/watch/two-hands-again-a-dj-on-a-first-friday-corner-in-denver?t=0",
+      "endOffset": 92
+    },
+    {
+      "@type": "Clip",
+      "name": "How long have you been DJing?",
+      "startOffset": 92,
+      "url": "https://wethem.xyz/watch/two-hands-again-a-dj-on-a-first-friday-corner-in-denver?t=92",
+      "endOffset": 137
+    },
+    {
+      "@type": "Clip",
+      "name": "Are you from Denver originally?",
+      "startOffset": 137,
+      "url": "https://wethem.xyz/watch/two-hands-again-a-dj-on-a-first-friday-corner-in-denver?t=137",
+      "endOffset": 200
+    },
+    {
+      "@type": "Clip",
+      "name": "A First Friday corner set and a free pickle shot",
+      "startOffset": 200,
+      "url": "https://wethem.xyz/watch/two-hands-again-a-dj-on-a-first-friday-corner-in-denver?t=200",
+      "endOffset": 259
+    },
+    {
+      "@type": "Clip",
+      "name": "What is the most important issue in the world today?",
+      "startOffset": 259,
+      "url": "https://wethem.xyz/watch/two-hands-again-a-dj-on-a-first-friday-corner-in-denver?t=259",
+      "endOffset": 447
+    }
+  ],
+  "creator": {
+    "@type": "Organization",
+    "@id": "https://wethem.xyz/#organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "actor": {
+    "@type": "Person",
+    "name": "DJ Bkellz"
+  },
+  "transcript": "So I have a reason to smile every day because I think about something I can share that made me grateful.\nNo, start over, start over. You're just like boom into it.\nSo something that made me smile this week -- I smile every single day, lots of times a day. My favorite quote is, the only day wasted is the day that you don't laugh. I try to laugh every day too. I post on my Instagram every day something I'm grateful for. That always makes me smile. This guy, Heilig, made me smile. He's an amazing artist. You should check him out, Heilig Art. He makes all these cool cats. If you want to show them what the cats look like. Okay, sick.\nTalk about it.\nAll right, so a couple other things I'm happy for. I started gardening again, and part of me to grow food. Everyone should grow food. It's easy. All it takes is dirt and water. Y'all got a little bit of that.\nOkay, what have you been growing? What have you been growing?\nJust peas and beans for now. I started them early, and if they die, I'll just park the truck and go home. But they're coming up this week, so they're doing good. Hopefully they don't die in the frost. I'm also really grateful and happy about teachers. I'm happy to be a student and a teacher. I teach DJ lessons. I go by BKells. You can find me at BKells Music on Instagram if you want a DJ lesson. And, uh, I love my students and I love the people that teach me. I've been learning bass. I have this little ukulele. I had a friend stop by earlier to play it. But, uh, I love life, man. I'm happy all the time. Not all the time, because things make me sad.\nOkay.\nI'm happy to see you. I'm happy you're interviewing me.\nHow long you been DJing?\nI DJ'd one of my own high school dances when I was 16. I never took myself seriously as a party DJ. I played instruments, and then while snowboarding I broke my wrist. I call it my catarist.\nOkay.\nIt's a pun on catalyst.\nUh-huh.\nBecause it's what made me get back into DJing. I only had one hand, so I was DJing one-handed and everybody loved it. And I was like, damn, if you guys like this, wait till I got 2 hands again. Here I am with 2 hands, baby.\nBack at it nonstop. And what made you start DJing in the first place?\nUh, creating joy for people. others is my calling in life, and it's so cool to have a room full of people that you're curating the vibe for and seeing everyone smiling and dancing. That is what fills me up.\nHell yeah, hell yeah. Are you from Denver originally?\nI'm from Watertown, New York, which is on the border of the Thousand Islands, closer to Kingston, Ontario, Canada, than Syracuse, New York.\nOh wow, wow.\nBasically Canadian. I hung out with a lot of Canadians.\nOkay, that's sick. So what brought you out here?\nUh, I was throwing music festivals at this place called the Woodhenge. It was a sustainable community. We built an off-grid solar-powered underground house, built a music venue off --\nWait, wait, wait, you built an off-grid solar-powered underground house?\nYes, and it had a rock mass heater, and I built a music venue off the back of it. We were throwing shows every weekend, and then, uh, um, it evolved into throwing a music festival, and eventually, um, eventually I was having multi-day music festivals every summer, and then COVID So I sold everything and bought a motorhome and started traveling the country and, uh, got out here, never left. I love this place.\nThis is definitely an active, an active Friday night.\nWhat's up?\nIt's definitely a cool Friday night vibe. I've been to some different, like, First Fridays. I haven't seen people on the decks.\nYeah, this is totally random. I just hit up Hyluck and I was like, yo, it's First Friday, what are you doing? He's like, I'm on the corner, come play a set. I'm like, okay. He live-mains at all my shows for free and he helped get me on Hydroponics Festival, which is down at Tico Town this year. You should come. We're having a show this Sunday with my boy Dillard headlining, doing a vinyl swap.\nFlap it, flap it.\nOkay. And, uh, they're giving away free tickets to Hydroponics Festival at this show. So if your people want to come to a festival for free, come through the Black Box this Sunday.\nOh yeah.\nHiding Easter eggs around the venue with festival tickets in them.\nHell yeah.\nOh, you want a free pickle shot?\nSure. Yeah, yeah, yeah. Let's go. Free pickle shot. Do not pass go.\nDo not collect $200.\nGet your pickle shot. Is that where you got your hat?\nNo, I just love pickles.\nOkay, okay. I like that. I like that. So last week our question was, what's the most important issue in the world today?\nMost important issue in the world? Well, I could think about that for a long time, and I could think about a lot of things that I would probably disagree with myself later and be like, oh wait, that's more important. But I'm going to tell you one of the most important issues currently on my mind is musicians are underpaid. In Ireland, they just recently passed universal income.\nReally?\nFor musicians, yeah. I think it's something along the lines of like $1,500 a month. So they get paid for shows and then also just get $1,500 a month, which is awesome. In Berlin, I'm actually friends with a group of people, the Mauerpark crew, shouts out. They throw Rave the Planet, which is like a Mardi Gras in Berlin, bunch of floats.\nThat's sick.\nOvernight sings operas. You got to sing with them on the float last year while we were driving around playing music to millions of people.\nI know a guy out in Berlin, he has like a club and it's like a bomb shelter. What's up? I know a guy in Berlin, he has like a club but it's a bomb shelter underground. You should connect me so I can play there. Okay.\nBut I'm inspired by that, and I think we need more activism and lobbying from musicians in our country to make positive change. You know, we need like a union and a collective for musicians, because if I sell 100 tickets for $20 each and all my friends are buying $20 overpriced drinks at your club, why do I only get $100 and the venue gets $10,000? You know, musicians deserve a fair shake. The problem is, if I speak up, there's 100 other guys waiting for the opportunities I have that'll do it for free. But if we unionize and come together and demand better pay, then there's not much the venues can do besides book us or book people that aren't in the union that probably won't bring a lot of people or put on a good show. So let's get together as performers and demand a fair shake. Hit me up on BKellz Music Instagram if you want to be a part of that movement. How are we doing?\nYeah, it's even better than first Friday.\nI look -- he's an amazing artist. He's painted all of these at shows.\nOh yeah.\nI have a bunch of his originals in my room that he live painted during my shows.\nYeah, that's fucking -- that's hell yeah. Fuck yeah.\nWhat is your name?\nMaceo.\nMaceo, where are you from?\nI'm from Philadelphia.\nPhiladelphia?\nYeah, yeah. What about you?\nI am from Athens, Georgia.\nOkay.\nUh, grew up in a pottery studio and, uh --\nI'm snagging the mic.\nYeah, yeah.\nCan I hand it to you?\nBoom, now we're talking. Hi, my name is Nathan.\nNathan, it's nice to meet you.\nNice to meet you. You have a fire extinguisher, right?\nMm-hmm.\nOh, just like -- Don't do it in front of the speaker, maybe, because that'll probably make it not work.\nYeah, yeah, yeah, I agree, but I was gonna let them get by. Go ahead, your name is what?\nMy name is Nash.\nHow are you doing? I'm doing well. So I've been doing these like man on the street interviews where I've been asking people these different questions every week. So can I, can I ask you my questions?\nYeah.\nHell yeah.",
+  "contentLocation": {
+    "@type": "Place",
+    "name": "Denver",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "url": "https://wethem.xyz/places#denver"
+  },
+  "isPartOf": {
+    "@type": "CreativeWorkSeries",
+    "name": "Colorado DJ and music scene",
+    "url": "https://wethem.xyz/portfolio#p-music"
+  },
+  "dateCreated": "2026-04-03",
+  "dateModified": "2026-10-21"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://wethem.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Projects",
+      "item": "https://wethem.xyz/portfolio"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Colorado DJ and music scene",
+      "item": "https://wethem.xyz/portfolio#p-music"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Two hands again: a DJ on a First Friday corner in Denver",
+      "item": "https://wethem.xyz/watch/two-hands-again-a-dj-on-a-first-friday-corner-in-denver"
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li class="nav-more"><a href="../index.html" title="the question of the week and the newest pieces">Home <span class="nav-d" aria-hidden="true">the question of the week and the newest pieces</span></a></li>
+                <li><a href="../portfolio.html" aria-current="true" title="every piece, by project, place, person and topic">Watch <span class="nav-d" aria-hidden="true">every piece, by project, place, person and topic</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One Question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../learn.html" title="from the people who use crypto">Learn <span class="nav-d" aria-hidden="true">from the people who use crypto</span></a></li>
+                <li><a href="../people.html" title="who filmed what, and the people reporting with us">Correspondents <span class="nav-d" aria-hidden="true">who filmed what, and the people reporting with us</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li><a href="../work-with-us.html" title="brand work, documented">Work with us <span class="nav-d" aria-hidden="true">brand work, documented</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Support <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One Question</span></a></nav>
+<aside class="wrap tw-row" aria-labelledby="tw-k"><span class="tw-k" id="tw-k">This week</span><ul class="tw-list"><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../watch/making-the-beats-behind-ready-to-die-in-full-philadelphia.html" title="The beats behind Ready to Die, in full: Easy Mo Bee at Black and Nobel"><span class="tw-kind">New</span> The beats behind Ready to Die, in full</a></li><li><a href="../onequestion.html"><span class="tw-kind">One Question</span> what would you ask the world?</a></li></ul></aside>
+<main id="main-content">
+
+<article class="wrap wt-piece" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k], place[data-pf-place]" data-pagefind-filter="kind[data-pf-kind], place[data-pf-place], country[data-pf-country], project[data-pf-project]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="watch" data-pf-date="2026-04-04" data-pf-vid="FD4qlpB_q7s" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;7:27&quot;,&quot;s&quot;:1,&quot;w&quot;:640}" data-pf-place="Denver" data-pf-country="United States" data-pf-project="Colorado DJ and music scene">
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-pagefind-ignore>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../portfolio.html">Projects</a></li>
+            <li><a href="../portfolio.html#p-music">Colorado DJ and music scene</a></li>
+            <li aria-current="page">Two hands again: a DJ on a First Friday corner in Denver</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title">Two hands again: a DJ on a First Friday corner in Denver.</h1>
+
+    <p class="wt-byline"><strong>DJ Bkellz</strong>, Denver, 7 min &middot; filmed <time datetime="2026-04-03">3 April 2026</time></p>
+    <p class="wt-note wt-ask-fix" data-pagefind-ignore>In this video? <a href="../privacy.html#in-a-video" data-fix-open="takedown">Ask for a change or have it taken down.</a></p>
+
+    <div class="wt-cols">
+    <div class="wt-maincol">
+    <div class="wt-frame">
+        <lite-yt videoid="FD4qlpB_q7s" live posterurl="../stills/FD4qlpB_q7s.jpg" postersrcset="../stills/FD4qlpB_q7s-320.jpg 320w, ../stills/FD4qlpB_q7s-480.jpg 480w, ../stills/FD4qlpB_q7s-640.jpg 640w"><iframe src="https://www.youtube-nocookie.com/embed/FD4qlpB_q7s?rel=0&amp;enablejsapi=1&amp;playsinline=1" title="Two hands again: a DJ on a First Friday corner in Denver, We Them Media" width="760" height="428" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></lite-yt>
+    </div>
+    <p class="wt-news" data-pagefind-ignore><span class="wt-news-lead">Keep up with new releases.</span> <a class="btn btn-coral wt-news-btn" href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">Get the newsletter, once a week</a></p>
+    <p class="wt-note wt-cite">To quote this piece: DJ Bkellz, &ldquo;Two hands again: a DJ on a First Friday corner in Denver,&rdquo; We Them Media, filmed 2026-04-03, https://wethem.xyz/watch/two-hands-again-a-dj-on-a-first-friday-corner-in-denver. Each transcript line links to its second.</p>
+
+    <div class="wt-prose">
+            <p>What made you smile this week? DJ Bkellz, playing a set on a corner at First Friday in Denver, says his favorite quote is &ldquo;the only day wasted is the day that you don&rsquo;t laugh.&rdquo; He posts something he is grateful for on Instagram every day, and this week it included the artist Heilig, who makes &ldquo;all these cool cats.&rdquo; He has started gardening again, peas and beans for now: &ldquo;Everyone should grow food. It&rsquo;s easy. All it takes is dirt and water.&rdquo;</p>
+            <p>He broke his wrist snowboarding and DJed one-handed, and everybody loved it: &ldquo;wait till I got 2 hands again. Here I am with 2 hands, baby.&rdquo; Raised in Watertown, New York, he threw music festivals at Woodhenge, a sustainable community where they built &ldquo;an off-grid solar-powered underground house&rdquo; with a music venue off the back. Then COVID came: he sold everything, bought a motorhome, traveled the country and ended up in Denver.</p>
+            <p>Last week&rsquo;s question was the most important issue in the world today. His answer is that musicians are underpaid. He says Ireland recently passed a universal income for musicians, and he calls for &ldquo;a union and a collective for musicians&rdquo;: if he sells 100 tickets at $20 each, &ldquo;why do I only get $100 and the venue gets $10,000?&rdquo; He also invites people to a show at the Black Box that Sunday where festival tickets are hidden as Easter eggs.</p>
+            <p>Filmed 3 April 2026 at First Friday in Denver.</p>
+            
+    </div>
+    <p class="wt-back" data-pagefind-ignore><a href="../supporter.html?s=watch-support">Become a supporter &rarr;</a></p>
+    </div>
+    <aside class="wt-rail" aria-label="More on this piece" data-pagefind-ignore="all">
+        <p class="wt-rail-head">Keep going</p>
+        <p class="wt-rail-link"><a href="../places.html#denver">Everything filmed in Denver</a></p>
+        <p class="wt-rail-head">More like this</p>
+        <a class="wt-rail-card" href="the-music-scene-from-two-people-who-go-to-the-shows-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/eRm1k0aBa8s-640.jpg" srcset="../stills/eRm1k0aBa8s-320.jpg 320w, ../stills/eRm1k0aBa8s-480.jpg 480w, ../stills/eRm1k0aBa8s-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>11:17</span></span><span>Two locals on Red Rocks, bass and the shows every night.</span></a>
+        <a class="wt-rail-card" href="first-friday-freestyle-on-the-corner-of-santa-fe.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/uSyxfx1ldXE-640.jpg" srcset="../stills/uSyxfx1ldXE-320.jpg 320w, ../stills/uSyxfx1ldXE-480.jpg 480w, ../stills/uSyxfx1ldXE-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>19:15</span></span><span>A First Friday freestyle, caught on camera.</span></a>
+        <a class="wt-rail-card" href="warehouse-raves-hard-style-and-seattle-versus-denver.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/UrpIMyx4nF8-640.jpg" srcset="../stills/UrpIMyx4nF8-320.jpg 320w, ../stills/UrpIMyx4nF8-480.jpg 480w, ../stills/UrpIMyx4nF8-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:40</span></span><span>Bam Bam’s first impressions of the Mile High City.</span></a>
+        <a class="wt-rail-card" href="immigration-independent-media-and-denver-subcultures.html"><span class="wt-next-thumb wt-thumb"><img src="../stills/iRAGaejwzIw-640.jpg" srcset="../stills/iRAGaejwzIw-320.jpg 320w, ../stills/iRAGaejwzIw-480.jpg 480w, ../stills/iRAGaejwzIw-640.jpg 640w" sizes="300px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>3:32</span></span><span>Immigration, independent media, subcultures.</span></a>
+    </aside>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript">
+        <h2>What is in it?</h2>
+        <p class="wt-note">Jump straight to a moment.</p>
+        <ul class="wt-body" data-pagefind-body>
+                <li class="wt-line" id="c0"><a class="wt-t" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=0s" target="_blank" rel="noopener" data-pagefind-ignore>0:00</a><span class="wt-s">What made you smile this week?</span></li>
+                <li class="wt-line" id="c92"><a class="wt-t" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=92s" target="_blank" rel="noopener" data-pagefind-ignore>1:32</a><span class="wt-s">How long have you been DJing?</span></li>
+                <li class="wt-line" id="c137"><a class="wt-t" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=137s" target="_blank" rel="noopener" data-pagefind-ignore>2:17</a><span class="wt-s">Are you from Denver originally?</span></li>
+                <li class="wt-line" id="c200"><a class="wt-t" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=200s" target="_blank" rel="noopener" data-pagefind-ignore>3:20</a><span class="wt-s">A First Friday corner set and a free pickle shot</span></li>
+                <li class="wt-line" id="c259"><a class="wt-t" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=259s" target="_blank" rel="noopener" data-pagefind-ignore>4:19</a><span class="wt-s">What is the most important issue in the world today?</span></li>
+        </ul>
+    </section>
+
+    <section class="wrap wt-transcript" id="transcript" aria-labelledby="tx-h">
+        <h2 id="tx-h">Transcript</h2>
+        <p class="wt-note wt-skip"><a href="#after-transcript">Skip the transcript &darr;</a></p>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Transcribed from the original audio and corrected for names. <a href="../search.html">Search every transcript</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=0s" target="_blank" rel="noopener" aria-label="Play from 0:00" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>So I have a reason to smile every day because I think about something I can share that made me grateful.</p>
+            <p id="s4"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=4s" target="_blank" rel="noopener" aria-label="Play from 0:04" data-pagefind-ignore>0:04</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>No, start over, start over. You&rsquo;re just like boom into it.</p>
+            <p id="s7"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=7s" target="_blank" rel="noopener" aria-label="Play from 0:07" data-pagefind-ignore>0:07</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>So something that made me smile this week -- I smile every single day, lots of times a day. My favorite quote is, the only day wasted is the day that you don&rsquo;t laugh. I try to laugh every day too. I post on my Instagram every day something I&rsquo;m grateful for. That always makes me smile. This guy, Heilig, made me smile. He&rsquo;s an amazing artist. You should check him out, Heilig Art. He makes all these cool cats. If you want to show them what the cats look like. Okay, sick.</p>
+        </div>
+        <details class="wt-fold" open>
+        <summary class="wt-fold-open">Read the full transcript &#9656;</summary>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s35"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=35s" target="_blank" rel="noopener" aria-label="Play from 0:35" data-pagefind-ignore>0:35</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Talk about it.</p>
+            <p id="s35-2"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=35s" target="_blank" rel="noopener" aria-label="Play from 0:35" data-pagefind-ignore>0:35</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>All right, so a couple other things I&rsquo;m happy for. I started gardening again, and part of me to grow food. Everyone should grow food. It&rsquo;s easy. All it takes is dirt and water. Y&rsquo;all got a little bit of that.</p>
+            <p id="s49"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=49s" target="_blank" rel="noopener" aria-label="Play from 0:49" data-pagefind-ignore>0:49</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Okay, what have you been growing? What have you been growing?</p>
+            <p id="s50"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=50s" target="_blank" rel="noopener" aria-label="Play from 0:50" data-pagefind-ignore>0:50</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Just peas and beans for now. I started them early, and if they die, I&rsquo;ll just park the truck and go home. But they&rsquo;re coming up this week, so they&rsquo;re doing good. Hopefully they don&rsquo;t die in the frost. I&rsquo;m also really grateful and happy about teachers. I&rsquo;m happy to be a student and a teacher. I teach DJ lessons. I go by BKells. You can find me at BKells Music on Instagram if you want a DJ lesson. And, uh, I love my students and I love the people that teach me. I&rsquo;ve been learning bass. I have this little ukulele. I had a friend stop by earlier to play it. But, uh, I love life, man. I&rsquo;m happy all the time. Not all the time, because things make me sad.</p>
+            <p id="s89"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=89s" target="_blank" rel="noopener" aria-label="Play from 1:29" data-pagefind-ignore>1:29</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Okay.</p>
+            <p id="s90"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=90s" target="_blank" rel="noopener" aria-label="Play from 1:30" data-pagefind-ignore>1:30</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>I&rsquo;m happy to see you. I&rsquo;m happy you&rsquo;re interviewing me.</p>
+            <p id="s92"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=92s" target="_blank" rel="noopener" aria-label="Play from 1:32" data-pagefind-ignore>1:32</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>How long you been DJing?</p>
+            <p id="s95"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=95s" target="_blank" rel="noopener" aria-label="Play from 1:35" data-pagefind-ignore>1:35</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>I DJ&rsquo;d one of my own high school dances when I was 16. I never took myself seriously as a party DJ. I played instruments, and then while snowboarding I broke my wrist. I call it my catarist.</p>
+            <p id="s106"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=106s" target="_blank" rel="noopener" aria-label="Play from 1:46" data-pagefind-ignore>1:46</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Okay.</p>
+            <p id="s107"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=107s" target="_blank" rel="noopener" aria-label="Play from 1:47" data-pagefind-ignore>1:47</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>It&rsquo;s a pun on catalyst.</p>
+            <p id="s108"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=108s" target="_blank" rel="noopener" aria-label="Play from 1:48" data-pagefind-ignore>1:48</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Uh-huh.</p>
+            <p id="s109"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=109s" target="_blank" rel="noopener" aria-label="Play from 1:49" data-pagefind-ignore>1:49</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Because it&rsquo;s what made me get back into DJing. I only had one hand, so I was DJing one-handed and everybody loved it. And I was like, damn, if you guys like this, wait till I got 2 hands again. Here I am with 2 hands, baby.</p>
+            <p id="s119"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=119s" target="_blank" rel="noopener" aria-label="Play from 1:59" data-pagefind-ignore>1:59</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Back at it nonstop. And what made you start DJing in the first place?</p>
+            <p id="s125"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=125s" target="_blank" rel="noopener" aria-label="Play from 2:05" data-pagefind-ignore>2:05</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Uh, creating joy for people. others is my calling in life, and it&rsquo;s so cool to have a room full of people that you&rsquo;re curating the vibe for and seeing everyone smiling and dancing. That is what fills me up.</p>
+            <p id="s137"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=137s" target="_blank" rel="noopener" aria-label="Play from 2:17" data-pagefind-ignore>2:17</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Hell yeah, hell yeah. Are you from Denver originally?</p>
+            <p id="s139"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=139s" target="_blank" rel="noopener" aria-label="Play from 2:19" data-pagefind-ignore>2:19</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>I&rsquo;m from Watertown, New York, which is on the border of the Thousand Islands, closer to Kingston, Ontario, Canada, than Syracuse, New York.</p>
+            <p id="s147"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=147s" target="_blank" rel="noopener" aria-label="Play from 2:27" data-pagefind-ignore>2:27</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Oh wow, wow.</p>
+            <p id="s148"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=148s" target="_blank" rel="noopener" aria-label="Play from 2:28" data-pagefind-ignore>2:28</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Basically Canadian. I hung out with a lot of Canadians.</p>
+            <p id="s151"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=151s" target="_blank" rel="noopener" aria-label="Play from 2:31" data-pagefind-ignore>2:31</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Okay, that&rsquo;s sick. So what brought you out here?</p>
+            <p id="s153"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=153s" target="_blank" rel="noopener" aria-label="Play from 2:33" data-pagefind-ignore>2:33</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Uh, I was throwing music festivals at this place called the Woodhenge. It was a sustainable community. We built an off-grid solar-powered underground house, built a music venue off --</p>
+            <p id="s162"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=162s" target="_blank" rel="noopener" aria-label="Play from 2:42" data-pagefind-ignore>2:42</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Wait, wait, wait, you built an off-grid solar-powered underground house?</p>
+            <p id="s165"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=165s" target="_blank" rel="noopener" aria-label="Play from 2:45" data-pagefind-ignore>2:45</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Yes, and it had a rock mass heater, and I built a music venue off the back of it. We were throwing shows every weekend, and then, uh, um, it evolved into throwing a music festival, and eventually, um, eventually I was having multi-day music festivals every summer, and then COVID So I sold everything and bought a motorhome and started traveling the country and, uh, got out here, never left. I love this place.</p>
+            <p id="s200"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=200s" target="_blank" rel="noopener" aria-label="Play from 3:20" data-pagefind-ignore>3:20</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>This is definitely an active, an active Friday night.</p>
+            <p id="s205"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=205s" target="_blank" rel="noopener" aria-label="Play from 3:25" data-pagefind-ignore>3:25</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>What&rsquo;s up?</p>
+            <p id="s206"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=206s" target="_blank" rel="noopener" aria-label="Play from 3:26" data-pagefind-ignore>3:26</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>It&rsquo;s definitely a cool Friday night vibe. I&rsquo;ve been to some different, like, First Fridays. I haven&rsquo;t seen people on the decks.</p>
+            <p id="s212"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=212s" target="_blank" rel="noopener" aria-label="Play from 3:32" data-pagefind-ignore>3:32</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Yeah, this is totally random. I just hit up Hyluck and I was like, yo, it&rsquo;s First Friday, what are you doing? He&rsquo;s like, I&rsquo;m on the corner, come play a set. I&rsquo;m like, okay. He live-mains at all my shows for free and he helped get me on Hydroponics Festival, which is down at Tico Town this year. You should come. We&rsquo;re having a show this Sunday with my boy Dillard headlining, doing a vinyl swap.</p>
+            <p id="s230"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=230s" target="_blank" rel="noopener" aria-label="Play from 3:50" data-pagefind-ignore>3:50</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Flap it, flap it.</p>
+            <p id="s231"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=231s" target="_blank" rel="noopener" aria-label="Play from 3:51" data-pagefind-ignore>3:51</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Okay. And, uh, they&rsquo;re giving away free tickets to Hydroponics Festival at this show. So if your people want to come to a festival for free, come through the Black Box this Sunday.</p>
+            <p id="s240"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=240s" target="_blank" rel="noopener" aria-label="Play from 4:00" data-pagefind-ignore>4:00</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Oh yeah.</p>
+            <p id="s241"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=241s" target="_blank" rel="noopener" aria-label="Play from 4:01" data-pagefind-ignore>4:01</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Hiding Easter eggs around the venue with festival tickets in them.</p>
+            <p id="s244"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=244s" target="_blank" rel="noopener" aria-label="Play from 4:04" data-pagefind-ignore>4:04</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Hell yeah.</p>
+            <p id="s246"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=246s" target="_blank" rel="noopener" aria-label="Play from 4:06" data-pagefind-ignore>4:06</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Oh, you want a free pickle shot?</p>
+            <p id="s248"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=248s" target="_blank" rel="noopener" aria-label="Play from 4:08" data-pagefind-ignore>4:08</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Sure. Yeah, yeah, yeah. Let&rsquo;s go. Free pickle shot. Do not pass go.</p>
+            <p id="s253"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=253s" target="_blank" rel="noopener" aria-label="Play from 4:13" data-pagefind-ignore>4:13</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Do not collect $200.</p>
+            <p id="s253-2"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=253s" target="_blank" rel="noopener" aria-label="Play from 4:13" data-pagefind-ignore>4:13</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Get your pickle shot. Is that where you got your hat?</p>
+            <p id="s257"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=257s" target="_blank" rel="noopener" aria-label="Play from 4:17" data-pagefind-ignore>4:17</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>No, I just love pickles.</p>
+            <p id="s259"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=259s" target="_blank" rel="noopener" aria-label="Play from 4:19" data-pagefind-ignore>4:19</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Okay, okay. I like that. I like that. So last week our question was, what&rsquo;s the most important issue in the world today?</p>
+            <p id="s266"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=266s" target="_blank" rel="noopener" aria-label="Play from 4:26" data-pagefind-ignore>4:26</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Most important issue in the world? Well, I could think about that for a long time, and I could think about a lot of things that I would probably disagree with myself later and be like, oh wait, that&rsquo;s more important. But I&rsquo;m going to tell you one of the most important issues currently on my mind is musicians are underpaid. In Ireland, they just recently passed universal income.</p>
+            <p id="s287"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=287s" target="_blank" rel="noopener" aria-label="Play from 4:47" data-pagefind-ignore>4:47</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Really?</p>
+            <p id="s287-2"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=287s" target="_blank" rel="noopener" aria-label="Play from 4:47" data-pagefind-ignore>4:47</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>For musicians, yeah. I think it&rsquo;s something along the lines of like $1,500 a month. So they get paid for shows and then also just get $1,500 a month, which is awesome. In Berlin, I&rsquo;m actually friends with a group of people, the Mauerpark crew, shouts out. They throw Rave the Planet, which is like a Mardi Gras in Berlin, bunch of floats.</p>
+            <p id="s303"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=303s" target="_blank" rel="noopener" aria-label="Play from 5:03" data-pagefind-ignore>5:03</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>That&rsquo;s sick.</p>
+            <p id="s304"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=304s" target="_blank" rel="noopener" aria-label="Play from 5:04" data-pagefind-ignore>5:04</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Overnight sings operas. You got to sing with them on the float last year while we were driving around playing music to millions of people.</p>
+            <p id="s310"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=310s" target="_blank" rel="noopener" aria-label="Play from 5:10" data-pagefind-ignore>5:10</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>I know a guy out in Berlin, he has like a club and it&rsquo;s like a bomb shelter. What&rsquo;s up? I know a guy in Berlin, he has like a club but it&rsquo;s a bomb shelter underground. You should connect me so I can play there. Okay.</p>
+            <p id="s320"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=320s" target="_blank" rel="noopener" aria-label="Play from 5:20" data-pagefind-ignore>5:20</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>But I&rsquo;m inspired by that, and I think we need more activism and lobbying from musicians in our country to make positive change. You know, we need like a union and a collective for musicians, because if I sell 100 tickets for $20 each and all my friends are buying $20 overpriced drinks at your club, why do I only get $100 and the venue gets $10,000? You know, musicians deserve a fair shake. The problem is, if I speak up, there&rsquo;s 100 other guys waiting for the opportunities I have that&rsquo;ll do it for free. But if we unionize and come together and demand better pay, then there&rsquo;s not much the venues can do besides book us or book people that aren&rsquo;t in the union that probably won&rsquo;t bring a lot of people or put on a good show. So let&rsquo;s get together as performers and demand a fair shake. Hit me up on BKellz Music Instagram if you want to be a part of that movement. How are we doing?</p>
+            <p id="s379"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=379s" target="_blank" rel="noopener" aria-label="Play from 6:19" data-pagefind-ignore>6:19</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Yeah, it&rsquo;s even better than first Friday.</p>
+            <p id="s380"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=380s" target="_blank" rel="noopener" aria-label="Play from 6:20" data-pagefind-ignore>6:20</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>I look -- he&rsquo;s an amazing artist. He&rsquo;s painted all of these at shows.</p>
+            <p id="s384"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=384s" target="_blank" rel="noopener" aria-label="Play from 6:24" data-pagefind-ignore>6:24</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Oh yeah.</p>
+            <p id="s385"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=385s" target="_blank" rel="noopener" aria-label="Play from 6:25" data-pagefind-ignore>6:25</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>I have a bunch of his originals in my room that he live painted during my shows.</p>
+            <p id="s388"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=388s" target="_blank" rel="noopener" aria-label="Play from 6:28" data-pagefind-ignore>6:28</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Yeah, that&rsquo;s fucking -- that&rsquo;s hell yeah. Fuck yeah.</p>
+            <p id="s392"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=392s" target="_blank" rel="noopener" aria-label="Play from 6:32" data-pagefind-ignore>6:32</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>What is your name?</p>
+            <p id="s393"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=393s" target="_blank" rel="noopener" aria-label="Play from 6:33" data-pagefind-ignore>6:33</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Maceo.</p>
+            <p id="s394"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=394s" target="_blank" rel="noopener" aria-label="Play from 6:34" data-pagefind-ignore>6:34</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Maceo, where are you from?</p>
+            <p id="s395"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=395s" target="_blank" rel="noopener" aria-label="Play from 6:35" data-pagefind-ignore>6:35</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>I&rsquo;m from Philadelphia.</p>
+            <p id="s397"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=397s" target="_blank" rel="noopener" aria-label="Play from 6:37" data-pagefind-ignore>6:37</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Philadelphia?</p>
+            <p id="s398"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=398s" target="_blank" rel="noopener" aria-label="Play from 6:38" data-pagefind-ignore>6:38</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Yeah, yeah. What about you?</p>
+            <p id="s399"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=399s" target="_blank" rel="noopener" aria-label="Play from 6:39" data-pagefind-ignore>6:39</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>I am from Athens, Georgia.</p>
+            <p id="s401"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=401s" target="_blank" rel="noopener" aria-label="Play from 6:41" data-pagefind-ignore>6:41</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Okay.</p>
+            <p id="s402"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=402s" target="_blank" rel="noopener" aria-label="Play from 6:42" data-pagefind-ignore>6:42</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Uh, grew up in a pottery studio and, uh --</p>
+            <p id="s408"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=408s" target="_blank" rel="noopener" aria-label="Play from 6:48" data-pagefind-ignore>6:48</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>I&rsquo;m snagging the mic.</p>
+            <p id="s409"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=409s" target="_blank" rel="noopener" aria-label="Play from 6:49" data-pagefind-ignore>6:49</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Yeah, yeah.</p>
+            <p id="s411"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=411s" target="_blank" rel="noopener" aria-label="Play from 6:51" data-pagefind-ignore>6:51</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Can I hand it to you?</p>
+            <p id="s412"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=412s" target="_blank" rel="noopener" aria-label="Play from 6:52" data-pagefind-ignore>6:52</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Boom, now we&rsquo;re talking. Hi, my name is Nathan.</p>
+            <p id="s417"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=417s" target="_blank" rel="noopener" aria-label="Play from 6:57" data-pagefind-ignore>6:57</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Nathan, it&rsquo;s nice to meet you.</p>
+            <p id="s418"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=418s" target="_blank" rel="noopener" aria-label="Play from 6:58" data-pagefind-ignore>6:58</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Nice to meet you. You have a fire extinguisher, right?</p>
+            <p id="s422"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=422s" target="_blank" rel="noopener" aria-label="Play from 7:02" data-pagefind-ignore>7:02</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Mm-hmm.</p>
+            <p id="s423"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=423s" target="_blank" rel="noopener" aria-label="Play from 7:03" data-pagefind-ignore>7:03</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Oh, just like -- Don&rsquo;t do it in front of the speaker, maybe, because that&rsquo;ll probably make it not work.</p>
+            <p id="s428"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=428s" target="_blank" rel="noopener" aria-label="Play from 7:08" data-pagefind-ignore>7:08</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Yeah, yeah, yeah, I agree, but I was gonna let them get by. Go ahead, your name is what?</p>
+            <p id="s433"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=433s" target="_blank" rel="noopener" aria-label="Play from 7:13" data-pagefind-ignore>7:13</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>My name is Nash.</p>
+            <p id="s435"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=435s" target="_blank" rel="noopener" aria-label="Play from 7:15" data-pagefind-ignore>7:15</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>How are you doing? I&rsquo;m doing well. So I&rsquo;ve been doing these like man on the street interviews where I&rsquo;ve been asking people these different questions every week. So can I, can I ask you my questions?</p>
+            <p id="s444"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=444s" target="_blank" rel="noopener" aria-label="Play from 7:24" data-pagefind-ignore>7:24</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s444-2"><a class="wt-at" href="https://www.youtube.com/watch?v=FD4qlpB_q7s&amp;t=444s" target="_blank" rel="noopener" aria-label="Play from 7:24" data-pagefind-ignore>7:24</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Hell yeah.</p>
+        </div>
+        </details>
+        <p class="wt-tape-end">That was the whole tape.</p>
+        <p class="wt-tape-ask"><a href="https://buttondown.com/WeThemMedia" target="_blank" rel="noopener" data-ev="newsletter">The We Them Weekly, once a week by email</a> What went up, and what we are asking next.</p>
+        <div class="visually-hidden wt-live" id="wt-live" role="status" aria-live="polite"></div>
+    </section>
+
+    <section id="after-transcript" tabindex="-1" class="wrap wt-more" aria-label="Filmed the same day">
+        <div class="country-head">
+            <h2 class="country-name">Filmed the same day.</h2>
+            <span class="country-meta">3 April 2026</span>
+        </div>
+        <ul class="rel-list">
+            <li class="rel-item">
+                <a class="rel-link" href="../archive/rob-from-atlanta-on-moving-to-denver-the-dog-photos-that-still-make-hi.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/eFcZn2AoRPY/mqdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">Rob From Atlanta on Moving to Denver &amp; the Dog Photos That Still Make Him Smile</span>
+                        <span class="rel-why">9.22pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Transcript</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="../archive/sarah-from-denver-on-improv-acting-moving-back-from-north-carolina.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/nU5eQijoB1s/mqdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">Sarah From Denver on Improv, Acting &amp; Moving Back From North Carolina</span>
+                        <span class="rel-why">9.23pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Transcript</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="../archive/tz-ellery-sebastian-at-denver-s-first-friday-drag-kings-mario-galaxy-w.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/ESrxMocmlSQ/mqdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">TZ, Ellery &amp; Sebastian at Denver&#x27;s First Friday , Drag Kings, Mario Galaxy &amp; What Made You Smile</span>
+                        <span class="rel-why">9.28pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Transcript</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="../archive/john-denver-photographer-on-15-years-the-denver-gallery-of-fine-art-th.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/Uj43c-WzQp8/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">John , Denver Photographer on 15 Years, the Denver Gallery of Fine Art &amp; the 6 O&#x27;Clock News</span>
+                        <span class="rel-why">9.37pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Transcript</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="live-painting-cherry-blossoms-and-first-friday-denver.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/GXm069hI6Jo/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">Ryan the Live Painter on Art, Cherry Blossoms &amp; Finding Joy at Denver&#x27;s First Friday</span>
+                        <span class="rel-why">9.47pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="../archive/first-friday-interlude-light-spinner-in-a-costume-just-vibing-denver-c.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/64uFMiumNkw/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">First Friday Interlude , Light Spinner in a Costume Just Vibing | Denver CO Apr 2026</span>
+                        <span class="rel-why">9.56pm &middot; Denver</span>
+                    </span>
+                    <span class="rel-kind">Transcript</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+<div><p class="wt-support" hidden>This piece is free to watch and read, like everything on this site. <a href="../supporter.html">Back the work</a> if you want more of it.</p></div>
+    <section class="wrap wt-more">
+        <div class="country-head">
+            <h2 class="country-name">More from the Colorado DJ and music scene.</h2>
+            <span class="country-meta"><a href="../portfolio.html#p-music">The whole project</a></span>
+        </div>
+        <div class="report-grid">
+            <a href="a-house-band-a-historic-room-and-a-for-sale-sign-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/GD_cOjcMPqg-640.jpg" srcset="../stills/GD_cOjcMPqg-320.jpg 320w, ../stills/GD_cOjcMPqg-480.jpg 480w, ../stills/GD_cOjcMPqg-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>12:51</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, the music scene</span>
+                    <h3 class="report-title">Twenty years in a room somebody wants to sell.</h3>
+                    
+                </div>
+            </a>
+            <a href="a-dj-on-channel-5-street-journalism-and-the-loop-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/sT3XcZaHaV4-640.jpg" srcset="../stills/sT3XcZaHaV4-320.jpg 320w, ../stills/sT3XcZaHaV4-480.jpg 480w, ../stills/sT3XcZaHaV4-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>6:51</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, First Friday</span>
+                    <h3 class="report-title">A DJ on Channel 5, street work and the loop.</h3>
+                    
+                </div>
+            </a>
+            <a href="rexii-dubz-on-the-record-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="../stills/zb_zN46MEpM-640.jpg" srcset="../stills/zb_zN46MEpM-320.jpg 320w, ../stills/zb_zN46MEpM-480.jpg 480w, ../stills/zb_zN46MEpM-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>6:21</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, CO</span>
+                    <h3 class="report-title">A dubstep DJ on her roots and a new tape.</h3>
+                    
+                </div>
+            </a>
+        </div>
+        <p class="wt-keep">Keep going: <a href="../places.html#denver">Everything filmed in Denver</a>.</p>
+    </section>
+
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. We made the work published here in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Watch first</a></li>
+                    <li><a href="../portfolio.html">Watch</a></li>
+                    <li><a href="../learn.html">Learn</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Correspondents</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Support</a></li>
+                    <li><a href="../work-with-us.html">Work with us</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../work-with-us.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+<script src="../wtm-player.js" defer data-like data-moments></script>
+<script src="../wtm-core.js" defer></script>
+</body>
+</html>

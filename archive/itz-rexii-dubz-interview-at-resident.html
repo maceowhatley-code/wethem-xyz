@@ -1,0 +1,701 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Yeah, bro. But like, because I like I follow a pink noise curve. You know what I mean? Like our try to. Yeah, bro.">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="../wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="../wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="../wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../wtm.css">
+    <link rel="stylesheet" href="../wtm-v2.css">
+    <link rel="stylesheet" href="../cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="../feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/archive/itz-rexii-dubz-interview-at-resident">
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="Itz ReXii Dubz interview at Resident">
+    <meta property="og:description" content="Yeah, bro. But like, because I like I follow a pink noise curve. You know what I mean? Like our try to. Yeah, bro.">
+    <meta property="og:url" content="https://wethem.xyz/archive/itz-rexii-dubz-interview-at-resident">
+    <meta property="og:image" content="https://i.ytimg.com/vi/-t8dImc7yiM/mqdefault.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://i.ytimg.com/vi/-t8dImc7yiM/mqdefault.jpg">
+    <title>Itz ReXii Dubz interview at Resident &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Itz ReXii Dubz interview at Resident",
+  "description": "Yeah, bro. But like, because I like I follow a pink noise curve. You know what I mean? Like our try to. Yeah, bro.",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/-t8dImc7yiM/mqdefault.jpg"
+  ],
+  "uploadDate": "2026-03-20",
+  "duration": "PT14M7S",
+  "embedUrl": "https://www.youtube.com/embed/-t8dImc7yiM",
+  "url": "https://wethem.xyz/archive/itz-rexii-dubz-interview-at-resident",
+  "publisher": {
+    "@type": "Organization",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  }
+}
+    </script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://wethem.xyz"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "The archive",
+   "item": "https://wethem.xyz/archive/index"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Itz ReXii Dubz interview at Resident"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="../index.html" class="brand">
+            <picture><source srcset="../wtm-mark-64.webp 1x, ../wtm-mark-128.webp 2x" type="image/webp"><img src="../wtm-mark-64.png" srcset="../wtm-mark-64.png 1x, ../wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li class="nav-more"><a href="../index.html" title="the question of the week and the newest pieces">Home <span class="nav-d" aria-hidden="true">the question of the week and the newest pieces</span></a></li>
+                <li><a href="../portfolio.html" aria-current="true" title="every piece, by project, place, person and topic">Watch <span class="nav-d" aria-hidden="true">every piece, by project, place, person and topic</span></a></li>
+                <li><a href="../onequestion.html" title="one question, asked around the world">One Question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="../learn.html" title="from the people who use crypto">Learn <span class="nav-d" aria-hidden="true">from the people who use crypto</span></a></li>
+                <li><a href="../people.html" title="who filmed what, and the people reporting with us">Correspondents <span class="nav-d" aria-hidden="true">who filmed what, and the people reporting with us</span></a></li>
+                <li><a href="../start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li><a href="../work-with-us.html" title="brand work, documented">Work with us <span class="nav-d" aria-hidden="true">brand work, documented</span></a></li>
+                <li class="nav-clips nav-more"><a href="../clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="../supporter.html" title="how the work is paid for">Support <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="../search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="../supporter.html" class="masthead-cta">Back the work</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="../search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="../index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="../learn.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="../search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="../onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One Question</span></a></nav>
+<aside class="wrap tw-row" aria-labelledby="tw-k"><span class="tw-k" id="tw-k">This week</span><ul class="tw-list"><li><a href="../watch/there-is-no-black-genre-trenton-book-fair.html" title="There&#x27;s no Black genre: Donna Maywar at the Trenton Book Fair"><span class="tw-kind">New</span> There&#x27;s no Black genre</a></li><li><a href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html" title="New Jersey&#x27;s first true superhero: Eric Cooper at the Trenton Book Fair"><span class="tw-kind">New</span> New Jersey&#x27;s first true superhero</a></li><li><a href="../watch/making-the-beats-behind-ready-to-die-in-full-philadelphia.html" title="The beats behind Ready to Die, in full: Easy Mo Bee at Black and Nobel"><span class="tw-kind">New</span> The beats behind Ready to Die, in full</a></li><li><a href="../onequestion.html"><span class="tw-kind">One Question</span> what would you ask the world?</a></li></ul></aside>
+<main id="main-content">
+
+<article class="wrap wt-piece">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="index.html">The archive</a></li>
+            <li aria-current="page">Itz ReXii Dubz interview at Resident</li>
+        </ol>
+    </nav>
+
+    <h1 class="wt-title" data-pagefind-body data-pagefind-meta="kind[data-pf-kind], date[data-pf-date], vid[data-pf-vid], k[data-pf-k]" data-pagefind-filter="kind[data-pf-kind]" data-pagefind-sort="date[data-pf-date]" data-pf-kind="archive" data-pf-date="2026-03-20" data-pf-vid="-t8dImc7yiM" data-pf-k="{&quot;h&quot;:360,&quot;l&quot;:&quot;14:07&quot;,&quot;s&quot;:1,&quot;w&quot;:640}">Itz ReXii Dubz interview at Resident</h1>
+
+    <p class="wt-byline">From the archive, published <time datetime="2026-03-20">2026-03-20</time></p>
+
+    <div class="wt-frame">
+        <lite-yt videoid="-t8dImc7yiM" title="Itz ReXii Dubz interview at Resident" posterurl="../stills/-t8dImc7yiM.jpg" postersrcset="../stills/-t8dImc7yiM-320.jpg 320w, ../stills/-t8dImc7yiM-480.jpg 480w, ../stills/-t8dImc7yiM-640.jpg 640w"><img class="lite-yt-fallback" src="../stills/-t8dImc7yiM-320.jpg" srcset="../stills/-t8dImc7yiM-320.jpg 320w, ../stills/-t8dImc7yiM-480.jpg 480w, ../stills/-t8dImc7yiM-640.jpg 640w" alt="" loading="lazy" decoding="async"></lite-yt>
+    </div>
+
+    <div class="wt-prose">
+        <p>This is an archive entry: the video and its full transcript, published so
+        the words can be read, searched and quoted. It is not a written piece.
+        </p>
+    </div>
+</article>
+
+    <section class="wrap wt-transcript" aria-labelledby="tx-h">
+        <h2 id="tx-h">Transcript</h2>
+        <p class="wt-note wt-fix-hint" data-pagefind-ignore>Spotted a wrong word? Tap its timestamp, then <a href="../privacy.html#in-a-video" data-fix-open="transcript">tell us</a>.</p>
+        <p class="wt-note">Transcribed from the original audio and corrected for names. <a href="../search.html">Search every transcript</a></p>
+        <p class="wt-note">These are the speaker&rsquo;s own words. We have not checked their claims.</p>
+        <div class="wt-body wt-read" data-pagefind-body>
+            <p id="s0"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=0s" target="_blank" rel="noopener" aria-label="Play from 0:00" data-pagefind-ignore>0:00</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Yeah, bro. But like, because I like I follow a pink noise curve. You know what I mean? Like our try to. Yeah, bro. I do understand what you mean by that too. And it&rsquo;s like, I&rsquo;m not supposed to be honest. I don&rsquo;t want to. I&rsquo;m not going to use the term. The misunderstanding in frequencies is you have to turn down a bunch of stuff. Yeah. Yeah. You really just got to carve and make space. But at the same time, you can pump this up. Like, bro, it&rsquo;s going to take up like certain things. Especially like when you&rsquo;re dealing with stuff. And that&rsquo;s cool. Stems, you get like, especially like some instrumentals, that&rsquo;s what I feel like, you know what I&rsquo;m saying? Because normally when you&rsquo;re working with like a 2-track, it&rsquo;s like, you know what I&rsquo;m saying, straight up, you know what I&rsquo;m saying?</p>
+            <p id="s49"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=49s" target="_blank" rel="noopener" aria-label="Play from 0:49" data-pagefind-ignore>0:49</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>It&rsquo;s a different ratio. You spin fire, you&rsquo;re dope, bitch.</p>
+            <p id="s55"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=55s" target="_blank" rel="noopener" aria-label="Play from 0:55" data-pagefind-ignore>0:55</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Yes.</p>
+            <p id="s55-2"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=55s" target="_blank" rel="noopener" aria-label="Play from 0:55" data-pagefind-ignore>0:55</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>I&rsquo;m so --</p>
+            <p id="s56"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=56s" target="_blank" rel="noopener" aria-label="Play from 0:56" data-pagefind-ignore>0:56</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>I love fire spinners. They&rsquo;re so fucking dope. I got friends who spin fire, who spin like, who spun for me like during my sets. They&rsquo;re so gas. Yeah, like just to see like all the shit that they can do like while they&rsquo;re fucking spinning fire. Like, it&rsquo;s beautiful. It&rsquo;s beautiful. It&rsquo;s so different. It&rsquo;s so different from like regular fucking dragon staffs. But I do like the dragon staffs that you can connect to your cell phone and you can like customize them. I know, I&rsquo;ve seen those.</p>
+            <p id="s81"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=81s" target="_blank" rel="noopener" aria-label="Play from 1:21" data-pagefind-ignore>1:21</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>So I started, I started with a contact staff, which is kind of the same, but it doesn&rsquo;t have as many spokes.</p>
+            <p id="s86"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=86s" target="_blank" rel="noopener" aria-label="Play from 1:26" data-pagefind-ignore>1:26</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>So like, I know how to flow, but I started with an Orbit and then like I picked up flow starring last year in August.</p>
+            <p id="s91"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=91s" target="_blank" rel="noopener" aria-label="Play from 1:31" data-pagefind-ignore>1:31</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Flow starring&rsquo;s hard.</p>
+            <p id="s91-2"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=91s" target="_blank" rel="noopener" aria-label="Play from 1:31" data-pagefind-ignore>1:31</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Bro, I have like 10 now.</p>
+            <p id="s93"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=93s" target="_blank" rel="noopener" aria-label="Play from 1:33" data-pagefind-ignore>1:33</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Oh, I have like 10 now.</p>
+            <p id="s93-2"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=93s" target="_blank" rel="noopener" aria-label="Play from 1:33" data-pagefind-ignore>1:33</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>My sister, my best friend CeCe Bean the Queen. Fucking, she&rsquo;s sponsored by Spin Slope Star. And like, I would just watch her and like, I picked it up.</p>
+            <p id="s102"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=102s" target="_blank" rel="noopener" aria-label="Play from 1:42" data-pagefind-ignore>1:42</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s102-2"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=102s" target="_blank" rel="noopener" aria-label="Play from 1:42" data-pagefind-ignore>1:42</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>And like, I just, I kept practicing. Like, I&rsquo;ll go out in my backyard. I have a big-ass backyard in Charleston. So like, I&rsquo;ll take my pup out and like, yeah, he&rsquo;ll just be in the sun. I mean, living his best life. Like, it&rsquo;s really, it&rsquo;s drilling, drilling.</p>
+            <p id="s113"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=113s" target="_blank" rel="noopener" aria-label="Play from 1:53" data-pagefind-ignore>1:53</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s113-2"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=113s" target="_blank" rel="noopener" aria-label="Play from 1:53" data-pagefind-ignore>1:53</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Like, practice makes perfect. Like, practice makes perfect. Watching YouTube tutorials, watching like, going through your reels, seeing like, following other flowy groups. Like, yeah, just to see where it&rsquo;s like, community for sure. I saw like one of the, like, where was I? Uh, No Sleep in Florida. We went through this Distinct Motive tour, and one of the last shows was at a fucking trampoline park.</p>
+            <p id="s134"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=134s" target="_blank" rel="noopener" aria-label="Play from 2:14" data-pagefind-ignore>2:14</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Oh shit!</p>
+            <p id="s136"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=136s" target="_blank" rel="noopener" aria-label="Play from 2:16" data-pagefind-ignore>2:16</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>It was nuts. Like, my friends like flowing with their <a class="wt-gloss" href="../glossary.html#poidh">poidh</a>. Like, I saw there was Master Class, he&rsquo;s like one of the people like big for Spin Flow Star. He was there, and I saw him on a balance beam with a big Flow Star and like a regular-sized GE8. And I was like --</p>
+            <p id="s155"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=155s" target="_blank" rel="noopener" aria-label="Play from 2:35" data-pagefind-ignore>2:35</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Well, you make music, so you know how it is to enter a flow state. And like, I don&rsquo;t make music.</p>
+            <p id="s159"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=159s" target="_blank" rel="noopener" aria-label="Play from 2:39" data-pagefind-ignore>2:39</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>I didn&rsquo;t always make music. I started DJing first.</p>
+            <p id="s163"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=163s" target="_blank" rel="noopener" aria-label="Play from 2:43" data-pagefind-ignore>2:43</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Okay.</p>
+            <p id="s163-2"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=163s" target="_blank" rel="noopener" aria-label="Play from 2:43" data-pagefind-ignore>2:43</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>I started DJing first. I&rsquo;ve been DJing like, this is year 6 for me. My production, I like, now I&rsquo;m like, I can honestly say like fully, this is probably like, now I&rsquo;m in like my 2 and a half, like into my 3rd year. I have more of a like understanding for it. But for sure, I started, I came up during COVID Like, that&rsquo;s how I became a DJ. COVID was it for everybody. All you had, you couldn&rsquo;t do anything.</p>
+            <p id="s185"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=185s" target="_blank" rel="noopener" aria-label="Play from 3:05" data-pagefind-ignore>3:05</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>You had time.</p>
+            <p id="s185-2"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=185s" target="_blank" rel="noopener" aria-label="Play from 3:05" data-pagefind-ignore>3:05</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>So like, nothing but time. My friends, like my DJ friends, like that were just like had decks for like shits and gigs. Because like we would do house parties and we&rsquo;d like make a big old group chat and like everybody at their house, like when we would just vibe. That&rsquo;s all we really had.</p>
+            <p id="s199"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=199s" target="_blank" rel="noopener" aria-label="Play from 3:19" data-pagefind-ignore>3:19</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>I mean, I go back to your house still.</p>
+            <p id="s201"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=201s" target="_blank" rel="noopener" aria-label="Play from 3:21" data-pagefind-ignore>3:21</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>You couldn&rsquo;t go nowhere. Like we were fucking quarantined to like being stuck. So that was the only thing we had.</p>
+            <p id="s207"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=207s" target="_blank" rel="noopener" aria-label="Play from 3:27" data-pagefind-ignore>3:27</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>And then creative. Why not?</p>
+            <p id="s208"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=208s" target="_blank" rel="noopener" aria-label="Play from 3:28" data-pagefind-ignore>3:28</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>It was dope. It was dope. It was fun. And then like random just pop-ups in like random places in Florida. Daytona, especially Daytona, had like no restrictions. They did not give no shits.</p>
+            <p id="s220"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=220s" target="_blank" rel="noopener" aria-label="Play from 3:40" data-pagefind-ignore>3:40</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Here&rsquo;s a question you&rsquo;ve never heard. Oh, okay.</p>
+            <p id="s223"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=223s" target="_blank" rel="noopener" aria-label="Play from 3:43" data-pagefind-ignore>3:43</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>So you said you started out as a DJ.</p>
+            <p id="s225"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=225s" target="_blank" rel="noopener" aria-label="Play from 3:45" data-pagefind-ignore>3:45</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>I started out as a DJ first. I&rsquo;ve been DJing 6 years.</p>
+            <p id="s228"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=228s" target="_blank" rel="noopener" aria-label="Play from 3:48" data-pagefind-ignore>3:48</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>What made you want to start producing? What kickstarted your production career?</p>
+            <p id="s234"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=234s" target="_blank" rel="noopener" aria-label="Play from 3:54" data-pagefind-ignore>3:54</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Okay, so being an artist, like having big boy homies that are like bigger in the industry than I was when I decided, like they would, I would ask them advice. Like when I met Zuba freaking at an event, that my brother and his homeboy threw in a hotel takeover one year during FK. And I asked him artist questions like how you&rsquo;re asking me, like, what&rsquo;s your inspiration, stuff like that. Like, how do you do with this?</p>
+            <p id="s261"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=261s" target="_blank" rel="noopener" aria-label="Play from 4:21" data-pagefind-ignore>4:21</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>That was my next question. What was your inspiration?</p>
+            <p id="s263"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=263s" target="_blank" rel="noopener" aria-label="Play from 4:23" data-pagefind-ignore>4:23</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>He was like, yo, like, consistency is key and production is necessary. It doesn&rsquo;t matter. You can have a good song, like song selection. You can be fire on those decks. Yeah, but if you&rsquo;re not making music, you&rsquo;re not going to be seen in an audience that you want to be seen in. So we connected because you played that. Daily Bread, baby! Daily fucking Bread!</p>
+            <p id="s285"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=285s" target="_blank" rel="noopener" aria-label="Play from 4:45" data-pagefind-ignore>4:45</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Who are some of your other inspirations?</p>
+            <p id="s288"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=288s" target="_blank" rel="noopener" aria-label="Play from 4:48" data-pagefind-ignore>4:48</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Love Daily Bread. Blunts off rip, that&rsquo;s a homie, Florida fam off rip. Um, Tate B, Peekaboo, Seth David, um, Charles the First, RIP to a king. Um, I still love -- like, I started off playing heavy headbanger dubstep, so like my top 3, like still, and I&rsquo;ll still stand for it: Gonzo White Knight, Excision, Slander. Off rip, top 3.</p>
+            <p id="s312"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=312s" target="_blank" rel="noopener" aria-label="Play from 5:12" data-pagefind-ignore>5:12</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Wobbles, baby.</p>
+            <p id="s313"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=313s" target="_blank" rel="noopener" aria-label="Play from 5:13" data-pagefind-ignore>5:13</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>That&rsquo;s the first show I ever went to. Wobbles, Rob, kill it. I love -- that was the first show that I ever went to, ever, when I started raving. And I started raving in 2018 when my brother -- when my brother passed away. Like, I, I didn&rsquo;t even know what EDM was until someone, like one of my really good friends, introduced me into EDM and it saved my life.</p>
+            <p id="s331"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=331s" target="_blank" rel="noopener" aria-label="Play from 5:31" data-pagefind-ignore>5:31</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Yeah.</p>
+            <p id="s332"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=332s" target="_blank" rel="noopener" aria-label="Play from 5:32" data-pagefind-ignore>5:32</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>After losing one of the most important people to you, like my brother was -- I wouldn&rsquo;t be me right now if it wasn&rsquo;t for him. And like Losing him, it put me in a -- like, I wasn&rsquo;t in a good place. Like, I feel like angry.</p>
+            <p id="s343"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=343s" target="_blank" rel="noopener" aria-label="Play from 5:43" data-pagefind-ignore>5:43</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Like, I feel like outside looking in, people like see us going to these raves and partying and they don&rsquo;t really understand how it actually is just a community that saves us.</p>
+            <p id="s352"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=352s" target="_blank" rel="noopener" aria-label="Play from 5:52" data-pagefind-ignore>5:52</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>There&rsquo;s so much to being an artist. Like, there&rsquo;s like so many people rely on you and like, especially like if you&rsquo;ve like, if you&rsquo;re known known, like I&rsquo;m known in Orlando. Like a lot of people like, I&rsquo;m known.</p>
+            <p id="s364"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=364s" target="_blank" rel="noopener" aria-label="Play from 6:04" data-pagefind-ignore>6:04</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Talk your shit.</p>
+            <p id="s365"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=365s" target="_blank" rel="noopener" aria-label="Play from 6:05" data-pagefind-ignore>6:05</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>I played, I played with Peekaboo, Turnian Sounds, Jamora.</p>
+            <p id="s368"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=368s" target="_blank" rel="noopener" aria-label="Play from 6:08" data-pagefind-ignore>6:08</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Talk your shit.</p>
+            <p id="s368-2"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=368s" target="_blank" rel="noopener" aria-label="Play from 6:08" data-pagefind-ignore>6:08</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>I played on big boy lineups. But I still play underground festivals because those are still my friends. And I have friends that are old heads that are fucking fire, fire, but they don&rsquo;t produce. But their deck sales, chef&rsquo;s kiss, immaculate. Nothing like I&rsquo;ve ever seen.</p>
+            <p id="s385"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=385s" target="_blank" rel="noopener" aria-label="Play from 6:25" data-pagefind-ignore>6:25</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Hell yeah.</p>
+            <p id="s387"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=387s" target="_blank" rel="noopener" aria-label="Play from 6:27" data-pagefind-ignore>6:27</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>And like, I&rsquo;ve been a self-taught producer. Nobody taught -- like, I&rsquo;ve had people like influence me and like show me a couple things, but everything I&rsquo;ve learned, trial and error. I learned the basics of DJing in 10 minutes. Everything else I learned Just play.</p>
+            <p id="s402"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=402s" target="_blank" rel="noopener" aria-label="Play from 6:42" data-pagefind-ignore>6:42</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>All right, so you&rsquo;re talking about playing those big shows and those underground shows. What&rsquo;s your favorite set that you&rsquo;ve played? When and where?</p>
+            <p id="s409"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=409s" target="_blank" rel="noopener" aria-label="Play from 6:49" data-pagefind-ignore>6:49</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Come on, give it to me. All right, so, okay, so honestly and truly, um, one of my favorite sets was when I played -- when I opened up for Peekaboo. That was one of my favorites. But right now, Standing, my mix that I just dropped January 23rd, um, it&rsquo;s called The Roar Tapes Volume 1. It&rsquo;s on my SoundCloud right now. It&rsquo;s only been out maybe, what, like a month and some change? 9,000 and 400 and some change. Let&rsquo;s go! Plays on that mix. Best mixing. One of my best mixes I have made thus far.</p>
+            <p id="s440"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=440s" target="_blank" rel="noopener" aria-label="Play from 7:20" data-pagefind-ignore>7:20</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Hell yeah!</p>
+            <p id="s442"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=442s" target="_blank" rel="noopener" aria-label="Play from 7:22" data-pagefind-ignore>7:22</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Thus far.</p>
+            <p id="s443"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=443s" target="_blank" rel="noopener" aria-label="Play from 7:23" data-pagefind-ignore>7:23</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>I&rsquo;m here with it!</p>
+            <p id="s445"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=445s" target="_blank" rel="noopener" aria-label="Play from 7:25" data-pagefind-ignore>7:25</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Hey!</p>
+            <p id="s445-2"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=445s" target="_blank" rel="noopener" aria-label="Play from 7:25" data-pagefind-ignore>7:25</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Talk your shit! It&rsquo;s really good. Like, this mix is not like -- it&rsquo;s, it&rsquo;s not like your average mix. Like, I made sure I catered to every single friend and everything we do. Like, I made sure that it vibes so hard that you can flow the whole The whole fucking mix. The whole fucking mix.</p>
+            <p id="s464"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=464s" target="_blank" rel="noopener" aria-label="Play from 7:44" data-pagefind-ignore>7:44</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Oh.</p>
+            <p id="s464-2"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=464s" target="_blank" rel="noopener" aria-label="Play from 7:44" data-pagefind-ignore>7:44</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Hunty. That&rsquo;s called Hunty.</p>
+            <p id="s466"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=466s" target="_blank" rel="noopener" aria-label="Play from 7:46" data-pagefind-ignore>7:46</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Hunty.</p>
+            <p id="s466-2"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=466s" target="_blank" rel="noopener" aria-label="Play from 7:46" data-pagefind-ignore>7:46</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>All my favorite bangers. And then like, I played every favorite song that I, that I played. Like, I like remixes. That&rsquo;s how I got known. Like, I started -- when I started, I played a fire live mashup of Ariana Grande&rsquo;s 7 Rings.</p>
+            <p id="s481"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=481s" target="_blank" rel="noopener" aria-label="Play from 8:01" data-pagefind-ignore>8:01</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>Ooh.</p>
+            <p id="s481-2"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=481s" target="_blank" rel="noopener" aria-label="Play from 8:01" data-pagefind-ignore>8:01</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Yeah. I want it, I got it. I&rsquo;m sorry, I didn&rsquo;t realize. Bro, when I tell you that song blew me the fuck up. It is my favorite Ariana Grande song. I want to remix it so bad. I&rsquo;ve been working on it. It&rsquo;s still like not even like --</p>
+            <p id="s497"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=497s" target="_blank" rel="noopener" aria-label="Play from 8:17" data-pagefind-ignore>8:17</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>It&rsquo;s in the lab right now.</p>
+            <p id="s498"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=498s" target="_blank" rel="noopener" aria-label="Play from 8:18" data-pagefind-ignore>8:18</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>It&rsquo;s in a file. It&rsquo;s there. It&rsquo;ll get there. But that&rsquo;s what popped me off. And like, I learned how to like do -- like, I started off doing live mashups, not knowing how to record them or anything. Like, I didn&rsquo;t even know how to use a fucking microphone. I just started like in the last like year and a half, started using the mic because I figured out how to use it. Didn&rsquo;t know how, but I&rsquo;m loud. I&rsquo;m loud. People like, I&rsquo;m so loud like people can hear me over that shit. Like, who needs a mic?</p>
+            <p id="s529"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=529s" target="_blank" rel="noopener" aria-label="Play from 8:49" data-pagefind-ignore>8:49</a><span class="wt-spk" title="Speaker A, as separated by the model" data-pagefind-ignore>A<span class="visually-hidden">: </span></span>I do.</p>
+            <p id="s530"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=530s" target="_blank" rel="noopener" aria-label="Play from 8:50" data-pagefind-ignore>8:50</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Straight up. So you spin fire like that? I have friends who like, I&rsquo;ve had underground festivals where there&rsquo;s like, I&rsquo;ve had people spin fire during my sets and it sucks because I&rsquo;m mixing and they&rsquo;re fucking getting it to my music and I&rsquo;m like, and I see out of my peripheral the little And I&rsquo;m like, I want to look, I want to look, I want to look, but if I look, I&rsquo;m gonna fuck up somewhere. I&rsquo;m gonna miss the cue point, and then I&rsquo;m not gonna be able to do this. And like, I think it&rsquo;s a beautiful fucking --</p>
+            <p id="s561"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=561s" target="_blank" rel="noopener" aria-label="Play from 9:21" data-pagefind-ignore>9:21</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>No, it&rsquo;s beautiful.</p>
+            <p id="s562"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=562s" target="_blank" rel="noopener" aria-label="Play from 9:22" data-pagefind-ignore>9:22</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>It&rsquo;s a beautiful flow. Like, it&rsquo;s sexual. Like, it really is.</p>
+            <p id="s566"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=566s" target="_blank" rel="noopener" aria-label="Play from 9:26" data-pagefind-ignore>9:26</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>It&rsquo;s like fire.</p>
+            <p id="s568"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=568s" target="_blank" rel="noopener" aria-label="Play from 9:28" data-pagefind-ignore>9:28</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Like, I like elements like that. Like, it&rsquo;s, it&rsquo;s, it&rsquo;s kind of, kind of like, it&rsquo;s as sexy as a saxophone, a violin, you know what I&rsquo;m saying?</p>
+            <p id="s576"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=576s" target="_blank" rel="noopener" aria-label="Play from 9:36" data-pagefind-ignore>9:36</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Like There&rsquo;s --</p>
+            <p id="s577"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=577s" target="_blank" rel="noopener" aria-label="Play from 9:37" data-pagefind-ignore>9:37</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>you can tribal, like, you can do so much flowing to different genres of music.</p>
+            <p id="s583"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=583s" target="_blank" rel="noopener" aria-label="Play from 9:43" data-pagefind-ignore>9:43</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Well, a lot of, like, a lot of flow arts in that sense, like, comes from a lot of cultural shit that I feel like people don&rsquo;t know the origins of a lot of it.</p>
+            <p id="s590"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=590s" target="_blank" rel="noopener" aria-label="Play from 9:50" data-pagefind-ignore>9:50</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>No.</p>
+            <p id="s591"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=591s" target="_blank" rel="noopener" aria-label="Play from 9:51" data-pagefind-ignore>9:51</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>But the reason it started for me was because I went to Big Dub. Shouts out to Big Dub.</p>
+            <p id="s596"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=596s" target="_blank" rel="noopener" aria-label="Play from 9:56" data-pagefind-ignore>9:56</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Bro, my friend, my homies have played Big Dub before. I got homies who played Big Dub.</p>
+            <p id="s600"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=600s" target="_blank" rel="noopener" aria-label="Play from 10:00" data-pagefind-ignore>10:00</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>But they have a fire circle at Big Dub, and I went one year, and I&rsquo;m just sitting there watching them all night. Just watching.</p>
+            <p id="s605"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=605s" target="_blank" rel="noopener" aria-label="Play from 10:05" data-pagefind-ignore>10:05</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>It&rsquo;s like you&rsquo;re intrigued. Yeah, you&rsquo;re intrigued. When I figured out like the Flow Star, I was like, yes, I&rsquo;m a ninja. Like, I have my ninja star. Like, this is what I -- I was like, and I&rsquo;m a fucking Ninja Turtle.</p>
+            <p id="s618"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=618s" target="_blank" rel="noopener" aria-label="Play from 10:18" data-pagefind-ignore>10:18</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Yes, it becomes an extension.</p>
+            <p id="s620"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=620s" target="_blank" rel="noopener" aria-label="Play from 10:20" data-pagefind-ignore>10:20</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Yeah, man. But that&rsquo;s also how you create connections with people. Like, oh, I like being relatable to like my fans and stuff. Like, sure, I do. I like -- I&rsquo;ve gone through enough. I&rsquo;ve lost enough. Like, I&rsquo;ve gone -- I&rsquo;ve had ego deaths in my life and I&rsquo;ve learned my life lessons to where like I&rsquo;ve -- it took me years to get where I&rsquo;m at now and I love like people like running up to me like, yo, I saw you here and like you&rsquo;re the shit, I love you. Like, yeah, and I&rsquo;m like, I love you, goddamn it. You&rsquo;re beautiful. Like, and it&rsquo;s just being positive. Like, I like being like, this is the one thing where I felt accepted in life. Like, I never felt like I belonged anywhere. Like, I always got like -- I got picked on as a kid for being different and like EDM was the one place that I was like, all right, this is where all the weirdos, but they&rsquo;re cool as fuck. Yeah, this is where they hang out. I like them.</p>
+            <p id="s673"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=673s" target="_blank" rel="noopener" aria-label="Play from 11:13" data-pagefind-ignore>11:13</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Those interactions within the community is crazy. Like, you&rsquo;ll never meet somebody before and then you&rsquo;re just being a weirdo with them.</p>
+            <p id="s679"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=679s" target="_blank" rel="noopener" aria-label="Play from 11:19" data-pagefind-ignore>11:19</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>But you&rsquo;ll never meet the same person twice. You won&rsquo;t. Like, you&rsquo;ll never meet somebody who&rsquo;s like the last person you met ever. Like, everybody is unique, talented in their own different ways. Like, I&rsquo;ve met so many like incredible artists like that paint like while, while I&rsquo;ve played like hotel takeovers. Like I have a friend whose name&rsquo;s John and like he did a painting of me and this painting&rsquo;s so fire and it&rsquo;s not like exactly to the T my face. Like he like did it in the middle of a Renegade, but like it glows like me. It&rsquo;s got my little, my little bang.</p>
+            <p id="s713"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=713s" target="_blank" rel="noopener" aria-label="Play from 11:53" data-pagefind-ignore>11:53</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>It has your aura.</p>
+            <p id="s714"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=714s" target="_blank" rel="noopener" aria-label="Play from 11:54" data-pagefind-ignore>11:54</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Yeah, like, and it&rsquo;s like, it&rsquo;s so dope and it was like for the first time ever anybody&rsquo;s ever like painted me live. And I was like, I like this. Like, you were just vibing. He was like, yo, you -- I played for like 2 hours. Like, it was my homeboys Renegade. And like, if I walk in the building, my homeboy&rsquo;s like, nope, that&rsquo;s my sister. My little sister&rsquo;s playing. You have to wait your turn. And if you try to play after her, I feel sorry for you. Better have your music. Like, I like all music. I didn&rsquo;t always like all music, but now like that I&rsquo;ve been cultured. You I have like a taste for certain things. I love hip-hop, man. That&rsquo;s where I -- origins.</p>
+            <p id="s754"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=754s" target="_blank" rel="noopener" aria-label="Play from 12:34" data-pagefind-ignore>12:34</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Well, that&rsquo;s, that&rsquo;s why we fuck with Daily Drive. Yeah, that shit, they tie that in there.</p>
+            <p id="s758"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=758s" target="_blank" rel="noopener" aria-label="Play from 12:38" data-pagefind-ignore>12:38</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Ratchet wubs. Yeah, that&rsquo;s my genre. Like Tipper made Tip Hop and all that shit. Me, Ratchet Wubs. That&rsquo;s it.</p>
+            <p id="s767"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=767s" target="_blank" rel="noopener" aria-label="Play from 12:47" data-pagefind-ignore>12:47</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>You gotta make a mix like that now.</p>
+            <p id="s769"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=769s" target="_blank" rel="noopener" aria-label="Play from 12:49" data-pagefind-ignore>12:49</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>I did. It&rsquo;s on SoundCloud. Oh, that&rsquo;s the one? Yes, I&rsquo;m telling you. I&rsquo;m tapping in immediately when I get home. I&rsquo;m telling you, like, I -- like, this is the one thing, like, as an artist, we&rsquo;re always hard on ourselves. We&rsquo;re very self-critical and like, we&rsquo;re our biggest -- we&rsquo;re like our worst enemies when it comes to like being creative. And like, that mix is probably some of my best mixing. And I did it in like -- it was originally a 2 and a half hour mix, and then I took like -- I cut it and I put it in my DAW and it changed the game. Like, I&rsquo;ve never put a mix in a DAW. Like, I had people who did sound engineering that would just run it through like a program and it would like quickly do it, not do what I did. Like, I literally manually --</p>
+            <p id="s809"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=809s" target="_blank" rel="noopener" aria-label="Play from 13:29" data-pagefind-ignore>13:29</a><span class="wt-spk" title="Speaker C, as separated by the model" data-pagefind-ignore>C<span class="visually-hidden">: </span></span>Talk yo shit.</p>
+            <p id="s810"><a class="wt-at" href="https://www.youtube.com/watch?v=-t8dImc7yiM&amp;t=810s" target="_blank" rel="noopener" aria-label="Play from 13:30" data-pagefind-ignore>13:30</a><span class="wt-spk" title="Speaker B, as separated by the model" data-pagefind-ignore>B<span class="visually-hidden">: </span></span>Duplicated my, my mix a million times and like panned it, like seriously EQ&rsquo;d the fuck out of it without no help, without no knowledge of what I was doing. I just made sure everything was in green. As long as it&rsquo;s not redlined -- well, if you ain&rsquo;t redlined it, you ain&rsquo;t headlined it, but there&rsquo;s a time and place for that. But when you&rsquo;re making music or you&rsquo;re doing shit like that It has to be, you know. Uh, Gino, talking to you, Kylie. Girl, it&rsquo;s my second time in Denver. First Denver debut. I hope it&rsquo;s not my last one. I will for sure.</p>
+        </div>
+    </section>
+
+
+    <section class="wrap wt-more" aria-label="More from the library">
+        <div class="country-head">
+            <h2 class="country-name">Keep reading.</h2>
+            <span class="country-meta"><a href="../library.html">The whole library</a></span>
+        </div>
+        <ul class="rel-list">
+            <li class="rel-item">
+                <a class="rel-link" href="../watch/making-the-beats-behind-ready-to-die-in-full-philadelphia.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/DmVhqSsobd4/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">The Beats Behind Ready to Die, in Full, Philadelphia</span>
+                        <span class="rel-why">Philadelphia</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="../watch/there-is-no-black-genre-trenton-book-fair.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/xRlacivMfN8/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">There&#x27;s No Black Genre, Trenton Book Fair</span>
+                        <span class="rel-why">2026</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+            <li class="rel-item">
+                <a class="rel-link" href="../watch/new-jerseys-first-true-superhero-trenton-book-fair.html">
+                    <img class="rel-thumb" loading="lazy" width="320" height="180"
+                         src="https://i.ytimg.com/vi/A6FyDnhHPks/maxresdefault.jpg" alt="">
+                    <span class="rel-body">
+                        <span class="rel-title">New Jersey&#x27;s First True Superhero, Trenton Book Fair</span>
+                        <span class="rel-why">2026</span>
+                    </span>
+                    <span class="rel-kind">Written up</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+<div class="wrap wtm-share"></div>
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. We made the work published here in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="../where-to-start.html">Watch first</a></li>
+                    <li><a href="../portfolio.html">Watch</a></li>
+                    <li><a href="../learn.html">Learn</a></li>
+                    <li><a href="../clips.html">Clips</a></li>
+                    <li><a href="../library.html">The library</a></li>
+                    <li><a href="../places.html">Where we filmed</a></li>
+                    <li><a href="../guests.html">Who is on the tape</a></li>
+                    <li><a href="../dispatches.html">Updates</a></li>
+                    <li><a href="../podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="../start.html">About</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../history.html">How this started</a></li>
+                    <li><a href="../people.html">Correspondents</a></li>
+                    <li><a href="../team.html">The editor roster</a></li>
+                    <li><a href="../books.html">Books from the community</a></li>
+                    <li><a href="../state.html">State of the network</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="../ledger.html">What we have not published</a></li>
+                    <li><a href="../privacy.html">What this site keeps about you</a></li>
+                    <li><a href="../privacy.html#collect">Your choices</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="../supporter.html">Support</a></li>
+                    <li><a href="../work-with-us.html">Work with us</a></li>
+                    <li><a href="../dispatch.html" class="footer-newsletter-link">Newsletter, once a week</a></li>
+                    <li><a href="../onequestion.html">One Question</a></li>
+                    <li><a href="../commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="../work-with-us.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+
+<script src="../wtm-player.js" defer></script>
+<script src="../wtm-core.js" defer></script>
+</body>
+</html>
