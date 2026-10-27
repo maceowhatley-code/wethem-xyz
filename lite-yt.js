@@ -152,6 +152,13 @@
         this.setAttribute('init', '');
 
         var served = this.hasAttribute('live') ? this.querySelector('iframe') : null;
+        var conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+        if (served && conn && conn.saveData === true && this.getAttribute('videoid')) {
+            var gone = served.parentNode;
+            gone.removeChild(served);
+            this.removeAttribute('live');
+            served = null;
+        }
         if (served) { this.goLive(); return; }
 
         var videoId = this.getAttribute('videoid');
