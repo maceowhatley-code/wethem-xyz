@@ -1,0 +1,1706 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Conversations in Denver and around Colorado, on the street, at First Friday and at ETH Denver 2024, with the Channel 5 Carnival at the Paramount Theatre.">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+
+    <link rel="stylesheet" href="wtm.css">
+    <link rel="preload" href="/webfonts/archivo-latin-400-800-nor.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="wtm-v2.css">
+    <link rel="stylesheet" href="cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/denver-unfiltered">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Denver Unfiltered">
+    <meta property="og:description" content="Conversations in Denver and around Colorado, on the street, at First Friday and at ETH Denver 2024, with the Channel 5 Carnival at the Paramount Theatre.">
+    <meta property="og:url" content="https://wethem.xyz/denver-unfiltered">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="https://wethem.xyz/stills/yepfMr68Rao-640.jpg">
+    <meta property="og:image:width" content="640">
+    <meta property="og:image:height" content="360">
+    <meta property="og:image:alt" content="A conversation filmed on a Denver street">
+    <meta name="twitter:image" content="https://wethem.xyz/stills/yepfMr68Rao-640.jpg">
+    <title>Denver Unfiltered &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://wethem.xyz/denver-unfiltered",
+  "url": "https://wethem.xyz/denver-unfiltered",
+  "name": "Denver Unfiltered",
+  "description": "Conversations in Denver and around Colorado, on the street, at First Friday and at ETH Denver 2024, with the Channel 5 Carnival at the Paramount Theatre.",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "about": {
+    "@type": "Place",
+    "name": "Denver, Colorado"
+  },
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Denver, Colorado, United States"
+  },
+  "temporalCoverage": "2024/2026",
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": 87,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "url": "https://wethem.xyz/watch/never-been-ashamed-to-cry-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "url": "https://wethem.xyz/watch/after-the-denver-protest-project-2025-in-his-own-words"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "url": "https://wethem.xyz/watch/no-kings-protest-del-gomez-on-imperialism-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "url": "https://wethem.xyz/watch/politics-divides-us-in-two-most-important-global-issue-purple-haze-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "url": "https://wethem.xyz/watch/a-venezuelan-air-force-vet-on-f-16s-and-loving-your-work"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "url": "https://wethem.xyz/watch/denver-politics-and-where-the-homeless-went-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "url": "https://wethem.xyz/watch/vfx-artist-on-grief-art-and-starting-over"
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "url": "https://wethem.xyz/watch/the-earth-is-alive-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "url": "https://wethem.xyz/watch/learn-from-your-mistakes-and-pay-it-forward-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "url": "https://wethem.xyz/watch/thirty-years-of-a-local-head-shop-and-why-community"
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "url": "https://wethem.xyz/watch/prison-is-a-young-mans-game-a-street-interview-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "url": "https://wethem.xyz/watch/east-denver-vibe-check-eth-denver-2026-family-meal-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "url": "https://wethem.xyz/watch/black-women-as-the-most-important-global-issue"
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "url": "https://wethem.xyz/watch/education-inequality-and-harm-reduction-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "url": "https://wethem.xyz/watch/racism-or-southern-hospitality-two-brothers-from-texas-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 16,
+        "url": "https://wethem.xyz/watch/dont-move-to-colorado-unless-youre-ready-to-confront-yourself"
+      },
+      {
+        "@type": "ListItem",
+        "position": 17,
+        "url": "https://wethem.xyz/watch/what-unschooling-is-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 18,
+        "url": "https://wethem.xyz/watch/cuba-is-last-in-line-a-conversation-in-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 19,
+        "url": "https://wethem.xyz/watch/a-hundred-interviews-and-why-denver-is-insulated"
+      },
+      {
+        "@type": "ListItem",
+        "position": 20,
+        "url": "https://wethem.xyz/watch/climbing-gyms-and-meeting-people-in-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 21,
+        "url": "https://wethem.xyz/watch/ai-is-artificial-we-are-the-official"
+      },
+      {
+        "@type": "ListItem",
+        "position": 22,
+        "url": "https://wethem.xyz/watch/legalize-it-all-but-tax-it-bo-from-boulder-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 23,
+        "url": "https://wethem.xyz/watch/building-a-dao-and-making-governance-a-game-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 24,
+        "url": "https://wethem.xyz/watch/montbello-then-and-now-and-a-note-to-self"
+      },
+      {
+        "@type": "ListItem",
+        "position": 25,
+        "url": "https://wethem.xyz/watch/no-wifi-no-ai-and-a-comic-about-a-bird-cap-hill-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 26,
+        "url": "https://wethem.xyz/watch/truth-discourse-and-being-called-a-gentrifier-colfax"
+      },
+      {
+        "@type": "ListItem",
+        "position": 27,
+        "url": "https://wethem.xyz/watch/fourteen-banks-ten-years-and-pearl-and-colfax"
+      },
+      {
+        "@type": "ListItem",
+        "position": 28,
+        "url": "https://wethem.xyz/watch/know-your-rights-and-dont-get-played-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 29,
+        "url": "https://wethem.xyz/watch/housing-school-and-the-street-from-somebody-born-here-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 30,
+        "url": "https://wethem.xyz/watch/swarthyhatter-origin-story-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 31,
+        "url": "https://wethem.xyz/watch/a-strippers-take-on-denver-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 32,
+        "url": "https://wethem.xyz/watch/narcan-youth-and-colfax-avenue"
+      },
+      {
+        "@type": "ListItem",
+        "position": 33,
+        "url": "https://wethem.xyz/watch/from-america-to-denver-what-brought-you-here-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 34,
+        "url": "https://wethem.xyz/watch/warehouse-raves-hard-style-and-seattle-versus-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 35,
+        "url": "https://wethem.xyz/watch/oscar-de-guatemala-en-denver-salud-trabajo-y-la-cultura"
+      },
+      {
+        "@type": "ListItem",
+        "position": 36,
+        "url": "https://wethem.xyz/watch/what-made-you-smile-today-a-bookcase-and-lovecraft-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 37,
+        "url": "https://wethem.xyz/watch/not-for-polish-but-for-posterity-a-walk-in-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 38,
+        "url": "https://wethem.xyz/watch/the-100-dollar-weekly-video-journalism-contest-explained-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 39,
+        "url": "https://wethem.xyz/watch/what-made-you-smile-today-exploring-denver-from-wyoming"
+      },
+      {
+        "@type": "ListItem",
+        "position": 40,
+        "url": "https://wethem.xyz/watch/what-made-you-smile-dogs-at-cheesman-park-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 41,
+        "url": "https://wethem.xyz/watch/no-winning-in-war-most-important-global-issue-denver-convenience-store"
+      },
+      {
+        "@type": "ListItem",
+        "position": 42,
+        "url": "https://wethem.xyz/watch/bring-our-people-home-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 43,
+        "url": "https://wethem.xyz/watch/housing-and-jobs-the-most-important-global-issue"
+      },
+      {
+        "@type": "ListItem",
+        "position": 44,
+        "url": "https://wethem.xyz/watch/skating-filming-and-getting-stuck-in-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 45,
+        "url": "https://wethem.xyz/watch/from-850-rent-to-a-pot-real-estate-bubble-james-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 46,
+        "url": "https://wethem.xyz/watch/live-painting-cherry-blossoms-and-first-friday-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 47,
+        "url": "https://wethem.xyz/watch/friends-family-and-what-made-us-smile-this-week-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 48,
+        "url": "https://wethem.xyz/watch/black-art-self-care-and-a-stage-one-drought-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 49,
+        "url": "https://wethem.xyz/watch/first-friday-freestyle-on-the-corner-of-santa-fe"
+      },
+      {
+        "@type": "ListItem",
+        "position": 50,
+        "url": "https://wethem.xyz/watch/first-friday-at-tim-correas-bar-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 51,
+        "url": "https://wethem.xyz/watch/let-the-camera-be-the-reason-first-friday-on-santa-fe-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 52,
+        "url": "https://wethem.xyz/watch/subs-on-rubber-and-a-kodak-black-album-in-a-denver-studio"
+      },
+      {
+        "@type": "ListItem",
+        "position": 53,
+        "url": "https://wethem.xyz/watch/denver-night-walk-mile-high-city-after-dark-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 54,
+        "url": "https://wethem.xyz/watch/what-the-songwriting-camp-footage-is"
+      },
+      {
+        "@type": "ListItem",
+        "position": 55,
+        "url": "https://wethem.xyz/watch/social-tokens-community-and-url-to-irl-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 56,
+        "url": "https://wethem.xyz/watch/onchain-science-proof-of-knowledge-desci-world-at-eth-denver-2024"
+      },
+      {
+        "@type": "ListItem",
+        "position": 57,
+        "url": "https://wethem.xyz/watch/real-estate-to-web3-and-40-acres-dao-big-trav-at-eth-denver-2024"
+      },
+      {
+        "@type": "ListItem",
+        "position": 58,
+        "url": "https://wethem.xyz/watch/crypto-in-the-caribbean-and-who-gets-access-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 59,
+        "url": "https://wethem.xyz/watch/the-cyber-panther-party-and-a-bail-fund-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 60,
+        "url": "https://wethem.xyz/watch/desci-womens-health-and-funding-the-gap-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 61,
+        "url": "https://wethem.xyz/watch/what-decentralized-science-means-for-health-gabrielle-at-eth-denver-2024"
+      },
+      {
+        "@type": "ListItem",
+        "position": 62,
+        "url": "https://wethem.xyz/watch/forbidden-fruit-culture-onchain-and-creative-wellness-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 63,
+        "url": "https://wethem.xyz/watch/a-first-interview-and-advice-back-to-newark-denver"
+      },
+      {
+        "@type": "ListItem",
+        "position": 64,
+        "url": "https://wethem.xyz/watch/blvkhvnd-and-the-crypto-cookout-sirsu-at-eth-denver-2024"
+      },
+      {
+        "@type": "ListItem",
+        "position": 65,
+        "url": "https://wethem.xyz/watch/a-tinder-date-with-a-plus-one-fort-collins"
+      },
+      {
+        "@type": "ListItem",
+        "position": 66,
+        "url": "https://wethem.xyz/watch/intro-to-alex-the-boy-fort-collins"
+      },
+      {
+        "@type": "ListItem",
+        "position": 67,
+        "url": "https://wethem.xyz/watch/a-media-graduate-considering-the-military"
+      },
+      {
+        "@type": "ListItem",
+        "position": 68,
+        "url": "https://wethem.xyz/watch/a-mirror-that-wouldnt-exist-if-we-werent-doing-it"
+      },
+      {
+        "@type": "ListItem",
+        "position": 69,
+        "url": "https://wethem.xyz/watch/channel-5-fans-on-what-andrew-callaghan-does-right"
+      },
+      {
+        "@type": "ListItem",
+        "position": 70,
+        "url": "https://wethem.xyz/watch/grief-journalism-and-getting-on-stage-at-channel-5"
+      },
+      {
+        "@type": "ListItem",
+        "position": 71,
+        "url": "https://wethem.xyz/watch/pundits-versus-ground-reporting-channel-5-queue"
+      },
+      {
+        "@type": "ListItem",
+        "position": 72,
+        "url": "https://wethem.xyz/watch/freestyle-and-the-question-of-the-week-on-stage-at-channel-5"
+      },
+      {
+        "@type": "ListItem",
+        "position": 73,
+        "url": "https://wethem.xyz/watch/the-question-of-the-week-put-to-the-room-at-the-channel-5-carnival"
+      },
+      {
+        "@type": "ListItem",
+        "position": 74,
+        "url": "https://wethem.xyz/watch/a-comedy-rap-about-socks-at-the-channel-5-talent-show"
+      },
+      {
+        "@type": "ListItem",
+        "position": 75,
+        "url": "https://wethem.xyz/watch/fruit-eyes-play-acoustic-at-the-channel-5-talent-show"
+      },
+      {
+        "@type": "ListItem",
+        "position": 76,
+        "url": "https://wethem.xyz/watch/art-activism-and-an-edibles-story-at-the-channel-5-talent-show"
+      },
+      {
+        "@type": "ListItem",
+        "position": 77,
+        "url": "https://wethem.xyz/watch/a-contortionist-nobody-was-ready-for-at-the-channel-5-carnival"
+      },
+      {
+        "@type": "ListItem",
+        "position": 78,
+        "url": "https://wethem.xyz/watch/freestyle-spoken-word-and-dance-at-the-channel-5-talent-show"
+      },
+      {
+        "@type": "ListItem",
+        "position": 79,
+        "url": "https://wethem.xyz/watch/a-neutral-milk-hotel-cover-from-the-balcony-at-the-channel-5-carnival"
+      },
+      {
+        "@type": "ListItem",
+        "position": 80,
+        "url": "https://wethem.xyz/watch/the-format-from-the-air-at-the-channel-5-carnival"
+      },
+      {
+        "@type": "ListItem",
+        "position": 81,
+        "url": "https://wethem.xyz/watch/an-irish-fan-and-an-aspiring-journalist-in-the-channel-5-line"
+      },
+      {
+        "@type": "ListItem",
+        "position": 82,
+        "url": "https://wethem.xyz/watch/documenting-war-from-all-sides-in-the-channel-5-line"
+      },
+      {
+        "@type": "ListItem",
+        "position": 83,
+        "url": "https://wethem.xyz/watch/which-denver-stories-go-uncovered"
+      },
+      {
+        "@type": "ListItem",
+        "position": 84,
+        "url": "https://wethem.xyz/watch/a-hitchhiker-on-a-spiritual-mission-outside-channel-5"
+      },
+      {
+        "@type": "ListItem",
+        "position": 85,
+        "url": "https://wethem.xyz/watch/do-we-have-free-will-a-debate-outside-channel-5"
+      },
+      {
+        "@type": "ListItem",
+        "position": 86,
+        "url": "https://wethem.xyz/watch/immigration-independent-media-and-denver-subcultures"
+      },
+      {
+        "@type": "ListItem",
+        "position": 87,
+        "url": "https://wethem.xyz/watch/landscape-or-portrait-two-filmmakers-at-the-mall"
+      }
+    ]
+  },
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://wethem.xyz/stills/yepfMr68Rao-640.jpg"
+  }
+}
+    </script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://wethem.xyz"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Projects",
+   "item": "https://wethem.xyz/portfolio#p-denver"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Denver Unfiltered"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="index.html" class="brand">
+            <picture><source srcset="wtm-mark-64.webp 1x, wtm-mark-128.webp 2x" type="image/webp"><img src="wtm-mark-64.png" srcset="wtm-mark-64.png 1x, wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li class="nav-more"><a href="index.html" title="the question of the week and the newest pieces">Home <span class="nav-d" aria-hidden="true">the question of the week and the newest pieces</span></a></li>
+                <li><a href="portfolio.html" aria-current="true" title="every piece, by project, place, person and topic">Watch <span class="nav-d" aria-hidden="true">every piece, by project, place, person and topic</span></a></li>
+                <li><a href="onequestion.html" title="one question, asked around the world">One Question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="learn.html" title="from the people who use crypto">Learn <span class="nav-d" aria-hidden="true">from the people who use crypto</span></a></li>
+                <li><a href="people.html" title="who filmed what, and the people reporting with us">Correspondents <span class="nav-d" aria-hidden="true">who filmed what, and the people reporting with us</span></a></li>
+                <li><a href="start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li><a href="work-with-us.html" title="brand work, documented">Work with us <span class="nav-d" aria-hidden="true">brand work, documented</span></a></li>
+                <li class="nav-clips nav-more"><a href="clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="supporter.html" title="how the work is paid for">Support <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="supporter.html" class="masthead-cta">Support us</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="learn.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One Question</span></a></nav><aside class="wrap tw-row" aria-labelledby="tw-k"><span class="tw-k" id="tw-k">This week</span><ul class="tw-list"><li><a href="watch/live-since-14-music-is-all-hes-done-ellsworth.html" title="Live Since 14, Music Is All He&#x27;s Done"><span class="tw-kind">New</span> Live Since 14, Music Is All He&#x27;s Done</a></li><li><a href="watch/an-open-sign-named-this-maine-band-ellsworth.html" title="An Open Sign Named This Maine Band"><span class="tw-kind">New</span> An Open Sign Named This Maine Band</a></li><li><a href="watch/a-maine-band-that-doesnt-do-rehearsals-ellsworth.html" title="A Maine Band That Doesn&#x27;t Do Rehearsals"><span class="tw-kind">New</span> A Maine Band That Doesn&#x27;t Do Rehearsals</a></li><li><a href="onequestion.html"><span class="tw-kind">One Question</span> what would you ask the world?</a></li></ul></aside>
+<main id="main-content">
+
+<article class="wrap wt-piece pw-hub">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html#p-denver">Projects</a></li>
+            <li aria-current="page">Denver Unfiltered</li>
+        </ol>
+    </nav>
+    <h1 class="wt-title">Denver Unfiltered.</h1>
+    <p class="wt-byline">Denver, Colorado, 2024 and 2026</p>
+    <div class="wt-prose">
+    <p>People in Denver and nearby talking about housing, music, grief, politics, crypto and what made them smile. Filmed on the street, in shops, at First Friday and at conferences, mostly in spring 2026.</p>
+    <p>87 pieces are here: 68 from Denver and around Colorado, and 19 from the Channel 5 Carnival day. Every one is public and has its own page with a transcript.</p>
+    </div>
+    <p class="pl-q"><span class="mono">On this page</span> <a href="#start-here">Start here</a>, <a href="#street">Street conversations</a>, <a href="#first-friday">First Friday</a>, <a href="#music">Music</a>, <a href="#eth-denver-2024">ETH Denver 2024</a>, <a href="#around-colorado">Boulder and Fort Collins</a>, <a href="#channel-5-carnival">Channel 5 Carnival</a></p>
+</article>
+
+<section class="country-section" id="start-here">
+    <div class="section-wrap">
+        <div class="country-head">
+            <h2 class="country-name">Start here.</h2>
+            <span class="country-meta">24:10</span>
+        </div>
+        <div class="report-thumb" style="max-width: 880px; margin: 0 auto 18px;">
+            <lite-yt videoid="yepfMr68Rao" duration="24:10" title="Play: Eric, on grief, family, and the human race." posterurl="stills/yepfMr68Rao.jpg" postersrcset="stills/yepfMr68Rao-320.jpg 320w, stills/yepfMr68Rao-480.jpg 480w, stills/yepfMr68Rao-640.jpg 640w"><img class="lite-yt-fallback" src="stills/yepfMr68Rao-640.jpg" srcset="stills/yepfMr68Rao-480.jpg 480w, stills/yepfMr68Rao-640.jpg 640w" alt="" loading="eager" decoding="async"></lite-yt>
+        </div>
+        <div style="max-width: 880px; margin: 0 auto;">
+            <span class="report-eyebrow">Denver</span>
+            <h3 class="report-title" style="font-size: 28px;"><a href="watch/never-been-ashamed-to-cry-denver.html">Eric, on grief, family, and the human race.</a></h3>
+            <p class="report-more"><a href="watch/never-been-ashamed-to-cry-denver.html">The full piece, with its transcript</a></p>
+        </div>
+    </div>
+</section>
+<section class="country-section" id="street">
+    <div class="section-wrap">
+        <div class="country-head">
+            <h2 class="country-name">Street conversations.</h2>
+            <span class="country-meta">44 pieces</span>
+        </div>
+        <p class="proj-note">Denver, March and April 2026: Colfax, Capitol Hill, Cheesman Park, a head shop, a protest.</p>
+        <div class="report-grid">
+            <a href="watch/after-the-denver-protest-project-2025-in-his-own-words.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/Xtqu9LbClYU-640.jpg" srcset="stills/Xtqu9LbClYU-320.jpg 320w, stills/Xtqu9LbClYU-480.jpg 480w, stills/Xtqu9LbClYU-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>21:00</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">On the ground at a Denver protest, talking Project 2025.</h3>
+                </div>
+            </a>
+            <a href="watch/no-kings-protest-del-gomez-on-imperialism-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/nMbRUrfU8TU-640.jpg" srcset="stills/nMbRUrfU8TU-320.jpg 320w, stills/nMbRUrfU8TU-480.jpg 480w, stills/nMbRUrfU8TU-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>5:35</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, Protest</span>
+                    <h3 class="report-title">No Kings: Del Gomez on empire.</h3>
+                </div>
+            </a>
+            <a href="watch/politics-divides-us-in-two-most-important-global-issue-purple-haze-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/aXl20fRazeM-640.jpg" srcset="stills/aXl20fRazeM-320.jpg 320w, stills/aXl20fRazeM-480.jpg 480w, stills/aXl20fRazeM-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>3:22</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, CO</span>
+                    <h3 class="report-title">Politics divides us in two: the most important global issue, at Purple Haze.</h3>
+                </div>
+            </a>
+            <a href="watch/a-venezuelan-air-force-vet-on-f-16s-and-loving-your-work.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/n6I2xv0OMQ4-640.jpg" srcset="stills/n6I2xv0OMQ4-320.jpg 320w, stills/n6I2xv0OMQ4-480.jpg 480w, stills/n6I2xv0OMQ4-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>9:11</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, en Español</span>
+                    <h3 class="report-title">A Venezuelan Air Force vet on F-16s and what still makes him smile.</h3>
+                </div>
+            </a>
+            <a href="watch/denver-politics-and-where-the-homeless-went-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/hT_oDk_DnMw-640.jpg" srcset="stills/hT_oDk_DnMw-320.jpg 320w, stills/hT_oDk_DnMw-480.jpg 480w, stills/hT_oDk_DnMw-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>17:35</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, street conversation</span>
+                    <h3 class="report-title">Where the homeless went before the convention came.</h3>
+                </div>
+            </a>
+            <a href="watch/vfx-artist-on-grief-art-and-starting-over.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/6JcW_wQyVWc-640.jpg" srcset="stills/6JcW_wQyVWc-320.jpg 320w, stills/6JcW_wQyVWc-480.jpg 480w, stills/6JcW_wQyVWc-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>29:00</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">Kale, a VFX artist, on grief, art and starting over.</h3>
+                </div>
+            </a>
+            <a href="watch/the-earth-is-alive-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/Jj1oN8qBM-w-640.jpg" srcset="stills/Jj1oN8qBM-w-320.jpg 320w, stills/Jj1oN8qBM-w-480.jpg 480w, stills/Jj1oN8qBM-w-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>9:30</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">Bonnie on fentanyl, and the earth being alive, at Purple Haze Denver.</h3>
+                </div>
+            </a>
+            <a href="watch/learn-from-your-mistakes-and-pay-it-forward-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/IbLjjIn0T3k-640.jpg" srcset="stills/IbLjjIn0T3k-320.jpg 320w, stills/IbLjjIn0T3k-480.jpg 480w, stills/IbLjjIn0T3k-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:56</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, Street</span>
+                    <h3 class="report-title">Life advice, a cop story and a prison story.</h3>
+                </div>
+            </a>
+            <a href="watch/thirty-years-of-a-local-head-shop-and-why-community.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/PCLjSkqhm5I-640.jpg" srcset="stills/PCLjSkqhm5I-320.jpg 320w, stills/PCLjSkqhm5I-480.jpg 480w, stills/PCLjSkqhm5I-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>8:11</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">Frank on thirty years at Purple Haze and the art of glass.</h3>
+                </div>
+            </a>
+            <a href="watch/prison-is-a-young-mans-game-a-street-interview-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/rEwpUxDalBU-640.jpg" srcset="stills/rEwpUxDalBU-320.jpg 320w, stills/rEwpUxDalBU-480.jpg 480w, stills/rEwpUxDalBU-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>15:20</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, Street</span>
+                    <h3 class="report-title">Prison is a young man’s game.</h3>
+                </div>
+            </a>
+            <a href="watch/east-denver-vibe-check-eth-denver-2026-family-meal-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/sYtf84GCU2M-640.jpg" srcset="stills/sYtf84GCU2M-320.jpg 320w, stills/sYtf84GCU2M-480.jpg 480w, stills/sYtf84GCU2M-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>3:38</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, ETH Denver 2026</span>
+                    <h3 class="report-title">A family meal and a vibe check at the venue.</h3>
+                </div>
+            </a>
+            <a href="watch/black-women-as-the-most-important-global-issue.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/4Us2-ohD21k-640.jpg" srcset="stills/4Us2-ohD21k-320.jpg 320w, stills/4Us2-ohD21k-480.jpg 480w, stills/4Us2-ohD21k-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>5:47</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">Gigi, from Mississippi, on Black women, safety, and what matters most.</h3>
+                </div>
+            </a>
+            <a href="watch/education-inequality-and-harm-reduction-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/RkdEgIlLEqw-640.jpg" srcset="stills/RkdEgIlLEqw-320.jpg 320w, stills/RkdEgIlLEqw-480.jpg 480w, stills/RkdEgIlLEqw-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:16</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">A sociology student on loneliness, capitalism, and what worries her most.</h3>
+                </div>
+            </a>
+            <a href="watch/racism-or-southern-hospitality-two-brothers-from-texas-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/hyGTGHgIBdQ-640.jpg" srcset="stills/hyGTGHgIBdQ-320.jpg 320w, stills/hyGTGHgIBdQ-480.jpg 480w, stills/hyGTGHgIBdQ-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:40</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, CO</span>
+                    <h3 class="report-title">Racism or Southern hospitality? Two brothers from Texas.</h3>
+                </div>
+            </a>
+            <a href="watch/dont-move-to-colorado-unless-youre-ready-to-confront-yourself.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/iAJqVTCV3cA-640.jpg" srcset="stills/iAJqVTCV3cA-320.jpg 320w, stills/iAJqVTCV3cA-480.jpg 480w, stills/iAJqVTCV3cA-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>6:11</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">Tim at Cheesman Park: a lore walk through old Denver money.</h3>
+                </div>
+            </a>
+            <a href="watch/what-unschooling-is-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/v1HXs7CoXCE-640.jpg" srcset="stills/v1HXs7CoXCE-320.jpg 320w, stills/v1HXs7CoXCE-480.jpg 480w, stills/v1HXs7CoXCE-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:03</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">What is unschooling? Raised half in the US, half in Costa Rica.</h3>
+                </div>
+            </a>
+            <a href="watch/cuba-is-last-in-line-a-conversation-in-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/Zbt8twkTiWw-640.jpg" srcset="stills/Zbt8twkTiWw-320.jpg 320w, stills/Zbt8twkTiWw-480.jpg 480w, stills/Zbt8twkTiWw-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>6:36</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, en Español</span>
+                    <h3 class="report-title">“Cuba is last in line”: a conversation in Denver.</h3>
+                </div>
+            </a>
+            <a href="watch/a-hundred-interviews-and-why-denver-is-insulated.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/juYSJnodVrM-640.jpg" srcset="stills/juYSJnodVrM-320.jpg 320w, stills/juYSJnodVrM-480.jpg 480w, stills/juYSJnodVrM-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>12:15</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">100 interviews before leaving Denver, and building a global network.</h3>
+                </div>
+            </a>
+            <a href="watch/climbing-gyms-and-meeting-people-in-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/uCQv5G4joHo-640.jpg" srcset="stills/uCQv5G4joHo-320.jpg 320w, stills/uCQv5G4joHo-480.jpg 480w, stills/uCQv5G4joHo-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>4:43</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">Luis, who climbs.</h3>
+                </div>
+            </a>
+            <a href="watch/ai-is-artificial-we-are-the-official.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/2KWrTQgRKS0-640.jpg" srcset="stills/2KWrTQgRKS0-320.jpg 320w, stills/2KWrTQgRKS0-480.jpg 480w, stills/2KWrTQgRKS0-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>21:18</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">A poet named Phoenix.</h3>
+                </div>
+            </a>
+            <a href="watch/legalize-it-all-but-tax-it-bo-from-boulder-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/bXW2h2aYtMk-640.jpg" srcset="stills/bXW2h2aYtMk-320.jpg 320w, stills/bXW2h2aYtMk-480.jpg 480w, stills/bXW2h2aYtMk-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>6:39</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, CO</span>
+                    <h3 class="report-title">Legalize it all, but tax it: Beau from Boulder.</h3>
+                </div>
+            </a>
+            <a href="watch/building-a-dao-and-making-governance-a-game-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/qcTocIWf34U-640.jpg" srcset="stills/qcTocIWf34U-320.jpg 320w, stills/qcTocIWf34U-480.jpg 480w, stills/qcTocIWf34U-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:45</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">A content coin, and making governance a game.</h3>
+                </div>
+            </a>
+            <a href="watch/montbello-then-and-now-and-a-note-to-self.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/C2FroCKz9wk-640.jpg" srcset="stills/C2FroCKz9wk-320.jpg 320w, stills/C2FroCKz9wk-480.jpg 480w, stills/C2FroCKz9wk-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>5:31</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">Walking the East Side: street footage from Denver.</h3>
+                </div>
+            </a>
+            <a href="watch/no-wifi-no-ai-and-a-comic-about-a-bird-cap-hill-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/TsmYwUL4N9E-640.jpg" srcset="stills/TsmYwUL4N9E-320.jpg 320w, stills/TsmYwUL4N9E-480.jpg 480w, stills/TsmYwUL4N9E-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>8:19</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, Capitol Hill, Colfax</span>
+                    <h3 class="report-title">No Wi-Fi, no AI, and a comic about a bird.</h3>
+                </div>
+            </a>
+            <a href="watch/truth-discourse-and-being-called-a-gentrifier-colfax.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/tZRn0IQTEp4-640.jpg" srcset="stills/tZRn0IQTEp4-320.jpg 320w, stills/tZRn0IQTEp4-480.jpg 480w, stills/tZRn0IQTEp4-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>14:38</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">Gaming culture and street life at the arcade on Colfax.</h3>
+                </div>
+            </a>
+            <a href="watch/fourteen-banks-ten-years-and-pearl-and-colfax.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/vIBsSEtFJbY-640.jpg" srcset="stills/vIBsSEtFJbY-320.jpg 320w, stills/vIBsSEtFJbY-480.jpg 480w, stills/vIBsSEtFJbY-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>5:53</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">The self-proclaimed biggest bandit in Denver.</h3>
+                </div>
+            </a>
+            <a href="watch/know-your-rights-and-dont-get-played-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/8IWlaBa-Ilw-640.jpg" srcset="stills/8IWlaBa-Ilw-320.jpg 320w, stills/8IWlaBa-Ilw-480.jpg 480w, stills/8IWlaBa-Ilw-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>8:19</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, Street</span>
+                    <h3 class="report-title">Know your rights, and don’t get played.</h3>
+                </div>
+            </a>
+            <a href="watch/housing-school-and-the-street-from-somebody-born-here-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/JwJOZGs3bqA-640.jpg" srcset="stills/JwJOZGs3bqA-320.jpg 320w, stills/JwJOZGs3bqA-480.jpg 480w, stills/JwJOZGs3bqA-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>12:58</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, born and raised</span>
+                    <h3 class="report-title">Housed, then evicted, and what happened to her daughter.</h3>
+                </div>
+            </a>
+            <a href="watch/swarthyhatter-origin-story-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/PP2qgn7Yd68-640.jpg" srcset="stills/PP2qgn7Yd68-320.jpg 320w, stills/PP2qgn7Yd68-480.jpg 480w, stills/PP2qgn7Yd68-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>4:48</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">The contract that ended a job hunt.</h3>
+                </div>
+            </a>
+            <a href="watch/a-strippers-take-on-denver-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/hKDwEi9qUlU-640.jpg" srcset="stills/hKDwEi9qUlU-320.jpg 320w, stills/hKDwEi9qUlU-480.jpg 480w, stills/hKDwEi9qUlU-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>4:35</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, Street</span>
+                    <h3 class="report-title">A traveler on Denver, graffiti and AI.</h3>
+                </div>
+            </a>
+            <a href="watch/narcan-youth-and-colfax-avenue.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/JDu-GZRgofc-640.jpg" srcset="stills/JDu-GZRgofc-320.jpg 320w, stills/JDu-GZRgofc-480.jpg 480w, stills/JDu-GZRgofc-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>3:39</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">An overdose prevention worker on Narcan, youth, and Colfax Ave.</h3>
+                </div>
+            </a>
+            <a href="watch/from-america-to-denver-what-brought-you-here-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/DdXcCfCc26E-640.jpg" srcset="stills/DdXcCfCc26E-320.jpg 320w, stills/DdXcCfCc26E-480.jpg 480w, stills/DdXcCfCc26E-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:21</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, Street</span>
+                    <h3 class="report-title">A borrowed camera, and Denver block by block.</h3>
+                </div>
+            </a>
+            <a href="watch/warehouse-raves-hard-style-and-seattle-versus-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/UrpIMyx4nF8-640.jpg" srcset="stills/UrpIMyx4nF8-320.jpg 320w, stills/UrpIMyx4nF8-480.jpg 480w, stills/UrpIMyx4nF8-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:40</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">Bam Bam’s first impressions of the Mile High City.</h3>
+                </div>
+            </a>
+            <a href="watch/oscar-de-guatemala-en-denver-salud-trabajo-y-la-cultura.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/dl9qv2zTSeM-640.jpg" srcset="stills/dl9qv2zTSeM-320.jpg 320w, stills/dl9qv2zTSeM-480.jpg 480w, stills/dl9qv2zTSeM-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>2:44</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, en Español</span>
+                    <h3 class="report-title">Óscar de Guatemala en Denver: salud, trabajo y cultura.</h3>
+                </div>
+            </a>
+            <a href="watch/what-made-you-smile-today-a-bookcase-and-lovecraft-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/3S93_0F7EIw-640.jpg" srcset="stills/3S93_0F7EIw-320.jpg 320w, stills/3S93_0F7EIw-480.jpg 480w, stills/3S93_0F7EIw-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>1:35</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, CO</span>
+                    <h3 class="report-title">What made you smile today? A bookcase and Lovecraft.</h3>
+                </div>
+            </a>
+            <a href="watch/not-for-polish-but-for-posterity-a-walk-in-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/FVUdLfuW7YE-640.jpg" srcset="stills/FVUdLfuW7YE-320.jpg 320w, stills/FVUdLfuW7YE-480.jpg 480w, stills/FVUdLfuW7YE-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>0:51</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, CO</span>
+                    <h3 class="report-title">Not for polish, but for posterity: a walk in Denver.</h3>
+                </div>
+            </a>
+            <a href="watch/the-100-dollar-weekly-video-journalism-contest-explained-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/N7_cgBQEMmY-640.jpg" srcset="stills/N7_cgBQEMmY-320.jpg 320w, stills/N7_cgBQEMmY-480.jpg 480w, stills/N7_cgBQEMmY-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>1:00</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, CO</span>
+                    <h3 class="report-title">The $100 weekly video journalism contest, explained.</h3>
+                </div>
+            </a>
+            <a href="watch/what-made-you-smile-today-exploring-denver-from-wyoming.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/kz9_bbpmBJM-640.jpg" srcset="stills/kz9_bbpmBJM-320.jpg 320w, stills/kz9_bbpmBJM-480.jpg 480w, stills/kz9_bbpmBJM-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>1:32</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, CO</span>
+                    <h3 class="report-title">What made you smile today? Exploring Denver from Wyoming.</h3>
+                </div>
+            </a>
+            <a href="watch/what-made-you-smile-dogs-at-cheesman-park-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/mtO0yYgrXOs-640.jpg" srcset="stills/mtO0yYgrXOs-320.jpg 320w, stills/mtO0yYgrXOs-480.jpg 480w, stills/mtO0yYgrXOs-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>2:20</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, CO</span>
+                    <h3 class="report-title">What made you smile today? Dogs at Cheesman Park.</h3>
+                </div>
+            </a>
+            <a href="watch/no-winning-in-war-most-important-global-issue-denver-convenience-store.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/H4ABTa1UVw4-640.jpg" srcset="stills/H4ABTa1UVw4-320.jpg 320w, stills/H4ABTa1UVw4-480.jpg 480w, stills/H4ABTa1UVw4-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>2:36</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, CO</span>
+                    <h3 class="report-title">No winning in war: the most important global issue, from a convenience store.</h3>
+                </div>
+            </a>
+            <a href="watch/bring-our-people-home-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/WjOTWRTM2Gk-640.jpg" srcset="stills/WjOTWRTM2Gk-320.jpg 320w, stills/WjOTWRTM2Gk-480.jpg 480w, stills/WjOTWRTM2Gk-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>1:47</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">“Bring our people home”: on focusing overseas instead of here.</h3>
+                </div>
+            </a>
+            <a href="watch/housing-and-jobs-the-most-important-global-issue.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/opBIiXE69HU-640.jpg" srcset="stills/opBIiXE69HU-320.jpg 320w, stills/opBIiXE69HU-480.jpg 480w, stills/opBIiXE69HU-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>1:04</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">Johnny, 23, on housing and jobs as the most important issue.</h3>
+                </div>
+            </a>
+            <a href="watch/skating-filming-and-getting-stuck-in-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/qDFnt8seI6c-640.jpg" srcset="stills/qDFnt8seI6c-320.jpg 320w, stills/qDFnt8seI6c-480.jpg 480w, stills/qDFnt8seI6c-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>2:40</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">Who the hell is Tim P?</h3>
+                </div>
+            </a>
+            <a href="watch/from-850-rent-to-a-pot-real-estate-bubble-james-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/BGwGYtKnEok-640.jpg" srcset="stills/BGwGYtKnEok-320.jpg 320w, stills/BGwGYtKnEok-480.jpg 480w, stills/BGwGYtKnEok-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>2:26</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, CO</span>
+                    <h3 class="report-title">From $850 rent to a pot real estate bubble: James.</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="country-section" id="first-friday">
+    <div class="section-wrap">
+        <div class="country-head">
+            <h2 class="country-name">First Friday.</h2>
+            <span class="country-meta">6 pieces</span>
+        </div>
+        <p class="proj-note">First Friday on Santa Fe, 3 April 2026, the night before the Channel 5 Carnival.</p>
+        <div class="report-grid">
+            <a href="watch/live-painting-cherry-blossoms-and-first-friday-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/GXm069hI6Jo-640.jpg" srcset="stills/GXm069hI6Jo-320.jpg 320w, stills/GXm069hI6Jo-480.jpg 480w, stills/GXm069hI6Jo-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>5:02</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, First Friday</span>
+                    <h3 class="report-title">A live painter on cherry blossoms, at First Friday.</h3>
+                </div>
+            </a>
+            <a href="watch/friends-family-and-what-made-us-smile-this-week-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/JcWXoB_EYP8-640.jpg" srcset="stills/JcWXoB_EYP8-320.jpg 320w, stills/JcWXoB_EYP8-480.jpg 480w, stills/JcWXoB_EYP8-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>5:28</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, First Friday</span>
+                    <h3 class="report-title">Three friends on Denver, and what made them smile.</h3>
+                </div>
+            </a>
+            <a href="watch/black-art-self-care-and-a-stage-one-drought-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/_sm7iv2UFd0-640.jpg" srcset="stills/_sm7iv2UFd0-320.jpg 320w, stills/_sm7iv2UFd0-480.jpg 480w, stills/_sm7iv2UFd0-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>3:39</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, First Friday</span>
+                    <h3 class="report-title">Black art, self care and the water in Colorado.</h3>
+                </div>
+            </a>
+            <a href="watch/first-friday-freestyle-on-the-corner-of-santa-fe.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/uSyxfx1ldXE-640.jpg" srcset="stills/uSyxfx1ldXE-320.jpg 320w, stills/uSyxfx1ldXE-480.jpg 480w, stills/uSyxfx1ldXE-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>19:15</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">A First Friday freestyle, caught on camera.</h3>
+                </div>
+            </a>
+            <a href="watch/first-friday-at-tim-correas-bar-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/-FOQbJ8bbuE-640.jpg" srcset="stills/-FOQbJ8bbuE-320.jpg 320w, stills/-FOQbJ8bbuE-480.jpg 480w, stills/-FOQbJ8bbuE-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>2:06</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, CO</span>
+                    <h3 class="report-title">First Friday at Tim Correa's bar.</h3>
+                </div>
+            </a>
+            <a href="watch/let-the-camera-be-the-reason-first-friday-on-santa-fe-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/sPrKbU119yA-640.jpg" srcset="stills/sPrKbU119yA-320.jpg 320w, stills/sPrKbU119yA-480.jpg 480w, stills/sPrKbU119yA-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>0:54</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, CO</span>
+                    <h3 class="report-title">Let the camera be the reason: First Friday on Santa Fe.</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="country-section" id="music">
+    <div class="section-wrap">
+        <div class="country-head">
+            <h2 class="country-name">Music.</h2>
+            <span class="country-meta">3 pieces</span>
+        </div>
+        <p class="proj-note">A Denver studio on 13 March 2026, a freestyle the next night, and Maceo on the rooftop after the songwriting camp.</p>
+        <div class="report-grid">
+            <a href="watch/subs-on-rubber-and-a-kodak-black-album-in-a-denver-studio.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/auDRjJXnfa4-640.jpg" srcset="stills/auDRjJXnfa4-320.jpg 320w, stills/auDRjJXnfa4-480.jpg 480w, stills/auDRjJXnfa4-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>3:36</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, Studio session, 13 Mar 2026</span>
+                    <h3 class="report-title">Subs on rubber and a Kodak Black album, in a Denver studio.</h3>
+                </div>
+            </a>
+            <a href="watch/denver-night-walk-mile-high-city-after-dark-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/89iDbSyt-tQ-640.jpg" srcset="stills/89iDbSyt-tQ-320.jpg 320w, stills/89iDbSyt-tQ-480.jpg 480w, stills/89iDbSyt-tQ-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>3:32</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, Street</span>
+                    <h3 class="report-title">A freestyle and a talk about music after dark.</h3>
+                </div>
+            </a>
+            <a href="watch/what-the-songwriting-camp-footage-is.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/9xCbxQZKKDA-640.jpg" srcset="stills/9xCbxQZKKDA-320.jpg 320w, stills/9xCbxQZKKDA-480.jpg 480w, stills/9xCbxQZKKDA-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>1:46</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver</span>
+                    <h3 class="report-title">Rooftop recap: Maceo on the songwriting camp and what comes next.</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="country-section" id="eth-denver-2024">
+    <div class="section-wrap">
+        <div class="country-head">
+            <h2 class="country-name">ETH Denver 2024.</h2>
+            <span class="country-meta">10 pieces</span>
+        </div>
+        <p class="proj-note">On decentralized science, social tokens, a bail fund on chain and 40 Acres DAO. Friends with Benefits funded the interview series. More on the <a href="eth-denver-2024-a-milestone-project.html">ETH Denver 2024 project page</a>.</p>
+        <p class="qa-meta">Executive producer: C.Y. Lee.</p>
+        <div class="report-grid">
+            <a href="watch/social-tokens-community-and-url-to-irl-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/4uN9BrX2Ztg-640.jpg" srcset="stills/4uN9BrX2Ztg-320.jpg 320w, stills/4uN9BrX2Ztg-480.jpg 480w, stills/4uN9BrX2Ztg-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>18:21</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, ETH Denver 2024</span>
+                    <h3 class="report-title">Social tokens, and a conference for Cape Verde.</h3>
+                </div>
+            </a>
+            <a href="watch/onchain-science-proof-of-knowledge-desci-world-at-eth-denver-2024.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/GZSciAYuhWY-640.jpg" srcset="stills/GZSciAYuhWY-320.jpg 320w, stills/GZSciAYuhWY-480.jpg 480w, stills/GZSciAYuhWY-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>30:00</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, ETH Denver 2024</span>
+                    <h3 class="report-title">Onchain science, proof of knowledge: DeSci World.</h3>
+                </div>
+            </a>
+            <a href="watch/real-estate-to-web3-and-40-acres-dao-big-trav-at-eth-denver-2024.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/Nc_zdA2VNUk-640.jpg" srcset="stills/Nc_zdA2VNUk-320.jpg 320w, stills/Nc_zdA2VNUk-480.jpg 480w, stills/Nc_zdA2VNUk-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:53</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, ETH Denver 2024</span>
+                    <h3 class="report-title">Real estate to Web3, and 40 Acres DAO: Big Trav.</h3>
+                </div>
+            </a>
+            <a href="watch/crypto-in-the-caribbean-and-who-gets-access-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/WNslAJEdYYc-640.jpg" srcset="stills/WNslAJEdYYc-320.jpg 320w, stills/WNslAJEdYYc-480.jpg 480w, stills/WNslAJEdYYc-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>11:27</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, ETH Denver 2024</span>
+                    <h3 class="report-title">Access, the Caribbean, and a conference at home.</h3>
+                </div>
+            </a>
+            <a href="watch/the-cyber-panther-party-and-a-bail-fund-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/dMpIRN44oio-640.jpg" srcset="stills/dMpIRN44oio-320.jpg 320w, stills/dMpIRN44oio-480.jpg 480w, stills/dMpIRN44oio-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>13:32</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, ETH Denver 2024</span>
+                    <h3 class="report-title">A bail fund on chain, and teaching the wallet.</h3>
+                </div>
+            </a>
+            <a href="watch/desci-womens-health-and-funding-the-gap-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/zAIth9lIeP0-640.jpg" srcset="stills/zAIth9lIeP0-320.jpg 320w, stills/zAIth9lIeP0-480.jpg 480w, stills/zAIth9lIeP0-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>26:42</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, ETH Denver 2024</span>
+                    <h3 class="report-title">DeSci, women's health, and who gets funded.</h3>
+                </div>
+            </a>
+            <a href="watch/what-decentralized-science-means-for-health-gabrielle-at-eth-denver-2024.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/19agkxpJH6Q-640.jpg" srcset="stills/19agkxpJH6Q-320.jpg 320w, stills/19agkxpJH6Q-480.jpg 480w, stills/19agkxpJH6Q-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>6:41</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, ETH Denver 2024</span>
+                    <h3 class="report-title">What decentralized science means for health: Gabrielle at ETH Denver 2024.</h3>
+                </div>
+            </a>
+            <a href="watch/forbidden-fruit-culture-onchain-and-creative-wellness-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/6rPjX_pGd6E-640.jpg" srcset="stills/6rPjX_pGd6E-320.jpg 320w, stills/6rPjX_pGd6E-480.jpg 480w, stills/6rPjX_pGd6E-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:40</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, ETH Denver 2024</span>
+                    <h3 class="report-title">A Philly artist on culture, gas fees and Forbidden Fruit.</h3>
+                </div>
+            </a>
+            <a href="watch/a-first-interview-and-advice-back-to-newark-denver.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/UkX8veGIl58-640.jpg" srcset="stills/UkX8veGIl58-320.jpg 320w, stills/UkX8veGIl58-480.jpg 480w, stills/UkX8veGIl58-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:15</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, ETH Denver 2024</span>
+                    <h3 class="report-title">A first interview, and advice back to Newark.</h3>
+                </div>
+            </a>
+            <a href="watch/blvkhvnd-and-the-crypto-cookout-sirsu-at-eth-denver-2024.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/sSyrdlViK3Q-640.jpg" srcset="stills/sSyrdlViK3Q-320.jpg 320w, stills/sSyrdlViK3Q-480.jpg 480w, stills/sSyrdlViK3Q-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>29:32</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, ETH Denver 2024</span>
+                    <h3 class="report-title">BLVKHVND and the Crypto Cookout: Sirsu.</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="country-section" id="around-colorado">
+    <div class="section-wrap">
+        <div class="country-head">
+            <h2 class="country-name">Boulder and Fort Collins.</h2>
+            <span class="country-meta">4 pieces</span>
+        </div>
+        <p class="proj-note">10 to 13 March 2026, one of them filmed by Tim Palka.</p>
+        <div class="report-grid">
+            <a href="watch/a-tinder-date-with-a-plus-one-fort-collins.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/I69Y4ihPIZo-640.jpg" srcset="stills/I69Y4ihPIZo-320.jpg 320w, stills/I69Y4ihPIZo-480.jpg 480w, stills/I69Y4ihPIZo-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>3:46</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Fort Collins</span>
+                    <h3 class="report-title">A date with a plus one, and leaving school.</h3>
+                </div>
+            </a>
+            <a href="watch/intro-to-alex-the-boy-fort-collins.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/eqnF0iP08pI-640.jpg" srcset="stills/eqnF0iP08pI-320.jpg 320w, stills/eqnF0iP08pI-480.jpg 480w, stills/eqnF0iP08pI-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>5:57</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Fort Collins</span>
+                    <h3 class="report-title">A Chicago transplant on Colorado and dorm life.</h3>
+                </div>
+            </a>
+            <a href="watch/a-media-graduate-considering-the-military.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/cSQnnU1hiDk-640.jpg" srcset="stills/cSQnnU1hiDk-320.jpg 320w, stills/cSQnnU1hiDk-480.jpg 480w, stills/cSQnnU1hiDk-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>3:43</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Boulder</span>
+                    <h3 class="report-title">Ethan, a media graduate, on jobs and thinking about the military.</h3>
+                </div>
+            </a>
+            <a href="watch/a-mirror-that-wouldnt-exist-if-we-werent-doing-it.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/ivye_ajfodc-640.jpg" srcset="stills/ivye_ajfodc-320.jpg 320w, stills/ivye_ajfodc-480.jpg 480w, stills/ivye_ajfodc-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:36</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Boulder</span>
+                    <h3 class="report-title">Maceo’s Boulder vlog.</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="country-section" id="channel-5-carnival">
+    <div class="section-wrap">
+        <div class="country-head">
+            <h2 class="country-name">Channel 5 Carnival.</h2>
+            <span class="country-meta">19 pieces</span>
+        </div>
+        <p class="proj-note">Andrew Callaghan&rsquo;s Channel 5 Carnival came to the Paramount Theatre in Denver on Saturday 4 April 2026. We filmed it from the line, the floor and the balcony, and stopped at a mall on the way.</p>
+        <div class="report-thumb" style="max-width: 880px; margin: 0 auto 18px;">
+            <lite-yt videoid="CgFdClu5uow" duration="16:28" title="Play: Channel 5 fans on what makes Andrew Callaghan work." postersrcset="stills/CgFdClu5uow-320.jpg 320w, stills/CgFdClu5uow-480.jpg 480w, stills/CgFdClu5uow-640.jpg 640w"><img class="lite-yt-fallback" src="stills/CgFdClu5uow-640.jpg" srcset="stills/CgFdClu5uow-480.jpg 480w, stills/CgFdClu5uow-640.jpg 640w" alt="" loading="lazy" decoding="async"></lite-yt>
+        </div>
+        <div style="max-width: 880px; margin: 0 auto;">
+            <span class="report-eyebrow">Denver, Channel 5 live show</span>
+            <h3 class="report-title" style="font-size: 28px;"><a href="watch/channel-5-fans-on-what-andrew-callaghan-does-right.html">Channel 5 fans on what makes Andrew Callaghan work.</a></h3>
+            <p class="report-more"><a href="watch/channel-5-fans-on-what-andrew-callaghan-does-right.html">The full piece, with its transcript</a></p>
+        </div>
+        <div class="report-grid">
+            <a href="watch/fruit-eyes-play-acoustic-at-the-channel-5-talent-show.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/2QDcQoErdcU-640.jpg" srcset="stills/2QDcQoErdcU-320.jpg 320w, stills/2QDcQoErdcU-480.jpg 480w, stills/2QDcQoErdcU-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>3:43</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, Talent show</span>
+                    <h3 class="report-title">Fruit Eyes play acoustic.</h3>
+                </div>
+            </a>
+            <a href="watch/a-hitchhiker-on-a-spiritual-mission-outside-channel-5.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/80E_4pItE_Y-640.jpg" srcset="stills/80E_4pItE_Y-320.jpg 320w, stills/80E_4pItE_Y-480.jpg 480w, stills/80E_4pItE_Y-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>10:42</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, In the line</span>
+                    <h3 class="report-title">A hitchhiker on a spiritual mission.</h3>
+                </div>
+            </a>
+            <a href="watch/an-irish-fan-and-an-aspiring-journalist-in-the-channel-5-line.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/enaFl4XPCy4-640.jpg" srcset="stills/enaFl4XPCy4-320.jpg 320w, stills/enaFl4XPCy4-480.jpg 480w, stills/enaFl4XPCy4-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>5:42</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, In the line</span>
+                    <h3 class="report-title">An Irish fan and an aspiring journalist.</h3>
+                </div>
+            </a>
+            <a href="watch/freestyle-and-the-question-of-the-week-on-stage-at-channel-5.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/ne-laPnmFcE-640.jpg" srcset="stills/ne-laPnmFcE-320.jpg 320w, stills/ne-laPnmFcE-480.jpg 480w, stills/ne-laPnmFcE-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>3:03</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, On stage</span>
+                    <h3 class="report-title">Freestyle and the question of the week.</h3>
+                </div>
+            </a>
+            <a href="watch/art-activism-and-an-edibles-story-at-the-channel-5-talent-show.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/tUXe3ykg_fc-640.jpg" srcset="stills/tUXe3ykg_fc-320.jpg 320w, stills/tUXe3ykg_fc-480.jpg 480w, stills/tUXe3ykg_fc-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>6:14</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, Talent show</span>
+                    <h3 class="report-title">Art activism, and an edibles story.</h3>
+                </div>
+            </a>
+            <a href="watch/a-comedy-rap-about-socks-at-the-channel-5-talent-show.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/x3R7rGUwJ2g-640.jpg" srcset="stills/x3R7rGUwJ2g-320.jpg 320w, stills/x3R7rGUwJ2g-480.jpg 480w, stills/x3R7rGUwJ2g-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>4:10</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, Talent show</span>
+                    <h3 class="report-title">A comedy rap about socks.</h3>
+                </div>
+            </a>
+            <a href="watch/the-question-of-the-week-put-to-the-room-at-the-channel-5-carnival.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/zbftnsO2oDk-640.jpg" srcset="stills/zbftnsO2oDk-320.jpg 320w, stills/zbftnsO2oDk-480.jpg 480w, stills/zbftnsO2oDk-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>5:10</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, On stage</span>
+                    <h3 class="report-title">The question of the week, put to the room.</h3>
+                </div>
+            </a>
+            <a href="watch/immigration-independent-media-and-denver-subcultures.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/iRAGaejwzIw-640.jpg" srcset="stills/iRAGaejwzIw-320.jpg 320w, stills/iRAGaejwzIw-480.jpg 480w, stills/iRAGaejwzIw-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>3:32</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, In the line</span>
+                    <h3 class="report-title">Immigration, independent media, subcultures.</h3>
+                </div>
+            </a>
+            <a href="watch/freestyle-spoken-word-and-dance-at-the-channel-5-talent-show.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/mHSMrIwjbck-640.jpg" srcset="stills/mHSMrIwjbck-320.jpg 320w, stills/mHSMrIwjbck-480.jpg 480w, stills/mHSMrIwjbck-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:44</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, Talent show</span>
+                    <h3 class="report-title">Freestyle, spoken word and dance.</h3>
+                </div>
+            </a>
+            <a href="watch/pundits-versus-ground-reporting-channel-5-queue.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/b-adB_nX8ak-640.jpg" srcset="stills/b-adB_nX8ak-320.jpg 320w, stills/b-adB_nX8ak-480.jpg 480w, stills/b-adB_nX8ak-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>20:14</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, Channel 5 live show</span>
+                    <h3 class="report-title">Channel 5 fans on pundits and ground reporting.</h3>
+                </div>
+            </a>
+            <a href="watch/grief-journalism-and-getting-on-stage-at-channel-5.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/F5vXOAif_FQ-640.jpg" srcset="stills/F5vXOAif_FQ-320.jpg 320w, stills/F5vXOAif_FQ-480.jpg 480w, stills/F5vXOAif_FQ-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>14:17</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, Channel 5 live show</span>
+                    <h3 class="report-title">Andrew Callaghan’s Carnival Tour hits Denver: fans on journalism.</h3>
+                </div>
+            </a>
+            <a href="watch/a-neutral-milk-hotel-cover-from-the-balcony-at-the-channel-5-carnival.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/NzMiVQKWjMs-640.jpg" srcset="stills/NzMiVQKWjMs-320.jpg 320w, stills/NzMiVQKWjMs-480.jpg 480w, stills/NzMiVQKWjMs-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>1:52</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, From the balcony</span>
+                    <h3 class="report-title">A Neutral Milk Hotel cover, from above.</h3>
+                </div>
+            </a>
+            <a href="watch/the-format-from-the-air-at-the-channel-5-carnival.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/R3OULgt_154-640.jpg" srcset="stills/R3OULgt_154-320.jpg 320w, stills/R3OULgt_154-480.jpg 480w, stills/R3OULgt_154-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>1:11</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, From the balcony</span>
+                    <h3 class="report-title">The format, from the air.</h3>
+                </div>
+            </a>
+            <a href="watch/landscape-or-portrait-two-filmmakers-at-the-mall.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/Vuc9QF3VJgQ-640.jpg" srcset="stills/Vuc9QF3VJgQ-320.jpg 320w, stills/Vuc9QF3VJgQ-480.jpg 480w, stills/Vuc9QF3VJgQ-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>1:22</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, At the mall</span>
+                    <h3 class="report-title">Landscape or portrait.</h3>
+                </div>
+            </a>
+            <a href="watch/documenting-war-from-all-sides-in-the-channel-5-line.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/bvortImszoI-640.jpg" srcset="stills/bvortImszoI-320.jpg 320w, stills/bvortImszoI-480.jpg 480w, stills/bvortImszoI-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>2:35</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, In the line</span>
+                    <h3 class="report-title">Documenting war from all sides.</h3>
+                </div>
+            </a>
+            <a href="watch/a-contortionist-nobody-was-ready-for-at-the-channel-5-carnival.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/nKS1wKbXhRk-640.jpg" srcset="stills/nKS1wKbXhRk-320.jpg 320w, stills/nKS1wKbXhRk-480.jpg 480w, stills/nKS1wKbXhRk-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>0:51</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, Talent show</span>
+                    <h3 class="report-title">A contortionist nobody was ready for.</h3>
+                </div>
+            </a>
+            <a href="watch/do-we-have-free-will-a-debate-outside-channel-5.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/pcG6qlknIOE-640.jpg" srcset="stills/pcG6qlknIOE-320.jpg 320w, stills/pcG6qlknIOE-480.jpg 480w, stills/pcG6qlknIOE-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>2:53</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, In the line</span>
+                    <h3 class="report-title">Do we have free will?</h3>
+                </div>
+            </a>
+            <a href="watch/which-denver-stories-go-uncovered.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/qjfvrsmwJSI-640.jpg" srcset="stills/qjfvrsmwJSI-320.jpg 320w, stills/qjfvrsmwJSI-480.jpg 480w, stills/qjfvrsmwJSI-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>1:05</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Denver, In the line</span>
+                    <h3 class="report-title">Which Denver stories go uncovered.</h3>
+                </div>
+            </a>
+        </div>
+        <p class="report-more" style="text-align:center;margin-top:24px;"><a href="channel5-carnival.html">All of the Channel 5 Carnival, on its own page</a></p>
+    </div>
+</section>
+
+    <div class="wrap">
+    <p class="pl-q"><span class="mono">Related</span> <a href="channel5-denver.html">The Channel 5 release</a>, <a href="eth-denver-2024-a-milestone-project.html">ETH Denver 2024</a>, <a href="ethconf.html">ETHConf 2026</a>, <a href="places.html#denver">Denver on the map</a></p>
+    <p class="qa-meta">Filmed by Maceo, except two pieces by Tim Palka: Ethan in Boulder and Luis in Denver.</p>
+    </div>
+    <p class="pl-q" data-pagefind-ignore><span class="mono">Browse the archive</span> <a href="portfolio.html">Watch</a>, <a href="places.html">Where we filmed</a>, <a href="topics/index.html">Topics</a>, <a href="people.html">Correspondents</a>, <a href="onequestion.html">One Question</a>, <a href="library.html">The library</a></p>
+
+<section class="wrap ask" aria-label="Support us">
+    <div class="ask-in">
+        <span class="ask-k">Keep this going</span>
+        <p class="ask-t"><a href="onequestion.html"><span data-count="oq_count">61</span> people have been asked One Question on camera</a>. This season's campaign runs to Thursday 10 December.</p>
+        <div class="ask-cta">
+            <a class="btn btn-primary" href="supporter.html">Support us</a>
+            <a class="btn btn-line" href="film.html">Film one near you</a>
+        </div>
+    </div>
+</section>
+<div class="wrap wtm-share"></div>
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. We made the work published here in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="where-to-start.html">Watch first</a></li>
+                    <li><a href="portfolio.html">Watch</a></li>
+                    <li><a href="learn.html">Learn</a></li>
+                    <li><a href="clips.html">Clips</a></li>
+                    <li><a href="library.html">The library</a></li>
+                    <li><a href="places.html">Where we filmed</a></li>
+                    <li><a href="guests.html">Who is on the tape</a></li>
+                    <li><a href="dispatches.html">Updates</a></li>
+                    <li><a href="podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="start.html">About</a></li>
+                    <li><a href="about.html">Mission</a></li>
+                    <li><a href="history.html">How this started</a></li>
+                    <li><a href="people.html">Correspondents</a></li>
+                    <li><a href="team.html">The editor roster</a></li>
+                    <li><a href="books.html">Books from the community</a></li>
+                    <li><a href="state.html">State of the network</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="ledger.html">What we have not published</a></li>
+                    <li><a href="privacy.html">What this site keeps about you</a></li>
+                    <li><a href="privacy.html#collect">Your choices</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="supporter.html">Support</a></li>
+                    <li><a href="work-with-us.html">Work with us</a></li>
+                    <li><a href="dispatch.html" class="footer-newsletter-link">Newsletter, once a week</a></li>
+                    <li><a href="onequestion.html">One Question</a></li>
+                    <li><a href="commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="work-with-us.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+<script src="wtm-player.js" defer></script>
+<script src="wtm-core.js" defer></script>
+</body>
+</html>

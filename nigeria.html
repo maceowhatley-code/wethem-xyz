@@ -1,0 +1,1108 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Conversations in Abuja, Lagos, Ikorodu, Jos, Ibadan and Enugu: the Creative Alchemy community, Web3Bridge Cohort 12, ProdFest and people on the street, 2025 and 2026.">
+<meta name="theme-color" content="#0C0B09">
+    <meta name="view-transition" content="same-origin">
+    <meta name="color-scheme" content="dark">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="We Them Media">
+    <meta name="version" content="2026-08-24">
+    <meta http-equiv="Cache-Control" content="public, max-age=300, must-revalidate">
+    <link rel="icon" type="image/webp" href="wtm-logo-64.webp">
+    <link rel="icon" type="image/png" href="wtm-logo-64.png">
+    <link rel="apple-touch-icon" href="wtm-logo-180.png">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+
+    <link rel="stylesheet" href="wtm.css">
+    <link rel="preload" href="/webfonts/archivo-latin-400-800-nor.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="wtm-v2.css">
+    <link rel="stylesheet" href="cta-hierarchy.css">
+
+    <style>
+        .breadcrumb { margin-bottom: 1.5rem; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
+        .breadcrumb li { display: flex; align-items: center; color: var(--text-muted); }
+        .breadcrumb li + li::before { content: '›'; color: var(--text-muted); margin-right: 8px; opacity: 0.6; font-size: 1.2em; }
+        .breadcrumb li[aria-current="page"] { color: var(--coral); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color .15s; padding: 4px 0; min-height: 32px; display: inline-flex; align-items: center; }
+        .breadcrumb a:hover { color: var(--coral); }
+
+
+        .page-pager { max-width: 1320px; margin: 4rem auto 5rem; padding: 0 2rem; }
+        .page-pager-link {
+            display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+            padding: 2rem 2rem; border: 1px solid var(--border); background: var(--bg-elev);
+            text-decoration: none; color: var(--text);
+            transition: transform .35s var(--ease), border-color .25s, box-shadow .35s var(--ease);
+            position: relative; overflow: hidden;
+        }
+        .page-pager-link:hover { transform: translate(-3px, -3px); border-color: var(--coral); box-shadow: 6px 6px 0 var(--ink); }
+        .page-pager-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+        .page-pager-link:hover::after { transform: scaleX(1); }
+        .page-pager-eyebrow { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; color: var(--coral); letter-spacing: 0.18em; text-transform: uppercase; display: block; margin-bottom: 0.5rem; }
+        .page-pager-title { font-family: var(--display); font-variation-settings: "opsz" 144; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; display: block; }
+        .page-pager-title em { font-family: var(--display); font-style: italic; font-variation-settings: "opsz" 72, "SOFT" 100; color: var(--coral); font-weight: 500; }
+        .page-pager-arrow { font-family: var(--display); font-size: clamp(2rem, 4vw, 3.5rem); color: var(--coral); line-height: 1; transition: transform .25s var(--ease); }
+        .page-pager-link:hover .page-pager-arrow { transform: translateX(8px); }
+        @media (max-width: 720px) {
+            .page-pager { margin: 2rem auto 3rem; padding: 0 1.25rem; }
+            .page-pager-link { padding: 1.5rem; grid-template-columns: 1fr; gap: 0.5rem; }
+            .page-pager-arrow { justify-self: end; }
+        }
+        @media (hover: none) {
+            .page-pager-link:hover { transform: none; box-shadow: none; }
+        }
+
+        .featured-anchor {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 0 1rem;
+        }
+        .featured-frame {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border: 1px solid var(--border);
+        }
+        .featured-frame lite-yt {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+        }
+        .featured-caption {
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+        .featured-caption .eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+        .featured-caption h2 {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+            line-height: 1.2;
+            margin: 0 0 0.55rem;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .featured-caption .byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.92rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .featured-caption .byline strong { color: var(--text); font-weight: 600; }
+
+        .net-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            margin: 3.5rem auto 0;
+            max-width: 1320px;
+        }
+        @media (min-width: 720px) {
+            .net-strip { grid-template-columns: repeat(4, 1fr); }
+        }
+        .net-cell {
+            background: var(--bg);
+            padding: 1.75rem 1.5rem;
+        }
+        .net-num {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+            line-height: 1;
+            color: var(--text);
+            margin-bottom: 0.55rem;
+            letter-spacing: -0.01em;
+        }
+        .net-lbl {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .country-section { padding: 4rem 0 2.5rem; }
+        .country-section + .country-section { border-top: 1px solid var(--border); }
+        .country-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .country-name {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 144;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 0.95;
+            color: var(--text);
+            margin: 0;
+            letter-spacing: -0.02em;
+            min-width: 0;
+        }
+        .country-meta {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-elev);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: var(--text);
+            transition: transform .25s var(--ease), border-color .25s, box-shadow .25s var(--ease);
+        }
+        .report-card:hover {
+            transform: translate(-3px, -3px);
+            border-color: var(--coral);
+            box-shadow: 6px 6px 0 var(--ink);
+        }
+        @media (hover: none) {
+            .report-card:hover { transform: none; box-shadow: none; }
+        }
+        .report-thumb {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #1a1a1a;
+            display: block;
+        }
+        .report-body {
+            padding: 1.1rem 1.2rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+            flex: 1;
+        }
+        .report-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        .report-title {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 96;
+            font-weight: 600;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin: 0;
+            color: var(--text);
+            letter-spacing: -0.005em;
+        }
+        .report-byline {
+            font-family: var(--body, var(--display));
+            font-size: 0.88rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .report-byline strong { color: var(--text); font-weight: 600; }
+
+        .origin-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .origin-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.85rem;
+        }
+        .origin-line {
+            font-family: var(--body, var(--display));
+            font-size: 1.05rem;
+            line-height: 1.55;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+        }
+        .origin-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .podcast-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 0 1.5rem;
+        }
+        .podcast-eyebrow {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.85rem;
+        }
+        .podcast-h {
+            font-family: var(--display);
+            font-variation-settings: "opsz" 120;
+            font-weight: 600;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.15;
+            color: var(--text);
+            margin: 0 0 0.85rem;
+            letter-spacing: -0.01em;
+        }
+        .podcast-h em {
+            font-style: italic;
+            font-variation-settings: "opsz" 72, "SOFT" 100;
+            color: var(--coral);
+            font-weight: 500;
+        }
+        .podcast-line {
+            font-family: var(--body, var(--display));
+            font-size: 1rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+            margin: 0 0 1.1rem;
+        }
+        .podcast-line strong { color: var(--text); font-weight: 600; }
+        .podcast-link {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .portfolio-hero { padding-bottom: 1rem; }
+        .portfolio-hero .page-title {
+            font-variation-settings: "opsz" 144;
+            letter-spacing: -0.015em;
+        }
+        .portfolio-hero .page-deck {
+            max-width: 64ch;
+        }
+
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        @media (max-width: 720px) {
+            .section-wrap { padding: 0 1.25rem; }
+            .country-section { padding: 2.75rem 0 1.75rem; }
+            .net-strip { margin-top: 2.5rem; }
+            .net-cell { padding: 1.25rem 1.1rem; }
+        }
+    </style>
+<meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="alternate" type="application/rss+xml" title="We Them Media" href="feed.xml">
+    <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+
+    <link rel="canonical" href="https://wethem.xyz/nigeria">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nigeria">
+    <meta property="og:description" content="Conversations in Abuja, Lagos, Ikorodu, Jos, Ibadan and Enugu: the Creative Alchemy community, Web3Bridge Cohort 12, ProdFest and people on the street, 2025 and 2026.">
+    <meta property="og:url" content="https://wethem.xyz/nigeria">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="https://wethem.xyz/stills/J5QCoY3N7Lc-640.jpg">
+    <meta property="og:image:width" content="640">
+    <meta property="og:image:height" content="360">
+    <meta property="og:image:alt" content="A conversation filmed in Nigeria">
+    <meta name="twitter:image" content="https://wethem.xyz/stills/J5QCoY3N7Lc-640.jpg">
+    <title>Nigeria &middot; We Them Media</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://wethem.xyz/nigeria",
+  "url": "https://wethem.xyz/nigeria",
+  "name": "Nigeria",
+  "description": "Conversations in Abuja, Lagos, Ikorodu, Jos, Ibadan and Enugu: the Creative Alchemy community, Web3Bridge Cohort 12, ProdFest and people on the street, 2025 and 2026.",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "We Them Media",
+    "url": "https://wethem.xyz"
+  },
+  "about": {
+    "@type": "Place",
+    "name": "Nigeria"
+  },
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "Nigeria"
+  },
+  "temporalCoverage": "2024/2026",
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": 37,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "url": "https://wethem.xyz/watch/fashion-battle-rap-and-web3-with-gneric-nigeria"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "url": "https://wethem.xyz/watch/deeper-than-defi-web3bridge-cohort-12-episode-7-lagos"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "url": "https://wethem.xyz/watch/jump-on-the-train-web3bridge-cohort-12-episode-6-lagos"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "url": "https://wethem.xyz/watch/broke-me-down-to-pieces-web3bridge-cohort-12-episode-5-lagos"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "url": "https://wethem.xyz/watch/the-unity-and-the-togetherness-web3bridge-cohort-12-episode-4-lagos"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "url": "https://wethem.xyz/watch/showing-them-the-lights-web3bridge-cohort-12-episode-3-lagos"
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "url": "https://wethem.xyz/watch/propertychain-against-fraud-web3bridge-cohort-12-episode-2-lagos"
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "url": "https://wethem.xyz/watch/paying-utility-bills-with-crypto-web3bridge-cohort-12-episode-1-lagos"
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "url": "https://wethem.xyz/watch/voices-from-web3bridge-cohort-12-ikorodu-lagos"
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "url": "https://wethem.xyz/watch/jed-xo-on-abuja-creative-alchemy-and-purpose-episode-34"
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "url": "https://wethem.xyz/watch/vulnerability-vision-and-starting-a-podcast-abuja"
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "url": "https://wethem.xyz/watch/creative-alchemy-from-the-founder-anesi-life-camp-abuja"
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "url": "https://wethem.xyz/watch/getting-the-right-team-lisk-ambassador-abuja"
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "url": "https://wethem.xyz/watch/who-is-maceo-the-founder-interviewed-by-daniel-abuja"
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "url": "https://wethem.xyz/watch/anesi-founder-of-creative-alchemy-on-the-beginning-nigeria"
+      },
+      {
+        "@type": "ListItem",
+        "position": 16,
+        "url": "https://wethem.xyz/watch/why-we-built-a-product-focused-conference-jos"
+      },
+      {
+        "@type": "ListItem",
+        "position": 17,
+        "url": "https://wethem.xyz/watch/third-place-at-a-hackathon-with-a-team-of-two-jos"
+      },
+      {
+        "@type": "ListItem",
+        "position": 18,
+        "url": "https://wethem.xyz/watch/awareness-then-action-blockchain-from-africa-jos"
+      },
+      {
+        "@type": "ListItem",
+        "position": 19,
+        "url": "https://wethem.xyz/watch/the-creative-lead-on-branding-a-product-festival-jos"
+      },
+      {
+        "@type": "ListItem",
+        "position": 20,
+        "url": "https://wethem.xyz/watch/a-life-through-his-generation-abuja"
+      },
+      {
+        "@type": "ListItem",
+        "position": 21,
+        "url": "https://wethem.xyz/watch/land-sand-and-savings-abuja"
+      },
+      {
+        "@type": "ListItem",
+        "position": 22,
+        "url": "https://wethem.xyz/watch/in-the-same-room-pentecost-art-club-abuja"
+      },
+      {
+        "@type": "ListItem",
+        "position": 23,
+        "url": "https://wethem.xyz/watch/what-nigerians-think-of-the-usa-abuja"
+      },
+      {
+        "@type": "ListItem",
+        "position": 24,
+        "url": "https://wethem.xyz/watch/what-holds-nigeria-together-a-guide-at-the-unity-museum-enugu"
+      },
+      {
+        "@type": "ListItem",
+        "position": 25,
+        "url": "https://wethem.xyz/watch/once-you-have-a-phone-you-can-enter-web3-daniel-nigeria"
+      },
+      {
+        "@type": "ListItem",
+        "position": 26,
+        "url": "https://wethem.xyz/watch/saving-is-burning-money-daniel-on-stablecoins-and-inflation-nigeria"
+      },
+      {
+        "@type": "ListItem",
+        "position": 27,
+        "url": "https://wethem.xyz/watch/global-pizza-party-and-the-crypto-community-ibadan"
+      },
+      {
+        "@type": "ListItem",
+        "position": 28,
+        "url": "https://wethem.xyz/watch/what-nigerians-think-of-america-lagos"
+      },
+      {
+        "@type": "ListItem",
+        "position": 29,
+        "url": "https://wethem.xyz/watch/what-made-you-smile-today-nigeria-campus"
+      },
+      {
+        "@type": "ListItem",
+        "position": 30,
+        "url": "https://wethem.xyz/watch/social-anxiety-nigeria-student-interview"
+      },
+      {
+        "@type": "ListItem",
+        "position": 31,
+        "url": "https://wethem.xyz/watch/how-nigeria-has-changed-a-lifetime-in-the-market"
+      },
+      {
+        "@type": "ListItem",
+        "position": 32,
+        "url": "https://wethem.xyz/watch/what-it-costs-to-record-a-song-in-nigeria-joshua-asika-lagos"
+      },
+      {
+        "@type": "ListItem",
+        "position": 33,
+        "url": "https://wethem.xyz/watch/scammers-and-debunkers-a-nigerian-answer-on-the-internet"
+      },
+      {
+        "@type": "ListItem",
+        "position": 34,
+        "url": "https://wethem.xyz/watch/the-truth-is-a-subjective-format-a-nigerian-answer"
+      },
+      {
+        "@type": "ListItem",
+        "position": 35,
+        "url": "https://wethem.xyz/watch/nigerian-students-on-the-power-outages"
+      },
+      {
+        "@type": "ListItem",
+        "position": 36,
+        "url": "https://wethem.xyz/watch/post-graduation-pressure-and-being-the-breadwinner"
+      },
+      {
+        "@type": "ListItem",
+        "position": 37,
+        "url": "https://wethem.xyz/watch/meet-kafani-photographer-reader-storyteller-lagos"
+      }
+    ]
+  },
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://wethem.xyz/stills/J5QCoY3N7Lc-640.jpg"
+  }
+}
+    </script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://wethem.xyz"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Projects",
+   "item": "https://wethem.xyz/portfolio#p-nigeria"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Nigeria"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="masthead">
+    <div class="masthead-inner">
+        <a href="index.html" class="brand">
+            <picture><source srcset="wtm-mark-64.webp 1x, wtm-mark-128.webp 2x" type="image/webp"><img src="wtm-mark-64.png" srcset="wtm-mark-64.png 1x, wtm-mark-128.png 2x" alt="We Them Media logo" width="60" height="60"></picture>
+            <span>We Them Media</span>
+        </a>
+        <nav id="primary-nav" aria-label="Main">
+            <ul>
+                <li class="nav-more"><a href="index.html" title="the question of the week and the newest pieces">Home <span class="nav-d" aria-hidden="true">the question of the week and the newest pieces</span></a></li>
+                <li><a href="portfolio.html" aria-current="true" title="every piece, by project, place, person and topic">Watch <span class="nav-d" aria-hidden="true">every piece, by project, place, person and topic</span></a></li>
+                <li><a href="onequestion.html" title="one question, asked around the world">One Question <span class="nav-d" aria-hidden="true">one question, asked around the world</span></a></li>
+                <li><a href="learn.html" title="from the people who use crypto">Learn <span class="nav-d" aria-hidden="true">from the people who use crypto</span></a></li>
+                <li><a href="people.html" title="who filmed what, and the people reporting with us">Correspondents <span class="nav-d" aria-hidden="true">who filmed what, and the people reporting with us</span></a></li>
+                <li><a href="start.html" title="the whole thing, in four minutes">About <span class="nav-d" aria-hidden="true">the whole thing, in four minutes</span></a></li>
+                <li><a href="work-with-us.html" title="brand work, documented">Work with us <span class="nav-d" aria-hidden="true">brand work, documented</span></a></li>
+                <li class="nav-clips nav-more"><a href="clips.html" title="short clips from the conversations">Clips <span class="nav-d" aria-hidden="true">short clips from the conversations</span></a></li>
+                <li class="nav-more"><a href="supporter.html" title="how the work is paid for">Support <span class="nav-d" aria-hidden="true">how the work is paid for</span></a></li>
+                <li class="nav-search"><a href="search.html" aria-label="Search every transcript" title="every word of every transcript"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="nav-search-label">Search</span> <span class="nav-d" aria-hidden="true">every word of every transcript</span></a></li>
+            </ul>
+        </nav>
+        <a href="supporter.html" class="masthead-cta">Support us</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+    </div>
+    <div class="masthead-search-row"><form class="masthead-search" action="search.html" method="get" role="search"><input type="search" name="q" placeholder="Search every transcript" aria-label="Search every transcript" autocomplete="off"><button type="submit" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></button></form></div>
+</header>
+<nav class="tabbar" aria-label="Sections"><a href="index.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span class="tabbar-l">Home</span></a><a href="learn.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7c-2.6-1.9-5.6-2.5-9-1.6v13c3.4-.9 6.4-.3 9 1.6"/><path d="M12 7c2.6-1.9 5.6-2.5 9-1.6v13c-3.4-.9-6.4-.3-9 1.6"/><path d="M12 7v13"/></svg><span class="tabbar-l">Learn</span></a><a href="search.html" aria-label="Search every transcript"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="tabbar-l">Search</span></a><a href="onequestion.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg><span class="tabbar-l">One Question</span></a></nav><aside class="wrap tw-row" aria-labelledby="tw-k"><span class="tw-k" id="tw-k">This week</span><ul class="tw-list"><li><a href="watch/live-since-14-music-is-all-hes-done-ellsworth.html" title="Live Since 14, Music Is All He&#x27;s Done"><span class="tw-kind">New</span> Live Since 14, Music Is All He&#x27;s Done</a></li><li><a href="watch/an-open-sign-named-this-maine-band-ellsworth.html" title="An Open Sign Named This Maine Band"><span class="tw-kind">New</span> An Open Sign Named This Maine Band</a></li><li><a href="watch/a-maine-band-that-doesnt-do-rehearsals-ellsworth.html" title="A Maine Band That Doesn&#x27;t Do Rehearsals"><span class="tw-kind">New</span> A Maine Band That Doesn&#x27;t Do Rehearsals</a></li><li><a href="onequestion.html"><span class="tw-kind">One Question</span> what would you ask the world?</a></li></ul></aside>
+<main id="main-content">
+
+<article class="wrap wt-piece pw-hub">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html#p-nigeria">Projects</a></li>
+            <li aria-current="page">Nigeria</li>
+        </ol>
+    </nav>
+    <h1 class="wt-title">Nigeria.</h1>
+    <p class="wt-byline">Nigeria, 2025 and 2026</p>
+    <div class="wt-prose">
+    <p>Builders, makers and neighbours in Nigeria talking about crypto, money, music, study and home. Filmed in Abuja, Lagos, Ikorodu, Jos, Ibadan and Enugu, with the Creative Alchemy community in Abuja and the Web3Bridge Cohort 12 class in Ikorodu.</p>
+    <p>37 pieces are here, all of them filmed in Nigeria. Every one is public and has its own page with a transcript.</p>
+    </div>
+    <p class="pl-q"><span class="mono">On this page</span> <a href="#start-here">Start here</a>, <a href="#web3bridge-cohort-12">Web3Bridge Cohort 12</a>, <a href="#abuja-creative-alchemy">Abuja and Creative Alchemy</a>, <a href="#jos-prodfest">Jos and ProdFest</a>, <a href="#abuja-2026">More from Abuja</a>, <a href="#enugu-and-web3">Enugu and short answers on Web3</a>, <a href="#lagos-ibadan-and-more">Lagos, Ibadan, campuses and the street</a></p>
+</article>
+
+<section class="country-section" id="start-here">
+    <div class="section-wrap">
+        <div class="country-head">
+            <h2 class="country-name">Start here.</h2>
+            <span class="country-meta">38:30</span>
+        </div>
+        <div class="report-thumb" style="max-width: 880px; margin: 0 auto 18px;">
+            <lite-yt videoid="J5QCoY3N7Lc" duration="38:30" title="Play: Sewing, battle rap and a grant that actually landed." posterurl="stills/J5QCoY3N7Lc.jpg" postersrcset="stills/J5QCoY3N7Lc-320.jpg 320w, stills/J5QCoY3N7Lc-480.jpg 480w, stills/J5QCoY3N7Lc-640.jpg 640w"><img class="lite-yt-fallback" src="stills/J5QCoY3N7Lc-640.jpg" srcset="stills/J5QCoY3N7Lc-480.jpg 480w, stills/J5QCoY3N7Lc-640.jpg 640w" alt="" loading="eager" decoding="async"></lite-yt>
+        </div>
+        <div style="max-width: 880px; margin: 0 auto;">
+            <span class="report-eyebrow">Nigeria, Creative Alchemy</span>
+            <h3 class="report-title" style="font-size: 28px;"><a href="watch/fashion-battle-rap-and-web3-with-gneric-nigeria.html">Sewing, battle rap and a grant that actually landed.</a></h3>
+            <p class="report-more"><a href="watch/fashion-battle-rap-and-web3-with-gneric-nigeria.html">The full piece, with its transcript</a></p>
+        </div>
+    </div>
+</section>
+<section class="country-section" id="web3bridge-cohort-12">
+    <div class="section-wrap">
+        <div class="country-head">
+            <h2 class="country-name">Web3Bridge Cohort 12.</h2>
+            <span class="country-meta">8 pieces</span>
+        </div>
+        <p class="proj-note">Developers from the Web3Bridge Cohort 12 class in Ikorodu, Lagos, uploaded in July and August 2025: what they are building and why they came.</p>
+        <p class="qa-meta">Executive producer: C.Y. Lee.</p>
+        <div class="report-grid">
+            <a href="watch/deeper-than-defi-web3bridge-cohort-12-episode-7-lagos.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/oQAxFeYXloc-640.jpg" srcset="stills/oQAxFeYXloc-320.jpg 320w, stills/oQAxFeYXloc-480.jpg 480w, stills/oQAxFeYXloc-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:44</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Ikorodu, Lagos, Web3Bridge Cohort 12</span>
+                    <h3 class="report-title">A developer on what smart contracts are for.</h3>
+                </div>
+            </a>
+            <a href="watch/jump-on-the-train-web3bridge-cohort-12-episode-6-lagos.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/0dYQAsSS93c-640.jpg" srcset="stills/0dYQAsSS93c-320.jpg 320w, stills/0dYQAsSS93c-480.jpg 480w, stills/0dYQAsSS93c-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>5:44</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Ikorodu, Lagos, Web3Bridge Cohort 12</span>
+                    <h3 class="report-title">A Web3Bridge cohort member who forgot he had applied.</h3>
+                </div>
+            </a>
+            <a href="watch/broke-me-down-to-pieces-web3bridge-cohort-12-episode-5-lagos.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/1Wei84VaOGg-640.jpg" srcset="stills/1Wei84VaOGg-320.jpg 320w, stills/1Wei84VaOGg-480.jpg 480w, stills/1Wei84VaOGg-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>4:36</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Ikorodu, Lagos, Web3Bridge Cohort 12</span>
+                    <h3 class="report-title">Four months that took a Web2 developer apart.</h3>
+                </div>
+            </a>
+            <a href="watch/the-unity-and-the-togetherness-web3bridge-cohort-12-episode-4-lagos.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/Mb0-ikWmZkg-640.jpg" srcset="stills/Mb0-ikWmZkg-320.jpg 320w, stills/Mb0-ikWmZkg-480.jpg 480w, stills/Mb0-ikWmZkg-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>6:02</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Ikorodu, Lagos, Web3Bridge Cohort 12</span>
+                    <h3 class="report-title">A cohort member on brotherhood and building on chain.</h3>
+                </div>
+            </a>
+            <a href="watch/showing-them-the-lights-web3bridge-cohort-12-episode-3-lagos.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/oEfR3iIYbBg-640.jpg" srcset="stills/oEfR3iIYbBg-320.jpg 320w, stills/oEfR3iIYbBg-480.jpg 480w, stills/oEfR3iIYbBg-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>8:24</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Ikorodu, Lagos, Web3Bridge Cohort 12</span>
+                    <h3 class="report-title">A front-end developer who wanted to build, not consume.</h3>
+                </div>
+            </a>
+            <a href="watch/propertychain-against-fraud-web3bridge-cohort-12-episode-2-lagos.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/n15w4iK-iig-640.jpg" srcset="stills/n15w4iK-iig-320.jpg 320w, stills/n15w4iK-iig-480.jpg 480w, stills/n15w4iK-iig-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>5:01</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Ikorodu, Lagos, Web3Bridge Cohort 12</span>
+                    <h3 class="report-title">A cohort member building against property fraud.</h3>
+                </div>
+            </a>
+            <a href="watch/paying-utility-bills-with-crypto-web3bridge-cohort-12-episode-1-lagos.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="https://i.ytimg.com/vi/8_KJOcZePkk/mqdefault.jpg" srcset="https://i.ytimg.com/vi/8_KJOcZePkk/mqdefault.jpg 320w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="320" height="180"><span class="wt-dur"><span class="visually-hidden">Length </span>4:11</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Ikorodu, Lagos, Web3Bridge Cohort 12</span>
+                    <h3 class="report-title">An app that pays utility bills in crypto.</h3>
+                </div>
+            </a>
+            <a href="watch/voices-from-web3bridge-cohort-12-ikorodu-lagos.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="https://i.ytimg.com/vi/2v2Pfg7tDso/mqdefault.jpg" srcset="https://i.ytimg.com/vi/2v2Pfg7tDso/mqdefault.jpg 320w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="320" height="180"><span class="wt-dur"><span class="visually-hidden">Length </span>0:51</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Ikorodu, Lagos</span>
+                    <h3 class="report-title">Voices from Web3Bridge cohort 12.</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="country-section" id="abuja-creative-alchemy">
+    <div class="section-wrap">
+        <div class="country-head">
+            <h2 class="country-name">Abuja and Creative Alchemy.</h2>
+            <span class="country-meta">6 pieces</span>
+        </div>
+        <p class="proj-note">Abuja, uploaded in spring 2025: Ánesi, founder of the Creative Alchemy community, in full and in a short clip; JED XO; a Lisk event; and Maceo in the interviewee&rsquo;s chair.</p>
+        <p class="qa-meta">Executive producer: C.Y. Lee.</p>
+        <div class="report-grid">
+            <a href="watch/jed-xo-on-abuja-creative-alchemy-and-purpose-episode-34.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/6gSVkATyupQ-640.jpg" srcset="stills/6gSVkATyupQ-320.jpg 320w, stills/6gSVkATyupQ-480.jpg 480w, stills/6gSVkATyupQ-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>30:41</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Abuja, Episode 34</span>
+                    <h3 class="report-title">JED XO on Abuja, Creative Alchemy and purpose.</h3>
+                </div>
+            </a>
+            <a href="watch/vulnerability-vision-and-starting-a-podcast-abuja.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/qwuY_E_0lmE-640.jpg" srcset="stills/qwuY_E_0lmE-320.jpg 320w, stills/qwuY_E_0lmE-480.jpg 480w, stills/qwuY_E_0lmE-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>27:38</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Abuja, Creative Alchemy meetup</span>
+                    <h3 class="report-title">A fashion designer works out what a podcast is for.</h3>
+                </div>
+            </a>
+            <a href="watch/creative-alchemy-from-the-founder-anesi-life-camp-abuja.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/z_v7X8KBVLg-640.jpg" srcset="stills/z_v7X8KBVLg-320.jpg 320w, stills/z_v7X8KBVLg-480.jpg 480w, stills/z_v7X8KBVLg-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>38:18</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Abuja, Creative Alchemy</span>
+                    <h3 class="report-title">Creative Alchemy, from the founder: Ánesi at Life Camp.</h3>
+                </div>
+            </a>
+            <a href="watch/getting-the-right-team-lisk-ambassador-abuja.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/SXVJX7PwSFo-640.jpg" srcset="stills/SXVJX7PwSFo-320.jpg 320w, stills/SXVJX7PwSFo-480.jpg 480w, stills/SXVJX7PwSFo-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>3:58</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Abuja, Lisk event</span>
+                    <h3 class="report-title">A Lisk ambassador on teams, equity and failing.</h3>
+                </div>
+            </a>
+            <a href="watch/who-is-maceo-the-founder-interviewed-by-daniel-abuja.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/jXiGceBy7S0-640.jpg" srcset="stills/jXiGceBy7S0-320.jpg 320w, stills/jXiGceBy7S0-480.jpg 480w, stills/jXiGceBy7S0-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>12:30</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Abuja, The tables turned</span>
+                    <h3 class="report-title">Who is Maceo? Interviewed by Daniel.</h3>
+                </div>
+            </a>
+            <a href="watch/anesi-founder-of-creative-alchemy-on-the-beginning-nigeria.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/_fxaNn-E2VE-640.jpg" srcset="stills/_fxaNn-E2VE-320.jpg 320w, stills/_fxaNn-E2VE-480.jpg 480w, stills/_fxaNn-E2VE-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>0:56</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Abuja, Creative Alchemy</span>
+                    <h3 class="report-title">Ánesi, founder of Creative Alchemy, on the beginning.</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="country-section" id="jos-prodfest">
+    <div class="section-wrap">
+        <div class="country-head">
+            <h2 class="country-name">Jos and ProdFest.</h2>
+            <span class="country-meta">4 pieces</span>
+        </div>
+        <p class="proj-note">ProdFest in Jos, uploaded in September 2025: a first-edition conference built around products, and the builders who came to it.</p>
+        <p class="qa-meta">Executive producer: C.Y. Lee.</p>
+        <div class="report-grid">
+            <a href="watch/why-we-built-a-product-focused-conference-jos.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/qVnPgam8iys-640.jpg" srcset="stills/qVnPgam8iys-320.jpg 320w, stills/qVnPgam8iys-480.jpg 480w, stills/qVnPgam8iys-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>13:30</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Jos, PRODFEST</span>
+                    <h3 class="report-title">Why a first edition conference was built around products.</h3>
+                </div>
+            </a>
+            <a href="watch/third-place-at-a-hackathon-with-a-team-of-two-jos.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/O4xF5Z_8BDU-640.jpg" srcset="stills/O4xF5Z_8BDU-320.jpg 320w, stills/O4xF5Z_8BDU-480.jpg 480w, stills/O4xF5Z_8BDU-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>6:17</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Jos, PRODFEST</span>
+                    <h3 class="report-title">A designer turned builder on winning with two people.</h3>
+                </div>
+            </a>
+            <a href="watch/awareness-then-action-blockchain-from-africa-jos.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/97S0g1GHphM-640.jpg" srcset="stills/97S0g1GHphM-320.jpg 320w, stills/97S0g1GHphM-480.jpg 480w, stills/97S0g1GHphM-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>9:24</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Jos, ProdFest</span>
+                    <h3 class="report-title">Awareness, action, and what is missing between builders.</h3>
+                </div>
+            </a>
+            <a href="watch/the-creative-lead-on-branding-a-product-festival-jos.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/xW1u7yZzp-M-640.jpg" srcset="stills/xW1u7yZzp-M-320.jpg 320w, stills/xW1u7yZzp-M-480.jpg 480w, stills/xW1u7yZzp-M-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>12:07</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Jos, ProdFest</span>
+                    <h3 class="report-title">The creative lead on branding, jargon and AI.</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="country-section" id="abuja-2026">
+    <div class="section-wrap">
+        <div class="country-head">
+            <h2 class="country-name">More from Abuja.</h2>
+            <span class="country-meta">4 pieces</span>
+        </div>
+        <p class="proj-note">A street conversation in two parts about land, sand and savings; Paul on the USA, filmed by WalkwithGod; and In the Same Room, the Pentecost Art Club event Bayo filmed on 19 September 2026.</p>
+        <div class="report-grid">
+            <a href="watch/a-life-through-his-generation-abuja.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="https://i.ytimg.com/vi/Avxp4F3o5TQ/mqdefault.jpg" srcset="https://i.ytimg.com/vi/Avxp4F3o5TQ/mqdefault.jpg 320w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="320" height="180"><span class="wt-dur"><span class="visually-hidden">Length </span>8:55</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Abuja, Street</span>
+                    <h3 class="report-title">A life told from poverty to laying block.</h3>
+                </div>
+            </a>
+            <a href="watch/land-sand-and-savings-abuja.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="https://i.ytimg.com/vi/Qvb0u4Us-pk/mqdefault.jpg" srcset="https://i.ytimg.com/vi/Qvb0u4Us-pk/mqdefault.jpg 320w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="320" height="180"><span class="wt-dur"><span class="visually-hidden">Length </span>7:56</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Abuja, Street</span>
+                    <h3 class="report-title">Land, sand and savings in the old Abuja bush.</h3>
+                </div>
+            </a>
+            <a href="watch/in-the-same-room-pentecost-art-club-abuja.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/3LDM9PoPE4k-640.jpg" srcset="stills/3LDM9PoPE4k-320.jpg 320w, stills/3LDM9PoPE4k-480.jpg 480w, stills/3LDM9PoPE4k-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>2:31</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Abuja, Pentecost Art Club</span>
+                    <h3 class="report-title">In the Same Room: it's always, always about impact.</h3>
+                </div>
+            </a>
+            <a href="watch/what-nigerians-think-of-the-usa-abuja.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/ltsk8j36Lh8-640.jpg" srcset="stills/ltsk8j36Lh8-320.jpg 320w, stills/ltsk8j36Lh8-640.jpg 355w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="355" height="199"><span class="wt-dur"><span class="visually-hidden">Length </span>2:56</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Abuja</span>
+                    <h3 class="report-title">What Nigerians think of the USA. Paul in Abuja.</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="country-section" id="enugu-and-web3">
+    <div class="section-wrap">
+        <div class="country-head">
+            <h2 class="country-name">Enugu and short answers on Web3.</h2>
+            <span class="country-meta">3 pieces</span>
+        </div>
+        <p class="proj-note">A guide at the Unity Museum in Enugu, and two short answers from Daniel on phones, stablecoins and inflation.</p>
+        <p class="qa-meta">Executive producer: C.Y. Lee.</p>
+        <div class="report-grid">
+            <a href="watch/what-holds-nigeria-together-a-guide-at-the-unity-museum-enugu.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/DPw1RCmYGTk-640.jpg" srcset="stills/DPw1RCmYGTk-320.jpg 320w, stills/DPw1RCmYGTk-480.jpg 480w, stills/DPw1RCmYGTk-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>1:41</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Enugu, Nigeria at 65</span>
+                    <h3 class="report-title">What holds Nigeria together: a guide at the Unity Museum.</h3>
+                </div>
+            </a>
+            <a href="watch/once-you-have-a-phone-you-can-enter-web3-daniel-nigeria.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/bfg6mL4l9x8-640.jpg" srcset="stills/bfg6mL4l9x8-320.jpg 320w, stills/bfg6mL4l9x8-480.jpg 480w, stills/bfg6mL4l9x8-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>1:14</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Nigeria, Web3</span>
+                    <h3 class="report-title">Once you have a phone, you can enter Web3: Daniel.</h3>
+                </div>
+            </a>
+            <a href="watch/saving-is-burning-money-daniel-on-stablecoins-and-inflation-nigeria.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/yDJjFCYtFrw-640.jpg" srcset="stills/yDJjFCYtFrw-320.jpg 320w, stills/yDJjFCYtFrw-480.jpg 480w, stills/yDJjFCYtFrw-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>2:02</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Nigeria, Web3</span>
+                    <h3 class="report-title">Saving is burning money: Daniel on stablecoins and inflation.</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="country-section" id="lagos-ibadan-and-more">
+    <div class="section-wrap">
+        <div class="country-head">
+            <h2 class="country-name">Lagos, Ibadan, campuses and the street.</h2>
+            <span class="country-meta">11 pieces</span>
+        </div>
+        <p class="proj-note">Street questions in Lagos, a market, campuses and Ibadan, a conversation about recording music in Nigeria, and two short answers on the internet.</p>
+        <div class="report-grid">
+            <a href="watch/global-pizza-party-and-the-crypto-community-ibadan.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="https://i.ytimg.com/vi/RhhOuVzdb6k/mqdefault.jpg" srcset="https://i.ytimg.com/vi/RhhOuVzdb6k/mqdefault.jpg 320w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="320" height="180"><span class="wt-dur"><span class="visually-hidden">Length </span>3:06</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Ibadan, Global Pizza Party</span>
+                    <h3 class="report-title">An artist in Ibadan on pizza day and crypto friends.</h3>
+                </div>
+            </a>
+            <a href="watch/what-nigerians-think-of-america-lagos.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/0z1AGIBN3do-640.jpg" srcset="stills/0z1AGIBN3do-320.jpg 320w, stills/0z1AGIBN3do-480.jpg 480w, stills/0z1AGIBN3do-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>5:00</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Lagos, Street</span>
+                    <h3 class="report-title">What do Nigerians think of America?</h3>
+                </div>
+            </a>
+            <a href="watch/what-made-you-smile-today-nigeria-campus.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/TKOlX3ithsU-640.jpg" srcset="stills/TKOlX3ithsU-320.jpg 320w, stills/TKOlX3ithsU-480.jpg 480w, stills/TKOlX3ithsU-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>9:03</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Campus</span>
+                    <h3 class="report-title">What made you smile today?</h3>
+                </div>
+            </a>
+            <a href="watch/social-anxiety-nigeria-student-interview.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/16gGcoy6sqE-640.jpg" srcset="stills/16gGcoy6sqE-320.jpg 320w, stills/16gGcoy6sqE-480.jpg 480w, stills/16gGcoy6sqE-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>9:08</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Lagos</span>
+                    <h3 class="report-title">Social anxiety in Nigeria.</h3>
+                </div>
+            </a>
+            <a href="watch/how-nigeria-has-changed-a-lifetime-in-the-market.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/TT5Wu6OCUTs-640.jpg" srcset="stills/TT5Wu6OCUTs-320.jpg 320w, stills/TT5Wu6OCUTs-480.jpg 480w, stills/TT5Wu6OCUTs-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>7:24</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Market</span>
+                    <h3 class="report-title">How Nigeria has changed.</h3>
+                </div>
+            </a>
+            <a href="watch/what-it-costs-to-record-a-song-in-nigeria-joshua-asika-lagos.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/0jYu8PIRekA-640.jpg" srcset="stills/0jYu8PIRekA-320.jpg 320w, stills/0jYu8PIRekA-480.jpg 480w, stills/0jYu8PIRekA-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>17:03</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Lagos, Taraba State, Longform</span>
+                    <h3 class="report-title">What it costs to record a song in Nigeria: Joshua Asika.</h3>
+                </div>
+            </a>
+            <a href="watch/scammers-and-debunkers-a-nigerian-answer-on-the-internet.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/0Wq5Zhyh8YI-640.jpg" srcset="stills/0Wq5Zhyh8YI-320.jpg 320w, stills/0Wq5Zhyh8YI-480.jpg 480w, stills/0Wq5Zhyh8YI-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>1:28</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Nigeria, Bounty board, 2026</span>
+                    <h3 class="report-title">Internet: truth or misinformation? A Nigerian answer.</h3>
+                </div>
+            </a>
+            <a href="watch/the-truth-is-a-subjective-format-a-nigerian-answer.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/Gb6r341R2oU-640.jpg" srcset="stills/Gb6r341R2oU-320.jpg 320w, stills/Gb6r341R2oU-480.jpg 480w, stills/Gb6r341R2oU-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>1:27</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Nigeria, Bounty board, 2026</span>
+                    <h3 class="report-title">Is the truth subjective? A Nigerian answer on the internet.</h3>
+                </div>
+            </a>
+            <a href="watch/nigerian-students-on-the-power-outages.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/6d7hh7IskWM-640.jpg" srcset="stills/6d7hh7IskWM-320.jpg 320w, stills/6d7hh7IskWM-480.jpg 480w, stills/6d7hh7IskWM-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>2:13</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Campus, Power crisis</span>
+                    <h3 class="report-title">Nigerian students on the power outages.</h3>
+                </div>
+            </a>
+            <a href="watch/post-graduation-pressure-and-being-the-breadwinner.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/lDwehFphZ9I-640.jpg" srcset="stills/lDwehFphZ9I-320.jpg 320w, stills/lDwehFphZ9I-480.jpg 480w, stills/lDwehFphZ9I-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>2:08</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Campus</span>
+                    <h3 class="report-title">Post-graduation pressure, and being the breadwinner: Son of God.</h3>
+                </div>
+            </a>
+            <a href="watch/meet-kafani-photographer-reader-storyteller-lagos.html" class="report-card">
+                <span class="report-thumb report-thumb-img wt-thumb"><img src="stills/C-lqpT9nWow-640.jpg" srcset="stills/C-lqpT9nWow-320.jpg 320w, stills/C-lqpT9nWow-480.jpg 480w, stills/C-lqpT9nWow-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360"><span class="wt-dur"><span class="visually-hidden">Length </span>1:31</span></span>
+                <div class="report-body">
+                    <span class="report-eyebrow">Lagos, Nigeria</span>
+                    <h3 class="report-title">Meet Kafani: photographer, reader, storyteller.</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+    <div class="wrap">
+    <p class="pl-q"><span class="mono">Related</span> <a href="black-blockchain-summit.html">Black Blockchain Summit</a>, <a href="places.html#nigeria">Nigeria on the map</a>, <a href="places.html#abuja">Abuja on the map</a></p>
+    <p class="qa-meta">Supporting Patrons: Aja Davis and Donna Dalton.</p>
+    <p class="qa-meta">Filmed by SuperBio, Maceo, the Creative Alchemy team and correspondents in Nigeria; each piece&rsquo;s page names who.</p>
+    </div>
+    <p class="pl-q" data-pagefind-ignore><span class="mono">Browse the archive</span> <a href="portfolio.html">Watch</a>, <a href="places.html">Where we filmed</a>, <a href="topics/index.html">Topics</a>, <a href="people.html">Correspondents</a>, <a href="onequestion.html">One Question</a>, <a href="library.html">The library</a></p>
+
+<section class="wrap ask" aria-label="Support us">
+    <div class="ask-in">
+        <span class="ask-k">Keep this going</span>
+        <p class="ask-t"><a href="onequestion.html"><span data-count="oq_count">61</span> people have been asked One Question on camera</a>. This season's campaign runs to Thursday 10 December.</p>
+        <div class="ask-cta">
+            <a class="btn btn-primary" href="supporter.html">Support us</a>
+            <a class="btn btn-line" href="film.html">Film one near you</a>
+        </div>
+    </div>
+</section>
+<div class="wrap wtm-share"></div>
+</main>
+<footer>
+    <div class="wrap">
+        <div class="footer-masthead">
+            Discourse and culture<br><span class="italic">from the bottom up.</span>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h2>We Them Media</h2>
+                <p class="footer-bio">A community-driven media platform. We made the work published here in <span data-count="countries">16</span> countries: <span data-count="country_list">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, and Vietnam</span>. Commercial engagements run through We Them Worldwide LLC with production by SuperBio.</p>
+                <p class="footer-contact"><a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h2>Watch + read</h2>
+                <ul>
+                    <li><a href="where-to-start.html">Watch first</a></li>
+                    <li><a href="portfolio.html">Watch</a></li>
+                    <li><a href="learn.html">Learn</a></li>
+                    <li><a href="clips.html">Clips</a></li>
+                    <li><a href="library.html">The library</a></li>
+                    <li><a href="places.html">Where we filmed</a></li>
+                    <li><a href="guests.html">Who is on the tape</a></li>
+                    <li><a href="dispatches.html">Updates</a></li>
+                    <li><a href="podcast.html">The podcast, archived</a></li>
+                    <li><a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener">YouTube channel</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>About</h2>
+                <ul>
+                    <li><a href="start.html">About</a></li>
+                    <li><a href="about.html">Mission</a></li>
+                    <li><a href="history.html">How this started</a></li>
+                    <li><a href="people.html">Correspondents</a></li>
+                    <li><a href="team.html">The editor roster</a></li>
+                    <li><a href="books.html">Books from the community</a></li>
+                    <li><a href="state.html">State of the network</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+                <h3 class="footer-subhead">What we keep, and what we don't</h3>
+                <ul>
+                    <li><a href="ledger.html">What we have not published</a></li>
+                    <li><a href="privacy.html">What this site keeps about you</a></li>
+                    <li><a href="privacy.html#collect">Your choices</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Take part</h2>
+                <ul>
+                    <li><a href="supporter.html">Support</a></li>
+                    <li><a href="work-with-us.html">Work with us</a></li>
+                    <li><a href="dispatch.html" class="footer-newsletter-link">Newsletter, once a week</a></li>
+                    <li><a href="onequestion.html">One Question</a></li>
+                    <li><a href="commitment.html">What I am committed to</a></li>
+                    <li><span class="footer-note">Brand work or something you want documented? <a href="work-with-us.html">Tell us about it</a> and we will set up a consultation.</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.youtube.com/@WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on YouTube">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" fill="#FF0000"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FFF"/></svg>
+            </a>
+            <a href="https://x.com/WeThemMediaHQ" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on X">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com/we_them_media" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@wethemmedia" target="_blank" rel="noopener" class="footer-social-icon" aria-label="We Them Media on TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>&copy; 2026 We Them Worldwide LLC.</span>
+            <span>Founded by Maceo, 2021</span>
+            <span><span data-count="country_line">Bahamas, Belgium, Ethiopia, Ghana, India, Israel/Palestine, Japan, Kenya, Mexico, Nigeria, Pakistan, Switzerland, Thailand, United Kingdom, United States, Vietnam</span></span>
+        </div>
+    </div>
+</footer>
+
+<script src="wtm-player.js" defer></script>
+<script src="wtm-core.js" defer></script>
+</body>
+</html>
