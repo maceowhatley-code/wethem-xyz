@@ -57,6 +57,25 @@
 <meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <link rel="alternate" type="application/rss+xml" title="We Them Media" href="feed.xml">
     <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://wethem.xyz"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Blog"
+  }
+ ]
+}
+</script>
 </head>
 <body data-page="secondary">
 
@@ -112,13 +131,13 @@
 
 <section class="page-header">
     <div class="wrap">
-        <nav class="breadcrumb reveal" aria-label="Breadcrumb">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
             <ol>
                 <li><a href="index.html">Home</a></li>
                 <li aria-current="page">Blog</li>
             </ol>
         </nav>
-        <div class="mono-eyebrow-row reveal">
+        <div class="mono-eyebrow-row">
             <span class="mono-eyebrow">Writing, issues, video</span>
         </div>
         <h1 class="page-title">The We Them Weekly. <span class="italic"><span class="climax-ink">Thinking out loud.</span></span></h1>
@@ -294,24 +313,6 @@
 </footer>
 
 <script>
-    (function(){
-        var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        var reveals = document.querySelectorAll(".reveal");
-        if (reduce || !("IntersectionObserver" in window)) {
-            reveals.forEach(function(el){ el.classList.add("visible"); });
-            return;
-        }
-        var observer = new IntersectionObserver(function(entries){
-            entries.forEach(function(entry){
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
-        reveals.forEach(function(el){ observer.observe(el); });
-        setTimeout(function(){ reveals.forEach(function(el){ el.classList.add("visible"); }); }, 800);
-    })();
 
     (function(){
         const progressBar = document.querySelector('.scroll-progress');

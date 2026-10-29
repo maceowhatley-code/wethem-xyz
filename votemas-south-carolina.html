@@ -123,16 +123,16 @@
 
 <section class="spread">
     <div class="wrap">
-        <div class="dispatch-prose reveal">
+        <div class="dispatch-prose">
             <p>South Carolina opens with a second tribe also called Waccamaw, distinct from North Carolina&#8217;s Waccamaw Siouan and, by her account, not entirely in agreement with them about whether the two groups are related. At around 300 enrolled members it is the smallest tribe she had met to that point, and she stayed in their building through a cold night before catching a bus to Myrtle Beach on a day off. Partway through this stretch, the odometer rolls past 500 miles.</p>
             <p>A night at Little Petey State Park, campfire and songs with a fellow camper named Barbara, leads into the longest tribal stay of the trip: three nights at the Pee Dee Indian Tribal Grounds in McCall, a town small enough to cross by bike in about ten minutes. The Pee Dee let her sleep inside rather than tent outside, fed her, and put her to work clearing a field with a weed whacker. She learned their name comes from a Spanish word taken and repurposed by the tribe itself, and that of roughly 2,000 enrolled members, about 100 are actively involved day to day. The chief drove out personally to welcome her.</p>
         </div>
 
-        <div class="section-head reveal" style="margin-top:2.5rem">
+        <div class="section-head" style="margin-top:2.5rem">
             <div><div class="section-tag">Her footage</div></div>
-            <h2>What she filmed <span class="italic">here.</span></h2>
+            <h2>What she filmed here.</h2>
         </div>
-        <div class="report-grid reveal" style="margin-top:1.5rem">
+        <div class="report-grid" style="margin-top:1.5rem">
             <a href="https://www.youtube.com/watch?v=md6tcFZNqtg" target="_blank" rel="noopener" class="report-card">
                 <span class="report-thumb report-thumb-img wt-thumb"><img src="https://i.ytimg.com/vi/md6tcFZNqtg/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"></span>
                 <div class="report-body">
@@ -180,10 +180,10 @@
 
 <section class="spread elev">
     <div class="wrap">
-        <div class="dispatch-prose reveal">
+        <div class="dispatch-prose">
             <p>This is one state in a ride that is still going. See <a href="votemas.html">the full travel catalogue</a> for where else she has been, or the <a href="https://www.youtube.com/@rissarox_x" target="_blank" rel="noopener">channel itself</a> for everything, sorted and unsorted alike.</p>
         </div>
-        <div class="sup-action reveal">
+        <div class="sup-action">
             <a href="https://gofund.me/382f1d617" target="_blank" rel="noopener" class="btn btn-primary sup-action-btn">Help fund the ride</a>
             <p class="sup-action-note">Goes straight to Marissa&#8217;s own GoFundMe. No set target, so give what it is worth to you. This is a personal fundraiser in her name, separate from We Them Media&#8217;s Fractured Atlas sponsorship, so it is <strong>not tax-deductible</strong>.</p>
         </div>
@@ -287,22 +287,6 @@
     </div>
 </footer>
 
-<script>
-    (function(){
-        var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        var reveals = document.querySelectorAll(".reveal");
-        if (reduce || !("IntersectionObserver" in window)) {
-            reveals.forEach(function(el){ el.classList.add("is-visible"); });
-            return;
-        }
-        var io = new IntersectionObserver(function(entries){
-            entries.forEach(function(entry){
-                if (entry.isIntersecting) { entry.target.classList.add("is-visible"); io.unobserve(entry.target); }
-            });
-        }, {threshold: 0.12});
-        reveals.forEach(function(el){ io.observe(el); });
-    })();
-</script>
 <script src="wtm-core.js" defer></script>
 </body>
 </html>

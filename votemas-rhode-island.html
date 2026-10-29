@@ -123,16 +123,16 @@
 
 <section class="spread">
     <div class="wrap">
-        <div class="dispatch-prose reveal">
+        <div class="dispatch-prose">
             <p>The ride begins in South Dartmouth, Massachusetts, and ends the same day in Providence, Rhode Island, which is the city Marissa keeps calling home base through these early videos. Day one is honest about how it went: a fully loaded trailer that dropped her average speed to about 3 miles an hour, a headwind down Route 6, and a bus ride for the last stretch into Providence after she realized she would not make it before midnight on the bike alone. She still climbed the hill into town on foot with the trailer, sixty steps at a time.</p>
             <p>By day two the math was clear. Sixteen and three quarter miles in a full day of riding was not going to cross a country, so she went shopping for an e-bike instead of pushing through on principle. Two days later, from inside a bivy with no place to pitch a tent, she reports the difference: the same effort now covered 32 miles instead of 16.75. The trip did not start with everything figured out. It started with a plan that broke on day one and a rider who adjusted instead of quitting.</p>
         </div>
 
-        <div class="section-head reveal" style="margin-top:2.5rem">
+        <div class="section-head" style="margin-top:2.5rem">
             <div><div class="section-tag">Her footage</div></div>
-            <h2>What she filmed <span class="italic">here.</span></h2>
+            <h2>What she filmed here.</h2>
         </div>
-        <div class="report-grid reveal" style="margin-top:1.5rem">
+        <div class="report-grid" style="margin-top:1.5rem">
             <a href="https://www.youtube.com/watch?v=EJdpH267WnY" target="_blank" rel="noopener" class="report-card">
                 <span class="report-thumb report-thumb-img wt-thumb"><img src="https://i.ytimg.com/vi/EJdpH267WnY/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"></span>
                 <div class="report-body">
@@ -172,10 +172,10 @@
 
 <section class="spread elev">
     <div class="wrap">
-        <div class="dispatch-prose reveal">
+        <div class="dispatch-prose">
             <p>This is one state in a ride that is still going. See <a href="votemas.html">the full travel catalogue</a> for where else she has been, or the <a href="https://www.youtube.com/@rissarox_x" target="_blank" rel="noopener">channel itself</a> for everything, sorted and unsorted alike.</p>
         </div>
-        <div class="sup-action reveal">
+        <div class="sup-action">
             <a href="https://gofund.me/382f1d617" target="_blank" rel="noopener" class="btn btn-primary sup-action-btn">Help fund the ride</a>
             <p class="sup-action-note">Goes straight to Marissa&#8217;s own GoFundMe. No set target, so give what it is worth to you. This is a personal fundraiser in her name, separate from We Them Media&#8217;s Fractured Atlas sponsorship, so it is <strong>not tax-deductible</strong>.</p>
         </div>
@@ -279,22 +279,6 @@
     </div>
 </footer>
 
-<script>
-    (function(){
-        var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        var reveals = document.querySelectorAll(".reveal");
-        if (reduce || !("IntersectionObserver" in window)) {
-            reveals.forEach(function(el){ el.classList.add("is-visible"); });
-            return;
-        }
-        var io = new IntersectionObserver(function(entries){
-            entries.forEach(function(entry){
-                if (entry.isIntersecting) { entry.target.classList.add("is-visible"); io.unobserve(entry.target); }
-            });
-        }, {threshold: 0.12});
-        reveals.forEach(function(el){ io.observe(el); });
-    })();
-</script>
 <script src="wtm-core.js" defer></script>
 </body>
 </html>

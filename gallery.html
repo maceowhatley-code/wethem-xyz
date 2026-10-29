@@ -108,7 +108,7 @@
             text-decoration: none;
             border: 1px solid var(--coral);
             padding: 0.55rem 0.9rem;
-            transition: all .15s;
+            transition: background-color .15s, color .15s;
             display: inline-flex; align-items: center; gap: 0.5rem;
             white-space: nowrap;
         }
@@ -193,6 +193,7 @@
         }
 
         .coin-card.skeleton { animation: skeleton-pulse 1.4s ease-in-out infinite; }
+        @media (prefers-reduced-motion: reduce) { .coin-card.skeleton { animation: none; } }
         @keyframes skeleton-pulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 0.85; } }
         .skeleton .coin-thumb { background: var(--bg-elev); }
         .skeleton .coin-name, .skeleton .coin-meta { background: var(--bg-elev); height: 0.9em; border-radius: 2px; }
@@ -212,7 +213,7 @@
             font-family: var(--mono); font-size: 0.75rem; font-weight: 800;
             background: transparent; color: var(--coral); border: 1px solid var(--coral);
             padding: 0.7rem 1.5rem; letter-spacing: 0.12em; text-transform: uppercase;
-            cursor: pointer; transition: all .15s;
+            cursor: pointer; transition: background-color .15s, color .15s;
         }
         .gallery-sentinel button:hover { background: var(--coral); color: var(--bg); }
 
@@ -260,7 +261,7 @@
             letter-spacing: 0.12em; text-transform: uppercase;
             padding: 0.85rem 1.5rem;
             text-decoration: none;
-            transition: all .2s;
+            transition: background-color .2s, transform .2s;
         }
         .gallery-empty .btn-primary:hover { background: var(--gold); transform: translate(-2px, -2px); box-shadow: 4px 4px 0 var(--text); }
         .gallery-empty .empty-meta {
@@ -539,7 +540,7 @@
     </div>
 </section>
 
-<aside class="reveal" style="max-width: 720px; margin: 4rem auto; padding: 2.5rem 2rem; border: 1px solid var(--coral); background: linear-gradient(135deg, rgba(11, 10, 8, 0.05), transparent); text-align: center;">
+<aside style="max-width: 720px; margin: 4rem auto; padding: 2.5rem 2rem; border: 1px solid var(--coral); background: linear-gradient(135deg, rgba(11, 10, 8, 0.05), transparent); text-align: center;">
     <span style="display: block; font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--coral); margin-bottom: 1rem;">Keep this going</span>
     <h3 style="font-family: var(--display); font-variation-settings: &quot;opsz&quot; 96; font-weight: 600; font-size: clamp(1.25rem, 2.4vw, 1.6rem); line-height: 1.25; color: var(--text); margin: 0 auto 1.5rem; max-width: 36ch;">This runs on support from people who watch it. If what is on this page is worth something to you, put money behind it.</h3>
     <a href="supporter.html" class="btn btn-primary" style="margin-bottom: 1.4rem;">Support us</a>

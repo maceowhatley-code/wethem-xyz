@@ -99,11 +99,11 @@
 
 <section class="spread" id="use">
     <div class="wrap">
-        <div class="section-head reveal">
+        <div class="section-head">
             <div><div class="section-number">01</div><div class="section-tag">Using the site</div></div>
             <h2>Read it, search it, <span class="italic">quote it with the name on it.</span></h2>
         </div>
-        <ol class="oq-loop reveal">
+        <ol class="oq-loop">
             <li><span class="oq-loop-n">&#8226;</span><span class="oq-loop-t"><strong>Reading and searching are free</strong>, with no account and no paywall. The site is run by We Them Media, part of We Them Worldwide LLC, in the United States.</span></li>
             <li><span class="oq-loop-n">&#8226;</span><span class="oq-loop-t"><strong>The writing on these pages</strong> is ours or a named contributor's. You may quote it with a link and the name kept on it. Ask before reprinting a whole page or transcript. The address is below.</span></li>
             <li><span class="oq-loop-n">&#8226;</span><span class="oq-loop-t"><strong>The words in a transcript belong to the person who said them.</strong> We publish them so they can be read and checked against the tape. Quote them as theirs, not as ours.</span></li>
@@ -116,11 +116,11 @@
 
 <section class="spread" id="promises">
     <div class="wrap">
-        <div class="section-head reveal">
+        <div class="section-head">
             <div><div class="section-number">02</div><div class="section-tag">What we promise</div></div>
             <h2>Corrections, takedowns, <span class="italic">and what we cannot promise.</span></h2>
         </div>
-        <ol class="oq-loop reveal">
+        <ol class="oq-loop">
             <li><span class="oq-loop-n">&#8226;</span><span class="oq-loop-t"><strong>Corrections.</strong> Every page has a correction link. A correction that checks against the tape is made and dated on the page.</span></li>
             <li><span class="oq-loop-n">&#8226;</span><span class="oq-loop-t"><strong>If you are on the tape</strong> and want a piece changed or taken down, write to us. We take the request seriously and answer it, the <a href="privacy.html">Privacy Policy</a> says what we keep and for how long.</span></li>
             <li><span class="oq-loop-n">&#8226;</span><span class="oq-loop-t"><strong>Claims made on the tape are the speaker's.</strong> We publish what people said. We have not checked every claim, and the pages say so.</span></li>
@@ -131,22 +131,22 @@
 
 <section class="spread" id="youtube-api">
     <div class="wrap">
-        <div class="section-head reveal">
+        <div class="section-head">
             <div><div class="section-number">03</div><div class="section-tag">Our YouTube tools</div></div>
             <h2>Our own channel, <span class="italic">under YouTube's rules.</span></h2>
         </div>
-        <p class="dispatch-prose reveal" style="max-width:62ch">We Them Media uses YouTube API Services to manage its own channel and to embed its own videos here. By using this site you agree to be bound by the <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube Terms of Service</a> for that part of it. Our tools read and write only our own channel's details and never collect YouTube user data. The full description, and how the channel owner can revoke that access, is in the <a href="privacy.html#youtube-tools">Privacy Policy</a>.</p>
+        <p class="dispatch-prose" style="max-width:62ch">We Them Media uses YouTube API Services to manage its own channel and to embed its own videos here. By using this site you agree to be bound by the <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube Terms of Service</a> for that part of it. Our tools read and write only our own channel's details and never collect YouTube user data. The full description, and how the channel owner can revoke that access, is in the <a href="privacy.html#youtube-tools">Privacy Policy</a>.</p>
     </div>
 </section>
 
 <section class="spread" id="contact">
     <div class="wrap">
-        <div class="section-head reveal">
+        <div class="section-head">
             <div><div class="section-number">04</div><div class="section-tag">Changes, and who to write to</div></div>
             <h2>One address, <span class="italic">and a date on every version.</span></h2>
         </div>
-        <p class="dispatch-prose reveal" style="max-width:62ch">When these terms change, the date at the foot of this page changes with them. There is no other notice. Questions about these terms, a correction, a video you are in, or our use of YouTube API Services: <a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a>.</p>
-        <p class="dispatch-prose reveal" style="max-width:62ch">These terms describe the site as it stands on 21 September 2026.</p>
+        <p class="dispatch-prose" style="max-width:62ch">When these terms change, the date at the foot of this page changes with them. There is no other notice. Questions about these terms, a correction, a video you are in, or our use of YouTube API Services: <a href="mailto:wethem.xyz@gmail.com">wethem.xyz@gmail.com</a>.</p>
+        <p class="dispatch-prose" style="max-width:62ch">These terms describe the site as it stands on 21 September 2026.</p>
     </div>
 </section>
 
@@ -249,44 +249,6 @@
     </div>
 </footer>
 
-<script>
-    (function(){
-        var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        var reveals = document.querySelectorAll(".reveal");
-        var v1Reveals = document.querySelectorAll(".v1-reveal");
-        var brushes = document.querySelectorAll(".brush-line");
-
-        if (reduce || !("IntersectionObserver" in window)) {
-            reveals.forEach(function(el){ el.classList.add("visible"); });
-            v1Reveals.forEach(function(el){ el.classList.add("in"); });
-            brushes.forEach(function(el){ el.classList.add("in"); });
-            return;
-        }
-
-        var observer = new IntersectionObserver(function(entries){
-            entries.forEach(function(entry){
-                if (entry.isIntersecting) {
-                    if (entry.target.classList.contains("v1-reveal") || entry.target.classList.contains("brush-line")) {
-                        entry.target.classList.add("in");
-                    } else {
-                        entry.target.classList.add("visible");
-                    }
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
-
-        reveals.forEach(function(el){ observer.observe(el); });
-        v1Reveals.forEach(function(el){ observer.observe(el); });
-        brushes.forEach(function(el){ observer.observe(el); });
-
-        setTimeout(function(){
-            reveals.forEach(function(el){ el.classList.add("visible"); });
-            v1Reveals.forEach(function(el){ el.classList.add("in"); });
-            brushes.forEach(function(el){ el.classList.add("in"); });
-        }, 800);
-    })();
-</script>
 
 <script>
     (function(){

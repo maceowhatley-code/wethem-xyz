@@ -252,7 +252,7 @@
 
 <section class="spread elev" id="team">
     <div class="wrap">
-        <div class="section-head reveal">
+        <div class="section-head">
             <div>
                 <div class="section-number">Who films it</div>
                 <div class="section-tag">Ten on the core team</div>
@@ -260,7 +260,7 @@
             <h2>Small team. <span class="italic"><span class="climax-ink">Everybody has shipped.</span></span></h2>
         </div>
 
-        <div class="team-grid reveal">
+        <div class="team-grid">
             <div class="team-member" id="maceo">
                 <div class="team-photo">
                     <picture><source srcset="maceo.webp" type="image/webp"><img src="maceo.jpg" width="600" height="600" alt="Maceo Whatley, founder, Philadelphia, USA" loading="lazy"></picture>
@@ -375,7 +375,7 @@
             </div>
         </div>
 
-        <div class="advisors-block reveal" style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--border);">
+        <div class="advisors-block" style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--border);">
             <div class="advisors-head" style="margin-bottom: 2rem;">
                 <div style="font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); font-weight: 700; margin-bottom: 0.75rem;">Contributing correspondents</div>
                 <p style="font-family: var(--body, var(--display)); font-size: 1rem; line-height: 1.55; color: var(--text-muted); max-width: 60ch; margin: 0;">People who shot a specific piece for us. Some answered a bounty on <a href="https://poidh.xyz/a/wethemmedia" target="_blank" rel="noopener" style="color: var(--teal);">poidh</a> and got paid for it. Others took part because the story was theirs to tell. They are not on the team. They shot something on their own street and we published it.</p>
@@ -429,7 +429,7 @@
             </div>
         </div>
 
-        <div class="advisors-block reveal" style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--border);">
+        <div class="advisors-block" style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--border);">
             <div class="advisors-head" style="margin-bottom: 2rem;">
                 <div style="font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--coral); font-weight: 700; margin-bottom: 0.75rem;">Production partners, SuperBio</div>
                 <p style="font-family: var(--body, var(--display)); font-size: 1rem; line-height: 1.55; color: var(--text-muted); max-width: 60ch; margin: 0;">Bayo (visual lead, listed above in the main team) also runs <strong style="color:var(--text);">SuperBio</strong> in Abuja with Musah and Yama. SuperBio is the production services partner We Them Worldwide LLC subcontracts for B2B engagements: brand documentaries, series production, short form, color grading.</p>
@@ -455,7 +455,7 @@
 
         </div>
 
-        <div class="advisors-block reveal" style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--border);">
+        <div class="advisors-block" style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--border);">
             <div class="advisors-head" style="margin-bottom: 2rem;">
                 <div style="font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold, #E8B958); font-weight: 700; margin-bottom: 0.75rem;">Editorial advisors</div>
                 <p style="font-family: var(--body, var(--display)); font-size: 1rem; line-height: 1.55; color: var(--text-muted); max-width: 60ch; margin: 0;">Senior editorial voices shaping the standards we hold ourselves to.</p>
@@ -479,8 +479,8 @@
                 </div>
             </div>
 
-        <div class="countries reveal">
-            <div class="countries-label">Where the community lives · <span data-count="community">700</span>+ members across 22 countries</div>
+        <div class="countries">
+            <div class="countries-label">Where the community lives · <span data-count="community">700</span>+ members across <span data-count="member_countries">22</span> countries</div>
             <div class="flag-marquee" role="img" aria-label="22 countries: Uganda, Nigeria, Ghana, Kenya, Ethiopia, Togo, Cameroon, South Africa, Tanzania, Zambia, Egypt, Morocco, USA, UK, Brazil, Argentina, Venezuela, Israel, Croatia, Bulgaria, New Zealand, India.">
                 <div class="flag-marquee-track">
                     <div class="flag-marquee-set" aria-hidden="false">
@@ -542,7 +542,7 @@
 
 <section class="spread elev">
     <div class="wrap">
-        <div class="page-cta reveal">
+        <div class="page-cta">
             <div class="page-cta-eyebrow">Back the people on this page</div>
             <h2 class="page-cta-head">Back the <span class="italic">work.</span></h2>
             <p class="page-cta-body">Everyone on this page files on their own time.</p>
@@ -703,21 +703,6 @@
 </footer>
 
 <script>
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-    reveals.forEach(el => observer.observe(el));
-
-    setTimeout(() => {
-        reveals.forEach(el => el.classList.add('visible'));
-    }, 800);
 
     const brushes = document.querySelectorAll('.brush-line');
     if (brushes.length) {

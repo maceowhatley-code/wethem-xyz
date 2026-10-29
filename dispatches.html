@@ -115,6 +115,7 @@
             background: var(--coral);
             animation: pulse 2s ease-in-out infinite;
         }
+        @media (prefers-reduced-motion: reduce) { .state-strip-pulse { animation: none; } }
         @keyframes pulse {
             0%, 100% { opacity: 1; }
             50% { opacity: 0.4; }
@@ -493,6 +494,25 @@
 <meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <link rel="alternate" type="application/rss+xml" title="We Them Media" href="feed.xml">
     <meta name="google-adsense-account" content="ca-pub-4274127674281678">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://wethem.xyz"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Dispatches"
+  }
+ ]
+}
+</script>
 </head>
 <body data-page="secondary">
 
@@ -548,13 +568,13 @@
 
 <section class="page-header">
     <div class="wrap">
-        <nav class="breadcrumb reveal" aria-label="Breadcrumb">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
             <ol>
                 <li><a href="index.html">Home</a></li>
                 <li aria-current="page">Dispatches</li>
             </ol>
         </nav>
-        <div class="mono-eyebrow-row reveal">
+        <div class="mono-eyebrow-row">
             <span class="mono-eyebrow">Dispatches</span>
         </div>
         <h1 class="page-title">Dispatches. <span class="italic"><span class="climax-ink">In progress.</span></span></h1>
@@ -568,7 +588,7 @@
 <section class="spread" id="state">
     <div class="wrap">
 
-        <div class="scale-strip reveal">
+        <div class="scale-strip">
             <div class="scale-strip-item">
                 <span class="scale-strip-num"><span data-count="countries">16</span></span>
                 <span class="scale-strip-label"><strong>Countries</strong><br>where the work has shipped</span>
@@ -587,13 +607,13 @@
             </div>
         </div>
 
-        <div class="state-strip reveal">
+        <div class="state-strip">
             <span class="state-strip-item"><span class="state-strip-pulse"></span><strong>Season 01, live</strong></span>
             <span class="state-strip-item">Season 01 closes · <strong>Nov 30, 2026</strong></span>
             <span class="state-strip-item">Page last updated · <strong>Oct 12, 2026</strong></span>
         </div>
 
-        <div class="section-head reveal">
+        <div class="section-head">
             <div>
                 <div class="section-number">Today</div>
                 <div class="section-tag">Live bounties, open for submission</div>
@@ -601,12 +621,12 @@
             <h2>Open bounties, <span class="italic">anyone can pick these up.</span></h2>
         </div>
 
-        <div class="dispatch-prose reveal" style="margin-top:1.5rem">
+        <div class="dispatch-prose" style="margin-top:1.5rem">
             <p>Bounties are how the network organizes around stories worth telling. <strong>Anyone can post a question and attach money to it. Anyone can pick it up and report it.</strong> The contributor gets paid on delivery. Strongest weekly submissions earn $20 tips on top of the bounty itself throughout Season 01.</p>
             <p>What follows is what&#8217;s open right now. The full list lives on poidh.</p>
         </div>
 
-        <article class="bounty-card reveal" style="margin-top:2rem">
+        <article class="bounty-card" style="margin-top:2rem">
             <div class="bounty-status">
                 <span class="live-dot"></span>Active, extended one week
             </div>
@@ -620,7 +640,7 @@
             <a href="https://poidh.xyz/a/wethemmedia" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:1rem;">Pick it up on poidh</a>
         </article>
 
-        <article class="bounty-card reveal">
+        <article class="bounty-card">
             <div class="bounty-status">
                 Bitcoin Pizza Day, May 2026
             </div>
@@ -638,7 +658,7 @@
 
 <section class="spread elev" id="field">
     <div class="wrap">
-        <div class="section-head reveal">
+        <div class="section-head">
             <div>
                 <div class="section-number">Field</div>
                 <div class="section-tag">Season 01, the network's working week</div>
@@ -646,11 +666,11 @@
             <h2>From the ground, <span class="italic">across the network.</span></h2>
         </div>
 
-        <div class="dispatch-prose reveal" style="margin-top:1.5rem">
+        <div class="dispatch-prose" style="margin-top:1.5rem">
             <p>Contributors are filing from Nigeria, Kenya and the United States. Nigeria files daily out of Lagos and Abuja. Kenya files daily out of Nairobi. The U.S. beat opens with Philly and Charlotte. Every dispatch below was shot, edited, and shipped by a named contributor, mostly on phones, mostly funded through poidh.xyz/a/wethemmedia.</p>
         </div>
 
-        <div class="poidh-week-banner reveal">
+        <div class="poidh-week-banner">
             <div class="poidh-week-eyebrow">Bounty board, one question, five voices, two countries</div>
             <h3>Internet &amp; truth: <em>has the internet made it easier, harder, or just noisier?</em></h3>
             <p class="poidh-week-deck">One bounty went up on the board. Five contributors across Nigeria and Kenya picked it up and brought it to people on the street. Five answers. One on subjective truth and comparing sources. One on scams versus debunkers. One on the double-edged sword of due diligence. Two from Nairobi on AI, sus pricing, and how to stay safe online. Commissioned via poidh.xyz/a/wethemmedia.</p>
@@ -710,7 +730,7 @@
             </div>
         </div>
 
-        <div class="country-row reveal" id="nigeria">
+        <div class="country-row" id="nigeria">
             <div class="country-row-head">
                 <h3>Nigeria. <em>On the ground.</em></h3>
                 <div class="country-row-meta">May 2026 · <strong>12 dispatches shipped</strong></div>
@@ -829,7 +849,7 @@
             </div>
         </div>
 
-        <div class="country-row reveal" id="kenya">
+        <div class="country-row" id="kenya">
             <div class="country-row-head">
                 <h3>Kenya. <em>Nairobi.</em></h3>
                 <div class="country-row-meta">May 2026 · <strong>5 dispatches shipped</strong></div>
@@ -900,7 +920,7 @@
             </div>
         </div>
 
-        <div class="country-row reveal" id="united-states">
+        <div class="country-row" id="united-states">
             <div class="country-row-head">
                 <h3>United States. <em>Philadelphia and Charlotte.</em></h3>
                 <div class="country-row-meta">May 2026 · <strong>5 dispatches shipped</strong></div>
@@ -971,7 +991,7 @@
             </div>
         </div>
 
-        <div class="country-row reveal" id="india">
+        <div class="country-row" id="india">
             <div class="country-row-head">
                 <h3>India. <em>First from Mumbai.</em></h3>
                 <div class="country-row-meta">May 2026 · <strong>1 dispatch shipped</strong></div>
@@ -994,7 +1014,7 @@
             </div>
         </div>
 
-        <div class="country-row reveal" id="mexico">
+        <div class="country-row" id="mexico">
             <div class="country-row-head">
                 <h3>Mexico. <em>Filed in Spanish.</em></h3>
                 <div class="country-row-meta">May 2026 · <strong>1 dispatch shipped</strong></div>
@@ -1022,7 +1042,7 @@
 
 <section class="spread" id="programs">
     <div class="wrap">
-        <div class="section-head reveal">
+        <div class="section-head">
             <div>
                 <div class="section-number">Programs</div>
                 <div class="section-tag">Ongoing series, archive and active</div>
@@ -1030,11 +1050,11 @@
             <h2>Live programs <span class="italic">underneath the field.</span></h2>
         </div>
 
-        <div class="dispatch-prose reveal" style="margin-top:1.5rem">
+        <div class="dispatch-prose" style="margin-top:1.5rem">
             <p>Three programs run alongside the country dispatches. The Denver Q1 archive (100+ street interviews, shot solo on a phone) is the proof of concept the rest of the network is built on. Philadelphia is the active U.S. beat. <em>Let's Talk About ETH: Around the World</em> is the show that started it all, six episodes, now wrapped.</p>
         </div>
 
-        <div class="recent-grid reveal">
+        <div class="recent-grid">
 
             <a href="https://www.youtube.com/playlist?list=PL_iKWpsTMHtMiXWlJEip82DNKWDcp81dx" target="_blank" rel="noopener" class="dispatch-card">
                 <div class="dispatch-card-thumb dispatch-card-thumb--denver">
@@ -1074,7 +1094,7 @@
 
         </div>
 
-        <div class="dispatch-prose reveal" style="margin-top:2.5rem">
+        <div class="dispatch-prose" style="margin-top:2.5rem">
             <p><strong>Long-form pieces published on the blog:</strong> four pieces on Paragraph going back to 2023, ETH Denver 2024 reflection, the Black Blockchain Summit, Ep. 18 with Amaya Langaigne, Web3 Africa in Motion. <a href="portfolio.html">See the full Portfolio</a></p>
         </div>
 
@@ -1083,7 +1103,7 @@
 
 <section class="spread" id="submissions">
     <div class="wrap">
-        <div class="section-head reveal">
+        <div class="section-head">
             <div>
                 <div class="section-number">Submissions</div>
                 <div class="section-tag">From contributors, this season</div>
@@ -1091,12 +1111,12 @@
             <h2>Submissions to the network. <span class="italic">In progress.</span></h2>
         </div>
 
-        <div class="dispatch-prose reveal" style="margin-top:1.5rem">
+        <div class="dispatch-prose" style="margin-top:1.5rem">
             <p>Contributors are already shooting. Gift in Lagos. Bayo in Abuja. Aziz and Fidesio in Nairobi. Marissa biking across the U.S. and reporting from a different state each month. Sicka submitting from Nigeria through power outages and patchy data. Devin starting in North Carolina. Wuraola editing the Channel 5 footage from Q1.</p>
             <p><strong>The network opened Jun 1, 2026.</strong> What they shoot goes up here as it is approved, and what you see on this page is the work that has already shipped.</p>
         </div>
 
-        <div class="submissions-empty reveal">
+        <div class="submissions-empty">
             <span class="label">Live submission feed, open since June 1, 2026</span>
             <p>This is where every contributor submission will land, named, dated, linked, and evaluated. We&#8217;re building it in public. If you&#8217;re shooting work for We Them Media right now, drop your submission on poidh and we&#8217;ll surface it here once the season opens.</p>
         </div>
@@ -1106,7 +1126,7 @@
 
 <section class="spread elev" id="arc">
     <div class="wrap">
-        <div class="section-head reveal">
+        <div class="section-head">
             <div>
                 <div class="section-number">The Arc</div>
                 <div class="section-tag">Season 01, 2026</div>
@@ -1114,11 +1134,11 @@
             <h2>The arc from launch <span class="italic">to completion.</span></h2>
         </div>
 
-        <div class="dispatch-prose reveal" style="margin-top:1.5rem">
+        <div class="dispatch-prose" style="margin-top:1.5rem">
             <p>Season 01 is a single six-month arc with two real tentpoles: <strong>June 1 launch</strong> (done) and <strong>November 30 completion</strong>. A new piece goes public on YouTube every day, starting with the Streamer University line from New York. December is rest. Whatever Season 02 looks like opens after a deliberate pause.</p>
         </div>
 
-        <ul class="roadmap-list reveal">
+        <ul class="roadmap-list">
             <li>
                 <span class="when">Now, Sep 2026</span>
                 <span class="what">A new piece on YouTube every day from 15 September to 12 October, starting with the Streamer University line. <a href="dispatch.html">The We Them Weekly</a> newsletter launched. <a href="onequestion.html">One Question</a> running: <span data-count="oq_goal">150</span> interviews by 4 November, <span data-count="oq_count">61</span> in so far. Long form now dropping.</span>
@@ -1153,7 +1173,7 @@
             </li>
         </ul>
 
-        <div class="dispatch-prose reveal" style="margin-top:2.5rem">
+        <div class="dispatch-prose" style="margin-top:2.5rem">
             <p>The <a href="about.html#stack">Mission page</a> walks the same arc in more depth, with the publishing stack and the rules for what gets shipped.</p>
         </div>
 
@@ -1162,7 +1182,7 @@
 
 <section class="spread" id="submit">
     <div class="wrap">
-        <aside class="submit-cta reveal">
+        <aside class="submit-cta">
             <span class="tag">Submit your own</span>
             <h3>If you&#8217;re shooting on your block, <em>we want it.</em></h3>
             <p>Phone counts. Audio is everything. Pick a bounty on poidh, pitch us a piece directly, or just tag us on the channels, we&#8217;ll see it. The frame is media, not a leaderboard.</p>
@@ -1185,252 +1205,42 @@
 </aside>
 
 <div class="wrap wtm-share"></div>
-        <section class="reveal" aria-labelledby="sixteen-h">
+        <section aria-labelledby="sixteen-h">
             <h2 id="sixteen-h">Sixteen at random.</h2>
             <p>Sixteen from the whole catalogue, picked at random as the page opens. No order, no ranking, nothing chosen for you.</p>
             <div class="recent-grid" id="sixteen-grid">
 
-                <a href="watch/social-anxiety-nigeria-student-interview.html" data-video="16gGcoy6sqE" class="dispatch-card">
-                    <div class="dispatch-card-thumb"><img src="stills/16gGcoy6sqE-640.jpg" srcset="stills/16gGcoy6sqE-320.jpg 320w, stills/16gGcoy6sqE-480.jpg 480w, stills/16gGcoy6sqE-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">9:08</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Lagos</div>
-                        <h3>Social anxiety in Nigeria.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/which-denver-stories-go-uncovered.html" data-video="qjfvrsmwJSI" class="dispatch-card">
-                    <div class="dispatch-card-thumb"><img src="stills/qjfvrsmwJSI-640.jpg" srcset="stills/qjfvrsmwJSI-320.jpg 320w, stills/qjfvrsmwJSI-480.jpg 480w, stills/qjfvrsmwJSI-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">1:05</span>
+                <a href="watch/denver-politics-and-where-the-homeless-went-denver.html" data-video="hT_oDk_DnMw" class="dispatch-card">
+                    <div class="dispatch-card-thumb"><img src="stills/hT_oDk_DnMw-640.jpg" srcset="stills/hT_oDk_DnMw-320.jpg 320w, stills/hT_oDk_DnMw-480.jpg 480w, stills/hT_oDk_DnMw-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">17:35</span>
                     </div>
                     <div class="dispatch-card-body">
                         <div class="dispatch-card-eyebrow">Denver</div>
-                        <h3>Which Denver stories go uncovered.</h3>
+                        <h3>Where the homeless went before the convention came.</h3>
                     </div>
                 </a>
 
-                <a href="watch/the-real-free-trade-and-an-arena-on-chinatown.html" data-video="rb54mUD72r8" class="dispatch-card">
-                    <div class="dispatch-card-thumb"><img src="stills/rb54mUD72r8-640.jpg" srcset="stills/rb54mUD72r8-320.jpg 320w, stills/rb54mUD72r8-480.jpg 480w, stills/rb54mUD72r8-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">10:04</span>
+                <a href="watch/como-llego-al-temazcal-senor-cesar-salazar-acapulco.html" data-video="6Dcx1mZTPD8" class="dispatch-card">
+                    <div class="dispatch-card-thumb"><img src="https://i.ytimg.com/vi/6Dcx1mZTPD8/mqdefault.jpg" srcset="https://i.ytimg.com/vi/6Dcx1mZTPD8/mqdefault.jpg 320w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="320" height="180">
+                        <span class="dispatch-card-pill">2:30</span>
                     </div>
                     <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Philadelphia</div>
-                        <h3>Scarlett on crypto as the real free trade, and Philadelphia politics.</h3>
+                        <div class="dispatch-card-eyebrow">Acapulco, Mexico</div>
+                        <h3>Cómo llegó al temazcal: señor César Salazar.</h3>
                     </div>
                 </a>
 
-                <a href="watch/let-the-camera-be-the-reason-first-friday-on-santa-fe-denver.html" data-video="sPrKbU119yA" class="dispatch-card">
-                    <div class="dispatch-card-thumb"><img src="stills/sPrKbU119yA-640.jpg" srcset="stills/sPrKbU119yA-320.jpg 320w, stills/sPrKbU119yA-480.jpg 480w, stills/sPrKbU119yA-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">0:54</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Denver</div>
-                        <h3>Let the camera be the reason: First Friday on Santa Fe.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/awareness-then-action-blockchain-from-africa-jos.html" data-video="97S0g1GHphM" class="dispatch-card">
-                    <div class="dispatch-card-thumb"><img src="stills/97S0g1GHphM-640.jpg" srcset="stills/97S0g1GHphM-320.jpg 320w, stills/97S0g1GHphM-480.jpg 480w, stills/97S0g1GHphM-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">9:24</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Jos</div>
-                        <h3>Awareness, action, and what is missing between builders.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/art-activism-and-an-edibles-story-at-the-channel-5-talent-show.html" data-video="tUXe3ykg_fc" class="dispatch-card">
-                    <div class="dispatch-card-thumb"><img src="stills/tUXe3ykg_fc-640.jpg" srcset="stills/tUXe3ykg_fc-320.jpg 320w, stills/tUXe3ykg_fc-480.jpg 480w, stills/tUXe3ykg_fc-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">6:14</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Denver</div>
-                        <h3>Art activism, and an edibles story.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/the-creative-lead-on-branding-a-product-festival-jos.html" data-video="xW1u7yZzp-M" class="dispatch-card">
-                    <div class="dispatch-card-thumb"><img src="stills/xW1u7yZzp-M-640.jpg" srcset="stills/xW1u7yZzp-M-320.jpg 320w, stills/xW1u7yZzp-M-480.jpg 480w, stills/xW1u7yZzp-M-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">12:07</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Jos</div>
-                        <h3>The creative lead on branding, jargon and AI.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/post-miguel-concert-on-the-city-the-show-and-ai-denver.html" data-video="hlq0Z7z1XE0" class="dispatch-card">
-                    <div class="dispatch-card-thumb"><img src="stills/hlq0Z7z1XE0-640.jpg" srcset="stills/hlq0Z7z1XE0-320.jpg 320w, stills/hlq0Z7z1XE0-480.jpg 480w, stills/hlq0Z7z1XE0-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">3:05</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Denver</div>
-                        <h3>Two high school seniors after a Miguel show.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/know-your-rights-and-dont-get-played-denver.html" data-video="8IWlaBa-Ilw" class="dispatch-card">
-                    <div class="dispatch-card-thumb"><img src="stills/8IWlaBa-Ilw-640.jpg" srcset="stills/8IWlaBa-Ilw-320.jpg 320w, stills/8IWlaBa-Ilw-480.jpg 480w, stills/8IWlaBa-Ilw-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">8:19</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Denver</div>
-                        <h3>Know your rights, and don’t get played.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/onchain-science-proof-of-knowledge-desci-world-at-eth-denver-2024.html" data-video="GZSciAYuhWY" class="dispatch-card">
-                    <div class="dispatch-card-thumb"><img src="stills/GZSciAYuhWY-640.jpg" srcset="stills/GZSciAYuhWY-320.jpg 320w, stills/GZSciAYuhWY-480.jpg 480w, stills/GZSciAYuhWY-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">30:00</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Denver</div>
-                        <h3>Onchain science, proof of knowledge: DeSci World.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/teaching-two-students-to-be-reporters-at-a-pizza-party.html" data-video="EwYnZ1y9cqM" class="dispatch-card">
-                    <div class="dispatch-card-thumb"><img src="stills/EwYnZ1y9cqM-640.jpg" srcset="stills/EwYnZ1y9cqM-320.jpg 320w, stills/EwYnZ1y9cqM-480.jpg 480w, stills/EwYnZ1y9cqM-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">24:12</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Philadelphia</div>
-                        <h3>Benny and Estabon, Temple musicians turned street reporters for the day.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/four-engineering-seniors-ask-about-nfts-and-money-howard.html" data-video="O7Q6caORGf0" class="dispatch-card">
-                    <div class="dispatch-card-thumb"><img src="stills/O7Q6caORGf0-640.jpg" srcset="stills/O7Q6caORGf0-320.jpg 320w, stills/O7Q6caORGf0-480.jpg 480w, stills/O7Q6caORGf0-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">11:26</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Washington, DC</div>
-                        <h3>Four engineering seniors ask about NFTs and money.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/what-made-you-smile-dogs-at-cheesman-park-denver.html" data-video="mtO0yYgrXOs" class="dispatch-card">
-                    <div class="dispatch-card-thumb"><img src="stills/mtO0yYgrXOs-640.jpg" srcset="stills/mtO0yYgrXOs-320.jpg 320w, stills/mtO0yYgrXOs-480.jpg 480w, stills/mtO0yYgrXOs-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">2:20</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Denver</div>
-                        <h3>What made you smile today? Dogs at Cheesman Park.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/the-marxist-case-for-bitcoin-from-a-bitcoin-maximalist.html" data-video="q7m5izL3CEI" class="dispatch-card">
-                    <div class="dispatch-card-thumb"><img src="stills/q7m5izL3CEI-640.jpg" srcset="stills/q7m5izL3CEI-320.jpg 320w, stills/q7m5izL3CEI-480.jpg 480w, stills/q7m5izL3CEI-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">1:01:45</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Online</div>
-                        <h3>The Marxist case for Bitcoin, from a Bitcoin maximalist.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/journalism-as-a-cooperative-an-afternoon-in-germantown-philadelphia.html" data-video="zSE3bJVCUKo" class="dispatch-card">
-                    <div class="dispatch-card-thumb"><img src="stills/zSE3bJVCUKo-640.jpg" srcset="stills/zSE3bJVCUKo-320.jpg 320w, stills/zSE3bJVCUKo-480.jpg 480w, stills/zSE3bJVCUKo-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">0:47</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Philadelphia</div>
-                        <h3>Journalism as a cooperative: an afternoon in Germantown.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/borrowing-against-stocks-to-buy-a-matcha-ethconf-nyc.html" data-video="gCVqANcSEf4" class="dispatch-card">
-                    <div class="dispatch-card-thumb"><img src="stills/gCVqANcSEf4-640.jpg" srcset="stills/gCVqANcSEf4-320.jpg 320w, stills/gCVqANcSEf4-480.jpg 480w, stills/gCVqANcSEf4-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">7:00</span>
+                <a href="watch/streamer-university-line-put-my-city-on-the-map.html" data-video="tJB-nncC7Nc" class="dispatch-card">
+                    <div class="dispatch-card-thumb"><img src="stills/tJB-nncC7Nc-640.jpg" srcset="stills/tJB-nncC7Nc-320.jpg 320w, stills/tJB-nncC7Nc-480.jpg 480w, stills/tJB-nncC7Nc-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">4:11</span>
                     </div>
                     <div class="dispatch-card-body">
                         <div class="dispatch-card-eyebrow">New York</div>
-                        <h3>ETHConf: borrowing against stocks to buy a matcha.</h3>
+                        <h3>Streamer University line: put my city on the map.</h3>
                     </div>
                 </a>
 
-                <a href="watch/streamer-university-line-showing-up-for-myself.html" data-video="OmLkpLPVmK0" class="dispatch-card" style="display:none">
-                    <div class="dispatch-card-thumb"><img src="stills/OmLkpLPVmK0-640.jpg" srcset="stills/OmLkpLPVmK0-320.jpg 320w, stills/OmLkpLPVmK0-480.jpg 480w, stills/OmLkpLPVmK0-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">4:09</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">New York</div>
-                        <h3>Streamer University line: showing up for myself.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/the-music-scene-from-two-people-who-go-to-the-shows-denver.html" data-video="eRm1k0aBa8s" class="dispatch-card" style="display:none">
-                    <div class="dispatch-card-thumb"><img src="stills/eRm1k0aBa8s-640.jpg" srcset="stills/eRm1k0aBa8s-320.jpg 320w, stills/eRm1k0aBa8s-480.jpg 480w, stills/eRm1k0aBa8s-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">11:17</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Denver</div>
-                        <h3>Two locals on Red Rocks, bass and the shows every night.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/the-tiny-phone-and-a-peer-to-peer-plugin.html" data-video="uRiZBwpOP5M" class="dispatch-card" style="display:none">
-                    <div class="dispatch-card-thumb"><img src="stills/uRiZBwpOP5M-640.jpg" srcset="stills/uRiZBwpOP5M-320.jpg 320w, stills/uRiZBwpOP5M-480.jpg 480w, stills/uRiZBwpOP5M-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">4:44</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Philadelphia</div>
-                        <h3>John and an OG Pizza DAO member, shot on an iPad from the floor.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/climbing-gyms-and-meeting-people-in-denver.html" data-video="uCQv5G4joHo" class="dispatch-card" style="display:none">
-                    <div class="dispatch-card-thumb"><img src="stills/uCQv5G4joHo-640.jpg" srcset="stills/uCQv5G4joHo-320.jpg 320w, stills/uCQv5G4joHo-480.jpg 480w, stills/uCQv5G4joHo-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">4:43</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Denver</div>
-                        <h3>Luis, who climbs.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/landscape-or-portrait-two-filmmakers-at-the-mall.html" data-video="Vuc9QF3VJgQ" class="dispatch-card" style="display:none">
-                    <div class="dispatch-card-thumb"><img src="stills/Vuc9QF3VJgQ-640.jpg" srcset="stills/Vuc9QF3VJgQ-320.jpg 320w, stills/Vuc9QF3VJgQ-480.jpg 480w, stills/Vuc9QF3VJgQ-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">1:22</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Denver</div>
-                        <h3>Landscape or portrait.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/social-anxiety-in-philly-canis-honest-answer.html" data-video="QkTCh3Wli0Y" class="dispatch-card" style="display:none">
-                    <div class="dispatch-card-thumb"><img src="stills/QkTCh3Wli0Y-640.jpg" srcset="stills/QkTCh3Wli0Y-320.jpg 320w, stills/QkTCh3Wli0Y-480.jpg 480w, stills/QkTCh3Wli0Y-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">3:37</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Philadelphia</div>
-                        <h3>Social anxiety in Philly: Cani&#x27;s honest answer.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/fourteen-banks-ten-years-and-pearl-and-colfax.html" data-video="vIBsSEtFJbY" class="dispatch-card" style="display:none">
-                    <div class="dispatch-card-thumb"><img src="stills/vIBsSEtFJbY-640.jpg" srcset="stills/vIBsSEtFJbY-320.jpg 320w, stills/vIBsSEtFJbY-480.jpg 480w, stills/vIBsSEtFJbY-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">5:53</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Denver</div>
-                        <h3>The self-proclaimed biggest bandit in Denver.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/the-seven-year-fight-to-caption-hollywood.html" data-video="KmRVC9cx6bs" class="dispatch-card" style="display:none">
-                    <div class="dispatch-card-thumb"><img src="stills/KmRVC9cx6bs-640.jpg" srcset="stills/KmRVC9cx6bs-320.jpg 320w, stills/KmRVC9cx6bs-480.jpg 480w, stills/KmRVC9cx6bs-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">14:16</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Philadelphia</div>
-                        <h3>Carol on deaf rights, and her family taking on Hollywood’s ADA exemption.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/arikia-millikan-on-licensing-journalism-peer-to-peer.html" data-video="yGDz77IGjBw" class="dispatch-card" style="display:none">
+                <a href="watch/arikia-millikan-on-licensing-journalism-peer-to-peer.html" data-video="yGDz77IGjBw" class="dispatch-card">
                     <div class="dispatch-card-thumb"><img src="stills/yGDz77IGjBw-640.jpg" srcset="stills/yGDz77IGjBw-320.jpg 320w, stills/yGDz77IGjBw-480.jpg 480w, stills/yGDz77IGjBw-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
                         <span class="dispatch-card-pill">15:26</span>
                     </div>
@@ -1440,33 +1250,133 @@
                     </div>
                 </a>
 
-                <a href="watch/crypto-for-people-who-cant-trust-their-bank-ethconf-nyc.html" data-video="o5BBj121_G0" class="dispatch-card" style="display:none">
-                    <div class="dispatch-card-thumb"><img src="stills/o5BBj121_G0-640.jpg" srcset="stills/o5BBj121_G0-320.jpg 320w, stills/o5BBj121_G0-480.jpg 480w, stills/o5BBj121_G0-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">6:01</span>
+                <a href="watch/a-tinder-date-with-a-plus-one-fort-collins.html" data-video="I69Y4ihPIZo" class="dispatch-card">
+                    <div class="dispatch-card-thumb"><img src="stills/I69Y4ihPIZo-640.jpg" srcset="stills/I69Y4ihPIZo-320.jpg 320w, stills/I69Y4ihPIZo-480.jpg 480w, stills/I69Y4ihPIZo-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">3:46</span>
                     </div>
                     <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">New York</div>
-                        <h3>ETHConf: crypto for people who can&#x27;t trust their bank.</h3>
+                        <div class="dispatch-card-eyebrow">Fort Collins</div>
+                        <h3>A date with a plus one, and leaving school.</h3>
                     </div>
                 </a>
 
-                <a href="watch/create-for-the-fun-of-it-an-artist-at-ethconf-nyc.html" data-video="s-5LCmIHGQw" class="dispatch-card" style="display:none">
-                    <div class="dispatch-card-thumb"><img src="stills/s-5LCmIHGQw-640.jpg" srcset="stills/s-5LCmIHGQw-320.jpg 320w, stills/s-5LCmIHGQw-480.jpg 480w, stills/s-5LCmIHGQw-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">8:41</span>
+                <a href="watch/streamer-university-line-the-line-ends-in-the-rain.html" data-video="Ti0YFg1go4U" class="dispatch-card">
+                    <div class="dispatch-card-thumb"><img src="stills/Ti0YFg1go4U-640.jpg" srcset="stills/Ti0YFg1go4U-320.jpg 320w, stills/Ti0YFg1go4U-480.jpg 480w, stills/Ti0YFg1go4U-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">12:33</span>
                     </div>
                     <div class="dispatch-card-body">
                         <div class="dispatch-card-eyebrow">New York</div>
-                        <h3>ETHConf: create for the fun of it.</h3>
+                        <h3>Streamer University line: the line ends in the rain.</h3>
                     </div>
                 </a>
 
-                <a href="watch/russ-and-sirsu-in-manhattan-use-every-resource.html" data-video="C0p8XU_efic" class="dispatch-card" style="display:none">
-                    <div class="dispatch-card-thumb"><img src="stills/C0p8XU_efic-640.jpg" srcset="stills/C0p8XU_efic-320.jpg 320w, stills/C0p8XU_efic-480.jpg 480w, stills/C0p8XU_efic-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">23:48</span>
+                <a href="watch/a-mirror-that-wouldnt-exist-if-we-werent-doing-it.html" data-video="ivye_ajfodc" class="dispatch-card">
+                    <div class="dispatch-card-thumb"><img src="stills/ivye_ajfodc-640.jpg" srcset="stills/ivye_ajfodc-320.jpg 320w, stills/ivye_ajfodc-480.jpg 480w, stills/ivye_ajfodc-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">10:36</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">Boulder</div>
+                        <h3>Maceo’s Boulder vlog.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/lets-talk-about-eth-a-fireside-chat-online.html" data-video="GOPCgLopEXs" class="dispatch-card">
+                    <div class="dispatch-card-thumb"><img src="stills/GOPCgLopEXs-640.jpg" srcset="stills/GOPCgLopEXs-320.jpg 320w, stills/GOPCgLopEXs-480.jpg 480w, stills/GOPCgLopEXs-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">51:57</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">Online</div>
+                        <h3>A hack, a rollback and a round on weaknesses.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/ai-is-artificial-we-are-the-official.html" data-video="2KWrTQgRKS0" class="dispatch-card">
+                    <div class="dispatch-card-thumb"><img src="stills/2KWrTQgRKS0-640.jpg" srcset="stills/2KWrTQgRKS0-320.jpg 320w, stills/2KWrTQgRKS0-480.jpg 480w, stills/2KWrTQgRKS0-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">21:18</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">Denver</div>
+                        <h3>A poet named Phoenix.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/desci-womens-health-and-funding-the-gap-denver.html" data-video="zAIth9lIeP0" class="dispatch-card">
+                    <div class="dispatch-card-thumb"><img src="stills/zAIth9lIeP0-640.jpg" srcset="stills/zAIth9lIeP0-320.jpg 320w, stills/zAIth9lIeP0-480.jpg 480w, stills/zAIth9lIeP0-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">26:42</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">Denver</div>
+                        <h3>DeSci, women&#x27;s health, and who gets funded.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/decentralized-kyc-and-stablecoins-for-trade-ethconf-nyc.html" data-video="sN79Mlfsunw" class="dispatch-card">
+                    <div class="dispatch-card-thumb"><img src="stills/sN79Mlfsunw-640.jpg" srcset="stills/sN79Mlfsunw-320.jpg 320w, stills/sN79Mlfsunw-480.jpg 480w, stills/sN79Mlfsunw-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">4:18</span>
                     </div>
                     <div class="dispatch-card-body">
                         <div class="dispatch-card-eyebrow">New York</div>
-                        <h3>Russ and Sirsu in Manhattan: use every resource at your disposal.</h3>
+                        <h3>ETHConf: decentralized KYC and stablecoins for cross-border trade.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/pizza-dao-since-day-one-philadelphia.html" data-video="gX_sgFitIoc" class="dispatch-card">
+                    <div class="dispatch-card-thumb"><img src="stills/gX_sgFitIoc-640.jpg" srcset="stills/gX_sgFitIoc-320.jpg 320w, stills/gX_sgFitIoc-480.jpg 480w, stills/gX_sgFitIoc-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">1:29</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">Philadelphia</div>
+                        <h3>Saucy Saucier, Pizza DAO since day one.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/pundits-versus-ground-reporting-channel-5-queue.html" data-video="b-adB_nX8ak" class="dispatch-card">
+                    <div class="dispatch-card-thumb"><img src="stills/b-adB_nX8ak-640.jpg" srcset="stills/b-adB_nX8ak-320.jpg 320w, stills/b-adB_nX8ak-480.jpg 480w, stills/b-adB_nX8ak-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">20:14</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">Denver</div>
+                        <h3>Channel 5 fans on pundits and ground reporting.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/the-unity-and-the-togetherness-web3bridge-cohort-12-episode-4-lagos.html" data-video="Mb0-ikWmZkg" class="dispatch-card">
+                    <div class="dispatch-card-thumb"><img src="stills/Mb0-ikWmZkg-640.jpg" srcset="stills/Mb0-ikWmZkg-320.jpg 320w, stills/Mb0-ikWmZkg-480.jpg 480w, stills/Mb0-ikWmZkg-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">6:02</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">Lagos</div>
+                        <h3>A cohort member on brotherhood and building on chain.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/bitcoin-hedges-debasement-not-inflation.html" data-video="m9Cx4VP3Ios" class="dispatch-card">
+                    <div class="dispatch-card-thumb"><img src="stills/m9Cx4VP3Ios-640.jpg" srcset="stills/m9Cx4VP3Ios-320.jpg 320w, stills/m9Cx4VP3Ios-480.jpg 480w, stills/m9Cx4VP3Ios-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">3:56</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">New York</div>
+                        <h3>One builder’s perspective on Bitcoin, Chainlink, and Ethereum.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/a-neutral-milk-hotel-cover-from-the-balcony-at-the-channel-5-carnival.html" data-video="NzMiVQKWjMs" class="dispatch-card">
+                    <div class="dispatch-card-thumb"><img src="stills/NzMiVQKWjMs-640.jpg" srcset="stills/NzMiVQKWjMs-320.jpg 320w, stills/NzMiVQKWjMs-480.jpg 480w, stills/NzMiVQKWjMs-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">1:52</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">Denver</div>
+                        <h3>A Neutral Milk Hotel cover, from above.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/new-album-sick-day-and-still-showing-up-new-york.html" data-video="5SWN_3QPM7g" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/5SWN_3QPM7g-640.jpg" srcset="stills/5SWN_3QPM7g-320.jpg 320w, stills/5SWN_3QPM7g-480.jpg 480w, stills/5SWN_3QPM7g-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">14:50</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">New York</div>
+                        <h3>An album, a five person team and a sick day.</h3>
                     </div>
                 </a>
 
@@ -1480,143 +1390,23 @@
                     </div>
                 </a>
 
-                <a href="watch/old-money-vs-new-money-and-read-your-contract-howard.html" data-video="gii2K5BmFUc" class="dispatch-card" style="display:none">
-                    <div class="dispatch-card-thumb"><img src="stills/gii2K5BmFUc-640.jpg" srcset="stills/gii2K5BmFUc-320.jpg 320w, stills/gii2K5BmFUc-480.jpg 480w, stills/gii2K5BmFUc-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">55:38</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Washington, DC</div>
-                        <h3>Old money vs new money, and read your contract.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/social-tokens-community-and-url-to-irl-denver.html" data-video="4uN9BrX2Ztg" class="dispatch-card" style="display:none">
-                    <div class="dispatch-card-thumb"><img src="stills/4uN9BrX2Ztg-640.jpg" srcset="stills/4uN9BrX2Ztg-320.jpg 320w, stills/4uN9BrX2Ztg-480.jpg 480w, stills/4uN9BrX2Ztg-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">18:21</span>
+                <a href="watch/rexii-dubz-on-the-record-denver.html" data-video="zb_zN46MEpM" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/zb_zN46MEpM-640.jpg" srcset="stills/zb_zN46MEpM-320.jpg 320w, stills/zb_zN46MEpM-480.jpg 480w, stills/zb_zN46MEpM-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">6:21</span>
                     </div>
                     <div class="dispatch-card-body">
                         <div class="dispatch-card-eyebrow">Denver</div>
-                        <h3>Social tokens, and a conference for Cape Verde.</h3>
+                        <h3>A dubstep DJ on her roots and a new tape.</h3>
                     </div>
                 </a>
 
-                <a href="watch/second-place-on-her-second-hackathon-ethaccra-accra.html" data-video="DNls8guiBzY" class="dispatch-card" style="display:none">
-                    <div class="dispatch-card-thumb"><img src="stills/DNls8guiBzY-640.jpg" srcset="stills/DNls8guiBzY-320.jpg 320w, stills/DNls8guiBzY-480.jpg 480w, stills/DNls8guiBzY-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">1:42</span>
+                <a href="watch/streamer-university-auditions-a-message-to-east-new-york.html" data-video="-JCUfAHNtd8" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/-JCUfAHNtd8-640.jpg" srcset="stills/-JCUfAHNtd8-320.jpg 320w, stills/-JCUfAHNtd8-480.jpg 480w, stills/-JCUfAHNtd8-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">4:28</span>
                     </div>
                     <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Accra</div>
-                        <h3>Second place on her second hackathon.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/never-been-ashamed-to-cry-denver.html" data-video="yepfMr68Rao" class="dispatch-card" style="display:none">
-                    <div class="dispatch-card-thumb"><img src="stills/yepfMr68Rao-640.jpg" srcset="stills/yepfMr68Rao-320.jpg 320w, stills/yepfMr68Rao-480.jpg 480w, stills/yepfMr68Rao-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">24:10</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Denver</div>
-                        <h3>Eric, on grief, family, and the human race.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/the-truth-is-a-subjective-format-a-nigerian-answer.html" data-video="Gb6r341R2oU" class="dispatch-card" style="display:none">
-                    <div class="dispatch-card-thumb"><img src="stills/Gb6r341R2oU-640.jpg" srcset="stills/Gb6r341R2oU-320.jpg 320w, stills/Gb6r341R2oU-480.jpg 480w, stills/Gb6r341R2oU-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">1:27</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Nigeria</div>
-                        <h3>Is the truth subjective? A Nigerian answer on the internet.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/a-media-graduate-considering-the-military.html" data-video="cSQnnU1hiDk" class="dispatch-card" style="display:none">
-                    <div class="dispatch-card-thumb"><img src="stills/cSQnnU1hiDk-640.jpg" srcset="stills/cSQnnU1hiDk-320.jpg 320w, stills/cSQnnU1hiDk-480.jpg 480w, stills/cSQnnU1hiDk-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">3:43</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Boulder</div>
-                        <h3>Ethan, from media to military.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/pizza-dao-since-day-one-philadelphia.html" data-video="gX_sgFitIoc" class="dispatch-card" style="display:none">
-                    <div class="dispatch-card-thumb"><img src="stills/gX_sgFitIoc-640.jpg" srcset="stills/gX_sgFitIoc-320.jpg 320w, stills/gX_sgFitIoc-480.jpg 480w, stills/gX_sgFitIoc-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">1:29</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Philadelphia</div>
-                        <h3>Saucy Saucier, Pizza DAO since day one.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/moon-dust-erc-721-and-what-crypto-owes-the-real-world.html" data-video="337E8mPwhW8" class="dispatch-card" style="display:none">
-                    <div class="dispatch-card-thumb"><img src="stills/337E8mPwhW8-640.jpg" srcset="stills/337E8mPwhW8-320.jpg 320w, stills/337E8mPwhW8-480.jpg 480w, stills/337E8mPwhW8-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">12:08</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Philadelphia</div>
-                        <h3>William Entriken, lead author of ERC-721.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/a-life-through-his-generation-abuja.html" data-video="Avxp4F3o5TQ" class="dispatch-card" style="display:none">
-                    <div class="dispatch-card-thumb"><img src="https://i.ytimg.com/vi/Avxp4F3o5TQ/mqdefault.jpg" srcset="https://i.ytimg.com/vi/Avxp4F3o5TQ/mqdefault.jpg 320w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="320" height="180">
-                        <span class="dispatch-card-pill">8:55</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Abuja</div>
-                        <h3>A life told from poverty to laying block.</h3>
-                    </div>
-                </a>
-
-                <a href="archive/interview-bts-bitcoin-pizza-day-philadelphia-2026.html" data-video="A4v5etI-T34" class="dispatch-card" style="display:none">
-                    <div class="dispatch-card-thumb"><img src="stills/A4v5etI-T34-640.jpg" srcset="stills/A4v5etI-T34-320.jpg 320w, stills/A4v5etI-T34-480.jpg 480w, stills/A4v5etI-T34-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">1:02</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Philadelphia</div>
-                        <h3>Between takes at the interview sessions.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/the-question-of-the-week-put-to-the-room-at-the-channel-5-carnival.html" data-video="zbftnsO2oDk" class="dispatch-card" style="display:none">
-                    <div class="dispatch-card-thumb"><img src="stills/zbftnsO2oDk-640.jpg" srcset="stills/zbftnsO2oDk-320.jpg 320w, stills/zbftnsO2oDk-480.jpg 480w, stills/zbftnsO2oDk-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">5:10</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Denver</div>
-                        <h3>The question of the week, put to the room.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/truth-discourse-and-being-called-a-gentrifier-colfax.html" data-video="tZRn0IQTEp4" class="dispatch-card" style="display:none">
-                    <div class="dispatch-card-thumb"><img src="stills/tZRn0IQTEp4-640.jpg" srcset="stills/tZRn0IQTEp4-320.jpg 320w, stills/tZRn0IQTEp4-480.jpg 480w, stills/tZRn0IQTEp4-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">14:38</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Denver</div>
-                        <h3>Gaming culture and street life at the arcade on Colfax.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/saving-is-burning-money-daniel-on-stablecoins-and-inflation-nigeria.html" data-video="yDJjFCYtFrw" class="dispatch-card" style="display:none">
-                    <div class="dispatch-card-thumb"><img src="stills/yDJjFCYtFrw-640.jpg" srcset="stills/yDJjFCYtFrw-320.jpg 320w, stills/yDJjFCYtFrw-480.jpg 480w, stills/yDJjFCYtFrw-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">2:02</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Nigeria</div>
-                        <h3>Saving is burning money: Daniel on stablecoins and inflation.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/crypto-clarity-whats-happening-with-the-money-online.html" data-video="W20VlF_HHuQ" class="dispatch-card" style="display:none">
-                    <div class="dispatch-card-thumb"><img src="stills/W20VlF_HHuQ-640.jpg" srcset="stills/W20VlF_HHuQ-320.jpg 320w, stills/W20VlF_HHuQ-480.jpg 480w, stills/W20VlF_HHuQ-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">58:45</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Online</div>
-                        <h3>The first lesson of a four week crypto course.</h3>
+                        <div class="dispatch-card-eyebrow">New York</div>
+                        <h3>Streamer University auditions: a message to East New York.</h3>
                     </div>
                 </a>
 
@@ -1630,43 +1420,273 @@
                     </div>
                 </a>
 
-                <a href="watch/bitcoin-hedges-debasement-not-inflation.html" data-video="m9Cx4VP3Ios" class="dispatch-card" style="display:none">
-                    <div class="dispatch-card-thumb"><img src="stills/m9Cx4VP3Ios-640.jpg" srcset="stills/m9Cx4VP3Ios-320.jpg 320w, stills/m9Cx4VP3Ios-480.jpg 480w, stills/m9Cx4VP3Ios-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">3:56</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">New York</div>
-                        <h3>One builder’s perspective on Bitcoin, Chainlink, and Ethereum.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/give-mayor-parker-all-the-respect-mr-joe-germantown.html" data-video="ezoWd7ZpNMo" class="dispatch-card" style="display:none">
-                    <div class="dispatch-card-thumb"><img src="stills/ezoWd7ZpNMo-640.jpg" srcset="stills/ezoWd7ZpNMo-320.jpg 320w, stills/ezoWd7ZpNMo-480.jpg 480w, stills/ezoWd7ZpNMo-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">6:06</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Philadelphia</div>
-                        <h3>Give Mayor Parker all the respect: Mr. Joe, 65.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/social-anxiety-on-germantown-avenue-the-pitch.html" data-video="A8q0J0adLmQ" class="dispatch-card" style="display:none">
-                    <div class="dispatch-card-thumb"><img src="stills/A8q0J0adLmQ-640.jpg" srcset="stills/A8q0J0adLmQ-320.jpg 320w, stills/A8q0J0adLmQ-480.jpg 480w, stills/A8q0J0adLmQ-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">2:15</span>
-                    </div>
-                    <div class="dispatch-card-body">
-                        <div class="dispatch-card-eyebrow">Philadelphia</div>
-                        <h3>Social anxiety in Philly: Germantown Avenue.</h3>
-                    </div>
-                </a>
-
-                <a href="watch/channel-5-fans-on-what-andrew-callaghan-does-right.html" data-video="CgFdClu5uow" class="dispatch-card" style="display:none">
-                    <div class="dispatch-card-thumb"><img src="stills/CgFdClu5uow-640.jpg" srcset="stills/CgFdClu5uow-320.jpg 320w, stills/CgFdClu5uow-480.jpg 480w, stills/CgFdClu5uow-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
-                        <span class="dispatch-card-pill">16:28</span>
+                <a href="watch/the-100-dollar-weekly-video-journalism-contest-explained-denver.html" data-video="N7_cgBQEMmY" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/N7_cgBQEMmY-640.jpg" srcset="stills/N7_cgBQEMmY-320.jpg 320w, stills/N7_cgBQEMmY-480.jpg 480w, stills/N7_cgBQEMmY-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">1:00</span>
                     </div>
                     <div class="dispatch-card-body">
                         <div class="dispatch-card-eyebrow">Denver</div>
-                        <h3>Channel 5 fans on what makes Andrew Callaghan work.</h3>
+                        <h3>The $100 weekly video journalism contest, explained.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/forbidden-fruit-culture-onchain-and-creative-wellness-denver.html" data-video="6rPjX_pGd6E" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/6rPjX_pGd6E-640.jpg" srcset="stills/6rPjX_pGd6E-320.jpg 320w, stills/6rPjX_pGd6E-480.jpg 480w, stills/6rPjX_pGd6E-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">10:40</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">Denver</div>
+                        <h3>A Philly artist on culture, gas fees and Forbidden Fruit.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/a-hitchhiker-on-a-spiritual-mission-outside-channel-5.html" data-video="80E_4pItE_Y" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/80E_4pItE_Y-640.jpg" srcset="stills/80E_4pItE_Y-320.jpg 320w, stills/80E_4pItE_Y-480.jpg 480w, stills/80E_4pItE_Y-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">10:42</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">Denver</div>
+                        <h3>A hitchhiker on a spiritual mission.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/money-chasing-talent-the-builder-market-ethconf-nyc.html" data-video="XsDbdAvkyeo" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/XsDbdAvkyeo-640.jpg" srcset="stills/XsDbdAvkyeo-320.jpg 320w, stills/XsDbdAvkyeo-480.jpg 480w, stills/XsDbdAvkyeo-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">12:38</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">New York</div>
+                        <h3>ETHConf: in a builder market, money chases talent.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/how-i-got-into-crypto-philadelphia.html" data-video="tbCuWfY5ImE" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/tbCuWfY5ImE-640.jpg" srcset="stills/tbCuWfY5ImE-320.jpg 320w, stills/tbCuWfY5ImE-480.jpg 480w, stills/tbCuWfY5ImE-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">3:01</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">Philadelphia</div>
+                        <h3>How a roommate on a whitelist led to DAOs.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/streamer-university-line-trans-women-can-do-it-too.html" data-video="YZqL1qBOFg4" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/YZqL1qBOFg4-640.jpg" srcset="stills/YZqL1qBOFg4-320.jpg 320w, stills/YZqL1qBOFg4-480.jpg 480w, stills/YZqL1qBOFg4-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">7:33</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">New York</div>
+                        <h3>Streamer University line: trans women can do it too.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/a-venezuelan-air-force-vet-on-f-16s-and-loving-your-work.html" data-video="n6I2xv0OMQ4" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/n6I2xv0OMQ4-640.jpg" srcset="stills/n6I2xv0OMQ4-320.jpg 320w, stills/n6I2xv0OMQ4-480.jpg 480w, stills/n6I2xv0OMQ4-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">9:11</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">Denver</div>
+                        <h3>A Venezuelan Air Force vet on F-16s and what still makes him smile.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/why-africa-has-few-crypto-creators-chasing-mavericks.html" data-video="F-vrPxqAwHY" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/F-vrPxqAwHY-640.jpg" srcset="stills/F-vrPxqAwHY-320.jpg 320w, stills/F-vrPxqAwHY-480.jpg 480w, stills/F-vrPxqAwHY-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">1:46</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">Nairobi</div>
+                        <h3>Chasing Mavericks CEO on crypto creators.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/prison-is-a-young-mans-game-a-street-interview-denver.html" data-video="rEwpUxDalBU" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/rEwpUxDalBU-640.jpg" srcset="stills/rEwpUxDalBU-320.jpg 320w, stills/rEwpUxDalBU-480.jpg 480w, stills/rEwpUxDalBU-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">15:20</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">Denver</div>
+                        <h3>Prison is a young man’s game.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/create-for-the-fun-of-it-an-artist-at-ethconf-nyc.html" data-video="s-5LCmIHGQw" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/s-5LCmIHGQw-640.jpg" srcset="stills/s-5LCmIHGQw-320.jpg 320w, stills/s-5LCmIHGQw-480.jpg 480w, stills/s-5LCmIHGQw-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">8:41</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">New York</div>
+                        <h3>ETHConf: create for the fun of it.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/streamer-university-line-92-degrees-and-a-knicks-prediction.html" data-video="DXlblT7tkrw" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/DXlblT7tkrw-640.jpg" srcset="stills/DXlblT7tkrw-320.jpg 320w, stills/DXlblT7tkrw-480.jpg 480w, stills/DXlblT7tkrw-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">5:02</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">New York</div>
+                        <h3>Streamer University line: 92 degrees and a Knicks prediction.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/ai-agents-as-a-startups-first-hires-ethconf-week-nyc.html" data-video="9BwwrGGW-ec" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/9BwwrGGW-ec-640.jpg" srcset="stills/9BwwrGGW-ec-320.jpg 320w, stills/9BwwrGGW-ec-480.jpg 480w, stills/9BwwrGGW-ec-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">7:07</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">New York</div>
+                        <h3>ETHConf: AI agents as a startup&#x27;s first hires.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/first-friday-at-tim-correas-bar-denver.html" data-video="-FOQbJ8bbuE" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/-FOQbJ8bbuE-640.jpg" srcset="stills/-FOQbJ8bbuE-320.jpg 320w, stills/-FOQbJ8bbuE-480.jpg 480w, stills/-FOQbJ8bbuE-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">2:06</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">Denver</div>
+                        <h3>First Friday at Tim Correa&#x27;s bar.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/broke-me-down-to-pieces-web3bridge-cohort-12-episode-5-lagos.html" data-video="1Wei84VaOGg" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/1Wei84VaOGg-640.jpg" srcset="stills/1Wei84VaOGg-320.jpg 320w, stills/1Wei84VaOGg-480.jpg 480w, stills/1Wei84VaOGg-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">4:36</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">Lagos</div>
+                        <h3>Four months that took a Web2 developer apart.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/the-real-free-trade-and-an-arena-on-chinatown.html" data-video="rb54mUD72r8" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/rb54mUD72r8-640.jpg" srcset="stills/rb54mUD72r8-320.jpg 320w, stills/rb54mUD72r8-480.jpg 480w, stills/rb54mUD72r8-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">10:04</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">Philadelphia</div>
+                        <h3>Scarlett on crypto as the real free trade, and Philadelphia politics.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/keeping-it-real-in-a-wide-open-regrowth-area-kalib.html" data-video="hEIT0mSgLvI" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/hEIT0mSgLvI-640.jpg" srcset="stills/hEIT0mSgLvI-320.jpg 320w, stills/hEIT0mSgLvI-480.jpg 480w, stills/hEIT0mSgLvI-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">1:14</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">Denver</div>
+                        <h3>Keeping it real in a wide open regrowth area: Kalib.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/a-finnish-immigrant-on-not-needing-to-belong-vermont.html" data-video="BSlOVJ8LGSo" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/BSlOVJ8LGSo-640.jpg" srcset="stills/BSlOVJ8LGSo-320.jpg 320w, stills/BSlOVJ8LGSo-480.jpg 480w, stills/BSlOVJ8LGSo-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">10:09</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">Vermont</div>
+                        <h3>I did not need to belong to anyone.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/what-is-ethereum-university-of-lagos.html" data-video="0ylkTXFoXGA" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/0ylkTXFoXGA-640.jpg" srcset="stills/0ylkTXFoXGA-320.jpg 320w, stills/0ylkTXFoXGA-480.jpg 480w, stills/0ylkTXFoXGA-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">9:39</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">Lagos</div>
+                        <h3>What is Ethereum? UNILAG street interviews.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/web3-pop-up-cities-and-akiya-houses-japan.html" data-video="RUGnhnzumKg" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/RUGnhnzumKg-640.jpg" srcset="stills/RUGnhnzumKg-320.jpg 320w, stills/RUGnhnzumKg-480.jpg 480w, stills/RUGnhnzumKg-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">57:46</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">Online</div>
+                        <h3>Buying abandoned houses to build a neighborhood.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/streamer-university-line-didnt-make-it-still-popped-out.html" data-video="9Hys5BDY7IU" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/9Hys5BDY7IU-640.jpg" srcset="stills/9Hys5BDY7IU-320.jpg 320w, stills/9Hys5BDY7IU-480.jpg 480w, stills/9Hys5BDY7IU-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">20:14</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">New York</div>
+                        <h3>Streamer University line: didn&#x27;t make it, still popped out.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/leaving-a-nine-to-five-to-build-in-blockchain.html" data-video="zQOYSV4z82U" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/zQOYSV4z82U-640.jpg" srcset="stills/zQOYSV4z82U-320.jpg 320w, stills/zQOYSV4z82U-480.jpg 480w, stills/zQOYSV4z82U-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">3:16</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">Online</div>
+                        <h3>Six months after quitting the nine to five.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/coffee-farming-financed-on-chain-project-mocha.html" data-video="PdxBcoAEyVo" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/PdxBcoAEyVo-640.jpg" srcset="stills/PdxBcoAEyVo-320.jpg 320w, stills/PdxBcoAEyVo-480.jpg 480w, stills/PdxBcoAEyVo-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">1:41</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">Nairobi</div>
+                        <h3>Coffee on the blockchain. Project Mocha.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/why-we-built-a-product-focused-conference-jos.html" data-video="qVnPgam8iys" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/qVnPgam8iys-640.jpg" srcset="stills/qVnPgam8iys-320.jpg 320w, stills/qVnPgam8iys-480.jpg 480w, stills/qVnPgam8iys-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">13:30</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">Jos</div>
+                        <h3>Why a first edition conference was built around products.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/lets-talk-about-eth-around-the-world-with-saltorius.html" data-video="cC3MQS8QsD8" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/cC3MQS8QsD8-640.jpg" srcset="stills/cC3MQS8QsD8-320.jpg 320w, stills/cC3MQS8QsD8-480.jpg 480w, stills/cC3MQS8QsD8-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">1:00:47</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">Online</div>
+                        <h3>Let&#x27;s Talk About Eth: Around the World, with Saltorius.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/an-irish-fan-and-an-aspiring-journalist-in-the-channel-5-line.html" data-video="enaFl4XPCy4" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/enaFl4XPCy4-640.jpg" srcset="stills/enaFl4XPCy4-320.jpg 320w, stills/enaFl4XPCy4-480.jpg 480w, stills/enaFl4XPCy4-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">5:42</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">Denver</div>
+                        <h3>An Irish fan and an aspiring journalist.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/el-temazcal-con-senor-cesar-acapulco.html" data-video="deECm33sCDE" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/deECm33sCDE-640.jpg" srcset="stills/deECm33sCDE-320.jpg 320w, stills/deECm33sCDE-480.jpg 480w, stills/deECm33sCDE-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">4:50</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">Acapulco, Mexico</div>
+                        <h3>El Temascal con Señor César.</h3>
+                    </div>
+                </a>
+
+                <a href="watch/freestyle-and-the-question-of-the-week-on-stage-at-channel-5.html" data-video="ne-laPnmFcE" class="dispatch-card" style="display:none">
+                    <div class="dispatch-card-thumb"><img src="stills/ne-laPnmFcE-640.jpg" srcset="stills/ne-laPnmFcE-320.jpg 320w, stills/ne-laPnmFcE-480.jpg 480w, stills/ne-laPnmFcE-640.jpg 640w" sizes="(max-width: 700px) calc(100vw - 64px), (max-width: 1035px) calc(50vw - 44px), 390px" alt="" loading="lazy" decoding="async" width="640" height="360">
+                        <span class="dispatch-card-pill">3:03</span>
+                    </div>
+                    <div class="dispatch-card-body">
+                        <div class="dispatch-card-eyebrow">Denver</div>
+                        <h3>Freestyle and the question of the week.</h3>
                     </div>
                 </a>
             </div>
@@ -1808,44 +1828,6 @@
     </div>
 </footer>
 
-<script>
-    (function(){
-        var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        var reveals = document.querySelectorAll(".reveal");
-        var v1Reveals = document.querySelectorAll(".v1-reveal");
-        var brushes = document.querySelectorAll(".brush-line");
-
-        if (reduce || !("IntersectionObserver" in window)) {
-            reveals.forEach(function(el){ el.classList.add("visible"); });
-            v1Reveals.forEach(function(el){ el.classList.add("in"); });
-            brushes.forEach(function(el){ el.classList.add("in"); });
-            return;
-        }
-
-        var observer = new IntersectionObserver(function(entries){
-            entries.forEach(function(entry){
-                if (entry.isIntersecting) {
-                    if (entry.target.classList.contains("v1-reveal") || entry.target.classList.contains("brush-line")) {
-                        entry.target.classList.add("in");
-                    } else {
-                        entry.target.classList.add("visible");
-                    }
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
-
-        reveals.forEach(function(el){ observer.observe(el); });
-        v1Reveals.forEach(function(el){ observer.observe(el); });
-        brushes.forEach(function(el){ observer.observe(el); });
-
-        setTimeout(function(){
-            reveals.forEach(function(el){ el.classList.add("visible"); });
-            v1Reveals.forEach(function(el){ el.classList.add("in"); });
-            brushes.forEach(function(el){ el.classList.add("in"); });
-        }, 800);
-    })();
-</script>
 
 <script>
     (function(){

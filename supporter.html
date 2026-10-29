@@ -323,13 +323,18 @@
             .sup-cta-primary { padding: 20px 24px; }
         }
     
-        .sup-proof { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px; margin-top: 28px; }
+        .sup-lead { margin: 26px 0 0; max-width: 900px; }
+        .sup-lead a { display: block; border-radius: 24px; overflow: hidden; background: var(--bg-elev); }
+        .sup-lead img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+        .sup-lead a:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }
+        .sup-lead figcaption { margin-top: 8px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; color: var(--text-muted); }
+        .sup-proof { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; margin-top: 12px; max-width: 900px; }
         .sup-proof a { display: block; aspect-ratio: 16 / 9; overflow: hidden; background: var(--bg-elev); }
         .sup-proof img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .25s ease; }
         .sup-proof a:hover img { transform: scale(1.05); }
         .sup-proof-line { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin: 10px 0 0; }
         .sup-proof-line a { color: var(--coral); text-decoration: none; }
-        @media (max-width: 700px) { .sup-proof { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+        @media (max-width: 700px) { .sup-proof { display: flex; overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: none; } .sup-proof a { flex: 0 0 42%; scroll-snap-align: start; } }
 </style>
     <meta name="version" content="2026-08-24">
 </head>
@@ -353,9 +358,11 @@
     <h1>Support <span class="hl">We Them Media.</span></h1>
     <p style="font-family: var(--body); font-size: 17px; line-height: 1.6; color: var(--text-muted); margin: 20px 0 0; max-width: 62ch;">The community is <strong style="color: var(--text);">over 700 people</strong>. Keeping filming takes the tools and the payment rails that get money to Nigeria. We publish every tier below.</p>
 
-    <img class="sup-art" src="img/drawn/supporter-1600.jpg" srcset="img/drawn/supporter-800.jpg 800w, img/drawn/supporter-1600.jpg 1600w" sizes="(max-width: 900px) 100vw, 900px" width="1600" height="900" loading="lazy" decoding="async" alt="A drawing: a ring of neighbours in a Philadelphia street lift a platform together; on it a camera, a microphone, notebooks and a kettle." style="display:block;width:100%;max-width:900px;height:auto;aspect-ratio:16/9;border-radius:16px;border:2px solid #141210;margin:26px 0 8px">
+    <figure class="sup-lead">
+        <a href="watch/black-women-as-the-most-important-global-issue.html"><img src="stills/4Us2-ohD21k-640.jpg" srcset="stills/4Us2-ohD21k-480.jpg 480w, stills/4Us2-ohD21k-640.jpg 640w, stills/4Us2-ohD21k.jpg 1280w" sizes="(max-width: 900px) calc(100vw - 40px), 900px" width="1280" height="720" fetchpriority="high" decoding="async" alt="Gigi, from Mississippi, interviewed in Denver: watch the conversation"></a>
+        <figcaption>Gigi, from Mississippi, interviewed in Denver</figcaption>
+    </figure>
     <div class="sup-proof" aria-label="Some of what supporters pay for">
-        <a href="watch/black-women-as-the-most-important-global-issue.html"><img src="stills/4Us2-ohD21k.jpg" alt="Gigi, interviewed in Denver" loading="lazy" width="480" height="270"></a>
         <a href="watch/crypto-privacy-and-global-finance-at-an-ethereum-conference-new-york.html"><img src="stills/WXm8AWkc37M.jpg" alt="Maggie of Unlink at ETHConf, New York" loading="lazy" width="480" height="270"></a>
         <a href="watch/denver-night-walk-mile-high-city-after-dark-denver.html"><img src="stills/89iDbSyt-tQ.jpg" alt="A rooftop interview at night, Denver" loading="lazy" width="480" height="270"></a>
         <a href="watch/grief-journalism-and-getting-on-stage-at-channel-5.html"><img src="stills/F5vXOAif_FQ.jpg" alt="Fans outside the Channel 5 carnival, Denver" loading="lazy" width="480" height="270"></a>
@@ -371,6 +378,8 @@
             <a class="btn btn-line" href="#tiers">What each level covers</a>
         </div>
     </div>
+
+    <img class="sup-art sup-art-below" src="img/drawn/supporter-1600.jpg" srcset="img/drawn/supporter-800.jpg 800w, img/drawn/supporter-1600.jpg 1600w" sizes="(max-width: 900px) 100vw, 900px" width="1600" height="900" loading="lazy" decoding="async" alt="A drawing: a ring of neighbours in a Philadelphia street lift a platform together; on it a camera, a microphone, notebooks and a kettle." style="display:block;width:100%;max-width:900px;height:auto;aspect-ratio:16/9;border-radius:16px;border:2px solid #141210;margin:26px 0 8px">
 </section>
 
 <div class="wrap sechead" id="tiers"><span class="t">What each level covers.</span><span class="mono">Start at a dollar, cancel anytime, nothing here is a minimum</span></div>
