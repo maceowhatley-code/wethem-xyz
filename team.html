@@ -569,7 +569,7 @@
 
 <aside class="page-pager" aria-label="Continue reading">
     <a href="pizzaday.html" class="page-pager-link">
-        <span class="page-pager-eyebrow">🍕 Joining the team starts here</span>
+        <span class="page-pager-eyebrow">Joining the team starts here</span>
         <span class="page-pager-title">Join the network. <em class="climax-ink">Support the work.</em></span>
         <span class="page-pager-arrow" aria-hidden="true">→</span>
     </a>
@@ -718,40 +718,7 @@
         setTimeout(() => brushes.forEach(el => el.classList.add('in')), 1200);
     }
 
-    const easeOut = t => 1 - Math.pow(1 - t, 3);
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    function animateCount(el) {
-        const raw = el.textContent.trim();
-        const match = raw.match(/^(\d+)(\D*)$/);
-        if (!match) return;
-        const target = parseInt(match[1], 10);
-        const suffix = match[2] || '';
-        if (target >= 1900 && target <= 2100) return;
-        if (reduceMotion) return;
-
-        const duration = 1400;
-        const start = performance.now();
-        function tick(now) {
-            const t = Math.min((now - start) / duration, 1);
-            const value = Math.round(easeOut(t) * target);
-            el.textContent = value + suffix;
-            if (t < 1) requestAnimationFrame(tick);
-            else el.textContent = target + suffix;
-        }
-        el.textContent = '0' + suffix;
-        requestAnimationFrame(tick);
-    }
-
-    const statObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateCount(entry.target);
-                statObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.4 });
-    document.querySelectorAll('.stat-number').forEach(el => statObserver.observe(el));
 
     const progressBar = document.querySelector('.scroll-progress');
     if (progressBar) {
