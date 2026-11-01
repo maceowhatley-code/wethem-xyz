@@ -3534,9 +3534,6 @@ html.js .clips-bar { width: max-content; max-width: calc(100% - 24px); margin: 0
 .clip-card-yt { display: inline-flex; align-items: center; min-height: 44px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
 .clip-card-yt:hover, .clip-card-yt:focus-visible { color: #FFFFFF; }
 
-.clip-card-full { display: inline-flex; align-items: center; margin-top: 8px; min-height: 40px; padding: 6px 14px; box-sizing: border-box; border-radius: 999px; background: var(--text); color: var(--bg); font-family: var(--body); font-size: 13px; font-weight: 800; line-height: 1.2; text-decoration: none; }
-.clip-card-full:hover, .clip-card-full:focus-visible { background: #FFFFFF; color: var(--bg); }
-
 .clip-sec-h { margin: 0 0 0.9rem; font-family: var(--display); font-size: 1.45rem; font-weight: 700; letter-spacing: -0.018em; }
 
 .clip-sec-home { padding: 24px 44px 32px; border-bottom: 0; }
@@ -4307,3 +4304,15 @@ a[href="https://www.youtube.com/@WeThemMediaHQ"][style*="letter-spacing: 0.16em"
 .oqp-ex-i span { opacity: .7; font-size: .9em; }
 .oqp-ex-h { margin-top: 2rem; }
 @media (min-width: 1100px) { .oqp-ex { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+.hm-pill { align-self: flex-start; display: inline-flex; align-items: center; min-height: 26px; max-width: 100%; padding: 3px 11px; border-radius: 13px; background: var(--text); color: var(--bg); font-family: var(--body); font-size: 13px; font-weight: 700; line-height: 1.2; }
+.hm-meta.hm-by { font-family: var(--body); font-size: 14px; letter-spacing: 0; text-transform: none; line-height: 1.4; }
+.hm-card .hm-pic img { transition: transform .2s ease; }
+.hm-card:hover .hm-pic img { transform: scale(1.03); }
+@media (prefers-reduced-motion: reduce) { .hm-card .hm-pic img { transition: none; } .hm-card:hover .hm-pic img { transform: none; } }
+
+@media (max-width: 600px) {
+  html body .net-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: transparent; border: 0; }
+  html body .net-strip .net-cell { min-width: 0; padding: 1rem; border-radius: 16px; }
+  html body .net-strip .net-lbl { letter-spacing: 0.08em; line-height: 1.4; }
+}
